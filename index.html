@@ -1,440 +1,397 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>我的游戏数据站</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>我的游戏数据站</title>
 
-    body {
-      margin: 0;
-      font-family: "Segoe UI", "PingFang SC", sans-serif;
-      background: linear-gradient(180deg, #111827 0%, #0f172a 100%);
-      color: white;
-      min-height: 100vh;
-      padding: 24px;
-    }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-    }
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: "Segoe UI","PingFang SC",sans-serif;
+    background:
+        radial-gradient(circle at top left,#312e81 0%,transparent 30%),
+        radial-gradient(circle at top right,#7c3aed 0%,transparent 25%),
+        linear-gradient(180deg,#0f172a 0%,#020617 100%);
+    color: white;
+    min-height: 100vh;
+}
 
-    .header {
-      margin-bottom: 28px;
+.container {
+    max-width: 950px;
+    margin: auto;
+}
+
+.header {
+    margin-bottom: 28px;
+}
+
+.title {
+    font-size: 2.4rem;
+    font-weight: 800;
+}
+
+.subtitle {
+    color: #94a3b8;
+    margin-top: 8px;
+}
+
+.controls {
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px;
+    margin-bottom: 24px;
+    border-radius: 22px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(14px);
+}
+
+select {
+    background: rgba(15,23,42,0.9);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.stat {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 22px;
+    padding: 18px;
+    backdrop-filter: blur(10px);
+}
+
+.stat-label {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.stat-value {
+    margin-top: 8px;
+    font-size: 1.45rem;
+    font-weight: bold;
+}
+
+.games {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.card {
+    overflow: hidden;
+    border-radius: 24px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(16px);
+    transition: 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255,255,255,0.18);
+}
+
+.banner {
+    height: 10px;
+    background: linear-gradient(90deg,#38bdf8,#8b5cf6,#ec4899);
+}
+
+.content {
+    padding: 20px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: rgba(255,255,255,0.08);
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    color: #cbd5e1;
+}
+
+.time {
+    text-align: right;
+}
+
+.time-main {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.time-sub {
+    margin-top: 6px;
+    font-size: 0.82rem;
+    color: #94a3b8;
+}
+
+.remark {
+    margin-top: 16px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.2);
+}
+
+.remark-btn {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    cursor: pointer;
+    font-size: 0.92rem;
+}
+
+.remark-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    padding: 0 16px;
+    color: #cbd5e1;
+    line-height: 1.7;
+    white-space: pre-wrap;
+}
+
+.remark-content.open {
+    max-height: 1200px;
+    padding-bottom: 16px;
+}
+
+@media (max-width:700px) {
+    .time {
+        text-align: left;
     }
 
     .title {
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin-bottom: 8px;
+        font-size: 1.9rem;
     }
-
-    .subtitle {
-      color: #94a3b8;
-      font-size: 0.95rem;
-    }
-
-    .controls {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 24px;
-      background: rgba(255,255,255,0.05);
-      padding: 16px;
-      border-radius: 20px;
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255,255,255,0.08);
-      position: sticky;
-      top: 12px;
-      z-index: 10;
-    }
-
-    select {
-      background: #1e293b;
-      color: white;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 12px;
-      padding: 10px 14px;
-      font-size: 0.95rem;
-      cursor: pointer;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 14px;
-      margin-bottom: 28px;
-    }
-
-    .stat-card {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 22px;
-      padding: 18px;
-      backdrop-filter: blur(10px);
-    }
-
-    .stat-label {
-      color: #94a3b8;
-      font-size: 0.85rem;
-      margin-bottom: 10px;
-    }
-
-    .stat-value {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    .games {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-
-    .game-card {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 24px;
-      overflow: hidden;
-      transition: transform 0.2s ease, border-color 0.2s ease;
-      backdrop-filter: blur(14px);
-    }
-
-    .game-card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(255,255,255,0.2);
-    }
-
-    .banner {
-      height: 12px;
-      background: linear-gradient(90deg, #38bdf8, #8b5cf6, #ec4899);
-    }
-
-    .game-content {
-      padding: 20px;
-    }
-
-    .top-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-
-    .game-name {
-      font-size: 1.35rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .tag {
-      background: rgba(255,255,255,0.08);
-      color: #cbd5e1;
-      padding: 6px 10px;
-      border-radius: 999px;
-      font-size: 0.78rem;
-    }
-
-    .time {
-      text-align: right;
-      min-width: 120px;
-    }
-
-    .time-main {
-      font-size: 1.4rem;
-      font-weight: bold;
-    }
-
-    .time-sub {
-      color: #94a3b8;
-      font-size: 0.8rem;
-      margin-top: 4px;
-    }
-
-    .remark-box {
-      margin-top: 10px;
-      background: rgba(0,0,0,0.2);
-      border-radius: 16px;
-      overflow: hidden;
-    }
-
-    .remark-toggle {
-      width: 100%;
-      background: transparent;
-      color: white;
-      border: none;
-      text-align: left;
-      padding: 14px 16px;
-      cursor: pointer;
-      font-size: 0.92rem;
-    }
-
-    .remark-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.35s ease;
-      color: #cbd5e1;
-      font-size: 0.92rem;
-      line-height: 1.7;
-      white-space: pre-wrap;
-      padding: 0 16px;
-    }
-
-    .remark-content.open {
-      max-height: 1200px;
-      padding-bottom: 16px;
-    }
-
-    @media (max-width: 700px) {
-      body {
-        padding: 14px;
-      }
-
-      .top-row {
-        flex-direction: column;
-      }
-
-      .time {
-        text-align: left;
-      }
-
-      .title {
-        font-size: 1.7rem;
-      }
-    }
-  </style>
+}
+</style>
 </head>
+
 <body>
-  <div class="container">
-    <div class="header">
-      <div class="title">🎮 我的游戏数据站</div>
-      <div class="subtitle">支持分类筛选、时长排序与备注展开查看</div>
-    </div>
 
-    <div class="controls">
-      <select id="categoryFilter">
-        <option value="all">全部分类</option>
-      </select>
+<div class="container">
 
-      <select id="platformFilter">
-        <option value="all">全部平台</option>
-      </select>
+<div class="header">
+<div class="title">🎮 我的游戏数据站</div>
+<div class="subtitle">完整导入 CSV 数据 · 支持筛选 / 排序 / 备注展开</div>
+</div>
 
-      <select id="sortSelect">
-        <option value="desc">时长从高到低</option>
-        <option value="asc">时长从低到高</option>
-      </select>
-    </div>
+<div class="controls">
+<select id="categoryFilter">
+<option value="all">全部分类</option>
+</select>
 
-    <div class="stats">
-      <div class="stat-card">
-        <div class="stat-label">游戏总数</div>
-        <div class="stat-value" id="gameCount">0</div>
-      </div>
+<select id="platformFilter">
+<option value="all">全部平台</option>
+</select>
 
-      <div class="stat-card">
-        <div class="stat-label">总游玩时长</div>
-        <div class="stat-value" id="totalTime">0h</div>
-      </div>
+<select id="sortSelect">
+<option value="desc">时长从高到低</option>
+<option value="asc">时长从低到高</option>
+</select>
+</div>
 
-      <div class="stat-card">
-        <div class="stat-label">当前显示</div>
-        <div class="stat-value" id="visibleCount">0</div>
-      </div>
-    </div>
+<div class="stats">
+<div class="stat">
+<div class="stat-label">游戏总数</div>
+<div class="stat-value" id="totalGames"></div>
+</div>
 
-    <div class="games" id="gamesContainer"></div>
-  </div>
+<div class="stat">
+<div class="stat-label">总游玩时长</div>
+<div class="stat-value" id="totalTime"></div>
+</div>
 
-  <script>
-    const games = [
-      {
-        "名称": "4399小游戏",
-        "分类": "Other",
-        "备注": "时长来源于游戏内部PC数和粗略计算总和：\n奥奇传说\n摩尔庄园\n美食大战老鼠\n生死狙击等",
-        "平台": "PC (Windows)",
-        "游玩时间": 1080000,
-        "来源": "Other"
-      },
-      {
-        "名称": "Aimlabs",
-        "分类": "fps",
-        "备注": "",
-        "平台": "PC (Windows)",
-        "游玩时间": 6780,
-        "来源": "Steam"
-      },
-      {
-        "名称": "Among Us",
-        "分类": "Other",
-        "备注": "",
-        "平台": "PC (Windows)",
-        "游玩时间": 1440,
-        "来源": "Steam"
-      },
-      {
-        "名称": "Arcaea",
-        "分类": "Music game",
-        "备注": "时长计算公式：时长随iOS统计每周日更新，无PC数据\nB30：12.0814\nPOTENTIAL：12.10",
-        "平台": "Mobile（iOS）",
-        "游玩时间": 1185060,
-        "来源": "Other"
-      },
-      {
-        "名称": "Battlefield 1",
-        "分类": "fps",
-        "备注": "",
-        "平台": "PC (Windows)",
-        "游玩时间": 255000,
-        "来源": "Steam"
-      },
-      {
-        "名称": "CS2",
-        "分类": "fps",
-        "备注": "官匹10000分 / 完美世界C+",
-        "平台": "PC (Windows)",
-        "游玩时间": 636120,
-        "来源": "Steam"
-      },
-      {
-        "名称": "Phigros",
-        "分类": "Music game",
-        "备注": "RKS：14.95",
-        "平台": "Mobile（iOS）",
-        "游玩时间": 429600,
-        "来源": "Other"
-      }
-    ];
+<div class="stat">
+<div class="stat-label">当前显示</div>
+<div class="stat-value" id="visibleGames"></div>
+</div>
 
-    function formatTime(seconds) {
-      const hours = Math.floor(seconds / 3600);
-      const minutes = Math.floor((seconds % 3600) / 60);
+<div class="stat">
+<div class="stat-label">当前显示游戏时长</div>
+<div class="stat-value" id="visibleTime"></div>
+</div>
+</div>
 
-      if (hours === 0) {
-        return `${minutes}分钟`;
-      }
+<div class="games" id="games"></div>
 
-      return `${hours}小时 ${minutes}分钟`;
+</div>
+
+<script>
+
+const games = [{"名称": "4399小游戏", "分类": "Other", "备注": "时长来源于游戏内部PC数和粗略计算总和：\r\n奥奇传说\r\n摩尔庄园\r\n美食大战老鼠\r\n弹弹堂\r\n森林冰火人\r\n疯狂小人战斗\r\n", "平台": "PC (Windows)", "游玩时间": 1080000, "来源": "Other"}, {"名称": "Aimlabs", "分类": "fps", "备注": "", "平台": "PC (Windows)", "游玩时间": 6780, "来源": "Steam"}, {"名称": "Among Us", "分类": "Other", "备注": "", "平台": "PC (Windows)", "游玩时间": 1440, "来源": "Steam"}, {"名称": "Arcaea", "分类": "Music game", "备注": "时长计算公式：时长随iOS统计每周日更新，无PC数据\r\nB30：12.0814\r\nPTT=B30+R10：12.14\r\n段位挑战：7段", "平台": "Mobile（iOS）", "游玩时间": 1185060, "来源": "Other"}, {"名称": "Battlefield 1", "分类": "fps", "备注": "", "平台": "PC (Windows)", "游玩时间": 255000, "来源": "Steam"}, {"名称": "Battlefield 2042", "分类": "fps", "备注": "", "平台": "PC (Windows)", "游玩时间": 242700, "来源": "Steam"}, {"名称": "Battlefield 5", "分类": "fps", "备注": "", "平台": "PC (Windows)", "游玩时间": 22380, "来源": "Steam"}, {"名称": "Battlefield 6", "分类": "fps", "备注": "", "平台": "PC (Windows)", "游玩时间": 334620, "来源": "Steam"}, {"名称": "CHUNITHM", "分类": "Music game", "备注": "国服991PC，RIN服494PC\r\n时长计算公式：pleynite自动统计RIN+国服PC*3*240（单位：秒）\r\nB50=O30+N20\r\n国服B50（中二节奏2026）：16.44（V段）\r\nRIN服B50（X-VERSE）：16.77（V段）\r\nB30：16.87", "平台": "Arcade", "游玩时间": 1373599, "来源": "Other"}, {"名称": "Counter-Strike 2", "分类": "fps", "备注": "", "平台": "PC (Windows)", "游玩时间": 3527760, "来源": "Steam"}, {"名称": "FreshWomen - Season 1", "分类": "Other", "备注": "", "平台": "PC (Windows)", "游玩时间": 12360, "来源": "Steam"}, {"名称": "FreshWomen - Season 2", "分类": "Other", "备注": "", "平台": "PC (Windows)", "游玩时间": 15420, "来源": "Steam"}, {"名称": "Goose Goose Duck", "分类": "Other", "备注": "", "平台": "PC (Windows)", "游玩时间": 39240, "来源": "Steam"}, {"名称": "MAI MAI", "分类": "Music game", "备注": "国服10PC\r\n时长计算公式：国服PC*3*240（单位：秒）\r\nDX评分=O35+N15：3369\r\n段位：无", "平台": "Arcade", "游玩时间": 7200, "来源": "Other"}, {"名称": "Microsoft Solitaire Collection", "分类": "Card", "备注": "", "平台": "PC (Windows)", "游玩时间": 11400, "来源": "Xbox"}, {"名称": "Minecraft Bedrock", "分类": "Open world", "备注": "", "平台": "PC (Windows)", "游玩时间": 526802, "来源": "Xbox"}, {"名称": "Minecraft iOS", "分类": "Open world", "备注": "", "平台": "Mobile（iOS）", "游玩时间": 892080, "来源": "Xbox"}, {"名称": "Phigros", "分类": "Music game", "备注": "时长计算公式：时长来源于TapTap，无PC数据\r\nRKS=P3+B27：14.92\r\n位次：76144\r\n课题模式段位：红49", "平台": "Mobile（iOS）", "游玩时间": 99720, "来源": "Other"}, {"名称": "Project SEKAI", "分类": "Music game", "备注": "时长计算公式：时长随iOS统计每周日更新，无PC数据\r\n国服排位：白金2\r\n国服位次：6168", "平台": "Mobile（iOS）", "游玩时间": 56700, "来源": "Other"}, {"名称": "PUBG: BATTLEGROUNDS", "分类": "fps", "备注": "", "平台": "PC (Windows)", "游玩时间": 1277100, "来源": "Steam"}, {"名称": "Riptide GP: Renegade", "分类": "Other", "备注": "", "平台": "PC (Windows)", "游玩时间": 0, "来源": "Steam"}, {"名称": "Riptide GP2", "分类": "Other", "备注": "", "平台": "PC (Windows)", "游玩时间": 85140, "来源": "Steam"}, {"名称": "Wallpaper Engine：壁纸引擎", "分类": "Other", "备注": "", "平台": "PC (Windows)", "游玩时间": 4740, "来源": "Steam"}, {"名称": "Zuma Deluxe", "分类": "Other", "备注": "", "平台": "PC (Windows)", "游玩时间": 16200, "来源": "Steam"}, {"名称": "斗牌魂", "分类": "Card", "备注": "", "平台": "PC (Windows)", "游玩时间": 180601, "来源": "Steam"}, {"名称": "节奏大师", "分类": "Music game", "备注": "老版本闯关188关，新版本70PC\r\n时长计算公式：240*2*188+240*新版本PC\r\n节奏战力=B50+N25：5.56", "平台": "Mobile（iOS）", "游玩时间": 107040, "来源": "Other"}, {"名称": "决战！平安京", "分类": "MOBA", "备注": "190PC\r\n时长计算公式：PC*1800（单位：秒）", "平台": "Mobile（iOS）", "游玩时间": 342000, "来源": "Other"}, {"名称": "狼人杀", "分类": "Card", "备注": "网杀108PC，面杀4h\r\n时长计算公式：PC*25*60+面杀时长", "平台": "Mobile（iOS）", "游玩时间": 176400, "来源": "Other"}, {"名称": "球球大作战", "分类": "Other", "备注": "80PC\r\n时长计算公式：PC*600（单位：秒）", "平台": "Mobile（iOS）", "游玩时间": 48000, "来源": "Other"}, {"名称": "雀魂麻将", "分类": "Card", "备注": "", "平台": "PC (Windows)", "游玩时间": 627960, "来源": "Steam"}, {"名称": "三国杀", "分类": "Card", "备注": "", "平台": "PC (Windows)", "游玩时间": 2171340, "来源": "Steam"}, {"名称": "三角洲行动", "分类": "fps", "备注": "", "平台": "PC (Windows)", "游玩时间": 1760880, "来源": "Steam"}, {"名称": "生死狙击", "分类": "fps", "备注": "时长数据来源于游戏内官方统计", "平台": "PC (Windows)", "游玩时间": 709200, "来源": "Other"}, {"名称": "双人成行", "分类": "Other", "备注": "", "平台": "PC (Windows)", "游玩时间": 60, "来源": "Steam"}, {"名称": "双影奇境", "分类": "Other", "备注": "", "平台": "PC (Windows)", "游玩时间": 58860, "来源": "Steam"}, {"名称": "糖豆人", "分类": "Other", "备注": "", "平台": "PC (Windows)", "游玩时间": 23873, "来源": "Epic"}, {"名称": "天月麻雀", "分类": "Card", "备注": "", "平台": "PC (Windows)", "游玩时间": 44940, "来源": "Steam"}, {"名称": "王者荣耀", "分类": "MOBA", "备注": "1865PC\r\n时长计算公式：PC*1800（单位：秒）\r\n王者印记：2", "平台": "Mobile（iOS）", "游玩时间": 3357000, "来源": "Other"}, {"名称": "英雄联盟手游（台服）", "分类": "MOBA", "备注": "182PC\r\n时长计算公式：PC*1800（单位：秒）", "平台": "Mobile（iOS）", "游玩时间": 327600, "来源": "Other"}];
+
+function formatTime(seconds) {
+    const h = Math.floor(seconds / 3600);
+    const m = Math.floor((seconds % 3600) / 60);
+
+    if (h <= 0) {
+        return `${m}分钟`;
     }
 
-    function populateFilters() {
-      const categories = [...new Set(games.map(g => g.分类))];
-      const platforms = [...new Set(games.map(g => g.平台))];
+    return `${h}小时 ${m}分钟`;
+}
 
-      const categorySelect = document.getElementById('categoryFilter');
-      const platformSelect = document.getElementById('platformFilter');
+function initFilters() {
+    const categorySet = [...new Set(games.map(g => g["分类"]))];
+    const platformSet = [...new Set(games.map(g => g["平台"]))];
 
-      categories.forEach(category => {
-        const option = document.createElement('option');
-        option.value = category;
-        option.textContent = category;
-        categorySelect.appendChild(option);
-      });
+    const categoryFilter = document.getElementById("categoryFilter");
+    const platformFilter = document.getElementById("platformFilter");
 
-      platforms.forEach(platform => {
-        const option = document.createElement('option');
-        option.value = platform;
-        option.textContent = platform;
-        platformSelect.appendChild(option);
-      });
+    categorySet.forEach(c => {
+        const op = document.createElement("option");
+        op.value = c;
+        op.textContent = c;
+        categoryFilter.appendChild(op);
+    });
+
+    platformSet.forEach(p => {
+        const op = document.createElement("option");
+        op.value = p;
+        op.textContent = p;
+        platformFilter.appendChild(op);
+    });
+}
+
+function render() {
+
+    const category = document.getElementById("categoryFilter").value;
+    const platform = document.getElementById("platformFilter").value;
+    const sort = document.getElementById("sortSelect").value;
+
+    let filtered = [...games];
+
+    if (category !== "all") {
+        filtered = filtered.filter(g => g["分类"] === category);
     }
 
-    function updateStats(filteredGames) {
-      document.getElementById('gameCount').textContent = games.length;
-      document.getElementById('visibleCount').textContent = filteredGames.length;
-
-      const totalSeconds = games.reduce((sum, game) => sum + game.游玩时间, 0);
-      document.getElementById('totalTime').textContent = formatTime(totalSeconds);
+    if (platform !== "all") {
+        filtered = filtered.filter(g => g["平台"] === platform);
     }
 
-    function renderGames() {
-      const category = document.getElementById('categoryFilter').value;
-      const platform = document.getElementById('platformFilter').value;
-      const sort = document.getElementById('sortSelect').value;
+    filtered.sort((a,b) => {
+        return sort === "desc"
+            ? b["游玩时间"] - a["游玩时间"]
+            : a["游玩时间"] - b["游玩时间"];
+    });
 
-      let filtered = [...games];
+    document.getElementById("totalGames").textContent = games.length;
+    document.getElementById("visibleGames").textContent = filtered.length;
 
-      if (category !== 'all') {
-        filtered = filtered.filter(g => g.分类 === category);
-      }
+    const totalTime = games.reduce((sum,g)=>sum + Number(g["游玩时间"] || 0),0);
+    const visibleTime = filtered.reduce((sum,g)=>sum + Number(g["游玩时间"] || 0),0);
 
-      if (platform !== 'all') {
-        filtered = filtered.filter(g => g.平台 === platform);
-      }
+    document.getElementById("totalTime").textContent = formatTime(totalTime);
+    document.getElementById("visibleTime").textContent = formatTime(visibleTime);
 
-      filtered.sort((a, b) => {
-        return sort === 'desc'
-          ? b.游玩时间 - a.游玩时间
-          : a.游玩时间 - b.游玩时间;
-      });
+    const container = document.getElementById("games");
+    container.innerHTML = "";
 
-      updateStats(filtered);
+    filtered.forEach((game,index)=>{
 
-      const container = document.getElementById('gamesContainer');
-      container.innerHTML = '';
-
-      filtered.forEach((game, index) => {
-        const card = document.createElement('div');
-        card.className = 'game-card';
+        const card = document.createElement("div");
+        card.className = "card";
 
         card.innerHTML = `
-          <div class="banner"></div>
-          <div class="game-content">
-            <div class="top-row">
-              <div>
-                <div class="game-name">${game.名称}</div>
-                <div class="tags">
-                  <div class="tag">${game.分类}</div>
-                  <div class="tag">${game.平台}</div>
-                  <div class="tag">${game.来源}</div>
-                </div>
-              </div>
+        <div class="banner"></div>
 
-              <div class="time">
-                <div class="time-main">${formatTime(game.游玩时间)}</div>
-                <div class="time-sub">${game.游玩时间.toLocaleString()} 秒</div>
-              </div>
+        <div class="content">
+
+            <div class="top">
+
+                <div>
+
+                    <div class="name">${game["名称"]}</div>
+
+                    <div class="tags">
+                        <div class="tag">${game["分类"]}</div>
+                        <div class="tag">${game["平台"]}</div>
+                        <div class="tag">${game["来源"]}</div>
+                    </div>
+
+                </div>
+
+                <div class="time">
+                    <div class="time-main">${formatTime(Number(game["游玩时间"]))}</div>
+                    <div class="time-sub">${Number(game["游玩时间"]).toLocaleString()} 秒</div>
+                </div>
+
             </div>
 
-            ${game.备注 ? `
-              <div class="remark-box">
-                <button class="remark-toggle" onclick="toggleRemark(${index})">
-                  查看备注 ▼
+            ${game["备注"] ? `
+            <div class="remark">
+                <button class="remark-btn" onclick="toggleRemark(${index})">
+                    查看备注 ▼
                 </button>
+
                 <div class="remark-content" id="remark-${index}">
-                  ${game.备注}
+                    ${game["备注"]}
                 </div>
-              </div>
-            ` : ''}
-          </div>
+            </div>
+            ` : ""}
+
+        </div>
         `;
 
         container.appendChild(card);
-      });
-    }
 
-    function toggleRemark(index) {
-      const element = document.getElementById(`remark-${index}`);
-      element.classList.toggle('open');
-    }
+    });
 
-    document.getElementById('categoryFilter').addEventListener('change', renderGames);
-    document.getElementById('platformFilter').addEventListener('change', renderGames);
-    document.getElementById('sortSelect').addEventListener('change', renderGames);
+}
 
-    populateFilters();
-    renderGames();
-  </script>
+function toggleRemark(index) {
+    document.getElementById(`remark-${index}`).classList.toggle("open");
+}
+
+document.getElementById("categoryFilter").addEventListener("change", render);
+document.getElementById("platformFilter").addEventListener("change", render);
+document.getElementById("sortSelect").addEventListener("change", render);
+
+initFilters();
+render();
+
+</script>
+
 </body>
 </html>
