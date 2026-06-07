@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>游戏时长档案馆 · 黑白极简</title>
+    <title>游戏时长档案馆 · 极简黑境</title>
     <style>
         * {
             margin: 0;
@@ -12,50 +12,50 @@
         }
 
         body {
-            background-color: #ffffff;
+            background-color: #000000;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
-            color: #111111;
+            color: #f0f0f0;
             padding: 2rem 1rem;
             line-height: 1.4;
         }
 
-        /* 主容器 — 干净窄栏 */
         .container {
-            max-width: 880px;
+            max-width: 980px;
             margin: 0 auto;
-            background: #fff;
+            background: #000000;
         }
 
-        /* 头部区域：简洁标题 + 控制栏 */
+        /* 极简黑底白边 */
         .header {
-            border-bottom: 2px solid #000;
+            border-bottom: 1px solid #2a2a2a;
             padding-bottom: 1rem;
             margin-bottom: 1.8rem;
         }
 
         h1 {
             font-size: 1.8rem;
-            font-weight: 500;
+            font-weight: 450;
             letter-spacing: -0.5px;
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.3rem;
+            color: #fff;
         }
 
         .sub {
             font-size: 0.8rem;
-            color: #444;
-            margin-top: 0.25rem;
-            border-left: 2px solid #aaa;
-            padding-left: 0.6rem;
+            color: #aaaaaa;
+            margin-top: 0.2rem;
+            border-left: 2px solid #3a3a3a;
+            padding-left: 0.7rem;
         }
 
-        /* 控制栏：双行（flex wrap） */
+        /* 控制栏 + 分类统计区块 */
         .controls {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            align-items: flex-end;
+            align-items: center;
             gap: 1rem;
-            margin: 1.5rem 0 1rem 0;
+            margin: 1.2rem 0 1.5rem 0;
         }
 
         .filter-group {
@@ -63,77 +63,123 @@
             flex-wrap: wrap;
             align-items: center;
             gap: 0.6rem;
-            background: #f5f5f5;
-            padding: 0.4rem 1rem 0.4rem 1rem;
-            border-radius: 24px;
+            background: #121212;
+            padding: 0.4rem 1rem;
+            border-radius: 32px;
+            border: 1px solid #2c2c2c;
         }
 
         .filter-group label {
             font-size: 0.8rem;
             font-weight: 500;
-            letter-spacing: 0.3px;
-            color: #1a1a1a;
+            color: #ddd;
         }
 
         select, button {
-            background: #fff;
-            border: 1px solid #ccc;
-            padding: 0.35rem 0.8rem;
+            background: #1e1e1e;
+            border: 1px solid #3a3a3a;
+            padding: 0.35rem 0.9rem;
             font-size: 0.8rem;
             font-family: inherit;
             cursor: pointer;
             border-radius: 30px;
-            transition: all 0.15s ease;
-            color: #111;
+            transition: all 0.2s ease;
+            color: #f0f0f0;
         }
 
         select:hover, button:hover {
-            border-color: #000;
-            background-color: #fefefe;
-        }
-
-        button:active {
-            background-color: #eaeaea;
+            border-color: #888;
+            background-color: #2a2a2a;
         }
 
         .sort-buttons {
             display: flex;
-            gap: 0.5rem;
+            gap: 0.6rem;
         }
 
         .stats-badge {
-            background: #f0f0f0;
+            background: #121212;
             padding: 0.3rem 1rem;
             border-radius: 32px;
             font-size: 0.75rem;
             font-weight: 500;
             font-family: monospace;
-            letter-spacing: 0.3px;
+            border: 1px solid #2c2c2c;
         }
 
         .stats-badge span {
             font-weight: 700;
-            color: #000;
+            color: #ffffff;
         }
 
-        /* 游戏列表容器 */
+        /* 分类总时长面板 — 新增加区域，显示各分类总时长排序 */
+        .category-summary {
+            background: #0a0a0a;
+            border: 1px solid #262626;
+            border-radius: 20px;
+            padding: 1rem 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .category-summary h3 {
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            margin-bottom: 0.8rem;
+            color: #ccc;
+            border-left: 2px solid #fff;
+            padding-left: 0.6rem;
+        }
+
+        .category-tiles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem 1rem;
+        }
+
+        .cat-tile {
+            background: #111;
+            border-radius: 40px;
+            padding: 0.3rem 1rem;
+            font-size: 0.75rem;
+            font-family: monospace;
+            border: 1px solid #2e2e2e;
+            transition: all 0.1s;
+            cursor: default;
+        }
+
+        .cat-tile strong {
+            font-weight: 600;
+            color: white;
+        }
+
+        .cat-tile span {
+            color: #aaa;
+            margin-left: 0.3rem;
+        }
+
+        .cat-tile:hover {
+            border-color: #5a5a5a;
+            background: #1a1a1a;
+        }
+
+        /* 游戏列表 */
         .game-list {
-            margin-top: 1.8rem;
-            border-top: 1px solid #eaeaea;
+            margin-top: 1rem;
+            border-top: 1px solid #222;
         }
 
-        /* 每一行游戏条目：极简border + flex */
         .game-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0.9rem 0.5rem;
-            border-bottom: 1px solid #eaeaea;
+            border-bottom: 1px solid #1f1f1f;
             transition: background 0.1s;
         }
 
         .game-row:hover {
-            background-color: #fafafa;
+            background-color: #0c0c0c;
         }
 
         .game-name-area {
@@ -145,20 +191,21 @@
 
         .game-name {
             font-size: 1rem;
-            font-weight: 470;
+            font-weight: 430;
             letter-spacing: -0.2px;
             word-break: break-word;
+            color: #f5f5f5;
         }
 
-        /* 分类小标签 — 极简灰 */
         .game-category {
             font-size: 0.65rem;
-            background: #ececec;
-            padding: 0.2rem 0.55rem;
+            background: #1e1e1e;
+            padding: 0.2rem 0.6rem;
             border-radius: 20px;
-            color: #2c2c2c;
+            color: #bbbbbb;
             text-transform: capitalize;
             font-family: monospace;
+            border: 0.5px solid #333;
         }
 
         .right-section {
@@ -170,23 +217,21 @@
         .game-hours {
             font-family: 'SF Mono', 'JetBrains Mono', monospace;
             font-size: 0.9rem;
-            font-weight: 500;
+            font-weight: 450;
             letter-spacing: 0.3px;
-            color: #111;
-            background: #fff;
-            padding: 0.2rem 0;
+            color: #e0e0e0;
+            background: transparent;
             min-width: 85px;
             text-align: right;
         }
 
-        /* 备注按钮：极简符号 */
         .note-btn {
             background: none;
             border: none;
             font-size: 1.1rem;
             cursor: pointer;
             padding: 0 0.2rem;
-            color: #4a4a4a;
+            color: #aaa;
             transition: color 0.1s;
             border-radius: 20px;
             width: 28px;
@@ -197,21 +242,20 @@
         }
 
         .note-btn:hover {
-            color: #000;
-            background: #e6e6e6;
+            color: #ffffff;
+            background: #2a2a2a;
             border: none;
         }
 
-        /* 空状态 */
         .empty-message {
             text-align: center;
             padding: 3rem 1rem;
-            color: #888;
+            color: #666;
             font-size: 0.9rem;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #222;
         }
 
-        /* 模态框 (备注二级弹窗) 极简黑白 */
+        /* 模态框 黑底白字 */
         .modal {
             display: none;
             position: fixed;
@@ -219,20 +263,20 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.65);
+            background-color: rgba(0, 0, 0, 0.85);
             justify-content: center;
             align-items: center;
             z-index: 1000;
-            backdrop-filter: blur(2px);
+            backdrop-filter: blur(3px);
         }
 
         .modal-card {
-            background: #ffffff;
-            max-width: 460px;
+            background: #121212;
+            max-width: 480px;
             width: 90%;
-            border-radius: 16px;
-            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.2);
-            border: 1px solid #eaeaea;
+            border-radius: 24px;
+            box-shadow: 0 25px 40px -12px rgba(0,0,0,0.6);
+            border: 1px solid #2e2e2e;
             overflow: hidden;
         }
 
@@ -241,14 +285,15 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 1.3rem;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #2a2a2a;
             font-weight: 500;
-            background: #fff;
+            background: #0a0a0a;
         }
 
         .modal-header h3 {
             font-size: 1rem;
-            font-weight: 500;
+            font-weight: 470;
+            color: #eee;
         }
 
         .close-modal {
@@ -258,47 +303,37 @@
             cursor: pointer;
             line-height: 1;
             padding: 0 0.3rem;
-            color: #333;
+            color: #aaa;
             border-radius: 40px;
         }
 
         .close-modal:hover {
-            color: #000;
-            background: #f0f0f0;
+            color: white;
+            background: #2c2c2c;
         }
 
         .modal-body {
             padding: 1.3rem;
             font-size: 0.85rem;
             line-height: 1.55;
-            color: #1e1e1e;
+            color: #e5e5e5;
             white-space: pre-wrap;
             word-break: break-word;
             max-height: 60vh;
             overflow-y: auto;
-            background: #fff;
-        }
-
-        .modal-body p {
-            margin: 0;
-        }
-
-        hr {
-            margin: 1rem 0;
-            border: 0;
-            border-top: 1px solid #eaeaea;
+            background: #121212;
         }
 
         footer {
             margin-top: 3rem;
             text-align: center;
             font-size: 0.7rem;
-            color: #aaa;
-            border-top: 1px solid #eee;
+            color: #444;
+            border-top: 1px solid #222;
             padding-top: 1.5rem;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 680px) {
             body {
                 padding: 1rem 0.8rem;
             }
@@ -309,15 +344,8 @@
             .filter-group {
                 justify-content: space-between;
             }
-            .sort-buttons {
-                justify-content: flex-start;
-            }
-            .game-name {
-                font-size: 0.9rem;
-            }
-            .game-hours {
-                font-size: 0.8rem;
-                min-width: 70px;
+            .category-tiles {
+                gap: 0.5rem;
             }
         }
     </style>
@@ -325,37 +353,43 @@
 <body>
 <div class="container">
     <div class="header">
-        <h1>◼ 游戏时长·简录</h1>
-        <div class="sub">所有时长基于原始秒数转换 · 单位：小时</div>
+        <h1>◼ 游戏时长·黑简录</h1>
+        <div class="sub">最近修改于6月7日</div>
     </div>
 
-    <!-- 控制栏：筛选/排序/统计 -->
+    <!-- 各分类总时长排序面板 (新增) -->
+    <div class="category-summary" id="categorySummaryPanel">
+        <h3>📊 分类总时长排行 (小时)</h3>
+        <div class="category-tiles" id="categoryTilesContainer">
+            <!-- 动态注入分类排行 -->
+        </div>
+    </div>
+
+    <!-- 筛选 + 排序栏 -->
     <div class="controls">
         <div class="filter-group">
             <label>分类筛选</label>
             <select id="categoryFilter">
                 <option value="ALL">▸ 全部游戏</option>
             </select>
-            <div class="stats-badge" id="totalDurationBadge">
-                ⏱ 总时长 <span id="totalHours">0.0</span> h
+            <div class="stats-badge">
+                ⏱ 当前总时长 <span id="totalHours">0.0</span> h
             </div>
         </div>
         <div class="sort-buttons">
-            <button id="sortHighToLow">↓ 时长 高 → 低</button>
-            <button id="sortLowToHigh">↑ 时长 低 → 高</button>
-            <button id="resetOrderBtn">⟳ 原始顺序</button>
+            <button id="sortHighToLow">↓ 时长 高→低</button>
+            <button id="sortLowToHigh">↑ 时长 低→高</button>
         </div>
     </div>
 
-    <!-- 游戏列表容器 -->
+    <!-- 游戏列表 -->
     <div class="game-list" id="gameListContainer">
-        <!-- 动态渲染 -->
         <div class="empty-message">加载列表中...</div>
     </div>
-    <footer>点击右侧「📋」查看备注详情 · 黑白极简档案</footer>
+    <footer>点击右侧「📋」查看备注详情 · 极简黑境</footer>
 </div>
 
-<!-- 备注模态框 (二级展开) -->
+<!-- 备注模态框 -->
 <div id="noteModal" class="modal">
     <div class="modal-card">
         <div class="modal-header">
@@ -370,7 +404,7 @@
 
 <script>
     // --------------------------------------------------------------
-    // 原始数据 (基于CSV内容精确构建, 游玩时间单位:秒)
+    // 原始数据 (基于CSV, 时长单位:秒)
     // --------------------------------------------------------------
     const GAMES_DATA = [
         { name: "4399小游戏", category: "Other", note: "时长来源于游戏内部PC数和粗略计算总和：\n奥奇传说\n摩尔庄园\n美食大战老鼠\n弹弹堂\n森林冰火人\n疯狂小人战斗", platform: "PC (Windows)", playSeconds: 1080000, source: "Other" },
@@ -414,71 +448,99 @@
         { name: "英雄联盟手游（台服）", category: "MOBA", note: "182PC\n时长计算公式：PC*1800（单位：秒）", platform: "Mobile（iOS）", playSeconds: 327600, source: "Other" }
     ];
 
-    // ----- 辅助函数: 秒转小时 (保留1位小数)
+    // 辅助: 秒转小时 (保留1位小数)
     function secondsToHours(seconds) {
         let hours = seconds / 3600;
         return Math.round(hours * 10) / 10;
     }
 
-    // 获取所有不同分类 (去重)
+    // 获取全部分类列表
     function getAllCategories() {
         const cats = new Set();
-        GAMES_DATA.forEach(game => cats.add(game.category));
+        GAMES_DATA.forEach(g => cats.add(g.category));
         return Array.from(cats).sort();
     }
 
-    // ----- 全局状态
-    let currentCategory = "ALL";          // 筛选分类
-    let currentSortMode = "DEFAULT";      // "DEFAULT", "HIGH_TO_LOW", "LOW_TO_HIGH"
-    let originalOrder = [...GAMES_DATA];   // 原始顺序(不可变)
+    // ---------- 状态 ----------
+    let currentCategory = "ALL";
+    let currentSortMode = "HIGH_TO_LOW";   // 默认高到低 (原始顺序已移除)
 
-    // 获取当前筛选+排序后的游戏列表 (不改变原始数据)
+    // 获取筛选+排序后的列表
     function getFilteredAndSortedGames() {
-        // 1. 筛选分类
         let filtered = [...GAMES_DATA];
         if (currentCategory !== "ALL") {
-            filtered = filtered.filter(game => game.category === currentCategory);
+            filtered = filtered.filter(g => g.category === currentCategory);
         }
-        // 2. 排序
         if (currentSortMode === "HIGH_TO_LOW") {
             filtered.sort((a, b) => b.playSeconds - a.playSeconds);
         } else if (currentSortMode === "LOW_TO_HIGH") {
             filtered.sort((a, b) => a.playSeconds - b.playSeconds);
-        } else if (currentSortMode === "DEFAULT") {
-            // 维持原始顺序: 依据原数组索引 (稳定按原始索引)
-            filtered.sort((a, b) => {
-                const idxA = GAMES_DATA.findIndex(g => g.name === a.name && g.playSeconds === a.playSeconds);
-                const idxB = GAMES_DATA.findIndex(g => g.name === b.name && g.playSeconds === b.playSeconds);
-                return idxA - idxB;
-            });
         }
         return filtered;
     }
 
-    // 计算当前列表(经过筛选)的总时长(小时)
+    // 计算当前筛选后的总时长(小时)
     function getTotalHoursForFiltered() {
         let filtered = [...GAMES_DATA];
         if (currentCategory !== "ALL") {
-            filtered = filtered.filter(game => game.category === currentCategory);
+            filtered = filtered.filter(g => g.category === currentCategory);
         }
-        const totalSeconds = filtered.reduce((sum, game) => sum + game.playSeconds, 0);
-        return secondsToHours(totalSeconds);
+        const totalSec = filtered.reduce((sum, g) => sum + g.playSeconds, 0);
+        return secondsToHours(totalSec);
     }
 
-    // 刷新分类下拉框选项 (动态)
+    // 计算各个分类的总时长，并按总时长降序排列 (用于新面板)
+    function getCategoryTotalHoursSorted() {
+        const catMap = new Map(); // category => totalSeconds
+        GAMES_DATA.forEach(game => {
+            const cat = game.category;
+            const current = catMap.get(cat) || 0;
+            catMap.set(cat, current + game.playSeconds);
+        });
+        // 转换成 [{category, totalHours}]
+        let arr = [];
+        for (let [cat, sec] of catMap.entries()) {
+            arr.push({ category: cat, totalHours: secondsToHours(sec) });
+        }
+        // 按总时长从高到低排序
+        arr.sort((a, b) => b.totalHours - a.totalHours);
+        return arr;
+    }
+
+    // 渲染分类总时长面板 (白字黑底风格)
+    function renderCategorySummary() {
+        const container = document.getElementById("categoryTilesContainer");
+        if (!container) return;
+        const sortedCats = getCategoryTotalHoursSorted();
+        if (sortedCats.length === 0) {
+            container.innerHTML = '<span style="color:#555;">暂无分类数据</span>';
+            return;
+        }
+        let html = '';
+        sortedCats.forEach(catInfo => {
+            html += `
+                <div class="cat-tile">
+                    <strong>${escapeHtml(catInfo.category)}</strong>
+                    <span>${catInfo.totalHours.toFixed(1)} h</span>
+                </div>
+            `;
+        });
+        container.innerHTML = html;
+    }
+
+    // 分类下拉框填充
     function populateCategorySelect() {
         const selectEl = document.getElementById("categoryFilter");
         if (!selectEl) return;
         const categories = getAllCategories();
         let options = '<option value="ALL">▸ 全部游戏</option>';
         categories.forEach(cat => {
-            const selectedAttr = (currentCategory === cat) ? 'selected' : '';
-            options += `<option value="${escapeHtml(cat)}" ${selectedAttr}>${escapeHtml(cat)}</option>`;
+            const selected = (currentCategory === cat) ? 'selected' : '';
+            options += `<option value="${escapeHtml(cat)}" ${selected}>${escapeHtml(cat)}</option>`;
         });
         selectEl.innerHTML = options;
     }
 
-    // 简易防XSS
     function escapeHtml(str) {
         if (!str) return "";
         return str.replace(/[&<>]/g, function(m) {
@@ -486,40 +548,28 @@
             if (m === '<') return '&lt;';
             if (m === '>') return '&gt;';
             return m;
-        }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, function(c) {
-            return c;
-        });
+        }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, c => c);
     }
 
-    // 渲染游戏列表 (核心)
+    // 渲染游戏主列表
     function renderGameList() {
         const container = document.getElementById("gameListContainer");
         if (!container) return;
         const gamesToRender = getFilteredAndSortedGames();
-        
-        if (gamesToRender.length === 0) {
-            container.innerHTML = '<div class="empty-message">⚡ 暂无游戏 · 换个分类试试</div>';
-            document.getElementById("totalHours").innerText = "0.0";
-            return;
-        }
-        
-        // 计算并更新当前总时长 (符合分类总时长)
         const totalHrs = getTotalHoursForFiltered();
         document.getElementById("totalHours").innerText = totalHrs.toFixed(1);
         
-        // 生成每一行
+        if (gamesToRender.length === 0) {
+            container.innerHTML = '<div class="empty-message">⚡ 无游戏记录 · 切换分类试试</div>';
+            return;
+        }
+        
         let html = '';
         for (let game of gamesToRender) {
             const hoursVal = secondsToHours(game.playSeconds);
             const displayHours = hoursVal.toFixed(1);
             const categoryLabel = escapeHtml(game.category);
             const gameNameEscaped = escapeHtml(game.name);
-            // 处理备注：如果没有备注则展示 "无额外备注"
-            const noteContent = game.note && game.note.trim() !== "" ? game.note : "（无备注信息）";
-            // data属性存储备注文本 (用于模态框)
-            // 注意: 使用自定义属性方便传递给弹窗，但为了安全使用转义后的内容但保留换行: 存储原始note 但后面通过JS获取对象数据更可靠。
-            // 我们通过游戏名称索引存储备注? 最好的方法: 渲染时绑定点击事件，根据游戏名或唯一索引查找原始game对象。因为存在同名可能性极低，可靠。
-            // 为了方便，给行一个 data-game-idx 但是gamesToRender 里是动态顺序，但游戏名称唯一性高，我们直接用名称查找。
             html += `
                 <div class="game-row" data-game-name="${escapeHtml(game.name)}">
                     <div class="game-name-area">
@@ -535,38 +585,35 @@
         }
         container.innerHTML = html;
         
-        // 绑定备注按钮事件 (委托或直接绑定，因为重新渲染后需重新绑定)
+        // 绑定备注按钮事件
         const noteBtns = document.querySelectorAll('.note-btn');
         noteBtns.forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 const gameNameAttr = btn.getAttribute('data-note-game');
                 if (gameNameAttr) {
-                    // 根据游戏名在原始数据中查找 (确保拿到完整备注)
                     const targetGame = GAMES_DATA.find(g => g.name === gameNameAttr);
                     if (targetGame) {
-                        let finalNote = targetGame.note && targetGame.note.trim() !== "" ? targetGame.note : "（该游戏暂无备注）";
-                        // 附加额外信息（平台可选显示，但极简只展示备注内容）
+                        let finalNote = targetGame.note && targetGame.note.trim() !== "" ? targetGame.note : "（暂无备注信息）";
                         if (targetGame.platform) {
-                            finalNote = `🎮 平台：${targetGame.platform}\n\n📝 备注详情：\n${finalNote}`;
+                            finalNote = `🎮 平台：${targetGame.platform}\n\n📝 详细备注：\n${finalNote}`;
                         } else {
-                            finalNote = `📝 备注详情：\n${finalNote}`;
+                            finalNote = `📝 详细备注：\n${finalNote}`;
                         }
                         showModal(finalNote);
                     } else {
-                        showModal("无法找到备注信息");
+                        showModal("无法找到备注数据");
                     }
                 }
             });
         });
     }
     
-    // 模态框显示 (二级点开)
+    // 模态框逻辑
     const modal = document.getElementById("noteModal");
     const modalContent = document.getElementById("modalNoteContent");
     function showModal(contentText) {
         if (!modal || !modalContent) return;
-        // 保留换行格式
         modalContent.innerHTML = `<p style="white-space: pre-wrap; font-family: monospace;">${escapeHtml(contentText)}</p>`;
         modal.style.display = "flex";
     }
@@ -574,24 +621,20 @@
         if (modal) modal.style.display = "none";
     }
     
-    // 事件绑定 & 初始化
+    // 事件绑定 (移除原始顺序相关)
     function bindUIEvents() {
         const categorySelect = document.getElementById("categoryFilter");
         const sortHighBtn = document.getElementById("sortHighToLow");
         const sortLowBtn = document.getElementById("sortLowToHigh");
-        const resetBtn = document.getElementById("resetOrderBtn");
         
         if (categorySelect) {
             categorySelect.addEventListener("change", (e) => {
                 currentCategory = e.target.value;
-                // 切换分类时，保持排序模式不变 (如果之前排序模式保留，但对用户体验友好)
-                // 重新渲染
                 renderGameList();
-                // 更新总时长已自动刷新
-                // 注意保持下拉框选中状态在重绘后不会丢失，但render不改变下拉框value因为DOM没有重置categorySelect的选择，外部改变没问题
-                // 但如果我们重新填充了分类下拉可能会导致事件重新绑定，目前无需重新填充选项，但其他操作如排序可能改变select选中? 不会
-                // 但确保当前选中的值与currentCategory同步
+                // 保持下拉选中同步
                 if (categorySelect.value !== currentCategory) categorySelect.value = currentCategory;
+                // 分类总时长面板不需要重新渲染？需要更新（但面板数据与筛选无关，显示全部游戏分类时长，保持不变即可，但为了展示总排名刷新也没关系）
+                renderCategorySummary(); // 其实不变但刷新无碍
             });
         }
         
@@ -607,12 +650,6 @@
                 renderGameList();
             });
         }
-        if (resetBtn) {
-            resetBtn.addEventListener("click", () => {
-                currentSortMode = "DEFAULT";
-                renderGameList();
-            });
-        }
         
         // 模态关闭
         const closeBtn = document.getElementById("closeModalBtn");
@@ -620,28 +657,26 @@
         modal?.addEventListener("click", (e) => {
             if (e.target === modal) closeModal();
         });
-        // ESC关闭
         document.addEventListener("keydown", (e) => {
-            if (e.key === "Escape" && modal && modal.style.display === "flex") {
-                closeModal();
-            }
+            if (e.key === "Escape" && modal && modal.style.display === "flex") closeModal();
         });
     }
     
-    // 启动时初始化分类下拉，渲染
-    function init() {
+    // 页面整体刷新: 渲染分类排行+游戏列表
+    function refreshAll() {
+        renderCategorySummary();
         populateCategorySelect();
-        bindUIEvents();
-        // 初始默认原始顺序
-        currentSortMode = "DEFAULT";
-        currentCategory = "ALL";
         renderGameList();
-        // 确保下拉框同步
-        const catSel = document.getElementById("categoryFilter");
-        if (catSel) catSel.value = "ALL";
     }
     
-    init();
+    // 初始化: 默认排序为高到低, 分类ALL
+    currentCategory = "ALL";
+    currentSortMode = "HIGH_TO_LOW";
+    refreshAll();
+    bindUIEvents();  // 二次确保绑定（render已调用事件绑定但也会再次执行）
+    // 保证分类下拉框值一致
+    const catSel = document.getElementById("categoryFilter");
+    if (catSel) catSel.value = "ALL";
 </script>
 </body>
 </html>
