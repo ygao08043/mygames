@@ -1,397 +1,647 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>我的游戏数据站</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>游戏时长档案馆 · 黑白极简</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<style>
-* {
-    box-sizing: border-box;
-}
+        body {
+            background-color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
+            color: #111111;
+            padding: 2rem 1rem;
+            line-height: 1.4;
+        }
 
-body {
-    margin: 0;
-    padding: 20px;
-    font-family: "Segoe UI","PingFang SC",sans-serif;
-    background:
-        radial-gradient(circle at top left,#312e81 0%,transparent 30%),
-        radial-gradient(circle at top right,#7c3aed 0%,transparent 25%),
-        linear-gradient(180deg,#0f172a 0%,#020617 100%);
-    color: white;
-    min-height: 100vh;
-}
+        /* 主容器 — 干净窄栏 */
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            background: #fff;
+        }
 
-.container {
-    max-width: 950px;
-    margin: auto;
-}
+        /* 头部区域：简洁标题 + 控制栏 */
+        .header {
+            border-bottom: 2px solid #000;
+            padding-bottom: 1rem;
+            margin-bottom: 1.8rem;
+        }
 
-.header {
-    margin-bottom: 28px;
-}
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.25rem;
+        }
 
-.title {
-    font-size: 2.4rem;
-    font-weight: 800;
-}
+        .sub {
+            font-size: 0.8rem;
+            color: #444;
+            margin-top: 0.25rem;
+            border-left: 2px solid #aaa;
+            padding-left: 0.6rem;
+        }
 
-.subtitle {
-    color: #94a3b8;
-    margin-top: 8px;
-}
+        /* 控制栏：双行（flex wrap） */
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            margin: 1.5rem 0 1rem 0;
+        }
 
-.controls {
-    position: sticky;
-    top: 10px;
-    z-index: 100;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    padding: 16px;
-    margin-bottom: 24px;
-    border-radius: 22px;
-    background: rgba(255,255,255,0.07);
-    border: 1px solid rgba(255,255,255,0.08);
-    backdrop-filter: blur(14px);
-}
+        .filter-group {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.6rem;
+            background: #f5f5f5;
+            padding: 0.4rem 1rem 0.4rem 1rem;
+            border-radius: 24px;
+        }
 
-select {
-    background: rgba(15,23,42,0.9);
-    color: white;
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 12px;
-    padding: 10px 14px;
-    font-size: 0.95rem;
-}
+        .filter-group label {
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            color: #1a1a1a;
+        }
 
-.stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
-    gap: 14px;
-    margin-bottom: 28px;
-}
+        select, button {
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 0.35rem 0.8rem;
+            font-size: 0.8rem;
+            font-family: inherit;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: all 0.15s ease;
+            color: #111;
+        }
 
-.stat {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 22px;
-    padding: 18px;
-    backdrop-filter: blur(10px);
-}
+        select:hover, button:hover {
+            border-color: #000;
+            background-color: #fefefe;
+        }
 
-.stat-label {
-    color: #94a3b8;
-    font-size: 0.9rem;
-}
+        button:active {
+            background-color: #eaeaea;
+        }
 
-.stat-value {
-    margin-top: 8px;
-    font-size: 1.45rem;
-    font-weight: bold;
-}
+        .sort-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
 
-.games {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
+        .stats-badge {
+            background: #f0f0f0;
+            padding: 0.3rem 1rem;
+            border-radius: 32px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            font-family: monospace;
+            letter-spacing: 0.3px;
+        }
 
-.card {
-    overflow: hidden;
-    border-radius: 24px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.08);
-    backdrop-filter: blur(16px);
-    transition: 0.25s ease;
-}
+        .stats-badge span {
+            font-weight: 700;
+            color: #000;
+        }
 
-.card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(255,255,255,0.18);
-}
+        /* 游戏列表容器 */
+        .game-list {
+            margin-top: 1.8rem;
+            border-top: 1px solid #eaeaea;
+        }
 
-.banner {
-    height: 10px;
-    background: linear-gradient(90deg,#38bdf8,#8b5cf6,#ec4899);
-}
+        /* 每一行游戏条目：极简border + flex */
+        .game-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.9rem 0.5rem;
+            border-bottom: 1px solid #eaeaea;
+            transition: background 0.1s;
+        }
 
-.content {
-    padding: 20px;
-}
+        .game-row:hover {
+            background-color: #fafafa;
+        }
 
-.top {
-    display: flex;
-    justify-content: space-between;
-    gap: 14px;
-    flex-wrap: wrap;
-}
+        .game-name-area {
+            display: flex;
+            align-items: baseline;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
 
-.name {
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
+        .game-name {
+            font-size: 1rem;
+            font-weight: 470;
+            letter-spacing: -0.2px;
+            word-break: break-word;
+        }
 
-.tags {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-}
+        /* 分类小标签 — 极简灰 */
+        .game-category {
+            font-size: 0.65rem;
+            background: #ececec;
+            padding: 0.2rem 0.55rem;
+            border-radius: 20px;
+            color: #2c2c2c;
+            text-transform: capitalize;
+            font-family: monospace;
+        }
 
-.tag {
-    background: rgba(255,255,255,0.08);
-    padding: 6px 10px;
-    border-radius: 999px;
-    font-size: 0.8rem;
-    color: #cbd5e1;
-}
+        .right-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
 
-.time {
-    text-align: right;
-}
+        .game-hours {
+            font-family: 'SF Mono', 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            color: #111;
+            background: #fff;
+            padding: 0.2rem 0;
+            min-width: 85px;
+            text-align: right;
+        }
 
-.time-main {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
+        /* 备注按钮：极简符号 */
+        .note-btn {
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+            padding: 0 0.2rem;
+            color: #4a4a4a;
+            transition: color 0.1s;
+            border-radius: 20px;
+            width: 28px;
+            height: 28px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-.time-sub {
-    margin-top: 6px;
-    font-size: 0.82rem;
-    color: #94a3b8;
-}
+        .note-btn:hover {
+            color: #000;
+            background: #e6e6e6;
+            border: none;
+        }
 
-.remark {
-    margin-top: 16px;
-    border-radius: 16px;
-    overflow: hidden;
-    background: rgba(0,0,0,0.2);
-}
+        /* 空状态 */
+        .empty-message {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: #888;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #eee;
+        }
 
-.remark-btn {
-    width: 100%;
-    border: none;
-    background: transparent;
-    color: white;
-    text-align: left;
-    padding: 14px 16px;
-    cursor: pointer;
-    font-size: 0.92rem;
-}
+        /* 模态框 (备注二级弹窗) 极简黑白 */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.65);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(2px);
+        }
 
-.remark-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.35s ease;
-    padding: 0 16px;
-    color: #cbd5e1;
-    line-height: 1.7;
-    white-space: pre-wrap;
-}
+        .modal-card {
+            background: #ffffff;
+            max-width: 460px;
+            width: 90%;
+            border-radius: 16px;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.2);
+            border: 1px solid #eaeaea;
+            overflow: hidden;
+        }
 
-.remark-content.open {
-    max-height: 1200px;
-    padding-bottom: 16px;
-}
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.3rem;
+            border-bottom: 1px solid #ddd;
+            font-weight: 500;
+            background: #fff;
+        }
 
-@media (max-width:700px) {
-    .time {
-        text-align: left;
-    }
+        .modal-header h3 {
+            font-size: 1rem;
+            font-weight: 500;
+        }
 
-    .title {
-        font-size: 1.9rem;
-    }
-}
-</style>
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0 0.3rem;
+            color: #333;
+            border-radius: 40px;
+        }
+
+        .close-modal:hover {
+            color: #000;
+            background: #f0f0f0;
+        }
+
+        .modal-body {
+            padding: 1.3rem;
+            font-size: 0.85rem;
+            line-height: 1.55;
+            color: #1e1e1e;
+            white-space: pre-wrap;
+            word-break: break-word;
+            max-height: 60vh;
+            overflow-y: auto;
+            background: #fff;
+        }
+
+        .modal-body p {
+            margin: 0;
+        }
+
+        hr {
+            margin: 1rem 0;
+            border: 0;
+            border-top: 1px solid #eaeaea;
+        }
+
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.7rem;
+            color: #aaa;
+            border-top: 1px solid #eee;
+            padding-top: 1.5rem;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .filter-group {
+                justify-content: space-between;
+            }
+            .sort-buttons {
+                justify-content: flex-start;
+            }
+            .game-name {
+                font-size: 0.9rem;
+            }
+            .game-hours {
+                font-size: 0.8rem;
+                min-width: 70px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-
 <div class="container">
+    <div class="header">
+        <h1>◼ 游戏时长·简录</h1>
+        <div class="sub">所有时长基于原始秒数转换 · 单位：小时</div>
+    </div>
 
-<div class="header">
-<div class="title">🎮 我的游戏数据站</div>
-<div class="subtitle">完整导入 CSV 数据 · 支持筛选 / 排序 / 备注展开</div>
+    <!-- 控制栏：筛选/排序/统计 -->
+    <div class="controls">
+        <div class="filter-group">
+            <label>分类筛选</label>
+            <select id="categoryFilter">
+                <option value="ALL">▸ 全部游戏</option>
+            </select>
+            <div class="stats-badge" id="totalDurationBadge">
+                ⏱ 总时长 <span id="totalHours">0.0</span> h
+            </div>
+        </div>
+        <div class="sort-buttons">
+            <button id="sortHighToLow">↓ 时长 高 → 低</button>
+            <button id="sortLowToHigh">↑ 时长 低 → 高</button>
+            <button id="resetOrderBtn">⟳ 原始顺序</button>
+        </div>
+    </div>
+
+    <!-- 游戏列表容器 -->
+    <div class="game-list" id="gameListContainer">
+        <!-- 动态渲染 -->
+        <div class="empty-message">加载列表中...</div>
+    </div>
+    <footer>点击右侧「📋」查看备注详情 · 黑白极简档案</footer>
 </div>
 
-<div class="controls">
-<select id="categoryFilter">
-<option value="all">全部分类</option>
-</select>
-
-<select id="platformFilter">
-<option value="all">全部平台</option>
-</select>
-
-<select id="sortSelect">
-<option value="desc">时长从高到低</option>
-<option value="asc">时长从低到高</option>
-</select>
-</div>
-
-<div class="stats">
-<div class="stat">
-<div class="stat-label">游戏总数</div>
-<div class="stat-value" id="totalGames"></div>
-</div>
-
-<div class="stat">
-<div class="stat-label">总游玩时长</div>
-<div class="stat-value" id="totalTime"></div>
-</div>
-
-<div class="stat">
-<div class="stat-label">当前显示</div>
-<div class="stat-value" id="visibleGames"></div>
-</div>
-
-<div class="stat">
-<div class="stat-label">当前显示游戏时长</div>
-<div class="stat-value" id="visibleTime"></div>
-</div>
-</div>
-
-<div class="games" id="games"></div>
-
+<!-- 备注模态框 (二级展开) -->
+<div id="noteModal" class="modal">
+    <div class="modal-card">
+        <div class="modal-header">
+            <h3>📄 游戏备注</h3>
+            <button class="close-modal" id="closeModalBtn">✕</button>
+        </div>
+        <div class="modal-body" id="modalNoteContent">
+            <p>备注内容</p>
+        </div>
+    </div>
 </div>
 
 <script>
+    // --------------------------------------------------------------
+    // 原始数据 (基于CSV内容精确构建, 游玩时间单位:秒)
+    // --------------------------------------------------------------
+    const GAMES_DATA = [
+        { name: "4399小游戏", category: "Other", note: "时长来源于游戏内部PC数和粗略计算总和：\n奥奇传说\n摩尔庄园\n美食大战老鼠\n弹弹堂\n森林冰火人\n疯狂小人战斗", platform: "PC (Windows)", playSeconds: 1080000, source: "Other" },
+        { name: "Aimlabs", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 6780, source: "Steam" },
+        { name: "Among Us", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 1440, source: "Steam" },
+        { name: "Arcaea", category: "Music game", note: "时长计算公式：时长随iOS统计每周日更新，无PC数据\nB30：12.0814\nPTT=B30+R10：12.14\n段位挑战：7段", platform: "Mobile（iOS）", playSeconds: 1186800, source: "Other" },
+        { name: "Battlefield 1", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 261728, source: "Steam" },
+        { name: "Battlefield 2042", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 242700, source: "Steam" },
+        { name: "Battlefield 5", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 22380, source: "Steam" },
+        { name: "Battlefield 6", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 334620, source: "Steam" },
+        { name: "CHUNITHM", category: "Music game", note: "国服991PC，RIN服508PC\n时长计算公式：pleynite自动统计RIN+国服PC*3*240（单位：秒）\nB50=O30+N20\n国服B50（中二节奏2026）：16.44（V段）\nRIN服B50（X-VERSE）：16.81（V段）\nB30：16.93", platform: "Arcade", playSeconds: 1398810, source: "Other" },
+        { name: "Counter-Strike 2", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 3545460, source: "Steam" },
+        { name: "FreshWomen - Season 1", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 12360, source: "Steam" },
+        { name: "FreshWomen - Season 2", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 15420, source: "Steam" },
+        { name: "Goose Goose Duck", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 39240, source: "Steam" },
+        { name: "MAI MAI", category: "Music game", note: "国服10PC\n时长计算公式：国服PC*3*240（单位：秒）\nDX评分=O35+N15：3369\n段位：无", platform: "Arcade", playSeconds: 7200, source: "Other" },
+        { name: "Microsoft Solitaire Collection", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 11580, source: "Xbox" },
+        { name: "Minecraft Bedrock", category: "Open world", note: "", platform: "PC (Windows)", playSeconds: 526802, source: "Xbox" },
+        { name: "Minecraft iOS", category: "Open world", note: "", platform: "Mobile（iOS）", playSeconds: 892080, source: "Xbox" },
+        { name: "Phigros", category: "Music game", note: "时长计算公式：时长来源于TapTap，无PC数据\nRKS=P3+B27：14.92\n位次：76144\n课题模式段位：红49", platform: "Mobile（iOS）", playSeconds: 99720, source: "Other" },
+        { name: "Project SEKAI", category: "Music game", note: "时长计算公式：时长随iOS统计每周日更新，无PC数据\n国服排位：白金2\n国服位次：6168", platform: "Mobile（iOS）", playSeconds: 58000, source: "Other" },
+        { name: "PUBG: BATTLEGROUNDS", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 1277100, source: "Steam" },
+        { name: "Riptide GP: Renegade", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 0, source: "Steam" },
+        { name: "Riptide GP2", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 92627, source: "Steam" },
+        { name: "Wallpaper Engine：壁纸引擎", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 4740, source: "Steam" },
+        { name: "Zuma Deluxe", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 16200, source: "Steam" },
+        { name: "斗牌魂", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 180601, source: "Steam" },
+        { name: "节奏大师", category: "Music game", note: "老版本闯关188关，新版本70PC\n时长计算公式：240*2*188+240*新版本PC\n节奏战力=B50+N25：5.56", platform: "Mobile（iOS）", playSeconds: 107040, source: "Other" },
+        { name: "决战！平安京", category: "MOBA", note: "190PC\n时长计算公式：PC*1800（单位：秒）", platform: "Mobile（iOS）", playSeconds: 342000, source: "Other" },
+        { name: "狼人杀", category: "Card", note: "网杀108PC，面杀4h\n时长计算公式：PC*25*60+面杀时长", platform: "Mobile（iOS）", playSeconds: 176400, source: "Other" },
+        { name: "球球大作战", category: "Other", note: "80PC\n时长计算公式：PC*600（单位：秒）", platform: "Mobile（iOS）", playSeconds: 48000, source: "Other" },
+        { name: "雀魂麻将", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 726713, source: "Steam" },
+        { name: "三国杀", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 2172240, source: "Steam" },
+        { name: "三角洲行动", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 1760880, source: "Steam" },
+        { name: "生死狙击", category: "fps", note: "时长数据来源于游戏内官方统计", platform: "PC (Windows)", playSeconds: 709200, source: "Other" },
+        { name: "双人成行", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 60, source: "Steam" },
+        { name: "双影奇境", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 58860, source: "Steam" },
+        { name: "糖豆人", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 23873, source: "Epic" },
+        { name: "天月麻雀", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 44940, source: "Steam" },
+        { name: "王者荣耀", category: "MOBA", note: "1865PC\n时长计算公式：PC*1800（单位：秒）\n王者印记：2", platform: "Mobile（iOS）", playSeconds: 3357000, source: "Other" },
+        { name: "英雄联盟手游（台服）", category: "MOBA", note: "182PC\n时长计算公式：PC*1800（单位：秒）", platform: "Mobile（iOS）", playSeconds: 327600, source: "Other" }
+    ];
 
-const games = [{"名称": "4399小游戏", "分类": "Other", "备注": "时长来源于游戏内部PC数和粗略计算总和：\r\n奥奇传说\r\n摩尔庄园\r\n美食大战老鼠\r\n弹弹堂\r\n森林冰火人\r\n疯狂小人战斗\r\n", "平台": "PC (Windows)", "游玩时间": 1080000, "来源": "Other"}, {"名称": "Aimlabs", "分类": "fps", "备注": "", "平台": "PC (Windows)", "游玩时间": 6780, "来源": "Steam"}, {"名称": "Among Us", "分类": "Other", "备注": "", "平台": "PC (Windows)", "游玩时间": 1440, "来源": "Steam"}, {"名称": "Arcaea", "分类": "Music game", "备注": "时长计算公式：时长随iOS统计每周日更新，无PC数据\r\nB30：12.0814\r\nPTT=B30+R10：12.14\r\n段位挑战：7段", "平台": "Mobile（iOS）", "游玩时间": 1185060, "来源": "Other"}, {"名称": "Battlefield 1", "分类": "fps", "备注": "", "平台": "PC (Windows)", "游玩时间": 255000, "来源": "Steam"}, {"名称": "Battlefield 2042", "分类": "fps", "备注": "", "平台": "PC (Windows)", "游玩时间": 242700, "来源": "Steam"}, {"名称": "Battlefield 5", "分类": "fps", "备注": "", "平台": "PC (Windows)", "游玩时间": 22380, "来源": "Steam"}, {"名称": "Battlefield 6", "分类": "fps", "备注": "", "平台": "PC (Windows)", "游玩时间": 334620, "来源": "Steam"}, {"名称": "CHUNITHM", "分类": "Music game", "备注": "国服991PC，RIN服494PC\r\n时长计算公式：pleynite自动统计RIN+国服PC*3*240（单位：秒）\r\nB50=O30+N20\r\n国服B50（中二节奏2026）：16.44（V段）\r\nRIN服B50（X-VERSE）：16.77（V段）\r\nB30：16.87", "平台": "Arcade", "游玩时间": 1373599, "来源": "Other"}, {"名称": "Counter-Strike 2", "分类": "fps", "备注": "", "平台": "PC (Windows)", "游玩时间": 3527760, "来源": "Steam"}, {"名称": "FreshWomen - Season 1", "分类": "Other", "备注": "", "平台": "PC (Windows)", "游玩时间": 12360, "来源": "Steam"}, {"名称": "FreshWomen - Season 2", "分类": "Other", "备注": "", "平台": "PC (Windows)", "游玩时间": 15420, "来源": "Steam"}, {"名称": "Goose Goose Duck", "分类": "Other", "备注": "", "平台": "PC (Windows)", "游玩时间": 39240, "来源": "Steam"}, {"名称": "MAI MAI", "分类": "Music game", "备注": "国服10PC\r\n时长计算公式：国服PC*3*240（单位：秒）\r\nDX评分=O35+N15：3369\r\n段位：无", "平台": "Arcade", "游玩时间": 7200, "来源": "Other"}, {"名称": "Microsoft Solitaire Collection", "分类": "Card", "备注": "", "平台": "PC (Windows)", "游玩时间": 11400, "来源": "Xbox"}, {"名称": "Minecraft Bedrock", "分类": "Open world", "备注": "", "平台": "PC (Windows)", "游玩时间": 526802, "来源": "Xbox"}, {"名称": "Minecraft iOS", "分类": "Open world", "备注": "", "平台": "Mobile（iOS）", "游玩时间": 892080, "来源": "Xbox"}, {"名称": "Phigros", "分类": "Music game", "备注": "时长计算公式：时长来源于TapTap，无PC数据\r\nRKS=P3+B27：14.92\r\n位次：76144\r\n课题模式段位：红49", "平台": "Mobile（iOS）", "游玩时间": 99720, "来源": "Other"}, {"名称": "Project SEKAI", "分类": "Music game", "备注": "时长计算公式：时长随iOS统计每周日更新，无PC数据\r\n国服排位：白金2\r\n国服位次：6168", "平台": "Mobile（iOS）", "游玩时间": 56700, "来源": "Other"}, {"名称": "PUBG: BATTLEGROUNDS", "分类": "fps", "备注": "", "平台": "PC (Windows)", "游玩时间": 1277100, "来源": "Steam"}, {"名称": "Riptide GP: Renegade", "分类": "Other", "备注": "", "平台": "PC (Windows)", "游玩时间": 0, "来源": "Steam"}, {"名称": "Riptide GP2", "分类": "Other", "备注": "", "平台": "PC (Windows)", "游玩时间": 85140, "来源": "Steam"}, {"名称": "Wallpaper Engine：壁纸引擎", "分类": "Other", "备注": "", "平台": "PC (Windows)", "游玩时间": 4740, "来源": "Steam"}, {"名称": "Zuma Deluxe", "分类": "Other", "备注": "", "平台": "PC (Windows)", "游玩时间": 16200, "来源": "Steam"}, {"名称": "斗牌魂", "分类": "Card", "备注": "", "平台": "PC (Windows)", "游玩时间": 180601, "来源": "Steam"}, {"名称": "节奏大师", "分类": "Music game", "备注": "老版本闯关188关，新版本70PC\r\n时长计算公式：240*2*188+240*新版本PC\r\n节奏战力=B50+N25：5.56", "平台": "Mobile（iOS）", "游玩时间": 107040, "来源": "Other"}, {"名称": "决战！平安京", "分类": "MOBA", "备注": "190PC\r\n时长计算公式：PC*1800（单位：秒）", "平台": "Mobile（iOS）", "游玩时间": 342000, "来源": "Other"}, {"名称": "狼人杀", "分类": "Card", "备注": "网杀108PC，面杀4h\r\n时长计算公式：PC*25*60+面杀时长", "平台": "Mobile（iOS）", "游玩时间": 176400, "来源": "Other"}, {"名称": "球球大作战", "分类": "Other", "备注": "80PC\r\n时长计算公式：PC*600（单位：秒）", "平台": "Mobile（iOS）", "游玩时间": 48000, "来源": "Other"}, {"名称": "雀魂麻将", "分类": "Card", "备注": "", "平台": "PC (Windows)", "游玩时间": 627960, "来源": "Steam"}, {"名称": "三国杀", "分类": "Card", "备注": "", "平台": "PC (Windows)", "游玩时间": 2171340, "来源": "Steam"}, {"名称": "三角洲行动", "分类": "fps", "备注": "", "平台": "PC (Windows)", "游玩时间": 1760880, "来源": "Steam"}, {"名称": "生死狙击", "分类": "fps", "备注": "时长数据来源于游戏内官方统计", "平台": "PC (Windows)", "游玩时间": 709200, "来源": "Other"}, {"名称": "双人成行", "分类": "Other", "备注": "", "平台": "PC (Windows)", "游玩时间": 60, "来源": "Steam"}, {"名称": "双影奇境", "分类": "Other", "备注": "", "平台": "PC (Windows)", "游玩时间": 58860, "来源": "Steam"}, {"名称": "糖豆人", "分类": "Other", "备注": "", "平台": "PC (Windows)", "游玩时间": 23873, "来源": "Epic"}, {"名称": "天月麻雀", "分类": "Card", "备注": "", "平台": "PC (Windows)", "游玩时间": 44940, "来源": "Steam"}, {"名称": "王者荣耀", "分类": "MOBA", "备注": "1865PC\r\n时长计算公式：PC*1800（单位：秒）\r\n王者印记：2", "平台": "Mobile（iOS）", "游玩时间": 3357000, "来源": "Other"}, {"名称": "英雄联盟手游（台服）", "分类": "MOBA", "备注": "182PC\r\n时长计算公式：PC*1800（单位：秒）", "平台": "Mobile（iOS）", "游玩时间": 327600, "来源": "Other"}];
-
-function formatTime(seconds) {
-    const h = Math.floor(seconds / 3600);
-    const m = Math.floor((seconds % 3600) / 60);
-
-    if (h <= 0) {
-        return `${m}分钟`;
+    // ----- 辅助函数: 秒转小时 (保留1位小数)
+    function secondsToHours(seconds) {
+        let hours = seconds / 3600;
+        return Math.round(hours * 10) / 10;
     }
 
-    return `${h}小时 ${m}分钟`;
-}
-
-function initFilters() {
-    const categorySet = [...new Set(games.map(g => g["分类"]))];
-    const platformSet = [...new Set(games.map(g => g["平台"]))];
-
-    const categoryFilter = document.getElementById("categoryFilter");
-    const platformFilter = document.getElementById("platformFilter");
-
-    categorySet.forEach(c => {
-        const op = document.createElement("option");
-        op.value = c;
-        op.textContent = c;
-        categoryFilter.appendChild(op);
-    });
-
-    platformSet.forEach(p => {
-        const op = document.createElement("option");
-        op.value = p;
-        op.textContent = p;
-        platformFilter.appendChild(op);
-    });
-}
-
-function render() {
-
-    const category = document.getElementById("categoryFilter").value;
-    const platform = document.getElementById("platformFilter").value;
-    const sort = document.getElementById("sortSelect").value;
-
-    let filtered = [...games];
-
-    if (category !== "all") {
-        filtered = filtered.filter(g => g["分类"] === category);
+    // 获取所有不同分类 (去重)
+    function getAllCategories() {
+        const cats = new Set();
+        GAMES_DATA.forEach(game => cats.add(game.category));
+        return Array.from(cats).sort();
     }
 
-    if (platform !== "all") {
-        filtered = filtered.filter(g => g["平台"] === platform);
+    // ----- 全局状态
+    let currentCategory = "ALL";          // 筛选分类
+    let currentSortMode = "DEFAULT";      // "DEFAULT", "HIGH_TO_LOW", "LOW_TO_HIGH"
+    let originalOrder = [...GAMES_DATA];   // 原始顺序(不可变)
+
+    // 获取当前筛选+排序后的游戏列表 (不改变原始数据)
+    function getFilteredAndSortedGames() {
+        // 1. 筛选分类
+        let filtered = [...GAMES_DATA];
+        if (currentCategory !== "ALL") {
+            filtered = filtered.filter(game => game.category === currentCategory);
+        }
+        // 2. 排序
+        if (currentSortMode === "HIGH_TO_LOW") {
+            filtered.sort((a, b) => b.playSeconds - a.playSeconds);
+        } else if (currentSortMode === "LOW_TO_HIGH") {
+            filtered.sort((a, b) => a.playSeconds - b.playSeconds);
+        } else if (currentSortMode === "DEFAULT") {
+            // 维持原始顺序: 依据原数组索引 (稳定按原始索引)
+            filtered.sort((a, b) => {
+                const idxA = GAMES_DATA.findIndex(g => g.name === a.name && g.playSeconds === a.playSeconds);
+                const idxB = GAMES_DATA.findIndex(g => g.name === b.name && g.playSeconds === b.playSeconds);
+                return idxA - idxB;
+            });
+        }
+        return filtered;
     }
 
-    filtered.sort((a,b) => {
-        return sort === "desc"
-            ? b["游玩时间"] - a["游玩时间"]
-            : a["游玩时间"] - b["游玩时间"];
-    });
+    // 计算当前列表(经过筛选)的总时长(小时)
+    function getTotalHoursForFiltered() {
+        let filtered = [...GAMES_DATA];
+        if (currentCategory !== "ALL") {
+            filtered = filtered.filter(game => game.category === currentCategory);
+        }
+        const totalSeconds = filtered.reduce((sum, game) => sum + game.playSeconds, 0);
+        return secondsToHours(totalSeconds);
+    }
 
-    document.getElementById("totalGames").textContent = games.length;
-    document.getElementById("visibleGames").textContent = filtered.length;
+    // 刷新分类下拉框选项 (动态)
+    function populateCategorySelect() {
+        const selectEl = document.getElementById("categoryFilter");
+        if (!selectEl) return;
+        const categories = getAllCategories();
+        let options = '<option value="ALL">▸ 全部游戏</option>';
+        categories.forEach(cat => {
+            const selectedAttr = (currentCategory === cat) ? 'selected' : '';
+            options += `<option value="${escapeHtml(cat)}" ${selectedAttr}>${escapeHtml(cat)}</option>`;
+        });
+        selectEl.innerHTML = options;
+    }
 
-    const totalTime = games.reduce((sum,g)=>sum + Number(g["游玩时间"] || 0),0);
-    const visibleTime = filtered.reduce((sum,g)=>sum + Number(g["游玩时间"] || 0),0);
+    // 简易防XSS
+    function escapeHtml(str) {
+        if (!str) return "";
+        return str.replace(/[&<>]/g, function(m) {
+            if (m === '&') return '&amp;';
+            if (m === '<') return '&lt;';
+            if (m === '>') return '&gt;';
+            return m;
+        }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, function(c) {
+            return c;
+        });
+    }
 
-    document.getElementById("totalTime").textContent = formatTime(totalTime);
-    document.getElementById("visibleTime").textContent = formatTime(visibleTime);
-
-    const container = document.getElementById("games");
-    container.innerHTML = "";
-
-    filtered.forEach((game,index)=>{
-
-        const card = document.createElement("div");
-        card.className = "card";
-
-        card.innerHTML = `
-        <div class="banner"></div>
-
-        <div class="content">
-
-            <div class="top">
-
-                <div>
-
-                    <div class="name">${game["名称"]}</div>
-
-                    <div class="tags">
-                        <div class="tag">${game["分类"]}</div>
-                        <div class="tag">${game["平台"]}</div>
-                        <div class="tag">${game["来源"]}</div>
+    // 渲染游戏列表 (核心)
+    function renderGameList() {
+        const container = document.getElementById("gameListContainer");
+        if (!container) return;
+        const gamesToRender = getFilteredAndSortedGames();
+        
+        if (gamesToRender.length === 0) {
+            container.innerHTML = '<div class="empty-message">⚡ 暂无游戏 · 换个分类试试</div>';
+            document.getElementById("totalHours").innerText = "0.0";
+            return;
+        }
+        
+        // 计算并更新当前总时长 (符合分类总时长)
+        const totalHrs = getTotalHoursForFiltered();
+        document.getElementById("totalHours").innerText = totalHrs.toFixed(1);
+        
+        // 生成每一行
+        let html = '';
+        for (let game of gamesToRender) {
+            const hoursVal = secondsToHours(game.playSeconds);
+            const displayHours = hoursVal.toFixed(1);
+            const categoryLabel = escapeHtml(game.category);
+            const gameNameEscaped = escapeHtml(game.name);
+            // 处理备注：如果没有备注则展示 "无额外备注"
+            const noteContent = game.note && game.note.trim() !== "" ? game.note : "（无备注信息）";
+            // data属性存储备注文本 (用于模态框)
+            // 注意: 使用自定义属性方便传递给弹窗，但为了安全使用转义后的内容但保留换行: 存储原始note 但后面通过JS获取对象数据更可靠。
+            // 我们通过游戏名称索引存储备注? 最好的方法: 渲染时绑定点击事件，根据游戏名或唯一索引查找原始game对象。因为存在同名可能性极低，可靠。
+            // 为了方便，给行一个 data-game-idx 但是gamesToRender 里是动态顺序，但游戏名称唯一性高，我们直接用名称查找。
+            html += `
+                <div class="game-row" data-game-name="${escapeHtml(game.name)}">
+                    <div class="game-name-area">
+                        <span class="game-name">${gameNameEscaped}</span>
+                        <span class="game-category">${categoryLabel}</span>
                     </div>
-
+                    <div class="right-section">
+                        <span class="game-hours">${displayHours} h</span>
+                        <button class="note-btn" data-note-game="${escapeHtml(game.name)}" title="查看备注">📋</button>
+                    </div>
                 </div>
-
-                <div class="time">
-                    <div class="time-main">${formatTime(Number(game["游玩时间"]))}</div>
-                    <div class="time-sub">${Number(game["游玩时间"]).toLocaleString()} 秒</div>
-                </div>
-
-            </div>
-
-            ${game["备注"] ? `
-            <div class="remark">
-                <button class="remark-btn" onclick="toggleRemark(${index})">
-                    查看备注 ▼
-                </button>
-
-                <div class="remark-content" id="remark-${index}">
-                    ${game["备注"]}
-                </div>
-            </div>
-            ` : ""}
-
-        </div>
-        `;
-
-        container.appendChild(card);
-
-    });
-
-}
-
-function toggleRemark(index) {
-    document.getElementById(`remark-${index}`).classList.toggle("open");
-}
-
-document.getElementById("categoryFilter").addEventListener("change", render);
-document.getElementById("platformFilter").addEventListener("change", render);
-document.getElementById("sortSelect").addEventListener("change", render);
-
-initFilters();
-render();
-
+            `;
+        }
+        container.innerHTML = html;
+        
+        // 绑定备注按钮事件 (委托或直接绑定，因为重新渲染后需重新绑定)
+        const noteBtns = document.querySelectorAll('.note-btn');
+        noteBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const gameNameAttr = btn.getAttribute('data-note-game');
+                if (gameNameAttr) {
+                    // 根据游戏名在原始数据中查找 (确保拿到完整备注)
+                    const targetGame = GAMES_DATA.find(g => g.name === gameNameAttr);
+                    if (targetGame) {
+                        let finalNote = targetGame.note && targetGame.note.trim() !== "" ? targetGame.note : "（该游戏暂无备注）";
+                        // 附加额外信息（平台可选显示，但极简只展示备注内容）
+                        if (targetGame.platform) {
+                            finalNote = `🎮 平台：${targetGame.platform}\n\n📝 备注详情：\n${finalNote}`;
+                        } else {
+                            finalNote = `📝 备注详情：\n${finalNote}`;
+                        }
+                        showModal(finalNote);
+                    } else {
+                        showModal("无法找到备注信息");
+                    }
+                }
+            });
+        });
+    }
+    
+    // 模态框显示 (二级点开)
+    const modal = document.getElementById("noteModal");
+    const modalContent = document.getElementById("modalNoteContent");
+    function showModal(contentText) {
+        if (!modal || !modalContent) return;
+        // 保留换行格式
+        modalContent.innerHTML = `<p style="white-space: pre-wrap; font-family: monospace;">${escapeHtml(contentText)}</p>`;
+        modal.style.display = "flex";
+    }
+    function closeModal() {
+        if (modal) modal.style.display = "none";
+    }
+    
+    // 事件绑定 & 初始化
+    function bindUIEvents() {
+        const categorySelect = document.getElementById("categoryFilter");
+        const sortHighBtn = document.getElementById("sortHighToLow");
+        const sortLowBtn = document.getElementById("sortLowToHigh");
+        const resetBtn = document.getElementById("resetOrderBtn");
+        
+        if (categorySelect) {
+            categorySelect.addEventListener("change", (e) => {
+                currentCategory = e.target.value;
+                // 切换分类时，保持排序模式不变 (如果之前排序模式保留，但对用户体验友好)
+                // 重新渲染
+                renderGameList();
+                // 更新总时长已自动刷新
+                // 注意保持下拉框选中状态在重绘后不会丢失，但render不改变下拉框value因为DOM没有重置categorySelect的选择，外部改变没问题
+                // 但如果我们重新填充了分类下拉可能会导致事件重新绑定，目前无需重新填充选项，但其他操作如排序可能改变select选中? 不会
+                // 但确保当前选中的值与currentCategory同步
+                if (categorySelect.value !== currentCategory) categorySelect.value = currentCategory;
+            });
+        }
+        
+        if (sortHighBtn) {
+            sortHighBtn.addEventListener("click", () => {
+                currentSortMode = "HIGH_TO_LOW";
+                renderGameList();
+            });
+        }
+        if (sortLowBtn) {
+            sortLowBtn.addEventListener("click", () => {
+                currentSortMode = "LOW_TO_HIGH";
+                renderGameList();
+            });
+        }
+        if (resetBtn) {
+            resetBtn.addEventListener("click", () => {
+                currentSortMode = "DEFAULT";
+                renderGameList();
+            });
+        }
+        
+        // 模态关闭
+        const closeBtn = document.getElementById("closeModalBtn");
+        if (closeBtn) closeBtn.addEventListener("click", closeModal);
+        modal?.addEventListener("click", (e) => {
+            if (e.target === modal) closeModal();
+        });
+        // ESC关闭
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && modal && modal.style.display === "flex") {
+                closeModal();
+            }
+        });
+    }
+    
+    // 启动时初始化分类下拉，渲染
+    function init() {
+        populateCategorySelect();
+        bindUIEvents();
+        // 初始默认原始顺序
+        currentSortMode = "DEFAULT";
+        currentCategory = "ALL";
+        renderGameList();
+        // 确保下拉框同步
+        const catSel = document.getElementById("categoryFilter");
+        if (catSel) catSel.value = "ALL";
+    }
+    
+    init();
 </script>
-
 </body>
 </html>
