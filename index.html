@@ -385,7 +385,7 @@
 <div class="container">
     <div class="header">
         <h1>◼ 游戏时长·黑境条图</h1>
-        <div class="sub">最近修改于6月7日</div>
+        <div class="sub">最近修改于2026年6月24日</div>
     </div>
 
     <!-- 分类总时长排行面板 -->
@@ -435,42 +435,43 @@
 
 <script>
     // --------------------------------------------------------------
-    // 原始数据 (基于CSV, 时长单位:秒)
+    // 原始数据 (基于最新CSV, 时长单位:秒)
     // --------------------------------------------------------------
     const GAMES_DATA = [
-        { name: "4399小游戏", category: "Other", note: "时长来源于游戏内部PC数和粗略计算总和：\n奥奇传说\n摩尔庄园\n美食大战老鼠\n弹弹堂\n森林冰火人\n疯狂小人战斗", platform: "PC (Windows)", playSeconds: 1080000, source: "Other" },
         { name: "Aimlabs", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 6780, source: "Steam" },
         { name: "Among Us", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 1440, source: "Steam" },
-        { name: "Arcaea", category: "Music game", note: "时长计算公式：时长随iOS统计每周日更新，无PC数据\nB30：12.0814\nPTT=B30+R10：12.14\n段位挑战：7段", platform: "Mobile（iOS）", playSeconds: 1186800, source: "Other" },
-        { name: "Battlefield 1", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 261728, source: "Steam" },
+        { name: "Arcaea", category: "Music game", note: "时长计算公式：时长随iOS统计每周日更新，无PC数据\nB30：12.1148\nPTT=B30+R10：12.17\n段位挑战：7段", platform: "Mobile（iOS）", playSeconds: 1193000, source: "Other" },
+        { name: "Battlefield 1", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 276720, source: "Steam" },
         { name: "Battlefield 2042", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 242700, source: "Steam" },
-        { name: "Battlefield 5", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 22380, source: "Steam" },
-        { name: "Battlefield 6", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 334620, source: "Steam" },
-        { name: "CHUNITHM", category: "Music game", note: "国服991PC，RIN服508PC\n时长计算公式：pleynite自动统计RIN+国服PC*3*240（单位：秒）\nB50=O30+N20\n国服B50（中二节奏2026）：16.44（V段）\nRIN服B50（X-VERSE）：16.81（V段）\nB30：16.93", platform: "Arcade", playSeconds: 1398810, source: "Other" },
-        { name: "Counter-Strike 2", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 3545460, source: "Steam" },
+        { name: "Battlefield 5", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 22980, source: "Steam" },
+        { name: "Battlefield 6", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 335340, source: "Steam" },
+        { name: "CHUNITHM", category: "Music game", note: "国服993PC，RIN服513PC\n时长计算公式：pleynite自动统计RIN+国服PC*3*240（单位：秒）\nB50=O30+N20\n国服B50（中二节奏2026）：16.44（V段）\nRIN服B50（X-VERSE）：16.83（V段）\nB30：16.9493", platform: "Arcade", playSeconds: 1416332, source: "Other" },
+        { name: "Counter-Strike 2", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 3554160, source: "Steam" },
         { name: "FreshWomen - Season 1", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 12360, source: "Steam" },
         { name: "FreshWomen - Season 2", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 15420, source: "Steam" },
         { name: "Goose Goose Duck", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 39240, source: "Steam" },
         { name: "MAI MAI", category: "Music game", note: "国服10PC\n时长计算公式：国服PC*3*240（单位：秒）\nDX评分=O35+N15：3369\n段位：无", platform: "Arcade", playSeconds: 7200, source: "Other" },
         { name: "Microsoft Solitaire Collection", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 11580, source: "Xbox" },
         { name: "Minecraft Bedrock", category: "Open world", note: "", platform: "PC (Windows)", playSeconds: 526802, source: "Xbox" },
-        { name: "Minecraft iOS", category: "Open world", note: "", platform: "Mobile（iOS）", playSeconds: 892080, source: "Xbox" },
-        { name: "Phigros", category: "Music game", note: "时长计算公式：时长来源于TapTap，无PC数据\nRKS=P3+B27：14.92\n位次：76144\n课题模式段位：红49", platform: "Mobile（iOS）", playSeconds: 99720, source: "Other" },
+        { name: "Minecraft iOS", category: "Open world", note: "", platform: "Mobile（iOS）", playSeconds: 893520, source: "Xbox" },
+        { name: "Phigros", category: "Music game", note: "时长计算公式：时长来源于TapTap，无PC数据\nRKS=P3+B27：14.92\n位次：76144\n课题模式段位：红49", platform: "Mobile（iOS）", playSeconds: 100800, source: "Other" },
+        { name: "Plants vs. Zombies: Game of the Year", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 19603, source: "Steam" },
         { name: "Project SEKAI", category: "Music game", note: "时长计算公式：时长随iOS统计每周日更新，无PC数据\n国服排位：白金2\n国服位次：6168", platform: "Mobile（iOS）", playSeconds: 58000, source: "Other" },
-        { name: "PUBG: BATTLEGROUNDS", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 1277100, source: "Steam" },
+        { name: "PUBG: BATTLEGROUNDS", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 1289820, source: "Steam" },
         { name: "Riptide GP: Renegade", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 0, source: "Steam" },
-        { name: "Riptide GP2", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 92627, source: "Steam" },
+        { name: "Riptide GP2", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 92760, source: "Steam" },
         { name: "Wallpaper Engine：壁纸引擎", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 4740, source: "Steam" },
         { name: "Zuma Deluxe", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 16200, source: "Steam" },
         { name: "斗牌魂", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 180601, source: "Steam" },
+        { name: "各种小游戏", category: "Other", note: "时长来源于游戏内部PC数和粗略计算总和：\n4399小游戏:\n奥奇传说\n摩尔庄园\n美食大战老鼠\n疯狂小人战斗\n弹弹堂\n双箭头\n森林冰火人\n黄金矿工\n大便超人\n造梦西游\n泡泡龙\n拳皇\n\n其他小游戏：\n天天来战\n天天酷跑\n保卫萝卜\n鳄鱼小顽皮爱洗澡\n割绳子\n水果忍者\n会说话的汤姆猫\n愤怒的小鸟\n捕鱼达人\n神庙逃亡\n地铁跑酷\n开心消消乐\nQQ农场\nQQ餐厅\n贪吃蛇\n贪吃蛇大作战\n欢乐斗地主\n2048\n别踩白块儿\n俄罗斯方块\n扫雷\n三维弹球\n数独\n24点\n华容道\n魔方\n孔明锁\n五子棋\n中国象棋\n国际象棋\n跳棋\n飞行棋\n大富翁\n三国杀\n军棋\n斗兽棋", platform: "PC (Windows)", playSeconds: 1800000, source: "Other" },
         { name: "节奏大师", category: "Music game", note: "老版本闯关188关，新版本70PC\n时长计算公式：240*2*188+240*新版本PC\n节奏战力=B50+N25：5.56", platform: "Mobile（iOS）", playSeconds: 107040, source: "Other" },
         { name: "决战！平安京", category: "MOBA", note: "190PC\n时长计算公式：PC*1800（单位：秒）", platform: "Mobile（iOS）", playSeconds: 342000, source: "Other" },
         { name: "狼人杀", category: "Card", note: "网杀108PC，面杀4h\n时长计算公式：PC*25*60+面杀时长", platform: "Mobile（iOS）", playSeconds: 176400, source: "Other" },
         { name: "球球大作战", category: "Other", note: "80PC\n时长计算公式：PC*600（单位：秒）", platform: "Mobile（iOS）", playSeconds: 48000, source: "Other" },
-        { name: "雀魂麻将", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 726713, source: "Steam" },
-        { name: "三国杀", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 2172240, source: "Steam" },
-        { name: "三角洲行动", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 1760880, source: "Steam" },
-        { name: "生死狙击", category: "fps", note: "时长数据来源于游戏内官方统计", platform: "PC (Windows)", playSeconds: 709200, source: "Other" },
+        { name: "雀魂麻将", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 902760, source: "Steam" },
+        { name: "三国杀", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 2200677, source: "Steam" },
+        { name: "三角洲行动", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 1768860, source: "Steam" },
+        { name: "生死狙击", category: "fps", note: "时长数据来源于游戏内官方统计", platform: "PC (Windows)", playSeconds: 710000, source: "Other" },
         { name: "双人成行", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 60, source: "Steam" },
         { name: "双影奇境", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 58860, source: "Steam" },
         { name: "糖豆人", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 23873, source: "Epic" },
