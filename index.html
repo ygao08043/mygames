@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>游戏时长档案馆 · 黑境条图</title>
+    <title>YMKF的游戏数据</title>
     <style>
         * {
             margin: 0;
@@ -25,7 +25,6 @@
             background: #000000;
         }
 
-        /* 头部 */
         .header {
             border-bottom: 1px solid #2a2a2a;
             padding-bottom: 1rem;
@@ -48,7 +47,6 @@
             padding-left: 0.7rem;
         }
 
-        /* 控制栏 */
         .controls {
             display: flex;
             flex-wrap: wrap;
@@ -112,7 +110,6 @@
             color: #ffffff;
         }
 
-        /* 分类总时长面板 */
         .category-summary {
             background: #0a0a0a;
             border: 1px solid #262626;
@@ -163,13 +160,11 @@
             background: #1a1a1a;
         }
 
-        /* 游戏列表 — 进度条行样式 */
         .game-list {
             margin-top: 1rem;
             border-top: 1px solid #222;
         }
 
-        /* 每一行是相对定位容器，用于放置渐变条 */
         .game-row {
             position: relative;
             display: flex;
@@ -187,7 +182,6 @@
             background-color: #0c0c0c;
         }
 
-        /* 时长条 - 左对齐渐变深灰色条，位于底层 */
         .duration-bar {
             position: absolute;
             left: 0;
@@ -202,7 +196,6 @@
             border-radius: 0 2px 2px 0;
         }
 
-        /* 保证文字和按钮在进度条之上 */
         .game-name-area,
         .right-section {
             position: relative;
@@ -282,7 +275,6 @@
             border-bottom: 1px solid #222;
         }
 
-        /* 模态框 */
         .modal {
             display: none;
             position: fixed;
@@ -384,11 +376,10 @@
 <body>
 <div class="container">
     <div class="header">
-        <h1>◼ 游戏时长·黑境条图</h1>
-        <div class="sub">最近修改于2026年6月24日</div>
+        <h1>YMKF的游戏数据</h1>
+        <div class="sub">最近修改于2026年7月3日</div>
     </div>
 
-    <!-- 分类总时长排行面板 -->
     <div class="category-summary" id="categorySummaryPanel">
         <h3>📊 分类总时长排行 (小时)</h3>
         <div class="category-tiles" id="categoryTilesContainer">
@@ -396,31 +387,36 @@
         </div>
     </div>
 
-    <!-- 筛选 + 排序栏 -->
     <div class="controls">
         <div class="filter-group">
-            <label>分类筛选</label>
+            <label>分类</label>
             <select id="categoryFilter">
-                <option value="ALL">▸ 全部游戏</option>
+                <option value="ALL">▸ 全部</option>
+            </select>
+            <label>平台</label>
+            <select id="platformFilter">
+                <option value="ALL">▸ 全部</option>
+            </select>
+            <label>来源</label>
+            <select id="sourceFilter">
+                <option value="ALL">▸ 全部</option>
             </select>
             <div class="stats-badge">
-                ⏱ 当前总时长 <span id="totalHours">0.0</span> h
+                ⏱ 总时长 <span id="totalHours">0.0</span> h
             </div>
         </div>
         <div class="sort-buttons">
-            <button id="sortHighToLow">↓ 时长 高→低</button>
-            <button id="sortLowToHigh">↑ 时长 低→高</button>
+            <button id="sortHighToLow">↓ 高→低</button>
+            <button id="sortLowToHigh">↑ 低→高</button>
         </div>
     </div>
 
-    <!-- 游戏列表容器 -->
     <div class="game-list" id="gameListContainer">
         <div class="empty-message">加载列表中...</div>
     </div>
-    <footer>渐变条长度 = 游戏时长 / 当前列表最大时长 · 点击📋查看备注</footer>
+    <footer>渐变条 = 时长 / 当前列表最大时长 · 点击📋查看备注</footer>
 </div>
 
-<!-- 备注模态框 -->
 <div id="noteModal" class="modal">
     <div class="modal-card">
         <div class="modal-header">
@@ -440,27 +436,27 @@
     const GAMES_DATA = [
         { name: "Aimlabs", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 6780, source: "Steam" },
         { name: "Among Us", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 1440, source: "Steam" },
-        { name: "Arcaea", category: "Music game", note: "时长计算公式：时长随iOS统计每周日更新，无PC数据\nB30：12.1148\nPTT=B30+R10：12.17\n段位挑战：7段", platform: "Mobile（iOS）", playSeconds: 1193000, source: "Other" },
-        { name: "Battlefield 1", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 276720, source: "Steam" },
+        { name: "Arcaea", category: "Music game", note: "时长计算公式：时长随iOS统计每周日更新，无PC数据\nB30：12.12\nPTT=B30+R10：12.17\n段位挑战：7段", platform: "Mobile（iOS）", playSeconds: 1195880, source: "Other" },
+        { name: "Battlefield 1", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 287700, source: "Steam" },
         { name: "Battlefield 2042", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 242700, source: "Steam" },
         { name: "Battlefield 5", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 22980, source: "Steam" },
         { name: "Battlefield 6", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 335340, source: "Steam" },
-        { name: "CHUNITHM", category: "Music game", note: "国服993PC，RIN服513PC\n时长计算公式：pleynite自动统计RIN+国服PC*3*240（单位：秒）\nB50=O30+N20\n国服B50（中二节奏2026）：16.44（V段）\nRIN服B50（X-VERSE）：16.83（V段）\nB30：16.9493", platform: "Arcade", playSeconds: 1416332, source: "Other" },
+        { name: "CHUNITHM", category: "Music game", note: "国服993PC，RIN服524PC\n时长计算公式：pleynite自动统计RIN+国服PC*3*240（单位：秒）\nB50=O30+N20\n国服B50（中二节奏2026）：16.44（V段）\nRIN服B50（X-VERSE）：16.85（V段）\nB30：16.9817", platform: "Arcade", playSeconds: 1426882, source: "Other" },
         { name: "Counter-Strike 2", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 3554160, source: "Steam" },
         { name: "FreshWomen - Season 1", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 12360, source: "Steam" },
         { name: "FreshWomen - Season 2", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 15420, source: "Steam" },
         { name: "Goose Goose Duck", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 39240, source: "Steam" },
         { name: "MAI MAI", category: "Music game", note: "国服10PC\n时长计算公式：国服PC*3*240（单位：秒）\nDX评分=O35+N15：3369\n段位：无", platform: "Arcade", playSeconds: 7200, source: "Other" },
         { name: "Microsoft Solitaire Collection", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 11580, source: "Xbox" },
-        { name: "Minecraft Bedrock", category: "Open world", note: "", platform: "PC (Windows)", playSeconds: 526802, source: "Xbox" },
         { name: "Minecraft iOS", category: "Open world", note: "", platform: "Mobile（iOS）", playSeconds: 893520, source: "Xbox" },
-        { name: "Phigros", category: "Music game", note: "时长计算公式：时长来源于TapTap，无PC数据\nRKS=P3+B27：14.92\n位次：76144\n课题模式段位：红49", platform: "Mobile（iOS）", playSeconds: 100800, source: "Other" },
-        { name: "Plants vs. Zombies: Game of the Year", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 19603, source: "Steam" },
-        { name: "Project SEKAI", category: "Music game", note: "时长计算公式：时长随iOS统计每周日更新，无PC数据\n国服排位：白金2\n国服位次：6168", platform: "Mobile（iOS）", playSeconds: 58000, source: "Other" },
-        { name: "PUBG: BATTLEGROUNDS", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 1289820, source: "Steam" },
+        { name: "Minecraft Windows", category: "Open world", note: "", platform: "PC (Windows)", playSeconds: 526802, source: "Xbox" },
+        { name: "Phigros", category: "Music game", note: "时长计算公式：时长来源于TapTap，无PC数据\nRKS=P3+B27：14.93\n位次：79712\n课题模式段位：红49", platform: "Mobile（iOS）", playSeconds: 101880, source: "Other" },
+        { name: "Plants vs. Zombies: Game of the Year", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 223999, source: "Steam" },
+        { name: "Project SEKAI", category: "Music game", note: "时长计算公式：时长随iOS统计每周日更新，无PC数据\n国服排位：白金2\n国服位次：6168", platform: "Mobile（iOS）", playSeconds: 62320, source: "Other" },
+        { name: "PUBG: BATTLEGROUNDS", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 1289940, source: "Steam" },
         { name: "Riptide GP: Renegade", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 0, source: "Steam" },
         { name: "Riptide GP2", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 92760, source: "Steam" },
-        { name: "Wallpaper Engine：壁纸引擎", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 4740, source: "Steam" },
+        { name: "Wallpaper Engine：壁纸引擎", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 4800, source: "Steam" },
         { name: "Zuma Deluxe", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 16200, source: "Steam" },
         { name: "斗牌魂", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 180601, source: "Steam" },
         { name: "各种小游戏", category: "Other", note: "时长来源于游戏内部PC数和粗略计算总和：\n4399小游戏:\n奥奇传说\n摩尔庄园\n美食大战老鼠\n疯狂小人战斗\n弹弹堂\n双箭头\n森林冰火人\n黄金矿工\n大便超人\n造梦西游\n泡泡龙\n拳皇\n\n其他小游戏：\n天天来战\n天天酷跑\n保卫萝卜\n鳄鱼小顽皮爱洗澡\n割绳子\n水果忍者\n会说话的汤姆猫\n愤怒的小鸟\n捕鱼达人\n神庙逃亡\n地铁跑酷\n开心消消乐\nQQ农场\nQQ餐厅\n贪吃蛇\n贪吃蛇大作战\n欢乐斗地主\n2048\n别踩白块儿\n俄罗斯方块\n扫雷\n三维弹球\n数独\n24点\n华容道\n魔方\n孔明锁\n五子棋\n中国象棋\n国际象棋\n跳棋\n飞行棋\n大富翁\n三国杀\n军棋\n斗兽棋", platform: "PC (Windows)", playSeconds: 1800000, source: "Other" },
@@ -468,10 +464,10 @@
         { name: "决战！平安京", category: "MOBA", note: "190PC\n时长计算公式：PC*1800（单位：秒）", platform: "Mobile（iOS）", playSeconds: 342000, source: "Other" },
         { name: "狼人杀", category: "Card", note: "网杀108PC，面杀4h\n时长计算公式：PC*25*60+面杀时长", platform: "Mobile（iOS）", playSeconds: 176400, source: "Other" },
         { name: "球球大作战", category: "Other", note: "80PC\n时长计算公式：PC*600（单位：秒）", platform: "Mobile（iOS）", playSeconds: 48000, source: "Other" },
-        { name: "雀魂麻将", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 902760, source: "Steam" },
-        { name: "三国杀", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 2200677, source: "Steam" },
+        { name: "雀魂麻将", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 1014060, source: "Steam" },
+        { name: "三国杀", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 2241120, source: "Steam" },
         { name: "三角洲行动", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 1768860, source: "Steam" },
-        { name: "生死狙击", category: "fps", note: "时长数据来源于游戏内官方统计", platform: "PC (Windows)", playSeconds: 710000, source: "Other" },
+        { name: "生死狙击", category: "fps", note: "时长数据来源于游戏内官方统计，后用playnite", platform: "PC (Windows)", playSeconds: 710000, source: "Other" },
         { name: "双人成行", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 60, source: "Steam" },
         { name: "双影奇境", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 58860, source: "Steam" },
         { name: "糖豆人", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 23873, source: "Epic" },
@@ -486,22 +482,40 @@
         return Math.round(hours * 10) / 10;
     }
 
-    // 获取全部分类
+    // 获取所有不同的分类、平台、来源
     function getAllCategories() {
         const cats = new Set();
         GAMES_DATA.forEach(g => cats.add(g.category));
         return Array.from(cats).sort();
     }
+    function getAllPlatforms() {
+        const platforms = new Set();
+        GAMES_DATA.forEach(g => platforms.add(g.platform));
+        return Array.from(platforms).sort();
+    }
+    function getAllSources() {
+        const sources = new Set();
+        GAMES_DATA.forEach(g => sources.add(g.source));
+        return Array.from(sources).sort();
+    }
 
     // ---------- 全局状态 ----------
     let currentCategory = "ALL";
-    let currentSortMode = "HIGH_TO_LOW";   // 默认高到低
+    let currentPlatform = "ALL";
+    let currentSource = "ALL";
+    let currentSortMode = "HIGH_TO_LOW";
 
     // 获取筛选+排序后的列表 (不修改原数据)
     function getFilteredAndSortedGames() {
         let filtered = [...GAMES_DATA];
         if (currentCategory !== "ALL") {
             filtered = filtered.filter(g => g.category === currentCategory);
+        }
+        if (currentPlatform !== "ALL") {
+            filtered = filtered.filter(g => g.platform === currentPlatform);
+        }
+        if (currentSource !== "ALL") {
+            filtered = filtered.filter(g => g.source === currentSource);
         }
         if (currentSortMode === "HIGH_TO_LOW") {
             filtered.sort((a, b) => b.playSeconds - a.playSeconds);
@@ -517,11 +531,17 @@
         if (currentCategory !== "ALL") {
             filtered = filtered.filter(g => g.category === currentCategory);
         }
+        if (currentPlatform !== "ALL") {
+            filtered = filtered.filter(g => g.platform === currentPlatform);
+        }
+        if (currentSource !== "ALL") {
+            filtered = filtered.filter(g => g.source === currentSource);
+        }
         const totalSec = filtered.reduce((sum, g) => sum + g.playSeconds, 0);
         return secondsToHours(totalSec);
     }
 
-    // 计算各分类总时长并按降序排列 (用于面板)
+    // 计算各分类总时长并按降序排列 (用于面板, 不受平台来源筛选影响)
     function getCategoryTotalHoursSorted() {
         const catMap = new Map();
         GAMES_DATA.forEach(game => {
@@ -558,17 +578,41 @@
         container.innerHTML = html;
     }
 
-    // 分类下拉框填充
-    function populateCategorySelect() {
-        const selectEl = document.getElementById("categoryFilter");
-        if (!selectEl) return;
-        const categories = getAllCategories();
-        let options = '<option value="ALL">▸ 全部游戏</option>';
-        categories.forEach(cat => {
-            const selected = (currentCategory === cat) ? 'selected' : '';
-            options += `<option value="${escapeHtml(cat)}" ${selected}>${escapeHtml(cat)}</option>`;
-        });
-        selectEl.innerHTML = options;
+    // 填充下拉框
+    function populateSelects() {
+        // 分类
+        const catSelect = document.getElementById("categoryFilter");
+        if (catSelect) {
+            const categories = getAllCategories();
+            let options = '<option value="ALL">▸ 全部</option>';
+            categories.forEach(cat => {
+                const selected = (currentCategory === cat) ? 'selected' : '';
+                options += `<option value="${escapeHtml(cat)}" ${selected}>${escapeHtml(cat)}</option>`;
+            });
+            catSelect.innerHTML = options;
+        }
+        // 平台
+        const platSelect = document.getElementById("platformFilter");
+        if (platSelect) {
+            const platforms = getAllPlatforms();
+            let options = '<option value="ALL">▸ 全部</option>';
+            platforms.forEach(plat => {
+                const selected = (currentPlatform === plat) ? 'selected' : '';
+                options += `<option value="${escapeHtml(plat)}" ${selected}>${escapeHtml(plat)}</option>`;
+            });
+            platSelect.innerHTML = options;
+        }
+        // 来源
+        const srcSelect = document.getElementById("sourceFilter");
+        if (srcSelect) {
+            const sources = getAllSources();
+            let options = '<option value="ALL">▸ 全部</option>';
+            sources.forEach(src => {
+                const selected = (currentSource === src) ? 'selected' : '';
+                options += `<option value="${escapeHtml(src)}" ${selected}>${escapeHtml(src)}</option>`;
+            });
+            srcSelect.innerHTML = options;
+        }
     }
 
     function escapeHtml(str) {
@@ -581,7 +625,7 @@
         }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, c => c);
     }
 
-    // 核心渲染: 游戏列表 + 渐变条 (基于当前列表最大时长决定宽度比例)
+    // 核心渲染: 游戏列表 + 渐变条
     function renderGameList() {
         const container = document.getElementById("gameListContainer");
         if (!container) return;
@@ -591,16 +635,14 @@
         document.getElementById("totalHours").innerText = totalHrs.toFixed(1);
         
         if (gamesToRender.length === 0) {
-            container.innerHTML = '<div class="empty-message">⚡ 无游戏记录 · 切换分类试试</div>';
+            container.innerHTML = '<div class="empty-message">⚡ 无游戏记录 · 切换筛选条件试试</div>';
             return;
         }
         
-        // 计算当前展示列表的最大秒数（用于进度条相对比例）
         let maxSeconds = 0;
         for (let game of gamesToRender) {
             if (game.playSeconds > maxSeconds) maxSeconds = game.playSeconds;
         }
-        // 避免除以0
         if (maxSeconds === 0) maxSeconds = 1;
         
         let html = '';
@@ -609,10 +651,8 @@
             const displayHours = hoursVal.toFixed(1);
             const categoryLabel = escapeHtml(game.category);
             const gameNameEscaped = escapeHtml(game.name);
-            // 计算宽度百分比 (相对当前列表最大时长)
             let percentWidth = (game.playSeconds / maxSeconds) * 100;
             percentWidth = Math.min(100, Math.max(0, percentWidth));
-            // 注意: 样式中的宽度通过行内样式设置
             html += `
                 <div class="game-row" data-game-name="${escapeHtml(game.name)}">
                     <div class="duration-bar" style="width: ${percentWidth}%;"></div>
@@ -665,21 +705,28 @@
         if (modal) modal.style.display = "none";
     }
     
-    // 事件绑定 (无原始顺序)
+    // 事件绑定
     function bindUIEvents() {
         const categorySelect = document.getElementById("categoryFilter");
+        const platformSelect = document.getElementById("platformFilter");
+        const sourceSelect = document.getElementById("sourceFilter");
         const sortHighBtn = document.getElementById("sortHighToLow");
         const sortLowBtn = document.getElementById("sortLowToHigh");
         
-        if (categorySelect) {
-            categorySelect.addEventListener("change", (e) => {
-                currentCategory = e.target.value;
-                renderGameList();          // 重新渲染游戏列表 (条宽自动基于新列表最大时长)
-                // 保持下拉同步
-                if (categorySelect.value !== currentCategory) categorySelect.value = currentCategory;
-                renderCategorySummary();   // 刷新分类面板 (全局数据不变其实无影响，但保持调用)
-            });
+        function onFilterChange() {
+            currentCategory = categorySelect ? categorySelect.value : "ALL";
+            currentPlatform = platformSelect ? platformSelect.value : "ALL";
+            currentSource = sourceSelect ? sourceSelect.value : "ALL";
+            renderGameList();
+            // 保持下拉框同步 (以防万一)
+            if (categorySelect && categorySelect.value !== currentCategory) categorySelect.value = currentCategory;
+            if (platformSelect && platformSelect.value !== currentPlatform) platformSelect.value = currentPlatform;
+            if (sourceSelect && sourceSelect.value !== currentSource) sourceSelect.value = currentSource;
         }
+        
+        if (categorySelect) categorySelect.addEventListener("change", onFilterChange);
+        if (platformSelect) platformSelect.addEventListener("change", onFilterChange);
+        if (sourceSelect) sourceSelect.addEventListener("change", onFilterChange);
         
         if (sortHighBtn) {
             sortHighBtn.addEventListener("click", () => {
@@ -694,7 +741,6 @@
             });
         }
         
-        // 模态框关闭
         const closeBtn = document.getElementById("closeModalBtn");
         if (closeBtn) closeBtn.addEventListener("click", closeModal);
         modal?.addEventListener("click", (e) => {
@@ -708,12 +754,16 @@
     // 初始化所有
     function init() {
         renderCategorySummary();
-        populateCategorySelect();
+        populateSelects();
         renderGameList();
         bindUIEvents();
-        // 确保下拉框值正确
+        // 确保下拉框值与状态一致
         const catSel = document.getElementById("categoryFilter");
-        if (catSel && catSel.value !== currentCategory) catSel.value = currentCategory;
+        if (catSel) catSel.value = currentCategory;
+        const platSel = document.getElementById("platformFilter");
+        if (platSel) platSel.value = currentPlatform;
+        const srcSel = document.getElementById("sourceFilter");
+        if (srcSel) srcSel.value = currentSource;
     }
     
     init();
