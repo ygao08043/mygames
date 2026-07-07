@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>YMKF的游戏数据</title>
+    <title>YMKF的娱乐数据</title>
     <style>
         * {
             margin: 0;
@@ -47,6 +47,63 @@
             padding-left: 0.7rem;
         }
 
+        /* 板块标题 */
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin: 2.2rem 0 1rem 0;
+            color: #ddd;
+            border-bottom: 1px solid #2a2a2a;
+            padding-bottom: 0.4rem;
+        }
+
+        .sub-section-title {
+            font-size: 1.0rem;
+            font-weight: 350;
+            margin: 1.5rem 0 0.6rem 0;
+            color: #bbb;
+            border-left: 2px solid #555;
+            padding-left: 0.7rem;
+        }
+
+        /* 视频数据的国家分类和标签 */
+        .video-category-block {
+            margin-bottom: 1.8rem;
+        }
+
+        .video-country-block {
+            margin: 0.4rem 0 0.8rem 1.2rem;
+        }
+
+        .video-country-label {
+            font-weight: 400;
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .video-tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            padding-left: 0.4rem;
+        }
+
+        .video-tag {
+            background: #151515;
+            padding: 0.15rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #ccc;
+            border: 0.5px solid #2c2c2c;
+            white-space: nowrap;
+        }
+
+        .video-tag:hover {
+            background: #222;
+        }
+
+        /* 原有游戏样式保持不变 */
         .controls {
             display: flex;
             flex-wrap: wrap;
@@ -73,7 +130,8 @@
             color: #ddd;
         }
 
-        select, button {
+        select,
+        button {
             background: #1e1e1e;
             border: 1px solid #3a3a3a;
             padding: 0.35rem 0.9rem;
@@ -85,7 +143,8 @@
             color: #f0f0f0;
         }
 
-        select:hover, button:hover {
+        select:hover,
+        button:hover {
             border-color: #888;
             background-color: #2a2a2a;
         }
@@ -294,7 +353,7 @@
             max-width: 480px;
             width: 90%;
             border-radius: 24px;
-            box-shadow: 0 25px 40px -12px rgba(0,0,0,0.6);
+            box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.6);
             border: 1px solid #2e2e2e;
             overflow: hidden;
         }
@@ -370,403 +429,573 @@
                 font-size: 0.8rem;
                 min-width: 70px;
             }
+            .video-tag-list {
+                gap: 0.3rem 0.6rem;
+            }
+            .video-tag {
+                font-size: 0.7rem;
+                padding: 0.1rem 0.5rem;
+            }
         }
     </style>
 </head>
 <body>
-<div class="container">
-    <div class="header">
-        <h1>YMKF的游戏数据</h1>
-        <div class="sub">最近修改于2026年7月5日</div>
-    </div>
-
-    <div class="category-summary" id="categorySummaryPanel">
-        <h3>📊 分类总时长排行 (小时)</h3>
-        <div class="category-tiles" id="categoryTilesContainer">
-            <!-- 动态注入 -->
+    <div class="container">
+        <div class="header">
+            <h1>YMKF的娱乐数据</h1>
+            <div class="sub">最近修改于2026年7月8日</div>
         </div>
-    </div>
 
-    <div class="controls">
-        <div class="filter-group">
-            <label>分类</label>
-            <select id="categoryFilter">
-                <option value="ALL">▸ 全部</option>
-            </select>
-            <label>平台</label>
-            <select id="platformFilter">
-                <option value="ALL">▸ 全部</option>
-            </select>
-            <label>来源</label>
-            <select id="sourceFilter">
-                <option value="ALL">▸ 全部</option>
-            </select>
-            <div class="stats-badge">
-                ⏱ 总时长 <span id="totalHours">0.0</span> h
+        <!-- ========= 游戏数据板块 ========= -->
+        <div class="section-title">🎮 游戏数据</div>
+
+        <div class="category-summary" id="categorySummaryPanel">
+            <h3>📊 分类总时长排行 (小时)</h3>
+            <div class="category-tiles" id="categoryTilesContainer">
+                <!-- 动态注入 -->
             </div>
         </div>
-        <div class="sort-buttons">
-            <button id="sortHighToLow">↓ 高→低</button>
-            <button id="sortLowToHigh">↑ 低→高</button>
-        </div>
-    </div>
 
-    <div class="game-list" id="gameListContainer">
-        <div class="empty-message">加载列表中...</div>
-    </div>
-    <footer>渐变条 = 时长 / 当前列表最大时长 · 点击📋查看备注</footer>
-</div>
-
-<div id="noteModal" class="modal">
-    <div class="modal-card">
-        <div class="modal-header">
-            <h3>📄 游戏备注</h3>
-            <button class="close-modal" id="closeModalBtn">✕</button>
-        </div>
-        <div class="modal-body" id="modalNoteContent">
-            <p>备注内容</p>
-        </div>
-    </div>
-</div>
-
-<script>
-    // --------------------------------------------------------------
-    // 原始数据 (基于最新CSV, 时长单位:秒)
-    // --------------------------------------------------------------
-    const GAMES_DATA = [
-        { name: "Aimlabs", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 6780, source: "Steam" },
-        { name: "Among Us", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 1440, source: "Steam" },
-        { name: "Arcaea", category: "Music game", note: "时长计算公式：时长随iOS统计每周日更新，无PC数据\nB30：12.12\nPTT=B30+R10：12.17\n段位挑战：7段", platform: "Mobile（iOS）", playSeconds: 1197380, source: "Other" },
-        { name: "Battlefield 1", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 287700, source: "Steam" },
-        { name: "Battlefield 2042", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 242700, source: "Steam" },
-        { name: "Battlefield 5", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 22980, source: "Steam" },
-        { name: "Battlefield 6", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 335340, source: "Steam" },
-        { name: "CHUNITHM", category: "Music game", note: "国服994PC，RIN服524PC\n时长计算公式：pleynite自动统计RIN+国服PC*3*240（单位：秒）\nB50=O30+N20\n国服B50（中二节奏2026）：16.44（V段）\nRIN服B50（X-VERSE）：16.85（V段）\nB30：16.9817", platform: "Arcade", playSeconds: 1427602, source: "Other" },
-        { name: "Counter-Strike 2", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 3554160, source: "Steam" },
-        { name: "FreshWomen - Season 1", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 12360, source: "Steam" },
-        { name: "FreshWomen - Season 2", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 15420, source: "Steam" },
-        { name: "Goose Goose Duck", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 39240, source: "Steam" },
-        { name: "MAI MAI", category: "Music game", note: "国服10PC\n时长计算公式：国服PC*3*240（单位：秒）\nDX评分=O35+N15：3369\n段位：无", platform: "Arcade", playSeconds: 7200, source: "Other" },
-        { name: "Microsoft Solitaire Collection", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 11580, source: "Xbox" },
-        { name: "Minecraft iOS", category: "Open world", note: "", platform: "Mobile（iOS）", playSeconds: 893520, source: "Xbox" },
-        { name: "Minecraft Windows", category: "Open world", note: "", platform: "PC (Windows)", playSeconds: 526802, source: "Xbox" },
-        { name: "Phigros", category: "Music game", note: "时长计算公式：时长来源于TapTap，无PC数据\nRKS=P3+B27：14.93\n位次：79712\n课题模式段位：红49", platform: "Mobile（iOS）", playSeconds: 101880, source: "Other" },
-        { name: "Plants vs. Zombies: Game of the Year", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 237540, source: "Steam" },
-        { name: "Project SEKAI", category: "Music game", note: "时长计算公式：时长随iOS统计每周日更新，无PC数据\n国服排位：白金2\n国服位次：6168", platform: "Mobile（iOS）", playSeconds: 65320, source: "Other" },
-        { name: "PUBG: BATTLEGROUNDS", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 1289940, source: "Steam" },
-        { name: "Riptide GP: Renegade", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 0, source: "Steam" },
-        { name: "Riptide GP2", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 92760, source: "Steam" },
-        { name: "Wallpaper Engine：壁纸引擎", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 4800, source: "Steam" },
-        { name: "Zuma Deluxe", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 16200, source: "Steam" },
-        { name: "斗牌魂", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 180601, source: "Steam" },
-        { name: "各种小游戏", category: "Other", note: "时长来源于游戏内部PC数和粗略计算总和：\n4399小游戏:\n奥奇传说\n摩尔庄园\n美食大战老鼠\n疯狂小人战斗\n弹弹堂\n双箭头\n森林冰火人\n黄金矿工\n大便超人\n造梦西游\n泡泡龙\n拳皇\n\n其他小游戏：\n天天来战\n天天酷跑\n保卫萝卜\n鳄鱼小顽皮爱洗澡\n割绳子\n水果忍者\n会说话的汤姆猫\n愤怒的小鸟\n捕鱼达人\n神庙逃亡\n地铁跑酷\n开心消消乐\nQQ农场\nQQ餐厅\n贪吃蛇\n贪吃蛇大作战\n欢乐斗地主\n2048\n别踩白块儿\n俄罗斯方块\n扫雷\n三维弹球\n数独\n24点\n华容道\n魔方\n孔明锁\n五子棋\n中国象棋\n国际象棋\n跳棋\n飞行棋\n大富翁\n三国杀\n军棋\n斗兽棋", platform: "PC (Windows)", playSeconds: 1800000, source: "Other" },
-        { name: "节奏大师", category: "Music game", note: "老版本闯关188关，新版本70PC\n时长计算公式：240*2*188+240*新版本PC\n节奏战力=B50+N25：5.56", platform: "Mobile（iOS）", playSeconds: 107040, source: "Other" },
-        { name: "决战！平安京", category: "MOBA", note: "190PC\n时长计算公式：PC*1800（单位：秒）", platform: "Mobile（iOS）", playSeconds: 342000, source: "Other" },
-        { name: "狼人杀", category: "Card", note: "网杀108PC，面杀4h\n时长计算公式：PC*25*60+面杀时长", platform: "Mobile（iOS）", playSeconds: 176400, source: "Other" },
-        { name: "球球大作战", category: "Other", note: "80PC\n时长计算公式：PC*600（单位：秒）", platform: "Mobile（iOS）", playSeconds: 48000, source: "Other" },
-        { name: "雀魂麻将", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 1043400, source: "Steam" },
-        { name: "三国杀", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 2241120, source: "Steam" },
-        { name: "三角洲行动", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 1768860, source: "Steam" },
-        { name: "生死狙击", category: "fps", note: "时长数据来源于游戏内官方统计，后用playnite", platform: "PC (Windows)", playSeconds: 710000, source: "Other" },
-        { name: "双人成行", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 60, source: "Steam" },
-        { name: "双影奇境", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 58860, source: "Steam" },
-        { name: "糖豆人", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 23873, source: "Epic" },
-        { name: "天月麻雀", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 44940, source: "Steam" },
-        { name: "王者荣耀", category: "MOBA", note: "1865PC\n时长计算公式：PC*1800（单位：秒）\n王者印记：2", platform: "Mobile（iOS）", playSeconds: 3357000, source: "Other" },
-        { name: "英雄联盟手游（台服）", category: "MOBA", note: "182PC\n时长计算公式：PC*1800（单位：秒）", platform: "Mobile（iOS）", playSeconds: 327600, source: "Other" }
-    ];
-
-    // 辅助函数: 秒转小时 (保留1位小数)
-    function secondsToHours(seconds) {
-        let hours = seconds / 3600;
-        return Math.round(hours * 10) / 10;
-    }
-
-    // 获取所有不同的分类、平台、来源
-    function getAllCategories() {
-        const cats = new Set();
-        GAMES_DATA.forEach(g => cats.add(g.category));
-        return Array.from(cats).sort();
-    }
-    function getAllPlatforms() {
-        const platforms = new Set();
-        GAMES_DATA.forEach(g => platforms.add(g.platform));
-        return Array.from(platforms).sort();
-    }
-    function getAllSources() {
-        const sources = new Set();
-        GAMES_DATA.forEach(g => sources.add(g.source));
-        return Array.from(sources).sort();
-    }
-
-    // ---------- 全局状态 ----------
-    let currentCategory = "ALL";
-    let currentPlatform = "ALL";
-    let currentSource = "ALL";
-    let currentSortMode = "HIGH_TO_LOW";
-
-    // 获取筛选+排序后的列表 (不修改原数据)
-    function getFilteredAndSortedGames() {
-        let filtered = [...GAMES_DATA];
-        if (currentCategory !== "ALL") {
-            filtered = filtered.filter(g => g.category === currentCategory);
-        }
-        if (currentPlatform !== "ALL") {
-            filtered = filtered.filter(g => g.platform === currentPlatform);
-        }
-        if (currentSource !== "ALL") {
-            filtered = filtered.filter(g => g.source === currentSource);
-        }
-        if (currentSortMode === "HIGH_TO_LOW") {
-            filtered.sort((a, b) => b.playSeconds - a.playSeconds);
-        } else if (currentSortMode === "LOW_TO_HIGH") {
-            filtered.sort((a, b) => a.playSeconds - b.playSeconds);
-        }
-        return filtered;
-    }
-
-    // 计算当前筛选后的总时长(小时)
-    function getTotalHoursForFiltered() {
-        let filtered = [...GAMES_DATA];
-        if (currentCategory !== "ALL") {
-            filtered = filtered.filter(g => g.category === currentCategory);
-        }
-        if (currentPlatform !== "ALL") {
-            filtered = filtered.filter(g => g.platform === currentPlatform);
-        }
-        if (currentSource !== "ALL") {
-            filtered = filtered.filter(g => g.source === currentSource);
-        }
-        const totalSec = filtered.reduce((sum, g) => sum + g.playSeconds, 0);
-        return secondsToHours(totalSec);
-    }
-
-    // 计算各分类总时长并按降序排列 (用于面板, 不受平台来源筛选影响)
-    function getCategoryTotalHoursSorted() {
-        const catMap = new Map();
-        GAMES_DATA.forEach(game => {
-            const cat = game.category;
-            const current = catMap.get(cat) || 0;
-            catMap.set(cat, current + game.playSeconds);
-        });
-        let arr = [];
-        for (let [cat, sec] of catMap.entries()) {
-            arr.push({ category: cat, totalHours: secondsToHours(sec) });
-        }
-        arr.sort((a, b) => b.totalHours - a.totalHours);
-        return arr;
-    }
-
-    // 渲染分类总时长面板
-    function renderCategorySummary() {
-        const container = document.getElementById("categoryTilesContainer");
-        if (!container) return;
-        const sortedCats = getCategoryTotalHoursSorted();
-        if (sortedCats.length === 0) {
-            container.innerHTML = '<span style="color:#555;">暂无分类数据</span>';
-            return;
-        }
-        let html = '';
-        sortedCats.forEach(catInfo => {
-            html += `
-                <div class="cat-tile">
-                    <strong>${escapeHtml(catInfo.category)}</strong>
-                    <span>${catInfo.totalHours.toFixed(1)} h</span>
+        <div class="controls">
+            <div class="filter-group">
+                <label>分类</label>
+                <select id="categoryFilter">
+                    <option value="ALL">▸ 全部</option>
+                </select>
+                <label>平台</label>
+                <select id="platformFilter">
+                    <option value="ALL">▸ 全部</option>
+                </select>
+                <label>来源</label>
+                <select id="sourceFilter">
+                    <option value="ALL">▸ 全部</option>
+                </select>
+                <div class="stats-badge">
+                    ⏱ 总时长 <span id="totalHours">0.0</span> h
                 </div>
-            `;
-        });
-        container.innerHTML = html;
-    }
+            </div>
+            <div class="sort-buttons">
+                <button id="sortHighToLow">↓ 高→低</button>
+                <button id="sortLowToHigh">↑ 低→高</button>
+            </div>
+        </div>
 
-    // 填充下拉框
-    function populateSelects() {
-        // 分类
-        const catSelect = document.getElementById("categoryFilter");
-        if (catSelect) {
-            const categories = getAllCategories();
-            let options = '<option value="ALL">▸ 全部</option>';
-            categories.forEach(cat => {
-                const selected = (currentCategory === cat) ? 'selected' : '';
-                options += `<option value="${escapeHtml(cat)}" ${selected}>${escapeHtml(cat)}</option>`;
-            });
-            catSelect.innerHTML = options;
-        }
-        // 平台
-        const platSelect = document.getElementById("platformFilter");
-        if (platSelect) {
-            const platforms = getAllPlatforms();
-            let options = '<option value="ALL">▸ 全部</option>';
-            platforms.forEach(plat => {
-                const selected = (currentPlatform === plat) ? 'selected' : '';
-                options += `<option value="${escapeHtml(plat)}" ${selected}>${escapeHtml(plat)}</option>`;
-            });
-            platSelect.innerHTML = options;
-        }
-        // 来源
-        const srcSelect = document.getElementById("sourceFilter");
-        if (srcSelect) {
-            const sources = getAllSources();
-            let options = '<option value="ALL">▸ 全部</option>';
-            sources.forEach(src => {
-                const selected = (currentSource === src) ? 'selected' : '';
-                options += `<option value="${escapeHtml(src)}" ${selected}>${escapeHtml(src)}</option>`;
-            });
-            srcSelect.innerHTML = options;
-        }
-    }
+        <div class="game-list" id="gameListContainer">
+            <div class="empty-message">加载列表中...</div>
+        </div>
 
-    function escapeHtml(str) {
-        if (!str) return "";
-        return str.replace(/[&<>]/g, function(m) {
-            if (m === '&') return '&amp;';
-            if (m === '<') return '&lt;';
-            if (m === '>') return '&gt;';
-            return m;
-        }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, c => c);
-    }
+        <!-- ========= 视频数据板块 ========= -->
+        <div class="section-title" style="margin-top: 3rem;">🎬 视频数据</div>
 
-    // 核心渲染: 游戏列表 + 渐变条
-    function renderGameList() {
-        const container = document.getElementById("gameListContainer");
-        if (!container) return;
-        
-        const gamesToRender = getFilteredAndSortedGames();
-        const totalHrs = getTotalHoursForFiltered();
-        document.getElementById("totalHours").innerText = totalHrs.toFixed(1);
-        
-        if (gamesToRender.length === 0) {
-            container.innerHTML = '<div class="empty-message">⚡ 无游戏记录 · 切换筛选条件试试</div>';
-            return;
-        }
-        
-        let maxSeconds = 0;
-        for (let game of gamesToRender) {
-            if (game.playSeconds > maxSeconds) maxSeconds = game.playSeconds;
-        }
-        if (maxSeconds === 0) maxSeconds = 1;
-        
-        let html = '';
-        for (let game of gamesToRender) {
-            const hoursVal = secondsToHours(game.playSeconds);
-            const displayHours = hoursVal.toFixed(1);
-            const categoryLabel = escapeHtml(game.category);
-            const gameNameEscaped = escapeHtml(game.name);
-            let percentWidth = (game.playSeconds / maxSeconds) * 100;
-            percentWidth = Math.min(100, Math.max(0, percentWidth));
-            html += `
-                <div class="game-row" data-game-name="${escapeHtml(game.name)}">
-                    <div class="duration-bar" style="width: ${percentWidth}%;"></div>
-                    <div class="game-name-area">
-                        <span class="game-name">${gameNameEscaped}</span>
-                        <span class="game-category">${categoryLabel}</span>
-                    </div>
-                    <div class="right-section">
-                        <span class="game-hours">${displayHours} h</span>
-                        <button class="note-btn" data-note-game="${escapeHtml(game.name)}" title="查看备注">📋</button>
-                    </div>
+        <!-- 动画 -->
+        <div class="video-category-block">
+            <div class="sub-section-title">动画</div>
+
+            <div class="video-country-block">
+                <div class="video-country-label">🇨🇳 中国</div>
+                <div class="video-tag-list">
+                    <span class="video-tag">昨日青空</span>
+                    <span class="video-tag">小蝌蚪找妈妈</span>
+                    <span class="video-tag">猪猪侠</span>
+                    <span class="video-tag">熊出没</span>
+                    <span class="video-tag">小鲤鱼历险记</span>
+                    <span class="video-tag">小鸡不好惹</span>
+                    <span class="video-tag">喜羊羊与灰太狼</span>
+                    <span class="video-tag">开心超人</span>
+                    <span class="video-tag">葫芦兄弟</span>
+                    <span class="video-tag">黑猫警长</span>
+                    <span class="video-tag">果宝特攻</span>
+                    <span class="video-tag">电击小子</span>
+                    <span class="video-tag">大头儿子小头爸爸</span>
+                    <span class="video-tag">哪吒二</span>
                 </div>
-            `;
+            </div>
+
+            <div class="video-country-block">
+                <div class="video-country-label">🇺🇸 美国</div>
+                <div class="video-tag-list">
+                    <span class="video-tag">寻梦环游记</span>
+                    <span class="video-tag">心灵奇旅</span>
+                    <span class="video-tag">睡美人</span>
+                    <span class="video-tag">狮子王</span>
+                    <span class="video-tag">灰姑娘</span>
+                    <span class="video-tag">海底总动员</span>
+                    <span class="video-tag">怪兽电力公司</span>
+                    <span class="video-tag">怪兽大学</span>
+                    <span class="video-tag">疯狂动物城</span>
+                    <span class="video-tag">飞屋环游记</span>
+                    <span class="video-tag">超能陆战队</span>
+                    <span class="video-tag">白雪公主与七个小矮人</span>
+                    <span class="video-tag">阿拉丁</span>
+                    <span class="video-tag">成龙历险记</span>
+                    <span class="video-tag">驯龙高手</span>
+                    <span class="video-tag">玩具总动员</span>
+                    <span class="video-tag">神偷奶爸</span>
+                    <span class="video-tag">赛车总动员</span>
+                    <span class="video-tag">米老鼠和唐老鸭</span>
+                    <span class="video-tag">猫和老鼠</span>
+                    <span class="video-tag">加菲猫</span>
+                    <span class="video-tag">海绵宝宝</span>
+                    <span class="video-tag">怪物史莱克</span>
+                    <span class="video-tag">功夫熊猫</span>
+                    <span class="video-tag">疯狂原始人</span>
+                    <span class="video-tag">冰雪奇缘</span>
+                </div>
+            </div>
+
+            <div class="video-country-block">
+                <div class="video-country-label">🇯🇵 日本</div>
+                <div class="video-tag-list">
+                    <span class="video-tag">言叶之庭</span>
+                    <span class="video-tag">想哭的我戴上了猫的面具</span>
+                    <span class="video-tag">天气之子</span>
+                    <span class="video-tag">声之形</span>
+                    <span class="video-tag">你好世界</span>
+                    <span class="video-tag">你的名字</span>
+                    <span class="video-tag">秒速五厘米</span>
+                    <span class="video-tag">借东西的小人阿莉埃蒂</span>
+                    <span class="video-tag">蓝精灵</span>
+                    <span class="video-tag">悠哉日常大王</span>
+                    <span class="video-tag">樱花庄的宠物女孩</span>
+                    <span class="video-tag">新世纪福音战士</span>
+                    <span class="video-tag">小城日常</span>
+                    <span class="video-tag">五等分的花嫁</span>
+                    <span class="video-tag">我的青春恋爱物语果然有问题</span>
+                    <span class="video-tag">我的女友棒极啦</span>
+                    <span class="video-tag">我的妹妹不可能那么可爱</span>
+                    <span class="video-tag">花开伊吕波</span>
+                    <span class="video-tag">国家队</span>
+                    <span class="video-tag">孤独摇滚</span>
+                    <span class="video-tag">工作细胞</span>
+                    <span class="video-tag">哆啦A梦</span>
+                    <span class="video-tag">吹响吧！上低音号</span>
+                    <span class="video-tag">测不准的阿波连同学</span>
+                    <span class="video-tag">冰菓</span>
+                    <span class="video-tag">别当欧尼酱了</span>
+                    <span class="video-tag">埃罗芒阿老师</span>
+                    <span class="video-tag">未闻花名</span>
+                    <span class="video-tag">徒然喜欢你</span>
+                    <span class="video-tag">赛马娘</span>
+                    <span class="video-tag">日常</span>
+                    <span class="video-tag">轻音少女</span>
+                    <span class="video-tag">青春猪头少年</span>
+                    <span class="video-tag">路人女主的养成方法</span>
+                    <span class="video-tag">龙与虎</span>
+                    <span class="video-tag">凉宫春日</span>
+                    <span class="video-tag">恋爱禁止的世界</span>
+                    <span class="video-tag">莉可丽丝</span>
+                    <span class="video-tag">堀与宫村</span>
+                    <span class="video-tag">精灵宝可梦</span>
+                    <span class="video-tag">家有女友</span>
+                    <span class="video-tag">CLANNAD</span>
+                    <span class="video-tag">罪恶王冠</span>
+                    <span class="video-tag">租借女友</span>
+                    <span class="video-tag">紫罗兰永恒花园</span>
+                    <span class="video-tag">中二病也要谈恋爱</span>
+                    <span class="video-tag">月色真美</span>
+                    <span class="video-tag">约会大作战</span>
+                    <span class="video-tag">缘之空</span>
+                    <span class="video-tag">玉子市场</span>
+                    <span class="video-tag">游戏人生</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 电影 -->
+        <div class="video-category-block">
+            <div class="sub-section-title">电影</div>
+
+            <div class="video-country-block">
+                <div class="video-country-label">🇨🇳 中国</div>
+                <div class="video-tag-list">
+                    <span class="video-tag">霸王别姬</span>
+                    <span class="video-tag">滚蛋吧！肿瘤君</span>
+                    <span class="video-tag">长城</span>
+                    <span class="video-tag">战狼2</span>
+                    <span class="video-tag">唐人街探案2</span>
+                    <span class="video-tag">捉妖记2</span>
+                    <span class="video-tag">你好，李焕英</span>
+                    <span class="video-tag">银河补习班</span>
+                    <span class="video-tag">长津湖</span>
+                    <span class="video-tag">年会不能停！</span>
+                    <span class="video-tag">第二十条</span>
+                </div>
+            </div>
+
+            <div class="video-country-block">
+                <div class="video-country-label">🌍 其他</div>
+                <div class="video-tag-list">
+                    <span class="video-tag">饥饿站台</span>
+                    <span class="video-tag">肖生克的救赎</span>
+                    <span class="video-tag">泰坦尼克号</span>
+                    <span class="video-tag">我，机器人</span>
+                    <span class="video-tag">变形金刚</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 电视剧 -->
+        <div class="video-category-block">
+            <div class="sub-section-title">电视剧</div>
+
+            <div class="video-country-block">
+                <div class="video-country-label">🇨🇳 中国</div>
+                <div class="video-tag-list">
+                    <span class="video-tag">爱情公寓</span>
+                    <span class="video-tag">夏至未至</span>
+                    <span class="video-tag">神犬小七</span>
+                    <span class="video-tag">亲爱的，热爱的</span>
+                    <span class="video-tag">小别离</span>
+                    <span class="video-tag">欢乐颂</span>
+                    <span class="video-tag">99分女友</span>
+                    <span class="video-tag">少年派</span>
+                    <span class="video-tag">人民的名义</span>
+                    <span class="video-tag">四大名著电视剧</span>
+                </div>
+            </div>
+        </div>
+
+        <footer>YMKF 娱乐数据 · 游戏 & 影视 · 极简存档</footer>
+    </div>
+
+    <!-- 备注模态框 (游戏用) -->
+    <div id="noteModal" class="modal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>📄 游戏备注</h3>
+                <button class="close-modal" id="closeModalBtn">✕</button>
+            </div>
+            <div class="modal-body" id="modalNoteContent">
+                <p>备注内容</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ============================================================
+        // 游戏数据（与之前完全一致，仅更新了时长数据）
+        // ============================================================
+        const GAMES_DATA = [
+            { name: "Aimlabs", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 6780, source: "Steam" },
+            { name: "Among Us", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 1440, source: "Steam" },
+            { name: "Arcaea", category: "Music game", note: "时长计算公式：时长随iOS统计每周日更新，无PC数据\nB30：12.12\nPTT=B30+R10：12.17\n段位挑战：7段", platform: "Mobile（iOS）", playSeconds: 1197380, source: "Other" },
+            { name: "Battlefield 1", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 287700, source: "Steam" },
+            { name: "Battlefield 2042", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 242700, source: "Steam" },
+            { name: "Battlefield 5", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 22980, source: "Steam" },
+            { name: "Battlefield 6", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 335340, source: "Steam" },
+            { name: "CHUNITHM", category: "Music game", note: "国服994PC，RIN服524PC\n时长计算公式：pleynite自动统计RIN+国服PC*3*240（单位：秒）\nB50=O30+N20\n国服B50（中二节奏2026）：16.44（V段）\nRIN服B50（X-VERSE）：16.85（V段）\nB30：16.9817", platform: "Arcade", playSeconds: 1427602, source: "Other" },
+            { name: "Counter-Strike 2", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 3554160, source: "Steam" },
+            { name: "FreshWomen - Season 1", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 12360, source: "Steam" },
+            { name: "FreshWomen - Season 2", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 15420, source: "Steam" },
+            { name: "Goose Goose Duck", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 39240, source: "Steam" },
+            { name: "MAI MAI", category: "Music game", note: "国服10PC\n时长计算公式：国服PC*3*240（单位：秒）\nDX评分=O35+N15：3369\n段位：无", platform: "Arcade", playSeconds: 7200, source: "Other" },
+            { name: "Microsoft Solitaire Collection", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 11580, source: "Xbox" },
+            { name: "Minecraft iOS", category: "Open world", note: "", platform: "Mobile（iOS）", playSeconds: 893520, source: "Xbox" },
+            { name: "Minecraft Windows", category: "Open world", note: "", platform: "PC (Windows)", playSeconds: 526802, source: "Xbox" },
+            { name: "Phigros", category: "Music game", note: "时长计算公式：时长来源于TapTap，无PC数据\nRKS=P3+B27：14.93\n位次：79712\n课题模式段位：红49", platform: "Mobile（iOS）", playSeconds: 101880, source: "Other" },
+            { name: "Plants vs. Zombies: Game of the Year", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 237540, source: "Steam" },
+            { name: "Project SEKAI", category: "Music game", note: "时长计算公式：时长随iOS统计每周日更新，无PC数据\n国服排位：白金2\n国服位次：6168", platform: "Mobile（iOS）", playSeconds: 65320, source: "Other" },
+            { name: "PUBG: BATTLEGROUNDS", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 1289940, source: "Steam" },
+            { name: "Riptide GP: Renegade", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 0, source: "Steam" },
+            { name: "Riptide GP2", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 92760, source: "Steam" },
+            { name: "Wallpaper Engine：壁纸引擎", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 4800, source: "Steam" },
+            { name: "Zuma Deluxe", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 16200, source: "Steam" },
+            { name: "斗牌魂", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 180601, source: "Steam" },
+            { name: "各种小游戏", category: "Other", note: "时长来源于游戏内部PC数和粗略计算总和：\n4399小游戏:\n奥奇传说\n摩尔庄园\n美食大战老鼠\n疯狂小人战斗\n弹弹堂\n双箭头\n森林冰火人\n黄金矿工\n大便超人\n造梦西游\n泡泡龙\n拳皇\n\n其他小游戏：\n天天来战\n天天酷跑\n保卫萝卜\n鳄鱼小顽皮爱洗澡\n割绳子\n水果忍者\n会说话的汤姆猫\n愤怒的小鸟\n捕鱼达人\n神庙逃亡\n地铁跑酷\n开心消消乐\nQQ农场\nQQ餐厅\n贪吃蛇\n贪吃蛇大作战\n欢乐斗地主\n2048\n别踩白块儿\n俄罗斯方块\n扫雷\n三维弹球\n数独\n24点\n华容道\n魔方\n孔明锁\n五子棋\n中国象棋\n国际象棋\n跳棋\n飞行棋\n大富翁\n三国杀\n军棋\n斗兽棋", platform: "PC (Windows)", playSeconds: 1800000, source: "Other" },
+            { name: "节奏大师", category: "Music game", note: "老版本闯关188关，新版本70PC\n时长计算公式：240*2*188+240*新版本PC\n节奏战力=B50+N25：5.56", platform: "Mobile（iOS）", playSeconds: 107040, source: "Other" },
+            { name: "决战！平安京", category: "MOBA", note: "190PC\n时长计算公式：PC*1800（单位：秒）", platform: "Mobile（iOS）", playSeconds: 342000, source: "Other" },
+            { name: "狼人杀", category: "Card", note: "网杀108PC，面杀4h\n时长计算公式：PC*25*60+面杀时长", platform: "Mobile（iOS）", playSeconds: 176400, source: "Other" },
+            { name: "球球大作战", category: "Other", note: "80PC\n时长计算公式：PC*600（单位：秒）", platform: "Mobile（iOS）", playSeconds: 48000, source: "Other" },
+            { name: "雀魂麻将", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 1043400, source: "Steam" },
+            { name: "三国杀", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 2241120, source: "Steam" },
+            { name: "三角洲行动", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 1768860, source: "Steam" },
+            { name: "生死狙击", category: "fps", note: "时长数据来源于游戏内官方统计，后用playnite", platform: "PC (Windows)", playSeconds: 710000, source: "Other" },
+            { name: "双人成行", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 60, source: "Steam" },
+            { name: "双影奇境", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 58860, source: "Steam" },
+            { name: "糖豆人", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 23873, source: "Epic" },
+            { name: "天月麻雀", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 44940, source: "Steam" },
+            { name: "王者荣耀", category: "MOBA", note: "1865PC\n时长计算公式：PC*1800（单位：秒）\n王者印记：2", platform: "Mobile（iOS）", playSeconds: 3357000, source: "Other" },
+            { name: "英雄联盟手游（台服）", category: "MOBA", note: "182PC\n时长计算公式：PC*1800（单位：秒）", platform: "Mobile（iOS）", playSeconds: 327600, source: "Other" }
+        ];
+
+        // 辅助函数
+        function secondsToHours(seconds) {
+            let hours = seconds / 3600;
+            return Math.round(hours * 10) / 10;
         }
-        container.innerHTML = html;
-        
-        // 绑定备注按钮事件
-        const noteBtns = document.querySelectorAll('.note-btn');
-        noteBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const gameNameAttr = btn.getAttribute('data-note-game');
-                if (gameNameAttr) {
-                    const targetGame = GAMES_DATA.find(g => g.name === gameNameAttr);
-                    if (targetGame) {
-                        let finalNote = targetGame.note && targetGame.note.trim() !== "" ? targetGame.note : "（暂无备注信息）";
-                        if (targetGame.platform) {
-                            finalNote = `🎮 平台：${targetGame.platform}\n\n📝 详细备注：\n${finalNote}`;
+
+        function getAllCategories() {
+            const cats = new Set();
+            GAMES_DATA.forEach(g => cats.add(g.category));
+            return Array.from(cats).sort();
+        }
+
+        function getAllPlatforms() {
+            const platforms = new Set();
+            GAMES_DATA.forEach(g => platforms.add(g.platform));
+            return Array.from(platforms).sort();
+        }
+
+        function getAllSources() {
+            const sources = new Set();
+            GAMES_DATA.forEach(g => sources.add(g.source));
+            return Array.from(sources).sort();
+        }
+
+        let currentCategory = "ALL";
+        let currentPlatform = "ALL";
+        let currentSource = "ALL";
+        let currentSortMode = "HIGH_TO_LOW";
+
+        function getFilteredAndSortedGames() {
+            let filtered = [...GAMES_DATA];
+            if (currentCategory !== "ALL") {
+                filtered = filtered.filter(g => g.category === currentCategory);
+            }
+            if (currentPlatform !== "ALL") {
+                filtered = filtered.filter(g => g.platform === currentPlatform);
+            }
+            if (currentSource !== "ALL") {
+                filtered = filtered.filter(g => g.source === currentSource);
+            }
+            if (currentSortMode === "HIGH_TO_LOW") {
+                filtered.sort((a, b) => b.playSeconds - a.playSeconds);
+            } else if (currentSortMode === "LOW_TO_HIGH") {
+                filtered.sort((a, b) => a.playSeconds - b.playSeconds);
+            }
+            return filtered;
+        }
+
+        function getTotalHoursForFiltered() {
+            let filtered = [...GAMES_DATA];
+            if (currentCategory !== "ALL") {
+                filtered = filtered.filter(g => g.category === currentCategory);
+            }
+            if (currentPlatform !== "ALL") {
+                filtered = filtered.filter(g => g.platform === currentPlatform);
+            }
+            if (currentSource !== "ALL") {
+                filtered = filtered.filter(g => g.source === currentSource);
+            }
+            const totalSec = filtered.reduce((sum, g) => sum + g.playSeconds, 0);
+            return secondsToHours(totalSec);
+        }
+
+        function getCategoryTotalHoursSorted() {
+            const catMap = new Map();
+            GAMES_DATA.forEach(game => {
+                const cat = game.category;
+                const current = catMap.get(cat) || 0;
+                catMap.set(cat, current + game.playSeconds);
+            });
+            let arr = [];
+            for (let [cat, sec] of catMap.entries()) {
+                arr.push({ category: cat, totalHours: secondsToHours(sec) });
+            }
+            arr.sort((a, b) => b.totalHours - a.totalHours);
+            return arr;
+        }
+
+        function renderCategorySummary() {
+            const container = document.getElementById("categoryTilesContainer");
+            if (!container) return;
+            const sortedCats = getCategoryTotalHoursSorted();
+            if (sortedCats.length === 0) {
+                container.innerHTML = '<span style="color:#555;">暂无分类数据</span>';
+                return;
+            }
+            let html = '';
+            sortedCats.forEach(catInfo => {
+                html += `
+                    <div class="cat-tile">
+                        <strong>${escapeHtml(catInfo.category)}</strong>
+                        <span>${catInfo.totalHours.toFixed(1)} h</span>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        }
+
+        function populateSelects() {
+            const catSelect = document.getElementById("categoryFilter");
+            if (catSelect) {
+                const categories = getAllCategories();
+                let options = '<option value="ALL">▸ 全部</option>';
+                categories.forEach(cat => {
+                    const selected = (currentCategory === cat) ? 'selected' : '';
+                    options += `<option value="${escapeHtml(cat)}" ${selected}>${escapeHtml(cat)}</option>`;
+                });
+                catSelect.innerHTML = options;
+            }
+            const platSelect = document.getElementById("platformFilter");
+            if (platSelect) {
+                const platforms = getAllPlatforms();
+                let options = '<option value="ALL">▸ 全部</option>';
+                platforms.forEach(plat => {
+                    const selected = (currentPlatform === plat) ? 'selected' : '';
+                    options += `<option value="${escapeHtml(plat)}" ${selected}>${escapeHtml(plat)}</option>`;
+                });
+                platSelect.innerHTML = options;
+            }
+            const srcSelect = document.getElementById("sourceFilter");
+            if (srcSelect) {
+                const sources = getAllSources();
+                let options = '<option value="ALL">▸ 全部</option>';
+                sources.forEach(src => {
+                    const selected = (currentSource === src) ? 'selected' : '';
+                    options += `<option value="${escapeHtml(src)}" ${selected}>${escapeHtml(src)}</option>`;
+                });
+                srcSelect.innerHTML = options;
+            }
+        }
+
+        function escapeHtml(str) {
+            if (!str) return "";
+            return str.replace(/[&<>]/g, function(m) {
+                if (m === '&') return '&amp;';
+                if (m === '<') return '&lt;';
+                if (m === '>') return '&gt;';
+                return m;
+            }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, c => c);
+        }
+
+        function renderGameList() {
+            const container = document.getElementById("gameListContainer");
+            if (!container) return;
+
+            const gamesToRender = getFilteredAndSortedGames();
+            const totalHrs = getTotalHoursForFiltered();
+            document.getElementById("totalHours").innerText = totalHrs.toFixed(1);
+
+            if (gamesToRender.length === 0) {
+                container.innerHTML = '<div class="empty-message">⚡ 无游戏记录 · 切换筛选条件试试</div>';
+                return;
+            }
+
+            let maxSeconds = 0;
+            for (let game of gamesToRender) {
+                if (game.playSeconds > maxSeconds) maxSeconds = game.playSeconds;
+            }
+            if (maxSeconds === 0) maxSeconds = 1;
+
+            let html = '';
+            for (let game of gamesToRender) {
+                const hoursVal = secondsToHours(game.playSeconds);
+                const displayHours = hoursVal.toFixed(1);
+                const categoryLabel = escapeHtml(game.category);
+                const gameNameEscaped = escapeHtml(game.name);
+                let percentWidth = (game.playSeconds / maxSeconds) * 100;
+                percentWidth = Math.min(100, Math.max(0, percentWidth));
+                html += `
+                    <div class="game-row" data-game-name="${escapeHtml(game.name)}">
+                        <div class="duration-bar" style="width: ${percentWidth}%;"></div>
+                        <div class="game-name-area">
+                            <span class="game-name">${gameNameEscaped}</span>
+                            <span class="game-category">${categoryLabel}</span>
+                        </div>
+                        <div class="right-section">
+                            <span class="game-hours">${displayHours} h</span>
+                            <button class="note-btn" data-note-game="${escapeHtml(game.name)}" title="查看备注">📋</button>
+                        </div>
+                    </div>
+                `;
+            }
+            container.innerHTML = html;
+
+            const noteBtns = document.querySelectorAll('.note-btn');
+            noteBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const gameNameAttr = btn.getAttribute('data-note-game');
+                    if (gameNameAttr) {
+                        const targetGame = GAMES_DATA.find(g => g.name === gameNameAttr);
+                        if (targetGame) {
+                            let finalNote = targetGame.note && targetGame.note.trim() !== "" ? targetGame.note : "（暂无备注信息）";
+                            if (targetGame.platform) {
+                                finalNote = `🎮 平台：${targetGame.platform}\n\n📝 详细备注：\n${finalNote}`;
+                            } else {
+                                finalNote = `📝 详细备注：\n${finalNote}`;
+                            }
+                            showModal(finalNote);
                         } else {
-                            finalNote = `📝 详细备注：\n${finalNote}`;
+                            showModal("无法找到备注数据");
                         }
-                        showModal(finalNote);
-                    } else {
-                        showModal("无法找到备注数据");
                     }
-                }
+                });
             });
-        });
-    }
-    
-    // 模态框逻辑
-    const modal = document.getElementById("noteModal");
-    const modalContent = document.getElementById("modalNoteContent");
-    function showModal(contentText) {
-        if (!modal || !modalContent) return;
-        modalContent.innerHTML = `<p style="white-space: pre-wrap; font-family: monospace;">${escapeHtml(contentText)}</p>`;
-        modal.style.display = "flex";
-    }
-    function closeModal() {
-        if (modal) modal.style.display = "none";
-    }
-    
-    // 事件绑定
-    function bindUIEvents() {
-        const categorySelect = document.getElementById("categoryFilter");
-        const platformSelect = document.getElementById("platformFilter");
-        const sourceSelect = document.getElementById("sourceFilter");
-        const sortHighBtn = document.getElementById("sortHighToLow");
-        const sortLowBtn = document.getElementById("sortLowToHigh");
-        
-        function onFilterChange() {
-            currentCategory = categorySelect ? categorySelect.value : "ALL";
-            currentPlatform = platformSelect ? platformSelect.value : "ALL";
-            currentSource = sourceSelect ? sourceSelect.value : "ALL";
+        }
+
+        const modal = document.getElementById("noteModal");
+        const modalContent = document.getElementById("modalNoteContent");
+
+        function showModal(contentText) {
+            if (!modal || !modalContent) return;
+            modalContent.innerHTML = `<p style="white-space: pre-wrap; font-family: monospace;">${escapeHtml(contentText)}</p>`;
+            modal.style.display = "flex";
+        }
+
+        function closeModal() {
+            if (modal) modal.style.display = "none";
+        }
+
+        function bindUIEvents() {
+            const categorySelect = document.getElementById("categoryFilter");
+            const platformSelect = document.getElementById("platformFilter");
+            const sourceSelect = document.getElementById("sourceFilter");
+            const sortHighBtn = document.getElementById("sortHighToLow");
+            const sortLowBtn = document.getElementById("sortLowToHigh");
+
+            function onFilterChange() {
+                currentCategory = categorySelect ? categorySelect.value : "ALL";
+                currentPlatform = platformSelect ? platformSelect.value : "ALL";
+                currentSource = sourceSelect ? sourceSelect.value : "ALL";
+                renderGameList();
+                if (categorySelect && categorySelect.value !== currentCategory) categorySelect.value = currentCategory;
+                if (platformSelect && platformSelect.value !== currentPlatform) platformSelect.value = currentPlatform;
+                if (sourceSelect && sourceSelect.value !== currentSource) sourceSelect.value = currentSource;
+            }
+
+            if (categorySelect) categorySelect.addEventListener("change", onFilterChange);
+            if (platformSelect) platformSelect.addEventListener("change", onFilterChange);
+            if (sourceSelect) sourceSelect.addEventListener("change", onFilterChange);
+
+            if (sortHighBtn) {
+                sortHighBtn.addEventListener("click", () => {
+                    currentSortMode = "HIGH_TO_LOW";
+                    renderGameList();
+                });
+            }
+            if (sortLowBtn) {
+                sortLowBtn.addEventListener("click", () => {
+                    currentSortMode = "LOW_TO_HIGH";
+                    renderGameList();
+                });
+            }
+
+            const closeBtn = document.getElementById("closeModalBtn");
+            if (closeBtn) closeBtn.addEventListener("click", closeModal);
+            modal?.addEventListener("click", (e) => {
+                if (e.target === modal) closeModal();
+            });
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape" && modal && modal.style.display === "flex") closeModal();
+            });
+        }
+
+        function init() {
+            renderCategorySummary();
+            populateSelects();
             renderGameList();
-            // 保持下拉框同步 (以防万一)
-            if (categorySelect && categorySelect.value !== currentCategory) categorySelect.value = currentCategory;
-            if (platformSelect && platformSelect.value !== currentPlatform) platformSelect.value = currentPlatform;
-            if (sourceSelect && sourceSelect.value !== currentSource) sourceSelect.value = currentSource;
+            bindUIEvents();
+            const catSel = document.getElementById("categoryFilter");
+            if (catSel) catSel.value = currentCategory;
+            const platSel = document.getElementById("platformFilter");
+            if (platSel) platSel.value = currentPlatform;
+            const srcSel = document.getElementById("sourceFilter");
+            if (srcSel) srcSel.value = currentSource;
         }
-        
-        if (categorySelect) categorySelect.addEventListener("change", onFilterChange);
-        if (platformSelect) platformSelect.addEventListener("change", onFilterChange);
-        if (sourceSelect) sourceSelect.addEventListener("change", onFilterChange);
-        
-        if (sortHighBtn) {
-            sortHighBtn.addEventListener("click", () => {
-                currentSortMode = "HIGH_TO_LOW";
-                renderGameList();
-            });
-        }
-        if (sortLowBtn) {
-            sortLowBtn.addEventListener("click", () => {
-                currentSortMode = "LOW_TO_HIGH";
-                renderGameList();
-            });
-        }
-        
-        const closeBtn = document.getElementById("closeModalBtn");
-        if (closeBtn) closeBtn.addEventListener("click", closeModal);
-        modal?.addEventListener("click", (e) => {
-            if (e.target === modal) closeModal();
-        });
-        document.addEventListener("keydown", (e) => {
-            if (e.key === "Escape" && modal && modal.style.display === "flex") closeModal();
-        });
-    }
-    
-    // 初始化所有
-    function init() {
-        renderCategorySummary();
-        populateSelects();
-        renderGameList();
-        bindUIEvents();
-        // 确保下拉框值与状态一致
-        const catSel = document.getElementById("categoryFilter");
-        if (catSel) catSel.value = currentCategory;
-        const platSel = document.getElementById("platformFilter");
-        if (platSel) platSel.value = currentPlatform;
-        const srcSel = document.getElementById("sourceFilter");
-        if (srcSel) srcSel.value = currentSource;
-    }
-    
-    init();
-</script>
+
+        init();
+    </script>
 </body>
 </html>
