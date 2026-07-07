@@ -47,26 +47,73 @@
             padding-left: 0.7rem;
         }
 
-        /* 板块标题 */
-        .section-title {
-            font-size: 1.3rem;
-            font-weight: 400;
-            margin: 2.2rem 0 1rem 0;
-            color: #ddd;
+        /* ===== Tab 样式 ===== */
+        .tabs {
+            display: flex;
+            gap: 0.5rem;
             border-bottom: 1px solid #2a2a2a;
-            padding-bottom: 0.4rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
         }
 
-        .sub-section-title {
-            font-size: 1.0rem;
-            font-weight: 350;
-            margin: 1.5rem 0 0.6rem 0;
+        .tab-btn {
+            background: transparent;
+            border: none;
+            color: #888;
+            padding: 0.5rem 1.2rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+            font-weight: 400;
+        }
+
+        .tab-btn:hover {
+            color: #ddd;
+        }
+
+        .tab-btn.active {
+            color: #fff;
+            border-bottom-color: #fff;
+        }
+
+        .sub-tabs {
+            display: flex;
+            gap: 0.3rem;
+            margin-bottom: 1.2rem;
+            border-bottom: 1px solid #1f1f1f;
+            flex-wrap: wrap;
+        }
+
+        .sub-tab-btn {
+            background: transparent;
+            border: none;
+            color: #777;
+            padding: 0.3rem 1rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .sub-tab-btn:hover {
             color: #bbb;
-            border-left: 2px solid #555;
-            padding-left: 0.7rem;
         }
 
-        /* 视频数据的国家分类和标签 */
+        .sub-tab-btn.active {
+            color: #eee;
+            border-bottom-color: #eee;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* ===== 视频数据样式 ===== */
         .video-category-block {
             margin-bottom: 1.8rem;
         }
@@ -103,7 +150,7 @@
             background: #222;
         }
 
-        /* 原有游戏样式保持不变 */
+        /* ===== 游戏原有样式 ===== */
         .controls {
             display: flex;
             flex-wrap: wrap;
@@ -130,8 +177,7 @@
             color: #ddd;
         }
 
-        select,
-        button {
+        select, button {
             background: #1e1e1e;
             border: 1px solid #3a3a3a;
             padding: 0.35rem 0.9rem;
@@ -143,8 +189,7 @@
             color: #f0f0f0;
         }
 
-        select:hover,
-        button:hover {
+        select:hover, button:hover {
             border-color: #888;
             background-color: #2a2a2a;
         }
@@ -436,6 +481,10 @@
                 font-size: 0.7rem;
                 padding: 0.1rem 0.5rem;
             }
+            .tab-btn, .sub-tab-btn {
+                font-size: 0.9rem;
+                padding: 0.3rem 0.8rem;
+            }
         }
     </style>
 </head>
@@ -446,211 +495,224 @@
             <div class="sub">最近修改于2026年7月8日</div>
         </div>
 
-        <!-- ========= 游戏数据板块 ========= -->
-        <div class="section-title">🎮 游戏数据</div>
+        <!-- ===== 顶层 Tabs ===== -->
+        <div class="tabs" id="topTabs">
+            <button class="tab-btn active" data-target="gameTab">🎮 游戏数据</button>
+            <button class="tab-btn" data-target="videoTab">🎬 视频数据</button>
+        </div>
 
-        <div class="category-summary" id="categorySummaryPanel">
-            <h3>📊 分类总时长排行 (小时)</h3>
-            <div class="category-tiles" id="categoryTilesContainer">
-                <!-- 动态注入 -->
+        <!-- ===== 游戏数据 Tab 内容 ===== -->
+        <div class="tab-content active" id="gameTab">
+            <div class="category-summary" id="categorySummaryPanel">
+                <h3>📊 分类总时长排行 (小时)</h3>
+                <div class="category-tiles" id="categoryTilesContainer">
+                    <!-- 动态注入 -->
+                </div>
+            </div>
+
+            <div class="controls">
+                <div class="filter-group">
+                    <label>分类</label>
+                    <select id="categoryFilter">
+                        <option value="ALL">▸ 全部</option>
+                    </select>
+                    <label>平台</label>
+                    <select id="platformFilter">
+                        <option value="ALL">▸ 全部</option>
+                    </select>
+                    <label>来源</label>
+                    <select id="sourceFilter">
+                        <option value="ALL">▸ 全部</option>
+                    </select>
+                    <div class="stats-badge">
+                        ⏱ 总时长 <span id="totalHours">0.0</span> h
+                    </div>
+                </div>
+                <div class="sort-buttons">
+                    <button id="sortHighToLow">↓ 高→低</button>
+                    <button id="sortLowToHigh">↑ 低→高</button>
+                </div>
+            </div>
+
+            <div class="game-list" id="gameListContainer">
+                <div class="empty-message">加载列表中...</div>
             </div>
         </div>
 
-        <div class="controls">
-            <div class="filter-group">
-                <label>分类</label>
-                <select id="categoryFilter">
-                    <option value="ALL">▸ 全部</option>
-                </select>
-                <label>平台</label>
-                <select id="platformFilter">
-                    <option value="ALL">▸ 全部</option>
-                </select>
-                <label>来源</label>
-                <select id="sourceFilter">
-                    <option value="ALL">▸ 全部</option>
-                </select>
-                <div class="stats-badge">
-                    ⏱ 总时长 <span id="totalHours">0.0</span> h
-                </div>
-            </div>
-            <div class="sort-buttons">
-                <button id="sortHighToLow">↓ 高→低</button>
-                <button id="sortLowToHigh">↑ 低→高</button>
-            </div>
-        </div>
-
-        <div class="game-list" id="gameListContainer">
-            <div class="empty-message">加载列表中...</div>
-        </div>
-
-        <!-- ========= 视频数据板块 ========= -->
-        <div class="section-title" style="margin-top: 3rem;">🎬 视频数据</div>
-
-        <!-- 动画 -->
-        <div class="video-category-block">
-            <div class="sub-section-title">动画</div>
-
-            <div class="video-country-block">
-                <div class="video-country-label">🇨🇳 中国</div>
-                <div class="video-tag-list">
-                    <span class="video-tag">昨日青空</span>
-                    <span class="video-tag">小蝌蚪找妈妈</span>
-                    <span class="video-tag">猪猪侠</span>
-                    <span class="video-tag">熊出没</span>
-                    <span class="video-tag">小鲤鱼历险记</span>
-                    <span class="video-tag">小鸡不好惹</span>
-                    <span class="video-tag">喜羊羊与灰太狼</span>
-                    <span class="video-tag">开心超人</span>
-                    <span class="video-tag">葫芦兄弟</span>
-                    <span class="video-tag">黑猫警长</span>
-                    <span class="video-tag">果宝特攻</span>
-                    <span class="video-tag">电击小子</span>
-                    <span class="video-tag">大头儿子小头爸爸</span>
-                    <span class="video-tag">哪吒二</span>
-                </div>
+        <!-- ===== 视频数据 Tab 内容 ===== -->
+        <div class="tab-content" id="videoTab">
+            <!-- 视频子 Tabs -->
+            <div class="sub-tabs" id="videoSubTabs">
+                <button class="sub-tab-btn active" data-target="animePanel">动画</button>
+                <button class="sub-tab-btn" data-target="moviePanel">电影</button>
+                <button class="sub-tab-btn" data-target="tvPanel">电视剧</button>
             </div>
 
-            <div class="video-country-block">
-                <div class="video-country-label">🇺🇸 美国</div>
-                <div class="video-tag-list">
-                    <span class="video-tag">寻梦环游记</span>
-                    <span class="video-tag">心灵奇旅</span>
-                    <span class="video-tag">睡美人</span>
-                    <span class="video-tag">狮子王</span>
-                    <span class="video-tag">灰姑娘</span>
-                    <span class="video-tag">海底总动员</span>
-                    <span class="video-tag">怪兽电力公司</span>
-                    <span class="video-tag">怪兽大学</span>
-                    <span class="video-tag">疯狂动物城</span>
-                    <span class="video-tag">飞屋环游记</span>
-                    <span class="video-tag">超能陆战队</span>
-                    <span class="video-tag">白雪公主与七个小矮人</span>
-                    <span class="video-tag">阿拉丁</span>
-                    <span class="video-tag">成龙历险记</span>
-                    <span class="video-tag">驯龙高手</span>
-                    <span class="video-tag">玩具总动员</span>
-                    <span class="video-tag">神偷奶爸</span>
-                    <span class="video-tag">赛车总动员</span>
-                    <span class="video-tag">米老鼠和唐老鸭</span>
-                    <span class="video-tag">猫和老鼠</span>
-                    <span class="video-tag">加菲猫</span>
-                    <span class="video-tag">海绵宝宝</span>
-                    <span class="video-tag">怪物史莱克</span>
-                    <span class="video-tag">功夫熊猫</span>
-                    <span class="video-tag">疯狂原始人</span>
-                    <span class="video-tag">冰雪奇缘</span>
-                </div>
-            </div>
+            <!-- 动画面板 -->
+            <div class="tab-content active" id="animePanel">
+                <div class="video-category-block">
+                    <div class="video-country-block">
+                        <div class="video-country-label">🇨🇳 中国</div>
+                        <div class="video-tag-list">
+                            <span class="video-tag">昨日青空</span>
+                            <span class="video-tag">小蝌蚪找妈妈</span>
+                            <span class="video-tag">猪猪侠</span>
+                            <span class="video-tag">熊出没</span>
+                            <span class="video-tag">小鲤鱼历险记</span>
+                            <span class="video-tag">小鸡不好惹</span>
+                            <span class="video-tag">喜羊羊与灰太狼</span>
+                            <span class="video-tag">开心超人</span>
+                            <span class="video-tag">葫芦兄弟</span>
+                            <span class="video-tag">黑猫警长</span>
+                            <span class="video-tag">果宝特攻</span>
+                            <span class="video-tag">电击小子</span>
+                            <span class="video-tag">大头儿子小头爸爸</span>
+                            <span class="video-tag">哪吒二</span>
+                        </div>
+                    </div>
 
-            <div class="video-country-block">
-                <div class="video-country-label">🇯🇵 日本</div>
-                <div class="video-tag-list">
-                    <span class="video-tag">言叶之庭</span>
-                    <span class="video-tag">想哭的我戴上了猫的面具</span>
-                    <span class="video-tag">天气之子</span>
-                    <span class="video-tag">声之形</span>
-                    <span class="video-tag">你好世界</span>
-                    <span class="video-tag">你的名字</span>
-                    <span class="video-tag">秒速五厘米</span>
-                    <span class="video-tag">借东西的小人阿莉埃蒂</span>
-                    <span class="video-tag">蓝精灵</span>
-                    <span class="video-tag">悠哉日常大王</span>
-                    <span class="video-tag">樱花庄的宠物女孩</span>
-                    <span class="video-tag">新世纪福音战士</span>
-                    <span class="video-tag">小城日常</span>
-                    <span class="video-tag">五等分的花嫁</span>
-                    <span class="video-tag">我的青春恋爱物语果然有问题</span>
-                    <span class="video-tag">我的女友棒极啦</span>
-                    <span class="video-tag">我的妹妹不可能那么可爱</span>
-                    <span class="video-tag">花开伊吕波</span>
-                    <span class="video-tag">国家队</span>
-                    <span class="video-tag">孤独摇滚</span>
-                    <span class="video-tag">工作细胞</span>
-                    <span class="video-tag">哆啦A梦</span>
-                    <span class="video-tag">吹响吧！上低音号</span>
-                    <span class="video-tag">测不准的阿波连同学</span>
-                    <span class="video-tag">冰菓</span>
-                    <span class="video-tag">别当欧尼酱了</span>
-                    <span class="video-tag">埃罗芒阿老师</span>
-                    <span class="video-tag">未闻花名</span>
-                    <span class="video-tag">徒然喜欢你</span>
-                    <span class="video-tag">赛马娘</span>
-                    <span class="video-tag">日常</span>
-                    <span class="video-tag">轻音少女</span>
-                    <span class="video-tag">青春猪头少年</span>
-                    <span class="video-tag">路人女主的养成方法</span>
-                    <span class="video-tag">龙与虎</span>
-                    <span class="video-tag">凉宫春日</span>
-                    <span class="video-tag">恋爱禁止的世界</span>
-                    <span class="video-tag">莉可丽丝</span>
-                    <span class="video-tag">堀与宫村</span>
-                    <span class="video-tag">精灵宝可梦</span>
-                    <span class="video-tag">家有女友</span>
-                    <span class="video-tag">CLANNAD</span>
-                    <span class="video-tag">罪恶王冠</span>
-                    <span class="video-tag">租借女友</span>
-                    <span class="video-tag">紫罗兰永恒花园</span>
-                    <span class="video-tag">中二病也要谈恋爱</span>
-                    <span class="video-tag">月色真美</span>
-                    <span class="video-tag">约会大作战</span>
-                    <span class="video-tag">缘之空</span>
-                    <span class="video-tag">玉子市场</span>
-                    <span class="video-tag">游戏人生</span>
-                </div>
-            </div>
-        </div>
+                    <div class="video-country-block">
+                        <div class="video-country-label">🇺🇸 美国</div>
+                        <div class="video-tag-list">
+                            <span class="video-tag">寻梦环游记</span>
+                            <span class="video-tag">心灵奇旅</span>
+                            <span class="video-tag">睡美人</span>
+                            <span class="video-tag">狮子王</span>
+                            <span class="video-tag">灰姑娘</span>
+                            <span class="video-tag">海底总动员</span>
+                            <span class="video-tag">怪兽电力公司</span>
+                            <span class="video-tag">怪兽大学</span>
+                            <span class="video-tag">疯狂动物城</span>
+                            <span class="video-tag">飞屋环游记</span>
+                            <span class="video-tag">超能陆战队</span>
+                            <span class="video-tag">白雪公主与七个小矮人</span>
+                            <span class="video-tag">阿拉丁</span>
+                            <span class="video-tag">成龙历险记</span>
+                            <span class="video-tag">驯龙高手</span>
+                            <span class="video-tag">玩具总动员</span>
+                            <span class="video-tag">神偷奶爸</span>
+                            <span class="video-tag">赛车总动员</span>
+                            <span class="video-tag">米老鼠和唐老鸭</span>
+                            <span class="video-tag">猫和老鼠</span>
+                            <span class="video-tag">加菲猫</span>
+                            <span class="video-tag">海绵宝宝</span>
+                            <span class="video-tag">怪物史莱克</span>
+                            <span class="video-tag">功夫熊猫</span>
+                            <span class="video-tag">疯狂原始人</span>
+                            <span class="video-tag">冰雪奇缘</span>
+                        </div>
+                    </div>
 
-        <!-- 电影 -->
-        <div class="video-category-block">
-            <div class="sub-section-title">电影</div>
-
-            <div class="video-country-block">
-                <div class="video-country-label">🇨🇳 中国</div>
-                <div class="video-tag-list">
-                    <span class="video-tag">霸王别姬</span>
-                    <span class="video-tag">滚蛋吧！肿瘤君</span>
-                    <span class="video-tag">长城</span>
-                    <span class="video-tag">战狼2</span>
-                    <span class="video-tag">唐人街探案2</span>
-                    <span class="video-tag">捉妖记2</span>
-                    <span class="video-tag">你好，李焕英</span>
-                    <span class="video-tag">银河补习班</span>
-                    <span class="video-tag">长津湖</span>
-                    <span class="video-tag">年会不能停！</span>
-                    <span class="video-tag">第二十条</span>
+                    <div class="video-country-block">
+                        <div class="video-country-label">🇯🇵 日本</div>
+                        <div class="video-tag-list">
+                            <span class="video-tag">言叶之庭</span>
+                            <span class="video-tag">想哭的我戴上了猫的面具</span>
+                            <span class="video-tag">天气之子</span>
+                            <span class="video-tag">声之形</span>
+                            <span class="video-tag">你好世界</span>
+                            <span class="video-tag">你的名字</span>
+                            <span class="video-tag">秒速五厘米</span>
+                            <span class="video-tag">借东西的小人阿莉埃蒂</span>
+                            <span class="video-tag">蓝精灵</span>
+                            <span class="video-tag">悠哉日常大王</span>
+                            <span class="video-tag">樱花庄的宠物女孩</span>
+                            <span class="video-tag">新世纪福音战士</span>
+                            <span class="video-tag">小城日常</span>
+                            <span class="video-tag">五等分的花嫁</span>
+                            <span class="video-tag">我的青春恋爱物语果然有问题</span>
+                            <span class="video-tag">我的女友棒极啦</span>
+                            <span class="video-tag">我的妹妹不可能那么可爱</span>
+                            <span class="video-tag">花开伊吕波</span>
+                            <span class="video-tag">国家队</span>
+                            <span class="video-tag">孤独摇滚</span>
+                            <span class="video-tag">工作细胞</span>
+                            <span class="video-tag">哆啦A梦</span>
+                            <span class="video-tag">吹响吧！上低音号</span>
+                            <span class="video-tag">测不准的阿波连同学</span>
+                            <span class="video-tag">冰菓</span>
+                            <span class="video-tag">别当欧尼酱了</span>
+                            <span class="video-tag">埃罗芒阿老师</span>
+                            <span class="video-tag">未闻花名</span>
+                            <span class="video-tag">徒然喜欢你</span>
+                            <span class="video-tag">赛马娘</span>
+                            <span class="video-tag">日常</span>
+                            <span class="video-tag">轻音少女</span>
+                            <span class="video-tag">青春猪头少年</span>
+                            <span class="video-tag">路人女主的养成方法</span>
+                            <span class="video-tag">龙与虎</span>
+                            <span class="video-tag">凉宫春日</span>
+                            <span class="video-tag">恋爱禁止的世界</span>
+                            <span class="video-tag">莉可丽丝</span>
+                            <span class="video-tag">堀与宫村</span>
+                            <span class="video-tag">精灵宝可梦</span>
+                            <span class="video-tag">家有女友</span>
+                            <span class="video-tag">CLANNAD</span>
+                            <span class="video-tag">罪恶王冠</span>
+                            <span class="video-tag">租借女友</span>
+                            <span class="video-tag">紫罗兰永恒花园</span>
+                            <span class="video-tag">中二病也要谈恋爱</span>
+                            <span class="video-tag">月色真美</span>
+                            <span class="video-tag">约会大作战</span>
+                            <span class="video-tag">缘之空</span>
+                            <span class="video-tag">玉子市场</span>
+                            <span class="video-tag">游戏人生</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="video-country-block">
-                <div class="video-country-label">🌍 其他</div>
-                <div class="video-tag-list">
-                    <span class="video-tag">饥饿站台</span>
-                    <span class="video-tag">肖生克的救赎</span>
-                    <span class="video-tag">泰坦尼克号</span>
-                    <span class="video-tag">我，机器人</span>
-                    <span class="video-tag">变形金刚</span>
+            <!-- 电影面板 -->
+            <div class="tab-content" id="moviePanel">
+                <div class="video-category-block">
+                    <div class="video-country-block">
+                        <div class="video-country-label">🇨🇳 中国</div>
+                        <div class="video-tag-list">
+                            <span class="video-tag">霸王别姬</span>
+                            <span class="video-tag">滚蛋吧！肿瘤君</span>
+                            <span class="video-tag">长城</span>
+                            <span class="video-tag">战狼2</span>
+                            <span class="video-tag">唐人街探案2</span>
+                            <span class="video-tag">捉妖记2</span>
+                            <span class="video-tag">你好，李焕英</span>
+                            <span class="video-tag">银河补习班</span>
+                            <span class="video-tag">长津湖</span>
+                            <span class="video-tag">年会不能停！</span>
+                            <span class="video-tag">第二十条</span>
+                        </div>
+                    </div>
+
+                    <div class="video-country-block">
+                        <div class="video-country-label">🌍 其他</div>
+                        <div class="video-tag-list">
+                            <span class="video-tag">饥饿站台</span>
+                            <span class="video-tag">肖生克的救赎</span>
+                            <span class="video-tag">泰坦尼克号</span>
+                            <span class="video-tag">我，机器人</span>
+                            <span class="video-tag">变形金刚</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- 电视剧 -->
-        <div class="video-category-block">
-            <div class="sub-section-title">电视剧</div>
-
-            <div class="video-country-block">
-                <div class="video-country-label">🇨🇳 中国</div>
-                <div class="video-tag-list">
-                    <span class="video-tag">爱情公寓</span>
-                    <span class="video-tag">夏至未至</span>
-                    <span class="video-tag">神犬小七</span>
-                    <span class="video-tag">亲爱的，热爱的</span>
-                    <span class="video-tag">小别离</span>
-                    <span class="video-tag">欢乐颂</span>
-                    <span class="video-tag">99分女友</span>
-                    <span class="video-tag">少年派</span>
-                    <span class="video-tag">人民的名义</span>
-                    <span class="video-tag">四大名著电视剧</span>
+            <!-- 电视剧面板 -->
+            <div class="tab-content" id="tvPanel">
+                <div class="video-category-block">
+                    <div class="video-country-block">
+                        <div class="video-country-label">🇨🇳 中国</div>
+                        <div class="video-tag-list">
+                            <span class="video-tag">爱情公寓</span>
+                            <span class="video-tag">夏至未至</span>
+                            <span class="video-tag">神犬小七</span>
+                            <span class="video-tag">亲爱的，热爱的</span>
+                            <span class="video-tag">小别离</span>
+                            <span class="video-tag">欢乐颂</span>
+                            <span class="video-tag">99分女友</span>
+                            <span class="video-tag">少年派</span>
+                            <span class="video-tag">人民的名义</span>
+                            <span class="video-tag">四大名著电视剧</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -673,7 +735,90 @@
 
     <script>
         // ============================================================
-        // 游戏数据（与之前完全一致，仅更新了时长数据）
+        // 1. Tab 切换逻辑 (顶层和子层)
+        // ============================================================
+        function initTabs() {
+            // 顶层 Tabs
+            const topTabs = document.querySelectorAll('#topTabs .tab-btn');
+            const topContents = {
+                game: document.getElementById('gameTab'),
+                video: document.getElementById('videoTab')
+            };
+
+            topTabs.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // 移除所有顶层按钮的 active
+                    topTabs.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // 隐藏所有顶层内容
+                    Object.values(topContents).forEach(el => el.classList.remove('active'));
+
+                    // 显示对应的内容
+                    const target = this.dataset.target;
+                    if (target === 'gameTab') {
+                        topContents.game.classList.add('active');
+                        // 如果游戏列表为空则重新渲染（但已渲染过，无需额外操作）
+                    } else if (target === 'videoTab') {
+                        topContents.video.classList.add('active');
+                        // 默认激活视频子tab的第一个（动画）
+                        const subBtns = document.querySelectorAll('#videoSubTabs .sub-tab-btn');
+                        const subPanels = {
+                            anime: document.getElementById('animePanel'),
+                            movie: document.getElementById('moviePanel'),
+                            tv: document.getElementById('tvPanel')
+                        };
+                        // 确保子tab的第一个是激活状态（如果尚未激活）
+                        let hasActive = false;
+                        subBtns.forEach(b => { if (b.classList.contains('active')) hasActive = true; });
+                        if (!hasActive && subBtns.length) {
+                            subBtns[0].classList.add('active');
+                            const firstTarget = subBtns[0].dataset.target;
+                            if (firstTarget === 'animePanel') subPanels.anime.classList.add('active');
+                            else if (firstTarget === 'moviePanel') subPanels.movie.classList.add('active');
+                            else if (firstTarget === 'tvPanel') subPanels.tv.classList.add('active');
+                        }
+                    }
+                });
+            });
+
+            // 视频子 Tabs
+            const subBtns = document.querySelectorAll('#videoSubTabs .sub-tab-btn');
+            const subPanels = {
+                anime: document.getElementById('animePanel'),
+                movie: document.getElementById('moviePanel'),
+                tv: document.getElementById('tvPanel')
+            };
+
+            subBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    subBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+
+                    Object.values(subPanels).forEach(el => el.classList.remove('active'));
+
+                    const target = this.dataset.target;
+                    if (target === 'animePanel') subPanels.anime.classList.add('active');
+                    else if (target === 'moviePanel') subPanels.movie.classList.add('active');
+                    else if (target === 'tvPanel') subPanels.tv.classList.add('active');
+                });
+            });
+
+            // 默认：游戏tab激活，视频tab隐藏；视频子tab默认动画激活
+            // 已在HTML中设置，但为了保险，确保初始状态
+            document.getElementById('gameTab').classList.add('active');
+            document.getElementById('videoTab').classList.remove('active');
+            document.querySelector('#topTabs .tab-btn[data-target="gameTab"]').classList.add('active');
+            document.querySelector('#topTabs .tab-btn[data-target="videoTab"]').classList.remove('active');
+            // 视频子tab默认第一个激活
+            document.querySelector('#videoSubTabs .sub-tab-btn[data-target="animePanel"]').classList.add('active');
+            document.getElementById('animePanel').classList.add('active');
+            document.getElementById('moviePanel').classList.remove('active');
+            document.getElementById('tvPanel').classList.remove('active');
+        }
+
+        // ============================================================
+        // 2. 游戏数据（与之前完全一致）
         // ============================================================
         const GAMES_DATA = [
             { name: "Aimlabs", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 6780, source: "Steam" },
@@ -718,7 +863,6 @@
             { name: "英雄联盟手游（台服）", category: "MOBA", note: "182PC\n时长计算公式：PC*1800（单位：秒）", platform: "Mobile（iOS）", playSeconds: 327600, source: "Other" }
         ];
 
-        // 辅助函数
         function secondsToHours(seconds) {
             let hours = seconds / 3600;
             return Math.round(hours * 10) / 10;
@@ -938,7 +1082,7 @@
             if (modal) modal.style.display = "none";
         }
 
-        function bindUIEvents() {
+        function bindGameUIEvents() {
             const categorySelect = document.getElementById("categoryFilter");
             const platformSelect = document.getElementById("platformFilter");
             const sourceSelect = document.getElementById("sourceFilter");
@@ -982,11 +1126,16 @@
             });
         }
 
+        // ============================================================
+        // 初始化
+        // ============================================================
         function init() {
+            initTabs();
             renderCategorySummary();
             populateSelects();
             renderGameList();
-            bindUIEvents();
+            bindGameUIEvents();
+            // 确保下拉框值与状态一致
             const catSel = document.getElementById("categoryFilter");
             if (catSel) catSel.value = currentCategory;
             const platSel = document.getElementById("platformFilter");
