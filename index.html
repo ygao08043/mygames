@@ -150,14 +150,14 @@
             background: #222;
         }
 
-        /* ===== 游戏原有样式 ===== */
+        /* ===== 游戏样式 (调整布局) ===== */
         .controls {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
             gap: 1rem;
-            margin: 1.2rem 0 1.5rem 0;
+            margin: 1.2rem 0 0.5rem 0;
         }
 
         .filter-group {
@@ -199,19 +199,29 @@
             gap: 0.6rem;
         }
 
-        .stats-badge {
-            background: #121212;
-            padding: 0.3rem 1rem;
-            border-radius: 32px;
-            font-size: 0.75rem;
-            font-weight: 500;
-            font-family: monospace;
-            border: 1px solid #2c2c2c;
+        /* 统计行：总时长 + 游戏数量 */
+        .stats-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 0.3rem 0 1.2rem 0;
+            padding: 0.3rem 0;
         }
 
-        .stats-badge span {
+        .stats-item {
+            background: #121212;
+            padding: 0.3rem 1.2rem;
+            border-radius: 32px;
+            font-size: 0.8rem;
+            font-family: monospace;
+            border: 1px solid #2c2c2c;
+            color: #ccc;
+        }
+
+        .stats-item span {
             font-weight: 700;
             color: #ffffff;
+            margin-left: 0.3rem;
         }
 
         .category-summary {
@@ -492,7 +502,7 @@
     <div class="container">
         <div class="header">
             <h1>YMKF的娱乐数据</h1>
-            <div class="sub">最近修改于2026年7月8日</div>
+            <div class="sub">最近修改于2026年7月14日</div>
         </div>
 
         <!-- ===== 顶层 Tabs ===== -->
@@ -510,6 +520,7 @@
                 </div>
             </div>
 
+            <!-- 筛选栏：分类、平台、来源 + 排序按钮（第一行） -->
             <div class="controls">
                 <div class="filter-group">
                     <label>分类</label>
@@ -524,14 +535,17 @@
                     <select id="sourceFilter">
                         <option value="ALL">▸ 全部</option>
                     </select>
-                    <div class="stats-badge">
-                        ⏱ 总时长 <span id="totalHours">0.0</span> h
-                    </div>
                 </div>
                 <div class="sort-buttons">
                     <button id="sortHighToLow">↓ 高→低</button>
                     <button id="sortLowToHigh">↑ 低→高</button>
                 </div>
+            </div>
+
+            <!-- 统计行：总时长 + 游戏数量（第二行） -->
+            <div class="stats-row">
+                <div class="stats-item">⏱ 总时长 <span id="totalHours">0.0</span> h</div>
+                <div class="stats-item">🎮 游戏数量 <span id="gameCount">0</span></div>
             </div>
 
             <div class="game-list" id="gameListContainer">
@@ -747,36 +761,30 @@
 
             topTabs.forEach(btn => {
                 btn.addEventListener('click', function() {
-                    // 移除所有顶层按钮的 active
                     topTabs.forEach(b => b.classList.remove('active'));
                     this.classList.add('active');
-
-                    // 隐藏所有顶层内容
                     Object.values(topContents).forEach(el => el.classList.remove('active'));
-
-                    // 显示对应的内容
                     const target = this.dataset.target;
                     if (target === 'gameTab') {
                         topContents.game.classList.add('active');
-                        // 如果游戏列表为空则重新渲染（但已渲染过，无需额外操作）
                     } else if (target === 'videoTab') {
                         topContents.video.classList.add('active');
-                        // 默认激活视频子tab的第一个（动画）
+                        // 确保视频子tab第一个激活
                         const subBtns = document.querySelectorAll('#videoSubTabs .sub-tab-btn');
-                        const subPanels = {
-                            anime: document.getElementById('animePanel'),
-                            movie: document.getElementById('moviePanel'),
-                            tv: document.getElementById('tvPanel')
-                        };
-                        // 确保子tab的第一个是激活状态（如果尚未激活）
                         let hasActive = false;
                         subBtns.forEach(b => { if (b.classList.contains('active')) hasActive = true; });
                         if (!hasActive && subBtns.length) {
                             subBtns[0].classList.add('active');
                             const firstTarget = subBtns[0].dataset.target;
-                            if (firstTarget === 'animePanel') subPanels.anime.classList.add('active');
-                            else if (firstTarget === 'moviePanel') subPanels.movie.classList.add('active');
-                            else if (firstTarget === 'tvPanel') subPanels.tv.classList.add('active');
+                            const panels = {
+                                anime: document.getElementById('animePanel'),
+                                movie: document.getElementById('moviePanel'),
+                                tv: document.getElementById('tvPanel')
+                            };
+                            Object.values(panels).forEach(p => p.classList.remove('active'));
+                            if (firstTarget === 'animePanel') panels.anime.classList.add('active');
+                            else if (firstTarget === 'moviePanel') panels.movie.classList.add('active');
+                            else if (firstTarget === 'tvPanel') panels.tv.classList.add('active');
                         }
                     }
                 });
@@ -794,9 +802,7 @@
                 btn.addEventListener('click', function() {
                     subBtns.forEach(b => b.classList.remove('active'));
                     this.classList.add('active');
-
                     Object.values(subPanels).forEach(el => el.classList.remove('active'));
-
                     const target = this.dataset.target;
                     if (target === 'animePanel') subPanels.anime.classList.add('active');
                     else if (target === 'moviePanel') subPanels.movie.classList.add('active');
@@ -804,13 +810,11 @@
                 });
             });
 
-            // 默认：游戏tab激活，视频tab隐藏；视频子tab默认动画激活
-            // 已在HTML中设置，但为了保险，确保初始状态
+            // 默认状态：游戏tab激活，视频tab隐藏；视频子tab默认动画激活
             document.getElementById('gameTab').classList.add('active');
             document.getElementById('videoTab').classList.remove('active');
             document.querySelector('#topTabs .tab-btn[data-target="gameTab"]').classList.add('active');
             document.querySelector('#topTabs .tab-btn[data-target="videoTab"]').classList.remove('active');
-            // 视频子tab默认第一个激活
             document.querySelector('#videoSubTabs .sub-tab-btn[data-target="animePanel"]').classList.add('active');
             document.getElementById('animePanel').classList.add('active');
             document.getElementById('moviePanel').classList.remove('active');
@@ -818,7 +822,7 @@
         }
 
         // ============================================================
-        // 2. 游戏数据（与之前完全一致）
+        // 2. 游戏数据（更新为最新CSV）
         // ============================================================
         const GAMES_DATA = [
             { name: "Aimlabs", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 6780, source: "Steam" },
@@ -828,7 +832,7 @@
             { name: "Battlefield 2042", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 242700, source: "Steam" },
             { name: "Battlefield 5", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 22980, source: "Steam" },
             { name: "Battlefield 6", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 335340, source: "Steam" },
-            { name: "CHUNITHM", category: "Music game", note: "国服994PC，RIN服524PC\n时长计算公式：pleynite自动统计RIN+国服PC*3*240（单位：秒）\nB50=O30+N20\n国服B50（中二节奏2026）：16.44（V段）\nRIN服B50（X-VERSE）：16.85（V段）\nB30：16.9817", platform: "Arcade", playSeconds: 1427602, source: "Other" },
+            { name: "CHUNITHM", category: "Music game", note: "国服997PC，RIN服534PC\n时长计算公式：pleynite自动统计RIN+国服PC*3*240（单位：秒）\nB50=O30+N20\n国服B50（中二节奏2026）：16.47（V段）\nRIN服B50（X-VERSE-X）：16.78（V段）\nB30：16.99", platform: "Arcade", playSeconds: 1445104, source: "Other" },
             { name: "Counter-Strike 2", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 3554160, source: "Steam" },
             { name: "FreshWomen - Season 1", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 12360, source: "Steam" },
             { name: "FreshWomen - Season 2", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 15420, source: "Steam" },
@@ -838,9 +842,10 @@
             { name: "Minecraft iOS", category: "Open world", note: "", platform: "Mobile（iOS）", playSeconds: 893520, source: "Xbox" },
             { name: "Minecraft Windows", category: "Open world", note: "", platform: "PC (Windows)", playSeconds: 526802, source: "Xbox" },
             { name: "Phigros", category: "Music game", note: "时长计算公式：时长来源于TapTap，无PC数据\nRKS=P3+B27：14.93\n位次：79712\n课题模式段位：红49", platform: "Mobile（iOS）", playSeconds: 101880, source: "Other" },
-            { name: "Plants vs. Zombies: Game of the Year", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 237540, source: "Steam" },
-            { name: "Project SEKAI", category: "Music game", note: "时长计算公式：时长随iOS统计每周日更新，无PC数据\n国服排位：白金2\n国服位次：6168", platform: "Mobile（iOS）", playSeconds: 65320, source: "Other" },
+            { name: "Plants vs. Zombies: Game of the Year", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 247500, source: "Steam" },
+            { name: "Project SEKAI", category: "Music game", note: "时长计算公式：时长随iOS统计每周日更新，无PC数据\n国服排位：白金1\n国服位次：3536", platform: "Mobile（iOS）", playSeconds: 86800, source: "Other" },
             { name: "PUBG: BATTLEGROUNDS", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 1289940, source: "Steam" },
+            { name: "Rhythm Doctor", category: "Music game", note: "", platform: "PC (Windows)", playSeconds: 5100, source: "Steam" },
             { name: "Riptide GP: Renegade", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 0, source: "Steam" },
             { name: "Riptide GP2", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 92760, source: "Steam" },
             { name: "Wallpaper Engine：壁纸引擎", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 4800, source: "Steam" },
@@ -851,9 +856,9 @@
             { name: "决战！平安京", category: "MOBA", note: "190PC\n时长计算公式：PC*1800（单位：秒）", platform: "Mobile（iOS）", playSeconds: 342000, source: "Other" },
             { name: "狼人杀", category: "Card", note: "网杀108PC，面杀4h\n时长计算公式：PC*25*60+面杀时长", platform: "Mobile（iOS）", playSeconds: 176400, source: "Other" },
             { name: "球球大作战", category: "Other", note: "80PC\n时长计算公式：PC*600（单位：秒）", platform: "Mobile（iOS）", playSeconds: 48000, source: "Other" },
-            { name: "雀魂麻将", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 1043400, source: "Steam" },
-            { name: "三国杀", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 2241120, source: "Steam" },
-            { name: "三角洲行动", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 1768860, source: "Steam" },
+            { name: "雀魂麻将", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 1113900, source: "Steam" },
+            { name: "三国杀", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 2259600, source: "Steam" },
+            { name: "三角洲行动", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 1768920, source: "Steam" },
             { name: "生死狙击", category: "fps", note: "时长数据来源于游戏内官方统计，后用playnite", platform: "PC (Windows)", playSeconds: 710000, source: "Other" },
             { name: "双人成行", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 60, source: "Steam" },
             { name: "双影奇境", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 58860, source: "Steam" },
@@ -1010,6 +1015,7 @@
             const gamesToRender = getFilteredAndSortedGames();
             const totalHrs = getTotalHoursForFiltered();
             document.getElementById("totalHours").innerText = totalHrs.toFixed(1);
+            document.getElementById("gameCount").innerText = gamesToRender.length;
 
             if (gamesToRender.length === 0) {
                 container.innerHTML = '<div class="empty-message">⚡ 无游戏记录 · 切换筛选条件试试</div>';
@@ -1135,7 +1141,6 @@
             populateSelects();
             renderGameList();
             bindGameUIEvents();
-            // 确保下拉框值与状态一致
             const catSel = document.getElementById("categoryFilter");
             if (catSel) catSel.value = currentCategory;
             const platSel = document.getElementById("platformFilter");
