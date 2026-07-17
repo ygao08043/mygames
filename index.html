@@ -150,7 +150,7 @@
             background: #222;
         }
 
-        /* ===== 游戏样式 (调整布局) ===== */
+        /* ===== 游戏样式 ===== */
         .controls {
             display: flex;
             flex-wrap: wrap;
@@ -199,7 +199,7 @@
             gap: 0.6rem;
         }
 
-        /* 统计行：总时长 + 游戏数量 */
+        /* 统计行 */
         .stats-row {
             display: flex;
             flex-wrap: wrap;
@@ -345,7 +345,7 @@
         .right-section {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 1.2rem;
         }
 
         .game-hours {
@@ -359,26 +359,22 @@
             text-align: right;
         }
 
-        .note-btn {
+        /* 备注文字链接样式 */
+        .note-link {
             background: none;
             border: none;
-            font-size: 1.1rem;
+            color: #999;
+            font-size: 0.85rem;
+            text-decoration: underline;
             cursor: pointer;
-            padding: 0 0.2rem;
-            color: #aaa;
-            transition: color 0.1s;
-            border-radius: 20px;
-            width: 28px;
-            height: 28px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
+            font-family: inherit;
+            padding: 0.1rem 0.2rem;
+            transition: color 0.2s;
+            letter-spacing: 0.3px;
         }
 
-        .note-btn:hover {
+        .note-link:hover {
             color: #ffffff;
-            background: #2a2a2a;
-            border: none;
         }
 
         .empty-message {
@@ -495,6 +491,12 @@
                 font-size: 0.9rem;
                 padding: 0.3rem 0.8rem;
             }
+            .right-section {
+                gap: 0.8rem;
+            }
+            .note-link {
+                font-size: 0.75rem;
+            }
         }
     </style>
 </head>
@@ -502,7 +504,7 @@
     <div class="container">
         <div class="header">
             <h1>YMKF的娱乐数据</h1>
-            <div class="sub">最近修改于2026年7月14日</div>
+            <div class="sub">最近修改于2026年7月17日</div>
         </div>
 
         <!-- ===== 顶层 Tabs ===== -->
@@ -520,7 +522,7 @@
                 </div>
             </div>
 
-            <!-- 筛选栏：分类、平台、来源 + 排序按钮（第一行） -->
+            <!-- 筛选栏 -->
             <div class="controls">
                 <div class="filter-group">
                     <label>分类</label>
@@ -542,7 +544,7 @@
                 </div>
             </div>
 
-            <!-- 统计行：总时长 + 游戏数量（第二行） -->
+            <!-- 统计行 -->
             <div class="stats-row">
                 <div class="stats-item">⏱ 总时长 <span id="totalHours">0.0</span> h</div>
                 <div class="stats-item">🎮 游戏数量 <span id="gameCount">0</span></div>
@@ -734,7 +736,7 @@
         <footer>YMKF 娱乐数据 · 游戏 & 影视 · 极简存档</footer>
     </div>
 
-    <!-- 备注模态框 (游戏用) -->
+    <!-- 备注模态框 -->
     <div id="noteModal" class="modal">
         <div class="modal-card">
             <div class="modal-header">
@@ -752,7 +754,6 @@
         // 1. Tab 切换逻辑 (顶层和子层)
         // ============================================================
         function initTabs() {
-            // 顶层 Tabs
             const topTabs = document.querySelectorAll('#topTabs .tab-btn');
             const topContents = {
                 game: document.getElementById('gameTab'),
@@ -769,7 +770,6 @@
                         topContents.game.classList.add('active');
                     } else if (target === 'videoTab') {
                         topContents.video.classList.add('active');
-                        // 确保视频子tab第一个激活
                         const subBtns = document.querySelectorAll('#videoSubTabs .sub-tab-btn');
                         let hasActive = false;
                         subBtns.forEach(b => { if (b.classList.contains('active')) hasActive = true; });
@@ -790,7 +790,6 @@
                 });
             });
 
-            // 视频子 Tabs
             const subBtns = document.querySelectorAll('#videoSubTabs .sub-tab-btn');
             const subPanels = {
                 anime: document.getElementById('animePanel'),
@@ -810,7 +809,7 @@
                 });
             });
 
-            // 默认状态：游戏tab激活，视频tab隐藏；视频子tab默认动画激活
+            // 默认状态
             document.getElementById('gameTab').classList.add('active');
             document.getElementById('videoTab').classList.remove('active');
             document.querySelector('#topTabs .tab-btn[data-target="gameTab"]').classList.add('active');
@@ -822,7 +821,7 @@
         }
 
         // ============================================================
-        // 2. 游戏数据（更新为最新CSV）
+        // 2. 游戏数据 (ttt.csv 最新)
         // ============================================================
         const GAMES_DATA = [
             { name: "Aimlabs", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 6780, source: "Steam" },
@@ -832,7 +831,7 @@
             { name: "Battlefield 2042", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 242700, source: "Steam" },
             { name: "Battlefield 5", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 22980, source: "Steam" },
             { name: "Battlefield 6", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 335340, source: "Steam" },
-            { name: "CHUNITHM", category: "Music game", note: "国服997PC，RIN服534PC\n时长计算公式：pleynite自动统计RIN+国服PC*3*240（单位：秒）\nB50=O30+N20\n国服B50（中二节奏2026）：16.47（V段）\nRIN服B50（X-VERSE-X）：16.78（V段）\nB30：16.99", platform: "Arcade", playSeconds: 1445104, source: "Other" },
+            { name: "CHUNITHM", category: "Music game", note: "国服997PC，RIN服545PC2431首\n时长计算公式：pleynite自动统计RIN+国服PC*3*240（单位：秒）\nB50=O30+N20\n国服B50（中二节奏2026）：16.47（V段）\nRIN服B50（X-VERSE-X）：16.80（V段）\nB30：17.018", platform: "Arcade", playSeconds: 1455769, source: "Other" },
             { name: "Counter-Strike 2", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 3554160, source: "Steam" },
             { name: "FreshWomen - Season 1", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 12360, source: "Steam" },
             { name: "FreshWomen - Season 2", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 15420, source: "Steam" },
@@ -842,7 +841,7 @@
             { name: "Minecraft iOS", category: "Open world", note: "", platform: "Mobile（iOS）", playSeconds: 893520, source: "Xbox" },
             { name: "Minecraft Windows", category: "Open world", note: "", platform: "PC (Windows)", playSeconds: 526802, source: "Xbox" },
             { name: "Phigros", category: "Music game", note: "时长计算公式：时长来源于TapTap，无PC数据\nRKS=P3+B27：14.93\n位次：79712\n课题模式段位：红49", platform: "Mobile（iOS）", playSeconds: 101880, source: "Other" },
-            { name: "Plants vs. Zombies: Game of the Year", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 247500, source: "Steam" },
+            { name: "Plants vs. Zombies: Game of the Year", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 251340, source: "Steam" },
             { name: "Project SEKAI", category: "Music game", note: "时长计算公式：时长随iOS统计每周日更新，无PC数据\n国服排位：白金1\n国服位次：3536", platform: "Mobile（iOS）", playSeconds: 86800, source: "Other" },
             { name: "PUBG: BATTLEGROUNDS", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 1289940, source: "Steam" },
             { name: "Rhythm Doctor", category: "Music game", note: "", platform: "PC (Windows)", playSeconds: 5100, source: "Steam" },
@@ -856,7 +855,7 @@
             { name: "决战！平安京", category: "MOBA", note: "190PC\n时长计算公式：PC*1800（单位：秒）", platform: "Mobile（iOS）", playSeconds: 342000, source: "Other" },
             { name: "狼人杀", category: "Card", note: "网杀108PC，面杀4h\n时长计算公式：PC*25*60+面杀时长", platform: "Mobile（iOS）", playSeconds: 176400, source: "Other" },
             { name: "球球大作战", category: "Other", note: "80PC\n时长计算公式：PC*600（单位：秒）", platform: "Mobile（iOS）", playSeconds: 48000, source: "Other" },
-            { name: "雀魂麻将", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 1113900, source: "Steam" },
+            { name: "雀魂麻将", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 1141419, source: "Steam" },
             { name: "三国杀", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 2259600, source: "Steam" },
             { name: "三角洲行动", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 1768920, source: "Steam" },
             { name: "生死狙击", category: "fps", note: "时长数据来源于游戏内官方统计，后用playnite", platform: "PC (Windows)", playSeconds: 710000, source: "Other" },
@@ -1045,15 +1044,16 @@
                         </div>
                         <div class="right-section">
                             <span class="game-hours">${displayHours} h</span>
-                            <button class="note-btn" data-note-game="${escapeHtml(game.name)}" title="查看备注">📋</button>
+                            <button class="note-link" data-note-game="${escapeHtml(game.name)}">备注</button>
                         </div>
                     </div>
                 `;
             }
             container.innerHTML = html;
 
-            const noteBtns = document.querySelectorAll('.note-btn');
-            noteBtns.forEach(btn => {
+            // 绑定备注按钮事件 (文字链接)
+            const noteLinks = document.querySelectorAll('.note-link');
+            noteLinks.forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     e.stopPropagation();
                     const gameNameAttr = btn.getAttribute('data-note-game');
