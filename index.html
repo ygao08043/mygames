@@ -502,7 +502,7 @@
     <div class="container">
         <div class="header">
             <h1>YMKF的娱乐数据</h1>
-            <div class="sub">最近修改于2026年7月24日</div>
+            <div class="sub">最近修改于2026年7月27日</div>
         </div>
 
         <!-- ===== 顶层 Tabs ===== -->
@@ -816,18 +816,19 @@
         }
 
         // ============================================================
-        // 2. 游戏数据 (1.csv 最新)
+        // 2. 游戏数据 (2.csv 最新)
         // ============================================================
         const GAMES_DATA = [
             { name: "Aimlabs", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 6780, source: "Steam" },
             { name: "Among Us", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 1440, source: "Steam" },
-            { name: "Arcaea", category: "Music game", note: "时长计算公式：时长随iOS统计每周日更新，无PC数据\n\nB30：12.12\nPTT=B30+R10：12.17\n段位挑战：7段", platform: "Mobile（iOS）", playSeconds: 1201400, source: "Other" },
-            { name: "Battlefield 1", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 294780, source: "Steam" },
+            { name: "Arcaea", category: "Music game", note: "时长计算公式：时长随iOS统计每周日更新，无PC数据\n\nB30：12.1740\nPTT=B30+R10：12.22\n段位挑战：7段", platform: "Mobile（iOS）", playSeconds: 1209000, source: "Other" },
+            { name: "Battlefield 1", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 301500, source: "Steam" },
             { name: "Battlefield 2042", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 242700, source: "Steam" },
             { name: "Battlefield 5", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 22980, source: "Steam" },
             { name: "Battlefield 6", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 335340, source: "Steam" },
-            { name: "CHUNITHM", category: "Music game", note: "国服1007PC（机厅国框），饼服14PC（机厅日框），RIN服552PC（TSLP）\n时长计算公式：pleynite自动统计RIN+机厅PC*3*240（单位：秒）\n\nB50=O30+N20\n国服B50（中二节奏2026）：16.47（V段）\nRIN服B50（X-VERSE-X）：16.82（V段）\n总B30：17.044", platform: "Arcade", playSeconds: 1485108, source: "Other" },
+            { name: "CHUNITHM", category: "Music game", note: "国服1007PC（机厅国框），饼服14PC（机厅日框），RIN服563PC（TSLP）\n时长计算公式：pleynite自动统计RIN+机厅PC*3*240（单位：秒）\n\nB50=O30+N20\n国服B50（中二节奏2026）：16.47（V段）\nRIN服B50（X-VERSE-X）：16.82（V段）\n总B30：17.044", platform: "Arcade", playSeconds: 1490788, source: "Other" },
             { name: "Counter-Strike 2", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 3554160, source: "Steam" },
+            { name: "e舞成名", category: "Music game", note: "升级版11首\n时长计算公式：总首数*240（单位：秒）", platform: "Arcade", playSeconds: 2640, source: "Other" },
             { name: "FreshWomen - Season 1", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 12360, source: "Steam" },
             { name: "FreshWomen - Season 2", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 15420, source: "Steam" },
             { name: "Goose Goose Duck", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 39240, source: "Steam" },
@@ -835,31 +836,31 @@
             { name: "Microsoft Solitaire Collection", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 11580, source: "Xbox" },
             { name: "Minecraft iOS", category: "Open world", note: "", platform: "Mobile（iOS）", playSeconds: 897480, source: "Xbox" },
             { name: "Minecraft Windows", category: "Open world", note: "", platform: "PC (Windows)", playSeconds: 529920, source: "Xbox" },
-            { name: "Phigros", category: "Music game", note: "时长计算公式：时长来源于TapTap自动统计，无PC数据\n\nRKS=P3+B27：14.93\n位次：79712\n课题模式段位：红49", platform: "Mobile（iOS）", playSeconds: 101880, source: "Other" },
+            { name: "Phigros", category: "Music game", note: "时长计算公式：时长来源于TapTap自动统计，无PC数据\n\nRKS=P3+B27：15.07\n位次：78786\n课题模式段位：红49", platform: "Mobile（iOS）", playSeconds: 101880, source: "Other" },
             { name: "Plants vs. Zombies: Game of the Year", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 262560, source: "Steam" },
             { name: "Project SEKAI", category: "Music game", note: "时长计算公式：时长随iOS统计每周日更新，无PC数据\n\n国服排位：白金1\n国服位次：3536", platform: "Mobile（iOS）", playSeconds: 86800, source: "Other" },
-            { name: "PUBG: BATTLEGROUNDS", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 1290780, source: "Steam" },
+            { name: "PUBG: BATTLEGROUNDS", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 1290960, source: "Steam" },
             { name: "Rhythm Doctor", category: "Music game", note: "", platform: "PC (Windows)", playSeconds: 19080, source: "Steam" },
-            { name: "Riptide GP: Renegade", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 600, source: "Steam" },
+            { name: "Riptide GP: Renegade", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 660, source: "Steam" },
             { name: "Riptide GP2", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 97440, source: "Steam" },
             { name: "Zuma Deluxe", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 16200, source: "Steam" },
-            { name: "斗牌魂", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 182018, source: "Steam" },
-            { name: "各种小游戏", category: "Other", note: "时长来源于游戏内部PC数和粗略计算总和：\n4399小游戏:\n奥奇传说\n摩尔庄园\n美食大战老鼠\n疯狂小人战斗\n弹弹堂\n双箭头\n森林冰火人\n黄金矿工\n大便超人\n造梦西游\n泡泡龙\n拳皇\n\n其他小游戏：\n天天来战\n天天酷跑\n保卫萝卜\n明日方舟\n鳄鱼小顽皮爱洗澡\n割绳子\n水果忍者\n会说话的汤姆猫\n愤怒的小鸟\n捕鱼达人\n神庙逃亡\n地铁跑酷\n开心消消乐\nQQ农场\nQQ餐厅\n贪吃蛇\n贪吃蛇大作战\n欢乐斗地主\n2048\n别踩白块儿\n俄罗斯方块\n扫雷\n三维弹球\n数独\n24点\n华容道\n魔方\n孔明锁\n五子棋\n中国象棋\n国际象棋\n跳棋\n飞行棋\n大富翁\n三国杀\n军棋\n斗兽棋", platform: "PC (Windows)", playSeconds: 1800000, source: "Other" },
+            { name: "斗牌魂", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 182431, source: "Steam" },
+            { name: "各种小游戏", category: "Other", note: "时长来源于游戏内部PC数和粗略计算总和：\n4399小游戏:\n奥奇传说\n摩尔庄园\n美食大战老鼠\n疯狂小人战斗\n弹弹堂\n双箭头\n森林冰火人\n黄金矿工\n大便超人\n造梦西游\n泡泡龙\n拳皇\n\n其他小游戏：\n天天来战\n天天酷跑\n保卫萝卜\n明日方舟\n鳄鱼小顽皮爱洗澡\n割绳子\n水果忍者\n会说话的汤姆猫\n愤怒的小鸟\n捕鱼达人\n神庙逃亡\n地铁跑酷\n开心消消乐\nQQ农场\nQQ餐厅\n贪吃蛇\n贪吃蛇大作战\n欢乐斗地主\n2048\n别踩白块儿\n俄罗斯方块\n扫雷\n三维弹球\n数独\n24点\n华容道\n魔方\n孔明锁\n五子棋\n中国象棋\n国际象棋\n跳棋\n飞行棋\n大富翁\n三国杀\n军棋\n斗兽棋\n乐高积木\n多米诺骨牌\n打陀螺\n。。。", platform: "PC (Windows)", playSeconds: 1800000, source: "Other" },
             { name: "节奏大师", category: "Music game", note: "老版本闯关188关，新版本70PC\n时长计算公式：240*2*188+240*新版本PC\n\n节奏战力=B50+N25：5.56", platform: "Mobile（iOS）", playSeconds: 107040, source: "Other" },
             { name: "决战！平安京", category: "MOBA", note: "190PC\n时长计算公式：PC*1800（单位：秒）", platform: "Mobile（iOS）", playSeconds: 342000, source: "Other" },
             { name: "狼人杀", category: "Card", note: "网杀108PC，面杀4h\n时长计算公式：PC*25*60+面杀时长", platform: "Mobile（iOS）", playSeconds: 176400, source: "Other" },
             { name: "球球大作战", category: "Other", note: "80PC\n时长计算公式：PC*600（单位：秒）", platform: "Mobile（iOS）", playSeconds: 48000, source: "Other" },
-            { name: "雀魂麻将", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 1209600, source: "Steam" },
-            { name: "三国杀", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 2280000, source: "Steam" },
+            { name: "雀魂麻将", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 1223700, source: "Steam" },
+            { name: "三国杀", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 2299500, source: "Steam" },
             { name: "三角洲行动", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 1768920, source: "Steam" },
             { name: "生死狙击", category: "fps", note: "时长数据来源于游戏内官方统计，后用playnite", platform: "PC (Windows)", playSeconds: 711000, source: "Other" },
             { name: "双人成行", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 60, source: "Steam" },
             { name: "双影奇境", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 58860, source: "Steam" },
             { name: "糖豆人", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 23873, source: "Epic" },
             { name: "天月麻雀", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 44940, source: "Steam" },
-            { name: "王者荣耀", category: "MOBA", note: "1865PC\n时长计算公式：PC*1800（单位：秒）\n王者印记：2", platform: "Mobile（iOS）", playSeconds: 3357000, source: "Other" },
+            { name: "王者荣耀", category: "MOBA", note: "1869PC\n时长计算公式：PC*1800（单位：秒）\n王者印记：2", platform: "Mobile（iOS）", playSeconds: 3364200, source: "Other" },
             { name: "英雄联盟手游（台服）", category: "MOBA", note: "182PC\n时长计算公式：PC*1800（单位：秒）", platform: "Mobile（iOS）", playSeconds: 327600, source: "Other" },
-            { name: "元气骑士", category: "Other", note: "", platform: "Mobile device（iOS)", playSeconds: 72000, source: "Other" }
+            { name: "元气骑士", category: "Other", note: "", platform: "Mobile（iOS）", playSeconds: 72000, source: "Other" }
         ];
 
         function secondsToHours(seconds) {
