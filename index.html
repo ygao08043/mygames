@@ -451,15 +451,6 @@
             background: #121212;
         }
 
-        footer {
-            margin-top: 3rem;
-            text-align: center;
-            font-size: 0.7rem;
-            color: #444;
-            border-top: 1px solid #222;
-            padding-top: 1.5rem;
-        }
-
         @media (max-width: 680px) {
             body {
                 padding: 1rem 0.8rem;
@@ -502,7 +493,7 @@
     <div class="container">
         <div class="header">
             <h1>YMKF的娱乐数据</h1>
-            <div class="sub">最近修改于2026年7月27日</div>
+            <div class="sub">最近修改于2026年8月2日</div>
         </div>
 
         <!-- ===== 顶层 Tabs ===== -->
@@ -728,7 +719,7 @@
             </div>
         </div>
 
-        <footer>YMKF 娱乐数据 · 游戏 & 影视 · 极简存档</footer>
+        <!-- 不再显示底部小字 -->
     </div>
 
     <!-- 备注模态框 -->
@@ -816,17 +807,17 @@
         }
 
         // ============================================================
-        // 2. 游戏数据 (2.csv 最新)
+        // 2. 游戏数据 (q.csv 最新)
         // ============================================================
         const GAMES_DATA = [
             { name: "Aimlabs", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 6780, source: "Steam" },
             { name: "Among Us", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 1440, source: "Steam" },
-            { name: "Arcaea", category: "Music game", note: "时长计算公式：时长随iOS统计每周日更新，无PC数据\n\nB30：12.1740\nPTT=B30+R10：12.22\n段位挑战：7段", platform: "Mobile（iOS）", playSeconds: 1209000, source: "Other" },
-            { name: "Battlefield 1", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 301500, source: "Steam" },
+            { name: "Arcaea", category: "Music game", note: "时长计算公式：时长随iOS统计每周日更新，无PC数据\n\nB30：12.1873\nPTT=B30+R10：12.24\n段位挑战：7段\n位次：未上榜", platform: "Mobile（iOS）", playSeconds: 1216200, source: "Other" },
+            { name: "Battlefield 1", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 304140, source: "Steam" },
             { name: "Battlefield 2042", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 242700, source: "Steam" },
             { name: "Battlefield 5", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 22980, source: "Steam" },
             { name: "Battlefield 6", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 335340, source: "Steam" },
-            { name: "CHUNITHM", category: "Music game", note: "国服1007PC（机厅国框），饼服14PC（机厅日框），RIN服563PC（TSLP）\n时长计算公式：pleynite自动统计RIN+机厅PC*3*240（单位：秒）\n\nB50=O30+N20\n国服B50（中二节奏2026）：16.47（V段）\nRIN服B50（X-VERSE-X）：16.82（V段）\n总B30：17.044", platform: "Arcade", playSeconds: 1490788, source: "Other" },
+            { name: "CHUNITHM", category: "Music game", note: "国服1007PC（机厅国框），饼服14PC（机厅日框），RIN服571PC（TSLP）\n时长计算公式：pleynite自动统计RIN+机厅PC*3*240（单位：秒）\n\nB50=O30+N20\n国服B50（中二节奏2026）：16.47（V段）\nRIN服B50（X-VERSE-X）：16.84（V段）\n总B30：17.044", platform: "Arcade", playSeconds: 1500503, source: "Other" },
             { name: "Counter-Strike 2", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 3554160, source: "Steam" },
             { name: "e舞成名", category: "Music game", note: "升级版11首\n时长计算公式：总首数*240（单位：秒）", platform: "Arcade", playSeconds: 2640, source: "Other" },
             { name: "FreshWomen - Season 1", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 12360, source: "Steam" },
@@ -836,9 +827,9 @@
             { name: "Microsoft Solitaire Collection", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 11580, source: "Xbox" },
             { name: "Minecraft iOS", category: "Open world", note: "", platform: "Mobile（iOS）", playSeconds: 897480, source: "Xbox" },
             { name: "Minecraft Windows", category: "Open world", note: "", platform: "PC (Windows)", playSeconds: 529920, source: "Xbox" },
-            { name: "Phigros", category: "Music game", note: "时长计算公式：时长来源于TapTap自动统计，无PC数据\n\nRKS=P3+B27：15.07\n位次：78786\n课题模式段位：红49", platform: "Mobile（iOS）", playSeconds: 101880, source: "Other" },
+            { name: "Phigros", category: "Music game", note: "时长计算公式：时长随iOS统计每周日更新，无PC数据\n\nRKS=P3+B27：15.10\n课题模式段位：红49\n位次：未上榜", platform: "Mobile（iOS）", playSeconds: 109000, source: "Other" },
             { name: "Plants vs. Zombies: Game of the Year", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 262560, source: "Steam" },
-            { name: "Project SEKAI", category: "Music game", note: "时长计算公式：时长随iOS统计每周日更新，无PC数据\n\n国服排位：白金1\n国服位次：3536", platform: "Mobile（iOS）", playSeconds: 86800, source: "Other" },
+            { name: "Project SEKAI", category: "Music game", note: "时长计算公式：时长随iOS统计每周日更新，无PC数据\n\n国服排位：白金1\n国服位次：未上榜", platform: "Mobile（iOS）", playSeconds: 90400, source: "Other" },
             { name: "PUBG: BATTLEGROUNDS", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 1290960, source: "Steam" },
             { name: "Rhythm Doctor", category: "Music game", note: "", platform: "PC (Windows)", playSeconds: 19080, source: "Steam" },
             { name: "Riptide GP: Renegade", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 660, source: "Steam" },
@@ -850,8 +841,8 @@
             { name: "决战！平安京", category: "MOBA", note: "190PC\n时长计算公式：PC*1800（单位：秒）", platform: "Mobile（iOS）", playSeconds: 342000, source: "Other" },
             { name: "狼人杀", category: "Card", note: "网杀108PC，面杀4h\n时长计算公式：PC*25*60+面杀时长", platform: "Mobile（iOS）", playSeconds: 176400, source: "Other" },
             { name: "球球大作战", category: "Other", note: "80PC\n时长计算公式：PC*600（单位：秒）", platform: "Mobile（iOS）", playSeconds: 48000, source: "Other" },
-            { name: "雀魂麻将", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 1223700, source: "Steam" },
-            { name: "三国杀", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 2299500, source: "Steam" },
+            { name: "雀魂麻将", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 1285500, source: "Steam" },
+            { name: "三国杀", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 2302620, source: "Steam" },
             { name: "三角洲行动", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 1768920, source: "Steam" },
             { name: "生死狙击", category: "fps", note: "时长数据来源于游戏内官方统计，后用playnite", platform: "PC (Windows)", playSeconds: 711000, source: "Other" },
             { name: "双人成行", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 60, source: "Steam" },
