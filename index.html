@@ -47,6 +47,7 @@
             padding-left: 0.7rem;
         }
 
+        /* ===== Tab 样式 ===== */
         .tabs {
             display: flex;
             gap: 0.5rem;
@@ -112,6 +113,7 @@
             display: block;
         }
 
+        /* ===== 视频数据样式 ===== */
         .video-category-block {
             margin-bottom: 1.8rem;
         }
@@ -148,6 +150,7 @@
             background: #222;
         }
 
+        /* ===== 游戏样式 ===== */
         .controls {
             display: flex;
             flex-wrap: wrap;
@@ -493,15 +496,19 @@
             <div class="sub">最近修改于2026年8月14日</div>
         </div>
 
+        <!-- ===== 顶层 Tabs ===== -->
         <div class="tabs" id="topTabs">
             <button class="tab-btn active" data-target="gameTab">🎮 游戏数据</button>
             <button class="tab-btn" data-target="videoTab">🎬 视频数据</button>
         </div>
 
+        <!-- ===== 游戏数据 Tab 内容 ===== -->
         <div class="tab-content active" id="gameTab">
             <div class="category-summary" id="categorySummaryPanel">
                 <h3>📊 分类总时长排行 (小时)</h3>
-                <div class="category-tiles" id="categoryTilesContainer"></div>
+                <div class="category-tiles" id="categoryTilesContainer">
+                    <!-- 动态注入 -->
+                </div>
             </div>
 
             <div class="controls">
@@ -535,6 +542,7 @@
             </div>
         </div>
 
+        <!-- ===== 视频数据 Tab 内容 ===== -->
         <div class="tab-content" id="videoTab">
             <div class="sub-tabs" id="videoSubTabs">
                 <button class="sub-tab-btn active" data-target="animePanel">动画</button>
@@ -542,6 +550,7 @@
                 <button class="sub-tab-btn" data-target="tvPanel">电视剧</button>
             </div>
 
+            <!-- 动画面板 -->
             <div class="tab-content active" id="animePanel">
                 <div class="video-category-block">
                     <div class="video-country-block">
@@ -655,6 +664,7 @@
                 </div>
             </div>
 
+            <!-- 电影面板 -->
             <div class="tab-content" id="moviePanel">
                 <div class="video-category-block">
                     <div class="video-country-block">
@@ -688,6 +698,7 @@
                 </div>
             </div>
 
+            <!-- 电视剧面板 -->
             <div class="tab-content" id="tvPanel">
                 <div class="video-category-block">
                     <div class="video-country-block">
@@ -708,8 +719,11 @@
                 </div>
             </div>
         </div>
+
+        <!-- 底部无小字 -->
     </div>
 
+    <!-- 备注模态框 -->
     <div id="noteModal" class="modal">
         <div class="modal-card">
             <div class="modal-header">
@@ -723,6 +737,9 @@
     </div>
 
     <script>
+        // ============================================================
+        // 1. Tab 切换逻辑 (顶层和子层)
+        // ============================================================
         function initTabs() {
             const topTabs = document.querySelectorAll('#topTabs .tab-btn');
             const topContents = {
@@ -740,6 +757,22 @@
                         topContents.game.classList.add('active');
                     } else if (target === 'videoTab') {
                         topContents.video.classList.add('active');
+                        const subBtns = document.querySelectorAll('#videoSubTabs .sub-tab-btn');
+                        let hasActive = false;
+                        subBtns.forEach(b => { if (b.classList.contains('active')) hasActive = true; });
+                        if (!hasActive && subBtns.length) {
+                            subBtns[0].classList.add('active');
+                            const firstTarget = subBtns[0].dataset.target;
+                            const panels = {
+                                anime: document.getElementById('animePanel'),
+                                movie: document.getElementById('moviePanel'),
+                                tv: document.getElementById('tvPanel')
+                            };
+                            Object.values(panels).forEach(p => p.classList.remove('active'));
+                            if (firstTarget === 'animePanel') panels.anime.classList.add('active');
+                            else if (firstTarget === 'moviePanel') panels.movie.classList.add('active');
+                            else if (firstTarget === 'tvPanel') panels.tv.classList.add('active');
+                        }
                     }
                 });
             });
@@ -762,52 +795,366 @@
                     else if (target === 'tvPanel') subPanels.tv.classList.add('active');
                 });
             });
+
+            // 默认状态
+            document.getElementById('gameTab').classList.add('active');
+            document.getElementById('videoTab').classList.remove('active');
+            document.querySelector('#topTabs .tab-btn[data-target="gameTab"]').classList.add('active');
+            document.querySelector('#topTabs .tab-btn[data-target="videoTab"]').classList.remove('active');
+            document.querySelector('#videoSubTabs .sub-tab-btn[data-target="animePanel"]').classList.add('active');
+            document.getElementById('animePanel').classList.add('active');
+            document.getElementById('moviePanel').classList.remove('active');
+            document.getElementById('tvPanel').classList.remove('active');
         }
 
+        // ============================================================
+        // 2. 游戏数据 (最新 20260814.csv)
+        // ============================================================
         const GAMES_DATA = [
-            { name: "Aimlabs", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 6780, source: "Steam" },
-            { name: "Among Us", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 1440, source: "Steam" },
-            { name: "Arcaea", category: "Music game", note: "时长计算公式：时长随iOS统计每周日更新，无PC数据\r\n\r\nB30：12.2091\r\nPTT=B30+R10：12.25\r\n段位挑战：7段\r\n位次：未上榜", platform: "Mobile（iOS）", playSeconds: 1234200, source: "Other" },
-            { name: "Battlefield 1", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 306360, source: "Steam" },
-            { name: "Battlefield 2042", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 242700, source: "Steam" },
-            { name: "Battlefield 5", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 22980, source: "Steam" },
-            { name: "Battlefield 6", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 335340, source: "Steam" },
-            { name: "CHUNITHM", category: "Music game", note: "国服1076PC，RIN服585PC\r\n时长计算公式：playnite自动统计RIN+机厅PC*3*240（单位：秒）\r\n\r\nB50=O30+N20\r\n国服B50（中二节奏2026）：16.72（V段）\r\nRIN服B50（X-VERSE-X）：16.84（V段）\r\n总B30：17.044", platform: "Arcade", playSeconds: 1550185, source: "Other" },
-            { name: "Counter-Strike 2", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 3554160, source: "Steam" },
-            { name: "e舞成名", category: "Music game", note: "升级版11首\r\n时长计算公式：总首数*240（单位：秒）", platform: "Arcade", playSeconds: 2640, source: "Other" },
-            { name: "FreshWomen - Season 1", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 12360, source: "Steam" },
-            { name: "FreshWomen - Season 2", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 15420, source: "Steam" },
-            { name: "Goose Goose Duck", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 39240, source: "Steam" },
-            { name: "MAI MAI", category: "Music game", note: "国服10PC\r\n时长计算公式：国服PC*3*240（单位：秒）\r\n\r\nDX评分=O35+N15：3369\r\n段位：无", platform: "Arcade", playSeconds: 7200, source: "Other" },
-            { name: "Microsoft Solitaire Collection", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 11580, source: "Xbox" },
-            { name: "Minecraft iOS", category: "Open world", note: "", platform: "Mobile（iOS）", playSeconds: 897480, source: "Xbox" },
-            { name: "Minecraft Windows", category: "Open world", note: "", platform: "PC (Windows)", playSeconds: 529920, source: "Xbox" },
-            { name: "osu! ", category: "Music game", note: "时长计算公式：playnite自动统计", platform: "PC (Windows)", playSeconds: 6180, source: "Other" },
-            { name: "Phigros", category: "Music game", note: "时长计算公式：时长随iOS统计每周日更新，无PC数据\r\n\r\nRKS=P3+B27：15.10\r\n课题模式段位：红49\r\n位次：未上榜", platform: "Mobile（iOS）", playSeconds: 109000, source: "Other" },
-            { name: "Plants vs. Zombies: Game of the Year", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 262560, source: "Steam" },
-            { name: "Project SEKAI", category: "Music game", note: "时长计算公式：时长随iOS统计每周日更新，无PC数据\r\n\r\n国服排位：白金1\r\n国服位次：未上榜", platform: "Mobile（iOS）", playSeconds: 90400, source: "Other" },
-            { name: "PUBG: BATTLEGROUNDS", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 1291140, source: "Steam" },
-            { name: "Rhythm Doctor", category: "Music game", note: "", platform: "PC (Windows)", playSeconds: 23238, source: "Steam" },
-            { name: "Riptide GP: Renegade", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 660, source: "Steam" },
-            { name: "Riptide GP2", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 97440, source: "Steam" },
-            { name: "Zuma Deluxe", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 16200, source: "Steam" },
-            { name: "斗牌魂", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 182431, source: "Steam" },
-            { name: "各种小游戏", category: "Other", note: "时长来源于游戏内部PC数和粗略计算总和：\r\n4399小游戏:\r\n奥奇传说\r\n摩尔庄园\r\n美食大战老鼠\r\n疯狂小人战斗\r\n弹弹堂\r\n双箭头\r\n森林冰火人\r\n黄金矿工\r\n大便超人\r\n造梦西游\r\n泡泡龙\r\n拳皇\r\n\r\n其他小游戏：\r\n天天来战\r\n天天酷跑\r\n保卫萝卜\r\n明日方舟\r\n鳄鱼小顽皮爱洗澡\r\n割绳子\r\n水果忍者\r\n会说话的汤姆猫\r\n愤怒的小鸟\r\n捕鱼达人\r\n神庙逃亡\r\n地铁跑酷\r\n开心消消乐\r\nQQ农场\r\nQQ餐厅\r\n贪吃蛇\r\n贪吃蛇大作战\r\n欢乐斗地主\r\n2048\r\n别踩白块儿\r\n俄罗斯方块\r\n扫雷\r\n三维弹球\r\n数独\r\n24点\r\n华容道\r\n魔方\r\n孔明锁\r\n五子棋\r\n中国象棋\r\n国际象棋\r\n跳棋\r\n飞行棋\r\n大富翁\r\n三国杀\r\n军棋\r\n斗兽棋\r\n乐高积木\r\n多米诺骨牌\r\n打陀螺\r\n。。。", platform: "PC (Windows)", playSeconds: 1800000, source: "Other" },
-            { name: "节奏大师", category: "Music game", note: "老版本闯关188关，新版本70PC\r\n时长计算公式：240*2*188+240*新版本PC\r\n\r\n节奏战力=B50+N25：5.56", platform: "Mobile（iOS）", playSeconds: 107040, source: "Other" },
-            { name: "决战！平安京", category: "MOBA", note: "190PC\r\n时长计算公式：PC*1800（单位：秒）", platform: "Mobile（iOS）", playSeconds: 342000, source: "Other" },
-            { name: "狼人杀", category: "Card", note: "网杀108PC，面杀4h\r\n时长计算公式：PC*25*60+面杀时长", platform: "Mobile（iOS）", playSeconds: 176400, source: "Other" },
-            { name: "球球大作战", category: "Other", note: "80PC\r\n时长计算公式：PC*600（单位：秒）", platform: "Mobile（iOS）", playSeconds: 48000, source: "Other" },
-            { name: "雀魂麻将", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 1371077, source: "Steam" },
-            { name: "三国杀", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 2302740, source: "Steam" },
-            { name: "三角洲行动", category: "fps", note: "", platform: "PC (Windows)", playSeconds: 1768920, source: "Steam" },
-            { name: "生死狙击", category: "fps", note: "时长数据来源于游戏内官方统计，后用playnite", platform: "PC (Windows)", playSeconds: 711000, source: "Other" },
-            { name: "双人成行", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 60, source: "Steam" },
-            { name: "双影奇境", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 58860, source: "Steam" },
-            { name: "糖豆人", category: "Other", note: "", platform: "PC (Windows)", playSeconds: 23873, source: "Epic" },
-            { name: "天月麻雀", category: "Card", note: "", platform: "PC (Windows)", playSeconds: 44940, source: "Steam" },
-            { name: "王者荣耀", category: "MOBA", note: "1878PC\r\n时长计算公式：PC*1800（单位：秒）\r\n王者印记：2", platform: "Mobile（iOS）", playSeconds: 3380400, source: "Other" },
-            { name: "英雄联盟手游（台服）", category: "MOBA", note: "182PC\r\n时长计算公式：PC*1800（单位：秒）", platform: "Mobile（iOS）", playSeconds: 327600, source: "Other" },
-            { name: "元气骑士", category: "Other", note: "", platform: "Mobile（iOS）", playSeconds: 72000, source: "Other" }
+                    {
+                                "name": "Aimlabs",
+                                "category": "fps",
+                                "note": "",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 6780,
+                                "source": "Steam"
+                    },
+                    {
+                                "name": "Among Us",
+                                "category": "Other",
+                                "note": "",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 1440,
+                                "source": "Steam"
+                    },
+                    {
+                                "name": "Arcaea",
+                                "category": "Music game",
+                                "note": "时长计算公式：时长随iOS统计每周日更新，无PC数据\n\nB30：12.2091\nPTT=B30+R10：12.25\n段位挑战：7段\n位次：未上榜",
+                                "platform": "Mobile（iOS）",
+                                "playSeconds": 1246800,
+                                "source": "Other"
+                    },
+                    {
+                                "name": "Battlefield 1",
+                                "category": "fps",
+                                "note": "",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 306360,
+                                "source": "Steam"
+                    },
+                    {
+                                "name": "Battlefield 2042",
+                                "category": "fps",
+                                "note": "",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 242700,
+                                "source": "Steam"
+                    },
+                    {
+                                "name": "Battlefield 5",
+                                "category": "fps",
+                                "note": "",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 22980,
+                                "source": "Steam"
+                    },
+                    {
+                                "name": "Battlefield 6",
+                                "category": "fps",
+                                "note": "",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 335340,
+                                "source": "Steam"
+                    },
+                    {
+                                "name": "CHUNITHM",
+                                "category": "Music game",
+                                "note": "国服1076PC，RIN服585PC\n时长计算公式：playnite自动统计RIN+机厅PC*3*240（单位：秒）\n\nB50=O30+N20\n国服B50（中二节奏2026）：16.72（V段）\nRIN服B50（X-VERSE-X）：16.84（V段）\n总B30：17.049",
+                                "platform": "Arcade",
+                                "playSeconds": 1550185,
+                                "source": "Other"
+                    },
+                    {
+                                "name": "Counter-Strike 2",
+                                "category": "fps",
+                                "note": "",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 3554160,
+                                "source": "Steam"
+                    },
+                    {
+                                "name": "e舞成名",
+                                "category": "Music game",
+                                "note": "升级版11首\n时长计算公式：总首数*240（单位：秒）",
+                                "platform": "Arcade",
+                                "playSeconds": 2640,
+                                "source": "Other"
+                    },
+                    {
+                                "name": "FreshWomen - Season 1",
+                                "category": "Other",
+                                "note": "",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 12360,
+                                "source": "Steam"
+                    },
+                    {
+                                "name": "FreshWomen - Season 2",
+                                "category": "Other",
+                                "note": "",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 15420,
+                                "source": "Steam"
+                    },
+                    {
+                                "name": "Goose Goose Duck",
+                                "category": "Other",
+                                "note": "",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 39240,
+                                "source": "Steam"
+                    },
+                    {
+                                "name": "MAI MAI",
+                                "category": "Music game",
+                                "note": "国服10PC\n时长计算公式：国服PC*3*240（单位：秒）\n\nDX评分=O35+N15：3369\n段位：无",
+                                "platform": "Arcade",
+                                "playSeconds": 7200,
+                                "source": "Other"
+                    },
+                    {
+                                "name": "Microsoft Solitaire Collection",
+                                "category": "Card",
+                                "note": "",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 11580,
+                                "source": "Xbox"
+                    },
+                    {
+                                "name": "Minecraft iOS",
+                                "category": "Open world",
+                                "note": "",
+                                "platform": "Mobile（iOS）",
+                                "playSeconds": 897480,
+                                "source": "Xbox"
+                    },
+                    {
+                                "name": "Minecraft Windows",
+                                "category": "Open world",
+                                "note": "",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 529920,
+                                "source": "Xbox"
+                    },
+                    {
+                                "name": "osu! ",
+                                "category": "Music game",
+                                "note": "时长计算公式：playnite自动统计",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 6180,
+                                "source": "Other"
+                    },
+                    {
+                                "name": "Phigros",
+                                "category": "Music game",
+                                "note": "时长计算公式：时长随iOS统计每周日更新，无PC数据\n\nRKS=P3+B27：15.10\n课题模式段位：红49\n位次：未上榜",
+                                "platform": "Mobile（iOS）",
+                                "playSeconds": 109000,
+                                "source": "Other"
+                    },
+                    {
+                                "name": "Plants vs. Zombies: Game of the Year",
+                                "category": "Other",
+                                "note": "",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 262560,
+                                "source": "Steam"
+                    },
+                    {
+                                "name": "Project SEKAI",
+                                "category": "Music game",
+                                "note": "时长计算公式：时长随iOS统计每周日更新，无PC数据\n\n国服排位：白金1\n国服位次：未上榜",
+                                "platform": "Mobile（iOS）",
+                                "playSeconds": 90400,
+                                "source": "Other"
+                    },
+                    {
+                                "name": "PUBG: BATTLEGROUNDS",
+                                "category": "fps",
+                                "note": "",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 1291140,
+                                "source": "Steam"
+                    },
+                    {
+                                "name": "Rhythm Doctor",
+                                "category": "Music game",
+                                "note": "",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 23238,
+                                "source": "Steam"
+                    },
+                    {
+                                "name": "Riptide GP: Renegade",
+                                "category": "Other",
+                                "note": "",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 660,
+                                "source": "Steam"
+                    },
+                    {
+                                "name": "Riptide GP2",
+                                "category": "Other",
+                                "note": "",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 97440,
+                                "source": "Steam"
+                    },
+                    {
+                                "name": "Zuma Deluxe",
+                                "category": "Other",
+                                "note": "",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 16200,
+                                "source": "Steam"
+                    },
+                    {
+                                "name": "斗牌魂",
+                                "category": "Card",
+                                "note": "",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 182431,
+                                "source": "Steam"
+                    },
+                    {
+                                "name": "各种小游戏",
+                                "category": "Other",
+                                "note": "时长来源于游戏内部PC数和粗略计算总和：\n4399小游戏:\n奥奇传说\n摩尔庄园\n美食大战老鼠\n疯狂小人战斗\n弹弹堂\n双箭头\n森林冰火人\n黄金矿工\n大便超人\n造梦西游\n泡泡龙\n拳皇\n\n其他小游戏：\n天天来战\n天天酷跑\n保卫萝卜\n明日方舟\n鳄鱼小顽皮爱洗澡\n割绳子\n水果忍者\n会说话的汤姆猫\n愤怒的小鸟\n捕鱼达人\n神庙逃亡\n地铁跑酷\n开心消消乐\nQQ农场\nQQ餐厅\n贪吃蛇\n贪吃蛇大作战\n欢乐斗地主\n2048\n别踩白块儿\n俄罗斯方块\n扫雷\n三维弹球\n数独\n24点\n华容道\n魔方\n孔明锁\n五子棋\n中国象棋\n国际象棋\n跳棋\n飞行棋\n大富翁\n三国杀\n军棋\n斗兽棋\n乐高积木\n多米诺骨牌\n打陀螺\n。。。",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 1800000,
+                                "source": "Other"
+                    },
+                    {
+                                "name": "节奏大师",
+                                "category": "Music game",
+                                "note": "老版本闯关188关，新版本70PC\n时长计算公式：240*2*188+240*新版本PC\n\n节奏战力=B50+N25：5.56",
+                                "platform": "Mobile（iOS）",
+                                "playSeconds": 107040,
+                                "source": "Other"
+                    },
+                    {
+                                "name": "决战！平安京",
+                                "category": "MOBA",
+                                "note": "190PC\n时长计算公式：PC*1800（单位：秒）",
+                                "platform": "Mobile（iOS）",
+                                "playSeconds": 342000,
+                                "source": "Other"
+                    },
+                    {
+                                "name": "狼人杀",
+                                "category": "Card",
+                                "note": "网杀108PC，面杀4h\n时长计算公式：PC*25*60+面杀时长",
+                                "platform": "Mobile（iOS）",
+                                "playSeconds": 176400,
+                                "source": "Other"
+                    },
+                    {
+                                "name": "球球大作战",
+                                "category": "Other",
+                                "note": "80PC\n时长计算公式：PC*600（单位：秒）",
+                                "platform": "Mobile（iOS）",
+                                "playSeconds": 48000,
+                                "source": "Other"
+                    },
+                    {
+                                "name": "雀魂麻将",
+                                "category": "Card",
+                                "note": "",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 1371077,
+                                "source": "Steam"
+                    },
+                    {
+                                "name": "三国杀",
+                                "category": "Card",
+                                "note": "",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 2302740,
+                                "source": "Steam"
+                    },
+                    {
+                                "name": "三角洲行动",
+                                "category": "fps",
+                                "note": "",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 1768920,
+                                "source": "Steam"
+                    },
+                    {
+                                "name": "生死狙击",
+                                "category": "fps",
+                                "note": "时长数据来源于游戏内官方统计，后用playnite",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 711000,
+                                "source": "Other"
+                    },
+                    {
+                                "name": "双人成行",
+                                "category": "Other",
+                                "note": "",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 60,
+                                "source": "Steam"
+                    },
+                    {
+                                "name": "双影奇境",
+                                "category": "Other",
+                                "note": "",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 58860,
+                                "source": "Steam"
+                    },
+                    {
+                                "name": "糖豆人",
+                                "category": "Other",
+                                "note": "",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 23873,
+                                "source": "Epic"
+                    },
+                    {
+                                "name": "天月麻雀",
+                                "category": "Card",
+                                "note": "",
+                                "platform": "PC (Windows)",
+                                "playSeconds": 44940,
+                                "source": "Steam"
+                    },
+                    {
+                                "name": "王者荣耀",
+                                "category": "MOBA",
+                                "note": "1878PC\n时长计算公式：PC*1800（单位：秒）\n王者印记：2",
+                                "platform": "Mobile（iOS）",
+                                "playSeconds": 3380400,
+                                "source": "Other"
+                    },
+                    {
+                                "name": "英雄联盟手游（台服）",
+                                "category": "MOBA",
+                                "note": "182PC\n时长计算公式：PC*1800（单位：秒）",
+                                "platform": "Mobile（iOS）",
+                                "playSeconds": 327600,
+                                "source": "Other"
+                    },
+                    {
+                                "name": "元气骑士",
+                                "category": "Other",
+                                "note": "",
+                                "platform": "Mobile（iOS）",
+                                "playSeconds": 72000,
+                                "source": "Other"
+                    }
         ];
 
         function secondsToHours(seconds) {
@@ -840,32 +1187,48 @@
 
         function getFilteredAndSortedGames() {
             let filtered = [...GAMES_DATA];
-            if (currentCategory !== "ALL") filtered = filtered.filter(g => g.category === currentCategory);
-            if (currentPlatform !== "ALL") filtered = filtered.filter(g => g.platform === currentPlatform);
-            if (currentSource !== "ALL") filtered = filtered.filter(g => g.source === currentSource);
-
+            if (currentCategory !== "ALL") {
+                filtered = filtered.filter(g => g.category === currentCategory);
+            }
+            if (currentPlatform !== "ALL") {
+                filtered = filtered.filter(g => g.platform === currentPlatform);
+            }
+            if (currentSource !== "ALL") {
+                filtered = filtered.filter(g => g.source === currentSource);
+            }
             if (currentSortMode === "HIGH_TO_LOW") {
                 filtered.sort((a, b) => b.playSeconds - a.playSeconds);
-            } else {
+            } else if (currentSortMode === "LOW_TO_HIGH") {
                 filtered.sort((a, b) => a.playSeconds - b.playSeconds);
             }
             return filtered;
         }
 
         function getTotalHoursForFiltered() {
-            const totalSec = getFilteredAndSortedGames().reduce((sum, g) => sum + g.playSeconds, 0);
+            let filtered = [...GAMES_DATA];
+            if (currentCategory !== "ALL") {
+                filtered = filtered.filter(g => g.category === currentCategory);
+            }
+            if (currentPlatform !== "ALL") {
+                filtered = filtered.filter(g => g.platform === currentPlatform);
+            }
+            if (currentSource !== "ALL") {
+                filtered = filtered.filter(g => g.source === currentSource);
+            }
+            const totalSec = filtered.reduce((sum, g) => sum + g.playSeconds, 0);
             return secondsToHours(totalSec);
         }
 
         function getCategoryTotalHoursSorted() {
             const catMap = new Map();
             GAMES_DATA.forEach(game => {
-                catMap.set(game.category, (catMap.get(game.category) || 0) + game.playSeconds);
+                const cat = game.category;
+                const current = catMap.get(cat) || 0;
+                catMap.set(cat, current + game.playSeconds);
             });
-
-            const arr = [];
-            for (const [category, sec] of catMap.entries()) {
-                arr.push({ category, totalHours: secondsToHours(sec) });
+            let arr = [];
+            for (let [cat, sec] of catMap.entries()) {
+                arr.push({ category: cat, totalHours: secondsToHours(sec) });
             }
             arr.sort((a, b) => b.totalHours - a.totalHours);
             return arr;
@@ -873,32 +1236,55 @@
 
         function renderCategorySummary() {
             const container = document.getElementById("categoryTilesContainer");
+            if (!container) return;
             const sortedCats = getCategoryTotalHoursSorted();
-
-            container.innerHTML = sortedCats.map(catInfo => `
-                <div class="cat-tile">
-                    <strong>${escapeHtml(catInfo.category)}</strong>
-                    <span>${catInfo.totalHours.toFixed(1)} h</span>
-                </div>
-            `).join("");
+            if (sortedCats.length === 0) {
+                container.innerHTML = '<span style="color:#555;">暂无分类数据</span>';
+                return;
+            }
+            let html = '';
+            sortedCats.forEach(catInfo => {
+                html += `
+                    <div class="cat-tile">
+                        <strong>${escapeHtml(catInfo.category)}</strong>
+                        <span>${catInfo.totalHours.toFixed(1)} h</span>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
         }
 
         function populateSelects() {
             const catSelect = document.getElementById("categoryFilter");
+            if (catSelect) {
+                const categories = getAllCategories();
+                let options = '<option value="ALL">▸ 全部</option>';
+                categories.forEach(cat => {
+                    const selected = (currentCategory === cat) ? 'selected' : '';
+                    options += `<option value="${escapeHtml(cat)}" ${selected}>${escapeHtml(cat)}</option>`;
+                });
+                catSelect.innerHTML = options;
+            }
             const platSelect = document.getElementById("platformFilter");
+            if (platSelect) {
+                const platforms = getAllPlatforms();
+                let options = '<option value="ALL">▸ 全部</option>';
+                platforms.forEach(plat => {
+                    const selected = (currentPlatform === plat) ? 'selected' : '';
+                    options += `<option value="${escapeHtml(plat)}" ${selected}>${escapeHtml(plat)}</option>`;
+                });
+                platSelect.innerHTML = options;
+            }
             const srcSelect = document.getElementById("sourceFilter");
-
-            catSelect.innerHTML =
-                '<option value="ALL">▸ 全部</option>' +
-                getAllCategories().map(x => `<option value="${escapeHtml(x)}">${escapeHtml(x)}</option>`).join("");
-
-            platSelect.innerHTML =
-                '<option value="ALL">▸ 全部</option>' +
-                getAllPlatforms().map(x => `<option value="${escapeHtml(x)}">${escapeHtml(x)}</option>`).join("");
-
-            srcSelect.innerHTML =
-                '<option value="ALL">▸ 全部</option>' +
-                getAllSources().map(x => `<option value="${escapeHtml(x)}">${escapeHtml(x)}</option>`).join("");
+            if (srcSelect) {
+                const sources = getAllSources();
+                let options = '<option value="ALL">▸ 全部</option>';
+                sources.forEach(src => {
+                    const selected = (currentSource === src) ? 'selected' : '';
+                    options += `<option value="${escapeHtml(src)}" ${selected}>${escapeHtml(src)}</option>`;
+                });
+                srcSelect.innerHTML = options;
+            }
         }
 
         function escapeHtml(str) {
@@ -908,33 +1294,43 @@
                 if (m === '<') return '&lt;';
                 if (m === '>') return '&gt;';
                 return m;
-            });
+            }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, c => c);
         }
 
         function renderGameList() {
             const container = document.getElementById("gameListContainer");
-            const gamesToRender = getFilteredAndSortedGames();
+            if (!container) return;
 
-            document.getElementById("totalHours").innerText = getTotalHoursForFiltered().toFixed(1);
+            const gamesToRender = getFilteredAndSortedGames();
+            const totalHrs = getTotalHoursForFiltered();
+            document.getElementById("totalHours").innerText = totalHrs.toFixed(1);
             document.getElementById("gameCount").innerText = gamesToRender.length;
 
-            if (!gamesToRender.length) {
+            if (gamesToRender.length === 0) {
                 container.innerHTML = '<div class="empty-message">⚡ 无游戏记录 · 切换筛选条件试试</div>';
                 return;
             }
 
-            const maxSeconds = Math.max(...gamesToRender.map(g => g.playSeconds), 1);
+            let maxSeconds = 0;
+            for (let game of gamesToRender) {
+                if (game.playSeconds > maxSeconds) maxSeconds = game.playSeconds;
+            }
+            if (maxSeconds === 0) maxSeconds = 1;
 
-            container.innerHTML = gamesToRender.map(game => {
-                const displayHours = secondsToHours(game.playSeconds).toFixed(1);
-                const percentWidth = Math.min(100, Math.max(0, (game.playSeconds / maxSeconds) * 100));
-
-                return `
-                    <div class="game-row">
-                        <div class="duration-bar" style="width:${percentWidth}%"></div>
+            let html = '';
+            for (let game of gamesToRender) {
+                const hoursVal = secondsToHours(game.playSeconds);
+                const displayHours = hoursVal.toFixed(1);
+                const categoryLabel = escapeHtml(game.category);
+                const gameNameEscaped = escapeHtml(game.name);
+                let percentWidth = (game.playSeconds / maxSeconds) * 100;
+                percentWidth = Math.min(100, Math.max(0, percentWidth));
+                html += `
+                    <div class="game-row" data-game-name="${escapeHtml(game.name)}">
+                        <div class="duration-bar" style="width: ${percentWidth}%;"></div>
                         <div class="game-name-area">
-                            <span class="game-name">${escapeHtml(game.name)}</span>
-                            <span class="game-category">${escapeHtml(game.category)}</span>
+                            <span class="game-name">${gameNameEscaped}</span>
+                            <span class="game-category">${categoryLabel}</span>
                         </div>
                         <div class="right-section">
                             <span class="game-hours">${displayHours} h</span>
@@ -942,22 +1338,28 @@
                         </div>
                     </div>
                 `;
-            }).join("");
+            }
+            container.innerHTML = html;
 
-            document.querySelectorAll('.note-link').forEach(btn => {
-                btn.addEventListener('click', e => {
+            const noteLinks = document.querySelectorAll('.note-link');
+            noteLinks.forEach(btn => {
+                btn.addEventListener('click', (e) => {
                     e.stopPropagation();
-                    const gameName = btn.getAttribute('data-note-game');
-                    const game = GAMES_DATA.find(g => g.name === gameName);
-
-                    if (!game) return;
-
-                    let finalNote = game.note && game.note.trim()
-                        ? game.note
-                        : "（暂无备注信息）";
-
-                    finalNote = `🎮 平台：${game.platform}\n\n📝 详细备注：\n${finalNote}`;
-                    showModal(finalNote);
+                    const gameNameAttr = btn.getAttribute('data-note-game');
+                    if (gameNameAttr) {
+                        const targetGame = GAMES_DATA.find(g => g.name === gameNameAttr);
+                        if (targetGame) {
+                            let finalNote = targetGame.note && targetGame.note.trim() !== "" ? targetGame.note : "（暂无备注信息）";
+                            if (targetGame.platform) {
+                                finalNote = `🎮 平台：${targetGame.platform}\n\n📝 详细备注：\n${finalNote}`;
+                            } else {
+                                finalNote = `📝 详细备注：\n${finalNote}`;
+                            }
+                            showModal(finalNote);
+                        } else {
+                            showModal("无法找到备注数据");
+                        }
+                    }
                 });
             });
         }
@@ -966,58 +1368,74 @@
         const modalContent = document.getElementById("modalNoteContent");
 
         function showModal(contentText) {
-            modalContent.innerHTML =
-                `<p style="white-space:pre-wrap;font-family:monospace;">${escapeHtml(contentText)}</p>`;
+            if (!modal || !modalContent) return;
+            modalContent.innerHTML = `<p style="white-space: pre-wrap; font-family: monospace;">${escapeHtml(contentText)}</p>`;
             modal.style.display = "flex";
         }
 
         function closeModal() {
-            modal.style.display = "none";
+            if (modal) modal.style.display = "none";
         }
 
         function bindGameUIEvents() {
             const categorySelect = document.getElementById("categoryFilter");
             const platformSelect = document.getElementById("platformFilter");
             const sourceSelect = document.getElementById("sourceFilter");
+            const sortHighBtn = document.getElementById("sortHighToLow");
+            const sortLowBtn = document.getElementById("sortLowToHigh");
 
             function onFilterChange() {
-                currentCategory = categorySelect.value;
-                currentPlatform = platformSelect.value;
-                currentSource = sourceSelect.value;
+                currentCategory = categorySelect ? categorySelect.value : "ALL";
+                currentPlatform = platformSelect ? platformSelect.value : "ALL";
+                currentSource = sourceSelect ? sourceSelect.value : "ALL";
                 renderGameList();
+                if (categorySelect && categorySelect.value !== currentCategory) categorySelect.value = currentCategory;
+                if (platformSelect && platformSelect.value !== currentPlatform) platformSelect.value = currentPlatform;
+                if (sourceSelect && sourceSelect.value !== currentSource) sourceSelect.value = currentSource;
             }
 
-            categorySelect.addEventListener("change", onFilterChange);
-            platformSelect.addEventListener("change", onFilterChange);
-            sourceSelect.addEventListener("change", onFilterChange);
+            if (categorySelect) categorySelect.addEventListener("change", onFilterChange);
+            if (platformSelect) platformSelect.addEventListener("change", onFilterChange);
+            if (sourceSelect) sourceSelect.addEventListener("change", onFilterChange);
 
-            document.getElementById("sortHighToLow").addEventListener("click", () => {
-                currentSortMode = "HIGH_TO_LOW";
-                renderGameList();
-            });
+            if (sortHighBtn) {
+                sortHighBtn.addEventListener("click", () => {
+                    currentSortMode = "HIGH_TO_LOW";
+                    renderGameList();
+                });
+            }
+            if (sortLowBtn) {
+                sortLowBtn.addEventListener("click", () => {
+                    currentSortMode = "LOW_TO_HIGH";
+                    renderGameList();
+                });
+            }
 
-            document.getElementById("sortLowToHigh").addEventListener("click", () => {
-                currentSortMode = "LOW_TO_HIGH";
-                renderGameList();
-            });
-
-            document.getElementById("closeModalBtn").addEventListener("click", closeModal);
-
-            modal.addEventListener("click", e => {
+            const closeBtn = document.getElementById("closeModalBtn");
+            if (closeBtn) closeBtn.addEventListener("click", closeModal);
+            modal?.addEventListener("click", (e) => {
                 if (e.target === modal) closeModal();
             });
-
-            document.addEventListener("keydown", e => {
-                if (e.key === "Escape") closeModal();
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape" && modal && modal.style.display === "flex") closeModal();
             });
         }
 
+        // ============================================================
+        // 初始化
+        // ============================================================
         function init() {
             initTabs();
             renderCategorySummary();
             populateSelects();
             renderGameList();
             bindGameUIEvents();
+            const catSel = document.getElementById("categoryFilter");
+            if (catSel) catSel.value = currentCategory;
+            const platSel = document.getElementById("platformFilter");
+            if (platSel) platSel.value = currentPlatform;
+            const srcSel = document.getElementById("sourceFilter");
+            if (srcSel) srcSel.value = currentSource;
         }
 
         init();
