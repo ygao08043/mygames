@@ -1,5 +1,5 @@
 {
-    "generatedAt":  "2026-08-17T03:29:44.4422080+08:00",
+    "generatedAt":  "2026-08-17T03:48:29.3827360+08:00",
     "profile":  {
                     "name":  "YMKFβ",
                     "countryPC":  1076,
@@ -14,113 +14,131 @@
                             "month":  "2025-03",
                             "countryRating":  null,
                             "rinRating":  null,
+                            "rinRatingSource":  "calculated",
                             "combinedB30":  null
                         },
                         {
                             "month":  "2025-04",
                             "countryRating":  null,
                             "rinRating":  null,
+                            "rinRatingSource":  "calculated",
                             "combinedB30":  null
                         },
                         {
                             "month":  "2025-05",
                             "countryRating":  null,
                             "rinRating":  null,
+                            "rinRatingSource":  "calculated",
                             "combinedB30":  null
                         },
                         {
                             "month":  "2025-06",
                             "countryRating":  null,
                             "rinRating":  null,
+                            "rinRatingSource":  "calculated",
                             "combinedB30":  null
                         },
                         {
                             "month":  "2025-07",
                             "countryRating":  null,
                             "rinRating":  null,
+                            "rinRatingSource":  "calculated",
                             "combinedB30":  null
                         },
                         {
                             "month":  "2025-08",
                             "countryRating":  null,
                             "rinRating":  null,
+                            "rinRatingSource":  "calculated",
                             "combinedB30":  null
                         },
                         {
                             "month":  "2025-09",
                             "countryRating":  null,
                             "rinRating":  null,
+                            "rinRatingSource":  "calculated",
                             "combinedB30":  null
                         },
                         {
                             "month":  "2025-10",
                             "countryRating":  null,
                             "rinRating":  null,
+                            "rinRatingSource":  "calculated",
                             "combinedB30":  null
                         },
                         {
                             "month":  "2025-11",
                             "countryRating":  null,
-                            "rinRating":  16.23,
+                            "rinRating":  null,
+                            "rinRatingSource":  "calculated",
                             "combinedB30":  null
                         },
                         {
                             "month":  "2025-12",
                             "countryRating":  null,
-                            "rinRating":  15.98,
+                            "rinRating":  null,
+                            "rinRatingSource":  "calculated",
                             "combinedB30":  null
                         },
                         {
                             "month":  "2026-01",
                             "countryRating":  null,
-                            "rinRating":  16.53,
+                            "rinRating":  null,
+                            "rinRatingSource":  "calculated",
                             "combinedB30":  null
                         },
                         {
                             "month":  "2026-02",
                             "countryRating":  null,
-                            "rinRating":  16.58,
+                            "rinRating":  null,
+                            "rinRatingSource":  "calculated",
                             "combinedB30":  null
                         },
                         {
                             "month":  "2026-03",
                             "countryRating":  null,
-                            "rinRating":  16.67,
+                            "rinRating":  null,
+                            "rinRatingSource":  "calculated",
                             "combinedB30":  null
                         },
                         {
                             "month":  "2026-04",
                             "countryRating":  null,
-                            "rinRating":  16.7,
+                            "rinRating":  null,
+                            "rinRatingSource":  "calculated",
                             "combinedB30":  null
                         },
                         {
                             "month":  "2026-05",
                             "countryRating":  null,
-                            "rinRating":  16.77,
+                            "rinRating":  null,
+                            "rinRatingSource":  "calculated",
                             "combinedB30":  null
                         },
                         {
                             "month":  "2026-06",
                             "countryRating":  null,
-                            "rinRating":  16.83,
+                            "rinRating":  null,
+                            "rinRatingSource":  "calculated",
                             "combinedB30":  null
                         },
                         {
                             "month":  "2026-07",
                             "countryRating":  null,
-                            "rinRating":  16.84,
+                            "rinRating":  null,
+                            "rinRatingSource":  "calculated",
                             "combinedB30":  null
                         },
                         {
                             "month":  "2026-08",
                             "countryRating":  16.72,
                             "rinRating":  16.84,
+                            "rinRatingSource":  "calculated",
                             "combinedB30":  17.0493
                         }
                     ],
     "trendMeta":  {
-                      "type":  "three-line-rating-b30-reconstructed",
+                      "type":  "three-line-rating-b30-reconstructed-v187",
                       "country2025":  "B30+R10",
                       "country2026":  "B30+N20",
                       "countryN20Constants":  "VERSE constants; N20 pool = LMNP/LUMINOUS PLUS onward",
@@ -396,7 +414,7 @@
                                                                         "difficulty":  "15"
                                                                     }
                                                                 ],
-                                            "rinTrendGain":  0.61,
+                                            "rinTrendGain":  0,
                                             "countryTrendGain":  0
                                         },
                             "communityEvidence":  [
@@ -36448,6 +36466,6 @@
                   "trackIndex":  "Same chart/difficulty uses the higher score across national cabinet and RIN. Track Rating always uses the MATE constant snapshot.",
                   "ability":  "RIN real playlog, player rating \u003e= 16.00, lower quartile (P25).",
                   "monthly":  "National monthly counts are literal CSV rows with a valid play_time. RIN uses literal playlog rows.",
-                  "trend":  "Rating/B30 history is rebuilt from the dated exports using the version rules configured for this archive."
+                  "trend":  "Rating/B30 history is rebuilt from dated exports. RIN uses actual playlog playerRating when available, otherwise X-VERSE-X B30+N20 reconstruction; combined B30 uses MATE constants."
               }
 }
