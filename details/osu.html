@@ -9,7 +9,7 @@
 </style>
 </head>
 <body><main class="wrap">
-<div class="topbar"><a class="back" href="../index.html">← 返回游戏库</a><div class="build">Build v1.12.1</div></div>
+<div class="topbar"><a class="back" href="../index.html">← 返回游戏库</a><div class="build">Build v1.12.2</div></div>
 <div class="hero">
   <section class="card profile"><img id="avatar" class="avatar" alt=""><div><h1 id="username">osu!</h1><div id="userMeta" class="sub">等待同步</div><div class="modebar"><button class="modebtn active" data-mode="mania">osu!mania</button><button class="modebtn" data-mode="osu">osu!standard</button></div></div></section>
   <section class="card summary"><div class="metric"><div class="label">Performance</div><div class="value" id="mPP">—</div><div class="small">PP</div></div><div class="metric"><div class="label">Global Rank</div><div class="value" id="mGlobal">—</div></div><div class="metric"><div class="label">Country Rank</div><div class="value" id="mCountry">—</div></div><div class="metric"><div class="label">Accuracy</div><div class="value" id="mAcc">—</div></div></section>
@@ -27,7 +27,7 @@
  <section class="card section"><div class="controls"><input id="search" placeholder="搜索曲名 / 谱师 / 难度"><div class="keys" id="keyFilters"></div><select id="rankFilter"><option value="">全部 Rank</option><option>SSH</option><option>SS</option><option>SH</option><option>S</option><option>A</option><option>B</option><option>C</option><option>D</option><option>F</option></select><select id="sort"><option value="pp">PP ↓</option><option value="accuracy">ACC ↓</option><option value="stars">星数 ↓</option><option value="score">Score ↓</option><option value="date">时间 ↓</option></select></div><div class="tablewrap"><table><thead><tr><th>#</th><th>曲目</th><th>Key</th><th>星数</th><th>PP</th><th>ACC</th><th>Score</th><th>Rank</th><th>Mods</th><th>时间</th></tr></thead><tbody id="bestBody"></tbody></table></div></section>
 </section>
 
-<section class="panel" id="panel-recent"><section class="card section"><div class="sectionhead"><div><h2>最近成绩</h2><div class="muted">包含失败成绩，最多 50 条</div></div><div id="recentCount" class="muted"></div></div><div class="tablewrap"><table><thead><tr><th>时间</th><th>曲目</th><th>Key</th><th>星数</th><th>PP</th><th>ACC</th><th>Score</th><th>Rank</th><th>Mods</th><th>状态</th></tr></thead><tbody id="recentBody"></tbody></table></div></section></section>
+<section class="panel" id="panel-recent"><section class="card section"><div class="sectionhead"><div><h2>最近成绩</h2><div class="muted">仅显示通过成绩，最多 50 条</div></div><div id="recentCount" class="muted"></div></div><div class="tablewrap"><table><thead><tr><th>时间</th><th>曲目</th><th>Key</th><th>星数</th><th>PP</th><th>ACC</th><th>Score</th><th>Rank</th><th>Mods</th><th>状态</th></tr></thead><tbody id="recentBody"></tbody></table></div></section></section>
 <div class="note" id="sourceNote"></div>
 </main>
 <script>
