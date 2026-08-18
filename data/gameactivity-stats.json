@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
-    "build":  "v1.13.8",
-    "generatedAt":  "2026-08-18T11:38:10.0246450+08:00",
+    "build":  "v1.13.9",
+    "generatedAt":  "2026-08-18T12:45:59.7504448+08:00",
     "source":  {
                    "provider":  "Playnite GameActivity",
                    "fields":  [
@@ -19,16 +19,16 @@
     "currentMonth":  "2026-08",
     "currentYear":  "2026",
     "totals":  {
-                   "recordedSeconds":  1623729,
+                   "recordedSeconds":  1623728,
                    "last7DaysSeconds":  42690,
                    "currentMonthSeconds":  81996,
-                   "currentYearSeconds":  1623729,
+                   "currentYearSeconds":  1623728,
                    "activeDays":  151
                },
     "daily":  [
                   {
                       "date":  "2026-03-01",
-                      "seconds":  39334
+                      "seconds":  39333
                   },
                   {
                       "date":  "2026-03-02",
@@ -797,7 +797,7 @@
                     {
                         "month":  "2026-03",
                         "label":  "26/03",
-                        "seconds":  427348
+                        "seconds":  427347
                     },
                     {
                         "month":  "2026-04",
@@ -818,12 +818,17 @@
                         "month":  "2026-07",
                         "label":  "26/07",
                         "seconds":  208628
+                    },
+                    {
+                        "month":  "2026-08",
+                        "label":  "26/08",
+                        "seconds":  81996
                     }
                 ],
     "hourly":  [
                    {
                        "hour":  0,
-                       "seconds":  156231
+                       "seconds":  156230
                    },
                    {
                        "hour":  1,
@@ -952,7 +957,7 @@
                     {
                         "day":  6,
                         "label":  "周日",
-                        "seconds":  272449
+                        "seconds":  272448
                     }
                 ],
     "distributionMonths":  [
@@ -1657,7 +1662,7 @@
                                    "hourly":  [
                                                   {
                                                       "hour":  0,
-                                                      "seconds":  45223
+                                                      "seconds":  45222
                                                   },
                                                   {
                                                       "hour":  1,
@@ -1786,7 +1791,7 @@
                                                    {
                                                        "day":  6,
                                                        "label":  "周日",
-                                                       "seconds":  95465
+                                                       "seconds":  95464
                                                    }
                                                ]
                                }
@@ -1837,7 +1842,7 @@
                              {
                                  "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                                  "name":  "CHUNITHM",
-                                 "seconds":  457908
+                                 "seconds":  457907
                              },
                              {
                                  "id":  "06a6c4ed-ba26-4185-a08c-2874a521d499",
@@ -1967,7 +1972,7 @@
                                  "id":  "06a6c4ed-ba26-4185-a08c-2874a521d499",
                                  "name":  "三国杀",
                                  "seconds":  179474,
-                                 "totalSeconds":  427348
+                                 "totalSeconds":  427347
                              }
                          ],
     "yearlyChampions":  [
@@ -1977,7 +1982,7 @@
                                 "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                 "name":  "雀魂麻将",
                                 "seconds":  506333,
-                                "totalSeconds":  1623729
+                                "totalSeconds":  1623728
                             }
                         ],
     "timelineDays":  [

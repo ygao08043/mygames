@@ -63,7 +63,7 @@ html[data-theme="light"]{color-scheme:light;--bg:#f2f3f5;--surface:#fff;--surfac
 <header class="topbar"><div class="head"><div class="title">YMKF的娱乐数据</div><div class="right"><div class="tabs"><button class="tab active" data-page="games">游戏</button><button class="tab" data-page="videos">视频</button></div><button class="iconbtn" id="themeBtn" aria-label="主题">◐</button></div></div><div class="theme-menu" id="themeMenu"><button data-theme-value="system">◐ 跟随系统</button><button data-theme-value="dark">● 黑夜模式</button><button data-theme-value="light">○ 白天模式</button></div></header>
 
 <main class="page active" id="games">
-<section class="intro"><div><h1>游戏</h1><p id="gameSummary">个人游戏库 · 按总游玩时长排序</p></div><div class="mode-switch"><button class="active" data-mode="source">按来源</button><button data-mode="category">按类型</button><a class="stats-link" href="details/statistics.html?v=1.13.8">统计图表</a></div></section>
+<section class="intro"><div><h1>游戏</h1><p id="gameSummary">个人游戏库 · 按总游玩时长排序</p></div><div class="mode-switch"><button class="active" data-mode="source">按来源</button><button data-mode="category">按类型</button><a class="stats-link" href="details/statistics.html?v=1.13.9">统计图表</a></div></section>
 <div class="selector-wrap"><div class="selector-strip" id="selectorStrip"></div></div>
 <div class="section-head"><h2 id="libraryTitle">全部游戏</h2><div class="library-head-tools"><span id="libraryMeta"></span><div class="sort-pair" aria-label="游戏排序"><button class="game-sort-btn active" id="sortHours" data-kind="hours">时长 ↓</button><button class="game-sort-btn" id="sortWeek" data-kind="week">&#x8FD1;7&#x65E5; &#x2193;</button><button class="game-sort-btn" id="sortHeat" data-kind="heat">热度 ↓</button></div></div></div>
 <div class="library" id="gameLibrary"></div>
@@ -252,5 +252,32 @@ renderAll();renderVideoTabs();renderVideos();
       setTimeout(function(){sessionStorage.removeItem('ymkfLibraryReturnPending');sessionStorage.removeItem('ymkfLibraryScrollY')},700);
     }catch(_){ }
   });
+})();
+</script><script id="ymkf-heat-model-v3">
+(function(){
+  const __ymkfHeatPrevious=onlineOf;
+  const __ymkfPvzSteam=-1;
+  function __ymkfActivityFor(name){
+    const target=String(name||'').toLowerCase().replace(/\s+/g,'');
+    const keys=(typeof ACTIVITY==='object'&&ACTIVITY)?Object.keys(ACTIVITY):[];
+    const key=keys.find(x=>String(x).toLowerCase().replace(/\s+/g,'')===target);
+    return key?ACTIVITY[key]:{};
+  }
+  onlineOf=function(name){
+    const raw=String(name||'').trim(), key=raw.toLowerCase().replace(/\s+/g,'');
+    if(key==='chunithm'||key==='maimai'){
+      const a=__ymkfActivityFor(raw), recent7=Number(a.recent7||0);
+      if(recent7>0)return {value:Math.max(1,Math.round(recent7/900)).toLocaleString()+' 估',label:'近7日活跃估算 · 与 CHUNITHM 同口径',kind:'model'};
+      return {value:'暂无',label:'近7日活跃样本不足',kind:'na'};
+    }
+    if(key==='plantsvs.zombies'||key==='plantsvszombies'){
+      if(__ymkfPvzSteam>=0){
+        const offline=Math.round(__ymkfPvzSteam), total=__ymkfPvzSteam+offline;
+        return {value:total.toLocaleString()+' 估',label:'Steam 实时 '+__ymkfPvzSteam.toLocaleString()+' + 单机粗估 '+offline.toLocaleString()+'（1:1模型）',kind:'model'};
+      }
+      return {value:'暂无',label:'Steam 实时人数获取失败',kind:'na'};
+    }
+    return __ymkfHeatPrevious(name);
+  };
 })();
 </script></body></html>
