@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
@@ -14,7 +14,7 @@
 .analysis-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(280px,.92fr);gap:18px;align-items:center}.radar-wrap{min-height:500px;display:grid;place-items:center}.radar-wrap svg{width:min(100%,560px);height:auto;overflow:visible}.radar-grid{fill:none;stroke:rgba(255,255,255,.10);stroke-width:1}.radar-axis{stroke:rgba(255,255,255,.12);stroke-width:1}.radar-shape{fill:rgba(184,156,255,.24);stroke:#c3aaff;stroke-width:2.5}.radar-dot{fill:#f3ecff}.radar-label{fill:#dbe1ec;font-size:13px;font-weight:780;text-anchor:middle;dominant-baseline:middle}.radar-value{fill:#aeb8c8;font-size:11px;text-anchor:middle;dominant-baseline:middle}.analysis-copy{display:grid;gap:10px}.analysis-item{border:1px solid var(--line);background:var(--panel2);padding:13px 14px;border-radius:14px;line-height:1.65;color:#dce1ea;font-size:13px}.community-ref{margin-top:12px;padding:13px 14px;border:1px solid rgba(96,216,255,.18);background:rgba(96,216,255,.06);border-radius:14px;color:#ced8e8;font-size:12px;line-height:1.7}.analysis-method{margin-top:12px;padding:13px 14px;border-left:3px solid #8e77ff;background:rgba(142,119,255,.08);border-radius:0 12px 12px 0;color:var(--muted);font-size:12px;line-height:1.65}
 @media(max-width:820px){.hero-inner{padding:25px}.analysis-grid{grid-template-columns:1fr}.radar-wrap{min-height:360px}.section-head{align-items:flex-start;flex-direction:column}}@media(max-width:560px){.wrap{padding:14px 12px 50px}.hero{min-height:300px;border-radius:20px}.hero-inner{padding:22px}.hero-rating{padding:10px 9px}.hero-rating small{font-size:9px}.hero-rating strong{font-size:22px}.pc-chip{padding:8px 10px}.pc-chip b{font-size:17px}.ability-row{grid-template-columns:58px 1fr 74px}.month{min-width:66px}}
 
-/* v1.14.3 · song jacket thumbnails */
+/* v1.14.4 · song jacket thumbnails */
 .song-jacket{width:50px;height:50px;border-radius:9px;object-fit:cover;display:block;flex:0 0 auto;background:linear-gradient(135deg,rgba(255,255,255,.10),rgba(255,255,255,.025));border:1px solid var(--line);box-shadow:0 4px 14px rgba(0,0,0,.18)}
 .jacket-placeholder{display:grid;place-items:center;color:var(--muted);font-size:17px;font-weight:900}
 .cover-cell{width:66px;min-width:66px;padding:7px 6px 7px 10px!important}.cover-head{width:66px;min-width:66px;text-align:center!important}.cover-cell .song-jacket{margin:auto}
@@ -22,7 +22,7 @@
 @media(max-width:620px){.song-jacket{width:44px;height:44px;border-radius:8px}.cover-cell,.cover-head{width:56px;min-width:56px}.score-card.has-jacket{padding-left:70px}.score-card .card-jacket{left:12px;top:12px;width:46px;height:46px}}
 </style></head>
 <body><div class="wrap">
-<div class="topbar"><a class="back" href="../index.html" id="backToLibrary">← 返回游戏库</a><span class="muted" id="updated"></span><span class="muted" style="font-size:10px">Build v1.14.3</span></div>
+<div class="topbar"><a class="back" href="../index.html" id="backToLibrary">← 返回游戏库</a><span class="muted" id="updated"></span><span class="muted" style="font-size:10px">Build v1.14.4</span></div>
 <section class="hero"><div class="hero-inner"><div class="eyebrow">YMKF · RHYTHM DATA</div><h1>CHUNITHM</h1><div class="hero-sub">国服与 RIN 最高成绩合并档案 · 以真实导出数据为准</div><div class="hero-ratings"><div class="hero-rating"><small>国服 Rating · V段（中二节奏2026）</small><strong id="countryRating">—</strong></div><div class="hero-rating"><small>RIN 服 Rating · V段（X-VERSE-X）</small><strong id="rinRating">—</strong></div><div class="hero-rating"><small>总 B30 · MATE</small><strong id="combinedB30">—</strong></div></div><div class="pc-line"><div class="pc-chip">国服 <b id="countryPc">—</b> PC</div><div class="plus">+</div><div class="pc-chip">RIN <b id="rinPc">—</b> PC</div></div></div></section>
 <nav class="tabs"><button class="tab active" data-tab="ability">能力 / 活动</button><button class="tab" data-tab="tracks">曲目成绩</button><button class="tab" data-tab="recent">最近记录</button></nav>
 <section class="page active" id="ability">
