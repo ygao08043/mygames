@@ -53,4 +53,17 @@ function render(){KEY='';updateHero();renderCards();renderKeyFilters();renderBes
 $$('.modebtn').forEach(b=>b.onclick=()=>{MODE=b.dataset.mode;render()});$$('[data-trend]').forEach(b=>b.onclick=()=>{TREND=b.dataset.trend;$$('[data-trend]').forEach(x=>x.classList.toggle('active',x===b));drawTrend()});$$('[data-panel]').forEach(b=>b.onclick=()=>{PANEL=b.dataset.panel;$$('[data-panel]').forEach(x=>x.classList.toggle('active',x===b));$$('.panel').forEach(x=>x.classList.toggle('active',x.id===`panel-${PANEL}`))});['search','rankFilter','sort'].forEach(id=>$('#'+id).addEventListener(id==='search'?'input':'change',renderBestTable));window.addEventListener('resize',()=>drawTrend());
 fetch(`../data/rhythm/osu.json?v=${Date.now()}`,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(`HTTP ${r.status}`);return r.json()}).then(d=>{DATA=d;$('#sourceNote').textContent=`数据源：${d.source?.provider||'osu! API v2'} · API ${d.source?.apiVersion||''} · Best 每模式最多 ${d.source?.bestLimitPerMode||100} 条 · 最近每模式最多 ${d.source?.recentLimitPerMode||50} 条 · ${d.generatedAt?`最后同步 ${dt(d.generatedAt)}`:'尚未完成首次同步'}`;render()}).catch(e=>{$('#username').textContent='osu! 数据加载失败';$('#userMeta').textContent=e.message;drawTrend()});
 </script>
+
+<script id="ymkf-return-to-library">
+(function(){
+  const a=document.querySelector('a.back[href="../index.html"]');
+  if(!a)return;
+  a.addEventListener('click',function(e){
+    try{
+      if(sessionStorage.getItem('ymkfLibraryReturnPending')==='1'&&history.length>1){e.preventDefault();history.back();return}
+    }catch(_){ }
+    // Direct/opened-alone detail pages keep the normal ../index.html fallback.
+  });
+})();
+</script>
 </body></html>

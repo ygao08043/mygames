@@ -23,4 +23,17 @@ function renderTrend(){const rows=(DATA.trend||[]).filter(x=>[x.total,x.b35,x.b1
 function render(){renderHero();renderScores();renderRecent();renderTrend()}
 document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.querySelector('#page-'+b.dataset.page).classList.add('active')});['search'].forEach(id=>document.querySelector('#'+id).oninput=renderScores);['diff','stype','fc','rate'].forEach(id=>document.querySelector('#'+id).onchange=renderScores);document.querySelectorAll('.sort').forEach(b=>b.onclick=()=>{const k=b.dataset.sort;if(SORT.key===k)SORT.desc=!SORT.desc;else{SORT.key=k;SORT.desc=true}document.querySelectorAll('.sort').forEach(x=>{const active=SORT.key===x.dataset.sort;x.classList.toggle('active',active);x.textContent=({dxRating:'Rating',achievements:'达成率',dxScore:'DX分'}[x.dataset.sort])+' '+(active?(SORT.desc?'↓':'↑'):'↕')});renderScores()});document.querySelectorAll('.trend-mode').forEach(b=>b.onclick=()=>{LINES[b.dataset.line]=!LINES[b.dataset.line];b.classList.toggle('active',LINES[b.dataset.line]);renderTrend()});
 fetch(DATA_URL+'?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('maimai.json '+r.status);return r.json()}).then(d=>{DATA=d;render()}).catch(e=>{document.querySelector('#oldGrid').innerHTML='<div class="empty">舞萌DX 数据加载失败：'+esc(e.message)+'</div>'});
-</script></body></html>
+</script>
+<script id="ymkf-return-to-library">
+(function(){
+  const a=document.querySelector('a.back[href="../index.html"]');
+  if(!a)return;
+  a.addEventListener('click',function(e){
+    try{
+      if(sessionStorage.getItem('ymkfLibraryReturnPending')==='1'&&history.length>1){e.preventDefault();history.back();return}
+    }catch(_){ }
+    // Direct/opened-alone detail pages keep the normal ../index.html fallback.
+  });
+})();
+</script>
+</body></html>

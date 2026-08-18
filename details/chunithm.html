@@ -65,7 +65,6 @@ function polar(cx,cy,r,i,n){const a=-Math.PI/2+i*Math.PI*2/n;return [cx+Math.cos
 function renderRadar(){const a=DATA.chatgptAnalysis.radar||[],n=a.length,cx=310,cy=245,R=158;if(!n)return;let s=`<svg viewBox="0 0 620 500" role="img" aria-label="ChatGPT十维能力雷达图">`;for(const pct of [20,40,60,80,100]){const pts=a.map((_,i)=>polar(cx,cy,R*pct/100,i,n).join(',')).join(' ');s+=`<polygon class="radar-grid" points="${pts}"/>`}a.forEach((x,i)=>{const p=polar(cx,cy,R,i,n),lp=polar(cx,cy,R+56,i,n),vp=polar(cx,cy,R+29,i,n);s+=`<line class="radar-axis" x1="${cx}" y1="${cy}" x2="${p[0]}" y2="${p[1]}"/><text class="radar-label" x="${lp[0]}" y="${lp[1]}">${esc(x.name)}</text><text class="radar-value" x="${vp[0]}" y="${vp[1]}">${Number(x.value).toFixed(1)}</text>`});const pts=a.map((x,i)=>polar(cx,cy,R*Number(x.value)/100,i,n).join(',')).join(' ');s+=`<polygon class="radar-shape" points="${pts}"/>`;a.forEach((x,i)=>{const p=polar(cx,cy,R*Number(x.value)/100,i,n);s+=`<circle class="radar-dot" cx="${p[0]}" cy="${p[1]}" r="4"><title>${esc(x.name)} ${Number(x.value).toFixed(1)} · ${x.samples||0} 个证据输入</title></circle>`});s+='</svg>';document.querySelector('#radar').innerHTML=s}
 function renderAnalysis(){const A=DATA.chatgptAnalysis||{},m=A.metrics||{},axes=A.radar||[],ranked=[...axes].sort((a,b)=>b.value-a.value),top=ranked.slice(0,3).map(x=>x.name).join(' / '),low=ranked.slice(-3).reverse().map(x=>x.name).join(' / '),best=(m.strongHighCharts||[]).slice(0,3).map(x=>`${x.title} ${scoreFmt(x.score)}`).join('；'),lower=(m.lowerHighCharts||[]).slice(0,3).map(x=>`${x.title} ${scoreFmt(x.score)}`).join('；');const items=[`十维能力倾向：当前模型中 ${top||'—'} 较突出；${low||'—'} 相对更值得继续观察。这里不再拿 TAP/HOLD 等 Note 类型直接当维度。`,`社区横向比较：只给社区资料明确标注过谱面性质的曲目打标签，再把你的该谱面最高分纳入对应维度。比如 TECHNOPOLIS 2085→敷、MARENOL→节奏、PRAGMATISM -RESURRECTION- / ENDYMION / Megameteor→反手/交差类，World Vanquisher→多指/敷/片手/大划。`,`高难横向比较：当前 15 / 15+ 共 ${m.highDifficultyCharts||0} 张，最高分中位数 ${scoreFmt(m.highDifficultyMedianScore||0)}。高分代表 ${best||'—'}；相对较低的一组 ${lower||'—'}。`,`纵向变化：RIN Rating 到当前约提升 ${m.rinTrendGain==null?'—':Number(m.rinTrendGain).toFixed(2)}，国框 Rating 约提升 ${m.countryTrendGain==null?'—':Number(m.countryTrendGain).toFixed(2)}。`];document.querySelector('#analysisCopy').innerHTML=items.map(x=>`<div class="analysis-item">${esc(x)}</div>`).join('');const ev=(A.communityEvidence||[]),show=ev.slice(0,8).map(x=>`${x.title} ${x.difficulty}：${(x.tags||[]).join(' / ')} · ${scoreFmt(x.score)}`).join('<br>');document.querySelector('#communityRef').innerHTML=ev.length?`<b>已纳入的社区谱面标签样本</b><br>${show}`:'社区定性资料暂未加入。';document.querySelector('#analysisMethod').textContent='十维：锁手、反手、多指、键盘、耐力、敷、片手、大划、节奏、稳定。维度值是 ChatGPT 分析指标，不是官方数值；谱面性质只采用可核验社区标签，个人表现来自你的真实合并成绩。稳定额外参考 RIN P25，大划额外参考 AIR/SLIDE P25，耐力额外参考 15/15+ 整体输出。'}
 document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelector('#'+b.dataset.tab).classList.add('active')});document.querySelector('#search').addEventListener('input',renderTracks);document.querySelector('#diff').addEventListener('change',renderTracks);function setTrackSort(key){if(trackSort===key)trackSortDir=trackSortDir==='desc'?'asc':'desc';else{trackSort=key;trackSortDir='desc'}document.querySelector('#sortScore').classList.toggle('active',trackSort==='score');document.querySelector('#sortRating').classList.toggle('active',trackSort==='rating');document.querySelector('#sortScore').textContent='分数 '+(trackSort==='score'?(trackSortDir==='desc'?'↓':'↑'):'↕');document.querySelector('#sortRating').textContent='Rating '+(trackSort==='rating'?(trackSortDir==='desc'?'↓':'↑'):'↕');renderTracks()}document.querySelector('#sortScore').onclick=()=>setTrackSort('score');document.querySelector('#sortRating').onclick=()=>setTrackSort('rating');document.querySelectorAll('.trend-mode').forEach(b=>b.onclick=()=>toggleTrendLine(b.dataset.line));
-document.querySelector('#backToLibrary').addEventListener('click',e=>{try{if(sessionStorage.getItem('ymkfLibraryReturnPending')==='1'){e.preventDefault();history.back()}}catch(_){}});
 const MATE_URL='https://raw.githubusercontent.com/zvuc/otoge-db/master/chunithm/data/music-ex.json';
 function mateKey(id,lev){return String(id)+'|'+String(lev)}
 async function hydrateMateRatings(d){
@@ -93,4 +92,17 @@ async function hydrateMateRatings(d){
   return d;
 }
 fetch('../data/rhythm/chunithm.json?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(r.status);return r.json()}).then(hydrateMateRatings).then(d=>{DATA=d;render()}).catch(e=>{document.body.innerHTML='<div class="wrap"><div class="empty">CHUNITHM 数据加载失败：'+esc(e.message)+'</div></div>'});
-</script></body></html>
+</script>
+<script id="ymkf-return-to-library">
+(function(){
+  const a=document.querySelector('a.back[href="../index.html"]');
+  if(!a)return;
+  a.addEventListener('click',function(e){
+    try{
+      if(sessionStorage.getItem('ymkfLibraryReturnPending')==='1'&&history.length>1){e.preventDefault();history.back();return}
+    }catch(_){ }
+    // Direct/opened-alone detail pages keep the normal ../index.html fallback.
+  });
+})();
+</script>
+</body></html>
