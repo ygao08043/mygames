@@ -63,7 +63,7 @@ html[data-theme="light"]{color-scheme:light;--bg:#f2f3f5;--surface:#fff;--surfac
 <header class="topbar"><div class="head"><div class="title">YMKF的娱乐数据</div><div class="right"><div class="tabs"><button class="tab active" data-page="games">游戏</button><button class="tab" data-page="videos">视频</button></div><button class="iconbtn" id="themeBtn" aria-label="主题">◐</button></div></div><div class="theme-menu" id="themeMenu"><button data-theme-value="system">◐ 跟随系统</button><button data-theme-value="dark">● 黑夜模式</button><button data-theme-value="light">○ 白天模式</button></div></header>
 
 <main class="page active" id="games">
-<section class="intro"><div><h1>游戏</h1><p id="gameSummary">个人游戏库 · 按总游玩时长排序</p></div><div class="mode-switch"><button class="active" data-mode="source">按来源</button><button data-mode="category">按类型</button><a class="stats-link" href="details/statistics.html?v=1.13.9">统计图表</a></div></section>
+<section class="intro"><div><h1>游戏</h1><p id="gameSummary">个人游戏库 · 按总游玩时长排序</p></div><div class="mode-switch"><button class="active" data-mode="source">按来源</button><button data-mode="category">按类型</button><a class="stats-link" href="details/statistics.html?v=1.13.10">统计图表</a></div></section>
 <div class="selector-wrap"><div class="selector-strip" id="selectorStrip"></div></div>
 <div class="section-head"><h2 id="libraryTitle">全部游戏</h2><div class="library-head-tools"><span id="libraryMeta"></span><div class="sort-pair" aria-label="游戏排序"><button class="game-sort-btn active" id="sortHours" data-kind="hours">时长 ↓</button><button class="game-sort-btn" id="sortWeek" data-kind="week">&#x8FD1;7&#x65E5; &#x2193;</button><button class="game-sort-btn" id="sortHeat" data-kind="heat">热度 ↓</button></div></div></div>
 <div class="library" id="gameLibrary"></div>
@@ -256,7 +256,7 @@ renderAll();renderVideoTabs();renderVideos();
 </script><script id="ymkf-heat-model-v3">
 (function(){
   const __ymkfHeatPrevious=onlineOf;
-  const __ymkfPvzSteam=-1;
+  const __ymkfPvzSteam=2800;
   function __ymkfActivityFor(name){
     const target=String(name||'').toLowerCase().replace(/\s+/g,'');
     const keys=(typeof ACTIVITY==='object'&&ACTIVITY)?Object.keys(ACTIVITY):[];
