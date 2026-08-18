@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "build": "v1.14.0",
+  "generatedAt": null,
+  "eaId": "",
+  "platform": "pc",
+  "source": {
+    "provider": "GameTools Network",
+    "apiBase": "https://api.gametools.network"
+  },
+  "games": {
+    "bf1": {
+      "key": "bf1",
+      "title": "Battlefield 1",
+      "status": "unconfigured",
+      "updatedAt": null,
+      "profile": null,
+      "trueSessions": [],
+      "intervals": [],
+      "raw": null,
+      "error": null
+    },
+    "bfv": {
+      "key": "bfv",
+      "title": "Battlefield V",
+      "status": "unconfigured",
+      "updatedAt": null,
+      "profile": null,
+      "trueSessions": [],
+      "intervals": [],
+      "raw": null,
+      "error": null
+    },
+    "bf2042": {
+      "key": "bf2042",
+      "title": "Battlefield 2042",
+      "status": "unconfigured",
+      "updatedAt": null,
+      "profile": null,
+      "trueSessions": [],
+      "intervals": [],
+      "raw": null,
+      "error": null
+    },
+    "bf6": {
+      "key": "bf6",
+      "title": "Battlefield 6",
+      "status": "unconfigured",
+      "updatedAt": null,
+      "profile": null,
+      "trueSessions": [],
+      "intervals": [],
+      "raw": null,
+      "error": null
+    }
+  }
+}

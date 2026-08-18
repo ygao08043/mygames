@@ -12,7 +12,7 @@
 </style>
 </head>
 <body><main class="wrap">
-<div class="top"><a class="back" href="../index.html">← 返回游戏库</a><div class="build">Build v1.13.19</div></div>
+<div class="top"><a class="back" href="../index.html">← 返回游戏库</a><div class="build">Build v1.14.0</div></div>
 <div class="hero"><div><h1>统计图表</h1><p>来自 Playnite GameActivity 会话记录 · 自动随 RUN_SYNC 更新</p></div><div class="status" id="status">读取数据中…</div></div>
 <div id="content" class="loading">正在载入 GameActivity 统计数据…</div>
 </main>
@@ -69,5 +69,5 @@ $('#content').className='';$('#content').innerHTML=`<section class="grid4"><arti
 <section class="card section"><div class="section-head"><div><h2>近 14 日会话时间轴</h2><p>甘特式时间轴 · 一眼看出一天里什么时候在玩什么</p></div></div><div class="timeline-wrap" id="timeline"></div><div class="footnote">说明：本统计页统一只使用 2026-03-01 及之后的 GameActivity 数据；更早记录仍保留在 Playnite/GameActivity 中，但不会进入本页任何数字、折线、月/年榜、构成图、时段分布或时间轴。CHUNITHM / maimai 的 YMKF Sync 补差会话继续排除。统计起点：${esc(DATA.analyticsStart||DATA.coverageStart||'2026-03-01')}。</div></section>`;
 const redraw=()=>{const rows=(DATA.daily||[]).slice(-dailyRange);drawLine($('#daily'),rows);drawBars($('#weekly'),DATA.weekly||[],x=>x.label,x=>x.seconds);drawBars($('#monthly'),DATA.monthly||[],x=>x.label,x=>x.seconds);drawDonut($('#monthPie'),month);drawDonut($('#yearPie'),year);const hm=$('#hourMonth')?.value||'all',wm=$('#weekdayMonth')?.value||'all';drawHourlyRadial($('#hourly'),distRows('hourly',hm));drawBars($('#weekday'),distRows('weekday',wm),x=>x.label,x=>x.seconds,{colorFn:(r,i)=>colorFor(r.label,i)});$('#monthLegend').innerHTML=legendHtml(month,monthTotal);$('#yearLegend').innerHTML=legendHtml(year,yearTotal);renderTimeline()};
 redraw();document.querySelectorAll('[data-range]').forEach(b=>b.onclick=()=>{dailyRange=Number(b.dataset.range);document.querySelectorAll('[data-range]').forEach(x=>x.classList.toggle('active',x===b));redraw()});$('#hourMonth').onchange=redraw;$('#weekdayMonth').onchange=redraw;window.addEventListener('resize',()=>{clearTimeout(window.__statResize);window.__statResize=setTimeout(redraw,100)})}
-fetch('../data/gameactivity-stats.json?v=1.13.19',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(d=>{DATA=d;render()}).catch(e=>{$('#content').className='loading';$('#content').innerHTML=`统计数据尚未生成。请运行最新 RUN_SYNC。<br><small>${esc(e.message)}</small>`;$('#status').textContent='等待同步'});
+fetch('../data/gameactivity-stats.json?v=1.14.0',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(d=>{DATA=d;render()}).catch(e=>{$('#content').className='loading';$('#content').innerHTML=`统计数据尚未生成。请运行最新 RUN_SYNC。<br><small>${esc(e.message)}</small>`;$('#status').textContent='等待同步'});
 </script></body></html>
