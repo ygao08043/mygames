@@ -1,11 +1,11 @@
 {
     "version":  "1.9.0-lxns-api",
-    "generatedAt":  "2026-08-19T22:37:15.8272513+08:00",
+    "generatedAt":  "2026-08-19T22:47:58.2928243+08:00",
     "profile":  {
                     "name":  "YMKFβ",
-                    "countryPC":  1076,
+                    "countryPC":  1084,
                     "rinPC":  585,
-                    "countryRating":  16.721,
+                    "countryRating":  16.73,
                     "rinRating":  16.84,
                     "combinedB30":  17.0493,
                     "rank":  "V段"
@@ -20,7 +20,7 @@
                         },
                         {
                             "month":  "2025-04",
-                            "countryRating":  11.8992,
+                            "countryRating":  11.887,
                             "rinRating":  null,
                             "rinRatingSource":  "calculated",
                             "combinedB30":  null
@@ -55,21 +55,21 @@
                         },
                         {
                             "month":  "2025-09",
-                            "countryRating":  15.5524,
+                            "countryRating":  15.5143,
                             "rinRating":  null,
                             "rinRatingSource":  "calculated",
                             "combinedB30":  15.7877
                         },
                         {
                             "month":  "2025-10",
-                            "countryRating":  15.9366,
+                            "countryRating":  15.9308,
                             "rinRating":  null,
                             "rinRatingSource":  "calculated",
                             "combinedB30":  16.183
                         },
                         {
                             "month":  "2025-11",
-                            "countryRating":  16.1564,
+                            "countryRating":  16.1418,
                             "rinRating":  16.23,
                             "rinRatingSource":  "playlog",
                             "combinedB30":  16.418
@@ -90,14 +90,14 @@
                         },
                         {
                             "month":  "2026-02",
-                            "countryRating":  16.3548,
+                            "countryRating":  16.3531,
                             "rinRating":  16.58,
                             "rinRatingSource":  "playlog",
                             "combinedB30":  16.695
                         },
                         {
                             "month":  "2026-03",
-                            "countryRating":  16.4442,
+                            "countryRating":  16.4437,
                             "rinRating":  16.67,
                             "rinRatingSource":  "playlog",
                             "combinedB30":  16.7843
@@ -125,14 +125,14 @@
                         },
                         {
                             "month":  "2026-07",
-                            "countryRating":  16.5558,
+                            "countryRating":  16.5547,
                             "rinRating":  16.84,
                             "rinRatingSource":  "playlog",
                             "combinedB30":  17.042
                         },
                         {
                             "month":  "2026-08",
-                            "countryRating":  16.7208,
+                            "countryRating":  16.73,
                             "rinRating":  16.84,
                             "rinRatingSource":  "playlog",
                             "combinedB30":  17.0493
@@ -210,7 +210,7 @@
                           },
                           {
                               "month":  "2025-04",
-                              "country":  59,
+                              "country":  60,
                               "rin":  0
                           },
                           {
@@ -220,12 +220,12 @@
                           },
                           {
                               "month":  "2025-06",
-                              "country":  315,
+                              "country":  317,
                               "rin":  0
                           },
                           {
                               "month":  "2025-07",
-                              "country":  492,
+                              "country":  494,
                               "rin":  0
                           },
                           {
@@ -235,17 +235,17 @@
                           },
                           {
                               "month":  "2025-09",
-                              "country":  392,
+                              "country":  393,
                               "rin":  0
                           },
                           {
                               "month":  "2025-10",
-                              "country":  579,
+                              "country":  583,
                               "rin":  0
                           },
                           {
                               "month":  "2025-11",
-                              "country":  249,
+                              "country":  251,
                               "rin":  586
                           },
                           {
@@ -260,7 +260,7 @@
                           },
                           {
                               "month":  "2026-02",
-                              "country":  313,
+                              "country":  318,
                               "rin":  204
                           },
                           {
@@ -295,17 +295,17 @@
                           }
                       ],
     "monthlyTrackTotals":  {
-                               "countryDated":  3227,
-                               "countryUndated":  202,
+                               "countryDated":  3244,
+                               "countryUndated":  194,
                                "rin":  2587,
-                               "countryAllRows":  3429
+                               "countryAllRows":  3438
                            },
     "chatgptAnalysis":  {
                             "radar":  [
                                           {
                                               "name":  "锁手",
-                                              "value":  69,
-                                              "samples":  2,
+                                              "value":  44,
+                                              "samples":  1,
                                               "basis":  "community-labelled personal scores"
                                           },
                                           {
@@ -316,20 +316,20 @@
                                           },
                                           {
                                               "name":  "多指",
-                                              "value":  60.5,
-                                              "samples":  6,
+                                              "value":  60.8,
+                                              "samples":  5,
                                               "basis":  "community-labelled personal scores"
                                           },
                                           {
                                               "name":  "键盘",
-                                              "value":  52.5,
-                                              "samples":  6,
+                                              "value":  51.2,
+                                              "samples":  5,
                                               "basis":  "community-labelled personal scores"
                                           },
                                           {
                                               "name":  "耐力",
-                                              "value":  50,
-                                              "samples":  2,
+                                              "value":  41,
+                                              "samples":  1,
                                               "basis":  "community-labelled scores + direct personal signal"
                                           },
                                           {
@@ -340,14 +340,14 @@
                                           },
                                           {
                                               "name":  "片手",
-                                              "value":  52.5,
-                                              "samples":  6,
+                                              "value":  51.2,
+                                              "samples":  5,
                                               "basis":  "community-labelled personal scores"
                                           },
                                           {
                                               "name":  "大划",
-                                              "value":  82.2,
-                                              "samples":  5,
+                                              "value":  79.2,
+                                              "samples":  4,
                                               "basis":  "community-labelled scores + direct personal signal"
                                           },
                                           {
@@ -374,7 +374,7 @@
                                             "highDifficultyMedianScore":  998247,
                                             "strongHighCharts":  [
                                                                      {
-                                                                         "title":  "宛城、炎上！！",
+                                                                         "title":  "å®åãçä¸ï¼ï¼",
                                                                          "score":  1008803,
                                                                          "difficulty":  "15"
                                                                      },
@@ -411,28 +411,15 @@
                                                                         "difficulty":  "16"
                                                                     },
                                                                     {
-                                                                        "title":  "怒槌",
+                                                                        "title":  "ææ§",
                                                                         "score":  984663,
                                                                         "difficulty":  "15"
                                                                     }
                                                                 ],
                                             "rinTrendGain":  0.61,
-                                            "countryTrendGain":  4.822
+                                            "countryTrendGain":  4.843
                                         },
                             "communityEvidence":  [
-                                                      {
-                                                          "title":  "宛城、炎上！！",
-                                                          "difficulty":  "15",
-                                                          "tags":  [
-                                                                       "锁手",
-                                                                       "大划"
-                                                                   ],
-                                                          "note":  "MASTER攻略含SLIDE拘束侧处理、炎上配置与大幅手部动作。",
-                                                          "source":  "CHUNITHM攻略Wiki",
-                                                          "score":  1008803,
-                                                          "rating":  17.13,
-                                                          "sampleIndex":  94
-                                                      },
                                                       {
                                                           "title":  "TECHNOPOLIS 2085",
                                                           "difficulty":  "14+",
@@ -590,21 +577,6 @@
                                                           "score":  1002987,
                                                           "rating":  15.59,
                                                           "sampleIndex":  65
-                                                      },
-                                                      {
-                                                          "title":  "ΩΩPARTS",
-                                                          "difficulty":  "15",
-                                                          "tags":  [
-                                                                       "键盘",
-                                                                       "多指",
-                                                                       "片手",
-                                                                       "耐力"
-                                                                   ],
-                                                          "note":  "社区说明包含片手トリル、4/5键与末段物量耐力。",
-                                                          "source":  "CHUNITHM攻略Wiki",
-                                                          "score":  1001750,
-                                                          "rating":  16.37,
-                                                          "sampleIndex":  59
                                                       }
                                                   ],
                             "method":  "Ten-axis ChatGPT tendency map using community-labelled personal chart scores. Not an official CHUNITHM metric."
@@ -646,7 +618,7 @@
                    },
                    {
                        "id":  1002,
-                       "title":  "だから僕は音楽を辞めた",
+                       "title":  "ã ããåã¯é³æ¥½ãè¾ãã",
                        "difficulty":  "7+",
                        "levelIndex":  2,
                        "difficultyValue":  7.5,
@@ -663,7 +635,7 @@
                    },
                    {
                        "id":  1002,
-                       "title":  "だから僕は音楽を辞めた",
+                       "title":  "ã ããåã¯é³æ¥½ãè¾ãã",
                        "difficulty":  "11+",
                        "levelIndex":  3,
                        "difficultyValue":  11.5,
@@ -1139,7 +1111,7 @@
                    },
                    {
                        "id":  1025,
-                       "title":  "疾走あんさんぶる",
+                       "title":  "ç¾èµ°ããããã¶ã",
                        "difficulty":  "13+",
                        "levelIndex":  3,
                        "difficultyValue":  13.5,
@@ -1300,7 +1272,7 @@
                        "source":  "country",
                        "nationalBest":  1007963,
                        "rinBest":  1007963,
-                       "fc":  false,
+                       "fc":  true,
                        "aj":  false,
                        "playCount":  1,
                        "rating":  16.14,
@@ -1343,7 +1315,7 @@
                    },
                    {
                        "id":  1035,
-                       "title":  "赤壁、大炎上！！",
+                       "title":  "èµ¤å£ãå¤§çä¸ï¼ï¼",
                        "difficulty":  "13",
                        "levelIndex":  2,
                        "difficultyValue":  13,
@@ -1496,7 +1468,7 @@
                    },
                    {
                        "id":  1041,
-                       "title":  "DX超性能フルメタル少女",
+                       "title":  "DXè¶\u0085æ§è½ãã«ã¡ã¿ã«å°å¥³",
                        "difficulty":  "11",
                        "levelIndex":  2,
                        "difficultyValue":  11,
@@ -1513,7 +1485,7 @@
                    },
                    {
                        "id":  1041,
-                       "title":  "DX超性能フルメタル少女",
+                       "title":  "DXè¶\u0085æ§è½ãã«ã¡ã¿ã«å°å¥³",
                        "difficulty":  "14",
                        "levelIndex":  3,
                        "difficultyValue":  14,
@@ -1785,7 +1757,7 @@
                    },
                    {
                        "id":  106,
-                       "title":  "宛城、炎上！！",
+                       "title":  "å®åãçä¸ï¼ï¼",
                        "difficulty":  "12+",
                        "levelIndex":  2,
                        "difficultyValue":  12.5,
@@ -1802,7 +1774,7 @@
                    },
                    {
                        "id":  106,
-                       "title":  "宛城、炎上！！",
+                       "title":  "å®åãçä¸ï¼ï¼",
                        "difficulty":  "15",
                        "levelIndex":  3,
                        "difficultyValue":  15,
@@ -2414,7 +2386,7 @@
                    },
                    {
                        "id":  1086,
-                       "title":  "祈 -我ら神祖と共に歩む者なり-",
+                       "title":  "ç¥ -æãç¥ç¥ã¨å\u0085±ã«æ­©ãè\u0085ãªã-",
                        "difficulty":  "14+",
                        "levelIndex":  2,
                        "difficultyValue":  14.5,
@@ -2431,7 +2403,7 @@
                    },
                    {
                        "id":  1086,
-                       "title":  "祈 -我ら神祖と共に歩む者なり-",
+                       "title":  "ç¥ -æãç¥ç¥ã¨å\u0085±ã«æ­©ãè\u0085ãªã-",
                        "difficulty":  "15+",
                        "levelIndex":  3,
                        "difficultyValue":  15.5,
@@ -2516,7 +2488,7 @@
                    },
                    {
                        "id":  1091,
-                       "title":  "クロートーと星の観測者",
+                       "title":  "ã¯ã­ã¼ãã¼ã¨æã®è¦³æ¸¬è\u0085",
                        "difficulty":  "10",
                        "levelIndex":  2,
                        "difficultyValue":  10,
@@ -2533,7 +2505,7 @@
                    },
                    {
                        "id":  1092,
-                       "title":  "真千年女王",
+                       "title":  "çåå¹´å¥³ç",
                        "difficulty":  "12+",
                        "levelIndex":  2,
                        "difficultyValue":  12.5,
@@ -2601,7 +2573,7 @@
                    },
                    {
                        "id":  1096,
-                       "title":  "ベースラインやってる？笑",
+                       "title":  "ãã¼ã¹ã©ã¤ã³ãã£ã¦ãï¼ç¬",
                        "difficulty":  "10",
                        "levelIndex":  2,
                        "difficultyValue":  10,
@@ -2771,7 +2743,7 @@
                    },
                    {
                        "id":  1106,
-                       "title":  "アポカリプスに反逆の焔を焚べろ",
+                       "title":  "ã¢ãã«ãªãã¹ã«åéã®çãçã¹ã",
                        "difficulty":  "13+",
                        "levelIndex":  2,
                        "difficultyValue":  13.5,
@@ -3570,7 +3542,7 @@
                    },
                    {
                        "id":  159,
-                       "title":  "ジングルベル",
+                       "title":  "ã¸ã³ã°ã«ãã«",
                        "difficulty":  "14+",
                        "levelIndex":  3,
                        "difficultyValue":  14.5,
@@ -3961,7 +3933,7 @@
                    },
                    {
                        "id":  180,
-                       "title":  "怒槌",
+                       "title":  "ææ§",
                        "difficulty":  "14",
                        "levelIndex":  2,
                        "difficultyValue":  14,
@@ -3978,7 +3950,7 @@
                    },
                    {
                        "id":  180,
-                       "title":  "怒槌",
+                       "title":  "ææ§",
                        "difficulty":  "15",
                        "levelIndex":  3,
                        "difficultyValue":  15,
@@ -4301,7 +4273,7 @@
                    },
                    {
                        "id":  2010,
-                       "title":  "夜に駆ける",
+                       "title":  "å¤ã«é§ãã",
                        "difficulty":  "9",
                        "levelIndex":  2,
                        "difficultyValue":  9,
@@ -4318,7 +4290,7 @@
                    },
                    {
                        "id":  2010,
-                       "title":  "夜に駆ける",
+                       "title":  "å¤ã«é§ãã",
                        "difficulty":  "11+",
                        "levelIndex":  3,
                        "difficultyValue":  11.5,
@@ -4862,7 +4834,7 @@
                    },
                    {
                        "id":  204,
-                       "title":  "ちくわパフェだよ☆CKP",
+                       "title":  "ã¡ããããã§ã ãâCKP",
                        "difficulty":  "9",
                        "levelIndex":  2,
                        "difficultyValue":  9,
@@ -4998,7 +4970,7 @@
                    },
                    {
                        "id":  2044,
-                       "title":  "ミュージック・リボルバー",
+                       "title":  "ãã¥ã¼ã¸ãã¯ã»ãªãã«ãã¼",
                        "difficulty":  "14+",
                        "levelIndex":  3,
                        "difficultyValue":  14.5,
@@ -5100,7 +5072,7 @@
                    },
                    {
                        "id":  2049,
-                       "title":  "脳天直撃",
+                       "title":  "è³å¤©ç´æ",
                        "difficulty":  "13",
                        "levelIndex":  2,
                        "difficultyValue":  13,
@@ -5117,7 +5089,7 @@
                    },
                    {
                        "id":  2049,
-                       "title":  "脳天直撃",
+                       "title":  "è³å¤©ç´æ",
                        "difficulty":  "15",
                        "levelIndex":  3,
                        "difficultyValue":  15,
@@ -5151,7 +5123,7 @@
                    },
                    {
                        "id":  2050,
-                       "title":  "封焔の135秒",
+                       "title":  "å°çã®135ç§",
                        "difficulty":  "8",
                        "levelIndex":  1,
                        "difficultyValue":  8,
@@ -5168,7 +5140,7 @@
                    },
                    {
                        "id":  2050,
-                       "title":  "封焔の135秒",
+                       "title":  "å°çã®135ç§",
                        "difficulty":  "13+",
                        "levelIndex":  2,
                        "difficultyValue":  13.5,
@@ -5321,7 +5293,7 @@
                    },
                    {
                        "id":  2060,
-                       "title":  "蜘蛛の糸",
+                       "title":  "èèã®ç³¸",
                        "difficulty":  "13+",
                        "levelIndex":  2,
                        "difficultyValue":  13.5,
@@ -5746,7 +5718,7 @@
                    },
                    {
                        "id":  2085,
-                       "title":  "全力ハッピーライフ",
+                       "title":  "å\u0085¨åãããã¼ã©ã¤ã",
                        "difficulty":  "13",
                        "levelIndex":  3,
                        "difficultyValue":  13,
@@ -5882,7 +5854,7 @@
                    },
                    {
                        "id":  2091,
-                       "title":  "《紀律》 ～ As One",
+                       "title":  "ãç´å¾ã ï½ As One",
                        "difficulty":  "13+",
                        "levelIndex":  3,
                        "difficultyValue":  13.5,
@@ -5916,7 +5888,7 @@
                    },
                    {
                        "id":  2093,
-                       "title":  "《偏愛》 ～ Shattered Memories",
+                       "title":  "ãåæã ï½ Shattered Memories",
                        "difficulty":  "6",
                        "levelIndex":  1,
                        "difficultyValue":  6,
@@ -6052,7 +6024,7 @@
                    },
                    {
                        "id":  210,
-                       "title":  "アスノヨゾラ哨戒班",
+                       "title":  "ã¢ã¹ãã¨ã¾ã©å¨æç­",
                        "difficulty":  "12+",
                        "levelIndex":  3,
                        "difficultyValue":  12.5,
@@ -6069,7 +6041,7 @@
                    },
                    {
                        "id":  210,
-                       "title":  "アスノヨゾラ哨戒班",
+                       "title":  "ã¢ã¹ãã¨ã¾ã©å¨æç­",
                        "difficulty":  "14",
                        "levelIndex":  4,
                        "difficultyValue":  14,
@@ -6630,7 +6602,7 @@
                    },
                    {
                        "id":  2132,
-                       "title":  "ぽっぴっぽー",
+                       "title":  "ã½ã£ã´ã£ã½ã¼",
                        "difficulty":  "13+",
                        "levelIndex":  3,
                        "difficultyValue":  13.5,
@@ -6800,7 +6772,7 @@
                    },
                    {
                        "id":  2140,
-                       "title":  "ピアノ協奏曲第１番”蠍火”",
+                       "title":  "ãã¢ãåå¥æ²ç¬¬ï¼çªâè ç«â",
                        "difficulty":  "14",
                        "levelIndex":  2,
                        "difficultyValue":  14,
@@ -6817,7 +6789,7 @@
                    },
                    {
                        "id":  2140,
-                       "title":  "ピアノ協奏曲第１番”蠍火”",
+                       "title":  "ãã¢ãåå¥æ²ç¬¬ï¼çªâè ç«â",
                        "difficulty":  "15+",
                        "levelIndex":  3,
                        "difficultyValue":  15.5,
@@ -7089,7 +7061,7 @@
                    },
                    {
                        "id":  2157,
-                       "title":  "妖々跋扈　～ Who done it！！！",
+                       "title":  "å¦ã\u0085è·æãï½ Who done itï¼ï¼ï¼",
                        "difficulty":  "12+",
                        "levelIndex":  2,
                        "difficultyValue":  12.5,
@@ -7344,7 +7316,7 @@
                    },
                    {
                        "id":  2175,
-                       "title":  "シル・ヴ・プレジデント",
+                       "title":  "ã·ã«ã»ã´ã»ãã¬ã¸ãã³ã",
                        "difficulty":  "12+",
                        "levelIndex":  3,
                        "difficultyValue":  12.5,
@@ -7599,7 +7571,7 @@
                    },
                    {
                        "id":  2185,
-                       "title":  "竹",
+                       "title":  "ç«¹",
                        "difficulty":  "15",
                        "levelIndex":  3,
                        "difficultyValue":  15,
@@ -7769,7 +7741,7 @@
                    },
                    {
                        "id":  2191,
-                       "title":  "とびだせ！TO THE COSMIC!!",
+                       "title":  "ã¨ã³ã ãï¼TO THE COSMIC!!",
                        "difficulty":  "13+",
                        "levelIndex":  3,
                        "difficultyValue":  13.5,
@@ -7803,7 +7775,7 @@
                    },
                    {
                        "id":  2193,
-                       "title":  "モ°ルモ°ル",
+                       "title":  "ã¢Â°ã«ã¢Â°ã«",
                        "difficulty":  "13",
                        "levelIndex":  2,
                        "difficultyValue":  13,
@@ -7820,7 +7792,7 @@
                    },
                    {
                        "id":  2193,
-                       "title":  "モ°ルモ°ル",
+                       "title":  "ã¢Â°ã«ã¢Â°ã«",
                        "difficulty":  "14",
                        "levelIndex":  3,
                        "difficultyValue":  14,
@@ -7854,7 +7826,7 @@
                    },
                    {
                        "id":  2194,
-                       "title":  "蒼穹舞楽",
+                       "title":  "è¼ç©¹èæ¥½",
                        "difficulty":  "12+",
                        "levelIndex":  2,
                        "difficultyValue":  12.5,
@@ -8143,7 +8115,7 @@
                    },
                    {
                        "id":  2215,
-                       "title":  "フォニイ",
+                       "title":  "ãã©ãã¤",
                        "difficulty":  "12+",
                        "levelIndex":  3,
                        "difficultyValue":  12.5,
@@ -8160,7 +8132,7 @@
                    },
                    {
                        "id":  2218,
-                       "title":  "Re：End of a Dream",
+                       "title":  "Reï¼End of a Dream",
                        "difficulty":  "13",
                        "levelIndex":  2,
                        "difficultyValue":  13,
@@ -8296,7 +8268,7 @@
                    },
                    {
                        "id":  2225,
-                       "title":  "過去を喰らう",
+                       "title":  "éå»ãå°ãã",
                        "difficulty":  "12+",
                        "levelIndex":  3,
                        "difficultyValue":  12.5,
@@ -8500,7 +8472,7 @@
                    },
                    {
                        "id":  2233,
-                       "title":  "Λzure Vixen",
+                       "title":  "Îzure Vixen",
                        "difficulty":  "15+",
                        "levelIndex":  3,
                        "difficultyValue":  15.5,
@@ -8534,7 +8506,7 @@
                    },
                    {
                        "id":  2234,
-                       "title":  "僕の戦争",
+                       "title":  "åã®æ¦äº",
                        "difficulty":  "12+",
                        "levelIndex":  3,
                        "difficultyValue":  12.5,
@@ -8976,7 +8948,7 @@
                    },
                    {
                        "id":  2259,
-                       "title":  "なにやってもうまくいかない",
+                       "title":  "ãªã«ãã£ã¦ããã¾ããããªã",
                        "difficulty":  "12+",
                        "levelIndex":  3,
                        "difficultyValue":  12.5,
@@ -9078,7 +9050,7 @@
                    },
                    {
                        "id":  2263,
-                       "title":  "神っぽいな",
+                       "title":  "ç¥ã£ã½ããª",
                        "difficulty":  "9+",
                        "levelIndex":  2,
                        "difficultyValue":  9.5,
@@ -9367,7 +9339,7 @@
                    },
                    {
                        "id":  2279,
-                       "title":  "グラウンドスライダー協奏曲第一番「風唄」",
+                       "title":  "ã°ã©ã¦ã³ãã¹ã©ã¤ãã¼åå¥æ²ç¬¬ä¸çªãé¢¨åã",
                        "difficulty":  "15+",
                        "levelIndex":  3,
                        "difficultyValue":  15.5,
@@ -9452,7 +9424,7 @@
                    },
                    {
                        "id":  2286,
-                       "title":  "デザイアシューティング",
+                       "title":  "ãã¶ã¤ã¢ã·ã¥ã¼ãã£ã³ã°",
                        "difficulty":  "11+",
                        "levelIndex":  3,
                        "difficultyValue":  11.5,
@@ -9554,7 +9526,7 @@
                    },
                    {
                        "id":  229,
-                       "title":  "紅華刑",
+                       "title":  "ç´\u0085è¯å",
                        "difficulty":  "12+",
                        "levelIndex":  2,
                        "difficultyValue":  12.5,
@@ -9724,7 +9696,7 @@
                    },
                    {
                        "id":  2299,
-                       "title":  "Breaking Dawn (feat. 棗いつき)",
+                       "title":  "Breaking Dawn (feat. æ£ãã¤ã)",
                        "difficulty":  "13",
                        "levelIndex":  3,
                        "difficultyValue":  13,
@@ -10064,7 +10036,7 @@
                    },
                    {
                        "id":  2311,
-                       "title":  "†大闘士＝クライン・フォーゲル・シュピール＝えりか†",
+                       "title":  "â å¤§éå£«ï¼ã¯ã©ã¤ã³ã»ãã©ã¼ã²ã«ã»ã·ã¥ãã¼ã«ï¼ãããâ ",
                        "difficulty":  "12+",
                        "levelIndex":  2,
                        "difficultyValue":  12.5,
@@ -10149,7 +10121,7 @@
                    },
                    {
                        "id":  2314,
-                       "title":  "シンデレラ",
+                       "title":  "ã·ã³ãã¬ã©",
                        "difficulty":  "12",
                        "levelIndex":  3,
                        "difficultyValue":  12,
@@ -10183,7 +10155,7 @@
                    },
                    {
                        "id":  2315,
-                       "title":  "アニマル",
+                       "title":  "ã¢ããã«",
                        "difficulty":  "13",
                        "levelIndex":  3,
                        "difficultyValue":  13,
@@ -10217,7 +10189,7 @@
                    },
                    {
                        "id":  2316,
-                       "title":  "パラサイト",
+                       "title":  "ãã©ãµã¤ã",
                        "difficulty":  "12+",
                        "levelIndex":  3,
                        "difficultyValue":  12.5,
@@ -10251,7 +10223,7 @@
                    },
                    {
                        "id":  2317,
-                       "title":  "きゅうくらりん",
+                       "title":  "ãã\u0085ããããã",
                        "difficulty":  "13+",
                        "levelIndex":  3,
                        "difficultyValue":  13.5,
@@ -10285,7 +10257,7 @@
                    },
                    {
                        "id":  2318,
-                       "title":  "生きる",
+                       "title":  "çãã",
                        "difficulty":  "13",
                        "levelIndex":  3,
                        "difficultyValue":  13,
@@ -10370,7 +10342,7 @@
                    },
                    {
                        "id":  2320,
-                       "title":  "エータ・ベータ・イータ",
+                       "title":  "ã¨ã¼ã¿ã»ãã¼ã¿ã»ã¤ã¼ã¿",
                        "difficulty":  "12+",
                        "levelIndex":  2,
                        "difficultyValue":  12.5,
@@ -10387,7 +10359,7 @@
                    },
                    {
                        "id":  2320,
-                       "title":  "エータ・ベータ・イータ",
+                       "title":  "ã¨ã¼ã¿ã»ãã¼ã¿ã»ã¤ã¼ã¿",
                        "difficulty":  "14+",
                        "levelIndex":  3,
                        "difficultyValue":  14.5,
@@ -10506,7 +10478,7 @@
                    },
                    {
                        "id":  2328,
-                       "title":  "アイ情劣等生",
+                       "title":  "ã¢ã¤æ\u0085å£ç­ç",
                        "difficulty":  "13",
                        "levelIndex":  3,
                        "difficultyValue":  13,
@@ -10540,7 +10512,7 @@
                    },
                    {
                        "id":  2329,
-                       "title":  "アイロニック",
+                       "title":  "ã¢ã¤ã­ããã¯",
                        "difficulty":  "13",
                        "levelIndex":  3,
                        "difficultyValue":  13,
@@ -10574,7 +10546,7 @@
                    },
                    {
                        "id":  233,
-                       "title":  "アルストロメリア",
+                       "title":  "ã¢ã«ã¹ãã­ã¡ãªã¢",
                        "difficulty":  "9+",
                        "levelIndex":  2,
                        "difficultyValue":  9.5,
@@ -10625,7 +10597,7 @@
                    },
                    {
                        "id":  2330,
-                       "title":  "孤独毒毒",
+                       "title":  "å­¤ç¬æ¯æ¯",
                        "difficulty":  "12+",
                        "levelIndex":  3,
                        "difficultyValue":  12.5,
@@ -10659,7 +10631,7 @@
                    },
                    {
                        "id":  2331,
-                       "title":  "スティールユー",
+                       "title":  "ã¹ãã£ã¼ã«ã¦ã¼",
                        "difficulty":  "12+",
                        "levelIndex":  3,
                        "difficultyValue":  12.5,
@@ -10693,7 +10665,7 @@
                    },
                    {
                        "id":  2332,
-                       "title":  "マチガイサガシ",
+                       "title":  "ããã¬ã¤ãµã¬ã·",
                        "difficulty":  "12+",
                        "levelIndex":  3,
                        "difficultyValue":  12.5,
@@ -10931,7 +10903,7 @@
                    },
                    {
                        "id":  2340,
-                       "title":  "To：Be Continued",
+                       "title":  "Toï¼Be Continued",
                        "difficulty":  "14",
                        "levelIndex":  2,
                        "difficultyValue":  14,
@@ -10948,7 +10920,7 @@
                    },
                    {
                        "id":  2340,
-                       "title":  "To：Be Continued",
+                       "title":  "Toï¼Be Continued",
                        "difficulty":  "15+",
                        "levelIndex":  3,
                        "difficultyValue":  15.5,
@@ -11203,7 +11175,7 @@
                    },
                    {
                        "id":  2350,
-                       "title":  "迷える音色は恋の唄",
+                       "title":  "è¿·ããé³è²ã¯æã®å",
                        "difficulty":  "10",
                        "levelIndex":  2,
                        "difficultyValue":  10,
@@ -11220,7 +11192,7 @@
                    },
                    {
                        "id":  2350,
-                       "title":  "迷える音色は恋の唄",
+                       "title":  "è¿·ããé³è²ã¯æã®å",
                        "difficulty":  "13+",
                        "levelIndex":  3,
                        "difficultyValue":  13.5,
@@ -11339,7 +11311,7 @@
                    },
                    {
                        "id":  2355,
-                       "title":  "「四季」より「冬」",
+                       "title":  "ãåå­£ããããå¬ã",
                        "difficulty":  "12",
                        "levelIndex":  2,
                        "difficultyValue":  12,
@@ -11356,7 +11328,7 @@
                    },
                    {
                        "id":  2355,
-                       "title":  "「四季」より「冬」",
+                       "title":  "ãåå­£ããããå¬ã",
                        "difficulty":  "14",
                        "levelIndex":  3,
                        "difficultyValue":  14,
@@ -11849,7 +11821,7 @@
                    },
                    {
                        "id":  2390,
-                       "title":  "祝福",
+                       "title":  "ç¥ç¦",
                        "difficulty":  "12",
                        "levelIndex":  3,
                        "difficultyValue":  12,
@@ -12002,7 +11974,7 @@
                    },
                    {
                        "id":  2399,
-                       "title":  "雷切-RAIKIRI-",
+                       "title":  "é·å-RAIKIRI-",
                        "difficulty":  "14+",
                        "levelIndex":  3,
                        "difficultyValue":  14.5,
@@ -12104,7 +12076,7 @@
                    },
                    {
                        "id":  2401,
-                       "title":  "オンソクデイズ!!",
+                       "title":  "ãªã³ã½ã¯ãã¤ãº!!",
                        "difficulty":  "12+",
                        "levelIndex":  2,
                        "difficultyValue":  12.5,
@@ -12291,7 +12263,7 @@
                    },
                    {
                        "id":  2409,
-                       "title":  "フリーフォール",
+                       "title":  "ããªã¼ãã©ã¼ã«",
                        "difficulty":  "11",
                        "levelIndex":  2,
                        "difficultyValue":  11,
@@ -12461,7 +12433,7 @@
                    },
                    {
                        "id":  2415,
-                       "title":  "放課後マーメイド",
+                       "title":  "æ¾èª²å¾ãã¼ã¡ã¤ã",
                        "difficulty":  "12",
                        "levelIndex":  3,
                        "difficultyValue":  12,
@@ -12648,7 +12620,7 @@
                    },
                    {
                        "id":  2427,
-                       "title":  "うたかたのせかいで",
+                       "title":  "ããããã®ãããã§",
                        "difficulty":  "14+",
                        "levelIndex":  3,
                        "difficultyValue":  14.5,
@@ -12699,7 +12671,7 @@
                    },
                    {
                        "id":  2429,
-                       "title":  "白庭",
+                       "title":  "ç½åº­",
                        "difficulty":  "14",
                        "levelIndex":  3,
                        "difficultyValue":  14,
@@ -12835,7 +12807,7 @@
                    },
                    {
                        "id":  2435,
-                       "title":  "異星にいこうね",
+                       "title":  "ç°æã«ãããã­",
                        "difficulty":  "13",
                        "levelIndex":  3,
                        "difficultyValue":  13,
@@ -13447,7 +13419,7 @@
                    },
                    {
                        "id":  2475,
-                       "title":  "Chaotic Ørder",
+                       "title":  "Chaotic Ãrder",
                        "difficulty":  "15+",
                        "levelIndex":  3,
                        "difficultyValue":  15.5,
@@ -13481,7 +13453,7 @@
                    },
                    {
                        "id":  2477,
-                       "title":  "sølips",
+                       "title":  "sÃ¸lips",
                        "difficulty":  "15",
                        "levelIndex":  3,
                        "difficultyValue":  15,
@@ -13515,7 +13487,7 @@
                    },
                    {
                        "id":  2478,
-                       "title":  "茉子の日常",
+                       "title":  "èå­ã®æ¥å¸¸",
                        "difficulty":  "12",
                        "levelIndex":  3,
                        "difficultyValue":  12,
@@ -13549,7 +13521,7 @@
                    },
                    {
                        "id":  2479,
-                       "title":  "キズナヒトツ",
+                       "title":  "ã­ãºãããã",
                        "difficulty":  "10+",
                        "levelIndex":  3,
                        "difficultyValue":  10.5,
@@ -13634,7 +13606,7 @@
                    },
                    {
                        "id":  2482,
-                       "title":  "ドーナドーナのうた",
+                       "title":  "ãã¼ããã¼ãã®ãã",
                        "difficulty":  "12",
                        "levelIndex":  3,
                        "difficultyValue":  12,
@@ -13719,7 +13691,7 @@
                    },
                    {
                        "id":  2486,
-                       "title":  "ワンダーシャッフェンの法則",
+                       "title":  "ã¯ã³ãã¼ã·ã£ããã§ã³ã®æ³å",
                        "difficulty":  "14",
                        "levelIndex":  3,
                        "difficultyValue":  14,
@@ -13889,7 +13861,7 @@
                    },
                    {
                        "id":  2491,
-                       "title":  "可愛くてごめん",
+                       "title":  "å¯æãã¦ããã",
                        "difficulty":  "5",
                        "levelIndex":  1,
                        "difficultyValue":  5,
@@ -13906,7 +13878,7 @@
                    },
                    {
                        "id":  2491,
-                       "title":  "可愛くてごめん",
+                       "title":  "å¯æãã¦ããã",
                        "difficulty":  "9",
                        "levelIndex":  2,
                        "difficultyValue":  9,
@@ -13957,7 +13929,7 @@
                    },
                    {
                        "id":  2492,
-                       "title":  "トウキョウ・シャンディ・ランデヴ feat. 花譜, ツミキ",
+                       "title":  "ãã¦ã­ã§ã¦ã»ã·ã£ã³ãã£ã»ã©ã³ãã´ feat. è±è­, ããã­",
                        "difficulty":  "10",
                        "levelIndex":  2,
                        "difficultyValue":  10,
@@ -14008,7 +13980,7 @@
                    },
                    {
                        "id":  2493,
-                       "title":  "マツケンサンバⅡ",
+                       "title":  "ããã±ã³ãµã³ãâ\u0085¡",
                        "difficulty":  "12+",
                        "levelIndex":  3,
                        "difficultyValue":  12.5,
@@ -14042,7 +14014,7 @@
                    },
                    {
                        "id":  2494,
-                       "title":  "アイドル",
+                       "title":  "ã¢ã¤ãã«",
                        "difficulty":  "5",
                        "levelIndex":  1,
                        "difficultyValue":  5,
@@ -14059,7 +14031,7 @@
                    },
                    {
                        "id":  2494,
-                       "title":  "アイドル",
+                       "title":  "ã¢ã¤ãã«",
                        "difficulty":  "9+",
                        "levelIndex":  2,
                        "difficultyValue":  9.5,
@@ -14076,7 +14048,7 @@
                    },
                    {
                        "id":  2494,
-                       "title":  "アイドル",
+                       "title":  "ã¢ã¤ãã«",
                        "difficulty":  "12+",
                        "levelIndex":  3,
                        "difficultyValue":  12.5,
@@ -14144,7 +14116,7 @@
                    },
                    {
                        "id":  2496,
-                       "title":  "さくゆいたいそう",
+                       "title":  "ãããããããã",
                        "difficulty":  "11+",
                        "levelIndex":  3,
                        "difficultyValue":  11.5,
@@ -14178,7 +14150,7 @@
                    },
                    {
                        "id":  2497,
-                       "title":  "アイデン貞貞メルトダウン",
+                       "title":  "ã¢ã¤ãã³è²è²ã¡ã«ããã¦ã³",
                        "difficulty":  "9+",
                        "levelIndex":  2,
                        "difficultyValue":  9.5,
@@ -14195,7 +14167,7 @@
                    },
                    {
                        "id":  2497,
-                       "title":  "アイデン貞貞メルトダウン",
+                       "title":  "ã¢ã¤ãã³è²è²ã¡ã«ããã¦ã³",
                        "difficulty":  "11+",
                        "levelIndex":  3,
                        "difficultyValue":  11.5,
@@ -14229,7 +14201,7 @@
                    },
                    {
                        "id":  2498,
-                       "title":  "ひめごと＊クライシスターズ",
+                       "title":  "ã²ããã¨ï¼ã¯ã©ã¤ã·ã¹ã¿ã¼ãº",
                        "difficulty":  "13",
                        "levelIndex":  3,
                        "difficultyValue":  13,
@@ -14365,7 +14337,7 @@
                    },
                    {
                        "id":  2502,
-                       "title":  "パラレルサーチライト",
+                       "title":  "ãã©ã¬ã«ãµã¼ãã©ã¤ã",
                        "difficulty":  "9+",
                        "levelIndex":  2,
                        "difficultyValue":  9.5,
@@ -14382,7 +14354,7 @@
                    },
                    {
                        "id":  2502,
-                       "title":  "パラレルサーチライト",
+                       "title":  "ãã©ã¬ã«ãµã¼ãã©ã¤ã",
                        "difficulty":  "13",
                        "levelIndex":  3,
                        "difficultyValue":  13,
@@ -14467,7 +14439,7 @@
                    },
                    {
                        "id":  2505,
-                       "title":  "ラブカ？",
+                       "title":  "ã©ãã«ï¼",
                        "difficulty":  "10",
                        "levelIndex":  2,
                        "difficultyValue":  10,
@@ -14501,7 +14473,7 @@
                    },
                    {
                        "id":  2506,
-                       "title":  "強風オールバック",
+                       "title":  "å¼·é¢¨ãªã¼ã«ããã¯",
                        "difficulty":  "8+",
                        "levelIndex":  2,
                        "difficultyValue":  8.5,
@@ -14552,7 +14524,7 @@
                    },
                    {
                        "id":  2507,
-                       "title":  "星界ちゃんと可不ちゃんのおつかい合騒曲",
+                       "title":  "æçã¡ããã¨å¯ä¸ã¡ããã®ãã¤ããåé¨æ²",
                        "difficulty":  "12",
                        "levelIndex":  2,
                        "difficultyValue":  12,
@@ -14569,7 +14541,7 @@
                    },
                    {
                        "id":  2507,
-                       "title":  "星界ちゃんと可不ちゃんのおつかい合騒曲",
+                       "title":  "æçã¡ããã¨å¯ä¸ã¡ããã®ãã¤ããåé¨æ²",
                        "difficulty":  "14",
                        "levelIndex":  3,
                        "difficultyValue":  14,
@@ -14773,7 +14745,7 @@
                    },
                    {
                        "id":  2515,
-                       "title":  "イナイイナイ依存症",
+                       "title":  "ã¤ãã¤ã¤ãã¤ä¾å­ç",
                        "difficulty":  "11",
                        "levelIndex":  2,
                        "difficultyValue":  11,
@@ -14807,7 +14779,7 @@
                    },
                    {
                        "id":  2517,
-                       "title":  "バグ",
+                       "title":  "ãã°",
                        "difficulty":  "13+",
                        "levelIndex":  3,
                        "difficultyValue":  13.5,
@@ -14909,7 +14881,7 @@
                    },
                    {
                        "id":  2522,
-                       "title":  "ヒアソビ",
+                       "title":  "ãã¢ã½ã",
                        "difficulty":  "13+",
                        "levelIndex":  3,
                        "difficultyValue":  13.5,
@@ -14960,7 +14932,7 @@
                    },
                    {
                        "id":  2524,
-                       "title":  "ユックリ feat.餅千歳",
+                       "title":  "ã¦ãã¯ãª feat.é¤\u0085åæ­³",
                        "difficulty":  "12+",
                        "levelIndex":  3,
                        "difficultyValue":  12.5,
@@ -14994,7 +14966,7 @@
                    },
                    {
                        "id":  2525,
-                       "title":  "本物のヒーローとの戦い",
+                       "title":  "æ¬ç©ã®ãã¼ã­ã¼ã¨ã®æ¦ã",
                        "difficulty":  "11+",
                        "levelIndex":  2,
                        "difficultyValue":  11.5,
@@ -15045,7 +15017,7 @@
                    },
                    {
                        "id":  2526,
-                       "title":  "華麗なる死闘",
+                       "title":  "è¯éºãªãæ­»é",
                        "difficulty":  "13+",
                        "levelIndex":  3,
                        "difficultyValue":  13.5,
@@ -15249,7 +15221,7 @@
                    },
                    {
                        "id":  2533,
-                       "title":  "ΩΩPARTS",
+                       "title":  "Î©Î©PARTS",
                        "difficulty":  "13+",
                        "levelIndex":  2,
                        "difficultyValue":  13.5,
@@ -15266,7 +15238,7 @@
                    },
                    {
                        "id":  2533,
-                       "title":  "ΩΩPARTS",
+                       "title":  "Î©Î©PARTS",
                        "difficulty":  "15",
                        "levelIndex":  3,
                        "difficultyValue":  15,
@@ -15504,7 +15476,7 @@
                    },
                    {
                        "id":  2539,
-                       "title":  "Ωκεανος",
+                       "title":  "Î©ÎºÎµÎ±Î½Î¿Ï",
                        "difficulty":  "14",
                        "levelIndex":  3,
                        "difficultyValue":  14,
@@ -15657,7 +15629,7 @@
                    },
                    {
                        "id":  2544,
-                       "title":  "MuseDashを作っているPeroPeroGamesさんが倒産しちゃったよ～",
+                       "title":  "MuseDashãä½ã£ã¦ããPeroPeroGamesãããåç£ãã¡ãã£ããï½",
                        "difficulty":  "12",
                        "levelIndex":  2,
                        "difficultyValue":  12,
@@ -15742,7 +15714,7 @@
                    },
                    {
                        "id":  2546,
-                       "title":  "それはもうらぶちゅ",
+                       "title":  "ããã¯ãããã¶ã¡ã\u0085",
                        "difficulty":  "12+",
                        "levelIndex":  3,
                        "difficultyValue":  12.5,
@@ -15946,7 +15918,7 @@
                    },
                    {
                        "id":  2553,
-                       "title":  "オン×ステージ！",
+                       "title":  "ãªã³Ãã¹ãã¼ã¸ï¼",
                        "difficulty":  "12",
                        "levelIndex":  3,
                        "difficultyValue":  12,
@@ -16320,7 +16292,7 @@
                    },
                    {
                        "id":  2566,
-                       "title":  "少女PastQ",
+                       "title":  "å°å¥³PastQ",
                        "difficulty":  "11+",
                        "levelIndex":  3,
                        "difficultyValue":  11.5,
@@ -16354,7 +16326,7 @@
                    },
                    {
                        "id":  2567,
-                       "title":  "君と夏色っ！～わんダフルバケーション～",
+                       "title":  "åã¨å¤è²ã£ï¼ï½ããããã«ãã±ã¼ã·ã§ã³ï½",
                        "difficulty":  "12+",
                        "levelIndex":  3,
                        "difficultyValue":  12.5,
@@ -16524,7 +16496,7 @@
                    },
                    {
                        "id":  2572,
-                       "title":  "驚異の魔法",
+                       "title":  "é©ç°ã®é­æ³",
                        "difficulty":  "13+",
                        "levelIndex":  3,
                        "difficultyValue":  13.5,
@@ -16660,7 +16632,7 @@
                    },
                    {
                        "id":  2576,
-                       "title":  "ワーカーホリック",
+                       "title":  "ã¯ã¼ã«ã¼ããªãã¯",
                        "difficulty":  "13",
                        "levelIndex":  3,
                        "difficultyValue":  13,
@@ -16745,7 +16717,7 @@
                    },
                    {
                        "id":  2579,
-                       "title":  "ラストピースに祝福と栄光を",
+                       "title":  "ã©ã¹ããã¼ã¹ã«ç¥ç¦ã¨æ å\u0085ã",
                        "difficulty":  "14",
                        "levelIndex":  2,
                        "difficultyValue":  14,
@@ -16762,7 +16734,7 @@
                    },
                    {
                        "id":  2579,
-                       "title":  "ラストピースに祝福と栄光を",
+                       "title":  "ã©ã¹ããã¼ã¹ã«ç¥ç¦ã¨æ å\u0085ã",
                        "difficulty":  "15+",
                        "levelIndex":  3,
                        "difficultyValue":  15.5,
@@ -16847,7 +16819,7 @@
                    },
                    {
                        "id":  2581,
-                       "title":  "Dèfandour",
+                       "title":  "DÃ¨fandour",
                        "difficulty":  "12",
                        "levelIndex":  2,
                        "difficultyValue":  12,
@@ -16949,7 +16921,7 @@
                    },
                    {
                        "id":  2584,
-                       "title":  "勇者",
+                       "title":  "åè\u0085",
                        "difficulty":  "13",
                        "levelIndex":  3,
                        "difficultyValue":  13,
@@ -16983,7 +16955,7 @@
                    },
                    {
                        "id":  2585,
-                       "title":  "カオスが極まる",
+                       "title":  "ã«ãªã¹ãæ¥µã¾ã",
                        "difficulty":  "13+",
                        "levelIndex":  3,
                        "difficultyValue":  13.5,
@@ -17017,7 +16989,7 @@
                    },
                    {
                        "id":  2586,
-                       "title":  "唱",
+                       "title":  "å±",
                        "difficulty":  "12+",
                        "levelIndex":  3,
                        "difficultyValue":  12.5,
@@ -17068,7 +17040,7 @@
                    },
                    {
                        "id":  2589,
-                       "title":  "ÅMARA (大未来電脳)",
+                       "title":  "Ã\u0085MARA (å¤§æªæ¥é»è³)",
                        "difficulty":  "13",
                        "levelIndex":  2,
                        "difficultyValue":  13,
@@ -17153,7 +17125,7 @@
                    },
                    {
                        "id":  2591,
-                       "title":  "寝起きヤシの木",
+                       "title":  "å¯èµ·ãã¤ã·ã®æ¨",
                        "difficulty":  "12+",
                        "levelIndex":  3,
                        "difficultyValue":  12.5,
@@ -17187,7 +17159,7 @@
                    },
                    {
                        "id":  2592,
-                       "title":  "マツヨイナイトバグ",
+                       "title":  "ããã¨ã¤ãã¤ããã°",
                        "difficulty":  "14",
                        "levelIndex":  3,
                        "difficultyValue":  14,
@@ -17238,7 +17210,7 @@
                    },
                    {
                        "id":  2594,
-                       "title":  "ヒュブリスの頂に聳えるのは",
+                       "title":  "ãã¥ããªã¹ã®é ã«è³ããã®ã¯",
                        "difficulty":  "14+",
                        "levelIndex":  3,
                        "difficultyValue":  14.5,
@@ -17374,7 +17346,7 @@
                    },
                    {
                        "id":  2599,
-                       "title":  "夏宵スターマイン",
+                       "title":  "å¤å®µã¹ã¿ã¼ãã¤ã³",
                        "difficulty":  "12+",
                        "levelIndex":  3,
                        "difficultyValue":  12.5,
@@ -17408,7 +17380,7 @@
                    },
                    {
                        "id":  2600,
-                       "title":  "其のエメラルドを見よ",
+                       "title":  "å\u0085¶ã®ã¨ã¡ã©ã«ããè¦ã",
                        "difficulty":  "15",
                        "levelIndex":  3,
                        "difficultyValue":  15,
@@ -17442,7 +17414,7 @@
                    },
                    {
                        "id":  2601,
-                       "title":  "バッドトリッパー",
+                       "title":  "ãããããªããã¼",
                        "difficulty":  "12",
                        "levelIndex":  3,
                        "difficultyValue":  12,
@@ -17493,7 +17465,7 @@
                    },
                    {
                        "id":  2603,
-                       "title":  "イーヴィルガール",
+                       "title":  "ã¤ã¼ã´ã£ã«ã¬ã¼ã«",
                        "difficulty":  "14",
                        "levelIndex":  3,
                        "difficultyValue":  14,
@@ -17561,7 +17533,7 @@
                    },
                    {
                        "id":  2605,
-                       "title":  "優勝Princess♡",
+                       "title":  "åªåPrincessâ¡",
                        "difficulty":  "13",
                        "levelIndex":  3,
                        "difficultyValue":  13,
@@ -17578,7 +17550,7 @@
                    },
                    {
                        "id":  2606,
-                       "title":  "リ・フィクション・O",
+                       "title":  "ãªã»ãã£ã¯ã·ã§ã³ã»O",
                        "difficulty":  "13+",
                        "levelIndex":  2,
                        "difficultyValue":  13.5,
@@ -17595,7 +17567,7 @@
                    },
                    {
                        "id":  2606,
-                       "title":  "リ・フィクション・O",
+                       "title":  "ãªã»ãã£ã¯ã·ã§ã³ã»O",
                        "difficulty":  "15",
                        "levelIndex":  3,
                        "difficultyValue":  15,
@@ -17646,7 +17618,7 @@
                    },
                    {
                        "id":  2610,
-                       "title":  "おくすり飲んで寝よう",
+                       "title":  "ããããé£²ãã§å¯ãã",
                        "difficulty":  "12+",
                        "levelIndex":  3,
                        "difficultyValue":  12.5,
@@ -17680,7 +17652,7 @@
                    },
                    {
                        "id":  2611,
-                       "title":  "匿名M",
+                       "title":  "å¿åM",
                        "difficulty":  "13",
                        "levelIndex":  3,
                        "difficultyValue":  13,
@@ -17833,7 +17805,7 @@
                    },
                    {
                        "id":  2616,
-                       "title":  "黎命に殉ず",
+                       "title":  "é»å½ã«æ®ã",
                        "difficulty":  "13+",
                        "levelIndex":  2,
                        "difficultyValue":  13.5,
@@ -17850,7 +17822,7 @@
                    },
                    {
                        "id":  2616,
-                       "title":  "黎命に殉ず",
+                       "title":  "é»å½ã«æ®ã",
                        "difficulty":  "15",
                        "levelIndex":  3,
                        "difficultyValue":  15,
@@ -17952,7 +17924,7 @@
                    },
                    {
                        "id":  2620,
-                       "title":  "チューリングの跡",
+                       "title":  "ãã¥ã¼ãªã³ã°ã®è·¡",
                        "difficulty":  "14",
                        "levelIndex":  2,
                        "difficultyValue":  14,
@@ -18309,7 +18281,7 @@
                    },
                    {
                        "id":  2636,
-                       "title":  "コメクエスト",
+                       "title":  "ã³ã¡ã¯ã¨ã¹ã",
                        "difficulty":  "13+",
                        "levelIndex":  3,
                        "difficultyValue":  13.5,
@@ -18343,7 +18315,7 @@
                    },
                    {
                        "id":  2637,
-                       "title":  "乙女戦士☆あーし。",
+                       "title":  "ä¹å¥³æ¦å£«âãã¼ãã",
                        "difficulty":  "13+",
                        "levelIndex":  3,
                        "difficultyValue":  13.5,
@@ -18411,7 +18383,7 @@
                    },
                    {
                        "id":  2639,
-                       "title":  "ソーシャルワンダーランド",
+                       "title":  "ã½ã¼ã·ã£ã«ã¯ã³ãã¼ã©ã³ã",
                        "difficulty":  "14+",
                        "levelIndex":  3,
                        "difficultyValue":  14.5,
@@ -18445,7 +18417,7 @@
                    },
                    {
                        "id":  2641,
-                       "title":  "マシンガンポエムドール",
+                       "title":  "ãã·ã³ã¬ã³ãã¨ã ãã¼ã«",
                        "difficulty":  "15",
                        "levelIndex":  3,
                        "difficultyValue":  15,
@@ -18598,7 +18570,7 @@
                    },
                    {
                        "id":  2648,
-                       "title":  "Tuatha Dé Danann",
+                       "title":  "Tuatha DÃ© Danann",
                        "difficulty":  "15+",
                        "levelIndex":  3,
                        "difficultyValue":  15.5,
@@ -18870,7 +18842,7 @@
                    },
                    {
                        "id":  2659,
-                       "title":  "アプリコット",
+                       "title":  "ã¢ããªã³ãã",
                        "difficulty":  "13+",
                        "levelIndex":  3,
                        "difficultyValue":  13.5,
@@ -18989,7 +18961,7 @@
                    },
                    {
                        "id":  2665,
-                       "title":  "超熊猫的周遊記（ワンダーパンダートラベラー）",
+                       "title":  "è¶\u0085çç«çå¨éè¨ï¼ã¯ã³ãã¼ãã³ãã¼ãã©ãã©ã¼ï¼",
                        "difficulty":  "14+",
                        "levelIndex":  3,
                        "difficultyValue":  14.5,
@@ -19057,7 +19029,7 @@
                    },
                    {
                        "id":  2671,
-                       "title":  "デビルじゃないもん",
+                       "title":  "ããã«ãããªããã",
                        "difficulty":  "12",
                        "levelIndex":  3,
                        "difficultyValue":  12,
@@ -19091,7 +19063,7 @@
                    },
                    {
                        "id":  2673,
-                       "title":  "ハッピータイフーン",
+                       "title":  "ãããã¼ã¿ã¤ãã¼ã³",
                        "difficulty":  "12",
                        "levelIndex":  3,
                        "difficultyValue":  12,
@@ -19159,7 +19131,7 @@
                    },
                    {
                        "id":  2675,
-                       "title":  "トゥッティ！",
+                       "title":  "ãã¥ããã£ï¼",
                        "difficulty":  "12+",
                        "levelIndex":  3,
                        "difficultyValue":  12.5,
@@ -19261,7 +19233,7 @@
                    },
                    {
                        "id":  2680,
-                       "title":  "NAGAREBOSHI☆ROCKET",
+                       "title":  "NAGAREBOSHIâROCKET",
                        "difficulty":  "14",
                        "levelIndex":  3,
                        "difficultyValue":  14,
@@ -19295,7 +19267,7 @@
                    },
                    {
                        "id":  2681,
-                       "title":  "群青シグナル",
+                       "title":  "ç¾¤éã·ã°ãã«",
                        "difficulty":  "13+",
                        "levelIndex":  3,
                        "difficultyValue":  13.5,
@@ -19856,7 +19828,7 @@
                    },
                    {
                        "id":  2702,
-                       "title":  "イルミネーション",
+                       "title":  "ã¤ã«ããã¼ã·ã§ã³",
                        "difficulty":  "12+",
                        "levelIndex":  3,
                        "difficultyValue":  12.5,
@@ -19941,7 +19913,7 @@
                    },
                    {
                        "id":  2705,
-                       "title":  "メッちゅう殴打",
+                       "title":  "ã¡ãã¡ã\u0085ãæ®´æ",
                        "difficulty":  "14",
                        "levelIndex":  3,
                        "difficultyValue":  14,
@@ -20264,7 +20236,7 @@
                    },
                    {
                        "id":  2716,
-                       "title":  "アイデンティティ（104期NEW Ver.）",
+                       "title":  "ã¢ã¤ãã³ãã£ãã£ï¼104æNEW Ver.ï¼",
                        "difficulty":  "14",
                        "levelIndex":  3,
                        "difficultyValue":  14,
@@ -20774,7 +20746,7 @@
                    },
                    {
                        "id":  2743,
-                       "title":  "ひつぎとふたご",
+                       "title":  "ã²ã¤ãã¨ãµãã",
                        "difficulty":  "15",
                        "levelIndex":  3,
                        "difficultyValue":  15,
@@ -20944,7 +20916,7 @@
                    },
                    {
                        "id":  2749,
-                       "title":  "本能的 Survivor",
+                       "title":  "æ¬è½ç Survivor",
                        "difficulty":  "13+",
                        "levelIndex":  3,
                        "difficultyValue":  13.5,
@@ -21114,7 +21086,7 @@
                    },
                    {
                        "id":  2763,
-                       "title":  "躯樹の墓守",
+                       "title":  "èº¯æ¨¹ã®å¢å®",
                        "difficulty":  "15",
                        "levelIndex":  3,
                        "difficultyValue":  15,
@@ -21233,7 +21205,7 @@
                    },
                    {
                        "id":  2768,
-                       "title":  "MegiddØ",
+                       "title":  "MegiddÃ",
                        "difficulty":  "14+",
                        "levelIndex":  2,
                        "difficultyValue":  14.5,
@@ -21250,7 +21222,7 @@
                    },
                    {
                        "id":  2768,
-                       "title":  "MegiddØ",
+                       "title":  "MegiddÃ",
                        "difficulty":  "15+",
                        "levelIndex":  3,
                        "difficultyValue":  15.5,
@@ -21607,7 +21579,7 @@
                    },
                    {
                        "id":  2787,
-                       "title":  "超最終鬼畜妹フランドール・S",
+                       "title":  "è¶\u0085æçµé¬¼çå¦¹ãã©ã³ãã¼ã«ã»S",
                        "difficulty":  "15",
                        "levelIndex":  3,
                        "difficultyValue":  15,
@@ -21726,7 +21698,7 @@
                    },
                    {
                        "id":  2799,
-                       "title":  "キミとボクへの葬送歌",
+                       "title":  "ã­ãã¨ãã¯ã¸ã®è¬éæ­",
                        "difficulty":  "15",
                        "levelIndex":  3,
                        "difficultyValue":  15,
@@ -21760,7 +21732,7 @@
                    },
                    {
                        "id":  2800,
-                       "title":  "淵底のグレイ・ユークロニア",
+                       "title":  "æ·µåºã®ã°ã¬ã¤ã»ã¦ã¼ã¯ã­ãã¢",
                        "difficulty":  "15",
                        "levelIndex":  3,
                        "difficultyValue":  15,
@@ -21964,7 +21936,7 @@
                    },
                    {
                        "id":  281,
-                       "title":  "ラクガキスト",
+                       "title":  "ã©ã¯ã¬ã­ã¹ã",
                        "difficulty":  "14",
                        "levelIndex":  3,
                        "difficultyValue":  14,
@@ -23069,7 +23041,7 @@
                    },
                    {
                        "id":  285,
-                       "title":  "メルト",
+                       "title":  "ã¡ã«ã",
                        "difficulty":  "11",
                        "levelIndex":  3,
                        "difficultyValue":  11,
@@ -26996,7 +26968,7 @@
                    },
                    {
                        "id":  371,
-                       "title":  "アンハッピーリフレイン",
+                       "title":  "ã¢ã³ãããã¼ãªãã¬ã¤ã³",
                        "difficulty":  "9+",
                        "levelIndex":  2,
                        "difficultyValue":  9.5,
@@ -27234,7 +27206,7 @@
                    },
                    {
                        "id":  386,
-                       "title":  "神威",
+                       "title":  "ç¥å¨",
                        "difficulty":  "15",
                        "levelIndex":  3,
                        "difficultyValue":  15,
@@ -27591,7 +27563,7 @@
                    },
                    {
                        "id":  407,
-                       "title":  "混沌を越えし我らが神聖なる調律主を讃えよ",
+                       "title":  "æ··æ²ãè¶ããæããç¥èãªãèª¿å¾ä¸»ãè®ãã",
                        "difficulty":  "15+",
                        "levelIndex":  3,
                        "difficultyValue":  15.5,
@@ -27727,7 +27699,7 @@
                    },
                    {
                        "id":  421,
-                       "title":  "前前前世",
+                       "title":  "åååä¸",
                        "difficulty":  "8+",
                        "levelIndex":  2,
                        "difficultyValue":  8.5,
@@ -27744,7 +27716,7 @@
                    },
                    {
                        "id":  421,
-                       "title":  "前前前世",
+                       "title":  "åååä¸",
                        "difficulty":  "12",
                        "levelIndex":  3,
                        "difficultyValue":  12,
@@ -28169,7 +28141,7 @@
                    },
                    {
                        "id":  448,
-                       "title":  "のぼれ！すすめ！高い塔",
+                       "title":  "ã®ã¼ãï¼ãããï¼é«ãå¡",
                        "difficulty":  "14",
                        "levelIndex":  3,
                        "difficultyValue":  14,
@@ -28832,7 +28804,7 @@
                    },
                    {
                        "id":  49,
-                       "title":  "エピクロスの虹はもう見えない",
+                       "title":  "ã¨ãã¯ã­ã¹ã®è¹ã¯ããè¦ããªã",
                        "difficulty":  "11",
                        "levelIndex":  3,
                        "difficultyValue":  11,
@@ -28900,7 +28872,7 @@
                    },
                    {
                        "id":  492,
-                       "title":  "時の冒険者",
+                       "title":  "æã®åéºè\u0085",
                        "difficulty":  "9+",
                        "levelIndex":  2,
                        "difficultyValue":  9.5,
@@ -29019,7 +28991,7 @@
                    },
                    {
                        "id":  499,
-                       "title":  "Caliburne ～Story of the Legendary sword～",
+                       "title":  "Caliburne ï½Story of the Legendary swordï½",
                        "difficulty":  "12+",
                        "levelIndex":  2,
                        "difficultyValue":  12.5,
@@ -29835,7 +29807,7 @@
                    },
                    {
                        "id":  570,
-                       "title":  "ねぇ、壊れタ人形ハ何処へ棄テらレるノ？",
+                       "title":  "ã­ããå£ãã¿äººå½¢ãä½å¦ã¸æ£ããã¬ããï¼",
                        "difficulty":  "12+",
                        "levelIndex":  2,
                        "difficultyValue":  12.5,
@@ -29920,7 +29892,7 @@
                    },
                    {
                        "id":  574,
-                       "title":  "ネ！コ！",
+                       "title":  "ãï¼ã³ï¼",
                        "difficulty":  "14",
                        "levelIndex":  4,
                        "difficultyValue":  14,
@@ -30328,7 +30300,7 @@
                    },
                    {
                        "id":  614,
-                       "title":  "Change Our MIRAI！ (Our 7 Lights)",
+                       "title":  "Change Our MIRAIï¼ (Our 7 Lights)",
                        "difficulty":  "13",
                        "levelIndex":  3,
                        "difficultyValue":  13,
@@ -30447,7 +30419,7 @@
                    },
                    {
                        "id":  618,
-                       "title":  "業 -善なる神とこの世の悪について-",
+                       "title":  "æ¥­ -åãªãç¥ã¨ãã®ä¸ã®æªã«ã¤ãã¦-",
                        "difficulty":  "15+",
                        "levelIndex":  3,
                        "difficultyValue":  15.5,
@@ -30685,7 +30657,7 @@
                    },
                    {
                        "id":  631,
-                       "title":  "初音ミクの激唱",
+                       "title":  "åé³ãã¯ã®æ¿å±",
                        "difficulty":  "14+",
                        "levelIndex":  3,
                        "difficultyValue":  14.5,
@@ -30787,7 +30759,7 @@
                    },
                    {
                        "id":  637,
-                       "title":  "きゅうりバーにダイブ",
+                       "title":  "ãã\u0085ãããã¼ã«ãã¤ã",
                        "difficulty":  "14",
                        "levelIndex":  3,
                        "difficultyValue":  14,
@@ -31535,7 +31507,7 @@
                    },
                    {
                        "id":  695,
-                       "title":  "ハートアタック",
+                       "title":  "ãã¼ãã¢ã¿ãã¯",
                        "difficulty":  "14",
                        "levelIndex":  3,
                        "difficultyValue":  14,
@@ -31637,7 +31609,7 @@
                    },
                    {
                        "id":  700,
-                       "title":  "夕焼けのRed Parade",
+                       "title":  "å¤ç¼ãã®Red Parade",
                        "difficulty":  "14+",
                        "levelIndex":  3,
                        "difficultyValue":  14.5,
@@ -31671,7 +31643,7 @@
                    },
                    {
                        "id":  702,
-                       "title":  "スピカの天秤",
+                       "title":  "ã¹ãã«ã®å¤©ç§¤",
                        "difficulty":  "14+",
                        "levelIndex":  3,
                        "difficultyValue":  14.5,
@@ -33354,7 +33326,7 @@
                    },
                    {
                        "id":  815,
-                       "title":  "ただ君に晴れ",
+                       "title":  "ãã åã«æ´ã",
                        "difficulty":  "11+",
                        "levelIndex":  3,
                        "difficultyValue":  11.5,
@@ -33422,7 +33394,7 @@
                    },
                    {
                        "id":  819,
-                       "title":  "最終鬼畜妹フランドール・S",
+                       "title":  "æçµé¬¼çå¦¹ãã©ã³ãã¼ã«ã»S",
                        "difficulty":  "14",
                        "levelIndex":  3,
                        "difficultyValue":  14,
@@ -33439,7 +33411,7 @@
                    },
                    {
                        "id":  819,
-                       "title":  "最終鬼畜妹フランドール・S",
+                       "title":  "æçµé¬¼çå¦¹ãã©ã³ãã¼ã«ã»S",
                        "difficulty":  "14+",
                        "levelIndex":  4,
                        "difficultyValue":  14.5,
@@ -33490,7 +33462,7 @@
                    },
                    {
                        "id":  822,
-                       "title":  "Excalibur ～Revived resolution～",
+                       "title":  "Excalibur ï½Revived resolutionï½",
                        "difficulty":  "12+",
                        "levelIndex":  2,
                        "difficultyValue":  12.5,
@@ -33541,7 +33513,7 @@
                    },
                    {
                        "id":  824,
-                       "title":  "神威 (NAOKI × ZPP MIX)",
+                       "title":  "ç¥å¨ (NAOKI Ã ZPP MIX)",
                        "difficulty":  "15",
                        "levelIndex":  3,
                        "difficultyValue":  15,
@@ -33728,7 +33700,7 @@
                    },
                    {
                        "id":  834,
-                       "title":  "せかいせいふく！ゆりあちゃん！",
+                       "title":  "ããããããµãï¼ãããã¡ããï¼",
                        "difficulty":  "12",
                        "levelIndex":  2,
                        "difficultyValue":  12,
@@ -35020,7 +34992,7 @@
                    },
                    {
                        "id":  918,
-                       "title":  "《破滅》 ～ Rhapsody for The End",
+                       "title":  "ãç ´æ»\u0085ã ï½ Rhapsody for The End",
                        "difficulty":  "12+",
                        "levelIndex":  2,
                        "difficultyValue":  12.5,
@@ -35394,7 +35366,7 @@
                    },
                    {
                        "id":  941,
-                       "title":  "アヤカシ",
+                       "title":  "ã¢ã¤ã«ã·",
                        "difficulty":  "9+",
                        "levelIndex":  2,
                        "difficultyValue":  9.5,
@@ -35564,7 +35536,7 @@
                    },
                    {
                        "id":  95,
-                       "title":  "砂漠のハンティングガール♡",
+                       "title":  "ç æ¼ ã®ãã³ãã£ã³ã°ã¬ã¼ã«â¡",
                        "difficulty":  "14",
                        "levelIndex":  4,
                        "difficultyValue":  14,
@@ -35649,7 +35621,7 @@
                    },
                    {
                        "id":  958,
-                       "title":  "インドア系ならトラックメイカー",
+                       "title":  "ã¤ã³ãã¢ç³»ãªããã©ãã¯ã¡ã¤ã«ã¼",
                        "difficulty":  "12+",
                        "levelIndex":  3,
                        "difficultyValue":  12.5,
@@ -35887,7 +35859,7 @@
                    },
                    {
                        "id":  972,
-                       "title":  "宿星審判",
+                       "title":  "å®¿æå¯©å¤",
                        "difficulty":  "9+",
                        "levelIndex":  1,
                        "difficultyValue":  9.5,
@@ -35904,7 +35876,7 @@
                    },
                    {
                        "id":  972,
-                       "title":  "宿星審判",
+                       "title":  "å®¿æå¯©å¤",
                        "difficulty":  "15+",
                        "levelIndex":  3,
                        "difficultyValue":  15.5,
@@ -36142,7 +36114,7 @@
                    },
                    {
                        "id":  984,
-                       "title":  "乙女解剖",
+                       "title":  "ä¹å¥³è§£å",
                        "difficulty":  "11+",
                        "levelIndex":  3,
                        "difficultyValue":  11.5,
@@ -36210,7 +36182,7 @@
                    },
                    {
                        "id":  99,
-                       "title":  "言ノ葉カルマ",
+                       "title":  "è¨ãèã«ã«ã",
                        "difficulty":  "13",
                        "levelIndex":  3,
                        "difficultyValue":  13,
@@ -36560,7 +36532,7 @@
                        "playTime":  "2026-08-19 17:08:00",
                        "id":  2477,
                        "levelIndex":  3,
-                       "title":  "sølips",
+                       "title":  "sÃ¸lips",
                        "difficulty":  "15",
                        "score":  1000185,
                        "rating":  16.31,
@@ -36574,7 +36546,7 @@
                        "playTime":  "2026-08-19 17:05:00",
                        "id":  2477,
                        "levelIndex":  3,
-                       "title":  "sølips",
+                       "title":  "sÃ¸lips",
                        "difficulty":  "15",
                        "score":  1000567,
                        "rating":  16.35,
@@ -36588,7 +36560,7 @@
                        "playTime":  "2026-08-19 17:01:00",
                        "id":  972,
                        "levelIndex":  3,
-                       "title":  "宿星審判",
+                       "title":  "å®¿æå¯©å¤",
                        "difficulty":  "15",
                        "score":  1000765,
                        "rating":  16.57,
@@ -36672,7 +36644,7 @@
                        "playTime":  "2026-08-19 16:39:00",
                        "id":  824,
                        "levelIndex":  3,
-                       "title":  "神威 (NAOKI × ZPP MIX)",
+                       "title":  "ç¥å¨ (NAOKI Ã ZPP MIX)",
                        "difficulty":  "15",
                        "score":  1007515,
                        "rating":  17,
@@ -36700,7 +36672,7 @@
                        "playTime":  "2026-08-19 16:32:00",
                        "id":  2340,
                        "levelIndex":  3,
-                       "title":  "To：Be Continued",
+                       "title":  "Toï¼Be Continued",
                        "difficulty":  "15+",
                        "score":  999650,
                        "rating":  16.48,
@@ -36840,7 +36812,7 @@
                        "playTime":  "2026-08-19 15:50:00",
                        "id":  2191,
                        "levelIndex":  3,
-                       "title":  "とびだせ！TO THE COSMIC!!",
+                       "title":  "ã¨ã³ã ãï¼TO THE COSMIC!!",
                        "difficulty":  "13+",
                        "score":  1009950,
                        "rating":  15.65,
@@ -36854,7 +36826,7 @@
                        "playTime":  "2026-08-19 15:45:00",
                        "id":  2517,
                        "levelIndex":  3,
-                       "title":  "バグ",
+                       "title":  "ãã°",
                        "difficulty":  "13+",
                        "score":  1008138,
                        "rating":  15.66,
@@ -36882,7 +36854,7 @@
                        "playTime":  "2026-08-13 23:02:00",
                        "id":  2049,
                        "levelIndex":  3,
-                       "title":  "脳天直撃",
+                       "title":  "è³å¤©ç´æ",
                        "difficulty":  "15",
                        "score":  1005680,
                        "rating":  16.73,
@@ -36952,7 +36924,7 @@
                        "playTime":  "2026-08-13 22:44:00",
                        "id":  210,
                        "levelIndex":  4,
-                       "title":  "アスノヨゾラ哨戒班",
+                       "title":  "ã¢ã¹ãã¨ã¾ã©å¨æç­",
                        "difficulty":  "14",
                        "score":  1009029,
                        "rating":  16.15,
@@ -36966,7 +36938,7 @@
                        "playTime":  "2026-08-13 22:19:00",
                        "id":  1086,
                        "levelIndex":  3,
-                       "title":  "祈 -我ら神祖と共に歩む者なり-",
+                       "title":  "ç¥ -æãç¥ç¥ã¨å\u0085±ã«æ­©ãè\u0085ãªã-",
                        "difficulty":  "15+",
                        "score":  997376,
                        "rating":  16.59,
@@ -37036,7 +37008,7 @@
                        "playTime":  "2026-08-13 22:00:00",
                        "id":  972,
                        "levelIndex":  3,
-                       "title":  "宿星審判",
+                       "title":  "å®¿æå¯©å¤",
                        "difficulty":  "15",
                        "score":  1000532,
                        "rating":  16.55,
@@ -37106,7 +37078,7 @@
                        "playTime":  "2026-08-13 21:40:00",
                        "id":  2533,
                        "levelIndex":  3,
-                       "title":  "ΩΩPARTS",
+                       "title":  "Î©Î©PARTS",
                        "difficulty":  "15",
                        "score":  1001697,
                        "rating":  16.36,
@@ -37120,7 +37092,7 @@
                        "playTime":  "2026-08-13 21:36:00",
                        "id":  386,
                        "levelIndex":  3,
-                       "title":  "神威",
+                       "title":  "ç¥å¨",
                        "difficulty":  "15",
                        "score":  1005905,
                        "rating":  16.88,
@@ -37134,7 +37106,7 @@
                        "playTime":  "2026-08-13 21:32:00",
                        "id":  824,
                        "levelIndex":  3,
-                       "title":  "神威 (NAOKI × ZPP MIX)",
+                       "title":  "ç¥å¨ (NAOKI Ã ZPP MIX)",
                        "difficulty":  "15",
                        "score":  1006827,
                        "rating":  16.86,
@@ -37148,7 +37120,7 @@
                        "playTime":  "2026-08-13 21:30:00",
                        "id":  824,
                        "levelIndex":  3,
-                       "title":  "神威 (NAOKI × ZPP MIX)",
+                       "title":  "ç¥å¨ (NAOKI Ã ZPP MIX)",
                        "difficulty":  "15",
                        "score":  1004591,
                        "rating":  16.45,
@@ -37302,7 +37274,7 @@
                        "playTime":  "2026-08-13 20:57:00",
                        "id":  2749,
                        "levelIndex":  3,
-                       "title":  "本能的 Survivor",
+                       "title":  "æ¬è½ç Survivor",
                        "difficulty":  "13+",
                        "score":  1007817,
                        "rating":  15.83,
@@ -37400,7 +37372,7 @@
                        "playTime":  "2026-08-12 21:43:00",
                        "id":  1086,
                        "levelIndex":  3,
-                       "title":  "祈 -我ら神祖と共に歩む者なり-",
+                       "title":  "ç¥ -æãç¥ç¥ã¨å\u0085±ã«æ­©ãè\u0085ãªã-",
                        "difficulty":  "15+",
                        "score":  1002781,
                        "rating":  16.97,
@@ -37470,7 +37442,7 @@
                        "playTime":  "2026-08-12 21:24:00",
                        "id":  210,
                        "levelIndex":  4,
-                       "title":  "アスノヨゾラ哨戒班",
+                       "title":  "ã¢ã¹ãã¨ã¾ã©å¨æç­",
                        "difficulty":  "14",
                        "score":  1009659,
                        "rating":  16.15,
@@ -37554,7 +37526,7 @@
                        "playTime":  "2026-08-12 18:05:00",
                        "id":  972,
                        "levelIndex":  3,
-                       "title":  "宿星審判",
+                       "title":  "å®¿æå¯©å¤",
                        "difficulty":  "15",
                        "score":  1002857,
                        "rating":  16.78,
@@ -37652,7 +37624,7 @@
                        "playTime":  "2026-08-12 17:42:00",
                        "id":  2799,
                        "levelIndex":  3,
-                       "title":  "キミとボクへの葬送歌",
+                       "title":  "ã­ãã¨ãã¯ã¸ã®è¬éæ­",
                        "difficulty":  "15",
                        "score":  999360,
                        "rating":  16.27,
@@ -37666,7 +37638,7 @@
                        "playTime":  "2026-08-12 17:38:00",
                        "id":  2800,
                        "levelIndex":  3,
-                       "title":  "淵底のグレイ・ユークロニア",
+                       "title":  "æ·µåºã®ã°ã¬ã¤ã»ã¦ã¼ã¯ã­ãã¢",
                        "difficulty":  "15",
                        "score":  1004314,
                        "rating":  16.43,
@@ -37960,7 +37932,7 @@
                        "playTime":  "2026-08-10 21:13:00",
                        "id":  2340,
                        "levelIndex":  3,
-                       "title":  "To：Be Continued",
+                       "title":  "Toï¼Be Continued",
                        "difficulty":  "15+",
                        "score":  1002640,
                        "rating":  16.76,
@@ -38142,7 +38114,7 @@
                        "playTime":  "2026-08-10 20:32:00",
                        "id":  2787,
                        "levelIndex":  3,
-                       "title":  "超最終鬼畜妹フランドール・S",
+                       "title":  "è¶\u0085æçµé¬¼çå¦¹ãã©ã³ãã¼ã«ã»S",
                        "difficulty":  "15",
                        "score":  1002919,
                        "rating":  16.29,
@@ -38156,7 +38128,7 @@
                        "playTime":  "2026-08-10 20:29:00",
                        "id":  2768,
                        "levelIndex":  3,
-                       "title":  "MegiddØ",
+                       "title":  "MegiddÃ",
                        "difficulty":  "15+",
                        "score":  993830,
                        "rating":  16.25,
@@ -38198,7 +38170,7 @@
                        "playTime":  "2026-08-10 20:17:00",
                        "id":  2768,
                        "levelIndex":  2,
-                       "title":  "MegiddØ",
+                       "title":  "MegiddÃ",
                        "difficulty":  "14",
                        "score":  1005415,
                        "rating":  16.08,
@@ -38380,7 +38352,7 @@
                        "playTime":  "2026-08-07 20:54:00",
                        "id":  2233,
                        "levelIndex":  3,
-                       "title":  "Λzure Vixen",
+                       "title":  "Îzure Vixen",
                        "difficulty":  "15+",
                        "score":  991871,
                        "rating":  16.17,
@@ -38394,7 +38366,7 @@
                        "playTime":  "2026-08-07 20:51:00",
                        "id":  618,
                        "levelIndex":  3,
-                       "title":  "業 -善なる神とこの世の悪について-",
+                       "title":  "æ¥­ -åãªãç¥ã¨ãã®ä¸ã®æªã«ã¤ãã¦-",
                        "difficulty":  "15+",
                        "score":  994182,
                        "rating":  16.36,
@@ -38786,7 +38758,7 @@
                        "playTime":  "2026-08-06 16:48:00",
                        "id":  2639,
                        "levelIndex":  3,
-                       "title":  "ソーシャルワンダーランド",
+                       "title":  "ã½ã¼ã·ã£ã«ã¯ã³ãã¼ã©ã³ã",
                        "difficulty":  "14+",
                        "score":  1009877,
                        "rating":  16.65,
@@ -38856,7 +38828,7 @@
                        "playTime":  "2026-08-06 16:33:00",
                        "id":  2637,
                        "levelIndex":  3,
-                       "title":  "乙女戦士☆あーし。",
+                       "title":  "ä¹å¥³æ¦å£«âãã¼ãã",
                        "difficulty":  "13+",
                        "score":  1006398,
                        "rating":  15.47,
@@ -39080,7 +39052,7 @@
                        "playTime":  "2026-08-04 20:36:00",
                        "id":  1086,
                        "levelIndex":  2,
-                       "title":  "祈 -我ら神祖と共に歩む者なり-",
+                       "title":  "ç¥ -æãç¥ç¥ã¨å\u0085±ã«æ­©ãè\u0085ãªã-",
                        "difficulty":  "14+",
                        "score":  1006009,
                        "rating":  16.2,
@@ -39094,7 +39066,7 @@
                        "playTime":  "2026-08-04 20:33:00",
                        "id":  2475,
                        "levelIndex":  3,
-                       "title":  "Chaotic Ørder",
+                       "title":  "Chaotic Ãrder",
                        "difficulty":  "15+",
                        "score":  982863,
                        "rating":  15.91,
