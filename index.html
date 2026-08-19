@@ -303,6 +303,59 @@ renderAll();renderVideoTabs();renderVideos();
   renderGames=function(){const c=ensure();if(c)c.disabled=(typeof selected!=='undefined'&&selected==='DEVICE');const r=oldRender();const f=window.YMKF_DETAIL_FILTER||'all';if(f!=='all'&&selected!=='DEVICE'){const m=document.querySelector('#libraryMeta');if(m)m.textContent+=' · '+(f==='with'?'有详细战绩':'无详细战绩')}return r};
   ensure();renderGames();
 })();
+</script><script id="ymkf-detail-filter-v1">
+(function(){
+  let detailFilter='all';
+  function ymkfDetailKey(g){
+    const raw=String(g&&g.name||'').toLowerCase(),n=raw.normalize?raw.normalize('NFKC'):raw;
+    return n.replace(/[^a-z0-9\u4e00-\u9fff]+/g,'');
+  }
+  function ymkfHasDetailedRecord(g){
+    const key=ymkfDetailKey(g),gid=String(g&&g.id||g&&g.playnite&&g.playnite.id||'').toLowerCase();
+    const battlefield=key.includes('battlefield1')||key.includes('battlefieldv')||key.includes('battlefield5')||key.includes('battlefield2042')||key.includes('battlefield6')||key.includes('战地1')||key.includes('战地v')||key.includes('战地5')||key.includes('战地2042')||key.includes('战地6');
+    return battlefield||key.includes('chunithm')||key.includes('arcaea')||key.includes('maimai')||key.includes('舞萌')||key.includes('phigros')||key==='osu'||key.includes('osulazer')||gid==='9035d7ac-a8f5-4c46-985e-745eeb7ecd8b'||gid==='dc0f4891-c9fa-42ff-9dc0-27ce8d0f0d56'||gid==='8b5cbfc6-9afb-4892-993e-e9424a9d6555'||gid==='bd4bf292-368e-4e00-bdbb-6dee05aff790';
+  }
+  function ymkfApplyDetailFilter(list){
+    const src=Array.isArray(list)?list:[];
+    if(detailFilter==='with')return src.filter(ymkfHasDetailedRecord);
+    if(detailFilter==='without')return src.filter(g=>!ymkfHasDetailedRecord(g));
+    return src;
+  }
+  function ymkfEnsureDetailFilter(){
+    let select=document.querySelector('#detailFilter');
+    if(select)return select;
+    const sortPair=document.querySelector('.sort-pair');
+    if(!sortPair||!sortPair.parentNode)return null;
+    const wrap=document.createElement('label');
+    wrap.className='detail-filter-wrap';
+    wrap.innerHTML='<span class="detail-filter-label">战绩</span><select class="game-detail-filter" id="detailFilter" aria-label="详细战绩筛选"><option value="all">全部</option><option value="with">有详细战绩</option><option value="without">无详细战绩</option></select>';
+    sortPair.insertAdjacentElement('afterend',wrap);
+    select=wrap.querySelector('#detailFilter');
+    select.value=detailFilter;
+    select.addEventListener('change',()=>{detailFilter=select.value;renderGames()});
+    return select;
+  }
+  const select=ymkfEnsureDetailFilter();
+  if(typeof renderGames!=='function'||typeof selectionList!=='function')return;
+  const baseRenderGames=renderGames;
+  renderGames=function(){
+    const control=ymkfEnsureDetailFilter();
+    const device=(typeof selected!=='undefined'&&selected==='DEVICE');
+    if(control)control.disabled=device;
+    if(device)return baseRenderGames();
+    const originalSelectionList=selectionList;
+    let result;
+    selectionList=function(v){return ymkfApplyDetailFilter(originalSelectionList(v))};
+    try{result=baseRenderGames()}finally{selectionList=originalSelectionList}
+    if(detailFilter!=='all'){
+      const meta=document.querySelector('#libraryMeta');
+      if(meta)meta.textContent+=' · '+(detailFilter==='with'?'有详细战绩':'无详细战绩');
+    }
+    return result;
+  };
+  if(select)select.value=detailFilter;
+  renderGames();
+})();
 </script><style id="ymkf-detail-note-only-style-v1">
 #sortHeat,#sortSteamHeat,.online-row,.dual-online,.online-chip{display:none!important}
 #gameLibrary.library{grid-template-columns:minmax(0,1fr)!important;gap:7px!important;align-items:stretch}
@@ -383,59 +436,6 @@ renderAll();renderVideoTabs();renderVideos();
   const weekBtn=document.querySelector('#sortWeek'),hoursBtn=document.querySelector('#sortHours');
   if(weekBtn)weekBtn.onclick=()=>{gameSort=gameSort==='week-desc'?'week-asc':'week-desc';renderGames()};
   if(hoursBtn)hoursBtn.onclick=()=>{gameSort=gameSort==='hours-desc'?'hours-asc':'hours-desc';renderGames()};
-  renderGames();
-})();
-</script><script id="ymkf-detail-filter-v1">
-(function(){
-  let detailFilter='all';
-  function ymkfDetailKey(g){
-    const raw=String(g&&g.name||'').toLowerCase(),n=raw.normalize?raw.normalize('NFKC'):raw;
-    return n.replace(/[^a-z0-9\u4e00-\u9fff]+/g,'');
-  }
-  function ymkfHasDetailedRecord(g){
-    const key=ymkfDetailKey(g),gid=String(g&&g.id||g&&g.playnite&&g.playnite.id||'').toLowerCase();
-    const battlefield=key.includes('battlefield1')||key.includes('battlefieldv')||key.includes('battlefield5')||key.includes('battlefield2042')||key.includes('battlefield6')||key.includes('战地1')||key.includes('战地v')||key.includes('战地5')||key.includes('战地2042')||key.includes('战地6');
-    return battlefield||key.includes('chunithm')||key.includes('arcaea')||key.includes('maimai')||key.includes('舞萌')||key.includes('phigros')||key==='osu'||key.includes('osulazer')||gid==='9035d7ac-a8f5-4c46-985e-745eeb7ecd8b'||gid==='dc0f4891-c9fa-42ff-9dc0-27ce8d0f0d56'||gid==='8b5cbfc6-9afb-4892-993e-e9424a9d6555'||gid==='bd4bf292-368e-4e00-bdbb-6dee05aff790';
-  }
-  function ymkfApplyDetailFilter(list){
-    const src=Array.isArray(list)?list:[];
-    if(detailFilter==='with')return src.filter(ymkfHasDetailedRecord);
-    if(detailFilter==='without')return src.filter(g=>!ymkfHasDetailedRecord(g));
-    return src;
-  }
-  function ymkfEnsureDetailFilter(){
-    let select=document.querySelector('#detailFilter');
-    if(select)return select;
-    const sortPair=document.querySelector('.sort-pair');
-    if(!sortPair||!sortPair.parentNode)return null;
-    const wrap=document.createElement('label');
-    wrap.className='detail-filter-wrap';
-    wrap.innerHTML='<span class="detail-filter-label">战绩</span><select class="game-detail-filter" id="detailFilter" aria-label="详细战绩筛选"><option value="all">全部</option><option value="with">有详细战绩</option><option value="without">无详细战绩</option></select>';
-    sortPair.insertAdjacentElement('afterend',wrap);
-    select=wrap.querySelector('#detailFilter');
-    select.value=detailFilter;
-    select.addEventListener('change',()=>{detailFilter=select.value;renderGames()});
-    return select;
-  }
-  const select=ymkfEnsureDetailFilter();
-  if(typeof renderGames!=='function'||typeof selectionList!=='function')return;
-  const baseRenderGames=renderGames;
-  renderGames=function(){
-    const control=ymkfEnsureDetailFilter();
-    const device=(typeof selected!=='undefined'&&selected==='DEVICE');
-    if(control)control.disabled=device;
-    if(device)return baseRenderGames();
-    const originalSelectionList=selectionList;
-    let result;
-    selectionList=function(v){return ymkfApplyDetailFilter(originalSelectionList(v))};
-    try{result=baseRenderGames()}finally{selectionList=originalSelectionList}
-    if(detailFilter!=='all'){
-      const meta=document.querySelector('#libraryMeta');
-      if(meta)meta.textContent+=' · '+(detailFilter==='with'?'有详细战绩':'无详细战绩');
-    }
-    return result;
-  };
-  if(select)select.value=detailFilter;
   renderGames();
 })();
 </script></body></html>
