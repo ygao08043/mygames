@@ -1,0 +1,426 @@
+{
+    "version":  "1.15.0-hf6",
+    "capturedAt":  "2026-08-19T15:28:14.3586353+08:00",
+    "games":  {
+                  "17e80081-41b6-4e04-bbae-7ebe9fc04cb0":  {
+                                                               "name":  "Among Us",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  945360,
+                                                               "steamPlayers":  5087,
+                                                               "steamSource":  "Steam Web API",
+                                                               "steamDetail":  "Steam 当前连接玩家数 · AppID 945360"
+                                                           },
+                  "e9125710-44f3-4473-a14c-bde806b1ff76":  {
+                                                               "name":  "Arcaea",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  null,
+                                                               "steamPlayers":  null,
+                                                               "steamSource":  "",
+                                                               "steamDetail":  "未识别到该游戏的 Steam 版本。"
+                                                           },
+                  "901a387c-5431-4985-89b3-128142b21167":  {
+                                                               "name":  "Battlefield 1",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  1238840,
+                                                               "steamPlayers":  5573,
+                                                               "steamSource":  "Steam Web API",
+                                                               "steamDetail":  "Steam 当前连接玩家数 · AppID 1238840"
+                                                           },
+                  "a3908c47-ce9b-40d9-8704-64f182362c83":  {
+                                                               "name":  "Battlefield 2042",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "GameTools 对该作的 status 接口只覆盖 Portal，不能作为整款游戏的全端实时人数，因此留空。",
+                                                               "steamAppId":  1517290,
+                                                               "steamPlayers":  811,
+                                                               "steamSource":  "Steam Web API",
+                                                               "steamDetail":  "Steam 当前连接玩家数 · AppID 1517290"
+                                                           },
+                  "27cc7cf4-8d39-433d-8d7c-b1069eb0c11e":  {
+                                                               "name":  "Battlefield 5",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  1238810,
+                                                               "steamPlayers":  4572,
+                                                               "steamSource":  "Steam Web API",
+                                                               "steamDetail":  "Steam 当前连接玩家数 · AppID 1238810"
+                                                           },
+                  "755257c8-8508-4fd1-9bfd-8be1de672318":  {
+                                                               "name":  "Battlefield 6",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "GameTools 对该作的 status 接口只覆盖 Portal，不能作为整款游戏的全端实时人数，因此留空。",
+                                                               "steamAppId":  2807960,
+                                                               "steamPlayers":  32807,
+                                                               "steamSource":  "Steam Web API",
+                                                               "steamDetail":  "Steam 当前连接玩家数 · AppID 2807960"
+                                                           },
+                  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b":  {
+                                                               "name":  "CHUNITHM",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  null,
+                                                               "steamPlayers":  null,
+                                                               "steamSource":  "",
+                                                               "steamDetail":  "未识别到该游戏的 Steam 版本。"
+                                                           },
+                  "3c0b3f5d-79bf-4260-9494-d72477b8e522":  {
+                                                               "name":  "Counter-Strike 2",
+                                                               "allPlayers":  668480,
+                                                               "allSource":  "Steam · 全端=Steam",
+                                                               "allDetail":  "Counter-Strike 2 当前公开 PC 在线口径即 Steam 当前玩家数。",
+                                                               "steamAppId":  730,
+                                                               "steamPlayers":  668480,
+                                                               "steamSource":  "Steam Web API",
+                                                               "steamDetail":  "Steam 当前连接玩家数 · AppID 730"
+                                                           },
+                  "b1de7fb7-f915-414c-bb77-c4cf36678f06":  {
+                                                               "name":  "e舞成名",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  null,
+                                                               "steamPlayers":  null,
+                                                               "steamSource":  "",
+                                                               "steamDetail":  "未识别到该游戏的 Steam 版本。"
+                                                           },
+                  "075f791f-30c6-4f5e-882f-d3078037ea02":  {
+                                                               "name":  "FreshWomen - Season 1",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  1350650,
+                                                               "steamPlayers":  49,
+                                                               "steamSource":  "Steam Web API",
+                                                               "steamDetail":  "Steam 当前连接玩家数 · AppID 1350650"
+                                                           },
+                  "363800d6-a72e-4f4f-a99a-a2d3d3652a1c":  {
+                                                               "name":  "FreshWomen - Season 2",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  3478650,
+                                                               "steamPlayers":  78,
+                                                               "steamSource":  "Steam Web API",
+                                                               "steamDetail":  "Steam 当前连接玩家数 · AppID 3478650"
+                                                           },
+                  "f0a894ed-b3a2-471e-b081-efdf8f0269cd":  {
+                                                               "name":  "Goose Goose Duck",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  1568590,
+                                                               "steamPlayers":  2611,
+                                                               "steamSource":  "Steam Web API",
+                                                               "steamDetail":  "Steam 当前连接玩家数 · AppID 1568590"
+                                                           },
+                  "dc0f4891-c9fa-42ff-9dc0-27ce8d0f0d56":  {
+                                                               "name":  "maimai",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  null,
+                                                               "steamPlayers":  null,
+                                                               "steamSource":  "",
+                                                               "steamDetail":  "未识别到该游戏的 Steam 版本。"
+                                                           },
+                  "cba94e43-0380-47e7-8bf2-51eaafa69fcb":  {
+                                                               "name":  "Microsoft Solitaire Collection",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  null,
+                                                               "steamPlayers":  null,
+                                                               "steamSource":  "",
+                                                               "steamDetail":  "未识别到该游戏的 Steam 版本。"
+                                                           },
+                  "bf0860bd-01fc-44d5-937a-60ed086bff86":  {
+                                                               "name":  "Minecraft iOS",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  null,
+                                                               "steamPlayers":  null,
+                                                               "steamSource":  "",
+                                                               "steamDetail":  "未识别到该游戏的 Steam 版本。"
+                                                           },
+                  "3eaa5cf0-41b2-48bd-ab81-904583afb9bc":  {
+                                                               "name":  "Minecraft Windows",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  null,
+                                                               "steamPlayers":  null,
+                                                               "steamSource":  "",
+                                                               "steamDetail":  "未识别到该游戏的 Steam 版本。"
+                                                           },
+                  "bd4bf292-368e-4e00-bdbb-6dee05aff790":  {
+                                                               "name":  "osu!",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  null,
+                                                               "steamPlayers":  null,
+                                                               "steamSource":  "",
+                                                               "steamDetail":  "未识别到该游戏的 Steam 版本。"
+                                                           },
+                  "8b5cbfc6-9afb-4892-993e-e9424a9d6555":  {
+                                                               "name":  "Phigros",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  null,
+                                                               "steamPlayers":  null,
+                                                               "steamSource":  "",
+                                                               "steamDetail":  "未识别到该游戏的 Steam 版本。"
+                                                           },
+                  "c263bdfe-2d98-43b9-8f6e-b3335a7ed763":  {
+                                                               "name":  "Plants vs. Zombies",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  3590,
+                                                               "steamPlayers":  2908,
+                                                               "steamSource":  "Steam Web API",
+                                                               "steamDetail":  "Steam 当前连接玩家数 · AppID 3590"
+                                                           },
+                  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8":  {
+                                                               "name":  "Project SEKAI",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  null,
+                                                               "steamPlayers":  null,
+                                                               "steamSource":  "",
+                                                               "steamDetail":  "未识别到该游戏的 Steam 版本。"
+                                                           },
+                  "1e5cd5db-fc97-4c63-a214-026cb50709db":  {
+                                                               "name":  "PUBG: BATTLEGROUNDS",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  578080,
+                                                               "steamPlayers":  315733,
+                                                               "steamSource":  "Steam Web API",
+                                                               "steamDetail":  "Steam 当前连接玩家数 · AppID 578080"
+                                                           },
+                  "579dd5f2-6d58-4423-ba8b-c837014df0bf":  {
+                                                               "name":  "Rhythm Doctor",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  774181,
+                                                               "steamPlayers":  100,
+                                                               "steamSource":  "Steam Web API",
+                                                               "steamDetail":  "Steam 当前连接玩家数 · AppID 774181"
+                                                           },
+                  "cd20e301-383a-4966-b153-19f8ed4d8339":  {
+                                                               "name":  "Riptide GP2",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  257790,
+                                                               "steamPlayers":  0,
+                                                               "steamSource":  "Steam Web API",
+                                                               "steamDetail":  "Steam 当前连接玩家数 · AppID 257790"
+                                                           },
+                  "cddce5b2-fd9f-4c31-b6a1-54905126c08a":  {
+                                                               "name":  "Riptide GP: Renegade",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  443860,
+                                                               "steamPlayers":  1,
+                                                               "steamSource":  "Steam Web API",
+                                                               "steamDetail":  "Steam 当前连接玩家数 · AppID 443860"
+                                                           },
+                  "345007a4-407d-415e-ac50-585756ce0f1c":  {
+                                                               "name":  "Zuma Deluxe",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  3330,
+                                                               "steamPlayers":  625,
+                                                               "steamSource":  "Steam Web API",
+                                                               "steamDetail":  "Steam 当前连接玩家数 · AppID 3330"
+                                                           },
+                  "06a6c4ed-ba26-4185-a08c-2874a521d499":  {
+                                                               "name":  "三国杀",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  1180320,
+                                                               "steamPlayers":  960,
+                                                               "steamSource":  "Steam Web API",
+                                                               "steamDetail":  "Steam 当前连接玩家数 · AppID 1180320"
+                                                           },
+                  "e5fd7d3c-4a81-415a-b16c-eed25dca6852":  {
+                                                               "name":  "三角洲行动",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  2507950,
+                                                               "steamPlayers":  62628,
+                                                               "steamSource":  "Steam Web API",
+                                                               "steamDetail":  "Steam 当前连接玩家数 · AppID 2507950"
+                                                           },
+                  "86dcd7ea-9dce-4231-93bd-b7d4ccd8e8f1":  {
+                                                               "name":  "元气骑士",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  null,
+                                                               "steamPlayers":  null,
+                                                               "steamSource":  "",
+                                                               "steamDetail":  "未识别到该游戏的 Steam 版本。"
+                                                           },
+                  "fab64cd7-e82f-4196-b864-9f65e836341e":  {
+                                                               "name":  "决战！平安京",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  null,
+                                                               "steamPlayers":  null,
+                                                               "steamSource":  "",
+                                                               "steamDetail":  "未识别到该游戏的 Steam 版本。"
+                                                           },
+                  "b5339b50-b16c-49f0-b0da-0287274c7f2a":  {
+                                                               "name":  "双人成行",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  1426210,
+                                                               "steamPlayers":  7641,
+                                                               "steamSource":  "Steam Web API",
+                                                               "steamDetail":  "Steam 当前连接玩家数 · AppID 1426210"
+                                                           },
+                  "64848433-393a-44da-8298-6afaf9d1f73c":  {
+                                                               "name":  "双影奇境",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  2001120,
+                                                               "steamPlayers":  4191,
+                                                               "steamSource":  "Steam Web API",
+                                                               "steamDetail":  "Steam 当前连接玩家数 · AppID 2001120"
+                                                           },
+                  "cf8ae630-69fe-492e-bde4-6e43100a4f30":  {
+                                                               "name":  "各种小游戏",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  null,
+                                                               "steamPlayers":  null,
+                                                               "steamSource":  "",
+                                                               "steamDetail":  "未识别到该游戏的 Steam 版本。"
+                                                           },
+                  "f0c0e44b-1cee-4696-b68a-562b1aa1afd2":  {
+                                                               "name":  "天月麻雀",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "天月麻雀支持 Steam / iOS / Android 跨平台，但公开渠道未提供跨端实时 CCU；全端实时留空，Steam 实时单独显示。",
+                                                               "steamAppId":  3132860,
+                                                               "steamPlayers":  180,
+                                                               "steamSource":  "Steam Web API",
+                                                               "steamDetail":  "Steam 当前连接玩家数 · AppID 3132860"
+                                                           },
+                  "409ef4d9-ef3b-47ee-bbef-57a565825af2":  {
+                                                               "name":  "斗牌魂",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  2479720,
+                                                               "steamPlayers":  0,
+                                                               "steamSource":  "Steam Web API",
+                                                               "steamDetail":  "Steam 当前连接玩家数 · AppID 2479720"
+                                                           },
+                  "6860b504-a5c9-46f7-b0d0-20ec1996846e":  {
+                                                               "name":  "狼人杀",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  null,
+                                                               "steamPlayers":  null,
+                                                               "steamSource":  "",
+                                                               "steamDetail":  "未识别到该游戏的 Steam 版本。"
+                                                           },
+                  "b730c4a7-1f2f-4ec7-aca4-f1df509d18fe":  {
+                                                               "name":  "王者荣耀",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  null,
+                                                               "steamPlayers":  null,
+                                                               "steamSource":  "",
+                                                               "steamDetail":  "未识别到该游戏的 Steam 版本。"
+                                                           },
+                  "bb00e134-2ed0-4e1a-90c8-ee8cb7f71e11":  {
+                                                               "name":  "球球大作战",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  null,
+                                                               "steamPlayers":  null,
+                                                               "steamSource":  "",
+                                                               "steamDetail":  "未识别到该游戏的 Steam 版本。"
+                                                           },
+                  "66dc715c-d550-4152-a58b-39a4e6e33318":  {
+                                                               "name":  "生死狙击",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  null,
+                                                               "steamPlayers":  null,
+                                                               "steamSource":  "",
+                                                               "steamDetail":  "未识别到该游戏的 Steam 版本。"
+                                                           },
+                  "66f008ca-2c84-4878-bfe0-f98980e1aa8d":  {
+                                                               "name":  "糖豆人",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  1097150,
+                                                               "steamPlayers":  257,
+                                                               "steamSource":  "Steam Web API",
+                                                               "steamDetail":  "Steam 当前连接玩家数 · AppID 1097150"
+                                                           },
+                  "9a01be01-66d1-4acf-a81b-e43987f27ea9":  {
+                                                               "name":  "节奏大师",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  null,
+                                                               "steamPlayers":  null,
+                                                               "steamSource":  "",
+                                                               "steamDetail":  "未识别到该游戏的 Steam 版本。"
+                                                           },
+                  "0a823c8e-5a90-4685-8edf-0d9edf23b71d":  {
+                                                               "name":  "英雄联盟手游",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "暂无覆盖该游戏全部平台的公开实时人数口径。",
+                                                               "steamAppId":  null,
+                                                               "steamPlayers":  null,
+                                                               "steamSource":  "",
+                                                               "steamDetail":  "未识别到该游戏的 Steam 版本。"
+                                                           },
+                  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12":  {
+                                                               "name":  "雀魂麻将",
+                                                               "allPlayers":  null,
+                                                               "allSource":  "",
+                                                               "allDetail":  "雀魂支持跨平台游玩，但公开渠道未提供覆盖全部客户端的实时 CCU；全端实时留空，Steam 实时单独显示。",
+                                                               "steamAppId":  1329410,
+                                                               "steamPlayers":  8480,
+                                                               "steamSource":  "Steam Web API",
+                                                               "steamDetail":  "Steam 当前连接玩家数 · AppID 1329410"
+                                                           }
+              }
+}
