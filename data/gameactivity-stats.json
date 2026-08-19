@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
     "build":  "v1.15.0",
-    "generatedAt":  "2026-08-19T21:45:38.6119209+08:00",
+    "generatedAt":  "2026-08-19T21:53:14.8215681+08:00",
     "source":  {
                    "provider":  "Playnite GameActivity",
                    "fields":  [
@@ -20,16 +20,16 @@
     "currentMonth":  "2026-08",
     "currentYear":  "2026",
     "totals":  {
-                   "recordedSeconds":  1623772,
+                   "recordedSeconds":  1623773,
                    "last7DaysSeconds":  30486,
                    "currentMonthSeconds":  82040,
-                   "currentYearSeconds":  1623772,
+                   "currentYearSeconds":  1623773,
                    "activeDays":  152
                },
     "daily":  [
                   {
                       "date":  "2026-03-01",
-                      "seconds":  39333
+                      "seconds":  39334
                   },
                   {
                       "date":  "2026-03-02",
@@ -802,7 +802,7 @@
                     {
                         "month":  "2026-03",
                         "label":  "26/03",
-                        "seconds":  427347
+                        "seconds":  427348
                     },
                     {
                         "month":  "2026-04",
@@ -823,17 +823,12 @@
                         "month":  "2026-07",
                         "label":  "26/07",
                         "seconds":  208628
-                    },
-                    {
-                        "month":  "2026-08",
-                        "label":  "26/08",
-                        "seconds":  82040
                     }
                 ],
     "hourly":  [
                    {
                        "hour":  0,
-                       "seconds":  156230
+                       "seconds":  156231
                    },
                    {
                        "hour":  1,
@@ -962,7 +957,7 @@
                     {
                         "day":  6,
                         "label":  "周日",
-                        "seconds":  272448
+                        "seconds":  272449
                     }
                 ],
     "distributionMonths":  [
@@ -1667,7 +1662,7 @@
                                    "hourly":  [
                                                   {
                                                       "hour":  0,
-                                                      "seconds":  45222
+                                                      "seconds":  45223
                                                   },
                                                   {
                                                       "hour":  1,
@@ -1796,7 +1791,7 @@
                                                    {
                                                        "day":  6,
                                                        "label":  "周日",
-                                                       "seconds":  95464
+                                                       "seconds":  95465
                                                    }
                                                ]
                                }
@@ -1852,7 +1847,7 @@
                              {
                                  "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                                  "name":  "CHUNITHM",
-                                 "seconds":  457907
+                                 "seconds":  457908
                              },
                              {
                                  "id":  "06a6c4ed-ba26-4185-a08c-2874a521d499",
@@ -1952,7 +1947,7 @@
                                            {
                                                "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                                                "name":  "CHUNITHM",
-                                               "seconds":  166081
+                                               "seconds":  166082
                                            },
                                            {
                                                "id":  "f0c0e44b-1cee-4696-b68a-562b1aa1afd2",
@@ -2150,51 +2145,6 @@
                                                "seconds":  583
                                            }
                                        ]
-                         },
-                         {
-                             "month":  "2026-08",
-                             "games":  [
-                                           {
-                                               "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
-                                               "name":  "CHUNITHM",
-                                               "seconds":  43802
-                                           },
-                                           {
-                                               "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
-                                               "name":  "雀魂麻将",
-                                               "seconds":  14852
-                                           },
-                                           {
-                                               "id":  "bd4bf292-368e-4e00-bdbb-6dee05aff790",
-                                               "name":  "osu!",
-                                               "seconds":  10954
-                                           },
-                                           {
-                                               "id":  "901a387c-5431-4985-89b3-128142b21167",
-                                               "name":  "Battlefield 1",
-                                               "seconds":  6050
-                                           },
-                                           {
-                                               "id":  "579dd5f2-6d58-4423-ba8b-c837014df0bf",
-                                               "name":  "Rhythm Doctor",
-                                               "seconds":  5005
-                                           },
-                                           {
-                                               "id":  "06a6c4ed-ba26-4185-a08c-2874a521d499",
-                                               "name":  "三国杀",
-                                               "seconds":  1299
-                                           },
-                                           {
-                                               "id":  "66dc715c-d550-4152-a58b-39a4e6e33318",
-                                               "name":  "生死狙击",
-                                               "seconds":  44
-                                           },
-                                           {
-                                               "id":  "409ef4d9-ef3b-47ee-bbef-57a565825af2",
-                                               "name":  "斗牌魂",
-                                               "seconds":  34
-                                           }
-                                       ]
                          }
                      ],
     "lastPlayedGames":  [
@@ -2360,7 +2310,7 @@
                                  "id":  "06a6c4ed-ba26-4185-a08c-2874a521d499",
                                  "name":  "三国杀",
                                  "seconds":  179474,
-                                 "totalSeconds":  427347
+                                 "totalSeconds":  427348
                              }
                          ],
     "yearlyChampions":  [
@@ -2370,7 +2320,7 @@
                                 "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                 "name":  "雀魂麻将",
                                 "seconds":  506333,
-                                "totalSeconds":  1623772
+                                "totalSeconds":  1623773
                             }
                         ],
     "timelineDays":  [
