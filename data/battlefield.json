@@ -1,24 +1,24 @@
 {
     "schemaVersion":  1,
-    "build":  "v1.14.4",
-    "generatedAt":  "2026-08-19T01:25:18.3587689+08:00",
+    "build":  "v1.15.0",
+    "generatedAt":  "2026-08-19T10:17:46.8288518+08:00",
     "eaId":  "PIANOYMKF",
     "platform":  "pc",
     "source":  {
                    "provider":  "GameTools Network",
                    "apiBase":  "https://api.gametools.network",
-                   "note":  "Public Battlefield stats API. BF1 true sessions are used when returned; other titles use local sync-interval deltas for history."
+                   "note":  "Public Battlefield stats API. BF1 true sessions are sparse because GameTools play sessions require a manager-enabled server; other titles use local sync-interval deltas unless another report source is imported. BF2042 all-zero/hasResults=false payloads are marked upstream_broken."
                },
     "games":  {
                   "bf1":  {
                               "key":  "bf1",
                               "title":  "Battlefield 1",
                               "status":  "ok",
-                              "updatedAt":  "2026-08-19T01:25:18.3587689+08:00",
+                              "updatedAt":  "2026-08-19T10:17:46.8288518+08:00",
                               "endpoint":  "https://api.gametools.network/bf1/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "PIANOYMKF",
-                                              "avatar":  "",
+                                              "avatar":  "https://eaavatarservice.akamaized.net/production/avatar/prod/userAvatar/47880937/416x416.JPEG",
                                               "rank":  49,
                                               "secondsPlayed":  176146,
                                               "kills":  1314,
@@ -31,7 +31,7 @@
                                               "kpm":  0.45,
                                               "spm":  679.86,
                                               "accuracy":  7.21,
-                                              "headshots":  10.58,
+                                              "headshots":  139,
                                               "longestHeadshot":  227.29,
                                               "score":  null
                                           },
@@ -154,7 +154,7 @@
                               "raw":  {
                                           "stats":  {
                                                         "userId":  1015988860725,
-                                                        "avatar":  "",
+                                                        "avatar":  "https://eaavatarservice.akamaized.net/production/avatar/prod/userAvatar/47880937/416x416.JPEG",
                                                         "userName":  "PIANOYMKF",
                                                         "id":  1007369860725,
                                                         "rank":  49,
@@ -195,7 +195,7 @@
                                                     },
                                           "weapons":  {
                                                           "userId":  1015988860725,
-                                                          "avatar":  "",
+                                                          "avatar":  "https://eaavatarservice.akamaized.net/production/avatar/prod/userAvatar/47880937/416x416.JPEG",
                                                           "userName":  "PIANOYMKF",
                                                           "id":  1007369860725,
                                                           "weapons":  [
@@ -3647,7 +3647,7 @@
                                                       },
                                           "classes":  {
                                                           "userId":  1015988860725,
-                                                          "avatar":  "",
+                                                          "avatar":  "https://eaavatarservice.akamaized.net/production/avatar/prod/userAvatar/47880937/416x416.JPEG",
                                                           "userName":  "PIANOYMKF",
                                                           "id":  1007369860725,
                                                           "classes":  [
@@ -3725,7 +3725,7 @@
                                                       },
                                           "vehicles":  {
                                                            "userId":  1015988860725,
-                                                           "avatar":  "",
+                                                           "avatar":  "https://eaavatarservice.akamaized.net/production/avatar/prod/userAvatar/47880937/416x416.JPEG",
                                                            "userName":  "PIANOYMKF",
                                                            "id":  1007369860725,
                                                            "vehicles":  [
@@ -4129,7 +4129,7 @@
                                                        },
                                           "gamemodes":  {
                                                             "userId":  1015988860725,
-                                                            "avatar":  "",
+                                                            "avatar":  "https://eaavatarservice.akamaized.net/production/avatar/prod/userAvatar/47880937/416x416.JPEG",
                                                             "userName":  "PIANOYMKF",
                                                             "id":  1007369860725,
                                                             "gamemodes":  [
@@ -4193,7 +4193,7 @@
                                                         },
                                           "all":  {
                                                       "userId":  1015988860725,
-                                                      "avatar":  "",
+                                                      "avatar":  "https://eaavatarservice.akamaized.net/production/avatar/prod/userAvatar/47880937/416x416.JPEG",
                                                       "userName":  "PIANOYMKF",
                                                       "id":  1007369860725,
                                                       "rank":  49,
@@ -8359,17 +8359,21 @@
                                                                    ]
                                                   }
                                       },
-                              "error":  null
+                              "error":  null,
+                              "dataQuality":  "online",
+                              "playniteSeconds":  312420,
+                              "playniteName":  "Battlefield 1",
+                              "playniteId":  "901a387c-5431-4985-89b3-128142b21167"
                           },
                   "bfv":  {
                               "key":  "bfv",
                               "title":  "Battlefield V",
                               "status":  "ok",
-                              "updatedAt":  "2026-08-19T01:25:18.3587689+08:00",
+                              "updatedAt":  "2026-08-19T10:17:46.8288518+08:00",
                               "endpoint":  "https://api.gametools.network/bfv/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "PIANOYMKF",
-                                              "avatar":  "",
+                                              "avatar":  "https://eaavatarservice.akamaized.net/production/avatar/prod/userAvatar/47880937/416x416.JPEG",
                                               "rank":  6,
                                               "secondsPlayed":  10850,
                                               "kills":  47,
@@ -8382,7 +8386,7 @@
                                               "kpm":  0.26,
                                               "spm":  188.75,
                                               "accuracy":  5.21,
-                                              "headshots":  25.53,
+                                              "headshots":  12,
                                               "longestHeadshot":  97,
                                               "score":  null
                                           },
@@ -8395,7 +8399,7 @@
                               "raw":  {
                                           "stats":  {
                                                         "userId":  1015988860725,
-                                                        "avatar":  "",
+                                                        "avatar":  "https://eaavatarservice.akamaized.net/production/avatar/prod/userAvatar/47880937/416x416.JPEG",
                                                         "userName":  "PIANOYMKF",
                                                         "id":  1007369860725,
                                                         "rank":  6,
@@ -8435,7 +8439,7 @@
                                                     },
                                           "weapons":  {
                                                           "userId":  1015988860725,
-                                                          "avatar":  "",
+                                                          "avatar":  "https://eaavatarservice.akamaized.net/production/avatar/prod/userAvatar/47880937/416x416.JPEG",
                                                           "userName":  "PIANOYMKF",
                                                           "id":  1007369860725,
                                                           "weapons":  [
@@ -10039,7 +10043,7 @@
                                                       },
                                           "classes":  {
                                                           "userId":  1015988860725,
-                                                          "avatar":  "",
+                                                          "avatar":  "https://eaavatarservice.akamaized.net/production/avatar/prod/userAvatar/47880937/416x416.JPEG",
                                                           "userName":  "PIANOYMKF",
                                                           "id":  1007369860725,
                                                           "classes":  [
@@ -10087,7 +10091,7 @@
                                                       },
                                           "vehicles":  {
                                                            "userId":  1015988860725,
-                                                           "avatar":  "",
+                                                           "avatar":  "https://eaavatarservice.akamaized.net/production/avatar/prod/userAvatar/47880937/416x416.JPEG",
                                                            "userName":  "PIANOYMKF",
                                                            "id":  1007369860725,
                                                            "vehicles":  [
@@ -10509,7 +10513,7 @@
                                                        },
                                           "all":  {
                                                       "userId":  1015988860725,
-                                                      "avatar":  "",
+                                                      "avatar":  "https://eaavatarservice.akamaized.net/production/avatar/prod/userAvatar/47880937/416x416.JPEG",
                                                       "userName":  "PIANOYMKF",
                                                       "id":  1007369860725,
                                                       "rank":  6,
@@ -12616,33 +12620,19 @@
                                                                    ]
                                                   }
                                       },
-                              "error":  null
+                              "error":  null,
+                              "dataQuality":  "online",
+                              "playniteSeconds":  22980,
+                              "playniteName":  "Battlefield 5",
+                              "playniteId":  "27cc7cf4-8d39-433d-8d7c-b1069eb0c11e"
                           },
                   "bf2042":  {
                                  "key":  "bf2042",
                                  "title":  "Battlefield 2042",
-                                 "status":  "ok",
-                                 "updatedAt":  "2026-08-19T01:25:18.3587689+08:00",
+                                 "status":  "upstream_broken",
+                                 "updatedAt":  "2026-08-19T10:17:46.8288518+08:00",
                                  "endpoint":  "https://api.gametools.network/bf2042/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
-                                 "profile":  {
-                                                 "userName":  "pianoymkf",
-                                                 "avatar":  "",
-                                                 "rank":  0,
-                                                 "secondsPlayed":  0,
-                                                 "kills":  0,
-                                                 "deaths":  0,
-                                                 "kd":  0,
-                                                 "wins":  0,
-                                                 "losses":  0,
-                                                 "rounds":  0,
-                                                 "winPercent":  0,
-                                                 "kpm":  0,
-                                                 "spm":  null,
-                                                 "accuracy":  0,
-                                                 "headshots":  0,
-                                                 "longestHeadshot":  null,
-                                                 "score":  null
-                                             },
+                                 "profile":  null,
                                  "trueSessions":  [
 
                                                   ],
@@ -18985,13 +18975,17 @@
                                                          },
                                              "level":  0
                                          },
-                                 "error":  null
+                                 "error":  "GameTools / EA upstream currently returns hasResults=false or an all-zero BF2042 player payload. Data is marked unavailable until the official upstream recovers.",
+                                 "dataQuality":  "官方数据损坏 · 待修复",
+                                 "playniteSeconds":  242700,
+                                 "playniteName":  "Battlefield 2042",
+                                 "playniteId":  "a3908c47-ce9b-40d9-8704-64f182362c83"
                              },
                   "bf6":  {
                               "key":  "bf6",
                               "title":  "Battlefield 6",
                               "status":  "ok",
-                              "updatedAt":  "2026-08-19T01:25:18.3587689+08:00",
+                              "updatedAt":  "2026-08-19T10:17:46.8288518+08:00",
                               "endpoint":  "https://api.gametools.network/bf6/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "pianoymkf",
@@ -19008,7 +19002,7 @@
                                               "kpm":  0.37,
                                               "spm":  null,
                                               "accuracy":  19.55,
-                                              "headshots":  14.25,
+                                              "headshots":  208,
                                               "longestHeadshot":  null,
                                               "score":  558320
                                           },
@@ -23629,7 +23623,13 @@
                                                          }
                                                      ]
                                       },
-                              "error":  null
+                              "error":  null,
+                              "dataQuality":  "online",
+                              "playniteSeconds":  335340,
+                              "playniteName":  "Battlefield 6",
+                              "playniteId":  "755257c8-8508-4fd1-9bfd-8be1de672318"
                           }
-              }
+              },
+    "playniteTotalSeconds":  913440,
+    "playniteCapturedAt":  "2026-08-19T10:18:02.1144734+08:00"
 }
