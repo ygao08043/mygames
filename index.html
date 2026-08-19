@@ -162,7 +162,7 @@ const root=document.documentElement,menu=document.querySelector('#themeMenu');fu
 function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function metaRow(label,value){if(!value)return'';return `<dt>${esc(label)}</dt><dd>${esc(value)}</dd>`}
 const GAME_DETAIL_PAGES={'chunithm':'details/chunithm.html?v=1.15.0','arcaea':'details/arcaea.html?v=1.15.0','maimai':'details/maimai.html?v=1.15.0','phigros':'details/phigros.html?v=1.15.0','osu!':'details/osu.html?v=1.15.0','osu':'details/osu.html?v=1.15.0','osu!lazer':'details/osu.html?v=1.15.0','osulazer':'details/osu.html?v=1.15.0'};
-function gameDetailAction(g){const raw=String(g&&g.name||'').toLowerCase();const key=raw.normalize?raw.normalize('NFKC').replace(/[\s_\-·・:：]+/g,''):raw.replace(/\s+/g,'');const bfkey=(raw.normalize?raw.normalize('NFKC'):raw).replace(/[^a-z0-9\u4e00-\u9fff]+/g,'');const gid=String(g&&g.id||g&&g.playnite&&g.playnite.id||'').toLowerCase();let url=GAME_DETAIL_PAGES[key]||(key.includes('arcaea')?'details/arcaea.html?v=1.15.0':key.includes('chunithm')?'details/chunithm.html?v=1.15.0':(key.includes('maimai')||key.includes('舞萌')||gid==='dc0f4891-c9fa-42ff-9dc0-27ce8d0f0d56')?'details/maimai.html?v=1.15.0':(key.includes('phigros')||gid==='8b5cbfc6-9afb-4892-993e-e9424a9d6555')?'details/phigros.html?v=1.15.0':(key==='osu!'||key==='osu'||key.includes('osu!lazer')||key.includes('osulazer')||gid==='bd4bf292-368e-4e00-bdbb-6dee05aff790')?'details/osu.html?v=1.15.0':null);if(!url){if(bfkey.includes('battlefield2042')||bfkey.includes('战地2042'))url='details/battlefield.html?game=bf2042&v=1.15.0-hf4';else if(bfkey.includes('battlefield6')||bfkey.includes('战地6'))url='details/battlefield.html?game=bf6&v=1.15.0-hf4';else if(bfkey.includes('battlefield1')||bfkey.includes('战地1'))url='details/battlefield.html?game=bf1&v=1.15.0-hf4';else if(bfkey.includes('battlefieldv')||bfkey.includes('battlefield5')||bfkey.includes('战地v')||bfkey.includes('战地5'))url='details/battlefield.html?game=bfv&v=1.15.0-hf4'}return `<div class="detail-actionbar">${url?`<a class="detail-record-btn" href="${url}">\u6218\u7ee9\u8be6\u60c5 \u2192</a>`:`<button class="detail-record-btn disabled" type="button" disabled>\u6682\u65e0\u8be6\u60c5</button>`}</div>`}
+function gameDetailAction(g){const raw=String(g&&g.name||'').toLowerCase();const key=raw.normalize?raw.normalize('NFKC').replace(/[\s_\-·・:：]+/g,''):raw.replace(/\s+/g,'');const bfkey=(raw.normalize?raw.normalize('NFKC'):raw).replace(/[^a-z0-9\u4e00-\u9fff]+/g,'');const gid=String(g&&g.id||g&&g.playnite&&g.playnite.id||'').toLowerCase();let url=GAME_DETAIL_PAGES[key]||(key.includes('arcaea')?'details/arcaea.html?v=1.15.0':key.includes('chunithm')?'details/chunithm.html?v=1.15.0':(key.includes('maimai')||key.includes('舞萌')||gid==='dc0f4891-c9fa-42ff-9dc0-27ce8d0f0d56')?'details/maimai.html?v=1.15.0':(key.includes('phigros')||gid==='8b5cbfc6-9afb-4892-993e-e9424a9d6555')?'details/phigros.html?v=1.15.0':(key==='osu!'||key==='osu'||key.includes('osu!lazer')||key.includes('osulazer')||gid==='bd4bf292-368e-4e00-bdbb-6dee05aff790')?'details/osu.html?v=1.15.0':null);if(!url){if(bfkey.includes('battlefield2042')||bfkey.includes('战地2042'))url='details/battlefield.html?game=bf2042&v=1.15.0-hf5';else if(bfkey.includes('battlefield6')||bfkey.includes('战地6'))url='details/battlefield.html?game=bf6&v=1.15.0-hf5';else if(bfkey.includes('battlefield1')||bfkey.includes('战地1'))url='details/battlefield.html?game=bf1&v=1.15.0-hf5';else if(bfkey.includes('battlefieldv')||bfkey.includes('battlefield5')||bfkey.includes('战地v')||bfkey.includes('战地5'))url='details/battlefield.html?game=bfv&v=1.15.0-hf5'}return `<div class="detail-actionbar">${url?`<a class="detail-record-btn" href="${url}">\u6218\u7ee9\u8be6\u60c5 \u2192</a>`:`<button class="detail-record-btn disabled" type="button" disabled>\u6682\u65e0\u8be6\u60c5</button>`}</div>`}
 function openGameModal(g){
   const p=g.playnite||{},o=onlineOf(g.name),cat=categoryLabels[g.category]||g.category;
   const modal=document.querySelector('#gameModal'),content=document.querySelector('#gameModalContent'),img=document.querySelector('#gameModalImage');
@@ -284,29 +284,34 @@ renderAll();renderVideoTabs();renderVideos();
   }
   window.addEventListener('pageshow',restore);
 })();
-</script><script id="ymkf-heat-model-v3">
+</script><script id="ymkf-heat-model-v4">
 (function(){
   const __ymkfHeatPrevious=onlineOf;
-  const __ymkfPvzSteam=2469;
-  function __ymkfActivityFor(name){
-    const target=String(name||'').toLowerCase().replace(/\s+/g,'');
-    const keys=(typeof ACTIVITY==='object'&&ACTIVITY)?Object.keys(ACTIVITY):[];
-    const key=keys.find(x=>String(x).toLowerCase().replace(/\s+/g,'')===target);
-    return key?ACTIVITY[key]:{};
+  const __ymkfPvzSteam=2557;
+  function __ymkfKey(name){
+    try{return String(name||'').normalize('NFKC').toLowerCase().replace(/[^a-z0-9\u4e00-\u9fff]+/g,'')}catch(e){return String(name||'').toLowerCase().replace(/[^a-z0-9\u4e00-\u9fff]+/g,'')}
+  }
+  function __ymkfEstimate(value,range,label,detail){
+    return {value:'≈'+Number(value).toLocaleString('zh-CN'),sort:Number(value)||0,kind:'model',label:label,detail:detail+'；估算区间 '+range+'，页面取中位值用于热度排序。',confidence:'低'};
   }
   onlineOf=function(name){
-    const raw=String(name||'').trim(), key=raw.toLowerCase().replace(/\s+/g,'');
-    if(key==='chunithm'||key==='maimai'){
-      const a=__ymkfActivityFor(raw), recent7=Number(a.recent7||0);
-      if(recent7>0)return {value:Math.max(1,Math.round(recent7/900)).toLocaleString()+' 估',label:'近7日活跃估算 · 与 CHUNITHM 同口径',kind:'model'};
-      return {value:'暂无',label:'近7日活跃样本不足',kind:'na'};
+    const key=__ymkfKey(name);
+    if(key.includes('chunithm')){
+      return __ymkfEstimate(2600,'1,500–4,000','全网在线估算 · 非实时','口径：国服 + 日本/国际服 + 私服。公开资料可确认中国版、日/国际版及私服网络均持续运行，但不存在统一公开的实时并发接口');
     }
-    if(key==='plantsvs.zombies'||key==='plantsvszombies'){
+    if(key.includes('maimai')||key.includes('舞萌')){
+      return __ymkfEstimate(4500,'2,500–6,500','全网在线估算 · 非实时','口径：国服 + 日本/国际服 + 私服。估算参考国服当前版本活跃玩家规模、全球机台规模和国际/私服覆盖；不存在统一公开的实时并发接口');
+    }
+    if(key.includes('plantsvszombies')){
       if(__ymkfPvzSteam>=0){
-        const offline=Math.round(__ymkfPvzSteam), total=__ymkfPvzSteam+offline;
-        return {value:total.toLocaleString()+' 估',label:'Steam 实时 '+__ymkfPvzSteam.toLocaleString()+' + 单机粗估 '+offline.toLocaleString()+'（1:1模型）',kind:'model'};
+        const steam=Math.max(0,Math.round(__ymkfPvzSteam));
+        const offline=steam;
+        const total=steam+offline;
+        return {value:'≈'+total.toLocaleString('zh-CN'),sort:total,kind:'model',label:'Steam '+steam.toLocaleString('zh-CN')+' + 单机粗估 '+offline.toLocaleString('zh-CN'),detail:'Steam 部分为同步时实时连接人数；非 Steam / 离线玩家缺少公开实时口径，沿用 1:1 粗估。热度排序使用合计估算值。',confidence:'低'};
       }
-      return {value:'暂无',label:'Steam 实时人数获取失败',kind:'na'};
+      const fallback=__ymkfHeatPrevious(name);
+      if(fallback&&Number(fallback.sort)>0)return fallback;
+      return {value:'—',sort:0,kind:'na',label:'Steam 实时人数获取失败',detail:'本次同步未取得 Steam 当前连接人数，因此不伪造 PVZ 热度。',confidence:''};
     }
     return __ymkfHeatPrevious(name);
   };

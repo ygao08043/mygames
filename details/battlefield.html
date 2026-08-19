@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Battlefield · YMKF 战绩</title>
-<!-- Build v1.15.0-hf4 -->
+<!-- Build v1.15.0-hf5 -->
 <style>
 :root{color-scheme:dark;--bg:#080b10;--panel:#0f141c;--panel2:#141b25;--panel3:#1a2330;--line:#263142;--text:#f3f6fa;--muted:#8d9aab;--faint:#5e6a7a;--orange:#ff8b36;--blue:#68a9ff;--cyan:#60d7d1;--green:#67d690;--red:#ff6c75;--shadow:0 18px 55px rgba(0,0,0,.32)}
 *{box-sizing:border-box}html,body{margin:0;background:radial-gradient(circle at 12% -10%,#16253a 0,transparent 36%),radial-gradient(circle at 100% 0,#29190e 0,transparent 28%),var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;min-height:100%}button{font:inherit}.shell{width:min(1180px,calc(100% - 28px));margin:auto;padding:20px 0 72px}.top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:20px}.back{display:inline-flex;align-items:center;gap:7px;color:var(--muted);text-decoration:none;border:1px solid var(--line);background:rgba(15,20,28,.78);padding:9px 13px;border-radius:11px;cursor:pointer}.back:hover{color:var(--text)}.build{font-size:11px;color:var(--faint)}
@@ -21,7 +21,7 @@
 </head>
 <body>
 <div class="shell">
-  <div class="top"><button class="back" id="backBtn">← 返回游戏库</button><div class="build">Battlefield Hub · Build v1.15.0-hf4</div></div>
+  <div class="top"><button class="back" id="backBtn">← 返回游戏库</button><div class="build">Battlefield Hub · Build v1.15.0-hf5</div></div>
   <header class="hero">
     <div class="brand">YMKF // Battlefield Combat Record</div>
     <div class="hero-row">
@@ -67,7 +67,7 @@ function availableAvatar(){for(const id of ['bf1','bfv','bf2042','bf6']){const a
 function setIdentity(){const ea=DATA?.eaId||'未配置 EAID',av=availableAvatar();$('#identity').innerHTML=`${av?`<img class="avatar" src="${esc(av)}" alt="">`:'<div class="avatar-fallback">BF</div>'}<div style="min-width:0"><div class="player-name">${esc(ea)}</div><div class="player-sub">EA / PC · Battlefield 1 · V · 2042 · 6</div></div>`;const good=Object.values(DATA?.games||{}).filter(x=>x?.status==='ok').length,broken=Object.values(DATA?.games||{}).filter(x=>x?.status==='upstream_broken').length;$('#sourceInfo').textContent=DATA?.eaId?`GameTools Network · ${good}/4 正常${broken?` · ${broken} 个上游异常`:''} · ${dateText(DATA.generatedAt)}`:'未配置 EAID · 先运行 SET_BATTLEFIELD_EAID.cmd'}
 function renderTabs(){const keys=['overview','bf1','bfv','bf2042','bf6'];$('#mainTabs').innerHTML=keys.map(k=>`<button class="tab ${current===k?'active':''}" data-tab="${k}">${DEF[k].title}</button>`).join('');document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{current=b.dataset.tab;history.replaceState(null,'',current==='overview'?`battlefield.html?v=${BUILD}`:`battlefield.html?game=${current}&v=${BUILD}`);render()})}
 function statusLabel(g){return g?.status==='ok'?'实时刷新':g?.status==='cached'?'缓存':g?.status==='upstream_broken'?'官方数据损坏 · 待修复':'暂无数据'}
-function overviewCard(id){const p=profile(id),g=node(id),play=playniteSeconds(id),games=(n(p.wins)||0)+(n(p.losses)||0),wr=p.winPercent!=null?p.winPercent:(games?100*(n(p.wins)||0)/games:null);return `<div class="series-card" data-jump="${id}"><div class="game-title">${DEF[id].title}</div><div class="play">${hours(play)}</div><div class="mini">击杀 ${fmt(p.kills)} · 死亡 ${fmt(p.deaths)} · K/D ${p.kd!=null?fmt(p.kd,2):kd(p.kills,p.deaths)}<br>胜场 ${fmt(p.wins)} · 败场 ${fmt(p.losses)} · 胜率 ${wr!=null?pct(wr):'—'}<br>回合 ${fmt(p.rounds)}</div><span class="status ${esc(g.status||'error')}">${statusLabel(g)}</span></div>`}
+function overviewCard(id){const p=profile(id),g=node(id),play=playniteSeconds(id),games=(n(p.wins)||0)+(n(p.losses)||0),wr=p.winPercent!=null?p.winPercent:(games?100*(n(p.wins)||0)/games:null);return `<div class="series-card" data-jump="${id}"><div class="game-title">${DEF[id].title}</div><div class="play">${hours(play)}</div><div class="mini">击杀 ${fmt(p.kills)} · 死亡 ${fmt(p.deaths)} · K/D ${p.kd!=null?fmt(p.kd,2):kd(p.kills,p.deaths)}<br>胜场 ${fmt(p.wins)} · 败场 ${fmt(p.losses)} · 胜率 ${wr!=null?pct(wr):'—'}</div><span class="status ${esc(g.status||'error')}">${statusLabel(g)}</span></div>`}
 function monthlyRows(){return Array.isArray(GA?.monthlyGames)?GA.monthlyGames:[]}
 function monthlyByGame(id){return monthlyRows().map(m=>{let s=0;for(const g of (m.games||[]))if(gameKeyByName(g.name)===id)s+=n(g.seconds)||0;return{month:m.month,seconds:s}})}
 function monthlyTotal(id){return monthlyByGame(id).reduce((a,b)=>a+b.seconds,0)}
