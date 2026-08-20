@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-<!-- YMKF HOK bind hf27 -->
+<!-- YMKF HOK bind hf28 proxy fallback -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -31,7 +31,7 @@
 </head>
 <body>
 <div class="wrap">
-  <div class="topbar"><a class="back" href="../index.html">← 返回游戏库</a><div class="build">Build v1.15.0-hf27</div></div>
+  <div class="topbar"><a class="back" href="../index.html">← 返回游戏库</a><div class="build">Build v1.15.0-hf28</div></div>
 
   <section class="hero">
     <div class="eyebrow">YMKF · HONOR OF KINGS</div>
@@ -121,14 +121,19 @@
 </div>
 
 <script>
-const BUILD='1.15.0-hf27';
+const BUILD='1.15.0-hf28';
 const STORAGE_KEY='ymkf_hok_binding_v1';
 const VERIFY_HASH='e579ca7b2cff998bd1cb6b5ce5238bc104b8a42010e74a20ae86cb7ca1a5b88c';
 const PROVIDER={
-  name:'王者营地公开代理',
+  name:'王者营地公开数据',
   profile:id=>`https://api.yujn.cn/api/wzyd.php?type=json&id=${encodeURIComponent(id)}`,
   battles:id=>`https://api.yujn.cn/api/wzzj.php?type=json&num=30&id=${encodeURIComponent(id)}`
 };
+const PROXY_CHAIN=[
+  {name:'AllOrigins',url:u=>`https://api.allorigins.win/raw?url=${encodeURIComponent(u)}`},
+  {name:'CorsProxy',url:u=>`https://corsproxy.io/?url=${encodeURIComponent(u)}`}
+];
+const REQUEST_TIMEOUT_MS=9000;
 let binding=readBinding(),PROFILE=null,BATTLES=[];
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -148,7 +153,9 @@ function bindError(msg){const e=$('#bindError');e.textContent=msg;e.classList.ad
 async function submitBinding(){const qq=$('#qqInput').value.trim(),campId=$('#campInput').value.trim(),code=$('#verifyInput').value.trim();$('#bindError').classList.remove('show');if(!/^\d{5,12}$/.test(qq))return bindError('QQ 格式不正确，请输入 5–12 位数字。');if(!/^\d{5,15}$/.test(campId))return bindError('营地 ID 格式不正确，请输入个人主页中的数字 ID。');if(!/^\d{6}$/.test(code))return bindError('请输入 6 位绑定验证码。');let digest='';try{digest=await sha256(code)}catch{return bindError('当前浏览器无法完成本地验证码校验。请使用 HTTPS 页面打开。')}if(digest!==VERIFY_HASH)return bindError('绑定验证码不正确。');saveBinding({qq,campId,boundAt:new Date().toISOString(),version:1});closeModal();renderBinding();await loadStats()}
 function unwrapProfile(raw){if(!raw||typeof raw!=='object')throw new Error('账号资料响应为空');if(String(raw.code??'200')==='201')throw new Error(text(raw.msg,'营地 ID 无效或账号资料不可见'));const d=raw.data&&typeof raw.data==='object'&&!Array.isArray(raw.data)?raw.data:raw;if(String(d.code??'200')==='201')throw new Error(text(d.msg,'营地 ID 无效或账号资料不可见'));return d}
 function unwrapBattles(raw){if(!raw)throw new Error('战绩响应为空');if(Array.isArray(raw))return raw.filter(x=>x&&typeof x==='object');if(typeof raw==='object'&&String(raw.code??'200')==='201')throw new Error(text(raw.msg,'输入正确的营地 ID，或召唤师隐藏了个人战绩'));const candidates=[raw.data,raw.list,raw.rows,raw.result,raw.data?.list,raw.data?.rows,raw.data?.result];for(const c of candidates)if(Array.isArray(c))return c.filter(x=>x&&typeof x==='object');const keyed=Object.values(raw).filter(v=>v&&typeof v==='object'&&!Array.isArray(v)&&('gametime'in v||'mapName'in v||'killcnt'in v));if(keyed.length)return keyed;if('gametime'in raw||'mapName'in raw||'killcnt'in raw)return[raw];return[]}
-async function getJson(url){const r=await fetch(url,{cache:'no-store',headers:{Accept:'application/json'}});if(!r.ok)throw new Error(`上游 HTTP ${r.status}`);const t=await r.text();try{return JSON.parse(t)}catch{throw new Error('上游返回的不是有效 JSON')}}
+async function fetchText(url,timeout=REQUEST_TIMEOUT_MS){const c=new AbortController(),timer=setTimeout(()=>c.abort(),timeout);try{const r=await fetch(url,{cache:'no-store',headers:{Accept:'application/json,text/plain,*/*'},signal:c.signal});if(!r.ok)throw new Error(`HTTP ${r.status}`);return await r.text()}catch(e){if(e&&e.name==='AbortError')throw new Error('请求超时');throw e}finally{clearTimeout(timer)}}
+function parseJsonText(t){try{return JSON.parse(t)}catch{throw new Error('返回的不是有效 JSON')}}
+async function getJson(target){const attempts=[];for(const proxy of PROXY_CHAIN){const url=proxy.url(target);try{const t=await fetchText(url);const data=parseJsonText(t);return{data,via:proxy.name}}catch(e){attempts.push(`${proxy.name}: ${e?.message||e}`)}}try{const t=await fetchText(target,5500);return{data:parseJsonText(t),via:'直连'}}catch(e){attempts.push(`直连: ${e?.message||e}`)}throw new Error(attempts.join(' / '))}
 function renderBinding(){const bound=!!binding;$('#bindBtn').textContent=bound?'重新绑定':'绑定 QQ';$('#unbindBtn').style.display=bound?'inline-block':'none';$('#refreshBtn').disabled=!bound;$('#accountChip').innerHTML=bound?`QQ <b>${esc(maskQQ(binding.qq))}</b> · 营地 <b>${esc(maskCamp(binding.campId))}</b>`:'QQ <b>未绑定</b>';if(!bound){setStatus('','尚未绑定');$('#heroSub').textContent='绑定账号后读取王者营地公开战绩';resetDataUi()}}
 function resetDataUi(){PROFILE=null;BATTLES=[];$('#identity').style.display='none';for(const id of ['rank','stars','winRate','totalBattles'])$(id.startsWith('#')?id:'#'+id).textContent='—';$('#profileEmpty').style.display='block';$('#profileBody').style.display='none';$('#recentEmpty').style.display='block';$('#recentSummary').style.display='none';$('#matchList').innerHTML='';$('#matchEmpty').style.display='block';$('#syncTime').textContent=''}
 function profileVal(p,...keys){for(const k of keys){if(p&&p[k]!==undefined&&p[k]!==null&&String(p[k]).trim()!=='')return p[k]}return null}
@@ -157,7 +164,7 @@ function renderProfile(p){PROFILE=p;const role=text(profileVal(p,'roleName','nam
 function normResult(x){const s=text(x.result,x.win,x.outcome).toLowerCase();if(/胜|win|victory/.test(s))return'win';if(/败|负|loss|defeat/.test(s))return'loss';return'other'}
 function normBattle(x){const k=num(x.killcnt??x.kills),d=num(x.deadcnt??x.deaths),a=num(x.assistcnt??x.assists);return{raw:x,result:normResult(x),resultText:text(x.result,normResult(x)==='win'?'胜利':normResult(x)==='loss'?'失败':'未知'),mode:text(x.mapName,x.mode,'未知模式'),rank:text(x.roleJobName,x.rankName,''),stars:text(x.stars,x.star,''),duration:text(x.time,x.duration,''),date:text(x.gametime,x.gameTime,x.date,''),k,d,a,desc:text(x.desc,x.evaluate,''),hero:text(x.heroName,''),heroIcon:text(x.heroIcon,x.heroAvatar,''),heroId:text(x.heroId,''),mvp:text(x.mvpUrlV2,''),medal:text(x.evaluateUrl,'')}}
 function renderBattles(rows){BATTLES=rows.map(normBattle);const list=$('#matchList');list.innerHTML='';$('#matchEmpty').style.display=BATTLES.length?'none':'block';if(!BATTLES.length){$('#recentEmpty').style.display='block';$('#recentSummary').style.display='none';$('#recentNote').textContent='上游没有返回可展示的最近对局';return}const wins=BATTLES.filter(x=>x.result==='win').length,losses=BATTLES.filter(x=>x.result==='loss').length,total=BATTLES.length,avg=k=>BATTLES.reduce((a,b)=>a+b[k],0)/total,avgK=avg('k'),avgD=avg('d'),avgA=avg('a'),kda=(avgK+avgA)/Math.max(1,avgD);$('#recentEmpty').style.display='none';$('#recentSummary').style.display='grid';$('#recentWL').textContent=`${wins} / ${losses}`;$('#recentWinRate').textContent=`${(wins/total*100).toFixed(1)}%`;$('#recentKda').textContent=kda.toFixed(2);$('#avgKills').textContent=avgK.toFixed(1);$('#avgDeaths').textContent=avgD.toFixed(1);$('#avgAssists').textContent=avgA.toFixed(1);$('#recentNote').textContent=`最近 ${total} 场 · 胜 ${wins} · 负 ${losses}`;list.innerHTML=BATTLES.map((m,i)=>{const rcls=m.result==='win'?'win':m.result==='loss'?'loss':'other';const badges=[m.desc,m.mvp?'MVP / SVP':'',m.medal?'金银牌评价':''].filter(Boolean).map((b,j)=>`<span class="badge ${j?'medal':''}">${esc(b)}</span>`).join('');return `<article class="match"><div>${m.heroIcon?`<img class="hero-icon" src="${esc(m.heroIcon)}" alt="英雄" loading="lazy" onerror="this.style.visibility='hidden'">`:`<div class="hero-icon"></div>`}</div><div><div class="match-result ${rcls}">${esc(m.resultText)}</div><div class="match-mode">${esc(m.mode)}</div><div class="match-time">${esc(m.date||'时间未知')}</div></div><div class="kda">${m.k} / ${m.d} / ${m.a}<small>K / D / A</small></div><div class="match-col"><small>段位 / 星数</small><b>${esc(m.rank||'—')}${m.stars?` · ${esc(m.stars)}★`:''}</b><div class="match-time">${esc(m.duration||'时长未知')}</div></div><div class="match-col"><small>本局评价</small><div class="badge-line">${badges||'<span class="badge">暂无评价</span>'}</div></div></article>`}).join('')}
-async function loadStats(){if(!binding){renderBinding();return}setError('');setLoading(true);$('#matchEmpty').innerHTML='正在读取王者营地战绩…';$('#matchEmpty').style.display='block';const [pr,br]=await Promise.allSettled([getJson(PROVIDER.profile(binding.campId)),getJson(PROVIDER.battles(binding.campId))]);let ok=0,errors=[];if(pr.status==='fulfilled'){try{renderProfile(unwrapProfile(pr.value));ok++}catch(e){errors.push('账号资料：'+e.message)}}else errors.push('账号资料：'+pr.reason.message);if(br.status==='fulfilled'){try{renderBattles(unwrapBattles(br.value));ok++}catch(e){errors.push('最近战绩：'+e.message);renderBattles([])}}else{errors.push('最近战绩：'+br.reason.message);renderBattles([])}$('#syncTime').textContent='刷新 '+new Date().toLocaleString('zh-CN',{hour12:false});if(errors.length)setError(errors.join('；')+(errors.some(x=>/Failed to fetch|NetworkError|CORS/i.test(x))?'。若浏览器提示跨域/网络错误，说明当前第三方上游不可直连，需要切换到后端代理。':''));setLoading(false);if(ok)setStatus(errors.length?'error':'ok',errors.length?'部分数据读取失败':'已连接王者营地');else setStatus('error','战绩读取失败')}
+async function loadStats(){if(!binding){renderBinding();return}setError('');setLoading(true);$('#matchEmpty').innerHTML='正在通过代理读取王者营地战绩…';$('#matchEmpty').style.display='block';const [pr,br]=await Promise.allSettled([getJson(PROVIDER.profile(binding.campId)),getJson(PROVIDER.battles(binding.campId))]);let ok=0,errors=[],vias=[];if(pr.status==='fulfilled'){try{renderProfile(unwrapProfile(pr.value.data));vias.push(pr.value.via);ok++}catch(e){errors.push('账号资料：'+e.message)}}else errors.push('账号资料：'+pr.reason.message);if(br.status==='fulfilled'){try{renderBattles(unwrapBattles(br.value.data));vias.push(br.value.via);ok++}catch(e){errors.push('最近战绩：'+e.message);renderBattles([])}}else{errors.push('最近战绩：'+br.reason.message);renderBattles([])}$('#syncTime').textContent='刷新 '+new Date().toLocaleString('zh-CN',{hour12:false});if(errors.length)setError(errors.join('；'));setLoading(false);const via=[...new Set(vias)].join(' / ');if(ok)setStatus(errors.length?'error':'ok',errors.length?`部分数据读取失败${via?' · '+via:''}`:`已连接王者营地 · ${via||'代理'}`);else setStatus('error','战绩读取失败')}
 function doUnbind(){if(!binding)return;if(!confirm('确定解除当前王者荣耀 QQ 绑定？\n只会清除这个浏览器里的本地绑定。'))return;localStorage.removeItem(STORAGE_KEY);binding=null;setError('');renderBinding()}
 $('#bindBtn').onclick=openModal;$('#closeModal').onclick=closeModal;$('#saveBindBtn').onclick=submitBinding;$('#refreshBtn').onclick=loadStats;$('#unbindBtn').onclick=doUnbind;$('#bindModal').onclick=e=>{if(e.target===$('#bindModal'))closeModal()};document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});$('#verifyInput').addEventListener('keydown',e=>{if(e.key==='Enter')submitBinding()});
 renderBinding();if(binding)loadStats();
