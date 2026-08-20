@@ -1,0 +1,18 @@
+{
+  "name": "YMKF 娱乐数据",
+  "short_name": "YMKF",
+  "description": "YMKF 的个人游戏与音游数据网站",
+  "start_url": "../../index.html",
+  "scope": "../../",
+  "display": "standalone",
+  "background_color": "#0b0d12",
+  "theme_color": "#10131d",
+  "icons": [
+    {
+      "src": "site-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

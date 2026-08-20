@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Game controller" id="ymkf-gamepad-icon">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="40" x2="430" y2="470" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7c3aed"/>
+      <stop offset="0.5" stop-color="#312e81"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="pad" x1="160" y1="170" x2="350" y2="375" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#dbe3f0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#020617" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <rect x="12" y="12" width="488" height="488" rx="112" fill="url(#bg)"/>
+  <path d="M151 174c-42 0-69 28-83 77L49 319c-13 47-3 92 27 107 27 14 57-3 80-39l29-45h142l29 45c23 36 53 53 80 39 30-15 40-60 27-107l-19-68c-14-49-41-77-83-77-26 0-43 10-58 24H209c-15-14-32-24-58-24Z" fill="url(#pad)" filter="url(#shadow)"/>
+  <path d="M151 174c-42 0-69 28-83 77L49 319c-13 47-3 92 27 107 27 14 57-3 80-39l29-45h142l29 45c23 36 53 53 80 39 30-15 40-60 27-107l-19-68c-14-49-41-77-83-77-26 0-43 10-58 24H209c-15-14-32-24-58-24Z" fill="none" stroke="#f8fafc" stroke-opacity=".58" stroke-width="6"/>
+  <g fill="#172033">
+    <rect x="123" y="228" width="34" height="104" rx="10"/>
+    <rect x="88" y="263" width="104" height="34" rx="10"/>
+    <circle cx="212" cy="316" r="31"/>
+    <circle cx="300" cy="316" r="31"/>
+    <rect x="237" y="247" width="38" height="17" rx="8.5"/>
+  </g>
+  <g>
+    <circle cx="360" cy="238" r="19" fill="#fbbf24"/>
+    <circle cx="397" cy="274" r="19" fill="#ef4444"/>
+    <circle cx="360" cy="311" r="19" fill="#22c55e"/>
+    <circle cx="323" cy="274" r="19" fill="#3b82f6"/>
+  </g>
+  <g fill="none" stroke="#ffffff" stroke-opacity=".18" stroke-width="5">
+    <circle cx="212" cy="316" r="22"/>
+    <circle cx="300" cy="316" r="22"/>
+  </g>
+</svg>
