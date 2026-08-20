@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-<!-- YMKF HOK local-sync hf29 camp-authorized bridge -->
+<!-- YMKF HOK local-sync hf30 direct king-camp -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -31,7 +31,7 @@
 </head>
 <body>
 <div class="wrap">
-  <div class="topbar"><a class="back" href="../index.html">← 返回游戏库</a><div class="build">Build v1.15.0-hf29</div></div>
+  <div class="topbar"><a class="back" href="../index.html">← 返回游戏库</a><div class="build">Build v1.15.0-hf30</div></div>
 
   <section class="hero">
     <div class="eyebrow">YMKF · HONOR OF KINGS</div>
@@ -67,7 +67,7 @@
 
   <div class="grid">
     <section class="card span-4">
-      <div class="section-head"><div><div class="section-title">账号概览</div><div class="section-note">RUN_SYNC 从已授权王者营地数据链同步</div></div></div>
+      <div class="section-head"><div><div class="section-title">账号概览</div><div class="section-note">RUN_SYNC 从本机已授权王者营地直连同步</div></div></div>
       <div id="profileEmpty" class="empty">绑定后显示账号资料</div>
       <div id="profileBody" style="display:none">
         <div class="rank-card"><img id="rankIcon" alt="段位"><div class="rank-copy"><small>当前赛季</small><b id="rankLarge">—</b><span id="starLarge">—</span></div></div>
@@ -102,7 +102,7 @@
     </section>
 
     <section class="card">
-      <div class="provider-note"><b>hf29 数据链：</b>已停用 yujn 与浏览器 CORS 代理。真正的战绩抓取发生在你电脑执行 RUN_SYNC 时：本机脚本把营地 ID 交给一个已完成王者营地扫码授权的开源看板后端，由其使用王者营地数据链同步，再把脱敏后的 hok.json 发布到本站。QQ 与验证码不会发送给该后端；网站只保存本浏览器绑定。</div>
+      <div class="provider-note"><b>hf30 数据链：</b>已彻底移除 yujn、CORS 中转和公共王者桥。首次在 YMKF_Sync 运行 <b>LOGIN_HOK_CAMP.cmd</b>，用微信扫描腾讯王者营地登录二维码；授权态只保存在本机 HOK_IMPORT。以后 RUN_SYNC 直接请求 <b>kohcamp.qq.com</b>，再把脱敏后的 hok.json 发布到本站。QQ、绑定验证码与营地 token/userKey 都不会发送到 GitHub Pages。</div>
     </section>
   </div>
 </div>
@@ -121,7 +121,7 @@
 </div>
 
 <script>
-const BUILD='1.15.0-hf29';
+const BUILD='1.15.0-hf30';
 const STORAGE_KEY='ymkf_hok_binding_v1';
 const VERIFY_HASH='e579ca7b2cff998bd1cb6b5ce5238bc104b8a42010e74a20ae86cb7ca1a5b88c';
 const CACHE_URL='../data/hok.json';
@@ -153,7 +153,7 @@ function fmtDate(v){if(!v)return'';const d=new Date(v);if(Number.isNaN(d.getTime
 function normBattle(x){const k=num(x.killcnt??x.kills),d=num(x.deadcnt??x.deaths),a=num(x.assistcnt??x.assists);const result=normResult(x);return{raw:x,result,resultText:text(x.result,result==='win'?'胜利':result==='loss'?'失败':'未知'),mode:text(x.mapName,x.modeName,x.mode,'未知模式'),rank:text(x.roleJobName,x.rankName,''),stars:text(x.stars,x.star,''),duration:text(x.time,x.duration,''),date:fmtDate(text(x.gametime,x.playedAt,x.gameTime,x.date,'')),k,d,a,desc:text(x.desc,x.evaluate,''),hero:text(x.heroName,''),heroIcon:text(x.heroIcon,x.heroAvatar,''),mvpType:text(x.mvpType,''),medal:text(x.medal,''),score:text(x.score,'')}}
 function renderBattles(rows){BATTLES=(Array.isArray(rows)?rows:[]).map(normBattle);const list=$('#matchList');list.innerHTML='';$('#matchEmpty').style.display=BATTLES.length?'none':'block';if(!BATTLES.length){$('#recentEmpty').style.display='block';$('#recentSummary').style.display='none';$('#recentNote').textContent='同步缓存里暂时没有可展示的近期对局';return}const wins=BATTLES.filter(x=>x.result==='win').length,losses=BATTLES.filter(x=>x.result==='loss').length,total=BATTLES.length,avg=k=>BATTLES.reduce((a,b)=>a+b[k],0)/total,avgK=avg('k'),avgD=avg('d'),avgA=avg('a'),kda=(avgK+avgA)/Math.max(1,avgD);$('#recentEmpty').style.display='none';$('#recentSummary').style.display='grid';$('#recentWL').textContent=`${wins} / ${losses}`;$('#recentWinRate').textContent=`${(wins/total*100).toFixed(1)}%`;$('#recentKda').textContent=kda.toFixed(2);$('#avgKills').textContent=avgK.toFixed(1);$('#avgDeaths').textContent=avgD.toFixed(1);$('#avgAssists').textContent=avgA.toFixed(1);$('#recentNote').textContent=`最近 ${total} 场 · 胜 ${wins} · 负 ${losses}`;list.innerHTML=BATTLES.map(m=>{const rcls=m.result==='win'?'win':m.result==='loss'?'loss':'other';const badges=[m.desc,m.mvpType?m.mvpType.toUpperCase():'',m.medal,m.score&&!m.desc?`评分 ${m.score}`:''].filter((x,i,a)=>x&&a.indexOf(x)===i).map((b,j)=>`<span class="badge ${j?'medal':''}">${esc(b)}</span>`).join('');return `<article class="match"><div>${m.heroIcon?`<img class="hero-icon" src="${esc(m.heroIcon)}" alt="${esc(m.hero||'英雄')}" loading="lazy" onerror="this.style.visibility='hidden'">`:`<div class="hero-icon"></div>`}</div><div><div class="match-result ${rcls}">${esc(m.resultText)}</div><div class="match-mode">${esc(m.hero?m.hero+' · '+m.mode:m.mode)}</div><div class="match-time">${esc(m.date||'时间未知')}</div></div><div class="kda">${m.k} / ${m.d} / ${m.a}<small>K / D / A</small></div><div class="match-col"><small>段位 / 星数</small><b>${esc(m.rank||'—')}${m.stars?` · ${esc(m.stars)}★`:''}</b><div class="match-time">${esc(m.duration||'时长未知')}</div></div><div class="match-col"><small>本局评价</small><div class="badge-line">${badges||'<span class="badge">暂无评价</span>'}</div></div></article>`}).join('')}
 async function fetchCache(){const r=await fetch(`${CACHE_URL}?v=${Date.now()}`,{cache:'no-store',headers:{Accept:'application/json'}});if(!r.ok)throw new Error(`hok.json HTTP ${r.status}`);return await r.json()}
-async function loadStats(){if(!binding){renderBinding();return}setError('');setLoading(true);$('#matchEmpty').innerHTML='正在读取 RUN_SYNC 生成的王者荣耀缓存…';$('#matchEmpty').style.display='block';try{const data=await fetchCache();if(!data||data.ok!==true)throw new Error(text(data?.error,'尚未生成有效王者战绩缓存。先运行 SET_HOK_ACCOUNT.cmd，再运行 RUN_SYNC_v1.15.0.cmd。'));if(!data.binding?.qqHash||!data.binding?.campIdHash)throw new Error('hok.json 缺少绑定指纹，请重新运行 RUN_SYNC。');const [qqHash,campHash]=await Promise.all([sha256(binding.qq),sha256(binding.campId)]);if(qqHash!==data.binding.qqHash||campHash!==data.binding.campIdHash)throw new Error('网页当前绑定与本机 HOK_IMPORT 配置不一致。请运行 SET_HOK_ACCOUNT.cmd 设置同一 QQ / 营地 ID，然后重新 RUN_SYNC。');if(!data.profile)throw new Error('同步缓存没有账号资料。');renderProfile(data.profile);renderBattles(data.matches||[]);const when=data.syncedAt?new Date(data.syncedAt):null;$('#syncTime').textContent=when&&!Number.isNaN(when.getTime())?'RUN_SYNC '+when.toLocaleString('zh-CN',{hour12:false}):'RUN_SYNC 缓存';setStatus('ok',`已读取王者营地同步缓存 · ${data.matches?.length||0} 场`);$('#matchEmpty').innerHTML='暂无近期对局数据';}catch(e){resetDataUi();setError(e?.message||String(e));setStatus('error','王者战绩缓存不可用');$('#matchEmpty').innerHTML='<strong>暂时没有可用战绩。</strong><br>先在 YMKF_Sync 运行 SET_HOK_ACCOUNT.cmd，再运行 RUN_SYNC_v1.15.0.cmd。';$('#matchEmpty').style.display='block'}finally{setLoading(false)}}
+async function loadStats(){if(!binding){renderBinding();return}setError('');setLoading(true);$('#matchEmpty').innerHTML='正在读取 RUN_SYNC 生成的王者荣耀缓存…';$('#matchEmpty').style.display='block';try{const data=await fetchCache();if(!data||data.ok!==true)throw new Error(text(data?.error,'尚未生成有效王者战绩缓存。先运行 SET_HOK_ACCOUNT.cmd、LOGIN_HOK_CAMP.cmd，再运行 RUN_SYNC_v1.15.0.cmd。'));if(!data.binding?.qqHash||!data.binding?.campIdHash)throw new Error('hok.json 缺少绑定指纹，请重新运行 RUN_SYNC。');const [qqHash,campHash]=await Promise.all([sha256(binding.qq),sha256(binding.campId)]);if(qqHash!==data.binding.qqHash||campHash!==data.binding.campIdHash)throw new Error('网页当前绑定与本机 HOK_IMPORT 配置不一致。请运行 SET_HOK_ACCOUNT.cmd 设置同一 QQ / 营地 ID，然后重新 RUN_SYNC。');if(!data.profile)throw new Error('同步缓存没有账号资料。');renderProfile(data.profile);renderBattles(data.matches||[]);const when=data.syncedAt?new Date(data.syncedAt):null;$('#syncTime').textContent=when&&!Number.isNaN(when.getTime())?'RUN_SYNC '+when.toLocaleString('zh-CN',{hour12:false}):'RUN_SYNC 缓存';setStatus('ok',`已读取王者营地同步缓存 · ${data.matches?.length||0} 场`);$('#matchEmpty').innerHTML='暂无近期对局数据';}catch(e){resetDataUi();setError(e?.message||String(e));setStatus('error','王者战绩缓存不可用');$('#matchEmpty').innerHTML='<strong>暂时没有可用战绩。</strong><br>先在 YMKF_Sync 运行 SET_HOK_ACCOUNT.cmd，再运行 LOGIN_HOK_CAMP.cmd 扫码，最后运行 RUN_SYNC_v1.15.0.cmd。';$('#matchEmpty').style.display='block'}finally{setLoading(false)}}
 function doUnbind(){if(!binding)return;if(!confirm('确定解除当前王者荣耀 QQ 绑定？\n只会清除这个浏览器里的本地绑定。'))return;localStorage.removeItem(STORAGE_KEY);binding=null;setError('');renderBinding()}
 $('#bindBtn').onclick=openModal;$('#closeModal').onclick=closeModal;$('#saveBindBtn').onclick=submitBinding;$('#refreshBtn').onclick=loadStats;$('#unbindBtn').onclick=doUnbind;$('#bindModal').onclick=e=>{if(e.target===$('#bindModal'))closeModal()};document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});$('#verifyInput').addEventListener('keydown',e=>{if(e.key==='Enter')submitBinding()});
 renderBinding();if(binding)loadStats();
