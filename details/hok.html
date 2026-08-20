@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<!-- YMKF HOK bind hf27 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>王者荣耀 · 战绩详情</title>
+<style>
+:root{color-scheme:dark;--bg:#08090d;--panel:#11141b;--panel2:#171c25;--panel3:#0c0f15;--text:#f6f7fb;--muted:#949dad;--line:rgba(255,255,255,.1);--gold:#f5cf79;--gold2:#c99e42;--blue:#86b8ff;--green:#82dfb1;--red:#ff8e99;--violet:#b6a2ff;--shadow:0 24px 80px rgba(0,0,0,.36)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:radial-gradient(circle at 82% -5%,rgba(222,171,74,.18),transparent 34%),radial-gradient(circle at 6% 22%,rgba(70,101,190,.14),transparent 35%),var(--bg);color:var(--text);font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,-apple-system,sans-serif}.wrap{max-width:1180px;margin:auto;padding:22px 18px 70px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}.back,.ghost-btn,.primary-btn,.danger-btn{appearance:none;font:inherit;text-decoration:none;cursor:pointer;border-radius:12px;font-weight:800;transition:.15s}.back,.ghost-btn{color:var(--text);border:1px solid var(--line);background:rgba(255,255,255,.045);padding:9px 13px}.back:hover,.ghost-btn:hover{background:rgba(255,255,255,.08)}.build{color:var(--muted);font-size:12px}.hero{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:27px;padding:30px;background:linear-gradient(135deg,rgba(27,29,37,.97),rgba(57,45,24,.86) 54%,rgba(27,39,63,.87));box-shadow:var(--shadow)}.hero:after{content:"王";position:absolute;right:-12px;top:-53px;font-family:serif;font-size:210px;font-weight:900;color:rgba(255,222,153,.045);transform:rotate(8deg);pointer-events:none}.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#f4d998;font-weight:900}.hero-row{display:flex;align-items:center;justify-content:space-between;gap:24px}.hero-main{min-width:0}.hero h1{font-size:clamp(39px,7vw,70px);line-height:.96;margin:10px 0 6px;letter-spacing:-.05em}.sub{color:#d0d4dc;line-height:1.65}.status-pill{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(255,255,255,.12);border-radius:999px;background:rgba(5,7,11,.34);padding:7px 10px;font-size:11px;font-weight:850;color:#d5d9e2;margin-top:12px}.status-dot{width:7px;height:7px;border-radius:50%;background:var(--muted);box-shadow:0 0 0 4px rgba(255,255,255,.04)}.status-pill.ok .status-dot{background:var(--green)}.status-pill.loading .status-dot{background:var(--gold);animation:pulse 1s infinite}.status-pill.error .status-dot{background:var(--red)}@keyframes pulse{50%{opacity:.35}}
+.identity{display:flex;align-items:center;gap:14px;min-width:250px;justify-content:flex-end}.avatar{width:78px;height:78px;border-radius:22px;border:1px solid rgba(255,255,255,.18);background:linear-gradient(135deg,#343b49,#121722);object-fit:cover;box-shadow:0 10px 30px rgba(0,0,0,.3)}.identity-copy{text-align:right;min-width:0}.identity-name{font-size:19px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:240px}.identity-meta{font-size:11px;color:#c3c8d2;margin-top:5px;line-height:1.55}.rank-icon{height:30px;max-width:84px;object-fit:contain;vertical-align:middle;margin-left:5px}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:23px}.stat{padding:14px;border-radius:15px;background:rgba(6,8,13,.47);border:1px solid rgba(255,255,255,.11);min-width:0}.stat small{display:block;color:#bdc2cc;font-weight:700;font-size:11px;margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.stat strong{font-size:25px;letter-spacing:-.03em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}.stat strong.gold{color:var(--gold)}
+.toolbar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:18px 0 12px;flex-wrap:wrap}.toolbar-left,.toolbar-right{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.account-chip{display:flex;align-items:center;gap:8px;background:#10141b;border:1px solid var(--line);border-radius:12px;padding:9px 12px;font-size:12px;color:#cbd0d9}.account-chip b{color:#fff}.primary-btn{border:0;background:linear-gradient(135deg,#ffe4a1,#d4a94d);color:#18130a;padding:10px 15px;box-shadow:0 8px 24px rgba(204,156,62,.18)}.primary-btn:hover{filter:brightness(1.05)}.primary-btn:disabled{opacity:.45;cursor:not-allowed;filter:none}.danger-btn{border:1px solid rgba(255,126,138,.25);background:rgba(255,93,107,.08);color:#ffacb4;padding:9px 13px}.danger-btn:hover{background:rgba(255,93,107,.13)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px}.card{grid-column:span 12;background:rgba(17,20,27,.94);border:1px solid var(--line);border-radius:20px;padding:19px}.span-4{grid-column:span 4}.span-8{grid-column:span 8}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:14px}.section-title{font-size:19px;font-weight:900}.section-note{color:var(--muted);font-size:11px;line-height:1.65}.summary-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.summary-cell{border:1px solid var(--line);background:var(--panel2);border-radius:14px;padding:13px}.summary-cell small{display:block;color:var(--muted);font-size:10px;margin-bottom:5px}.summary-cell b{font-size:19px}.summary-cell b.win{color:var(--green)}.summary-cell b.loss{color:var(--red)}
+.rank-card{display:flex;align-items:center;gap:15px;min-height:100%}.rank-card img{width:82px;height:82px;object-fit:contain}.rank-copy small{color:var(--muted);font-size:11px}.rank-copy b{display:block;font-size:25px;margin:4px 0}.rank-copy span{color:var(--gold);font-size:13px;font-weight:850}.empty{padding:36px 16px;text-align:center;color:var(--muted);line-height:1.8}.empty strong{color:#e9ebf1}.match-list{display:grid;gap:9px}.match{display:grid;grid-template-columns:54px minmax(150px,1.35fr) minmax(100px,.85fr) minmax(110px,.85fr) minmax(120px,1fr);align-items:center;gap:12px;border:1px solid var(--line);background:linear-gradient(90deg,rgba(255,255,255,.025),rgba(255,255,255,.012));border-radius:15px;padding:11px 13px}.hero-icon{width:48px;height:48px;border-radius:13px;object-fit:cover;background:#202631;border:1px solid rgba(255,255,255,.1)}.match-result{font-weight:950;font-size:13px}.match-result.win{color:var(--green)}.match-result.loss{color:var(--red)}.match-result.other{color:var(--gold)}.match-mode{font-weight:850;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.match-time{font-size:10px;color:var(--muted);margin-top:4px}.kda{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:18px;font-weight:900;letter-spacing:-.03em}.kda small{display:block;font-family:inherit;font-size:10px;color:var(--muted);font-weight:600;margin-top:3px}.match-col small{display:block;color:var(--muted);font-size:10px;margin-bottom:3px}.match-col b{font-size:13px}.badge-line{display:flex;gap:5px;flex-wrap:wrap;margin-top:5px}.badge{font-size:9px;font-weight:850;padding:3px 6px;border-radius:999px;background:rgba(255,255,255,.07);color:#cbd1dd}.badge.medal{color:#f7d689;background:rgba(230,179,69,.1)}.provider-note{border-left:3px solid var(--gold2);background:rgba(215,168,72,.055);padding:12px 14px;border-radius:0 12px 12px 0;color:#bfc5d0;font-size:11px;line-height:1.7}.provider-note b{color:#f3d890}.error-box{display:none;border:1px solid rgba(255,110,123,.22);background:rgba(255,82,97,.07);color:#ffc0c6;border-radius:14px;padding:12px 14px;margin-bottom:12px;font-size:12px;line-height:1.65}.error-box.show{display:block}
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.68);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:18px;z-index:100}.modal-backdrop.show{display:flex}.modal{width:min(560px,100%);max-height:calc(100vh - 36px);overflow:auto;background:#10141b;border:1px solid rgba(255,255,255,.13);border-radius:23px;box-shadow:0 26px 90px rgba(0,0,0,.55);padding:22px}.modal-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:17px}.modal h2{margin:0;font-size:22px}.modal-head p{margin:5px 0 0;color:var(--muted);font-size:11px;line-height:1.6}.close-btn{width:34px;height:34px;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#fff;cursor:pointer;font-size:18px}.form{display:grid;gap:13px}.field label{display:block;font-size:11px;color:#c9ced7;font-weight:800;margin:0 0 6px}.input{width:100%;border:1px solid var(--line);border-radius:12px;background:#090c11;color:#fff;padding:12px 13px;font:inherit;outline:none}.input:focus{border-color:rgba(240,197,105,.62);box-shadow:0 0 0 3px rgba(222,174,78,.08)}.field-tip{font-size:10px;color:var(--muted);line-height:1.6;margin-top:5px}.verify-row{display:grid;grid-template-columns:1fr 145px;gap:9px}.bind-error{display:none;color:#ffadb5;font-size:11px;line-height:1.6;border:1px solid rgba(255,99,112,.18);background:rgba(255,75,90,.055);border-radius:10px;padding:9px 10px}.bind-error.show{display:block}.privacy{font-size:10px;line-height:1.65;color:#8893a4;border-top:1px solid var(--line);padding-top:12px}.privacy b{color:#bdc5d1}.skeleton{position:relative;overflow:hidden;color:transparent!important;background:#1b2029!important;border-radius:7px}.skeleton:after{content:"";position:absolute;inset:0;transform:translateX(-100%);background:linear-gradient(90deg,transparent,rgba(255,255,255,.07),transparent);animation:shimmer 1.25s infinite}@keyframes shimmer{100%{transform:translateX(100%)}}
+@media(max-width:900px){.hero-row{align-items:flex-start}.identity{min-width:0}.span-4,.span-8{grid-column:span 12}.match{grid-template-columns:48px 1fr 1fr}.match .match-col:nth-child(4),.match .match-col:nth-child(5){grid-column:span 1}.stats{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.wrap{padding:15px 12px 50px}.hero{padding:21px}.hero-row{display:block}.identity{justify-content:flex-start;margin-top:18px}.identity-copy{text-align:left}.avatar{width:65px;height:65px;border-radius:18px}.stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.stat strong{font-size:21px}.summary-grid{grid-template-columns:repeat(2,1fr)}.match{grid-template-columns:45px minmax(0,1fr);gap:9px}.match .match-col{grid-column:2}.match .kda{grid-column:2}.verify-row{grid-template-columns:1fr}.toolbar-right{width:100%}.toolbar-right button{flex:1}}
+</style>
+<!-- YMKF site icon hf26 -->
+<link rel="icon" type="image/svg+xml" href="../assets/playnite/site-icon.svg">
+<link rel="shortcut icon" href="../assets/playnite/site-icon.svg">
+<link rel="apple-touch-icon" href="../assets/playnite/site-icon.svg">
+<link rel="manifest" href="../assets/playnite/site.webmanifest">
+<meta name="theme-color" content="#10131d">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="YMKF">
+<!-- /YMKF site icon hf26 -->
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar"><a class="back" href="../index.html">← 返回游戏库</a><div class="build">Build v1.15.0-hf27</div></div>
+
+  <section class="hero">
+    <div class="eyebrow">YMKF · HONOR OF KINGS</div>
+    <div class="hero-row">
+      <div class="hero-main">
+        <h1>王者荣耀</h1>
+        <div class="sub" id="heroSub">绑定账号后读取王者营地公开战绩</div>
+        <div class="status-pill" id="statusPill"><span class="status-dot"></span><span id="statusText">尚未绑定</span></div>
+      </div>
+      <div class="identity" id="identity" style="display:none">
+        <img class="avatar" id="avatar" alt="王者头像">
+        <div class="identity-copy"><div class="identity-name" id="roleName">—</div><div class="identity-meta" id="identityMeta">—</div></div>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><small>当前段位</small><strong class="gold" id="rank">—</strong></div>
+      <div class="stat"><small>排位星数</small><strong id="stars">—</strong></div>
+      <div class="stat"><small>胜率</small><strong id="winRate">—</strong></div>
+      <div class="stat"><small>总对局</small><strong id="totalBattles">—</strong></div>
+    </div>
+  </section>
+
+  <div class="toolbar">
+    <div class="toolbar-left"><div class="account-chip" id="accountChip">QQ <b>未绑定</b></div></div>
+    <div class="toolbar-right">
+      <button class="ghost-btn" id="refreshBtn" type="button" disabled>刷新战绩</button>
+      <button class="primary-btn" id="bindBtn" type="button">绑定 QQ</button>
+      <button class="danger-btn" id="unbindBtn" type="button" style="display:none">解除绑定</button>
+    </div>
+  </div>
+
+  <div class="error-box" id="errorBox"></div>
+
+  <div class="grid">
+    <section class="card span-4">
+      <div class="section-head"><div><div class="section-title">账号概览</div><div class="section-note">来自王者营地公开角色资料</div></div></div>
+      <div id="profileEmpty" class="empty">绑定后显示账号资料</div>
+      <div id="profileBody" style="display:none">
+        <div class="rank-card"><img id="rankIcon" alt="段位"><div class="rank-copy"><small>当前赛季</small><b id="rankLarge">—</b><span id="starLarge">—</span></div></div>
+        <div class="summary-grid" style="margin-top:14px">
+          <div class="summary-cell"><small>战力</small><b id="fighting">—</b></div>
+          <div class="summary-cell"><small>MVP</small><b id="mvp">—</b></div>
+          <div class="summary-cell"><small>等级</small><b id="level">—</b></div>
+          <div class="summary-cell"><small>英雄</small><b id="heroes">—</b></div>
+          <div class="summary-cell"><small>皮肤</small><b id="skins">—</b></div>
+          <div class="summary-cell"><small>区服</small><b id="serverShort">—</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card span-8">
+      <div class="section-head"><div><div class="section-title">近期表现</div><div class="section-note" id="recentNote">最近战绩加载后自动汇总</div></div></div>
+      <div id="recentEmpty" class="empty">暂无近期对局数据</div>
+      <div class="summary-grid" id="recentSummary" style="display:none">
+        <div class="summary-cell"><small>近期胜 / 负</small><b id="recentWL">—</b></div>
+        <div class="summary-cell"><small>近期胜率</small><b class="win" id="recentWinRate">—</b></div>
+        <div class="summary-cell"><small>平均 KDA</small><b id="recentKda">—</b></div>
+        <div class="summary-cell"><small>场均击杀</small><b id="avgKills">—</b></div>
+        <div class="summary-cell"><small>场均死亡</small><b id="avgDeaths">—</b></div>
+        <div class="summary-cell"><small>场均助攻</small><b id="avgAssists">—</b></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-head"><div><div class="section-title">最近对局</div><div class="section-note">默认请求最近 30 场；上游隐藏战绩或接口异常时不会用空值冒充真实数据。</div></div><div class="section-note" id="syncTime"></div></div>
+      <div id="matchEmpty" class="empty"><strong>还没有战绩。</strong><br>点击“绑定 QQ”完成账号关联。</div>
+      <div class="match-list" id="matchList"></div>
+    </section>
+
+    <section class="card">
+      <div class="provider-note"><b>数据链说明：</b>本页的 QQ 是 YMKF 网站中的绑定账号标识；当前公开查分接口实际使用“王者营地 ID”。TapTap 的公开开发接口由游戏方实现，并不是可供第三方直接用 QQ 查询王者角色的接口。绑定信息仅保存在当前浏览器，本页不会保存验证码。</div>
+    </section>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="bindModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="bindTitle">
+    <div class="modal-head"><div><h2 id="bindTitle">绑定 QQ</h2><p>输入你的 QQ 与王者营地 ID，再用网站验证码确认。后续打开此页面会自动读取这个绑定。</p></div><button class="close-btn" id="closeModal" type="button" aria-label="关闭">×</button></div>
+    <div class="form">
+      <div class="field"><label for="qqInput">QQ</label><input class="input" id="qqInput" inputmode="numeric" autocomplete="off" maxlength="12" placeholder="请输入 QQ 号"><div class="field-tip">作为本站账号绑定标识。不会发送给战绩接口。</div></div>
+      <div class="field"><label for="campInput">王者营地 ID</label><input class="input" id="campInput" inputmode="numeric" autocomplete="off" maxlength="15" placeholder="王者营地个人主页中的数字 ID"><div class="field-tip">当前战绩接口按营地 ID 查询。可在王者营地 → 我的 → 个人主页查看。</div></div>
+      <div class="field"><label for="verifyInput">绑定验证码</label><div class="verify-row"><input class="input" id="verifyInput" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="6 位验证码"><button class="primary-btn" id="saveBindBtn" type="button">验证并绑定</button></div><div class="field-tip">验证码只用于阻止他人随手修改本浏览器的绑定；不会写入 localStorage。</div></div>
+      <div class="bind-error" id="bindError"></div>
+      <div class="privacy"><b>本地绑定：</b>QQ、营地 ID 与绑定时间保存在当前浏览器的 localStorage。GitHub Pages 是静态网页，无法把你的账号凭据安全写进公开仓库；因此本版不会在 Git 中保存 QQ、Token 或验证码。</div>
+    </div>
+  </div>
+</div>
+
+<script>
+const BUILD='1.15.0-hf27';
+const STORAGE_KEY='ymkf_hok_binding_v1';
+const VERIFY_HASH='e579ca7b2cff998bd1cb6b5ce5238bc104b8a42010e74a20ae86cb7ca1a5b88c';
+const PROVIDER={
+  name:'王者营地公开代理',
+  profile:id=>`https://api.yujn.cn/api/wzyd.php?type=json&id=${encodeURIComponent(id)}`,
+  battles:id=>`https://api.yujn.cn/api/wzzj.php?type=json&num=30&id=${encodeURIComponent(id)}`
+};
+let binding=readBinding(),PROFILE=null,BATTLES=[];
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const num=(x,d=0)=>Number.isFinite(Number(x))?Number(x):d;
+const text=(...v)=>{for(const x of v){if(x!==undefined&&x!==null&&String(x).trim()!=='')return String(x).trim()}return''};
+function readBinding(){try{const x=JSON.parse(localStorage.getItem(STORAGE_KEY)||'null');if(x&&/^\d{5,12}$/.test(String(x.qq||''))&&/^\d{5,15}$/.test(String(x.campId||'')))return x}catch{}return null}
+function saveBinding(v){localStorage.setItem(STORAGE_KEY,JSON.stringify(v));binding=v}
+function maskQQ(q){q=String(q||'');if(q.length<=5)return q;return q.slice(0,2)+'•••'+q.slice(-2)}
+function maskCamp(q){q=String(q||'');if(q.length<=6)return q;return q.slice(0,3)+'•••'+q.slice(-3)}
+function setStatus(kind,msg){const p=$('#statusPill');p.className='status-pill'+(kind?' '+kind:'');$('#statusText').textContent=msg}
+function setError(msg=''){const e=$('#errorBox');e.textContent=msg;e.classList.toggle('show',!!msg)}
+function setLoading(on){$('#refreshBtn').disabled=on||!binding;$('#bindBtn').disabled=on;$('#saveBindBtn').disabled=on;if(on)setStatus('loading','正在读取战绩…')}
+async function sha256(s){const buf=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));return [...new Uint8Array(buf)].map(b=>b.toString(16).padStart(2,'0')).join('')}
+function openModal(){const m=$('#bindModal');$('#qqInput').value=binding?.qq||'';$('#campInput').value=binding?.campId||'';$('#verifyInput').value='';$('#bindError').classList.remove('show');m.classList.add('show');m.setAttribute('aria-hidden','false');setTimeout(()=>$('#qqInput').focus(),20)}
+function closeModal(){const m=$('#bindModal');m.classList.remove('show');m.setAttribute('aria-hidden','true')}
+function bindError(msg){const e=$('#bindError');e.textContent=msg;e.classList.add('show')}
+async function submitBinding(){const qq=$('#qqInput').value.trim(),campId=$('#campInput').value.trim(),code=$('#verifyInput').value.trim();$('#bindError').classList.remove('show');if(!/^\d{5,12}$/.test(qq))return bindError('QQ 格式不正确，请输入 5–12 位数字。');if(!/^\d{5,15}$/.test(campId))return bindError('营地 ID 格式不正确，请输入个人主页中的数字 ID。');if(!/^\d{6}$/.test(code))return bindError('请输入 6 位绑定验证码。');let digest='';try{digest=await sha256(code)}catch{return bindError('当前浏览器无法完成本地验证码校验。请使用 HTTPS 页面打开。')}if(digest!==VERIFY_HASH)return bindError('绑定验证码不正确。');saveBinding({qq,campId,boundAt:new Date().toISOString(),version:1});closeModal();renderBinding();await loadStats()}
+function unwrapProfile(raw){if(!raw||typeof raw!=='object')throw new Error('账号资料响应为空');if(String(raw.code??'200')==='201')throw new Error(text(raw.msg,'营地 ID 无效或账号资料不可见'));const d=raw.data&&typeof raw.data==='object'&&!Array.isArray(raw.data)?raw.data:raw;if(String(d.code??'200')==='201')throw new Error(text(d.msg,'营地 ID 无效或账号资料不可见'));return d}
+function unwrapBattles(raw){if(!raw)throw new Error('战绩响应为空');if(Array.isArray(raw))return raw.filter(x=>x&&typeof x==='object');if(typeof raw==='object'&&String(raw.code??'200')==='201')throw new Error(text(raw.msg,'输入正确的营地 ID，或召唤师隐藏了个人战绩'));const candidates=[raw.data,raw.list,raw.rows,raw.result,raw.data?.list,raw.data?.rows,raw.data?.result];for(const c of candidates)if(Array.isArray(c))return c.filter(x=>x&&typeof x==='object');const keyed=Object.values(raw).filter(v=>v&&typeof v==='object'&&!Array.isArray(v)&&('gametime'in v||'mapName'in v||'killcnt'in v));if(keyed.length)return keyed;if('gametime'in raw||'mapName'in raw||'killcnt'in raw)return[raw];return[]}
+async function getJson(url){const r=await fetch(url,{cache:'no-store',headers:{Accept:'application/json'}});if(!r.ok)throw new Error(`上游 HTTP ${r.status}`);const t=await r.text();try{return JSON.parse(t)}catch{throw new Error('上游返回的不是有效 JSON')}}
+function renderBinding(){const bound=!!binding;$('#bindBtn').textContent=bound?'重新绑定':'绑定 QQ';$('#unbindBtn').style.display=bound?'inline-block':'none';$('#refreshBtn').disabled=!bound;$('#accountChip').innerHTML=bound?`QQ <b>${esc(maskQQ(binding.qq))}</b> · 营地 <b>${esc(maskCamp(binding.campId))}</b>`:'QQ <b>未绑定</b>';if(!bound){setStatus('','尚未绑定');$('#heroSub').textContent='绑定账号后读取王者营地公开战绩';resetDataUi()}}
+function resetDataUi(){PROFILE=null;BATTLES=[];$('#identity').style.display='none';for(const id of ['rank','stars','winRate','totalBattles'])$(id.startsWith('#')?id:'#'+id).textContent='—';$('#profileEmpty').style.display='block';$('#profileBody').style.display='none';$('#recentEmpty').style.display='block';$('#recentSummary').style.display='none';$('#matchList').innerHTML='';$('#matchEmpty').style.display='block';$('#syncTime').textContent=''}
+function profileVal(p,...keys){for(const k of keys){if(p&&p[k]!==undefined&&p[k]!==null&&String(p[k]).trim()!=='')return p[k]}return null}
+function imgOrHide(el,url){if(url){el.src=url;el.style.display='block';el.onerror=()=>{el.style.display='none'}}else el.style.display='none'}
+function renderProfile(p){PROFILE=p;const role=text(profileVal(p,'roleName','name','nickname'),'未知召唤师');const rank=text(profileVal(p,'roleJobName','rankName','rank'),'—');const stars=text(profileVal(p,'rankingStar','stars','star'),'—');const rate=text(profileVal(p,'winRate','winrate'),'—');const battles=text(profileVal(p,'totalBattleCoun','totalBattleCount','battleCount'),'—');$('#roleName').textContent=role;$('#identityMeta').textContent=[text(profileVal(p,'areaName','platform')),text(profileVal(p,'serverName','server'))].filter(Boolean).join(' · ')||'王者营地';imgOrHide($('#avatar'),text(profileVal(p,'cover','avatar','avatarUrl')));$('#identity').style.display='flex';$('#rank').textContent=rank;$('#stars').textContent=stars==='—'?'—':`${stars} ★`;$('#winRate').textContent=rate==='—'?'—':(/%/.test(rate)?rate:`${rate}%`);$('#totalBattles').textContent=battles;$('#profileEmpty').style.display='none';$('#profileBody').style.display='block';$('#rankLarge').textContent=rank;$('#starLarge').textContent=stars==='—'?'星数暂无':`${stars} 星`;imgOrHide($('#rankIcon'),text(profileVal(p,'roleJobIcon','rankIcon')));$('#fighting').textContent=text(profileVal(p,'fighting','power'),'—');$('#mvp').textContent=text(profileVal(p,'mvpNum','mvp'),'—');$('#level').textContent=text(profileVal(p,'level'),'—');$('#heroes').textContent=text(profileVal(p,'heroNum','heroes'),'—');$('#skins').textContent=text(profileVal(p,'skinNum','skins'),'—');$('#serverShort').textContent=text(profileVal(p,'serverName','server', 'areaName'),'—');$('#heroSub').textContent=`${role} · ${text(profileVal(p,'areaName','platform'))}${text(profileVal(p,'serverName'))?' · '+text(profileVal(p,'serverName')):''}`}
+function normResult(x){const s=text(x.result,x.win,x.outcome).toLowerCase();if(/胜|win|victory/.test(s))return'win';if(/败|负|loss|defeat/.test(s))return'loss';return'other'}
+function normBattle(x){const k=num(x.killcnt??x.kills),d=num(x.deadcnt??x.deaths),a=num(x.assistcnt??x.assists);return{raw:x,result:normResult(x),resultText:text(x.result,normResult(x)==='win'?'胜利':normResult(x)==='loss'?'失败':'未知'),mode:text(x.mapName,x.mode,'未知模式'),rank:text(x.roleJobName,x.rankName,''),stars:text(x.stars,x.star,''),duration:text(x.time,x.duration,''),date:text(x.gametime,x.gameTime,x.date,''),k,d,a,desc:text(x.desc,x.evaluate,''),hero:text(x.heroName,''),heroIcon:text(x.heroIcon,x.heroAvatar,''),heroId:text(x.heroId,''),mvp:text(x.mvpUrlV2,''),medal:text(x.evaluateUrl,'')}}
+function renderBattles(rows){BATTLES=rows.map(normBattle);const list=$('#matchList');list.innerHTML='';$('#matchEmpty').style.display=BATTLES.length?'none':'block';if(!BATTLES.length){$('#recentEmpty').style.display='block';$('#recentSummary').style.display='none';$('#recentNote').textContent='上游没有返回可展示的最近对局';return}const wins=BATTLES.filter(x=>x.result==='win').length,losses=BATTLES.filter(x=>x.result==='loss').length,total=BATTLES.length,avg=k=>BATTLES.reduce((a,b)=>a+b[k],0)/total,avgK=avg('k'),avgD=avg('d'),avgA=avg('a'),kda=(avgK+avgA)/Math.max(1,avgD);$('#recentEmpty').style.display='none';$('#recentSummary').style.display='grid';$('#recentWL').textContent=`${wins} / ${losses}`;$('#recentWinRate').textContent=`${(wins/total*100).toFixed(1)}%`;$('#recentKda').textContent=kda.toFixed(2);$('#avgKills').textContent=avgK.toFixed(1);$('#avgDeaths').textContent=avgD.toFixed(1);$('#avgAssists').textContent=avgA.toFixed(1);$('#recentNote').textContent=`最近 ${total} 场 · 胜 ${wins} · 负 ${losses}`;list.innerHTML=BATTLES.map((m,i)=>{const rcls=m.result==='win'?'win':m.result==='loss'?'loss':'other';const badges=[m.desc,m.mvp?'MVP / SVP':'',m.medal?'金银牌评价':''].filter(Boolean).map((b,j)=>`<span class="badge ${j?'medal':''}">${esc(b)}</span>`).join('');return `<article class="match"><div>${m.heroIcon?`<img class="hero-icon" src="${esc(m.heroIcon)}" alt="英雄" loading="lazy" onerror="this.style.visibility='hidden'">`:`<div class="hero-icon"></div>`}</div><div><div class="match-result ${rcls}">${esc(m.resultText)}</div><div class="match-mode">${esc(m.mode)}</div><div class="match-time">${esc(m.date||'时间未知')}</div></div><div class="kda">${m.k} / ${m.d} / ${m.a}<small>K / D / A</small></div><div class="match-col"><small>段位 / 星数</small><b>${esc(m.rank||'—')}${m.stars?` · ${esc(m.stars)}★`:''}</b><div class="match-time">${esc(m.duration||'时长未知')}</div></div><div class="match-col"><small>本局评价</small><div class="badge-line">${badges||'<span class="badge">暂无评价</span>'}</div></div></article>`}).join('')}
+async function loadStats(){if(!binding){renderBinding();return}setError('');setLoading(true);$('#matchEmpty').innerHTML='正在读取王者营地战绩…';$('#matchEmpty').style.display='block';const [pr,br]=await Promise.allSettled([getJson(PROVIDER.profile(binding.campId)),getJson(PROVIDER.battles(binding.campId))]);let ok=0,errors=[];if(pr.status==='fulfilled'){try{renderProfile(unwrapProfile(pr.value));ok++}catch(e){errors.push('账号资料：'+e.message)}}else errors.push('账号资料：'+pr.reason.message);if(br.status==='fulfilled'){try{renderBattles(unwrapBattles(br.value));ok++}catch(e){errors.push('最近战绩：'+e.message);renderBattles([])}}else{errors.push('最近战绩：'+br.reason.message);renderBattles([])}$('#syncTime').textContent='刷新 '+new Date().toLocaleString('zh-CN',{hour12:false});if(errors.length)setError(errors.join('；')+(errors.some(x=>/Failed to fetch|NetworkError|CORS/i.test(x))?'。若浏览器提示跨域/网络错误，说明当前第三方上游不可直连，需要切换到后端代理。':''));setLoading(false);if(ok)setStatus(errors.length?'error':'ok',errors.length?'部分数据读取失败':'已连接王者营地');else setStatus('error','战绩读取失败')}
+function doUnbind(){if(!binding)return;if(!confirm('确定解除当前王者荣耀 QQ 绑定？\n只会清除这个浏览器里的本地绑定。'))return;localStorage.removeItem(STORAGE_KEY);binding=null;setError('');renderBinding()}
+$('#bindBtn').onclick=openModal;$('#closeModal').onclick=closeModal;$('#saveBindBtn').onclick=submitBinding;$('#refreshBtn').onclick=loadStats;$('#unbindBtn').onclick=doUnbind;$('#bindModal').onclick=e=>{if(e.target===$('#bindModal'))closeModal()};document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});$('#verifyInput').addEventListener('keydown',e=>{if(e.key==='Enter')submitBinding()});
+renderBinding();if(binding)loadStats();
+</script>
+</body>
+</html>
