@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-<!-- YMKF HOK bind hf28 proxy fallback -->
+<!-- YMKF HOK local-sync hf29 camp-authorized bridge -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -31,14 +31,14 @@
 </head>
 <body>
 <div class="wrap">
-  <div class="topbar"><a class="back" href="../index.html">← 返回游戏库</a><div class="build">Build v1.15.0-hf28</div></div>
+  <div class="topbar"><a class="back" href="../index.html">← 返回游戏库</a><div class="build">Build v1.15.0-hf29</div></div>
 
   <section class="hero">
     <div class="eyebrow">YMKF · HONOR OF KINGS</div>
     <div class="hero-row">
       <div class="hero-main">
         <h1>王者荣耀</h1>
-        <div class="sub" id="heroSub">绑定账号后读取王者营地公开战绩</div>
+        <div class="sub" id="heroSub">绑定账号后读取 RUN_SYNC 同步的王者营地数据</div>
         <div class="status-pill" id="statusPill"><span class="status-dot"></span><span id="statusText">尚未绑定</span></div>
       </div>
       <div class="identity" id="identity" style="display:none">
@@ -57,7 +57,7 @@
   <div class="toolbar">
     <div class="toolbar-left"><div class="account-chip" id="accountChip">QQ <b>未绑定</b></div></div>
     <div class="toolbar-right">
-      <button class="ghost-btn" id="refreshBtn" type="button" disabled>刷新战绩</button>
+      <button class="ghost-btn" id="refreshBtn" type="button" disabled>重新读取</button>
       <button class="primary-btn" id="bindBtn" type="button">绑定 QQ</button>
       <button class="danger-btn" id="unbindBtn" type="button" style="display:none">解除绑定</button>
     </div>
@@ -67,16 +67,16 @@
 
   <div class="grid">
     <section class="card span-4">
-      <div class="section-head"><div><div class="section-title">账号概览</div><div class="section-note">来自王者营地公开角色资料</div></div></div>
+      <div class="section-head"><div><div class="section-title">账号概览</div><div class="section-note">RUN_SYNC 从已授权王者营地数据链同步</div></div></div>
       <div id="profileEmpty" class="empty">绑定后显示账号资料</div>
       <div id="profileBody" style="display:none">
         <div class="rank-card"><img id="rankIcon" alt="段位"><div class="rank-copy"><small>当前赛季</small><b id="rankLarge">—</b><span id="starLarge">—</span></div></div>
         <div class="summary-grid" style="margin-top:14px">
-          <div class="summary-cell"><small>战力</small><b id="fighting">—</b></div>
+          <div class="summary-cell"><small>巅峰分</small><b id="fighting">—</b></div>
           <div class="summary-cell"><small>MVP</small><b id="mvp">—</b></div>
-          <div class="summary-cell"><small>等级</small><b id="level">—</b></div>
-          <div class="summary-cell"><small>英雄</small><b id="heroes">—</b></div>
-          <div class="summary-cell"><small>皮肤</small><b id="skins">—</b></div>
+          <div class="summary-cell"><small>排位评分</small><b id="level">—</b></div>
+          <div class="summary-cell"><small>金牌</small><b id="heroes">—</b></div>
+          <div class="summary-cell"><small>赛季胜场</small><b id="skins">—</b></div>
           <div class="summary-cell"><small>区服</small><b id="serverShort">—</b></div>
         </div>
       </div>
@@ -96,44 +96,35 @@
     </section>
 
     <section class="card">
-      <div class="section-head"><div><div class="section-title">最近对局</div><div class="section-note">默认请求最近 30 场；上游隐藏战绩或接口异常时不会用空值冒充真实数据。</div></div><div class="section-note" id="syncTime"></div></div>
+      <div class="section-head"><div><div class="section-title">最近对局</div><div class="section-note">显示 RUN_SYNC 最近同步到的最多 30 场；不会再从浏览器直连 yujn / CORS 代理。</div></div><div class="section-note" id="syncTime"></div></div>
       <div id="matchEmpty" class="empty"><strong>还没有战绩。</strong><br>点击“绑定 QQ”完成账号关联。</div>
       <div class="match-list" id="matchList"></div>
     </section>
 
     <section class="card">
-      <div class="provider-note"><b>数据链说明：</b>本页的 QQ 是 YMKF 网站中的绑定账号标识；当前公开查分接口实际使用“王者营地 ID”。TapTap 的公开开发接口由游戏方实现，并不是可供第三方直接用 QQ 查询王者角色的接口。绑定信息仅保存在当前浏览器，本页不会保存验证码。</div>
+      <div class="provider-note"><b>hf29 数据链：</b>已停用 yujn 与浏览器 CORS 代理。真正的战绩抓取发生在你电脑执行 RUN_SYNC 时：本机脚本把营地 ID 交给一个已完成王者营地扫码授权的开源看板后端，由其使用王者营地数据链同步，再把脱敏后的 hok.json 发布到本站。QQ 与验证码不会发送给该后端；网站只保存本浏览器绑定。</div>
     </section>
   </div>
 </div>
 
 <div class="modal-backdrop" id="bindModal" aria-hidden="true">
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="bindTitle">
-    <div class="modal-head"><div><h2 id="bindTitle">绑定 QQ</h2><p>输入你的 QQ 与王者营地 ID，再用网站验证码确认。后续打开此页面会自动读取这个绑定。</p></div><button class="close-btn" id="closeModal" type="button" aria-label="关闭">×</button></div>
+    <div class="modal-head"><div><h2 id="bindTitle">绑定 QQ</h2><p>输入与你本机 SET_HOK_ACCOUNT.cmd 相同的 QQ 与王者营地 ID，再用网站验证码确认。</p></div><button class="close-btn" id="closeModal" type="button" aria-label="关闭">×</button></div>
     <div class="form">
       <div class="field"><label for="qqInput">QQ</label><input class="input" id="qqInput" inputmode="numeric" autocomplete="off" maxlength="12" placeholder="请输入 QQ 号"><div class="field-tip">作为本站账号绑定标识。不会发送给战绩接口。</div></div>
-      <div class="field"><label for="campInput">王者营地 ID</label><input class="input" id="campInput" inputmode="numeric" autocomplete="off" maxlength="15" placeholder="王者营地个人主页中的数字 ID"><div class="field-tip">当前战绩接口按营地 ID 查询。可在王者营地 → 我的 → 个人主页查看。</div></div>
+      <div class="field"><label for="campInput">王者营地 ID</label><input class="input" id="campInput" inputmode="numeric" autocomplete="off" maxlength="15" placeholder="王者营地个人主页中的数字 ID"><div class="field-tip">用于与 RUN_SYNC 生成的脱敏缓存核对。可在王者营地 → 我的 → 个人主页查看。</div></div>
       <div class="field"><label for="verifyInput">绑定验证码</label><div class="verify-row"><input class="input" id="verifyInput" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="6 位验证码"><button class="primary-btn" id="saveBindBtn" type="button">验证并绑定</button></div><div class="field-tip">验证码只用于阻止他人随手修改本浏览器的绑定；不会写入 localStorage。</div></div>
       <div class="bind-error" id="bindError"></div>
-      <div class="privacy"><b>本地绑定：</b>QQ、营地 ID 与绑定时间保存在当前浏览器的 localStorage。GitHub Pages 是静态网页，无法把你的账号凭据安全写进公开仓库；因此本版不会在 Git 中保存 QQ、Token 或验证码。</div>
+      <div class="privacy"><b>分层保存：</b>网页 localStorage 保存 QQ、营地 ID 与绑定时间；YMKF_Sync 本机保存账号映射；公开 hok.json 只包含 SHA-256 绑定指纹和战绩，不包含 QQ 明文、营地 Token 或验证码。</div>
     </div>
   </div>
 </div>
 
 <script>
-const BUILD='1.15.0-hf28';
+const BUILD='1.15.0-hf29';
 const STORAGE_KEY='ymkf_hok_binding_v1';
 const VERIFY_HASH='e579ca7b2cff998bd1cb6b5ce5238bc104b8a42010e74a20ae86cb7ca1a5b88c';
-const PROVIDER={
-  name:'王者营地公开数据',
-  profile:id=>`https://api.yujn.cn/api/wzyd.php?type=json&id=${encodeURIComponent(id)}`,
-  battles:id=>`https://api.yujn.cn/api/wzzj.php?type=json&num=30&id=${encodeURIComponent(id)}`
-};
-const PROXY_CHAIN=[
-  {name:'AllOrigins',url:u=>`https://api.allorigins.win/raw?url=${encodeURIComponent(u)}`},
-  {name:'CorsProxy',url:u=>`https://corsproxy.io/?url=${encodeURIComponent(u)}`}
-];
-const REQUEST_TIMEOUT_MS=9000;
+const CACHE_URL='../data/hok.json';
 let binding=readBinding(),PROFILE=null,BATTLES=[];
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -145,26 +136,24 @@ function maskQQ(q){q=String(q||'');if(q.length<=5)return q;return q.slice(0,2)+'
 function maskCamp(q){q=String(q||'');if(q.length<=6)return q;return q.slice(0,3)+'•••'+q.slice(-3)}
 function setStatus(kind,msg){const p=$('#statusPill');p.className='status-pill'+(kind?' '+kind:'');$('#statusText').textContent=msg}
 function setError(msg=''){const e=$('#errorBox');e.textContent=msg;e.classList.toggle('show',!!msg)}
-function setLoading(on){$('#refreshBtn').disabled=on||!binding;$('#bindBtn').disabled=on;$('#saveBindBtn').disabled=on;if(on)setStatus('loading','正在读取战绩…')}
+function setLoading(on){$('#refreshBtn').disabled=on||!binding;$('#bindBtn').disabled=on;$('#saveBindBtn').disabled=on;if(on)setStatus('loading','正在读取本机同步缓存…')}
 async function sha256(s){const buf=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));return [...new Uint8Array(buf)].map(b=>b.toString(16).padStart(2,'0')).join('')}
 function openModal(){const m=$('#bindModal');$('#qqInput').value=binding?.qq||'';$('#campInput').value=binding?.campId||'';$('#verifyInput').value='';$('#bindError').classList.remove('show');m.classList.add('show');m.setAttribute('aria-hidden','false');setTimeout(()=>$('#qqInput').focus(),20)}
 function closeModal(){const m=$('#bindModal');m.classList.remove('show');m.setAttribute('aria-hidden','true')}
 function bindError(msg){const e=$('#bindError');e.textContent=msg;e.classList.add('show')}
-async function submitBinding(){const qq=$('#qqInput').value.trim(),campId=$('#campInput').value.trim(),code=$('#verifyInput').value.trim();$('#bindError').classList.remove('show');if(!/^\d{5,12}$/.test(qq))return bindError('QQ 格式不正确，请输入 5–12 位数字。');if(!/^\d{5,15}$/.test(campId))return bindError('营地 ID 格式不正确，请输入个人主页中的数字 ID。');if(!/^\d{6}$/.test(code))return bindError('请输入 6 位绑定验证码。');let digest='';try{digest=await sha256(code)}catch{return bindError('当前浏览器无法完成本地验证码校验。请使用 HTTPS 页面打开。')}if(digest!==VERIFY_HASH)return bindError('绑定验证码不正确。');saveBinding({qq,campId,boundAt:new Date().toISOString(),version:1});closeModal();renderBinding();await loadStats()}
-function unwrapProfile(raw){if(!raw||typeof raw!=='object')throw new Error('账号资料响应为空');if(String(raw.code??'200')==='201')throw new Error(text(raw.msg,'营地 ID 无效或账号资料不可见'));const d=raw.data&&typeof raw.data==='object'&&!Array.isArray(raw.data)?raw.data:raw;if(String(d.code??'200')==='201')throw new Error(text(d.msg,'营地 ID 无效或账号资料不可见'));return d}
-function unwrapBattles(raw){if(!raw)throw new Error('战绩响应为空');if(Array.isArray(raw))return raw.filter(x=>x&&typeof x==='object');if(typeof raw==='object'&&String(raw.code??'200')==='201')throw new Error(text(raw.msg,'输入正确的营地 ID，或召唤师隐藏了个人战绩'));const candidates=[raw.data,raw.list,raw.rows,raw.result,raw.data?.list,raw.data?.rows,raw.data?.result];for(const c of candidates)if(Array.isArray(c))return c.filter(x=>x&&typeof x==='object');const keyed=Object.values(raw).filter(v=>v&&typeof v==='object'&&!Array.isArray(v)&&('gametime'in v||'mapName'in v||'killcnt'in v));if(keyed.length)return keyed;if('gametime'in raw||'mapName'in raw||'killcnt'in raw)return[raw];return[]}
-async function fetchText(url,timeout=REQUEST_TIMEOUT_MS){const c=new AbortController(),timer=setTimeout(()=>c.abort(),timeout);try{const r=await fetch(url,{cache:'no-store',headers:{Accept:'application/json,text/plain,*/*'},signal:c.signal});if(!r.ok)throw new Error(`HTTP ${r.status}`);return await r.text()}catch(e){if(e&&e.name==='AbortError')throw new Error('请求超时');throw e}finally{clearTimeout(timer)}}
-function parseJsonText(t){try{return JSON.parse(t)}catch{throw new Error('返回的不是有效 JSON')}}
-async function getJson(target){const attempts=[];for(const proxy of PROXY_CHAIN){const url=proxy.url(target);try{const t=await fetchText(url);const data=parseJsonText(t);return{data,via:proxy.name}}catch(e){attempts.push(`${proxy.name}: ${e?.message||e}`)}}try{const t=await fetchText(target,5500);return{data:parseJsonText(t),via:'直连'}}catch(e){attempts.push(`直连: ${e?.message||e}`)}throw new Error(attempts.join(' / '))}
-function renderBinding(){const bound=!!binding;$('#bindBtn').textContent=bound?'重新绑定':'绑定 QQ';$('#unbindBtn').style.display=bound?'inline-block':'none';$('#refreshBtn').disabled=!bound;$('#accountChip').innerHTML=bound?`QQ <b>${esc(maskQQ(binding.qq))}</b> · 营地 <b>${esc(maskCamp(binding.campId))}</b>`:'QQ <b>未绑定</b>';if(!bound){setStatus('','尚未绑定');$('#heroSub').textContent='绑定账号后读取王者营地公开战绩';resetDataUi()}}
-function resetDataUi(){PROFILE=null;BATTLES=[];$('#identity').style.display='none';for(const id of ['rank','stars','winRate','totalBattles'])$(id.startsWith('#')?id:'#'+id).textContent='—';$('#profileEmpty').style.display='block';$('#profileBody').style.display='none';$('#recentEmpty').style.display='block';$('#recentSummary').style.display='none';$('#matchList').innerHTML='';$('#matchEmpty').style.display='block';$('#syncTime').textContent=''}
+async function submitBinding(){const qq=$('#qqInput').value.trim(),campId=$('#campInput').value.trim(),code=$('#verifyInput').value.trim();$('#bindError').classList.remove('show');if(!/^\d{5,12}$/.test(qq))return bindError('QQ 格式不正确，请输入 5–12 位数字。');if(!/^\d{5,15}$/.test(campId))return bindError('营地 ID 格式不正确，请输入个人主页中的数字 ID。');if(!/^\d{6}$/.test(code))return bindError('请输入 6 位绑定验证码。');let digest='';try{digest=await sha256(code)}catch{return bindError('当前浏览器无法完成本地验证码校验。请使用 HTTPS 页面打开。')}if(digest!==VERIFY_HASH)return bindError('绑定验证码不正确。');saveBinding({qq,campId,boundAt:new Date().toISOString(),version:2});closeModal();renderBinding();await loadStats()}
+function renderBinding(){const bound=!!binding;$('#bindBtn').textContent=bound?'重新绑定':'绑定 QQ';$('#unbindBtn').style.display=bound?'inline-block':'none';$('#refreshBtn').disabled=!bound;$('#accountChip').innerHTML=bound?`QQ <b>${esc(maskQQ(binding.qq))}</b> · 营地 <b>${esc(maskCamp(binding.campId))}</b>`:'QQ <b>未绑定</b>';if(!bound){setStatus('','尚未绑定');$('#heroSub').textContent='绑定账号后读取 RUN_SYNC 同步的王者营地数据';resetDataUi()}}
+function resetDataUi(){PROFILE=null;BATTLES=[];$('#identity').style.display='none';for(const id of ['rank','stars','winRate','totalBattles'])$('#'+id).textContent='—';$('#profileEmpty').style.display='block';$('#profileBody').style.display='none';$('#recentEmpty').style.display='block';$('#recentSummary').style.display='none';$('#matchList').innerHTML='';$('#matchEmpty').style.display='block';$('#syncTime').textContent=''}
 function profileVal(p,...keys){for(const k of keys){if(p&&p[k]!==undefined&&p[k]!==null&&String(p[k]).trim()!=='')return p[k]}return null}
 function imgOrHide(el,url){if(url){el.src=url;el.style.display='block';el.onerror=()=>{el.style.display='none'}}else el.style.display='none'}
-function renderProfile(p){PROFILE=p;const role=text(profileVal(p,'roleName','name','nickname'),'未知召唤师');const rank=text(profileVal(p,'roleJobName','rankName','rank'),'—');const stars=text(profileVal(p,'rankingStar','stars','star'),'—');const rate=text(profileVal(p,'winRate','winrate'),'—');const battles=text(profileVal(p,'totalBattleCoun','totalBattleCount','battleCount'),'—');$('#roleName').textContent=role;$('#identityMeta').textContent=[text(profileVal(p,'areaName','platform')),text(profileVal(p,'serverName','server'))].filter(Boolean).join(' · ')||'王者营地';imgOrHide($('#avatar'),text(profileVal(p,'cover','avatar','avatarUrl')));$('#identity').style.display='flex';$('#rank').textContent=rank;$('#stars').textContent=stars==='—'?'—':`${stars} ★`;$('#winRate').textContent=rate==='—'?'—':(/%/.test(rate)?rate:`${rate}%`);$('#totalBattles').textContent=battles;$('#profileEmpty').style.display='none';$('#profileBody').style.display='block';$('#rankLarge').textContent=rank;$('#starLarge').textContent=stars==='—'?'星数暂无':`${stars} 星`;imgOrHide($('#rankIcon'),text(profileVal(p,'roleJobIcon','rankIcon')));$('#fighting').textContent=text(profileVal(p,'fighting','power'),'—');$('#mvp').textContent=text(profileVal(p,'mvpNum','mvp'),'—');$('#level').textContent=text(profileVal(p,'level'),'—');$('#heroes').textContent=text(profileVal(p,'heroNum','heroes'),'—');$('#skins').textContent=text(profileVal(p,'skinNum','skins'),'—');$('#serverShort').textContent=text(profileVal(p,'serverName','server', 'areaName'),'—');$('#heroSub').textContent=`${role} · ${text(profileVal(p,'areaName','platform'))}${text(profileVal(p,'serverName'))?' · '+text(profileVal(p,'serverName')):''}`}
-function normResult(x){const s=text(x.result,x.win,x.outcome).toLowerCase();if(/胜|win|victory/.test(s))return'win';if(/败|负|loss|defeat/.test(s))return'loss';return'other'}
-function normBattle(x){const k=num(x.killcnt??x.kills),d=num(x.deadcnt??x.deaths),a=num(x.assistcnt??x.assists);return{raw:x,result:normResult(x),resultText:text(x.result,normResult(x)==='win'?'胜利':normResult(x)==='loss'?'失败':'未知'),mode:text(x.mapName,x.mode,'未知模式'),rank:text(x.roleJobName,x.rankName,''),stars:text(x.stars,x.star,''),duration:text(x.time,x.duration,''),date:text(x.gametime,x.gameTime,x.date,''),k,d,a,desc:text(x.desc,x.evaluate,''),hero:text(x.heroName,''),heroIcon:text(x.heroIcon,x.heroAvatar,''),heroId:text(x.heroId,''),mvp:text(x.mvpUrlV2,''),medal:text(x.evaluateUrl,'')}}
-function renderBattles(rows){BATTLES=rows.map(normBattle);const list=$('#matchList');list.innerHTML='';$('#matchEmpty').style.display=BATTLES.length?'none':'block';if(!BATTLES.length){$('#recentEmpty').style.display='block';$('#recentSummary').style.display='none';$('#recentNote').textContent='上游没有返回可展示的最近对局';return}const wins=BATTLES.filter(x=>x.result==='win').length,losses=BATTLES.filter(x=>x.result==='loss').length,total=BATTLES.length,avg=k=>BATTLES.reduce((a,b)=>a+b[k],0)/total,avgK=avg('k'),avgD=avg('d'),avgA=avg('a'),kda=(avgK+avgA)/Math.max(1,avgD);$('#recentEmpty').style.display='none';$('#recentSummary').style.display='grid';$('#recentWL').textContent=`${wins} / ${losses}`;$('#recentWinRate').textContent=`${(wins/total*100).toFixed(1)}%`;$('#recentKda').textContent=kda.toFixed(2);$('#avgKills').textContent=avgK.toFixed(1);$('#avgDeaths').textContent=avgD.toFixed(1);$('#avgAssists').textContent=avgA.toFixed(1);$('#recentNote').textContent=`最近 ${total} 场 · 胜 ${wins} · 负 ${losses}`;list.innerHTML=BATTLES.map((m,i)=>{const rcls=m.result==='win'?'win':m.result==='loss'?'loss':'other';const badges=[m.desc,m.mvp?'MVP / SVP':'',m.medal?'金银牌评价':''].filter(Boolean).map((b,j)=>`<span class="badge ${j?'medal':''}">${esc(b)}</span>`).join('');return `<article class="match"><div>${m.heroIcon?`<img class="hero-icon" src="${esc(m.heroIcon)}" alt="英雄" loading="lazy" onerror="this.style.visibility='hidden'">`:`<div class="hero-icon"></div>`}</div><div><div class="match-result ${rcls}">${esc(m.resultText)}</div><div class="match-mode">${esc(m.mode)}</div><div class="match-time">${esc(m.date||'时间未知')}</div></div><div class="kda">${m.k} / ${m.d} / ${m.a}<small>K / D / A</small></div><div class="match-col"><small>段位 / 星数</small><b>${esc(m.rank||'—')}${m.stars?` · ${esc(m.stars)}★`:''}</b><div class="match-time">${esc(m.duration||'时长未知')}</div></div><div class="match-col"><small>本局评价</small><div class="badge-line">${badges||'<span class="badge">暂无评价</span>'}</div></div></article>`}).join('')}
-async function loadStats(){if(!binding){renderBinding();return}setError('');setLoading(true);$('#matchEmpty').innerHTML='正在通过代理读取王者营地战绩…';$('#matchEmpty').style.display='block';const [pr,br]=await Promise.allSettled([getJson(PROVIDER.profile(binding.campId)),getJson(PROVIDER.battles(binding.campId))]);let ok=0,errors=[],vias=[];if(pr.status==='fulfilled'){try{renderProfile(unwrapProfile(pr.value.data));vias.push(pr.value.via);ok++}catch(e){errors.push('账号资料：'+e.message)}}else errors.push('账号资料：'+pr.reason.message);if(br.status==='fulfilled'){try{renderBattles(unwrapBattles(br.value.data));vias.push(br.value.via);ok++}catch(e){errors.push('最近战绩：'+e.message);renderBattles([])}}else{errors.push('最近战绩：'+br.reason.message);renderBattles([])}$('#syncTime').textContent='刷新 '+new Date().toLocaleString('zh-CN',{hour12:false});if(errors.length)setError(errors.join('；'));setLoading(false);const via=[...new Set(vias)].join(' / ');if(ok)setStatus(errors.length?'error':'ok',errors.length?`部分数据读取失败${via?' · '+via:''}`:`已连接王者营地 · ${via||'代理'}`);else setStatus('error','战绩读取失败')}
+function formatPct(v){if(v===null||v===undefined||String(v).trim()==='')return'—';const s=String(v);return /%/.test(s)?s:`${s}%`}
+function renderProfile(p){PROFILE=p;const role=text(profileVal(p,'roleName','gameNickname','name','nickname'),'未知召唤师');const rank=text(profileVal(p,'rankName','currentRank','roleJobName','rank'),'—');const stars=profileVal(p,'stars','currentStars','rankingStar','star');const rate=profileVal(p,'winRate','winrate');const battles=profileVal(p,'totalBattleCount','seasonGames','battleCount');const area=text(profileVal(p,'areaName','serverName','area'),'王者营地');$('#roleName').textContent=role;$('#identityMeta').textContent=area;imgOrHide($('#avatar'),text(profileVal(p,'cover','gameAvatarUrl','avatar','avatarUrl')));$('#identity').style.display='flex';$('#rank').textContent=rank;$('#stars').textContent=stars===null?'—':`${stars} ★`;$('#winRate').textContent=formatPct(rate);$('#totalBattles').textContent=battles??'—';$('#profileEmpty').style.display='none';$('#profileBody').style.display='block';$('#rankLarge').textContent=rank;$('#starLarge').textContent=stars===null?'星数暂无':`${stars} 星`;imgOrHide($('#rankIcon'),text(profileVal(p,'rankIcon','roleJobIcon')));$('#fighting').textContent=text(profileVal(p,'peakScore','fighting'),'—');$('#mvp').textContent=text(profileVal(p,'mvpNum','mvpCount','mvp'),'—');$('#level').textContent=text(profileVal(p,'rankScore'),'—');$('#heroes').textContent=text(profileVal(p,'goldCount'),'—');$('#skins').textContent=text(profileVal(p,'seasonWins'),'—');$('#serverShort').textContent=area;$('#heroSub').textContent=`${role} · ${area}`}
+function normResult(x){const s=text(x.result,x.win,x.outcome).toLowerCase();if(/胜|win|victory/.test(s))return'win';if(/败|负|lose|loss|defeat/.test(s))return'loss';return'other'}
+function fmtDate(v){if(!v)return'';const d=new Date(v);if(Number.isNaN(d.getTime()))return String(v);return d.toLocaleString('zh-CN',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false})}
+function normBattle(x){const k=num(x.killcnt??x.kills),d=num(x.deadcnt??x.deaths),a=num(x.assistcnt??x.assists);const result=normResult(x);return{raw:x,result,resultText:text(x.result,result==='win'?'胜利':result==='loss'?'失败':'未知'),mode:text(x.mapName,x.modeName,x.mode,'未知模式'),rank:text(x.roleJobName,x.rankName,''),stars:text(x.stars,x.star,''),duration:text(x.time,x.duration,''),date:fmtDate(text(x.gametime,x.playedAt,x.gameTime,x.date,'')),k,d,a,desc:text(x.desc,x.evaluate,''),hero:text(x.heroName,''),heroIcon:text(x.heroIcon,x.heroAvatar,''),mvpType:text(x.mvpType,''),medal:text(x.medal,''),score:text(x.score,'')}}
+function renderBattles(rows){BATTLES=(Array.isArray(rows)?rows:[]).map(normBattle);const list=$('#matchList');list.innerHTML='';$('#matchEmpty').style.display=BATTLES.length?'none':'block';if(!BATTLES.length){$('#recentEmpty').style.display='block';$('#recentSummary').style.display='none';$('#recentNote').textContent='同步缓存里暂时没有可展示的近期对局';return}const wins=BATTLES.filter(x=>x.result==='win').length,losses=BATTLES.filter(x=>x.result==='loss').length,total=BATTLES.length,avg=k=>BATTLES.reduce((a,b)=>a+b[k],0)/total,avgK=avg('k'),avgD=avg('d'),avgA=avg('a'),kda=(avgK+avgA)/Math.max(1,avgD);$('#recentEmpty').style.display='none';$('#recentSummary').style.display='grid';$('#recentWL').textContent=`${wins} / ${losses}`;$('#recentWinRate').textContent=`${(wins/total*100).toFixed(1)}%`;$('#recentKda').textContent=kda.toFixed(2);$('#avgKills').textContent=avgK.toFixed(1);$('#avgDeaths').textContent=avgD.toFixed(1);$('#avgAssists').textContent=avgA.toFixed(1);$('#recentNote').textContent=`最近 ${total} 场 · 胜 ${wins} · 负 ${losses}`;list.innerHTML=BATTLES.map(m=>{const rcls=m.result==='win'?'win':m.result==='loss'?'loss':'other';const badges=[m.desc,m.mvpType?m.mvpType.toUpperCase():'',m.medal,m.score&&!m.desc?`评分 ${m.score}`:''].filter((x,i,a)=>x&&a.indexOf(x)===i).map((b,j)=>`<span class="badge ${j?'medal':''}">${esc(b)}</span>`).join('');return `<article class="match"><div>${m.heroIcon?`<img class="hero-icon" src="${esc(m.heroIcon)}" alt="${esc(m.hero||'英雄')}" loading="lazy" onerror="this.style.visibility='hidden'">`:`<div class="hero-icon"></div>`}</div><div><div class="match-result ${rcls}">${esc(m.resultText)}</div><div class="match-mode">${esc(m.hero?m.hero+' · '+m.mode:m.mode)}</div><div class="match-time">${esc(m.date||'时间未知')}</div></div><div class="kda">${m.k} / ${m.d} / ${m.a}<small>K / D / A</small></div><div class="match-col"><small>段位 / 星数</small><b>${esc(m.rank||'—')}${m.stars?` · ${esc(m.stars)}★`:''}</b><div class="match-time">${esc(m.duration||'时长未知')}</div></div><div class="match-col"><small>本局评价</small><div class="badge-line">${badges||'<span class="badge">暂无评价</span>'}</div></div></article>`}).join('')}
+async function fetchCache(){const r=await fetch(`${CACHE_URL}?v=${Date.now()}`,{cache:'no-store',headers:{Accept:'application/json'}});if(!r.ok)throw new Error(`hok.json HTTP ${r.status}`);return await r.json()}
+async function loadStats(){if(!binding){renderBinding();return}setError('');setLoading(true);$('#matchEmpty').innerHTML='正在读取 RUN_SYNC 生成的王者荣耀缓存…';$('#matchEmpty').style.display='block';try{const data=await fetchCache();if(!data||data.ok!==true)throw new Error(text(data?.error,'尚未生成有效王者战绩缓存。先运行 SET_HOK_ACCOUNT.cmd，再运行 RUN_SYNC_v1.15.0.cmd。'));if(!data.binding?.qqHash||!data.binding?.campIdHash)throw new Error('hok.json 缺少绑定指纹，请重新运行 RUN_SYNC。');const [qqHash,campHash]=await Promise.all([sha256(binding.qq),sha256(binding.campId)]);if(qqHash!==data.binding.qqHash||campHash!==data.binding.campIdHash)throw new Error('网页当前绑定与本机 HOK_IMPORT 配置不一致。请运行 SET_HOK_ACCOUNT.cmd 设置同一 QQ / 营地 ID，然后重新 RUN_SYNC。');if(!data.profile)throw new Error('同步缓存没有账号资料。');renderProfile(data.profile);renderBattles(data.matches||[]);const when=data.syncedAt?new Date(data.syncedAt):null;$('#syncTime').textContent=when&&!Number.isNaN(when.getTime())?'RUN_SYNC '+when.toLocaleString('zh-CN',{hour12:false}):'RUN_SYNC 缓存';setStatus('ok',`已读取王者营地同步缓存 · ${data.matches?.length||0} 场`);$('#matchEmpty').innerHTML='暂无近期对局数据';}catch(e){resetDataUi();setError(e?.message||String(e));setStatus('error','王者战绩缓存不可用');$('#matchEmpty').innerHTML='<strong>暂时没有可用战绩。</strong><br>先在 YMKF_Sync 运行 SET_HOK_ACCOUNT.cmd，再运行 RUN_SYNC_v1.15.0.cmd。';$('#matchEmpty').style.display='block'}finally{setLoading(false)}}
 function doUnbind(){if(!binding)return;if(!confirm('确定解除当前王者荣耀 QQ 绑定？\n只会清除这个浏览器里的本地绑定。'))return;localStorage.removeItem(STORAGE_KEY);binding=null;setError('');renderBinding()}
 $('#bindBtn').onclick=openModal;$('#closeModal').onclick=closeModal;$('#saveBindBtn').onclick=submitBinding;$('#refreshBtn').onclick=loadStats;$('#unbindBtn').onclick=doUnbind;$('#bindModal').onclick=e=>{if(e.target===$('#bindModal'))closeModal()};document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});$('#verifyInput').addEventListener('keydown',e=>{if(e.key==='Enter')submitBinding()});
 renderBinding();if(binding)loadStats();
