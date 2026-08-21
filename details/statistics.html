@@ -29,7 +29,7 @@
 <div id="chartTooltip" class="chart-tooltip"></div>
 <script>
 const $=s=>document.querySelector(s), esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-let DATA=null, dailyRange=30;
+let DATA=null, dailyRange=30, timelinePage=0;
 const h=s=>`${(Number(s||0)/3600).toFixed(Number(s||0)>=36000?0:1)} h`;
 const pct=(a,b)=>b>0?`${(a/b*100).toFixed(1)}%`:'0%';
 const shortDate=s=>{const d=new Date(s+'T00:00:00');return `${d.getMonth()+1}/${d.getDate()}`};
