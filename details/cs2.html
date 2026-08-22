@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Counter-Strike 2 · YMKF</title>
+<style>
+:root{color-scheme:dark;--bg:#080a0e;--panel:#111720;--panel2:#0b1017;--line:#283243;--text:#f4f7fb;--muted:#8e9aad;--orange:#f3a33c;--green:#68dda5;--bad:#ff8b8b}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 28% -10%,#263a54 0,#0b0e13 36%,#07090c 100%);color:var(--text);font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}.wrap{max-width:1220px;margin:auto;padding:24px}.top{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;margin-bottom:18px}.back{color:#d8e1ef;text-decoration:none}.brand{font-size:30px;font-weight:950;letter-spacing:.2px;margin-top:5px}.brand b{color:var(--orange)}.sub,.muted{color:var(--muted)}button,.linkbtn{border:1px solid #324057;background:#182130;color:#e8eef8;border-radius:11px;padding:9px 12px;text-decoration:none;cursor:pointer;font-weight:800}.hero,.card{background:linear-gradient(180deg,rgba(21,28,39,.96),rgba(12,16,23,.96));border:1px solid var(--line);border-radius:18px;box-shadow:0 18px 50px rgba(0,0,0,.26)}.hero{padding:21px;display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center}.who{display:flex;align-items:center;gap:15px}.avatar{width:78px;height:78px;border-radius:14px;background:#202938;object-fit:cover}.name{font-size:25px;font-weight:950}.steamid{font:12px ui-monospace,Consolas,monospace;color:#aab6c7;margin-top:3px}.status{padding:8px 12px;border-radius:999px;background:#352719;color:#ffd49a;font-weight:850}.status.ok{background:#153b2b;color:#86edb8}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px;margin-top:13px}.metric{padding:14px;background:rgba(7,10,15,.42);border:1px solid #253042;border-radius:13px;min-width:0}.metric strong{display:block;font-size:22px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.metric small{color:var(--muted)}h2{font-size:17px;margin:26px 2px 11px}.card{padding:18px}.sources{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.source{background:var(--panel2);border:1px solid #253043;border-radius:14px;padding:14px}.source .head{display:flex;align-items:center;justify-content:space-between;gap:10px}.source b{font-size:16px}.pill{font-size:10px;border:1px solid #3a4a61;padding:3px 7px;border-radius:999px;color:#aebbd0}.pill.connected{border-color:#2d7657;color:#88ecb8}.pill.ready{border-color:#6d562c;color:#ffd789}.pill.bad{border-color:#784044;color:#ff9fa5}.source p{margin:10px 0 0;color:var(--muted);font-size:12px}.warn{border:1px dashed #604b2b;background:#17130d;color:#e8c88e;border-radius:13px;padding:14px}.empty{padding:38px;text-align:center;color:var(--muted)}details{margin-top:14px}summary{cursor:pointer;color:#b3bfd0}.raw{max-height:500px;overflow:auto;margin-top:10px;background:#070a0e;border:1px solid #202938;border-radius:11px;padding:12px;font:11px/1.45 ui-monospace,Consolas,monospace;white-space:pre-wrap;word-break:break-all}.foot{color:var(--muted);font-size:11px;text-align:center;margin:28px 0}.accent{color:var(--orange)}@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.sources{grid-template-columns:1fr}.hero{grid-template-columns:1fr}.wrap{padding:15px}}@media(max-width:520px){.grid{grid-template-columns:1fr}.top{display:block}.top>button{margin-top:12px}}
+</style>
+<!-- YMKF site icon hf26 -->
+<link rel="icon" type="image/svg+xml" href="../assets/playnite/site-icon.svg">
+<link rel="shortcut icon" href="../assets/playnite/site-icon.svg">
+<link rel="apple-touch-icon" href="../assets/playnite/site-icon.svg">
+<link rel="manifest" href="../assets/playnite/site.webmanifest">
+<meta name="theme-color" content="#10131d">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="YMKF">
+<!-- /YMKF site icon hf26 -->
+</head>
+<body>
+<div class="wrap">
+ <div class="top"><div><a class="back" href="../index.html">← 返回游戏库</a><div class="brand"><b>COUNTER-STRIKE 2</b> 战绩</div><div class="sub">Steam Web API Key + SteamID64 · 小黑盒可选 · Build v1.15.0-cs2-hf5</div></div><button onclick="location.reload()">刷新页面</button></div>
+ <div id="app" class="empty">正在读取 CS2 数据…</div>
+ <div class="foot">Steam 累计统计来自 Valve Steam Web API（appid 730）。API Key 与小黑盒登录凭证只保存在本机 private 目录，不会写入网页数据或 cs2.json。</div>
+</div>
+<script>
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;'),fmt=n=>Number(n||0).toLocaleString('zh-CN'),pct=n=>(Number(n||0)*100).toFixed(1)+'%',ratio=n=>Number(n||0).toFixed(2),hours=s=>(Number(s||0)/3600).toFixed(1)+' h';
+function metric(v,l,cls=''){return `<div class="metric"><strong class="${cls}">${v}</strong><small>${l}</small></div>`}
+function sourceCard(name,s){s=s||{};const st=String(s.status||'unbound');const cls=st==='connected'?'connected':(st==='identity_ready'||st==='bound_unverified')?'ready':(st==='auth_expired'||st==='identity_mismatch'||st==='invalid_binding')?'bad':'';const label=st==='connected'?'已连接':st==='identity_ready'?'待绑定小黑盒':st==='bound_unverified'?'已登录·待核验':st==='auth_expired'?'登录已过期':st==='identity_mismatch'?'Steam 不一致':st==='invalid_binding'?'绑定损坏':st==='bound_no_api_key'?'缺 API Key':st==='identity_only'?'仅身份':'未连接';return `<div class="source"><div class="head"><b>${esc(name)}</b><span class="pill ${cls}">${label}</span></div><p>${esc(s.note||'统一身份：SteamID64')}</p></div>`}
+fetch('../data/cs2.json?v='+Date.now()).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(d=>{
+ const app=$('#app'),id=d.identity||{},p=d.profile||{},o=d.official||{},h=d.heybox||{},src=d.sources||{},hasStats=!!o.available,hasHeybox=!!h.available;
+ if(d.status==='unbound'||d.status==='invalid_binding'){
+   app.className='';app.innerHTML=`<div class="card empty"><b style="font-size:21px;color:#f0c27b">CS2 尚未绑定 Steam</b><br><br>运行 <b>BIND_CS2_STEAM.cmd</b>，在本机输入你的 Steam Web API Key。脚本会优先自动识别当前 Steam 客户端登录账号；识别不到时再输入 Steam 个人主页链接。<br>绑定完成后运行 <b>RUN_SYNC.cmd</b>。<br><br><span class="muted">不再使用 OpenID、本地回调或 Steam Guard 浏览器跳转；API Key 不会写入网页数据。</span></div>`;return;
+ }
+ const displayName=p.name||'Steam 已绑定',avatar=p.avatar||'';
+ app.className='';app.innerHTML=`
+ <section class="hero"><div class="who">${avatar?`<img class="avatar" src="${esc(avatar)}" alt="">`:'<div class="avatar"></div>'}<div><div class="name">${esc(displayName)}</div><div class="steamid">SteamID64 · ${esc(id.steamId64||'—')}</div><div class="sub">${d.updatedAt?'更新 '+new Date(d.updatedAt).toLocaleString('zh-CN',{hour12:false}):'尚未同步战绩'}</div></div></div><div class="status ${d.status==='ok'?'ok':''}">${d.status==='ok'?'● Steam 战绩已同步':'● Steam 账号已绑定'}</div></section>
+ ${p.profileUrl?`<div style="margin-top:12px"><a class="linkbtn" href="${esc(p.profileUrl)}" target="_blank" rel="noopener">打开 Steam 个人资料 ↗</a></div>`:''}
+ <h2>Valve 官方累计数据</h2>
+ ${!hasStats?'<div class="warn" style="margin-bottom:12px">Steam 账号已经绑定，但 Valve 累计统计当前不可用。常见原因是 CS2/游戏详情隐私设置或接口暂时不可用；这里不会把缺失数据伪装成 0。</div>':''}
+ <div class="grid">${metric(hasStats?fmt(o.kills):'—','击杀','accent')}${metric(hasStats?fmt(o.deaths):'—','死亡')}${metric(hasStats?ratio(o.kd):'—','K/D')}${metric(hasStats?fmt(o.assists):'—','助攻')}${metric(hasStats?fmt(o.headshots):'—','爆头')}${metric(hasStats?pct(o.headshotRate):'—','爆头率')}${metric(hasStats?fmt(o.wins):'—','胜利回合')}${metric(hasStats?fmt(o.rounds):'—','总回合')}${metric(hasStats?pct(o.winRate):'—','回合胜率')}${metric(hasStats?fmt(o.mvp):'—','MVP')}${metric(hasStats?fmt(o.damage):'—','累计伤害')}${metric(hasStats?pct(o.accuracy):'—','命中率')}${metric(hasStats?hours(o.timePlayedSeconds):'—','官方统计时长')}${metric(o.totalMinutes?(o.totalMinutes/60).toFixed(1)+' h':'—','Steam 总时长')}${metric(o.last2WeeksMinutes?(o.last2WeeksMinutes/60).toFixed(1)+' h':'—','近两周')}${metric(hasStats?fmt(o.moneyEarned):'—','累计金钱')}</div>
+ <h2>战绩来源 / 账号绑定</h2><div class="sources">${sourceCard('Steam',src.steam)}${sourceCard('小黑盒',src.heybox)}</div>
+ ${hasHeybox?`<h2>小黑盒账号</h2><div class="card"><div class="grid">${metric(esc(h.nickname||'—'),'小黑盒昵称')}${metric(esc(h.heyboxId||'—'),'Heybox ID')}${metric(esc(h.level||'—'),'小黑盒等级')}${metric(h.steamVerified?'一致':'待核验','SteamID64 校验',h.steamVerified?'':'')}</div><div class="muted" style="margin-top:14px">小黑盒绑定 SteamID64：<b>${esc(h.steamId64||'—')}</b>${h.gameLibraryCs2?` · 游戏库已识别 CS2${h.gameLibraryCs2.playtime?` · 时长 ${esc(h.gameLibraryCs2.playtime)}`:''}`:''}</div></div>`:`<div class="warn" style="margin-top:12px">Steam 绑定成功后，可运行 <b>BIND_CS2_HEYBOX.cmd</b> 打开小黑盒二维码，用手机小黑盒扫码。脚本会把小黑盒账号绑定的 SteamID64 与这里已经绑定的 SteamID64 做一致性校验。</div>`}
+ <h2>说明</h2><div class="card"><div class="muted">CS2 的统一主键始终是 <b>SteamID64</b>。Steam 绑定现在使用本机 Steam Web API Key + SteamID64，不再依赖 OpenID 回调。小黑盒仍是可选数据源，并继续使用 SteamID64 防串号校验；非公开接口在没有真实验证前不会伪造字段。</div>${h.error?`<div class="warn" style="margin-top:12px">小黑盒：${esc(h.error)}</div>`:''}${o.rawStats?`<details><summary>Steam API 原始统计字段</summary><pre class="raw">${esc(JSON.stringify(o.rawStats,null,2))}</pre></details>`:''}</div>`;
+}).catch(e=>{$('#app').innerHTML=`<div class="card empty"><b>CS2 数据读取失败</b><br><br>${esc(e.message||e)}</div>`})
+</script>
+</body>
+</html>

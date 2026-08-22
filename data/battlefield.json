@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
     "build":  "v1.15.0",
-    "generatedAt":  "2026-08-22T11:19:27.1444095+08:00",
+    "generatedAt":  "2026-08-22T14:50:21.1961714+08:00",
     "eaId":  "PIANOYMKF",
     "platform":  "pc",
     "source":  {
@@ -14,7 +14,7 @@
                               "key":  "bf1",
                               "title":  "Battlefield 1",
                               "status":  "ok",
-                              "updatedAt":  "2026-08-22T11:19:27.1444095+08:00",
+                              "updatedAt":  "2026-08-22T14:50:21.1961714+08:00",
                               "endpoint":  "https://api.gametools.network/bf1/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "PIANOYMKF",
@@ -3725,7 +3725,7 @@
                                                       },
                                           "vehicles":  {
                                                            "userId":  1015988860725,
-                                                           "avatar":  "",
+                                                           "avatar":  "https://eaavatarservice.akamaized.net/production/avatar/prod/userAvatar/47880937/416x416.JPEG",
                                                            "userName":  "PIANOYMKF",
                                                            "id":  1007369860725,
                                                            "vehicles":  [
@@ -8369,7 +8369,7 @@
                               "key":  "bfv",
                               "title":  "Battlefield V",
                               "status":  "ok",
-                              "updatedAt":  "2026-08-22T11:19:27.1444095+08:00",
+                              "updatedAt":  "2026-08-22T14:50:21.1961714+08:00",
                               "endpoint":  "https://api.gametools.network/bfv/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "PIANOYMKF",
@@ -10091,7 +10091,7 @@
                                                       },
                                           "vehicles":  {
                                                            "userId":  1015988860725,
-                                                           "avatar":  "",
+                                                           "avatar":  "https://eaavatarservice.akamaized.net/production/avatar/prod/userAvatar/47880937/416x416.JPEG",
                                                            "userName":  "PIANOYMKF",
                                                            "id":  1007369860725,
                                                            "vehicles":  [
@@ -12630,7 +12630,7 @@
                                  "key":  "bf2042",
                                  "title":  "Battlefield 2042",
                                  "status":  "upstream_broken",
-                                 "updatedAt":  "2026-08-22T11:19:27.1444095+08:00",
+                                 "updatedAt":  "2026-08-22T14:50:21.1961714+08:00",
                                  "endpoint":  "https://api.gametools.network/bf2042/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                                  "profile":  null,
                                  "trueSessions":  [
@@ -18984,8 +18984,8 @@
                   "bf6":  {
                               "key":  "bf6",
                               "title":  "Battlefield 6",
-                              "status":  "cached",
-                              "updatedAt":  "2026-08-22T10:35:50.4762639+08:00",
+                              "status":  "ok",
+                              "updatedAt":  "2026-08-22T14:50:21.1961714+08:00",
                               "endpoint":  "https://api.gametools.network/bf6/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "pianoymkf",
@@ -23623,13 +23623,13 @@
                                                          }
                                                      ]
                                       },
-                              "error":  "curl: (22) The requested URL returned error: 404",
-                              "dataQuality":  "cached",
+                              "error":  null,
+                              "dataQuality":  "online",
                               "playniteSeconds":  335340,
                               "playniteName":  "Battlefield 6",
                               "playniteId":  "755257c8-8508-4fd1-9bfd-8be1de672318"
                           }
               },
     "playniteTotalSeconds":  913440,
-    "playniteCapturedAt":  "2026-08-22T11:20:11.8705469+08:00"
+    "playniteCapturedAt":  "2026-08-22T14:50:44.1509350+08:00"
 }
