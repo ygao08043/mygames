@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
     "build":  "v1.15.0",
-    "generatedAt":  "2026-08-22T15:10:17.4330230+08:00",
+    "generatedAt":  "2026-08-22T16:25:12.9432695+08:00",
     "eaId":  "PIANOYMKF",
     "platform":  "pc",
     "source":  {
@@ -14,11 +14,11 @@
                               "key":  "bf1",
                               "title":  "Battlefield 1",
                               "status":  "ok",
-                              "updatedAt":  "2026-08-22T15:10:17.4330230+08:00",
+                              "updatedAt":  "2026-08-22T16:25:12.9432695+08:00",
                               "endpoint":  "https://api.gametools.network/bf1/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "PIANOYMKF",
-                                              "avatar":  "https://eaavatarservice.akamaized.net/production/avatar/prod/userAvatar/47880937/416x416.JPEG",
+                                              "avatar":  "",
                                               "rank":  49,
                                               "secondsPlayed":  176146,
                                               "kills":  1314,
@@ -36,117 +36,7 @@
                                               "score":  null
                                           },
                               "trueSessions":  [
-                                                   {
-                                                       "stats":  {
-                                                                     "timePlayed":  3706,
-                                                                     "wins":  2,
-                                                                     "losses":  1,
-                                                                     "kills":  56,
-                                                                     "deaths":  26,
-                                                                     "kits":  [
-                                                                                  {
-                                                                                      "name":  "Medic",
-                                                                                      "score":  0.0,
-                                                                                      "kills":  0.0,
-                                                                                      "timePlayed":  0.0
-                                                                                  },
-                                                                                  {
-                                                                                      "name":  "Pilot",
-                                                                                      "score":  0.0,
-                                                                                      "kills":  0.0,
-                                                                                      "timePlayed":  0.0
-                                                                                  },
-                                                                                  {
-                                                                                      "name":  "Tanker",
-                                                                                      "score":  2503.0,
-                                                                                      "kills":  0.0,
-                                                                                      "timePlayed":  419.6
-                                                                                  },
-                                                                                  {
-                                                                                      "name":  "Cavalry",
-                                                                                      "score":  0.0,
-                                                                                      "kills":  0.0,
-                                                                                      "timePlayed":  0.0
-                                                                                  },
-                                                                                  {
-                                                                                      "name":  "Scout",
-                                                                                      "score":  6378.0,
-                                                                                      "kills":  24.0,
-                                                                                      "timePlayed":  1687.4
-                                                                                  },
-                                                                                  {
-                                                                                      "name":  "Support",
-                                                                                      "score":  4219.0,
-                                                                                      "kills":  12.0,
-                                                                                      "timePlayed":  963.2
-                                                                                  },
-                                                                                  {
-                                                                                      "name":  "Assault",
-                                                                                      "score":  2991.0,
-                                                                                      "kills":  4.0,
-                                                                                      "timePlayed":  548.6
-                                                                                  }
-                                                                              ],
-                                                                     "score":  4900,
-                                                                     "gamemodes":  [
-                                                                                       {
-                                                                                           "name":  "Frontlines",
-                                                                                           "score":  0.0,
-                                                                                           "wins":  0,
-                                                                                           "losses":  0
-                                                                                       },
-                                                                                       {
-                                                                                           "name":  "Conquest",
-                                                                                           "score":  0.0,
-                                                                                           "wins":  0,
-                                                                                           "losses":  0
-                                                                                       },
-                                                                                       {
-                                                                                           "name":  "Rush",
-                                                                                           "score":  0.0,
-                                                                                           "wins":  0,
-                                                                                           "losses":  0
-                                                                                       },
-                                                                                       {
-                                                                                           "name":  "War pigeons",
-                                                                                           "score":  0.0,
-                                                                                           "wins":  0,
-                                                                                           "losses":  0
-                                                                                       },
-                                                                                       {
-                                                                                           "name":  "Operations",
-                                                                                           "score":  2450.0,
-                                                                                           "wins":  2,
-                                                                                           "losses":  1
-                                                                                       },
-                                                                                       {
-                                                                                           "name":  "Team deathmatch",
-                                                                                           "score":  0.0,
-                                                                                           "wins":  0,
-                                                                                           "losses":  0
-                                                                                       },
-                                                                                       {
-                                                                                           "name":  "Shock operations",
-                                                                                           "score":  2450.0,
-                                                                                           "wins":  2,
-                                                                                           "losses":  1
-                                                                                       },
-                                                                                       {
-                                                                                           "name":  "Domination",
-                                                                                           "score":  0.0,
-                                                                                           "wins":  0,
-                                                                                           "losses":  0
-                                                                                       }
-                                                                                   ],
-                                                                     "killDeath":  0.0,
-                                                                     "name":  "PIANOYMKF"
-                                                                 },
-                                                       "playerId":  1007369860725,
-                                                       "serverId":  "5980bc72-8430-11f0-871f-02420a000303",
-                                                       "serverName":  "[Milktea1]Supernoob /LKD\u003c1.3/LKP\u003c1.2/QQ122422290",
-                                                       "timeStamp":  "2026-08-15 08:12:04.953000",
-                                                       "game_name":  "tunguska"
-                                                   }
+
                                                ],
                               "intervals":  [
 
@@ -154,7 +44,7 @@
                               "raw":  {
                                           "stats":  {
                                                         "userId":  1015988860725,
-                                                        "avatar":  "https://eaavatarservice.akamaized.net/production/avatar/prod/userAvatar/47880937/416x416.JPEG",
+                                                        "avatar":  "",
                                                         "userName":  "PIANOYMKF",
                                                         "id":  1007369860725,
                                                         "rank":  49,
@@ -195,7 +85,7 @@
                                                     },
                                           "weapons":  {
                                                           "userId":  1015988860725,
-                                                          "avatar":  "https://eaavatarservice.akamaized.net/production/avatar/prod/userAvatar/47880937/416x416.JPEG",
+                                                          "avatar":  "",
                                                           "userName":  "PIANOYMKF",
                                                           "id":  1007369860725,
                                                           "weapons":  [
@@ -8245,117 +8135,7 @@
                                                                        }
                                                                    ],
                                                       "sessions":  [
-                                                                       {
-                                                                           "stats":  {
-                                                                                         "timePlayed":  3706,
-                                                                                         "wins":  2,
-                                                                                         "losses":  1,
-                                                                                         "kills":  56,
-                                                                                         "deaths":  26,
-                                                                                         "kits":  [
-                                                                                                      {
-                                                                                                          "name":  "Medic",
-                                                                                                          "score":  0.0,
-                                                                                                          "kills":  0.0,
-                                                                                                          "timePlayed":  0.0
-                                                                                                      },
-                                                                                                      {
-                                                                                                          "name":  "Pilot",
-                                                                                                          "score":  0.0,
-                                                                                                          "kills":  0.0,
-                                                                                                          "timePlayed":  0.0
-                                                                                                      },
-                                                                                                      {
-                                                                                                          "name":  "Tanker",
-                                                                                                          "score":  2503.0,
-                                                                                                          "kills":  0.0,
-                                                                                                          "timePlayed":  419.6
-                                                                                                      },
-                                                                                                      {
-                                                                                                          "name":  "Cavalry",
-                                                                                                          "score":  0.0,
-                                                                                                          "kills":  0.0,
-                                                                                                          "timePlayed":  0.0
-                                                                                                      },
-                                                                                                      {
-                                                                                                          "name":  "Scout",
-                                                                                                          "score":  6378.0,
-                                                                                                          "kills":  24.0,
-                                                                                                          "timePlayed":  1687.4
-                                                                                                      },
-                                                                                                      {
-                                                                                                          "name":  "Support",
-                                                                                                          "score":  4219.0,
-                                                                                                          "kills":  12.0,
-                                                                                                          "timePlayed":  963.2
-                                                                                                      },
-                                                                                                      {
-                                                                                                          "name":  "Assault",
-                                                                                                          "score":  2991.0,
-                                                                                                          "kills":  4.0,
-                                                                                                          "timePlayed":  548.6
-                                                                                                      }
-                                                                                                  ],
-                                                                                         "score":  4900,
-                                                                                         "gamemodes":  [
-                                                                                                           {
-                                                                                                               "name":  "Frontlines",
-                                                                                                               "score":  0.0,
-                                                                                                               "wins":  0,
-                                                                                                               "losses":  0
-                                                                                                           },
-                                                                                                           {
-                                                                                                               "name":  "Conquest",
-                                                                                                               "score":  0.0,
-                                                                                                               "wins":  0,
-                                                                                                               "losses":  0
-                                                                                                           },
-                                                                                                           {
-                                                                                                               "name":  "Rush",
-                                                                                                               "score":  0.0,
-                                                                                                               "wins":  0,
-                                                                                                               "losses":  0
-                                                                                                           },
-                                                                                                           {
-                                                                                                               "name":  "War pigeons",
-                                                                                                               "score":  0.0,
-                                                                                                               "wins":  0,
-                                                                                                               "losses":  0
-                                                                                                           },
-                                                                                                           {
-                                                                                                               "name":  "Operations",
-                                                                                                               "score":  2450.0,
-                                                                                                               "wins":  2,
-                                                                                                               "losses":  1
-                                                                                                           },
-                                                                                                           {
-                                                                                                               "name":  "Team deathmatch",
-                                                                                                               "score":  0.0,
-                                                                                                               "wins":  0,
-                                                                                                               "losses":  0
-                                                                                                           },
-                                                                                                           {
-                                                                                                               "name":  "Shock operations",
-                                                                                                               "score":  2450.0,
-                                                                                                               "wins":  2,
-                                                                                                               "losses":  1
-                                                                                                           },
-                                                                                                           {
-                                                                                                               "name":  "Domination",
-                                                                                                               "score":  0.0,
-                                                                                                               "wins":  0,
-                                                                                                               "losses":  0
-                                                                                                           }
-                                                                                                       ],
-                                                                                         "killDeath":  0.0,
-                                                                                         "name":  "PIANOYMKF"
-                                                                                     },
-                                                                           "playerId":  1007369860725,
-                                                                           "serverId":  "5980bc72-8430-11f0-871f-02420a000303",
-                                                                           "serverName":  "[Milktea1]Supernoob /LKD\u003c1.3/LKP\u003c1.2/QQ122422290",
-                                                                           "timeStamp":  "2026-08-15 08:12:04.953000",
-                                                                           "game_name":  "tunguska"
-                                                                       }
+
                                                                    ]
                                                   }
                                       },
@@ -8369,7 +8149,7 @@
                               "key":  "bfv",
                               "title":  "Battlefield V",
                               "status":  "ok",
-                              "updatedAt":  "2026-08-22T15:10:17.4330230+08:00",
+                              "updatedAt":  "2026-08-22T16:25:12.9432695+08:00",
                               "endpoint":  "https://api.gametools.network/bfv/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "PIANOYMKF",
@@ -8439,7 +8219,7 @@
                                                     },
                                           "weapons":  {
                                                           "userId":  1015988860725,
-                                                          "avatar":  "",
+                                                          "avatar":  "https://eaavatarservice.akamaized.net/production/avatar/prod/userAvatar/47880937/416x416.JPEG",
                                                           "userName":  "PIANOYMKF",
                                                           "id":  1007369860725,
                                                           "weapons":  [
@@ -12630,7 +12410,7 @@
                                  "key":  "bf2042",
                                  "title":  "Battlefield 2042",
                                  "status":  "upstream_broken",
-                                 "updatedAt":  "2026-08-22T15:10:17.4330230+08:00",
+                                 "updatedAt":  "2026-08-22T16:25:12.9432695+08:00",
                                  "endpoint":  "https://api.gametools.network/bf2042/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                                  "profile":  null,
                                  "trueSessions":  [
@@ -18985,7 +18765,7 @@
                               "key":  "bf6",
                               "title":  "Battlefield 6",
                               "status":  "ok",
-                              "updatedAt":  "2026-08-22T15:10:17.4330230+08:00",
+                              "updatedAt":  "2026-08-22T16:25:12.9432695+08:00",
                               "endpoint":  "https://api.gametools.network/bf6/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "pianoymkf",
@@ -23631,5 +23411,5 @@
                           }
               },
     "playniteTotalSeconds":  913440,
-    "playniteCapturedAt":  "2026-08-22T15:10:48.8653792+08:00"
+    "playniteCapturedAt":  "2026-08-22T16:26:29.1473058+08:00"
 }
