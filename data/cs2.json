@@ -1,8 +1,7 @@
 {
-    "build":  "1.15.0-cs2-hf5",
-    "updatedAt":  "2026-08-22T14:50:41.4829363+08:00",
+    "build":  "1.15.0-cs2-hf6",
+    "updatedAt":  "2026-08-22T15:10:46.6108450+08:00",
     "status":  "ok",
-    "note":  "SteamID64 is the unified CS2 identity. Steam Web API key is stored locally only; Heybox is accepted only when its SteamID64 matches the bound Steam identity.",
     "identity":  {
                      "steamId64":  "76561199392052203",
                      "binding":  "steam_web_api",
@@ -17,29 +16,1083 @@
                     "lastLogoff":  1787327813,
                     "personastate":  1
                 },
+    "summary":  {
+                    "kills":  20358,
+                    "deaths":  19939,
+                    "kd":  1.021014,
+                    "assists":  null,
+                    "headshots":  5193,
+                    "headshotRate":  0.255084,
+                    "wins":  10167,
+                    "rounds":  20141,
+                    "winRate":  0.504791,
+                    "mvp":  2248,
+                    "damage":  3020822,
+                    "shotsFired":  418146,
+                    "shotsHit":  27,
+                    "accuracy":  6.5E-05,
+                    "accuracySource":  "total_shots_hit / total_shots_fired",
+                    "bombsPlanted":  1843,
+                    "bombsDefused":  293,
+                    "playniteSeconds":  3554160
+                },
+    "weapons":  [
+                    {
+                        "id":  "ak47",
+                        "name":  "AK-47",
+                        "category":  "步枪",
+                        "kills":  2819,
+                        "hits":  11098,
+                        "shots":  65747,
+                        "accuracy":  0.168799,
+                        "stats":  {
+                                      "total_hits_ak47":  11098,
+                                      "total_kills_ak47":  2819,
+                                      "total_shots_ak47":  65747
+                                  },
+                        "labels":  {
+                                       "total_hits_ak47":  "total_hits_ak47",
+                                       "total_kills_ak47":  "CV-47 Kills",
+                                       "total_shots_ak47":  "total_shots_ak47"
+                                   }
+                    },
+                    {
+                        "id":  "m4a1",
+                        "name":  "M4A4 / M4A1",
+                        "category":  "步枪",
+                        "kills":  1981,
+                        "hits":  9454,
+                        "shots":  45900,
+                        "accuracy":  0.205969,
+                        "stats":  {
+                                      "total_hits_m4a1":  9454,
+                                      "total_kills_m4a1":  1981,
+                                      "total_shots_m4a1":  45900
+                                  },
+                        "labels":  {
+                                       "total_hits_m4a1":  "total hits m4a4",
+                                       "total_kills_m4a1":  "total kills m4a4",
+                                       "total_shots_m4a1":  "total shots m4a4"
+                                   }
+                    },
+                    {
+                        "id":  "aug",
+                        "name":  "AUG",
+                        "category":  "步枪",
+                        "kills":  282,
+                        "hits":  1396,
+                        "shots":  5467,
+                        "accuracy":  0.25535,
+                        "stats":  {
+                                      "total_hits_aug":  1396,
+                                      "total_kills_aug":  282,
+                                      "total_shots_aug":  5467
+                                  },
+                        "labels":  {
+                                       "total_hits_aug":  "total_hits_aug",
+                                       "total_kills_aug":  "Bullpup Kills",
+                                       "total_shots_aug":  "total_shots_aug"
+                                   }
+                    },
+                    {
+                        "id":  "sg556",
+                        "name":  "SG 553",
+                        "category":  "步枪",
+                        "kills":  464,
+                        "hits":  1810,
+                        "shots":  7632,
+                        "accuracy":  0.237159,
+                        "stats":  {
+                                      "total_hits_sg556":  1810,
+                                      "total_kills_sg556":  464,
+                                      "total_shots_sg556":  7632
+                                  },
+                        "labels":  {
+                                       "total_hits_sg556":  "total_hits_sg556",
+                                       "total_kills_sg556":  "total_kills_sg556",
+                                       "total_shots_sg556":  "total_shots_sg556"
+                                   }
+                    },
+                    {
+                        "id":  "famas",
+                        "name":  "FAMAS",
+                        "category":  "步枪",
+                        "kills":  83,
+                        "hits":  466,
+                        "shots":  2229,
+                        "accuracy":  0.209062,
+                        "stats":  {
+                                      "total_hits_famas":  466,
+                                      "total_kills_famas":  83,
+                                      "total_shots_famas":  2229
+                                  },
+                        "labels":  {
+                                       "total_hits_famas":  "total_hits_famas",
+                                       "total_kills_famas":  "Clarion 5.56 Kills",
+                                       "total_shots_famas":  "total_shots_famas"
+                                   }
+                    },
+                    {
+                        "id":  "galilar",
+                        "name":  "Galil AR",
+                        "category":  "步枪",
+                        "kills":  367,
+                        "hits":  1836,
+                        "shots":  9950,
+                        "accuracy":  0.184523,
+                        "stats":  {
+                                      "total_hits_galilar":  1836,
+                                      "total_kills_galilar":  367,
+                                      "total_shots_galilar":  9950
+                                  },
+                        "labels":  {
+                                       "total_hits_galilar":  "total hits galil AR",
+                                       "total_kills_galilar":  "total kills galil AR",
+                                       "total_shots_galilar":  "total shots galil AR"
+                                   }
+                    },
+                    {
+                        "id":  "awp",
+                        "name":  "AWP",
+                        "category":  "狙击枪",
+                        "kills":  6063,
+                        "hits":  7644,
+                        "shots":  16947,
+                        "accuracy":  0.451053,
+                        "stats":  {
+                                      "total_hits_awp":  7644,
+                                      "total_kills_awp":  6063,
+                                      "total_shots_awp":  16947
+                                  },
+                        "labels":  {
+                                       "total_hits_awp":  "total_hits_awp",
+                                       "total_kills_awp":  "Magnum Sniper Rifle Kills",
+                                       "total_shots_awp":  "total_shots_awp"
+                                   }
+                    },
+                    {
+                        "id":  "ssg08",
+                        "name":  "SSG 08",
+                        "category":  "狙击枪",
+                        "kills":  522,
+                        "hits":  1210,
+                        "shots":  3245,
+                        "accuracy":  0.372881,
+                        "stats":  {
+                                      "total_hits_ssg08":  1210,
+                                      "total_kills_ssg08":  522,
+                                      "total_shots_ssg08":  3245
+                                  },
+                        "labels":  {
+                                       "total_hits_ssg08":  "total_hits_ssg08",
+                                       "total_kills_ssg08":  "total_kills_ssg08",
+                                       "total_shots_ssg08":  "total_shots_ssg08"
+                                   }
+                    },
+                    {
+                        "id":  "scar20",
+                        "name":  "SCAR-20",
+                        "category":  "狙击枪",
+                        "kills":  334,
+                        "hits":  823,
+                        "shots":  3088,
+                        "accuracy":  0.266516,
+                        "stats":  {
+                                      "total_hits_scar20":  823,
+                                      "total_kills_scar20":  334,
+                                      "total_shots_scar20":  3088
+                                  },
+                        "labels":  {
+                                       "total_hits_scar20":  "total_hits_scar20",
+                                       "total_kills_scar20":  "total_kills_scar20",
+                                       "total_shots_scar20":  "total_shots_scar20"
+                                   }
+                    },
+                    {
+                        "id":  "g3sg1",
+                        "name":  "G3SG1",
+                        "category":  "狙击枪",
+                        "kills":  189,
+                        "hits":  531,
+                        "shots":  2042,
+                        "accuracy":  0.260039,
+                        "stats":  {
+                                      "total_hits_g3sg1":  531,
+                                      "total_kills_g3sg1":  189,
+                                      "total_shots_g3sg1":  2042
+                                  },
+                        "labels":  {
+                                       "total_hits_g3sg1":  "total_hits_g3sg1",
+                                       "total_kills_g3sg1":  "D3/AU-1 Kills",
+                                       "total_shots_g3sg1":  "total_shots_g3sg1"
+                                   }
+                    },
+                    {
+                        "id":  "deagle",
+                        "name":  "Desert Eagle",
+                        "category":  "手枪",
+                        "kills":  449,
+                        "hits":  1146,
+                        "shots":  4565,
+                        "accuracy":  0.251041,
+                        "stats":  {
+                                      "total_hits_deagle":  1146,
+                                      "total_kills_deagle":  449,
+                                      "total_shots_deagle":  4565
+                                  },
+                        "labels":  {
+                                       "total_hits_deagle":  "total_hits_deagle",
+                                       "total_kills_deagle":  "Desert Eagle .50c Kills",
+                                       "total_shots_deagle":  "total_shots_deagle"
+                                   }
+                    },
+                    {
+                        "id":  "glock",
+                        "name":  "Glock-18",
+                        "category":  "手枪",
+                        "kills":  579,
+                        "hits":  3441,
+                        "shots":  15948,
+                        "accuracy":  0.215764,
+                        "stats":  {
+                                      "total_hits_glock":  3441,
+                                      "total_kills_glock":  579,
+                                      "total_shots_glock":  15948
+                                  },
+                        "labels":  {
+                                       "total_hits_glock":  "total_hits_glock",
+                                       "total_kills_glock":  "9x19 Sidearm Kills",
+                                       "total_shots_glock":  "total_shots_glock"
+                                   }
+                    },
+                    {
+                        "id":  "hkp2000",
+                        "name":  "P2000 / USP-S",
+                        "category":  "手枪",
+                        "kills":  823,
+                        "hits":  3817,
+                        "shots":  16399,
+                        "accuracy":  0.232758,
+                        "stats":  {
+                                      "total_hits_hkp2000":  3817,
+                                      "total_kills_hkp2000":  823,
+                                      "total_shots_hkp2000":  16399
+                                  },
+                        "labels":  {
+                                       "total_hits_hkp2000":  "total_hits_hkp2000",
+                                       "total_kills_hkp2000":  "total_kills_hkp2000",
+                                       "total_shots_hkp2000":  "total_shots_hkp2000"
+                                   }
+                    },
+                    {
+                        "id":  "p250",
+                        "name":  "P250",
+                        "category":  "手枪",
+                        "kills":  93,
+                        "hits":  558,
+                        "shots":  2313,
+                        "accuracy":  0.241245,
+                        "stats":  {
+                                      "total_hits_p250":  558,
+                                      "total_kills_p250":  93,
+                                      "total_shots_p250":  2313
+                                  },
+                        "labels":  {
+                                       "total_hits_p250":  "total_hits_p250",
+                                       "total_kills_p250":  "total_kills_p250",
+                                       "total_shots_p250":  "total_shots_p250"
+                                   }
+                    },
+                    {
+                        "id":  "fiveseven",
+                        "name":  "Five-SeveN",
+                        "category":  "手枪",
+                        "kills":  108,
+                        "hits":  545,
+                        "shots":  2334,
+                        "accuracy":  0.233505,
+                        "stats":  {
+                                      "total_hits_fiveseven":  545,
+                                      "total_kills_fiveseven":  108,
+                                      "total_shots_fiveseven":  2334
+                                  },
+                        "labels":  {
+                                       "total_hits_fiveseven":  "total_hits_fiveseven",
+                                       "total_kills_fiveseven":  "ES Five-Seven Kills",
+                                       "total_shots_fiveseven":  "total_shots_fiveseven"
+                                   }
+                    },
+                    {
+                        "id":  "tec9",
+                        "name":  "Tec-9",
+                        "category":  "手枪",
+                        "kills":  547,
+                        "hits":  2635,
+                        "shots":  13132,
+                        "accuracy":  0.200655,
+                        "stats":  {
+                                      "total_hits_tec9":  2635,
+                                      "total_kills_tec9":  547,
+                                      "total_shots_tec9":  13132
+                                  },
+                        "labels":  {
+                                       "total_hits_tec9":  "total_hits_tec9",
+                                       "total_kills_tec9":  "total_kills_tec9",
+                                       "total_shots_tec9":  "total_shots_tec9"
+                                   }
+                    },
+                    {
+                        "id":  "elite",
+                        "name":  "Dual Berettas",
+                        "category":  "手枪",
+                        "kills":  144,
+                        "hits":  776,
+                        "shots":  5088,
+                        "accuracy":  0.152516,
+                        "stats":  {
+                                      "total_hits_elite":  776,
+                                      "total_kills_elite":  144,
+                                      "total_shots_elite":  5088
+                                  },
+                        "labels":  {
+                                       "total_hits_elite":  "total_hits_elite",
+                                       "total_kills_elite":  ".40 Dual Elites Kills",
+                                       "total_shots_elite":  "total_shots_elite"
+                                   }
+                    },
+                    {
+                        "id":  "mac10",
+                        "name":  "MAC-10",
+                        "category":  "冲锋枪",
+                        "kills":  488,
+                        "hits":  3534,
+                        "shots":  22437,
+                        "accuracy":  0.157508,
+                        "stats":  {
+                                      "total_hits_mac10":  3534,
+                                      "total_kills_mac10":  488,
+                                      "total_shots_mac10":  22437
+                                  },
+                        "labels":  {
+                                       "total_hits_mac10":  "total_hits_mac10",
+                                       "total_kills_mac10":  "Ingram Mac-10 Kills",
+                                       "total_shots_mac10":  "total_shots_mac10"
+                                   }
+                    },
+                    {
+                        "id":  "mp9",
+                        "name":  "MP9",
+                        "category":  "冲锋枪",
+                        "kills":  798,
+                        "hits":  5554,
+                        "shots":  31048,
+                        "accuracy":  0.178884,
+                        "stats":  {
+                                      "total_hits_mp9":  5554,
+                                      "total_kills_mp9":  798,
+                                      "total_shots_mp9":  31048
+                                  },
+                        "labels":  {
+                                       "total_hits_mp9":  "total_hits_mp9",
+                                       "total_kills_mp9":  "total_kills_mp9",
+                                       "total_shots_mp9":  "total_shots_mp9"
+                                   }
+                    },
+                    {
+                        "id":  "mp7",
+                        "name":  "MP7",
+                        "category":  "冲锋枪",
+                        "kills":  236,
+                        "hits":  1771,
+                        "shots":  8647,
+                        "accuracy":  0.204811,
+                        "stats":  {
+                                      "total_hits_mp7":  1771,
+                                      "total_kills_mp7":  236,
+                                      "total_shots_mp7":  8647
+                                  },
+                        "labels":  {
+                                       "total_hits_mp7":  "total_hits_mp7",
+                                       "total_kills_mp7":  "total_kills_mp7",
+                                       "total_shots_mp7":  "total_shots_mp7"
+                                   }
+                    },
+                    {
+                        "id":  "ump45",
+                        "name":  "UMP-45",
+                        "category":  "冲锋枪",
+                        "kills":  44,
+                        "hits":  318,
+                        "shots":  1643,
+                        "accuracy":  0.193548,
+                        "stats":  {
+                                      "total_hits_ump45":  318,
+                                      "total_kills_ump45":  44,
+                                      "total_shots_ump45":  1643
+                                  },
+                        "labels":  {
+                                       "total_hits_ump45":  "total_hits_ump45",
+                                       "total_kills_ump45":  "KM UMP45 Kills",
+                                       "total_shots_ump45":  "total_shots_ump45"
+                                   }
+                    },
+                    {
+                        "id":  "p90",
+                        "name":  "P90",
+                        "category":  "冲锋枪",
+                        "kills":  539,
+                        "hits":  4407,
+                        "shots":  27387,
+                        "accuracy":  0.160916,
+                        "stats":  {
+                                      "total_hits_p90":  4407,
+                                      "total_kills_p90":  539,
+                                      "total_shots_p90":  27387
+                                  },
+                        "labels":  {
+                                       "total_hits_p90":  "total_hits_p90",
+                                       "total_kills_p90":  "ES C90 Kills",
+                                       "total_shots_p90":  "total_shots_p90"
+                                   }
+                    },
+                    {
+                        "id":  "bizon",
+                        "name":  "PP-Bizon",
+                        "category":  "冲锋枪",
+                        "kills":  713,
+                        "hits":  5965,
+                        "shots":  40110,
+                        "accuracy":  0.148716,
+                        "stats":  {
+                                      "total_hits_bizon":  5965,
+                                      "total_kills_bizon":  713,
+                                      "total_shots_bizon":  40110
+                                  },
+                        "labels":  {
+                                       "total_hits_bizon":  "total_hits_bizon",
+                                       "total_kills_bizon":  "total_kills_bizon",
+                                       "total_shots_bizon":  "total_shots_bizon"
+                                   }
+                    },
+                    {
+                        "id":  "nova",
+                        "name":  "Nova",
+                        "category":  "霰弹枪",
+                        "kills":  37,
+                        "hits":  572,
+                        "shots":  2889,
+                        "accuracy":  0.197992,
+                        "stats":  {
+                                      "total_hits_nova":  572,
+                                      "total_kills_nova":  37,
+                                      "total_shots_nova":  2889
+                                  },
+                        "labels":  {
+                                       "total_hits_nova":  "total_hits_nova",
+                                       "total_kills_nova":  "total_kills_nova",
+                                       "total_shots_nova":  "total_shots_nova"
+                                   }
+                    },
+                    {
+                        "id":  "xm1014",
+                        "name":  "XM1014",
+                        "category":  "霰弹枪",
+                        "kills":  449,
+                        "hits":  4131,
+                        "shots":  18305,
+                        "accuracy":  0.225676,
+                        "stats":  {
+                                      "total_hits_xm1014":  4131,
+                                      "total_kills_xm1014":  449,
+                                      "total_shots_xm1014":  18305
+                                  },
+                        "labels":  {
+                                       "total_hits_xm1014":  "total_hits_xm1014",
+                                       "total_kills_xm1014":  "XM1014 Kills",
+                                       "total_shots_xm1014":  "total_shots_xm1014"
+                                   }
+                    },
+                    {
+                        "id":  "mag7",
+                        "name":  "MAG-7",
+                        "category":  "霰弹枪",
+                        "kills":  77,
+                        "hits":  817,
+                        "shots":  3675,
+                        "accuracy":  0.222313,
+                        "stats":  {
+                                      "total_hits_mag7":  817,
+                                      "total_kills_mag7":  77,
+                                      "total_shots_mag7":  3675
+                                  },
+                        "labels":  {
+                                       "total_hits_mag7":  "total_hits_mag7",
+                                       "total_kills_mag7":  "total_kills_mag7",
+                                       "total_shots_mag7":  "total_shots_mag7"
+                                   }
+                    },
+                    {
+                        "id":  "sawedoff",
+                        "name":  "Sawed-Off",
+                        "category":  "霰弹枪",
+                        "kills":  36,
+                        "hits":  307,
+                        "shots":  1480,
+                        "accuracy":  0.207432,
+                        "stats":  {
+                                      "total_hits_sawedoff":  307,
+                                      "total_kills_sawedoff":  36,
+                                      "total_shots_sawedoff":  1480
+                                  },
+                        "labels":  {
+                                       "total_hits_sawedoff":  "total_hits_sawedoff",
+                                       "total_kills_sawedoff":  "total_kills_sawedoff",
+                                       "total_shots_sawedoff":  "total_shots_sawedoff"
+                                   }
+                    },
+                    {
+                        "id":  "m249",
+                        "name":  "M249",
+                        "category":  "重型武器",
+                        "kills":  77,
+                        "hits":  410,
+                        "shots":  5616,
+                        "accuracy":  0.073006,
+                        "stats":  {
+                                      "total_hits_m249":  410,
+                                      "total_kills_m249":  77,
+                                      "total_shots_m249":  5616
+                                  },
+                        "labels":  {
+                                       "total_hits_m249":  "total_hits_m249",
+                                       "total_kills_m249":  "M249 Kills",
+                                       "total_shots_m249":  "total_shots_m249"
+                                   }
+                    },
+                    {
+                        "id":  "negev",
+                        "name":  "Negev",
+                        "category":  "重型武器",
+                        "kills":  392,
+                        "hits":  2231,
+                        "shots":  32878,
+                        "accuracy":  0.067857,
+                        "stats":  {
+                                      "total_hits_negev":  2231,
+                                      "total_kills_negev":  392,
+                                      "total_shots_negev":  32878
+                                  },
+                        "labels":  {
+                                       "total_hits_negev":  "total_hits_negev",
+                                       "total_kills_negev":  "total_kills_negev",
+                                       "total_shots_negev":  "total_shots_negev"
+                                   }
+                    },
+                    {
+                        "id":  "knife",
+                        "name":  "Knife",
+                        "category":  "近战 / 道具",
+                        "kills":  455,
+                        "hits":  null,
+                        "shots":  null,
+                        "accuracy":  null,
+                        "stats":  {
+                                      "total_kills_knife":  455
+                                  },
+                        "labels":  {
+                                       "total_kills_knife":  "Knife Kills"
+                                   }
+                    },
+                    {
+                        "id":  "taser",
+                        "name":  "Zeus x27",
+                        "category":  "近战 / 道具",
+                        "kills":  111,
+                        "hits":  null,
+                        "shots":  5,
+                        "accuracy":  null,
+                        "stats":  {
+                                      "total_kills_taser":  111,
+                                      "total_shots_taser":  5
+                                  },
+                        "labels":  {
+                                       "total_kills_taser":  "total kills taser",
+                                       "total_shots_taser":  "total shot taser"
+                                   }
+                    },
+                    {
+                        "id":  "hegrenade",
+                        "name":  "HE Grenade",
+                        "category":  "投掷物",
+                        "kills":  30,
+                        "hits":  null,
+                        "shots":  null,
+                        "accuracy":  null,
+                        "stats":  {
+                                      "total_kills_hegrenade":  30
+                                  },
+                        "labels":  {
+                                       "total_kills_hegrenade":  "HE Grenade Kills"
+                                   }
+                    },
+                    {
+                        "id":  "molotov",
+                        "name":  "Molotov",
+                        "category":  "投掷物",
+                        "kills":  29,
+                        "hits":  null,
+                        "shots":  null,
+                        "accuracy":  null,
+                        "stats":  {
+                                      "total_kills_molotov":  29
+                                  },
+                        "labels":  {
+                                       "total_kills_molotov":  "total kills molotov"
+                                   }
+                    }
+                ],
+    "maps":  [
+                 {
+                     "id":  "ar_baggage",
+                     "name":  "Baggage",
+                     "category":  "军备竞赛",
+                     "wins":  13,
+                     "rounds":  22,
+                     "winRate":  0.590909,
+                     "matchesWon":  null,
+                     "matchesPlayed":  null,
+                     "stats":  {
+                                   "total_rounds_map_ar_baggage":  22,
+                                   "total_wins_map_ar_baggage":  13
+                               },
+                     "labels":  {
+                                    "total_rounds_map_ar_baggage":  "rounds played on map baggage",
+                                    "total_wins_map_ar_baggage":  "matches won on baggage"
+                                }
+                 },
+                 {
+                     "id":  "ar_shoots",
+                     "name":  "Shoots",
+                     "category":  "军备竞赛",
+                     "wins":  15,
+                     "rounds":  26,
+                     "winRate":  0.576923,
+                     "matchesWon":  null,
+                     "matchesPlayed":  null,
+                     "stats":  {
+                                   "total_rounds_map_ar_shoots":  26,
+                                   "total_wins_map_ar_shoots":  15
+                               },
+                     "labels":  {
+                                    "total_rounds_map_ar_shoots":  "total rounds won in shoots",
+                                    "total_wins_map_ar_shoots":  "matches won on shoots"
+                                }
+                 },
+                 {
+                     "id":  "cs_office",
+                     "name":  "Office",
+                     "category":  "人质地图",
+                     "wins":  10,
+                     "rounds":  23,
+                     "winRate":  0.434783,
+                     "matchesWon":  null,
+                     "matchesPlayed":  null,
+                     "stats":  {
+                                   "total_rounds_map_cs_office":  23,
+                                   "total_wins_map_cs_office":  10
+                               },
+                     "labels":  {
+                                    "total_rounds_map_cs_office":  "total_rounds_map_cs_office",
+                                    "total_wins_map_cs_office":  "total_wins_map_cs_office"
+                                }
+                 },
+                 {
+                     "id":  "de_dust2",
+                     "name":  "Dust II",
+                     "category":  "爆破地图",
+                     "wins":  5259,
+                     "rounds":  10453,
+                     "winRate":  0.503109,
+                     "matchesWon":  null,
+                     "matchesPlayed":  null,
+                     "stats":  {
+                                   "total_rounds_map_de_dust2":  10453,
+                                   "total_wins_map_de_dust2":  5259
+                               },
+                     "labels":  {
+                                    "total_rounds_map_de_dust2":  "total_rounds_map_de_dust2",
+                                    "total_wins_map_de_dust2":  "total_wins_map_de_dust2"
+                                }
+                 },
+                 {
+                     "id":  "de_inferno",
+                     "name":  "Inferno",
+                     "category":  "爆破地图",
+                     "wins":  514,
+                     "rounds":  1017,
+                     "winRate":  0.505408,
+                     "matchesWon":  null,
+                     "matchesPlayed":  null,
+                     "stats":  {
+                                   "total_rounds_map_de_inferno":  1017,
+                                   "total_wins_map_de_inferno":  514
+                               },
+                     "labels":  {
+                                    "total_rounds_map_de_inferno":  "total_rounds_map_de_inferno",
+                                    "total_wins_map_de_inferno":  "total_wins_map_de_inferno"
+                                }
+                 },
+                 {
+                     "id":  "de_nuke",
+                     "name":  "Nuke",
+                     "category":  "爆破地图",
+                     "wins":  552,
+                     "rounds":  1041,
+                     "winRate":  0.530259,
+                     "matchesWon":  null,
+                     "matchesPlayed":  null,
+                     "stats":  {
+                                   "total_rounds_map_de_nuke":  1041,
+                                   "total_wins_map_de_nuke":  552
+                               },
+                     "labels":  {
+                                    "total_rounds_map_de_nuke":  "total_rounds_map_de_nuke",
+                                    "total_wins_map_de_nuke":  "total_wins_map_de_nuke"
+                                }
+                 },
+                 {
+                     "id":  "de_train",
+                     "name":  "Train",
+                     "category":  "爆破地图",
+                     "wins":  77,
+                     "rounds":  122,
+                     "winRate":  0.631148,
+                     "matchesWon":  4,
+                     "matchesPlayed":  null,
+                     "stats":  {
+                                   "total_matches_won_train":  4,
+                                   "total_rounds_map_de_train":  122,
+                                   "total_wins_map_de_train":  77
+                               },
+                     "labels":  {
+                                    "total_matches_won_train":  "total matches won on train",
+                                    "total_rounds_map_de_train":  "total_rounds_map_de_train",
+                                    "total_wins_map_de_train":  "total_wins_map_de_train"
+                                }
+                 },
+                 {
+                     "id":  "de_vertigo",
+                     "name":  "Vertigo",
+                     "category":  "爆破地图",
+                     "wins":  232,
+                     "rounds":  503,
+                     "winRate":  0.461233,
+                     "matchesWon":  null,
+                     "matchesPlayed":  null,
+                     "stats":  {
+                                   "total_rounds_map_de_vertigo":  503,
+                                   "total_wins_map_de_vertigo":  232
+                               },
+                     "labels":  {
+                                    "total_rounds_map_de_vertigo":  "total rounds won in vertigo",
+                                    "total_wins_map_de_vertigo":  "total_wins_map_de_vertigo"
+                                }
+                 }
+             ],
+    "matches":  [
+
+                ],
+    "schema":  {
+                   "total_wins_map_cs_italy":  "total_wins_map_cs_italy",
+                   "GI.lesson.csgo_instr_notify_amd_knife":  "GI.lesson.csgo_instr_notify_amd_knife",
+                   "total_kills_bizon":  "total_kills_bizon",
+                   "total_planted_bombs":  "Bombs Planted",
+                   "total_kills_m3":  "total kills m3",
+                   "total_shots_mp7":  "total_shots_mp7",
+                   "total_kills_sg556":  "total_kills_sg556",
+                   "GI.lesson.csgo_instr_explain_zoom":  "GI.lesson.csgo_instr_explain_zoom",
+                   "total_kills_mag7":  "total_kills_mag7",
+                   "total_shots_galilar":  "total shots galil AR",
+                   "total_kills_scar17":  "total_kills_scar17",
+                   "total_kills_knife_fight":  "Knife Fights Won",
+                   "total_hits_nova":  "total_hits_nova",
+                   "total_shots_awp":  "total_shots_awp",
+                   "total_kills_ump45":  "KM UMP45 Kills",
+                   "total_wins_map_de_balkan":  "wins on map balkan",
+                   "GI.lesson.Csgo_cycle_weapons_kb":  "GI.lesson.Csgo_cycle_weapons_kb",
+                   "total_kills_nova":  "total_kills_nova",
+                   "total_kills_sg552":  "total kills sg552",
+                   "total_TR_planted_bombs":  "Demolition bombs placed",
+                   "total_shots_fiveseven":  "total_shots_fiveseven",
+                   "total_kills_sg550":  "total kills sg550",
+                   "total_hits_ump45":  "total_hits_ump45",
+                   "total_shots_mag7":  "total_shots_mag7",
+                   "total_select_matches_won":  "total_select_matches_won",
+                   "GI.lesson.csgo_instr_explain_prevent_bomb_pickup":  "GI.lesson.csgo_instr_explain_prevent_bomb_pickup",
+                   "last_match_dominations":  "last_match_dominations",
+                   "total_TR_defused_bombs":  "Demolition bombs defused",
+                   "total_rounds_map_de_shorttrain":  "total rounds won in short-train",
+                   "total_wins_map_ar_monastery":  "wins on map monastery",
+                   "total_rounds_map_de_prodigy":  "total_rounds_map_de_prodigy",
+                   "last_match_ct_wins":  "last_match_ct_wins",
+                   "total_shots_nova":  "total_shots_nova",
+                   "total_shots_sg552":  "total shots sg552",
+                   "total_shots_scar20":  "total_shots_scar20",
+                   "total_kills_fiveseven":  "ES Five-Seven Kills",
+                   "GI.lesson.bomb_sites_A":  "GI.lesson.bomb_sites_A",
+                   "total_matches_won_shorttrain":  "matches won on shorttrain",
+                   "total_wins_map_de_stmarc":  "matches won on map stmarc",
+                   "total_shots_glock":  "total_shots_glock",
+                   "total_kills_famas":  "Clarion 5.56 Kills",
+                   "total_hits_mp5navy":  "total hits mp5 navy",
+                   "total_hits_fiveseven":  "total_hits_fiveseven",
+                   "total_hits_awp":  "total_hits_awp",
+                   "steam_stat_matchwinscomp":  "Official Competitive Wins",
+                   "total_wins_map_de_shorttrain":  "total matches won on short-train",
+                   "total_shots_p250":  "total_shots_p250",
+                   "total_wins_map_ar_shoots":  "matches won on shoots",
+                   "total_rounds_played":  "Rounds Played",
+                   "total_shots_mp9":  "total_shots_mp9",
+                   "total_kills_p228":  "total kills p228",
+                   "total_money_earned":  "Money Earned",
+                   "total_kills_molotov":  "total kills molotov",
+                   "total_shots_m3":  "total shots m3",
+                   "total_hits_sawedoff":  "total_hits_sawedoff",
+                   "total_rounds_map_de_inferno":  "total_rounds_map_de_inferno",
+                   "total_rounds_map_de_train":  "total_rounds_map_de_train",
+                   "total_rounds_map_de_depot":  "total rounds won in depot",
+                   "last_match_favweapon_id":  "last_match_favweapon_id",
+                   "total_matches_won_depot":  "matches won on depot",
+                   "total_kills":  "Enemy players killed",
+                   "total_wins_map_de_prodigy":  "total_wins_map_de_prodigy",
+                   "last_match_money_spent":  "last_match_money_spent",
+                   "last_match_favweapon_hits":  "last_match_favweapon_hits",
+                   "last_match_rounds":  "last_match_rounds",
+                   "total_shots_scar17":  "total_shots_scar17",
+                   "total_wins_map_de_aztec":  "total_wins_map_de_aztec",
+                   "total_kills_scout":  "total kills scout",
+                   "total_kills_m4a1":  "total kills m4a4",
+                   "total_decal_sprays":  "Decal Sprays",
+                   "total_matches_won_train":  "total matches won on train",
+                   "total_hits_xm1014":  "total_hits_xm1014",
+                   "total_kills_hkp2000":  "total_kills_hkp2000",
+                   "last_match_favweapon_shots":  "last_match_favweapon_shots",
+                   "total_contribution_score":  "contribution score",
+                   "total_wins_map_de_vertigo":  "total_wins_map_de_vertigo",
+                   "total_wins_map_de_inferno":  "total_wins_map_de_inferno",
+                   "total_kills_m249":  "M249 Kills",
+                   "last_match_damage":  "last_match_damage",
+                   "total_wins_map_de_dust2":  "total_wins_map_de_dust2",
+                   "total_shots_m249":  "total_shots_m249",
+                   "total_damage_done":  "Damage Done to Enemies",
+                   "total_rounds_map_ar_monastery":  "total rounds for monastery",
+                   "total_rounds_map_de_dust2":  "total_rounds_map_de_dust2",
+                   "total_shots_m4a1":  "total shots m4a4",
+                   "total_shots_hit":  "Shots Hit",
+                   "total_shots_tec9":  "total_shots_tec9",
+                   "total_kills_mac10":  "Ingram Mac-10 Kills",
+                   "total_matches_won_embassy":  "matches won on embassy",
+                   "total_hits_scout":  "total hits scout",
+                   "total_rounds_map_de_lake":  "total rounds won in lake",
+                   "last_match_contribution_score":  "last_match_contribution_score",
+                   "total_shots_scout":  "total shots scout",
+                   "total_hits_mag7":  "total_hits_mag7",
+                   "GI.lesson.csgo_instr_explain_defend_bomb":  "GI.lesson.csgo_instr_explain_defend_bomb",
+                   "total_wins_map_de_dust":  "total_wins_map_de_dust",
+                   "total_deaths":  "Player Deaths",
+                   "total_shots_p90":  "total_shots_p90",
+                   "total_kills_decoy":  "total kills decoy",
+                   "total_kills_glock":  "9x19 Sidearm Kills",
+                   "total_kills_galil":  "IDF Defender Kills",
+                   "total_wins_map_de_cbble":  "total_wins_map_de_cbble",
+                   "total_revenges":  "Revenges",
+                   "total_rounds_map_cs_militia":  "total_rounds_map_cs_militia",
+                   "last_match_gg_contribution_score":  "last_match_gg_contribution_score",
+                   "total_wins_map_de_piranesi":  "total_wins_map_de_piranesi",
+                   "total_kills_sawedoff":  "total_kills_sawedoff",
+                   "total_hits_g3sg1":  "total_hits_g3sg1",
+                   "GI.lesson.csgo_switch_to_items_gp":  "GI.lesson.csgo_switch_to_items_gp",
+                   "total_rescued_hostages":  "Hostages Rescued",
+                   "GI.lesson.Csgo_cycle_weapons_gp":  "GI.lesson.Csgo_cycle_weapons_gp",
+                   "total_matches_won_bank":  "total_matches_won_bank",
+                   "GI.lesson.csgo_hostage_lead_to_hrz":  "GI.lesson.csgo_hostage_lead_to_hrz",
+                   "total_hits_elite":  "total_hits_elite",
+                   "total_shots_fired":  "Shots Fired",
+                   "total_hits_m3":  "total hits m3",
+                   "total_wins_map_de_house":  "wins on map house",
+                   "total_matches_drawn":  "total_matches_drawn",
+                   "total_hits_m249":  "total_hits_m249",
+                   "total_broken_windows":  "Windows Broken",
+                   "total_gg_matches_won":  "total_gg_matches_won",
+                   "total_rounds_map_cs_italy":  "total_rounds_map_cs_italy",
+                   "total_hits_galilar":  "total hits galil AR",
+                   "total_matches_won_sugarcane":  "matches won on sugarcane",
+                   "last_match_max_players":  "last_match_max_players",
+                   "total_hits_mp7":  "total_hits_mp7",
+                   "GI.lesson.csgo_instr_notify_level":  "GI.lesson.csgo_instr_notify_level",
+                   "total_rounds_map_de_sugarcane":  "total rounds won on sugarcane",
+                   "total_rounds_map_de_embassy":  "total rounds won on embassy",
+                   "total_shots_tmp":  "total shots tmp",
+                   "total_wins_map_cs_militia":  "total_wins_map_cs_militia",
+                   "last_match_deaths":  "last_match_deaths",
+                   "total_shots_negev":  "total_shots_negev",
+                   "total_shots_ump45":  "total_shots_ump45",
+                   "total_rounds_map_de_balkan":  "rounds played on balkan",
+                   "total_matches_won_safehouse":  "matches won on safehouse",
+                   "total_wins_map_de_shacks":  "wins on map shacks",
+                   "total_hits_deagle":  "total_hits_deagle",
+                   "total_shots_g3sg1":  "total_shots_g3sg1",
+                   "total_mvps":  "total_mvps",
+                   "steam_stat_survivedz":  "Danger Zone Survivals",
+                   "total_trbomb_matches_won":  "Demolition matches won",
+                   "GI.lesson.csgo_hostage_follow_stop":  "GI.lesson.csgo_hostage_follow_stop",
+                   "total_rounds_map_de_vertigo":  "total rounds won in vertigo",
+                   "total_hits_scar17":  "total_hits_scar17",
+                   "total_shots_galil":  "total_shots_galil",
+                   "total_kills_knife":  "Knife Kills",
+                   "GI.lesson.csgo_instr_notify_level_dem":  "GI.lesson.csgo_instr_notify_level_dem",
+                   "total_hits_famas":  "total_hits_famas",
+                   "total_kills_galilar":  "total kills galil AR",
+                   "total_hits_tec9":  "total_hits_tec9",
+                   "total_shots_mp5navy":  "total shots mp5 navy",
+                   "total_hits_sg550":  "total hits sg550",
+                   "total_shots_usp":  "total shots usp",
+                   "total_shots_ssg08":  "total_shots_ssg08",
+                   "total_wins_map_cs_office":  "total_wins_map_cs_office",
+                   "total_rounds_map_de_aztec":  "total_rounds_map_de_aztec",
+                   "GI.lesson.csgo_prevent_hostage_rescue":  "GI.lesson.csgo_prevent_hostage_rescue",
+                   "total_kills_mp9":  "total_kills_mp9",
+                   "GI.lesson.csgo_instr_explain_pickup_bomb":  "GI.lesson.csgo_instr_explain_pickup_bomb",
+                   "total_hits_ssg08":  "total_hits_ssg08",
+                   "total_time_played":  "Time Played",
+                   "total_wins_map_de_mill":  "wins on map mill",
+                   "GI.lesson.version_number":  "GI.lesson.version_number",
+                   "total_kills_aug":  "Bullpup Kills",
+                   "GI.lesson.csgo_instr_explain_buymenu":  "GI.lesson.csgo_instr_explain_buymenu",
+                   "total_rounds_map_cs_assault":  "total_rounds_map_cs_assault",
+                   "total_shots_ak47":  "total_shots_ak47",
+                   "total_kills_tec9":  "total_kills_tec9",
+                   "total_shots_hkp2000":  "total_shots_hkp2000",
+                   "total_matches_won_baggage":  "matches won on baggage",
+                   "total_progressive_matches_won":  "Arms Race matches won",
+                   "total_kills_p250":  "total_kills_p250",
+                   "total_kills_scar20":  "total_kills_scar20",
+                   "total_rounds_map_ar_shoots":  "total rounds won in shoots",
+                   "steam_stat_xpearnedgames":  "Matches with Earned XP",
+                   "total_kills_xm1014":  "XM1014 Kills",
+                   "total_wins_map_de_safehouse":  "matches won on map safehouse",
+                   "GI.lesson.Csgo_instr_explain_defuse_kit_carrier":  "GI.lesson.Csgo_instr_explain_defuse_kit_carrier",
+                   "GI.lesson.tr_explain_plant_bomb":  "GI.lesson.tr_explain_plant_bomb",
+                   "total_kills_ssg08":  "total_kills_ssg08",
+                   "total_shots_elite":  "total_shots_elite",
+                   "total_shots_deagle":  "total_shots_deagle",
+                   "total_weapons_donated":  "Weapons Donated",
+                   "total_hits_p250":  "total_hits_p250",
+                   "total_gun_game_contribution_score":  "Arsenal Mode contribution score",
+                   "total_shots_p228":  "total shots p228",
+                   "total_hits_galil":  "total_hits_galil",
+                   "total_gun_game_rounds_won":  "total rounds of Arsenal Mode won",
+                   "total_matches_won_shoots":  "matches won on shoots",
+                   "total_wins_map_cs_assault":  "total_wins_map_cs_assault",
+                   "total_wins_map_de_lake":  "matches won on map lake",
+                   "total_wins":  "Rounds Won",
+                   "total_shots_sg550":  "total shots sg550",
+                   "total_shots_famas":  "total_shots_famas",
+                   "total_shots_aug":  "total_shots_aug",
+                   "total_matches_won_lake":  "matches won on lake",
+                   "GI.lesson.csgo_instr_explain_bomb_carrier":  "GI.lesson.csgo_instr_explain_bomb_carrier",
+                   "GI.lesson.csgo_instr_explain_follow_bomber":  "GI.lesson.csgo_instr_explain_follow_bomber",
+                   "total_wins_pistolround":  "Pistol Rounds Won",
+                   "total_kills_usp":  "total kills USP",
+                   "total_matches_won":  "total_matches_won",
+                   "total_shots_bizon":  "total_shots_bizon",
+                   "total_kills_deagle":  "Desert Eagle .50c Kills",
+                   "GI.lesson.csgo_instr_explain_plant_bomb":  "GI.lesson.csgo_instr_explain_plant_bomb",
+                   "total_gg_matches_played":  "Arsenal Mode matches played",
+                   "GI.lesson.Csgo_cycle_items_gp":  "GI.lesson.Csgo_cycle_items_gp",
+                   "total_wins_map_de_nuke":  "total_wins_map_de_nuke",
+                   "total_kills_g3sg1":  "D3/AU-1 Kills",
+                   "last_match_kills":  "last_match_kills",
+                   "total_matches_played":  "total matches played",
+                   "last_match_wins":  "last_match_wins",
+                   "GI.lesson.csgo_instr_rescue_zone":  "GI.lesson.csgo_instr_rescue_zone",
+                   "total_gun_game_rounds_played":  "total rounds of Arsenal Mode played",
+                   "total_shots_sg556":  "total_shots_sg556",
+                   "total_hits_mp9":  "total_hits_mp9",
+                   "total_kills_against_zoomed_sniper":  "Zoomed Snipers Killed",
+                   "GI.lesson.bomb_sites_B":  "GI.lesson.bomb_sites_B",
+                   "last_match_revenges":  "last_match_revenges",
+                   "total_hits_negev":  "total_hits_negev",
+                   "total_wins_map_de_bank":  "wins on map bank",
+                   "total_rounds_map_de_safehouse":  "total rounds won in safehouse",
+                   "total_hits_hkp2000":  "total_hits_hkp2000",
+                   "total_dominations":  "Dominations",
+                   "total_rounds_map_ar_baggage":  "rounds played on map baggage",
+                   "total_hits_sg556":  "total_hits_sg556",
+                   "total_shots_xm1014":  "total_shots_xm1014",
+                   "last_match_t_wins":  "last_match_t_wins",
+                   "total_kills_enemy_blinded":  "Blind Ememies Killed",
+                   "total_hits_m4a1":  "total hits m4a4",
+                   "total_kills_enemy_weapon":  "Kills with enemy weapons",
+                   "GI.lesson.csgo_instr_explain_inspect":  "GI.lesson.csgo_instr_explain_inspect",
+                   "total_shots_mac10":  "total_shots_mac10",
+                   "total_hits_p228":  "total hits p228",
+                   "total_kills_mp5navy":  "total kills mp5 navy",
+                   "GI.lesson.csgo_instr_explain_buyarmor":  "GI.lesson.csgo_instr_explain_buyarmor",
+                   "total_hits_sg552":  "total hits sg552",
+                   "total_defused_bombs":  "Bombs Defused",
+                   "total_kills_hegrenade":  "HE Grenade Kills",
+                   "GI.lesson.serverside_hint":  "GI.lesson.serverside_hint",
+                   "total_rounds_map_de_dust":  "total_rounds_map_de_dust",
+                   "total_matches_won_stmarc":  "matches won on stmarc",
+                   "total_rounds_map_de_piranesi":  "total_rounds_map_de_piranesi",
+                   "total_rounds_map_de_nuke":  "total_rounds_map_de_nuke",
+                   "GI.lesson.defuse_planted_bomb":  "GI.lesson.defuse_planted_bomb",
+                   "total_rounds_map_de_cbble":  "total_rounds_map_de_cbble",
+                   "total_hits_p90":  "total_hits_p90",
+                   "total_wins_map_de_alleyway":  "wins on map alleyway",
+                   "total_rounds_map_de_bank":  "total_rounds_map_de_bank",
+                   "total_hits_ak47":  "total_hits_ak47",
+                   "GI.lesson.csgo_instr_explain_silencer":  "GI.lesson.csgo_instr_explain_silencer",
+                   "total_hits_glock":  "total_hits_glock",
+                   "total_hits_bizon":  "total_hits_bizon",
+                   "total_wins_map_de_embassy":  "total matches won on embassy",
+                   "GI.lesson.csgo_instr_explain_reload":  "GI.lesson.csgo_instr_explain_reload",
+                   "GI.lesson.csgo_instr_notify_earned_nade":  "GI.lesson.csgo_instr_notify_earned_nade",
+                   "GI.lesson.csgo_instr_notify_amar_knife":  "GI.lesson.csgo_instr_notify_amar_knife",
+                   "GI.lesson.csgo_use_hostage_follow":  "GI.lesson.csgo_use_hostage_follow",
+                   "last_match_favweapon_kills":  "last_match_favweapon_kills",
+                   "total_hits_tmp":  "total hits tmp",
+                   "total_hits_mac10":  "total_hits_mac10",
+                   "total_kills_headshot":  "Headshots",
+                   "total_kills_mp7":  "total_kills_mp7",
+                   "total_rounds_map_cs_office":  "total_rounds_map_cs_office",
+                   "total_hits_taser":  "total hits taser",
+                   "total_kills_p90":  "ES C90 Kills",
+                   "total_domination_overkills":  "Domination Overkills",
+                   "total_hits_usp":  "total hits usp",
+                   "last_match_mvps":  "last_match_mvps",
+                   "total_kills_taser":  "total kills taser",
+                   "total_shots_taser":  "total shot taser",
+                   "total_kills_elite":  ".40 Dual Elites Kills",
+                   "total_shots_sawedoff":  "total_shots_sawedoff",
+                   "total_wins_map_de_sugarcane":  "matches won on map sugarcane",
+                   "GI.lesson.find_planted_bomb":  "GI.lesson.find_planted_bomb",
+                   "total_kills_negev":  "total_kills_negev",
+                   "total_kills_awp":  "Magnum Sniper Rifle Kills",
+                   "total_wins_map_ar_baggage":  "matches won on baggage",
+                   "total_hits_scar20":  "total_hits_scar20",
+                   "total_rounds_map_de_stmarc":  "total rounds won on stmarc",
+                   "total_kills_tmp":  "total kills tmp",
+                   "total_hits_aug":  "total_hits_aug",
+                   "total_wins_map_de_depot":  "wins on map depot",
+                   "total_kills_ak47":  "CV-47 Kills",
+                   "total_wins_map_de_tides":  "total_wins_map_de_tides",
+                   "total_wins_map_de_train":  "total_wins_map_de_train"
+               },
     "official":  {
                      "available":  true,
                      "error":  "",
-                     "kills":  20358,
-                     "deaths":  19939,
-                     "kd":  1.021,
-                     "assists":  0,
-                     "headshots":  5193,
-                     "headshotRate":  0.255,
-                     "wins":  10167,
-                     "rounds":  20141,
-                     "winRate":  0.505,
-                     "mvp":  2248,
-                     "damage":  3020822,
-                     "shotsFired":  418146,
-                     "shotsHit":  27,
-                     "accuracy":  0,
-                     "bombsPlanted":  1843,
-                     "bombsDefused":  293,
-                     "moneyEarned":  53610100,
-                     "timePlayedSeconds":  1509377,
-                     "totalMinutes":  0,
-                     "last2WeeksMinutes":  0,
                      "rawStats":  {
                                       "total_matches_played":  1184,
                                       "total_kills_bizon":  713,
@@ -200,7 +1253,8 @@
                                       "total_hits_aug":  1396,
                                       "total_kills_ak47":  2819,
                                       "total_wins_map_de_train":  77
-                                  }
+                                  },
+                     "schemaAvailable":  true
                  },
     "heybox":  {
                    "available":  true,
@@ -212,8 +1266,22 @@
                    "level":  "15",
                    "steamId64":  "76561199392052203",
                    "steamVerified":  true,
-                   "gameLibraryCs2":  null
+                   "gameLibraryCs2":  null,
+                   "matches":  [
+
+                               ]
                },
+    "dataQuality":  {
+                        "missingCoreStats":  [
+                                                 "total_assists"
+                                             ],
+                        "note":  "Missing Steam stat keys are stored as null and displayed as —, never coerced to 0. Accuracy falls back to the sum of weapon hits/shots when aggregate keys are missing."
+                    },
+    "matchSource":  {
+                        "count":  0,
+                        "steamWebApi":  "Steam Web API exposes aggregate CS2 stats, not a normal per-match history feed.",
+                        "heybox":  "No verified Heybox match-history endpoint returned rows in this build."
+                    },
     "sources":  {
                     "steam":  {
                                   "identity":  "SteamID64",
@@ -226,6 +1294,11 @@
                                    "status":  "connected",
                                    "stats":  "account_bound",
                                    "note":  "Heybox account connected and its bound SteamID64 matches the bound Steam identity."
-                               }
+                               },
+                    "playnite":  {
+                                     "status":  "connected",
+                                     "playtimeSeconds":  3554160,
+                                     "note":  "CS2 total playtime displayed on the record page uses the Playnite exported total."
+                                 }
                 }
 }
