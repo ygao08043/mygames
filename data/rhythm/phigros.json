@@ -1,9 +1,9 @@
 {
     "version":  "1.11.2",
-    "generatedAt":  "2026-08-21T23:43:40.2555095+08:00",
+    "generatedAt":  "2026-08-22T10:35:46.8043933+08:00",
     "source":  {
                    "type":  "Phigros TapTap cloud save",
-                   "saveUpdatedAt":  "2026-07-27T15:54:41.996Z",
+                   "saveUpdatedAt":  "2026-08-21T15:54:53.669Z",
                    "metadata":  "SonolusHaniwa/phigros-decrypted-data metadata.json",
                    "metadataSongs":  312,
                    "missingMetadata":  0
@@ -15,8 +15,8 @@
                     "cloudSummaryRks":  15.09903622,
                     "rksMode":  "calculated",
                     "phiCount":  6,
-                    "fcCount":  19,
-                    "playedCharts":  211,
+                    "fcCount":  20,
+                    "playedCharts":  212,
                     "avatar":  "Introduction",
                     "challengeCode":  349
                 },
@@ -1538,6 +1538,20 @@
                        "charter":  "RWND -p 16493:62786:92551"
                    },
                    {
+                       "songId":  "ClassMemories.AntistarfeatCtymax.0",
+                       "title":  "Class Memories",
+                       "composer":  "Antistar feat. Ctymax",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  13.8,
+                       "score":  999472,
+                       "accuracy":  99.941383,
+                       "rks":  13.76407188,
+                       "status":  "FC",
+                       "isFc":  true,
+                       "charter":  "JKy"
+                   },
+                   {
                        "songId":  "Reimei.影虎.0",
                        "title":  "Reimei",
                        "composer":  "影虎。",
@@ -1620,20 +1634,6 @@
                        "status":  "A",
                        "isFc":  false,
                        "charter":  "Gausbon vs. 阿爽"
-                   },
-                   {
-                       "songId":  "ClassMemories.AntistarfeatCtymax.0",
-                       "title":  "Class Memories",
-                       "composer":  "Antistar feat. Ctymax",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  13.8,
-                       "score":  998153,
-                       "accuracy":  99.794807,
-                       "rks":  13.67443549,
-                       "status":  "FC",
-                       "isFc":  true,
-                       "charter":  "JKy"
                    },
                    {
                        "songId":  "Adastraperaspera.RabbitHouse.0",
@@ -1746,6 +1746,20 @@
                        "status":  "A",
                        "isFc":  false,
                        "charter":  "Salt \u0026 Barbarianerman"
+                   },
+                   {
+                       "songId":  "Dlyrotz.Likey.0",
+                       "title":  "Dlyrotz",
+                       "composer":  "Likey",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  13.7,
+                       "score":  998382,
+                       "accuracy":  99.820206,
+                       "rks":  13.59074394,
+                       "status":  "FC",
+                       "isFc":  true,
+                       "charter":  "XMT小咩兔 vs. Barbarianerman"
                    },
                    {
                        "songId":  "DerRichter.Ωμεγα.0",
@@ -3412,8 +3426,8 @@
                                          "phi":  0
                                      },
                               "IN":  {
-                                         "cleared":  173,
-                                         "fullCombo":  15,
+                                         "cleared":  174,
+                                         "fullCombo":  16,
                                          "phi":  6
                                      },
                               "AT":  {
@@ -3453,6 +3467,11 @@
                       "date":  "2026-08-21",
                       "rks":  15.09903672,
                       "saveUpdatedAt":  "2026-07-27T15:54:41.996Z"
+                  },
+                  {
+                      "date":  "2026-08-22",
+                      "rks":  15.09903672,
+                      "saveUpdatedAt":  "2026-08-21T15:54:53.669Z"
                   }
               ]
 }
