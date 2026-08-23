@@ -1,6 +1,6 @@
 {
     "build":  "1.16.6",
-    "updatedAt":  "2026-08-23T18:00:25.4938294+08:00",
+    "updatedAt":  "2026-08-23T18:16:53.3931365+08:00",
     "status":  "ok",
     "binding":  {
                     "bound":  true,
@@ -103,6 +103,21 @@
                         "survivalRounds":  1
                     },
                     {
+                        "id":  "dash-7ab9f775f51a377c",
+                        "source":  "Gaggle Game Stats",
+                        "roleName":  "隐形",
+                        "roleId":  "55",
+                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Invisibility.png",
+                        "mode":  "轮抽",
+                        "map":  "地下室",
+                        "modeMap":  "轮抽 在 地下室",
+                        "result":  "失败",
+                        "won":  false,
+                        "date":  "03/08/2026",
+                        "playerCount":  13,
+                        "survivalRounds":  3
+                    },
+                    {
                         "id":  "dash-0ecba28ea70b3297",
                         "source":  "Gaggle Game Stats",
                         "roleName":  "爆炸王",
@@ -130,21 +145,6 @@
                         "won":  false,
                         "date":  "03/08/2026",
                         "playerCount":  14,
-                        "survivalRounds":  3
-                    },
-                    {
-                        "id":  "dash-7ab9f775f51a377c",
-                        "source":  "Gaggle Game Stats",
-                        "roleName":  "隐形",
-                        "roleId":  "55",
-                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Invisibility.png",
-                        "mode":  "轮抽",
-                        "map":  "地下室",
-                        "modeMap":  "轮抽 在 地下室",
-                        "result":  "失败",
-                        "won":  false,
-                        "date":  "03/08/2026",
-                        "playerCount":  13,
                         "survivalRounds":  3
                     },
                     {

@@ -1,203 +1,434 @@
 {
-    "build":  "1.16.7",
-    "updatedAt":  "2026-08-23T18:00:26.6329521+08:00",
+    "build":  "1.16.8",
+    "updatedAt":  "2026-08-23T18:16:54.9929676+08:00",
     "status":  "ok",
     "lastError":  "",
     "binding":  {
                     "bound":  true,
                     "method":  "PUBG Developer API",
                     "platform":  "steam",
-                    "lifetimeOnly":  true
+                    "weaponMasteryOnly":  true
                 },
     "profile":  {
                     "name":  "PIANOYMKF",
                     "accountId":  "account.635b00c0f05d46138d6b6174dffcf5fd"
                 },
-    "playniteSeconds":  1291260,
-    "lifetime":  {
-                     "scope":  "Survival Title lifetime",
-                     "summary":  {
-                                     "roundsPlayed":  0,
-                                     "wins":  0,
-                                     "losses":  0,
-                                     "top10s":  0,
-                                     "kills":  0,
-                                     "assists":  0,
-                                     "headshotKills":  0,
-                                     "damageDealt":  0,
-                                     "longestKill":  0,
-                                     "roundMostKills":  0,
-                                     "timeSurvived":  0,
-                                     "walkDistance":  0,
-                                     "rideDistance":  0,
-                                     "swimDistance":  0,
-                                     "revives":  0,
-                                     "heals":  0,
-                                     "boosts":  0,
-                                     "dBNOs":  0,
-                                     "roadKills":  0,
-                                     "vehicleDestroys":  0,
-                                     "weaponsAcquired":  0,
-                                     "suicides":  0,
-                                     "teamKills":  0
-                                 },
-                     "modes":  [
-                                   {
-                                       "mode":  "solo",
-                                       "roundsPlayed":  0,
-                                       "wins":  0,
-                                       "losses":  0,
-                                       "top10s":  0,
-                                       "kills":  0,
-                                       "assists":  0,
-                                       "headshotKills":  0,
-                                       "damageDealt":  0,
-                                       "longestKill":  0,
-                                       "roundMostKills":  0,
-                                       "timeSurvived":  0,
-                                       "walkDistance":  0,
-                                       "rideDistance":  0,
-                                       "swimDistance":  0,
-                                       "revives":  0,
-                                       "heals":  0,
-                                       "boosts":  0,
-                                       "dBNOs":  0,
-                                       "roadKills":  0,
-                                       "vehicleDestroys":  0,
-                                       "weaponsAcquired":  0,
-                                       "suicides":  0,
-                                       "teamKills":  0
-                                   },
-                                   {
-                                       "mode":  "solo-fpp",
-                                       "roundsPlayed":  0,
-                                       "wins":  0,
-                                       "losses":  0,
-                                       "top10s":  0,
-                                       "kills":  0,
-                                       "assists":  0,
-                                       "headshotKills":  0,
-                                       "damageDealt":  0,
-                                       "longestKill":  0,
-                                       "roundMostKills":  0,
-                                       "timeSurvived":  0,
-                                       "walkDistance":  0,
-                                       "rideDistance":  0,
-                                       "swimDistance":  0,
-                                       "revives":  0,
-                                       "heals":  0,
-                                       "boosts":  0,
-                                       "dBNOs":  0,
-                                       "roadKills":  0,
-                                       "vehicleDestroys":  0,
-                                       "weaponsAcquired":  0,
-                                       "suicides":  0,
-                                       "teamKills":  0
-                                   },
-                                   {
-                                       "mode":  "duo",
-                                       "roundsPlayed":  0,
-                                       "wins":  0,
-                                       "losses":  0,
-                                       "top10s":  0,
-                                       "kills":  0,
-                                       "assists":  0,
-                                       "headshotKills":  0,
-                                       "damageDealt":  0,
-                                       "longestKill":  0,
-                                       "roundMostKills":  0,
-                                       "timeSurvived":  0,
-                                       "walkDistance":  0,
-                                       "rideDistance":  0,
-                                       "swimDistance":  0,
-                                       "revives":  0,
-                                       "heals":  0,
-                                       "boosts":  0,
-                                       "dBNOs":  0,
-                                       "roadKills":  0,
-                                       "vehicleDestroys":  0,
-                                       "weaponsAcquired":  0,
-                                       "suicides":  0,
-                                       "teamKills":  0
-                                   },
-                                   {
-                                       "mode":  "duo-fpp",
-                                       "roundsPlayed":  0,
-                                       "wins":  0,
-                                       "losses":  0,
-                                       "top10s":  0,
-                                       "kills":  0,
-                                       "assists":  0,
-                                       "headshotKills":  0,
-                                       "damageDealt":  0,
-                                       "longestKill":  0,
-                                       "roundMostKills":  0,
-                                       "timeSurvived":  0,
-                                       "walkDistance":  0,
-                                       "rideDistance":  0,
-                                       "swimDistance":  0,
-                                       "revives":  0,
-                                       "heals":  0,
-                                       "boosts":  0,
-                                       "dBNOs":  0,
-                                       "roadKills":  0,
-                                       "vehicleDestroys":  0,
-                                       "weaponsAcquired":  0,
-                                       "suicides":  0,
-                                       "teamKills":  0
-                                   },
-                                   {
-                                       "mode":  "squad",
-                                       "roundsPlayed":  0,
-                                       "wins":  0,
-                                       "losses":  0,
-                                       "top10s":  0,
-                                       "kills":  0,
-                                       "assists":  0,
-                                       "headshotKills":  0,
-                                       "damageDealt":  0,
-                                       "longestKill":  0,
-                                       "roundMostKills":  0,
-                                       "timeSurvived":  0,
-                                       "walkDistance":  0,
-                                       "rideDistance":  0,
-                                       "swimDistance":  0,
-                                       "revives":  0,
-                                       "heals":  0,
-                                       "boosts":  0,
-                                       "dBNOs":  0,
-                                       "roadKills":  0,
-                                       "vehicleDestroys":  0,
-                                       "weaponsAcquired":  0,
-                                       "suicides":  0,
-                                       "teamKills":  0
-                                   },
-                                   {
-                                       "mode":  "squad-fpp",
-                                       "roundsPlayed":  0,
-                                       "wins":  0,
-                                       "losses":  0,
-                                       "top10s":  0,
-                                       "kills":  0,
-                                       "assists":  0,
-                                       "headshotKills":  0,
-                                       "damageDealt":  0,
-                                       "longestKill":  0,
-                                       "roundMostKills":  0,
-                                       "timeSurvived":  0,
-                                       "walkDistance":  0,
-                                       "rideDistance":  0,
-                                       "swimDistance":  0,
-                                       "revives":  0,
-                                       "heals":  0,
-                                       "boosts":  0,
-                                       "dBNOs":  0,
-                                       "roadKills":  0,
-                                       "vehicleDestroys":  0,
-                                       "weaponsAcquired":  0,
-                                       "suicides":  0,
-                                       "teamKills":  0
-                                   }
-                               ]
-                 }
+    "weapons":  [
+                    {
+                        "id":  "Item_Weapon_ACE32_C",
+                        "name":  "ACE32",
+                        "level":  14,
+                        "kills":  17,
+                        "roundMostKills":  0,
+                        "longestKill":  160
+                    },
+                    {
+                        "id":  "Item_Weapon_AK47_C",
+                        "name":  "AKM",
+                        "level":  17,
+                        "kills":  21,
+                        "roundMostKills":  0,
+                        "longestKill":  73
+                    },
+                    {
+                        "id":  "Item_Weapon_AUG_C",
+                        "name":  "AUG",
+                        "level":  22,
+                        "kills":  32,
+                        "roundMostKills":  0,
+                        "longestKill":  124
+                    },
+                    {
+                        "id":  "Item_Weapon_AWM_C",
+                        "name":  "AWM",
+                        "level":  1,
+                        "kills":  0,
+                        "roundMostKills":  0,
+                        "longestKill":  0
+                    },
+                    {
+                        "id":  "Item_Weapon_Berreta686_C",
+                        "name":  "S686",
+                        "level":  4,
+                        "kills":  4,
+                        "roundMostKills":  0,
+                        "longestKill":  12
+                    },
+                    {
+                        "id":  "Item_Weapon_BerylM762_C",
+                        "name":  "Beryl M762",
+                        "level":  22,
+                        "kills":  39,
+                        "roundMostKills":  0,
+                        "longestKill":  162
+                    },
+                    {
+                        "id":  "Item_Weapon_BizonPP19_C",
+                        "name":  "Bizon",
+                        "level":  6,
+                        "kills":  7,
+                        "roundMostKills":  0,
+                        "longestKill":  75
+                    },
+                    {
+                        "id":  "Item_Weapon_Crossbow_C",
+                        "name":  "Crossbow",
+                        "level":  1,
+                        "kills":  0,
+                        "roundMostKills":  0,
+                        "longestKill":  0
+                    },
+                    {
+                        "id":  "Item_Weapon_DP12_C",
+                        "name":  "DBS",
+                        "level":  2,
+                        "kills":  1,
+                        "roundMostKills":  0,
+                        "longestKill":  1
+                    },
+                    {
+                        "id":  "Item_Weapon_DP28_C",
+                        "name":  "DP-28",
+                        "level":  2,
+                        "kills":  1,
+                        "roundMostKills":  0,
+                        "longestKill":  5
+                    },
+                    {
+                        "id":  "Item_Weapon_DesertEagle_C",
+                        "name":  "Deagle",
+                        "level":  1,
+                        "kills":  0,
+                        "roundMostKills":  0,
+                        "longestKill":  0
+                    },
+                    {
+                        "id":  "Item_Weapon_Dragunov_C",
+                        "name":  "Dragunov",
+                        "level":  11,
+                        "kills":  11,
+                        "roundMostKills":  0,
+                        "longestKill":  188
+                    },
+                    {
+                        "id":  "Item_Weapon_FAMASG2_C",
+                        "name":  "FAMASG2",
+                        "level":  1,
+                        "kills":  0,
+                        "roundMostKills":  0,
+                        "longestKill":  0
+                    },
+                    {
+                        "id":  "Item_Weapon_FNFal_C",
+                        "name":  "SLR",
+                        "level":  8,
+                        "kills":  6,
+                        "roundMostKills":  0,
+                        "longestKill":  191
+                    },
+                    {
+                        "id":  "Item_Weapon_G18_C",
+                        "name":  "P18C",
+                        "level":  1,
+                        "kills":  0,
+                        "roundMostKills":  0,
+                        "longestKill":  0
+                    },
+                    {
+                        "id":  "Item_Weapon_G36C_C",
+                        "name":  "G36C",
+                        "level":  9,
+                        "kills":  8,
+                        "roundMostKills":  0,
+                        "longestKill":  138
+                    },
+                    {
+                        "id":  "Item_Weapon_Groza_C",
+                        "name":  "Groza",
+                        "level":  1,
+                        "kills":  0,
+                        "roundMostKills":  0,
+                        "longestKill":  0
+                    },
+                    {
+                        "id":  "Item_Weapon_HK416_C",
+                        "name":  "M416",
+                        "level":  21,
+                        "kills":  30,
+                        "roundMostKills":  0,
+                        "longestKill":  271
+                    },
+                    {
+                        "id":  "Item_Weapon_JS9_C",
+                        "name":  "JS9",
+                        "level":  5,
+                        "kills":  4,
+                        "roundMostKills":  0,
+                        "longestKill":  41
+                    },
+                    {
+                        "id":  "Item_Weapon_K2_C",
+                        "name":  "K2",
+                        "level":  1,
+                        "kills":  0,
+                        "roundMostKills":  0,
+                        "longestKill":  0
+                    },
+                    {
+                        "id":  "Item_Weapon_Kar98k_C",
+                        "name":  "Kar98k",
+                        "level":  26,
+                        "kills":  36,
+                        "roundMostKills":  0,
+                        "longestKill":  547
+                    },
+                    {
+                        "id":  "Item_Weapon_M16A4_C",
+                        "name":  "M16A4",
+                        "level":  15,
+                        "kills":  21,
+                        "roundMostKills":  0,
+                        "longestKill":  99
+                    },
+                    {
+                        "id":  "Item_Weapon_M1911_C",
+                        "name":  "P1911",
+                        "level":  1,
+                        "kills":  0,
+                        "roundMostKills":  0,
+                        "longestKill":  0
+                    },
+                    {
+                        "id":  "Item_Weapon_M249_C",
+                        "name":  "M249",
+                        "level":  13,
+                        "kills":  8,
+                        "roundMostKills":  0,
+                        "longestKill":  158
+                    },
+                    {
+                        "id":  "Item_Weapon_M24_C",
+                        "name":  "M24",
+                        "level":  26,
+                        "kills":  33,
+                        "roundMostKills":  0,
+                        "longestKill":  336
+                    },
+                    {
+                        "id":  "Item_Weapon_M9_C",
+                        "name":  "P92",
+                        "level":  1,
+                        "kills":  0,
+                        "roundMostKills":  0,
+                        "longestKill":  0
+                    },
+                    {
+                        "id":  "Item_Weapon_MG3_C",
+                        "name":  "MG3",
+                        "level":  1,
+                        "kills":  0,
+                        "roundMostKills":  0,
+                        "longestKill":  0
+                    },
+                    {
+                        "id":  "Item_Weapon_MP5K_C",
+                        "name":  "MP5K",
+                        "level":  1,
+                        "kills":  0,
+                        "roundMostKills":  0,
+                        "longestKill":  0
+                    },
+                    {
+                        "id":  "Item_Weapon_MP9_C",
+                        "name":  "MP9",
+                        "level":  8,
+                        "kills":  5,
+                        "roundMostKills":  0,
+                        "longestKill":  39
+                    },
+                    {
+                        "id":  "Item_Weapon_Mini14_C",
+                        "name":  "Mini14",
+                        "level":  8,
+                        "kills":  4,
+                        "roundMostKills":  0,
+                        "longestKill":  52
+                    },
+                    {
+                        "id":  "Item_Weapon_Mk12_C",
+                        "name":  "Mk12",
+                        "level":  8,
+                        "kills":  4,
+                        "roundMostKills":  0,
+                        "longestKill":  178
+                    },
+                    {
+                        "id":  "Item_Weapon_Mk14_C",
+                        "name":  "Mk14",
+                        "level":  1,
+                        "kills":  0,
+                        "roundMostKills":  0,
+                        "longestKill":  0
+                    },
+                    {
+                        "id":  "Item_Weapon_Mk47Mutant_C",
+                        "name":  "Mk47 Mutant",
+                        "level":  12,
+                        "kills":  13,
+                        "roundMostKills":  0,
+                        "longestKill":  167
+                    },
+                    {
+                        "id":  "Item_Weapon_Mosin_C",
+                        "name":  "Mosin-Nagant",
+                        "level":  10,
+                        "kills":  6,
+                        "roundMostKills":  0,
+                        "longestKill":  132
+                    },
+                    {
+                        "id":  "Item_Weapon_NagantM1895_C",
+                        "name":  "R1895",
+                        "level":  1,
+                        "kills":  0,
+                        "roundMostKills":  0,
+                        "longestKill":  0
+                    },
+                    {
+                        "id":  "Item_Weapon_OriginS12_C",
+                        "name":  "O12",
+                        "level":  1,
+                        "kills":  0,
+                        "roundMostKills":  0,
+                        "longestKill":  0
+                    },
+                    {
+                        "id":  "Item_Weapon_P90_C",
+                        "name":  "P90",
+                        "level":  4,
+                        "kills":  3,
+                        "roundMostKills":  0,
+                        "longestKill":  68
+                    },
+                    {
+                        "id":  "Item_Weapon_QBU88_C",
+                        "name":  "QBU",
+                        "level":  2,
+                        "kills":  2,
+                        "roundMostKills":  0,
+                        "longestKill":  181
+                    },
+                    {
+                        "id":  "Item_Weapon_QBZ95_C",
+                        "name":  "QBZ",
+                        "level":  8,
+                        "kills":  8,
+                        "roundMostKills":  0,
+                        "longestKill":  61
+                    },
+                    {
+                        "id":  "Item_Weapon_Rhino_C",
+                        "name":  "R45",
+                        "level":  1,
+                        "kills":  0,
+                        "roundMostKills":  0,
+                        "longestKill":  0
+                    },
+                    {
+                        "id":  "Item_Weapon_SCAR-L_C",
+                        "name":  "SCAR-L",
+                        "level":  1,
+                        "kills":  0,
+                        "roundMostKills":  0,
+                        "longestKill":  0
+                    },
+                    {
+                        "id":  "Item_Weapon_SKS_C",
+                        "name":  "SKS",
+                        "level":  32,
+                        "kills":  46,
+                        "roundMostKills":  0,
+                        "longestKill":  263
+                    },
+                    {
+                        "id":  "Item_Weapon_Saiga12_C",
+                        "name":  "S12K",
+                        "level":  2,
+                        "kills":  1,
+                        "roundMostKills":  0,
+                        "longestKill":  6
+                    },
+                    {
+                        "id":  "Item_Weapon_Sawnoff_C",
+                        "name":  "Sawed-off",
+                        "level":  1,
+                        "kills":  0,
+                        "roundMostKills":  0,
+                        "longestKill":  0
+                    },
+                    {
+                        "id":  "Item_Weapon_Thompson_C",
+                        "name":  "Tommy Gun",
+                        "level":  2,
+                        "kills":  1,
+                        "roundMostKills":  0,
+                        "longestKill":  14
+                    },
+                    {
+                        "id":  "Item_Weapon_UMP_C",
+                        "name":  "UMP",
+                        "level":  11,
+                        "kills":  10,
+                        "roundMostKills":  0,
+                        "longestKill":  125
+                    },
+                    {
+                        "id":  "Item_Weapon_UZI_C",
+                        "name":  "Micro UZI",
+                        "level":  6,
+                        "kills":  4,
+                        "roundMostKills":  0,
+                        "longestKill":  15
+                    },
+                    {
+                        "id":  "Item_Weapon_VSS_C",
+                        "name":  "VSS",
+                        "level":  9,
+                        "kills":  5,
+                        "roundMostKills":  0,
+                        "longestKill":  172
+                    },
+                    {
+                        "id":  "Item_Weapon_Vector_C",
+                        "name":  "Vector",
+                        "level":  11,
+                        "kills":  9,
+                        "roundMostKills":  0,
+                        "longestKill":  39
+                    },
+                    {
+                        "id":  "Item_Weapon_Win1894_C",
+                        "name":  "Win94",
+                        "level":  5,
+                        "kills":  3,
+                        "roundMostKills":  0,
+                        "longestKill":  151
+                    },
+                    {
+                        "id":  "Item_Weapon_Winchester_C",
+                        "name":  "S1897",
+                        "level":  4,
+                        "kills":  3,
+                        "roundMostKills":  0,
+                        "longestKill":  12
+                    },
+                    {
+                        "id":  "Item_Weapon_vz61Skorpion_C",
+                        "name":  "Skorpion",
+                        "level":  3,
+                        "kills":  1,
+                        "roundMostKills":  0,
+                        "longestKill":  33
+                    }
+                ]
 }
