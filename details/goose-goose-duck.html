@@ -42,13 +42,12 @@
 <div class="tabs">
 <button class="active" data-tab="overview">总览</button>
 <button data-tab="matches">最近对局</button>
-<button data-tab="steam">Steam累计</button>
 </div>
 
 <section id="overview" class="view active">
   <div id="summaryGrid" class="grid"></div>
   <div class="section"><h2>阵营表现</h2><div id="roleGrid" class="roles"></div></div>
-  <div class="section"><h2>说明</h2><div class="card muted">本页直接读取 Gaggle 官方 Match Stats 的结构化页面数据。Gaggle 当前页面同时存在“账户概览已玩对局”和“基于最近100场对局”的统计口径，两项按官方原值分别保留，不强行合并。</div></div>
+  <div class="section"><h2>说明</h2><div class="card muted">本页直接读取 Gaggle 官方 Match Stats 的结构化页面数据；对局表现按官方“最近100场”统计口径展示。</div></div>
 </section>
 
 <section id="matches" class="view">
@@ -62,15 +61,11 @@
   <div id="matchPages" class="pages"></div>
 </section>
 
-<section id="steam" class="view">
-  <div id="steamGrid" class="grid"></div>
-  <div class="section"><div class="card muted">Steam 成就页只作为长期累计数据补充。Steam Community 暂时不可访问时不会阻断 Gaggle 官方战绩同步。</div></div>
-</section>
 
-<div class="sub" style="margin-top:22px">Build v1.16.5</div>
+<div class="sub" style="margin-top:22px">Build v1.16.6</div>
 </main>
 <script>
-const DATA='../data/goose-goose-duck.json?v=1.16.5';
+const DATA='../data/goose-goose-duck.json?v=1.16.6';
 let D=null,page=1;const PAGE=20;
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -87,27 +82,12 @@ function renderSummary(){
     card('官方胜场',fmtNum(s.officialWins)),
     card('官方胜率',fmtPct(s.officialWinRate)),
     card('等级',fmtNum(s.level)),
-    card('官方成就',s.officialAchievements||'—'),
-    card('账户概览已玩对局',fmtNum(s.accountOverviewMatches)),
-    card('已缓存最近对局',fmtNum(s.cachedRecent))
+    card('官方成就',s.officialAchievements||'—')
   ].join('');
 }
 function renderRoles(){
   const roles=Array.isArray(D.official?.roles)?D.official.roles:[];
   $('#roleGrid').innerHTML=roles.length?roles.map(r=>`<div class="roleCard"><div class="roleName">${esc(r.role||'—')}</div><div class="roleStats"><span>${esc(fmtNum(r.games))} 场</span><span>胜率 ${esc(fmtPct(r.winRate))}</span></div></div>`).join(''):'<div class="empty">暂无阵营统计。</div>';
-}
-function renderSteam(){
-  const s=D.steamLifetime||{},e=s.exact||{};
-  const at=(v,k)=>v==null?'—':(e[k]===false?'≥ ':'')+fmtNum(v);
-  $('#steamGrid').innerHTML=[
-    card('累计对局',at(s.games,'games')),
-    card('累计胜场',at(s.wins,'wins')),
-    card('完成任务',at(s.tasks,'tasks')),
-    card('鸭子击杀',at(s.duckKills,'duckKills')),
-    card('破坏次数',at(s.sabotages,'sabotages')),
-    card('使用对讲机',at(s.intercom,'intercom')),
-    card('Steam成就',s.achievementsEarned==null?'—':`${s.achievementsEarned}/${s.achievementsTotal||38}`)
-  ].join('');
 }
 function filteredMatches(){
   const all=Array.isArray(D.matches)?D.matches:[];
@@ -149,7 +129,7 @@ function render(){
   if(p.avatar)$('#avatar').src=p.avatar;else $('#avatar').style.visibility='hidden';
   $('#profileName').textContent=p.name||'鹅鸭杀战绩';
   const bp=$('#bindPill');bp.textContent=D.binding?.bound?'Gaggle 已绑定':'Gaggle 未绑定';bp.classList.toggle('ok',!!D.binding?.bound);
-  renderSummary();renderRoles();renderSteam();fillFilters();renderMatches();
+  renderSummary();renderRoles();fillFilters();renderMatches();
 }
 document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===b.dataset.tab))});
 fetch(DATA,{cache:'no-store'}).then(r=>r.json()).then(x=>{D=x;render()}).catch(e=>{$('#summaryGrid').innerHTML=`<div class="notice">鹅鸭杀数据尚未生成：${esc(e.message)}</div>`});
