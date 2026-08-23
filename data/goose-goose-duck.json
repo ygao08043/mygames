@@ -1,6 +1,6 @@
 {
     "build":  "1.16.6",
-    "updatedAt":  "2026-08-23T18:16:53.3931365+08:00",
+    "updatedAt":  "2026-08-23T18:31:45.6085209+08:00",
     "status":  "ok",
     "binding":  {
                     "bound":  true,
@@ -9,9 +9,9 @@
                 },
     "profile":  {
                     "name":  "YMKF",
-                    "avatar":  "",
+                    "avatar":  "https://avatars.steamstatic.com/777da339c1b202114ea1fa2163f546bb8c8c9167_full.jpg",
                     "steamId64":  "76561199392052203",
-                    "profileUrl":  ""
+                    "profileUrl":  "https://steamcommunity.com/profiles/76561199392052203/"
                 },
     "official":  {
                      "overview":  {
@@ -103,21 +103,6 @@
                         "survivalRounds":  1
                     },
                     {
-                        "id":  "dash-7ab9f775f51a377c",
-                        "source":  "Gaggle Game Stats",
-                        "roleName":  "隐形",
-                        "roleId":  "55",
-                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Invisibility.png",
-                        "mode":  "轮抽",
-                        "map":  "地下室",
-                        "modeMap":  "轮抽 在 地下室",
-                        "result":  "失败",
-                        "won":  false,
-                        "date":  "03/08/2026",
-                        "playerCount":  13,
-                        "survivalRounds":  3
-                    },
-                    {
                         "id":  "dash-0ecba28ea70b3297",
                         "source":  "Gaggle Game Stats",
                         "roleName":  "爆炸王",
@@ -131,6 +116,21 @@
                         "date":  "03/08/2026",
                         "playerCount":  15,
                         "survivalRounds":  2
+                    },
+                    {
+                        "id":  "dash-7ab9f775f51a377c",
+                        "source":  "Gaggle Game Stats",
+                        "roleName":  "隐形",
+                        "roleId":  "55",
+                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Invisibility.png",
+                        "mode":  "轮抽",
+                        "map":  "地下室",
+                        "modeMap":  "轮抽 在 地下室",
+                        "result":  "失败",
+                        "won":  false,
+                        "date":  "03/08/2026",
+                        "playerCount":  13,
+                        "survivalRounds":  3
                     },
                     {
                         "id":  "dash-4a5819195b1e32d4",
