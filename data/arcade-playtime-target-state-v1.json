@@ -1,6 +1,6 @@
 {
     "version":  "1.0",
-    "updatedAt":  "2026-08-23T22:19:50.5327173+08:00",
+    "updatedAt":  "2026-08-24T01:03:23.9488020+08:00",
     "games":  {
                   "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b":  {
                                                                "name":  "CHUNITHM",
@@ -10,6 +10,16 @@
                   "dc0f4891-c9fa-42ff-9dc0-27ce8d0f0d56":  {
                                                                "name":  "maimai",
                                                                "targetPlaytimeSeconds":  9900,
+                                                               "sourceDeltaSeconds":  0
+                                                           },
+                  "b730c4a7-1f2f-4ec7-aca4-f1df509d18fe":  {
+                                                               "name":  "王者荣耀",
+                                                               "targetPlaytimeSeconds":  3380400,
+                                                               "sourceDeltaSeconds":  0
+                                                           },
+                  "e9125710-44f3-4473-a14c-bde806b1ff76":  {
+                                                               "name":  "Arcaea",
+                                                               "targetPlaytimeSeconds":  1248174,
                                                                "sourceDeltaSeconds":  0
                                                            }
               }
