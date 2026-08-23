@@ -1,0 +1,181 @@
+{
+    "build":  "1.16.5",
+    "updatedAt":  "2026-08-23T13:29:16.0232765+08:00",
+    "status":  "ok",
+    "binding":  {
+                    "bound":  true,
+                    "method":  "official_gaggle_dashboard_browser",
+                    "source":  "Gaggle Game Stats"
+                },
+    "profile":  {
+                    "name":  "YMKF",
+                    "avatar":  "https://avatars.steamstatic.com/777da339c1b202114ea1fa2163f546bb8c8c9167_full.jpg",
+                    "steamId64":  "76561199392052203",
+                    "profileUrl":  "https://steamcommunity.com/profiles/76561199392052203/"
+                },
+    "official":  {
+                     "overview":  {
+                                      "已玩对局":  "4",
+                                      "等级":  "3",
+                                      "成就":  "2/21"
+                                  },
+                     "performance":  {
+                                         "label":  "所有游戏模式",
+                                         "played":  6,
+                                         "winRate":  0.16699999999999998,
+                                         "roles":  [
+                                                       {
+                                                           "role":  "鹅",
+                                                           "games":  1,
+                                                           "winRate":  0
+                                                       },
+                                                       {
+                                                           "role":  "鸭",
+                                                           "games":  4,
+                                                           "winRate":  0.25
+                                                       },
+                                                       {
+                                                           "role":  "中立",
+                                                           "games":  1,
+                                                           "winRate":  0
+                                                       }
+                                                   ]
+                                     },
+                     "roles":  [
+                                   {
+                                       "role":  "鹅",
+                                       "games":  1,
+                                       "winRate":  0
+                                   },
+                                   {
+                                       "role":  "鸭",
+                                       "games":  4,
+                                       "winRate":  0.25
+                                   },
+                                   {
+                                       "role":  "中立",
+                                       "games":  1,
+                                       "winRate":  0
+                                   }
+                               ],
+                     "recentVisible":  6
+                 },
+    "summary":  {
+                    "playniteSeconds":  39240,
+                    "officialGames":  6,
+                    "officialWins":  1,
+                    "officialWinRate":  0.16699999999999998,
+                    "level":  3,
+                    "accountOverviewMatches":  4,
+                    "officialAchievements":  "2/21",
+                    "recentVisible":  6,
+                    "cachedRecent":  6
+                },
+    "steamLifetime":  {
+                          "available":  false,
+                          "steamId64":  "76561199392052203",
+                          "achievementsEarned":  null,
+                          "achievementsTotal":  38,
+                          "games":  null,
+                          "wins":  null,
+                          "tasks":  null,
+                          "duckKills":  null,
+                          "sabotages":  null,
+                          "intercom":  null,
+                          "exact":  {
+
+                                    }
+                      },
+    "matches":  [
+                    {
+                        "id":  "dash-a8fd37946faed50c",
+                        "source":  "Gaggle Game Stats",
+                        "roleName":  "爆炸王",
+                        "roleId":  "33",
+                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Demolitionist.png",
+                        "mode":  "轮抽",
+                        "map":  "地下室",
+                        "modeMap":  "轮抽 在 地下室",
+                        "result":  "胜利",
+                        "won":  true,
+                        "date":  "03/08/2026",
+                        "playerCount":  15,
+                        "survivalRounds":  1
+                    },
+                    {
+                        "id":  "dash-0ecba28ea70b3297",
+                        "source":  "Gaggle Game Stats",
+                        "roleName":  "爆炸王",
+                        "roleId":  "33",
+                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Demolitionist.png",
+                        "mode":  "轮抽",
+                        "map":  "地下室",
+                        "modeMap":  "轮抽 在 地下室",
+                        "result":  "失败",
+                        "won":  false,
+                        "date":  "03/08/2026",
+                        "playerCount":  15,
+                        "survivalRounds":  2
+                    },
+                    {
+                        "id":  "dash-4a5819195b1e32d4",
+                        "source":  "Gaggle Game Stats",
+                        "roleName":  "肉汁",
+                        "roleId":  "4",
+                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Gravy.png",
+                        "mode":  "轮抽",
+                        "map":  "地下室",
+                        "modeMap":  "轮抽 在 地下室",
+                        "result":  "失败",
+                        "won":  false,
+                        "date":  "03/08/2026",
+                        "playerCount":  14,
+                        "survivalRounds":  3
+                    },
+                    {
+                        "id":  "dash-7ab9f775f51a377c",
+                        "source":  "Gaggle Game Stats",
+                        "roleName":  "隐形",
+                        "roleId":  "55",
+                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Invisibility.png",
+                        "mode":  "轮抽",
+                        "map":  "地下室",
+                        "modeMap":  "轮抽 在 地下室",
+                        "result":  "失败",
+                        "won":  false,
+                        "date":  "03/08/2026",
+                        "playerCount":  13,
+                        "survivalRounds":  3
+                    },
+                    {
+                        "id":  "dash-4b8c9eac8ee6fbe7",
+                        "source":  "Gaggle Game Stats",
+                        "roleName":  "呆呆鸟",
+                        "roleId":  "3",
+                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Dodo.png",
+                        "mode":  "轮抽",
+                        "map":  "地下室",
+                        "modeMap":  "轮抽 在 地下室",
+                        "result":  "失败",
+                        "won":  false,
+                        "date":  "03/08/2026",
+                        "playerCount":  14,
+                        "survivalRounds":  2
+                    },
+                    {
+                        "id":  "dash-06295e8e9333b690",
+                        "source":  "Gaggle Game Stats",
+                        "roleName":  "静语者",
+                        "roleId":  "12",
+                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Silencer.png",
+                        "mode":  "轮抽",
+                        "map":  "地下室",
+                        "modeMap":  "轮抽 在 地下室",
+                        "result":  "失败",
+                        "won":  false,
+                        "date":  "03/08/2026",
+                        "playerCount":  14,
+                        "survivalRounds":  3
+                    }
+                ]
+}

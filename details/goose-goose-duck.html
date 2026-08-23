@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Goose Goose Duck · 战绩</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1016;--panel:#121a24;--panel2:#182331;--line:#283748;--text:#edf4fa;--muted:#91a4b7;--cyan:#6dd8ff;--green:#65e69a;--yellow:#ffd978;--red:#ff8585}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#0b1118,#080c11 45%,#0a0f15);color:var(--text);font:14px/1.55 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif}
+.wrap{max-width:1180px;margin:auto;padding:22px}.back{color:var(--muted);text-decoration:none}.hero{display:flex;gap:18px;align-items:center;margin:20px 0}
+.avatar{width:78px;height:78px;border-radius:18px;object-fit:cover;background:#1d2a38;border:1px solid var(--line)}h1{font-size:30px;margin:0}.sub{color:var(--muted);margin-top:4px}
+.pill{display:inline-flex;padding:4px 9px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:12px}.pill.ok{color:var(--green);border-color:#2f7350}
+.tabs{display:flex;gap:8px;overflow-x:auto;white-space:nowrap;margin:18px 0}.tabs button,.btn,select{border:1px solid var(--line);background:#111a24;color:var(--muted);border-radius:10px;padding:9px 13px}
+.tabs button{cursor:pointer}.tabs button.active{background:#1b2b39;color:#fff;border-color:#40718a}.view{display:none}.view.active{display:block}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}.card{background:rgba(18,26,36,.92);border:1px solid var(--line);border-radius:14px;padding:14px}
+.label{color:var(--muted);font-size:12px}.value{font-size:23px;font-weight:700;margin-top:4px}.section{margin-top:18px}.section h2{font-size:18px;margin:0 0 10px}
+.notice{background:#171d24;border:1px solid #5c5034;color:#eadca9;border-radius:12px;padding:12px;margin:14px 0}.muted{color:var(--muted)}
+.roles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.roleCard{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px}
+.roleName{font-weight:700;font-size:17px}.roleStats{display:flex;justify-content:space-between;gap:10px;margin-top:8px;color:var(--muted)}
+.filters{display:flex;gap:8px;overflow-x:auto;white-space:nowrap;margin:10px 0 14px}.filters select{min-width:130px;color:var(--text);cursor:pointer}
+.matches{display:grid;gap:10px}.match{display:grid;grid-template-columns:minmax(230px,2fr) .8fr .8fr .8fr .8fr;gap:10px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.player{display:flex;align-items:center;gap:12px;min-width:0}.roleIcon{width:48px;height:48px;object-fit:contain;flex:0 0 48px}.playerMain{min-width:0}.playerMain b{display:block;font-size:16px}.playerMain span{display:block;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.result{font-weight:700}.result.win{color:var(--green)}.result.loss{color:var(--red)}.metric .label{display:block}.metric strong{font-size:14px}
+.pages{display:flex;gap:8px;align-items:center;justify-content:center;margin:14px 0}.pages button{border:1px solid var(--line);background:#111a24;color:#fff;padding:7px 11px;border-radius:9px;cursor:pointer}.pages button:disabled{opacity:.45;cursor:default}
+.empty{color:var(--muted);padding:28px;text-align:center;border:1px dashed var(--line);border-radius:14px}
+@media(max-width:760px){.roles{grid-template-columns:1fr}.match{grid-template-columns:1fr 1fr}.player{grid-column:1/-1}.hero{align-items:flex-start}.wrap{padding:16px}}
+</style>
+<!-- YMKF site icon hf26 -->
+<link rel="icon" type="image/svg+xml" href="../assets/playnite/site-icon.svg">
+<link rel="shortcut icon" href="../assets/playnite/site-icon.svg">
+<link rel="apple-touch-icon" href="../assets/playnite/site-icon.svg">
+<link rel="manifest" href="../assets/playnite/site.webmanifest">
+<meta name="theme-color" content="#10131d">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="YMKF">
+<!-- /YMKF site icon hf26 -->
+</head>
+<body><main class="wrap">
+<a class="back" href="../index.html">← 返回游戏库</a>
+<div class="hero"><img id="avatar" class="avatar" alt=""><div><h1>Goose Goose Duck</h1><div id="profileName" class="sub">鹅鸭杀战绩</div><div style="margin-top:8px"><span id="bindPill" class="pill">读取中</span></div></div></div>
+
+<div class="tabs">
+<button class="active" data-tab="overview">总览</button>
+<button data-tab="matches">最近对局</button>
+<button data-tab="steam">Steam累计</button>
+</div>
+
+<section id="overview" class="view active">
+  <div id="summaryGrid" class="grid"></div>
+  <div class="section"><h2>阵营表现</h2><div id="roleGrid" class="roles"></div></div>
+  <div class="section"><h2>说明</h2><div class="card muted">本页直接读取 Gaggle 官方 Match Stats 的结构化页面数据。Gaggle 当前页面同时存在“账户概览已玩对局”和“基于最近100场对局”的统计口径，两项按官方原值分别保留，不强行合并。</div></div>
+</section>
+
+<section id="matches" class="view">
+  <div id="matchNotice"></div>
+  <div class="filters">
+    <select id="roleFilter"><option value="">全部角色</option></select>
+    <select id="resultFilter"><option value="">全部结果</option><option value="win">胜利</option><option value="loss">失败</option></select>
+    <select id="modeFilter"><option value="">全部模式</option></select>
+  </div>
+  <div id="matchList" class="matches"></div>
+  <div id="matchPages" class="pages"></div>
+</section>
+
+<section id="steam" class="view">
+  <div id="steamGrid" class="grid"></div>
+  <div class="section"><div class="card muted">Steam 成就页只作为长期累计数据补充。Steam Community 暂时不可访问时不会阻断 Gaggle 官方战绩同步。</div></div>
+</section>
+
+<div class="sub" style="margin-top:22px">Build v1.16.5</div>
+</main>
+<script>
+const DATA='../data/goose-goose-duck.json?v=1.16.5';
+let D=null,page=1;const PAGE=20;
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmtNum=v=>v==null?'—':Number(v).toLocaleString('zh-CN');
+const fmtHours=s=>s==null?'—':(Number(s)/3600).toFixed(1)+' h';
+const fmtPct=v=>v==null?'—':(Number(v)*100).toFixed(1)+'%';
+const card=(label,value)=>`<div class="card"><div class="label">${esc(label)}</div><div class="value">${esc(value)}</div></div>`;
+
+function renderSummary(){
+  const s=D.summary||{};
+  $('#summaryGrid').innerHTML=[
+    card('总时长',fmtHours(s.playniteSeconds)),
+    card('官方统计对局',fmtNum(s.officialGames)),
+    card('官方胜场',fmtNum(s.officialWins)),
+    card('官方胜率',fmtPct(s.officialWinRate)),
+    card('等级',fmtNum(s.level)),
+    card('官方成就',s.officialAchievements||'—'),
+    card('账户概览已玩对局',fmtNum(s.accountOverviewMatches)),
+    card('已缓存最近对局',fmtNum(s.cachedRecent))
+  ].join('');
+}
+function renderRoles(){
+  const roles=Array.isArray(D.official?.roles)?D.official.roles:[];
+  $('#roleGrid').innerHTML=roles.length?roles.map(r=>`<div class="roleCard"><div class="roleName">${esc(r.role||'—')}</div><div class="roleStats"><span>${esc(fmtNum(r.games))} 场</span><span>胜率 ${esc(fmtPct(r.winRate))}</span></div></div>`).join(''):'<div class="empty">暂无阵营统计。</div>';
+}
+function renderSteam(){
+  const s=D.steamLifetime||{},e=s.exact||{};
+  const at=(v,k)=>v==null?'—':(e[k]===false?'≥ ':'')+fmtNum(v);
+  $('#steamGrid').innerHTML=[
+    card('累计对局',at(s.games,'games')),
+    card('累计胜场',at(s.wins,'wins')),
+    card('完成任务',at(s.tasks,'tasks')),
+    card('鸭子击杀',at(s.duckKills,'duckKills')),
+    card('破坏次数',at(s.sabotages,'sabotages')),
+    card('使用对讲机',at(s.intercom,'intercom')),
+    card('Steam成就',s.achievementsEarned==null?'—':`${s.achievementsEarned}/${s.achievementsTotal||38}`)
+  ].join('');
+}
+function filteredMatches(){
+  const all=Array.isArray(D.matches)?D.matches:[];
+  const role=$('#roleFilter').value,res=$('#resultFilter').value,mode=$('#modeFilter').value;
+  return all.filter(m=>{
+    if(role&&String(m.roleName)!==role)return false;
+    if(mode&&String(m.mode)!==mode)return false;
+    if(res==='win'&&!m.won)return false;
+    if(res==='loss'&&m.won)return false;
+    return true;
+  });
+}
+function renderMatches(){
+  const all=filteredMatches(),pages=Math.max(1,Math.ceil(all.length/PAGE));
+  page=Math.min(page,pages);
+  const rows=all.slice((page-1)*PAGE,page*PAGE);
+  $('#matchNotice').innerHTML=D.binding?.bound?'':`<div class="notice">尚未绑定 Gaggle 官方战绩。请运行 <b>BIND_GGD.cmd</b>。</div>`;
+  $('#matchList').innerHTML=rows.length?rows.map(m=>`<article class="match">
+    <div class="player"><img class="roleIcon" src="${esc(m.roleIcon||'')}" alt=""><div class="playerMain"><b>${esc(m.roleName||'未知角色')}</b><span>${esc(m.modeMap||[m.mode,m.map].filter(Boolean).join(' · ')||'—')}</span></div></div>
+    <div class="result ${m.won?'win':'loss'}">${esc(m.result||'—')}</div>
+    <div class="metric"><span class="label">日期</span><strong>${esc(m.date||'—')}</strong></div>
+    <div class="metric"><span class="label">玩家人数</span><strong>${esc(fmtNum(m.playerCount))}</strong></div>
+    <div class="metric"><span class="label">存活回合</span><strong>${esc(fmtNum(m.survivalRounds))}</strong></div>
+  </article>`).join(''):`<div class="empty">当前筛选下没有官方最近对局。</div>`;
+  $('#matchPages').innerHTML=all.length>PAGE?`<button ${page<=1?'disabled':''} id="prev">上一页</button><span>${page} / ${pages}</span><button ${page>=pages?'disabled':''} id="next">下一页</button>`:'';
+  $('#prev')?.addEventListener('click',()=>{page--;renderMatches()});
+  $('#next')?.addEventListener('click',()=>{page++;renderMatches()});
+}
+function fillFilters(){
+  const all=Array.isArray(D.matches)?D.matches:[];
+  const roles=[...new Set(all.map(x=>x.roleName).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'zh-CN'));
+  const modes=[...new Set(all.map(x=>x.mode).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'zh-CN'));
+  $('#roleFilter').innerHTML='<option value="">全部角色</option>'+roles.map(x=>`<option>${esc(x)}</option>`).join('');
+  $('#modeFilter').innerHTML='<option value="">全部模式</option>'+modes.map(x=>`<option>${esc(x)}</option>`).join('');
+  ['#roleFilter','#resultFilter','#modeFilter'].forEach(id=>$(id).addEventListener('change',()=>{page=1;renderMatches()}));
+}
+function render(){
+  const p=D.profile||{};
+  if(p.avatar)$('#avatar').src=p.avatar;else $('#avatar').style.visibility='hidden';
+  $('#profileName').textContent=p.name||'鹅鸭杀战绩';
+  const bp=$('#bindPill');bp.textContent=D.binding?.bound?'Gaggle 已绑定':'Gaggle 未绑定';bp.classList.toggle('ok',!!D.binding?.bound);
+  renderSummary();renderRoles();renderSteam();fillFilters();renderMatches();
+}
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===b.dataset.tab))});
+fetch(DATA,{cache:'no-store'}).then(r=>r.json()).then(x=>{D=x;render()}).catch(e=>{$('#summaryGrid').innerHTML=`<div class="notice">鹅鸭杀数据尚未生成：${esc(e.message)}</div>`});
+</script></body></html>
