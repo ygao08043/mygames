@@ -1,6 +1,6 @@
 {
     "build":  "1.16.6",
-    "updatedAt":  "2026-08-23T18:31:45.6085209+08:00",
+    "updatedAt":  "2026-08-23T22:19:47.7209762+08:00",
     "status":  "ok",
     "binding":  {
                     "bound":  true,
@@ -8,67 +8,37 @@
                     "source":  "Gaggle Game Stats"
                 },
     "profile":  {
-                    "name":  "YMKF",
+                    "name":  "PIANOYMKF",
                     "avatar":  "https://avatars.steamstatic.com/777da339c1b202114ea1fa2163f546bb8c8c9167_full.jpg",
                     "steamId64":  "76561199392052203",
                     "profileUrl":  "https://steamcommunity.com/profiles/76561199392052203/"
                 },
     "official":  {
                      "overview":  {
-                                      "已玩对局":  "4",
-                                      "等级":  "3",
-                                      "成就":  "2/21"
+
                                   },
                      "performance":  {
-                                         "label":  "所有游戏模式",
-                                         "played":  6,
-                                         "winRate":  0.16699999999999998,
+                                         "label":  "",
+                                         "played":  null,
+                                         "winRate":  null,
                                          "roles":  [
-                                                       {
-                                                           "role":  "鹅",
-                                                           "games":  1,
-                                                           "winRate":  0
-                                                       },
-                                                       {
-                                                           "role":  "鸭",
-                                                           "games":  4,
-                                                           "winRate":  0.25
-                                                       },
-                                                       {
-                                                           "role":  "中立",
-                                                           "games":  1,
-                                                           "winRate":  0
-                                                       }
+
                                                    ]
                                      },
                      "roles":  [
-                                   {
-                                       "role":  "鹅",
-                                       "games":  1,
-                                       "winRate":  0
-                                   },
-                                   {
-                                       "role":  "鸭",
-                                       "games":  4,
-                                       "winRate":  0.25
-                                   },
-                                   {
-                                       "role":  "中立",
-                                       "games":  1,
-                                       "winRate":  0
-                                   }
+
                                ],
-                     "recentVisible":  6
+                     "recentVisible":  0
                  },
     "summary":  {
-                    "playniteSeconds":  39240,
-                    "officialGames":  6,
-                    "officialWins":  1,
-                    "officialWinRate":  0.16699999999999998,
-                    "level":  3,
-                    "accountOverviewMatches":  4,
-                    "officialAchievements":  "2/21",
-                    "recentVisible":  6,
+                    "playniteSeconds":  41700,
+                    "officialGames":  null,
+                    "officialWins":  null,
+                    "officialWinRate":  null,
+                    "level":  null,
+                    "accountOverviewMatches":  null,
+                    "officialAchievements":  "",
+                    "recentVisible":  0,
                     "cachedRecent":  6
                 },
     "steamLifetime":  {
