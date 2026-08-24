@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
-    "build":  "v1.16.23",
-    "generatedAt":  "2026-08-24T19:18:20.8591686+08:00",
+    "build":  "v1.16.24",
+    "generatedAt":  "2026-08-24T19:47:11.6764851+08:00",
     "eaId":  "PIANOYMKF",
     "platform":  "pc",
     "source":  {
@@ -14,7 +14,7 @@
                               "key":  "bf1",
                               "title":  "Battlefield 1",
                               "status":  "ok",
-                              "updatedAt":  "2026-08-24T19:18:20.8591686+08:00",
+                              "updatedAt":  "2026-08-24T19:47:11.6764851+08:00",
                               "endpoint":  "https://api.gametools.network/bf1/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "PIANOYMKF",
@@ -8149,7 +8149,7 @@
                               "key":  "bfv",
                               "title":  "Battlefield V",
                               "status":  "ok",
-                              "updatedAt":  "2026-08-24T19:18:20.8591686+08:00",
+                              "updatedAt":  "2026-08-24T19:47:11.6764851+08:00",
                               "endpoint":  "https://api.gametools.network/bfv/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "PIANOYMKF",
@@ -12410,7 +12410,7 @@
                                  "key":  "bf2042",
                                  "title":  "Battlefield 2042",
                                  "status":  "upstream_broken",
-                                 "updatedAt":  "2026-08-24T19:18:20.8591686+08:00",
+                                 "updatedAt":  "2026-08-24T19:47:11.6764851+08:00",
                                  "endpoint":  "https://api.gametools.network/bf2042/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                                  "profile":  null,
                                  "trueSessions":  [
@@ -18765,7 +18765,7 @@
                               "key":  "bf6",
                               "title":  "Battlefield 6",
                               "status":  "ok",
-                              "updatedAt":  "2026-08-24T19:18:20.8591686+08:00",
+                              "updatedAt":  "2026-08-24T19:47:11.6764851+08:00",
                               "endpoint":  "https://api.gametools.network/bf6/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "pianoymkf",
@@ -23411,5 +23411,5 @@
                           }
               },
     "playniteTotalSeconds":  913440,
-    "playniteCapturedAt":  "2026-08-24T19:20:26.4989133+08:00"
+    "playniteCapturedAt":  "2026-08-24T19:48:01.4200501+08:00"
 }
