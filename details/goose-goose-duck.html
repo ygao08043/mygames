@@ -93,10 +93,10 @@
   </div>
 </section>
 
-<div class="sub" style="margin-top:22px">Build v1.16.16</div>
+<div class="sub" style="margin-top:22px">Build v1.16.17</div>
 </main>
 <script>
-const DATA='../data/goose-goose-duck.json?v=1.16.16';
+const DATA='../data/goose-goose-duck.json?v=1.16.17';
 let D=null,page=1;const PAGE=20;let roleSort='uses',roleDir='desc',roleFaction='';
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -153,6 +153,15 @@ function filteredMatches(){
 }
 function renderTable(t){if(!Array.isArray(t)||!t.length)return'';return `<div class="tableWrap"><table><tbody>${t.map(r=>`<tr>${(Array.isArray(r)?r:[]).map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`}
 function cards(title,rows){if(!Array.isArray(rows)||!rows.length)return'';return `<div class="detailSection"><h3>${esc(title)}</h3><div class="miniCards">${rows.map(x=>{const o=typeof x==='string'?{text:x}:x||{};const img=o.image||o.imageData||'';return `<div class="miniCard">${img?`<img src="${esc(img)}" alt="${esc(o.alt||'')}" style="width:36px;height:36px;object-fit:contain;vertical-align:middle;margin-right:8px">`:''}${esc(o.text||'')}</div>`}).join('')}</div></div>`}
+const GGD_ROLE_NAMES={"0":"None","1":"Goose","2":"Duck","3":"Dodo","4":"Gravy","5":"Mechanic","6":"Technician","7":"Medium","8":"Vigilante","9":"Cannibal","10":"Morphling","11":"Sheriff","12":"Silencer","13":"Canadian","14":"Lover Duck","15":"Lover Goose","16":"Vulture","17":"Professional","18":"Spy","19":"Mimic","20":"Detective","21":"Pigeon","22":"Birdwatcher","23":"Assassin","24":"Falcon","25":"Hitman","26":"Bodyguard","27":"Snitch","28":"Politician","29":"Locksmith","30":"Mortician","31":"Celebrity","32":"Party","33":"Demolitionist","34":"Dueling Dodo","35":"GH Goose","36":"GH Duck","37":"GH Gravy","38":"DND Duck","39":"DND Falcon","40":"DND Vulture","41":"DND Morphling","42":"FP Goose","43":"Explore Goose","44":"TT Vampire","45":"TT Villager","46":"TT Thrall","47":"Spectator","48":"Identity Thief","49":"Adventurer","50":"Avenger","51":"Ninja","52":"Undertaker","53":"Snoop","54":"Esper","55":"Invisibility","56":"Astral","57":"Pelican","58":"TTE Thrall","59":"TT Mummy","60":"Serial Killer","61":"Engineer","62":"Warlock","63":"Street Urchin","64":"Tracker","65":"Esper Duck","66":"Stalker","67":"Preacher","68":"BHC Inquisitor","69":"BHC Saint","70":"BHC High Priest","71":"BHC Demon Hunter","72":"BHC Initiate","73":"BHC Seamstress","74":"BHC Crow","75":"BHC Sin Eater","76":"TF Goose","77":"TLC Chicken","78":"TLC Bodyguard","79":"TLC Identity Thief","80":"TLC Undertaker","81":"TLC Camo Duck","82":"Cupid","83":"Survivalist","84":"Carrier","85":"Parasite","86":"Drone","87":"Scientist","88":"HNS Role","89":"HNS Owl","90":"HNS Spotter","91":"HNS Sniper","92":"Lobbyist","93":"Lost Duckling","94":"Fortune Teller","95":"Mime","96":"Raven","97":"Rabbit","98":"Lucid Dreamer","99":"Clown","100":"Soldier","101":"Coroner","102":"Sensor","103":"Looter","104":"Sniper","105":"Delusional","106":"Hawk","107":"AI","108":"TT Dr Turducken","109":"TT Turduckens Monster","110":"Witch Doctor","111":"Cuckoo","112":"Swordsman","113":"Magpie"};
+const GGD_ROLE_ZH={"1":"鹅","2":"鸭","3":"呆呆鸟","4":"肉汁","7":"通灵者","8":"正义使者","11":"警长","12":"静语者","13":"加拿大鹅","16":"秃鹫","17":"专业杀手","18":"间谍","19":"模仿者","20":"侦探","21":"鸽子","22":"观鸟者","23":"刺客","24":"猎鹰","26":"保镖","27":"告密","28":"政治家","29":"锁匠","30":"殡仪员","31":"网红","32":"派对狂","33":"爆炸王","34":"决斗呆呆鸟","50":"复仇者","51":"忍者","55":"隐形","57":"鹈鹕","60":"连环杀手","61":"工程师","64":"跟踪者","65":"超能力鸭","98":"清醒梦者","99":"小丑","100":"士兵","102":"探测员","104":"狙击手"};
+const GGD_MAP_NAMES={"0":"Goose Chapel","1":"Mallard Manor","2":"Nexus Colony","3":"Black Swan","4":"Mother Goose","5":"Lounge","6":"Jungle Temple","7":"Basement","8":"Ancient Sands","9":"Bloodhaven","10":"Eagleton","11":"Carnival","12":"Godzilla","13":"Custom","15":"Mall","255":"None"};
+const GGD_MODE_NAMES={"0":"Classic","1":"Goose Hunt","2":"Dine and Dash","3":"Trick or Treat","4":"Hanging Out","5":"Draft","6":"Tastes Like Chicken","7":"Fowl Play","8":"Corruption","9":"Task Farming","10":"Hoot and Seek","11":"Sandbox","254":"Tutorial","255":"None"};
+const GGD_EVENT_NAMES={0:'胜利',1:'失败',2:'击杀',3:'被票出',4:'监禁',5:'变形',6:'吃掉尸体',7:'发动破坏',8:'解除破坏',500:'鸭阵营破坏胜利',501:'鹅阵营任务胜利',502:'生存者胜利',503:'猎鹰胜利',504:'鹈鹕胜利'};
+function roleLabel(v){const n=Number(v);return GGD_ROLE_ZH[n]||GGD_ROLE_NAMES[n]||(v==null?'—':`身份 #${v}`)}
+function roleEnglish(v){const n=Number(v);return GGD_ROLE_NAMES[n]||''}
+function roleIconFor(v){const x=roleEnglish(v);return x?`https://gaggle.fun/assets/images/ggd/role-icons/${encodeURIComponent(x)}.png`:''}
+function officialTimelineRoot(roots){for(const root of roots){if(root&&typeof root==='object'&&root.playerData&&Array.isArray(root.rounds))return root;for(const x of collectArrays(root)){/* arrays are handled below; root-level official object is expected */}}return null}
 function normKey(k){return String(k||'').toLowerCase().replace(/[^a-z0-9\u4e00-\u9fff]/g,'')}
 function pick(o,names){
   if(!o||typeof o!=='object')return null;
@@ -189,6 +198,15 @@ function playerShape(o){
   return {nickname,role,roleIcon,vote,votes,kills,survive,faction,raw:o};
 }
 function findPlayers(roots){
+  const official=officialTimelineRoot(roots);
+  if(official?.playerData&&typeof official.playerData==='object'){
+    return Object.entries(official.playerData).map(([uid,p])=>({
+      uid,nickname:p?.nickname??p?.name??'Unknown',role:roleLabel(p?.role),roleId:p?.role,
+      roleIcon:roleIconFor(p?.role),vote:p?.correctVotes??p?.votingAccuracy??null,
+      votes:p?.correctVotes??null,kills:p?.kills??0,survive:p?.turnsSurvived??null,
+      faction:p?.faction??p?.teamId??null,raw:p
+    })).filter(p=>Number(p.roleId)!==47).slice(0,32);
+  }
   let best=[];
   for(const root of roots)for(const x of collectArrays(root)){
     const rows=x.arr.map(playerShape).filter(Boolean);
@@ -210,6 +228,23 @@ function eventShape(o){
   return {type,round,killer,victim,voter,target,winner,raw:o};
 }
 function findEvents(roots){
+  const official=officialTimelineRoot(roots);
+  if(official?.playerData&&Array.isArray(official.rounds)){
+    const name=id=>official.playerData?.[id]?.nickname||id||'—',out=[];
+    official.rounds.forEach((round,ri)=>{
+      const mi=round?.meetingInfo;
+      if(mi){
+        const votes=mi.votes&&typeof mi.votes==='object'?Object.entries(mi.votes).map(([v,t])=>`${name(v)} → ${t==='skip'?'弃票':name(t)}`):[];
+        out.push({type:'MEETING_INFO',round:ri+1,killer:null,victim:null,voter:null,target:null,winner:null,meetingResult:mi.result==='skip'?'无人被票出':mi.result==='tie'?'平票':name(mi.result),votes,raw:mi});
+      }
+      for(const e of Array.isArray(round?.timeline)?round.timeline:[]){
+        if(e?.type==='MEETING_INFO')continue;
+        const rawType=e?.type,type=e?.eventName||GGD_EVENT_NAMES[Number(rawType)]||rawType;
+        out.push({type,round:ri+1,killer:e?.uid?name(e.uid):null,victim:e?.targetId?name(e.targetId):null,voter:null,target:null,winner:null,raw:e});
+      }
+    });
+    return out.slice(0,300);
+  }
   let best=[];
   for(const root of roots)for(const x of collectArrays(root)){
     const rows=x.arr.map(eventShape).filter(Boolean);
@@ -225,10 +260,15 @@ function renderReplay(events){
   if(!events.length)return'';
   return `<div class="detailSection"><h3>复盘 / 投票 / 击杀</h3><div class="replay">${events.map((e,i)=>{
     let title=e.round!=null?`第 ${esc(e.round)} 轮`:`事件 ${i+1}`,desc=[];
-    if(e.type!=null)desc.push(`类型：${e.type}`);
-    if(e.killer!=null||e.victim!=null)desc.push(`${e.killer??'—'} → ${e.victim??'—'}`);
-    if(e.voter!=null||e.target!=null)desc.push(`投票：${e.voter??'—'} → ${e.target??'弃票'}`);
-    if(e.winner!=null)desc.push(`胜方：${e.winner}`);
+    if(e.type==='MEETING_INFO'){
+      desc.push(`讨论结果：${e.meetingResult||'—'}`);
+      if(Array.isArray(e.votes)&&e.votes.length)desc.push(`投票：${e.votes.join('；')}`);
+    }else{
+      if(e.type!=null)desc.push(`事件：${e.type}`);
+      if(e.killer!=null||e.victim!=null)desc.push(`${e.killer??'—'} → ${e.victim??'—'}`);
+      if(e.voter!=null||e.target!=null)desc.push(`投票：${e.voter??'—'} → ${e.target??'弃票'}`);
+      if(e.winner!=null)desc.push(`胜方：${e.winner}`);
+    }
     if(!desc.length)desc.push(JSON.stringify(e.raw));
     return `<div class="replayItem"><div class="eventTitle">${title}</div><div>${esc(desc.join(' · '))}</div></div>`;
   }).join('')}</div></div>`;
@@ -239,9 +279,10 @@ function rawApiDetails(rows){
 }
 function renderDetail(d){
   if(!d||!d.available)return'';
-  const roots=parseApiBodies(d),players=findPlayers(roots),events=findEvents(roots);
+  const roots=parseApiBodies(d),official=officialTimelineRoot(roots),players=findPlayers(roots),events=findEvents(roots);
   const fields=Array.isArray(d.fields)?d.fields:[],tables=Array.isArray(d.tables)?d.tables:[],heads=Array.isArray(d.headings)?d.headings.filter(Boolean):[],lists=Array.isArray(d.lists)?d.lists:[];
   let out='';
+  if(official){const ms=[];if(official.mode!=null)ms.push(`模式：${GGD_MODE_NAMES[Number(official.mode)]||official.mode}`);if(official.map!=null)ms.push(`地图：${GGD_MAP_NAMES[Number(official.map)]||official.map}`);if(Array.isArray(official.rounds))ms.push(`轮数：${official.rounds.length}`);if(official.startAt!=null&&official.endAt!=null){const asMs=v=>{if(typeof v==='number'&&Number.isFinite(v))return v;const n=Number(v);if(Number.isFinite(n)&&String(v).trim()!=='')return n;const d=Date.parse(String(v));return Number.isFinite(d)?d:NaN},a=asMs(official.startAt),b=asMs(official.endAt),sec=Math.max(0,Math.round((b-a)/1000));if(Number.isFinite(sec)&&sec>0)ms.push(`时长：${Math.floor(sec/60)}分${sec%60}秒`)}if(ms.length)out+=`<div class="detailSection"><h3>官方比赛 Timeline</h3><div class="miniCards">${ms.map(x=>`<div class="miniCard">${esc(x)}</div>`).join('')}</div></div>`;}
   out+=renderBoard(players);
   out+=renderReplay(events);
   if(fields.length)out+=`<div class="detailFields">${fields.map(f=>`<div class="field"><div class="k">${esc(f.label)}</div><div class="v">${esc(f.value)}</div></div>`).join('')}</div>`;
@@ -255,7 +296,7 @@ function renderDetail(d){
   return out||'<div class="muted">详情数据已取得，但当前字段结构还没有被识别出来。</div>';
 }
 function matchHtml(m){
-  const basic=`<div class="matchHead"><div class="player">${m.roleIcon?`<img class="matchRoleIcon" src="${esc(m.roleIcon)}" alt="">`:''}<div class="playerMain"><b>${esc(m.roleName||'历史详情')} <span class="factionTag ${factionClass(m.faction)}">${esc(m.faction||'未知')}</span></b><span>${esc(m.modeMap||[m.mode,m.map].filter(Boolean).join(' · ')||m.source||'—')}</span></div></div><div class="result ${m.won?'win':'loss'}">${esc(m.result||'—')}</div><div class="metric"><span class="label">日期</span><strong>${esc(m.date||'—')}</strong></div><div class="metric"><span class="label">玩家人数</span><strong>${num(m.playerCount)}</strong></div><div class="metric"><span class="label">存活回合</span><strong>${num(m.survivalRounds)}</strong></div></div>`;
+  const basic=`<div class="matchHead"><div class="player">${m.roleIcon?`<img class="matchRoleIcon" src="${esc(m.roleIcon)}" alt="">`:''}<div class="playerMain"><b>${esc(m.roleName||'历史详情')} <span class="factionTag ${factionClass(m.faction)}">${esc(m.faction||'未知')}</span></b><span>${esc(m.modeMap||[m.mode,m.map].filter(Boolean).join(' · ')||m.source||'—')}</span></div></div><div class="result ${m.won?'win':'loss'}">${esc(m.result||'—')}</div><div class="metric"><span class="label">日期</span><strong>${esc(m.date||'—')}</strong></div><div class="metric"><span class="label">玩家人数</span><strong>${num(m.playerCount)}</strong></div><div class="metric"><span class="label">存活回合</span><strong>${num(m.survivalRounds)}</strong></div><div class="metric"><span class="label">票准率</span><strong>${m.votingAccuracy==null?'—':esc(m.votingAccuracy)+'%'}</strong></div><div class="metric"><span class="label">击杀</span><strong>${num(m.kills)}</strong></div></div>`;
   const detail=m.detailAvailable?`<div class="detailBox"><details><summary>展开详情</summary><div class="detailInner">${renderDetail(m.detail)}</div></details></div>`:`<div class="noDetail">该局暂未抓到可展开的逐局详情；基础战绩仍会保留。</div>`;
   return `<article class="match">${basic}${detail}</article>`;
 }
