@@ -1,6 +1,6 @@
 {
-    "build":  "1.16.6",
-    "updatedAt":  "2026-08-24T01:03:19.3296462+08:00",
+    "build":  "1.16.12",
+    "updatedAt":  "2026-08-24T09:59:49.1629766+08:00",
     "status":  "ok",
     "binding":  {
                     "bound":  true,
@@ -8,99 +8,277 @@
                     "source":  "Gaggle Game Stats"
                 },
     "profile":  {
-                    "name":  "Welcome",
+                    "name":  "YMKF",
                     "avatar":  "https://avatars.steamstatic.com/777da339c1b202114ea1fa2163f546bb8c8c9167_full.jpg",
                     "steamId64":  "76561199392052203",
                     "profileUrl":  "https://steamcommunity.com/profiles/76561199392052203/"
                 },
-    "official":  {
-                     "overview":  {
-
-                                  },
-                     "performance":  {
-                                         "label":  "",
-                                         "played":  null,
-                                         "winRate":  null,
-                                         "roles":  [
-
-                                                   ]
-                                     },
-                     "roles":  [
-
-                               ],
-                     "recentVisible":  0
-                 },
-    "summary":  {
-                    "playniteSeconds":  44460,
-                    "officialGames":  null,
-                    "officialWins":  null,
-                    "officialWinRate":  null,
-                    "level":  null,
-                    "accountOverviewMatches":  null,
-                    "officialAchievements":  "",
-                    "recentVisible":  0,
-                    "cachedRecent":  6
-                },
-    "steamLifetime":  {
-                          "available":  false,
-                          "steamId64":  "76561199392052203",
-                          "achievementsEarned":  null,
-                          "achievementsTotal":  38,
-                          "games":  null,
-                          "wins":  null,
-                          "tasks":  null,
-                          "duckKills":  null,
-                          "sabotages":  null,
-                          "intercom":  null,
-                          "exact":  {
-
-                                    }
+    "roleStats":  [
+                      {
+                          "role":  "肉汁",
+                          "roleId":  "4",
+                          "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Gravy.png",
+                          "uses":  4,
+                          "wins":  1,
+                          "losses":  3,
+                          "winRate":  0.25
                       },
+                      {
+                          "role":  "爆炸王",
+                          "roleId":  "33",
+                          "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Demolitionist.png",
+                          "uses":  3,
+                          "wins":  1,
+                          "losses":  2,
+                          "winRate":  0.333333
+                      },
+                      {
+                          "role":  "清醒梦者",
+                          "roleId":  "98",
+                          "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Lucid Dreamer.png",
+                          "uses":  2,
+                          "wins":  0,
+                          "losses":  2,
+                          "winRate":  0
+                      },
+                      {
+                          "role":  "超能力鸭",
+                          "roleId":  "65",
+                          "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Esper Duck.png",
+                          "uses":  1,
+                          "wins":  1,
+                          "losses":  0,
+                          "winRate":  1
+                      },
+                      {
+                          "role":  "刺客",
+                          "roleId":  "23",
+                          "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Assassin.png",
+                          "uses":  1,
+                          "wins":  0,
+                          "losses":  1,
+                          "winRate":  0
+                      },
+                      {
+                          "role":  "呆呆鸟",
+                          "roleId":  "3",
+                          "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Dodo.png",
+                          "uses":  1,
+                          "wins":  0,
+                          "losses":  1,
+                          "winRate":  0
+                      },
+                      {
+                          "role":  "鸽子",
+                          "roleId":  "21",
+                          "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Pigeon.png",
+                          "uses":  1,
+                          "wins":  0,
+                          "losses":  1,
+                          "winRate":  0
+                      },
+                      {
+                          "role":  "静语者",
+                          "roleId":  "12",
+                          "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Silencer.png",
+                          "uses":  1,
+                          "wins":  0,
+                          "losses":  1,
+                          "winRate":  0
+                      },
+                      {
+                          "role":  "网红",
+                          "roleId":  "31",
+                          "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Celebrity.png",
+                          "uses":  1,
+                          "wins":  1,
+                          "losses":  0,
+                          "winRate":  1
+                      },
+                      {
+                          "role":  "小丑",
+                          "roleId":  "99",
+                          "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Clown.png",
+                          "uses":  1,
+                          "wins":  1,
+                          "losses":  0,
+                          "winRate":  1
+                      },
+                      {
+                          "role":  "隐形",
+                          "roleId":  "55",
+                          "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Invisibility.png",
+                          "uses":  1,
+                          "wins":  0,
+                          "losses":  1,
+                          "winRate":  0
+                      },
+                      {
+                          "role":  "专业杀手",
+                          "roleId":  "17",
+                          "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Professional.png",
+                          "uses":  1,
+                          "wins":  0,
+                          "losses":  1,
+                          "winRate":  0
+                      }
+                  ],
     "matches":  [
                     {
-                        "id":  "dash-a8fd37946faed50c",
+                        "id":  "dash-4b8c9eac8ee6fbe7",
                         "source":  "Gaggle Game Stats",
-                        "roleName":  "爆炸王",
-                        "roleId":  "33",
-                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Demolitionist.png",
+                        "roleName":  "呆呆鸟",
+                        "roleId":  "3",
+                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Dodo.png",
                         "mode":  "轮抽",
                         "map":  "地下室",
                         "modeMap":  "轮抽 在 地下室",
+                        "result":  "失败",
+                        "won":  false,
+                        "date":  "03/08/2026",
+                        "playerCount":  14,
+                        "survivalRounds":  2,
+                        "detail":  {
+                                       "available":  true,
+                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/U056080320261443848972",
+                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
+                                       "text":  "返回\n对局信息\n对局ID: #U056080320261443848972\nEnglish\n中文\n\nLoading...",
+                                       "headings":  [
+                                                        "对局信息",
+                                                        "对局ID: #U056080320261443848972"
+                                                    ],
+                                       "tables":  [
+
+                                                  ],
+                                       "fields":  [
+
+                                                  ],
+                                       "participants":  [
+
+                                                        ],
+                                       "events":  [
+
+                                                  ],
+                                       "lists":  [
+
+                                                 ],
+                                       "resourcePaths":  [
+                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
+                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
+                                                             "https://fonts.googleapis.com/css2",
+                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
+                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
+                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
+                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
+                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
+                                                         ],
+                                       "fetchedAt":  "2026-08-24T09:59:42.0299467+08:00"
+                                   },
+                        "detailAvailable":  true
+                    },
+                    {
+                        "id":  "dash-3f1d85f77d653f1f",
+                        "source":  "Gaggle Game Stats",
+                        "roleName":  "超能力鸭",
+                        "roleId":  "65",
+                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Esper Duck.png",
+                        "mode":  "经典",
+                        "map":  "地下室",
+                        "modeMap":  "经典 在 地下室",
                         "result":  "胜利",
                         "won":  true,
-                        "date":  "03/08/2026",
+                        "date":  "08/24/2026",
                         "playerCount":  15,
-                        "survivalRounds":  1
+                        "survivalRounds":  3,
+                        "detail":  {
+                                       "available":  true,
+                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/U056230820261750896223",
+                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
+                                       "text":  "返回\n对局信息\n对局ID: #U056230820261750896223\nEnglish\n中文\n\nLoading...",
+                                       "headings":  [
+                                                        "对局信息",
+                                                        "对局ID: #U056230820261750896223"
+                                                    ],
+                                       "tables":  [
+
+                                                  ],
+                                       "fields":  [
+
+                                                  ],
+                                       "participants":  [
+
+                                                        ],
+                                       "events":  [
+
+                                                  ],
+                                       "lists":  [
+
+                                                 ],
+                                       "resourcePaths":  [
+                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
+                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
+                                                             "https://fonts.googleapis.com/css2",
+                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
+                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
+                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
+                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
+                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
+                                                         ],
+                                       "fetchedAt":  "2026-08-24T09:59:27.5250101+08:00"
+                                   },
+                        "detailAvailable":  true
                     },
                     {
-                        "id":  "dash-0ecba28ea70b3297",
+                        "id":  "dash-6821394502331a0e",
                         "source":  "Gaggle Game Stats",
-                        "roleName":  "爆炸王",
-                        "roleId":  "33",
-                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Demolitionist.png",
+                        "roleName":  "鸽子",
+                        "roleId":  "21",
+                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Pigeon.png",
                         "mode":  "轮抽",
                         "map":  "地下室",
                         "modeMap":  "轮抽 在 地下室",
                         "result":  "失败",
                         "won":  false,
-                        "date":  "03/08/2026",
-                        "playerCount":  15,
-                        "survivalRounds":  2
-                    },
-                    {
-                        "id":  "dash-7ab9f775f51a377c",
-                        "source":  "Gaggle Game Stats",
-                        "roleName":  "隐形",
-                        "roleId":  "55",
-                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Invisibility.png",
-                        "mode":  "轮抽",
-                        "map":  "地下室",
-                        "modeMap":  "轮抽 在 地下室",
-                        "result":  "失败",
-                        "won":  false,
-                        "date":  "03/08/2026",
-                        "playerCount":  13,
-                        "survivalRounds":  3
+                        "date":  "08/23/2026",
+                        "playerCount":  16,
+                        "survivalRounds":  4,
+                        "detail":  {
+                                       "available":  true,
+                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/V056230820261132117344",
+                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
+                                       "text":  "返回\n对局信息\n对局ID: #V056230820261132117344\nEnglish\n中文\n\nLoading...",
+                                       "headings":  [
+                                                        "对局信息",
+                                                        "对局ID: #V056230820261132117344"
+                                                    ],
+                                       "tables":  [
+
+                                                  ],
+                                       "fields":  [
+
+                                                  ],
+                                       "participants":  [
+
+                                                        ],
+                                       "events":  [
+
+                                                  ],
+                                       "lists":  [
+
+                                                 ],
+                                       "resourcePaths":  [
+                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
+                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
+                                                             "https://fonts.googleapis.com/css2",
+                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
+                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
+                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
+                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
+                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
+                                                         ],
+                                       "fetchedAt":  "2026-08-24T09:59:38.8120170+08:00"
+                                   },
+                        "detailAvailable":  true
                     },
                     {
                         "id":  "dash-4a5819195b1e32d4",
@@ -115,22 +293,200 @@
                         "won":  false,
                         "date":  "03/08/2026",
                         "playerCount":  14,
-                        "survivalRounds":  3
+                        "survivalRounds":  3,
+                        "detail":  {
+                                       "available":  true,
+                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/U056080320261422712501",
+                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
+                                       "text":  "返回\n对局信息\n对局ID: #U056080320261422712501\nEnglish\n中文\n\nLoading...",
+                                       "headings":  [
+                                                        "对局信息",
+                                                        "对局ID: #U056080320261422712501"
+                                                    ],
+                                       "tables":  [
+
+                                                  ],
+                                       "fields":  [
+
+                                                  ],
+                                       "participants":  [
+
+                                                        ],
+                                       "events":  [
+
+                                                  ],
+                                       "lists":  [
+
+                                                 ],
+                                       "resourcePaths":  [
+                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
+                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
+                                                             "https://fonts.googleapis.com/css2",
+                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
+                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
+                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
+                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
+                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
+                                                         ],
+                                       "fetchedAt":  "2026-08-24T09:59:43.6744235+08:00"
+                                   },
+                        "detailAvailable":  true
                     },
                     {
-                        "id":  "dash-4b8c9eac8ee6fbe7",
+                        "id":  "dash-52db9758acd63234",
                         "source":  "Gaggle Game Stats",
-                        "roleName":  "呆呆鸟",
-                        "roleId":  "3",
-                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Dodo.png",
+                        "roleName":  "网红",
+                        "roleId":  "31",
+                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Celebrity.png",
+                        "mode":  "经典",
+                        "map":  "地下室",
+                        "modeMap":  "经典 在 地下室",
+                        "result":  "胜利",
+                        "won":  true,
+                        "date":  "08/24/2026",
+                        "playerCount":  12,
+                        "survivalRounds":  3,
+                        "detail":  {
+                                       "available":  true,
+                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/U056230820261808673661",
+                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
+                                       "text":  "返回\n对局信息\n对局ID: #U056230820261808673661\nEnglish\n中文\n\nLoading...",
+                                       "headings":  [
+                                                        "对局信息",
+                                                        "对局ID: #U056230820261808673661"
+                                                    ],
+                                       "tables":  [
+
+                                                  ],
+                                       "fields":  [
+
+                                                  ],
+                                       "participants":  [
+
+                                                        ],
+                                       "events":  [
+
+                                                  ],
+                                       "lists":  [
+
+                                                 ],
+                                       "resourcePaths":  [
+                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
+                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
+                                                             "https://fonts.googleapis.com/css2",
+                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
+                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
+                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
+                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
+                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
+                                                         ],
+                                       "fetchedAt":  "2026-08-24T09:59:25.9197902+08:00"
+                                   },
+                        "detailAvailable":  true
+                    },
+                    {
+                        "id":  "dash-3bde1c32a30f2995",
+                        "source":  "Gaggle Game Stats",
+                        "roleName":  "清醒梦者",
+                        "roleId":  "98",
+                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Lucid Dreamer.png",
                         "mode":  "轮抽",
                         "map":  "地下室",
                         "modeMap":  "轮抽 在 地下室",
                         "result":  "失败",
                         "won":  false,
-                        "date":  "03/08/2026",
-                        "playerCount":  14,
-                        "survivalRounds":  2
+                        "date":  "08/23/2026",
+                        "playerCount":  16,
+                        "survivalRounds":  0,
+                        "detail":  {
+                                       "available":  true,
+                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/V056230820261157912275",
+                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
+                                       "text":  "返回\n对局信息\n对局ID: #V056230820261157912275\nEnglish\n中文\n\nLoading...",
+                                       "headings":  [
+                                                        "对局信息",
+                                                        "对局ID: #V056230820261157912275"
+                                                    ],
+                                       "tables":  [
+
+                                                  ],
+                                       "fields":  [
+
+                                                  ],
+                                       "participants":  [
+
+                                                        ],
+                                       "events":  [
+
+                                                  ],
+                                       "lists":  [
+
+                                                 ],
+                                       "resourcePaths":  [
+                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
+                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
+                                                             "https://fonts.googleapis.com/css2",
+                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
+                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
+                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
+                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
+                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
+                                                         ],
+                                       "fetchedAt":  "2026-08-24T09:59:37.2027793+08:00"
+                                   },
+                        "detailAvailable":  true
+                    },
+                    {
+                        "id":  "dash-cee28b2538d76c08",
+                        "source":  "Gaggle Game Stats",
+                        "roleName":  "肉汁",
+                        "roleId":  "4",
+                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Gravy.png",
+                        "mode":  "轮抽",
+                        "map":  "地下室",
+                        "modeMap":  "轮抽 在 地下室",
+                        "result":  "失败",
+                        "won":  false,
+                        "date":  "08/23/2026",
+                        "playerCount":  13,
+                        "survivalRounds":  1,
+                        "detail":  {
+                                       "available":  true,
+                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/Q056230820261314593789",
+                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
+                                       "text":  "返回\n对局信息\n对局ID: #Q056230820261314593789\nEnglish\n中文\n\nLoading...",
+                                       "headings":  [
+                                                        "对局信息",
+                                                        "对局ID: #Q056230820261314593789"
+                                                    ],
+                                       "tables":  [
+
+                                                  ],
+                                       "fields":  [
+
+                                                  ],
+                                       "participants":  [
+
+                                                        ],
+                                       "events":  [
+
+                                                  ],
+                                       "lists":  [
+
+                                                 ],
+                                       "resourcePaths":  [
+                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
+                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
+                                                             "https://fonts.googleapis.com/css2",
+                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
+                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
+                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
+                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
+                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
+                                                         ],
+                                       "fetchedAt":  "2026-08-24T09:59:29.1239422+08:00"
+                                   },
+                        "detailAvailable":  true
                     },
                     {
                         "id":  "dash-06295e8e9333b690",
@@ -145,7 +501,569 @@
                         "won":  false,
                         "date":  "03/08/2026",
                         "playerCount":  14,
-                        "survivalRounds":  3
+                        "survivalRounds":  3,
+                        "detail":  {
+                                       "available":  true,
+                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/U056080320261458876925",
+                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
+                                       "text":  "返回\n对局信息\n对局ID: #U056080320261458876925\nEnglish\n中文\n\nLoading...",
+                                       "headings":  [
+                                                        "对局信息",
+                                                        "对局ID: #U056080320261458876925"
+                                                    ],
+                                       "tables":  [
+
+                                                  ],
+                                       "fields":  [
+
+                                                  ],
+                                       "participants":  [
+
+                                                        ],
+                                       "events":  [
+
+                                                  ],
+                                       "lists":  [
+
+                                                 ],
+                                       "resourcePaths":  [
+                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
+                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
+                                                             "https://fonts.googleapis.com/css2",
+                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
+                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
+                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
+                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
+                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
+                                                         ],
+                                       "fetchedAt":  "2026-08-24T09:59:40.4160305+08:00"
+                                   },
+                        "detailAvailable":  true
+                    },
+                    {
+                        "id":  "dash-b0e30a07e654bc03",
+                        "source":  "Gaggle Game Stats",
+                        "roleName":  "肉汁",
+                        "roleId":  "4",
+                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Gravy.png",
+                        "mode":  "经典",
+                        "map":  "地下室",
+                        "modeMap":  "经典 在 地下室",
+                        "result":  "胜利",
+                        "won":  true,
+                        "date":  "08/24/2026",
+                        "playerCount":  10,
+                        "survivalRounds":  3,
+                        "detail":  {
+                                       "available":  true,
+                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/U056230820261916317490",
+                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
+                                       "text":  "返回\n对局信息\n对局ID: #U056230820261916317490\nEnglish\n中文\n\nLoading...",
+                                       "headings":  [
+                                                        "对局信息",
+                                                        "对局ID: #U056230820261916317490"
+                                                    ],
+                                       "tables":  [
+
+                                                  ],
+                                       "fields":  [
+
+                                                  ],
+                                       "participants":  [
+
+                                                        ],
+                                       "events":  [
+
+                                                  ],
+                                       "lists":  [
+
+                                                 ],
+                                       "resourcePaths":  [
+                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
+                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
+                                                             "https://fonts.googleapis.com/css2",
+                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
+                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
+                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
+                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
+                                                         ],
+                                       "fetchedAt":  "2026-08-24T09:59:21.0928926+08:00"
+                                   },
+                        "detailAvailable":  true
+                    },
+                    {
+                        "id":  "dash-01d2150d14dfee64",
+                        "source":  "Gaggle Game Stats",
+                        "roleName":  "肉汁",
+                        "roleId":  "4",
+                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Gravy.png",
+                        "mode":  "轮抽",
+                        "map":  "地下室",
+                        "modeMap":  "轮抽 在 地下室",
+                        "result":  "失败",
+                        "won":  false,
+                        "date":  "08/23/2026",
+                        "playerCount":  16,
+                        "survivalRounds":  2,
+                        "detail":  {
+                                       "available":  true,
+                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/Q056230820261228661371",
+                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
+                                       "text":  "返回\n对局信息\n对局ID: #Q056230820261228661371\nEnglish\n中文\n\nLoading...",
+                                       "headings":  [
+                                                        "对局信息",
+                                                        "对局ID: #Q056230820261228661371"
+                                                    ],
+                                       "tables":  [
+
+                                                  ],
+                                       "fields":  [
+
+                                                  ],
+                                       "participants":  [
+
+                                                        ],
+                                       "events":  [
+
+                                                  ],
+                                       "lists":  [
+
+                                                 ],
+                                       "resourcePaths":  [
+                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
+                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
+                                                             "https://fonts.googleapis.com/css2",
+                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
+                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
+                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
+                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
+                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
+                                                         ],
+                                       "fetchedAt":  "2026-08-24T09:59:33.9914278+08:00"
+                                   },
+                        "detailAvailable":  true
+                    },
+                    {
+                        "id":  "dash-0ecba28ea70b3297",
+                        "source":  "Gaggle Game Stats",
+                        "roleName":  "爆炸王",
+                        "roleId":  "33",
+                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Demolitionist.png",
+                        "mode":  "轮抽",
+                        "map":  "地下室",
+                        "modeMap":  "轮抽 在 地下室",
+                        "result":  "失败",
+                        "won":  false,
+                        "date":  "03/08/2026",
+                        "playerCount":  15,
+                        "survivalRounds":  2,
+                        "detail":  {
+                                       "available":  true,
+                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/U056080320261407283240",
+                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
+                                       "text":  "返回\n对局信息\n对局ID: #U056080320261407283240\nEnglish\n中文\n\nLoading...",
+                                       "headings":  [
+                                                        "对局信息",
+                                                        "对局ID: #U056080320261407283240"
+                                                    ],
+                                       "tables":  [
+
+                                                  ],
+                                       "fields":  [
+
+                                                  ],
+                                       "participants":  [
+
+                                                        ],
+                                       "events":  [
+
+                                                  ],
+                                       "lists":  [
+
+                                                 ],
+                                       "resourcePaths":  [
+                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
+                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
+                                                             "https://fonts.googleapis.com/css2",
+                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
+                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
+                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
+                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
+                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
+                                                         ],
+                                       "fetchedAt":  "2026-08-24T09:59:46.8798980+08:00"
+                                   },
+                        "detailAvailable":  true
+                    },
+                    {
+                        "id":  "dash-b9055ee6157c2183",
+                        "source":  "Gaggle Game Stats",
+                        "roleName":  "小丑",
+                        "roleId":  "99",
+                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Clown.png",
+                        "mode":  "经典",
+                        "map":  "地下室",
+                        "modeMap":  "经典 在 地下室",
+                        "result":  "胜利",
+                        "won":  true,
+                        "date":  "08/24/2026",
+                        "playerCount":  15,
+                        "survivalRounds":  4,
+                        "detail":  {
+                                       "available":  true,
+                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/U056230820261829892631",
+                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
+                                       "text":  "返回\n对局信息\n对局ID: #U056230820261829892631\nEnglish\n中文\n\nLoading...",
+                                       "headings":  [
+                                                        "对局信息",
+                                                        "对局ID: #U056230820261829892631"
+                                                    ],
+                                       "tables":  [
+
+                                                  ],
+                                       "fields":  [
+
+                                                  ],
+                                       "participants":  [
+
+                                                        ],
+                                       "events":  [
+
+                                                  ],
+                                       "lists":  [
+
+                                                 ],
+                                       "resourcePaths":  [
+                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
+                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
+                                                             "https://fonts.googleapis.com/css2",
+                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
+                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
+                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
+                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
+                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
+                                                         ],
+                                       "fetchedAt":  "2026-08-24T09:59:24.3160292+08:00"
+                                   },
+                        "detailAvailable":  true
+                    },
+                    {
+                        "id":  "dash-c2420d219d8342e9",
+                        "source":  "Gaggle Game Stats",
+                        "roleName":  "专业杀手",
+                        "roleId":  "17",
+                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Professional.png",
+                        "mode":  "轮抽",
+                        "map":  "地下室",
+                        "modeMap":  "轮抽 在 地下室",
+                        "result":  "失败",
+                        "won":  false,
+                        "date":  "08/23/2026",
+                        "playerCount":  14,
+                        "survivalRounds":  3,
+                        "detail":  {
+                                       "available":  true,
+                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/Q056230820261254749358",
+                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
+                                       "text":  "返回\n对局信息\n对局ID: #Q056230820261254749358\nEnglish\n中文\n\nLoading...",
+                                       "headings":  [
+                                                        "对局信息",
+                                                        "对局ID: #Q056230820261254749358"
+                                                    ],
+                                       "tables":  [
+
+                                                  ],
+                                       "fields":  [
+
+                                                  ],
+                                       "participants":  [
+
+                                                        ],
+                                       "events":  [
+
+                                                  ],
+                                       "lists":  [
+
+                                                 ],
+                                       "resourcePaths":  [
+                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
+                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
+                                                             "https://fonts.googleapis.com/css2",
+                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
+                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
+                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
+                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
+                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
+                                                         ],
+                                       "fetchedAt":  "2026-08-24T09:59:30.7446138+08:00"
+                                   },
+                        "detailAvailable":  true
+                    },
+                    {
+                        "id":  "dash-d650d4f6a05b7bf9",
+                        "source":  "Gaggle Game Stats",
+                        "roleName":  "爆炸王",
+                        "roleId":  "33",
+                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Demolitionist.png",
+                        "mode":  "轮抽",
+                        "map":  "地下室",
+                        "modeMap":  "轮抽 在 地下室",
+                        "result":  "失败",
+                        "won":  false,
+                        "date":  "08/23/2026",
+                        "playerCount":  16,
+                        "survivalRounds":  1,
+                        "detail":  {
+                                       "available":  true,
+                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/Q056230820261245577865",
+                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
+                                       "text":  "返回\n对局信息\n对局ID: #Q056230820261245577865\nEnglish\n中文\n\nLoading...",
+                                       "headings":  [
+                                                        "对局信息",
+                                                        "对局ID: #Q056230820261245577865"
+                                                    ],
+                                       "tables":  [
+
+                                                  ],
+                                       "fields":  [
+
+                                                  ],
+                                       "participants":  [
+
+                                                        ],
+                                       "events":  [
+
+                                                  ],
+                                       "lists":  [
+
+                                                 ],
+                                       "resourcePaths":  [
+                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
+                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
+                                                             "https://fonts.googleapis.com/css2",
+                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
+                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
+                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
+                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
+                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
+                                                         ],
+                                       "fetchedAt":  "2026-08-24T09:59:32.3671121+08:00"
+                                   },
+                        "detailAvailable":  true
+                    },
+                    {
+                        "id":  "dash-db77727f5190949b",
+                        "source":  "Gaggle Game Stats",
+                        "roleName":  "清醒梦者",
+                        "roleId":  "98",
+                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Lucid Dreamer.png",
+                        "mode":  "轮抽",
+                        "map":  "地下室",
+                        "modeMap":  "轮抽 在 地下室",
+                        "result":  "失败",
+                        "won":  false,
+                        "date":  "08/23/2026",
+                        "playerCount":  16,
+                        "survivalRounds":  5,
+                        "detail":  {
+                                       "available":  true,
+                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/Q056230820261207122987",
+                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
+                                       "text":  "返回\n对局信息\n对局ID: #Q056230820261207122987\nEnglish\n中文\n\nLoading...",
+                                       "headings":  [
+                                                        "对局信息",
+                                                        "对局ID: #Q056230820261207122987"
+                                                    ],
+                                       "tables":  [
+
+                                                  ],
+                                       "fields":  [
+
+                                                  ],
+                                       "participants":  [
+
+                                                        ],
+                                       "events":  [
+
+                                                  ],
+                                       "lists":  [
+
+                                                 ],
+                                       "resourcePaths":  [
+                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
+                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
+                                                             "https://fonts.googleapis.com/css2",
+                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
+                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
+                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
+                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
+                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
+                                                         ],
+                                       "fetchedAt":  "2026-08-24T09:59:35.6016795+08:00"
+                                   },
+                        "detailAvailable":  true
+                    },
+                    {
+                        "id":  "dash-7ab9f775f51a377c",
+                        "source":  "Gaggle Game Stats",
+                        "roleName":  "隐形",
+                        "roleId":  "55",
+                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Invisibility.png",
+                        "mode":  "轮抽",
+                        "map":  "地下室",
+                        "modeMap":  "轮抽 在 地下室",
+                        "result":  "失败",
+                        "won":  false,
+                        "date":  "03/08/2026",
+                        "playerCount":  13,
+                        "survivalRounds":  3,
+                        "detail":  {
+                                       "available":  true,
+                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/U056080320261420152648",
+                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
+                                       "text":  "返回\n对局信息\n对局ID: #U056080320261420152648\nEnglish\n中文\n\nLoading...",
+                                       "headings":  [
+                                                        "对局信息",
+                                                        "对局ID: #U056080320261420152648"
+                                                    ],
+                                       "tables":  [
+
+                                                  ],
+                                       "fields":  [
+
+                                                  ],
+                                       "participants":  [
+
+                                                        ],
+                                       "events":  [
+
+                                                  ],
+                                       "lists":  [
+
+                                                 ],
+                                       "resourcePaths":  [
+                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
+                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
+                                                             "https://fonts.googleapis.com/css2",
+                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
+                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
+                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
+                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
+                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
+                                                         ],
+                                       "fetchedAt":  "2026-08-24T09:59:45.2854821+08:00"
+                                   },
+                        "detailAvailable":  true
+                    },
+                    {
+                        "id":  "dash-a8fd37946faed50c",
+                        "source":  "Gaggle Game Stats",
+                        "roleName":  "爆炸王",
+                        "roleId":  "33",
+                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Demolitionist.png",
+                        "mode":  "轮抽",
+                        "map":  "地下室",
+                        "modeMap":  "轮抽 在 地下室",
+                        "result":  "胜利",
+                        "won":  true,
+                        "date":  "03/08/2026",
+                        "playerCount":  15,
+                        "survivalRounds":  1,
+                        "detail":  {
+                                       "available":  true,
+                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/U056080320261354732744",
+                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
+                                       "text":  "返回\n对局信息\n对局ID: #U056080320261354732744\nEnglish\n中文\n\nLoading...",
+                                       "headings":  [
+                                                        "对局信息",
+                                                        "对局ID: #U056080320261354732744"
+                                                    ],
+                                       "tables":  [
+
+                                                  ],
+                                       "fields":  [
+
+                                                  ],
+                                       "participants":  [
+
+                                                        ],
+                                       "events":  [
+
+                                                  ],
+                                       "lists":  [
+
+                                                 ],
+                                       "resourcePaths":  [
+                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
+                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
+                                                             "https://fonts.googleapis.com/css2",
+                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
+                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
+                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
+                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
+                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
+                                                         ],
+                                       "fetchedAt":  "2026-08-24T09:59:48.4918715+08:00"
+                                   },
+                        "detailAvailable":  true
+                    },
+                    {
+                        "id":  "dash-0b88c5023c953c79",
+                        "source":  "Gaggle Game Stats",
+                        "roleName":  "刺客",
+                        "roleId":  "23",
+                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Assassin.png",
+                        "mode":  "经典",
+                        "map":  "地下室",
+                        "modeMap":  "经典 在 地下室",
+                        "result":  "失败",
+                        "won":  false,
+                        "date":  "08/24/2026",
+                        "playerCount":  9,
+                        "survivalRounds":  2,
+                        "detail":  {
+                                       "available":  true,
+                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/U05623082026190096642",
+                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
+                                       "text":  "返回\n对局信息\n对局ID: #U05623082026190096642\nEnglish\n中文\n\nLoading...",
+                                       "headings":  [
+                                                        "对局信息",
+                                                        "对局ID: #U05623082026190096642"
+                                                    ],
+                                       "tables":  [
+
+                                                  ],
+                                       "fields":  [
+
+                                                  ],
+                                       "participants":  [
+
+                                                        ],
+                                       "events":  [
+
+                                                  ],
+                                       "lists":  [
+
+                                                 ],
+                                       "resourcePaths":  [
+                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
+                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
+                                                             "https://fonts.googleapis.com/css2",
+                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
+                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
+                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
+                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
+                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
+                                                         ],
+                                       "fetchedAt":  "2026-08-24T09:59:22.7087352+08:00"
+                                   },
+                        "detailAvailable":  true
                     }
-                ]
+                ],
+    "meta":  {
+                 "matchCount":  18,
+                 "detailCount":  18,
+                 "playniteSeconds":  44460,
+                 "dashboardVisible":  18
+             }
 }

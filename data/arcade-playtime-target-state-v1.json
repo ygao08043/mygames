@@ -1,6 +1,6 @@
 {
     "version":  "1.0",
-    "updatedAt":  "2026-08-24T01:03:23.9488020+08:00",
+    "updatedAt":  "2026-08-24T09:59:51.8916431+08:00",
     "games":  {
                   "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b":  {
                                                                "name":  "CHUNITHM",
@@ -20,6 +20,11 @@
                   "e9125710-44f3-4473-a14c-bde806b1ff76":  {
                                                                "name":  "Arcaea",
                                                                "targetPlaytimeSeconds":  1248174,
+                                                               "sourceDeltaSeconds":  0
+                                                           },
+                  "bb00e134-2ed0-4e1a-90c8-ee8cb7f71e11":  {
+                                                               "name":  "球球大作战",
+                                                               "targetPlaytimeSeconds":  48000,
                                                                "sourceDeltaSeconds":  0
                                                            }
               }
