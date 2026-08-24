@@ -1,6 +1,6 @@
 {
     "version":  "1.0",
-    "updatedAt":  "2026-08-24T20:06:29.8741578+08:00",
+    "updatedAt":  "2026-08-24T20:33:33.2464758+08:00",
     "games":  {
                   "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b":  {
                                                                "name":  "CHUNITHM",
@@ -347,7 +347,9 @@
                                                                                                    "sessions":  {
                                                                                                                     "2026-07-04T09:33:19.0000000Z":  1100,
                                                                                                                     "2026-07-20T12:38:40.0000000Z":  1346
-                                                                                                                }
+                                                                                                                },
+                                                                                                   "file":  "site_extras/data/rhythm/edance.json",
+                                                                                                   "takeAllOnFirstSight":  true
                                                                                                }
                                                                            }
                                                            },
@@ -420,7 +422,8 @@
                                                                                                                    "2026-07-21T20:22:04.0000000Z":  2434,
                                                                                                                    "2026-07-24T18:44:29.0000000Z":  1200,
                                                                                                                    "2026-07-24T19:15:32.0000000Z":  5303
-                                                                                                               }
+                                                                                                               },
+                                                                                                  "countOnly":  true
                                                                                               },
                                                                                "ios":  {
                                                                                            "available":  true,
@@ -431,7 +434,11 @@
                                                                                                             "iPhone16pro|2026-08-24T10:05:36.0000000+00:00":  28,
                                                                                                             "iPhone16pro|2026-08-24T10:06:15.0000000+00:00":  20,
                                                                                                             "iPhone16pro|2026-08-24T10:06:43.0000000+00:00":  9
-                                                                                                        }
+                                                                                                        },
+                                                                                           "file":  "iOSGameActivity",
+                                                                                           "takeAllOnFirstSight":  true,
+                                                                                           "historyMode":  "all-ios-shortcut-sessions",
+                                                                                           "countOnly":  true
                                                                                        }
                                                                            }
                                                            },
@@ -455,7 +462,11 @@
                                                                                                             "iPhone16pro|2026-08-22T03:55:58.0000000+00:00":  1707,
                                                                                                             "iPhone16pro|2026-08-22T16:53:43.0000000+00:00":  29,
                                                                                                             "iPhone16pro|2026-08-22T16:54:17.0000000+00:00":  831
-                                                                                                        }
+                                                                                                        },
+                                                                                           "file":  "iOSGameActivity",
+                                                                                           "takeAllOnFirstSight":  true,
+                                                                                           "historyMode":  "all-ios-shortcut-sessions",
+                                                                                           "countOnly":  true
                                                                                        }
                                                                            }
                                                            },
@@ -468,7 +479,11 @@
                                                                                                             "iPad13inchM4|2026-08-21T15:43:46.0000000+00:00":  1053,
                                                                                                             "iPad13inchM4|2026-08-21T16:01:21.0000000+00:00":  1,
                                                                                                             "iPad13inchM4|2026-08-23T10:06:21.0000000+00:00":  402
-                                                                                                        }
+                                                                                                        },
+                                                                                           "file":  "iOSGameActivity",
+                                                                                           "takeAllOnFirstSight":  true,
+                                                                                           "historyMode":  "all-ios-shortcut-sessions",
+                                                                                           "countOnly":  false
                                                                                        }
                                                                            }
                                                            },
@@ -485,7 +500,11 @@
                                                                                                             "iPhone16pro|2026-08-23T16:09:58.0000000+00:00":  162,
                                                                                                             "iPhone16pro|2026-08-21T16:08:46.0000000+00:00":  105,
                                                                                                             "iPhone16pro|2026-08-21T16:10:47.0000000+00:00":  6
-                                                                                                        }
+                                                                                                        },
+                                                                                           "file":  "iOSGameActivity",
+                                                                                           "takeAllOnFirstSight":  true,
+                                                                                           "historyMode":  "all-ios-shortcut-sessions",
+                                                                                           "countOnly":  false
                                                                                        }
                                                                            }
                                                            },
@@ -502,7 +521,11 @@
                                                                                                             "iPhone16pro|2026-08-23T17:45:50.0000000+00:00":  5,
                                                                                                             "iPhone16pro|2026-08-23T17:46:36.0000000+00:00":  50,
                                                                                                             "iPhone16pro|2026-08-23T17:47:36.0000000+00:00":  6151
-                                                                                                        }
+                                                                                                        },
+                                                                                           "file":  "iOSGameActivity",
+                                                                                           "takeAllOnFirstSight":  true,
+                                                                                           "historyMode":  "all-ios-shortcut-sessions",
+                                                                                           "countOnly":  true
                                                                                        }
                                                                            }
                                                            },
@@ -516,7 +539,11 @@
                                                                                                             "iPad13inchM4|2026-08-23T16:16:32.0000000+00:00":  1009,
                                                                                                             "iPad13inchM4|2026-08-23T16:33:21.0000000+00:00":  1,
                                                                                                             "iPad13inchM4|2026-08-23T16:33:39.0000000+00:00":  42
-                                                                                                        }
+                                                                                                        },
+                                                                                           "file":  "iOSGameActivity",
+                                                                                           "takeAllOnFirstSight":  true,
+                                                                                           "historyMode":  "all-ios-shortcut-sessions",
+                                                                                           "countOnly":  false
                                                                                        }
                                                                            }
                                                            },
@@ -527,7 +554,11 @@
                                                                                            "available":  true,
                                                                                            "sessions":  {
                                                                                                             "iPhone16pro|2026-08-23T17:18:48.0000000+00:00":  249
-                                                                                                        }
+                                                                                                        },
+                                                                                           "file":  "iOSGameActivity",
+                                                                                           "takeAllOnFirstSight":  true,
+                                                                                           "historyMode":  "all-ios-shortcut-sessions",
+                                                                                           "countOnly":  false
                                                                                        }
                                                                            }
                                                            }
