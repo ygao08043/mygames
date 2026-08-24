@@ -1,31 +1,42 @@
 {
     "version":  "1.0",
-    "updatedAt":  "2026-08-24T17:39:20.0684882+08:00",
+    "updatedAt":  "2026-08-24T18:20:07.9790455+08:00",
     "games":  {
                   "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b":  {
                                                                "name":  "CHUNITHM",
                                                                "targetPlaytimeSeconds":  1568785,
-                                                               "sourceDeltaSeconds":  0
+                                                               "sourceDeltaSeconds":  0,
+                                                               "exactTarget":  false
                                                            },
                   "dc0f4891-c9fa-42ff-9dc0-27ce8d0f0d56":  {
                                                                "name":  "maimai",
                                                                "targetPlaytimeSeconds":  9900,
-                                                               "sourceDeltaSeconds":  0
+                                                               "sourceDeltaSeconds":  0,
+                                                               "exactTarget":  false
+                                                           },
+                  "b1de7fb7-f915-414c-bb77-c4cf36678f06":  {
+                                                               "name":  "e舞成名",
+                                                               "targetPlaytimeSeconds":  0,
+                                                               "sourceDeltaSeconds":  0,
+                                                               "exactTarget":  false
                                                            },
                   "b730c4a7-1f2f-4ec7-aca4-f1df509d18fe":  {
                                                                "name":  "王者荣耀",
                                                                "targetPlaytimeSeconds":  3380400,
-                                                               "sourceDeltaSeconds":  0
+                                                               "sourceDeltaSeconds":  0,
+                                                               "exactTarget":  false
                                                            },
                   "e9125710-44f3-4473-a14c-bde806b1ff76":  {
                                                                "name":  "Arcaea",
                                                                "targetPlaytimeSeconds":  1248174,
-                                                               "sourceDeltaSeconds":  0
+                                                               "sourceDeltaSeconds":  0,
+                                                               "exactTarget":  false
                                                            },
                   "bb00e134-2ed0-4e1a-90c8-ee8cb7f71e11":  {
                                                                "name":  "球球大作战",
                                                                "targetPlaytimeSeconds":  48000,
-                                                               "sourceDeltaSeconds":  0
+                                                               "sourceDeltaSeconds":  0,
+                                                               "exactTarget":  false
                                                            }
               }
 }

@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
-    "build":  "v1.16.20",
-    "generatedAt":  "2026-08-24T17:39:20.3925148+08:00",
+    "build":  "v1.16.21",
+    "generatedAt":  "2026-08-24T18:20:08.2983129+08:00",
     "source":  {
                    "provider":  "Playnite GameActivity",
                    "fields":  [
@@ -15,15 +15,15 @@
     "analyticsStart":  "2026-03-01",
     "coverageStart":  "2026-03-01",
     "coverageEnd":  "2026-08-24",
-    "sessionCount":  904,
+    "sessionCount":  909,
     "syntheticSessionCount":  4,
     "currentMonth":  "2026-08",
     "currentYear":  "2026",
     "totals":  {
-                   "recordedSeconds":  1841462,
-                   "last7DaysSeconds":  58912,
-                   "currentMonthSeconds":  249365,
-                   "currentYearSeconds":  1841462,
+                   "recordedSeconds":  1843965,
+                   "last7DaysSeconds":  58969,
+                   "currentMonthSeconds":  249422,
+                   "currentYearSeconds":  1843965,
                    "activeDays":  168
                },
     "daily":  [
@@ -529,7 +529,7 @@
                   },
                   {
                       "date":  "2026-07-04",
-                      "seconds":  660
+                      "seconds":  1760
                   },
                   {
                       "date":  "2026-07-05",
@@ -593,7 +593,7 @@
                   },
                   {
                       "date":  "2026-07-20",
-                      "seconds":  10116
+                      "seconds":  11462
                   },
                   {
                       "date":  "2026-07-21",
@@ -733,7 +733,7 @@
                   },
                   {
                       "date":  "2026-08-24",
-                      "seconds":  8104
+                      "seconds":  8161
                   }
               ],
     "weekly":  [
@@ -830,7 +830,7 @@
                    {
                        "start":  "2026-06-29",
                        "label":  "6/29",
-                       "seconds":  62872
+                       "seconds":  63972
                    },
                    {
                        "start":  "2026-07-06",
@@ -845,7 +845,7 @@
                    {
                        "start":  "2026-07-20",
                        "label":  "7/20",
-                       "seconds":  72404
+                       "seconds":  73750
                    },
                    {
                        "start":  "2026-07-27",
@@ -870,7 +870,7 @@
                    {
                        "start":  "2026-08-24",
                        "label":  "8/24",
-                       "seconds":  8104
+                       "seconds":  8161
                    }
                ],
     "monthly":  [
@@ -897,12 +897,12 @@
                     {
                         "month":  "2026-07",
                         "label":  "26/07",
-                        "seconds":  226801
+                        "seconds":  229247
                     },
                     {
                         "month":  "2026-08",
                         "label":  "26/08",
-                        "seconds":  249365
+                        "seconds":  249422
                     }
                 ],
     "hourly":  [
@@ -976,11 +976,11 @@
                    },
                    {
                        "hour":  17,
-                       "seconds":  73671
+                       "seconds":  74771
                    },
                    {
                        "hour":  18,
-                       "seconds":  70670
+                       "seconds":  70727
                    },
                    {
                        "hour":  19,
@@ -988,11 +988,11 @@
                    },
                    {
                        "hour":  20,
-                       "seconds":  121276
+                       "seconds":  122556
                    },
                    {
                        "hour":  21,
-                       "seconds":  143236
+                       "seconds":  143302
                    },
                    {
                        "hour":  22,
@@ -1007,7 +1007,7 @@
                     {
                         "day":  0,
                         "label":  "周一",
-                        "seconds":  276752
+                        "seconds":  278155
                     },
                     {
                         "day":  1,
@@ -1032,7 +1032,7 @@
                     {
                         "day":  5,
                         "label":  "周六",
-                        "seconds":  218157
+                        "seconds":  219257
                     },
                     {
                         "day":  6,
@@ -1119,7 +1119,7 @@
                                                   },
                                                   {
                                                       "hour":  18,
-                                                      "seconds":  3566
+                                                      "seconds":  3623
                                                   },
                                                   {
                                                       "hour":  19,
@@ -1146,7 +1146,7 @@
                                                    {
                                                        "day":  0,
                                                        "label":  "周一",
-                                                       "seconds":  49034
+                                                       "seconds":  49091
                                                    },
                                                    {
                                                        "day":  1,
@@ -1254,7 +1254,7 @@
                                                   },
                                                   {
                                                       "hour":  17,
-                                                      "seconds":  13278
+                                                      "seconds":  14378
                                                   },
                                                   {
                                                       "hour":  18,
@@ -1266,11 +1266,11 @@
                                                   },
                                                   {
                                                       "hour":  20,
-                                                      "seconds":  19903
+                                                      "seconds":  21183
                                                   },
                                                   {
                                                       "hour":  21,
-                                                      "seconds":  9354
+                                                      "seconds":  9420
                                                   },
                                                   {
                                                       "hour":  22,
@@ -1285,7 +1285,7 @@
                                                    {
                                                        "day":  0,
                                                        "label":  "周一",
-                                                       "seconds":  24616
+                                                       "seconds":  25962
                                                    },
                                                    {
                                                        "day":  1,
@@ -1310,7 +1310,7 @@
                                                    {
                                                        "day":  5,
                                                        "label":  "周六",
-                                                       "seconds":  18775
+                                                       "seconds":  19875
                                                    },
                                                    {
                                                        "day":  6,
@@ -1925,7 +1925,7 @@
                               {
                                   "id":  "06a6c4ed-ba26-4185-a08c-2874a521d499",
                                   "name":  "三国杀",
-                                  "seconds":  1471
+                                  "seconds":  1528
                               },
                               {
                                   "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
@@ -1967,7 +1967,7 @@
                              {
                                  "id":  "06a6c4ed-ba26-4185-a08c-2874a521d499",
                                  "name":  "三国杀",
-                                 "seconds":  305066
+                                 "seconds":  305123
                              },
                              {
                                  "id":  "c263bdfe-2d98-43b9-8f6e-b3335a7ed763",
@@ -2033,6 +2033,11 @@
                                  "id":  "409ef4d9-ef3b-47ee-bbef-57a565825af2",
                                  "name":  "斗牌魂",
                                  "seconds":  2465
+                             },
+                             {
+                                 "id":  "b1de7fb7-f915-414c-bb77-c4cf36678f06",
+                                 "name":  "e舞成名",
+                                 "seconds":  2446
                              },
                              {
                                  "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
@@ -2300,6 +2305,11 @@
                                                "seconds":  2625
                                            },
                                            {
+                                               "id":  "b1de7fb7-f915-414c-bb77-c4cf36678f06",
+                                               "name":  "e舞成名",
+                                               "seconds":  2446
+                                           },
+                                           {
                                                "id":  "409ef4d9-ef3b-47ee-bbef-57a565825af2",
                                                "name":  "斗牌魂",
                                                "seconds":  1830
@@ -2367,7 +2377,7 @@
                                            {
                                                "id":  "06a6c4ed-ba26-4185-a08c-2874a521d499",
                                                "name":  "三国杀",
-                                               "seconds":  1471
+                                               "seconds":  1528
                                            },
                                            {
                                                "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
@@ -2399,6 +2409,12 @@
                      ],
     "lastPlayedGames":  [
                             {
+                                "id":  "06a6c4ed-ba26-4185-a08c-2874a521d499",
+                                "name":  "三国杀",
+                                "date":  "2026-08-24",
+                                "lastPlayed":  "2026-08-24T18:06:52.0000000"
+                            },
+                            {
                                 "id":  "f0a894ed-b3a2-471e-b081-efdf8f0269cd",
                                 "name":  "Goose Goose Duck",
                                 "date":  "2026-08-24",
@@ -2409,12 +2425,6 @@
                                 "name":  "球球大作战",
                                 "date":  "2026-08-24",
                                 "lastPlayed":  "2026-08-24T01:22:57.0000000"
-                            },
-                            {
-                                "id":  "06a6c4ed-ba26-4185-a08c-2874a521d499",
-                                "name":  "三国杀",
-                                "date":  "2026-08-24",
-                                "lastPlayed":  "2026-08-24T01:15:26.0000000"
                             },
                             {
                                 "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
@@ -2507,6 +2517,12 @@
                                 "lastPlayed":  "2026-07-21T12:05:04.1277471"
                             },
                             {
+                                "id":  "b1de7fb7-f915-414c-bb77-c4cf36678f06",
+                                "name":  "e舞成名",
+                                "date":  "2026-07-20",
+                                "lastPlayed":  "2026-07-20T21:01:06.0000000"
+                            },
+                            {
                                 "id":  "3c0b3f5d-79bf-4260-9494-d72477b8e522",
                                 "name":  "Counter-Strike 2",
                                 "date":  "2026-05-29",
@@ -2550,7 +2566,7 @@
                                  "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                  "name":  "雀魂麻将",
                                  "seconds":  90961,
-                                 "totalSeconds":  249365
+                                 "totalSeconds":  249422
                              },
                              {
                                  "period":  "2026-07",
@@ -2558,7 +2574,7 @@
                                  "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                                  "name":  "CHUNITHM",
                                  "seconds":  75829,
-                                 "totalSeconds":  226801
+                                 "totalSeconds":  229247
                              },
                              {
                                  "period":  "2026-06",
@@ -2600,7 +2616,7 @@
                                 "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                 "name":  "雀魂麻将",
                                 "seconds":  627383,
-                                "totalSeconds":  1841462
+                                "totalSeconds":  1843965
                             }
                         ],
     "timelineWindowDays":  14,
@@ -10549,6 +10565,16 @@
                      },
                      {
                          "date":  "2026-07-04",
+                         "id":  "b1de7fb7-f915-414c-bb77-c4cf36678f06",
+                         "name":  "e舞成名",
+                         "startMinute":  1053.32,
+                         "endMinute":  1071.65,
+                         "startText":  "17:33",
+                         "endText":  "17:51",
+                         "seconds":  1100
+                     },
+                     {
+                         "date":  "2026-07-04",
                          "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                          "name":  "CHUNITHM",
                          "startMinute":  1085,
@@ -10916,6 +10942,16 @@
                          "startText":  "12:08",
                          "endText":  "12:56",
                          "seconds":  2856
+                     },
+                     {
+                         "date":  "2026-07-20",
+                         "id":  "b1de7fb7-f915-414c-bb77-c4cf36678f06",
+                         "name":  "e舞成名",
+                         "startMinute":  1238.67,
+                         "endMinute":  1261.1,
+                         "startText":  "20:38",
+                         "endText":  "21:01",
+                         "seconds":  1346
                      },
                      {
                          "date":  "2026-07-20",
@@ -13146,6 +13182,36 @@
                          "startText":  "01:47",
                          "endText":  "03:30",
                          "seconds":  6151
+                     },
+                     {
+                         "date":  "2026-08-24",
+                         "id":  "06a6c4ed-ba26-4185-a08c-2874a521d499",
+                         "name":  "三国杀",
+                         "startMinute":  1085.6,
+                         "endMinute":  1086.07,
+                         "startText":  "18:05",
+                         "endText":  "18:06",
+                         "seconds":  28
+                     },
+                     {
+                         "date":  "2026-08-24",
+                         "id":  "06a6c4ed-ba26-4185-a08c-2874a521d499",
+                         "name":  "三国杀",
+                         "startMinute":  1086.25,
+                         "endMinute":  1086.58,
+                         "startText":  "18:06",
+                         "endText":  "18:06",
+                         "seconds":  20
+                     },
+                     {
+                         "date":  "2026-08-24",
+                         "id":  "06a6c4ed-ba26-4185-a08c-2874a521d499",
+                         "name":  "三国杀",
+                         "startMinute":  1086.72,
+                         "endMinute":  1086.87,
+                         "startText":  "18:06",
+                         "endText":  "18:06",
+                         "seconds":  9
                      }
                  ]
 }
