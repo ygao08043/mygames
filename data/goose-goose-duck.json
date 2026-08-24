@@ -1,6 +1,6 @@
 {
-    "build":  "1.16.15",
-    "updatedAt":  "2026-08-24T11:50:47.7334229+08:00",
+    "build":  "1.16.16",
+    "updatedAt":  "2026-08-24T12:24:59.3350314+08:00",
     "status":  "ok",
     "binding":  {
                     "bound":  true,
@@ -182,42 +182,18 @@
                         "playerCount":  14,
                         "survivalRounds":  2,
                         "detail":  {
-                                       "available":  true,
-                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/U056080320261443848972",
-                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
-                                       "text":  "返回\n对局信息\n对局ID: #U056080320261443848972\nEnglish\n中文\n\nLoading...",
-                                       "headings":  [
-                                                        "对局信息",
-                                                        "对局ID: #U056080320261443848972"
-                                                    ],
-                                       "tables":  [
+                                       "available":  false,
+                                       "captureBuild":  "1.16.16",
+                                       "fetchedAt":  "2026-08-24T12:24:12.1713952+08:00",
+                                       "reason":  "Gaggle detail route was reached, but it never left the Loading state and no readable match API response was captured.",
+                                       "hiddenIds":  [
 
-                                                  ],
-                                       "fields":  [
+                                                     ],
+                                       "contextHints":  [
 
-                                                  ],
-                                       "participants":  [
-
-                                                        ],
-                                       "events":  [
-
-                                                  ],
-                                       "lists":  [
-
-                                                 ],
-                                       "resourcePaths":  [
-                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
-                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
-                                                             "https://fonts.googleapis.com/css2",
-                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
-                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
-                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
-                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
-                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
-                                                         ],
-                                       "fetchedAt":  "2026-08-24T09:59:42.0299467+08:00"
+                                                        ]
                                    },
-                        "detailAvailable":  true
+                        "detailAvailable":  false
                     },
                     {
                         "id":  "dash-3f1d85f77d653f1f",
@@ -236,42 +212,18 @@
                         "playerCount":  15,
                         "survivalRounds":  3,
                         "detail":  {
-                                       "available":  true,
-                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/U056230820261750896223",
-                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
-                                       "text":  "返回\n对局信息\n对局ID: #U056230820261750896223\nEnglish\n中文\n\nLoading...",
-                                       "headings":  [
-                                                        "对局信息",
-                                                        "对局ID: #U056230820261750896223"
-                                                    ],
-                                       "tables":  [
+                                       "available":  false,
+                                       "captureBuild":  "1.16.16",
+                                       "fetchedAt":  "2026-08-24T12:22:28.0112126+08:00",
+                                       "reason":  "Gaggle detail route was reached, but it never left the Loading state and no readable match API response was captured.",
+                                       "hiddenIds":  [
 
-                                                  ],
-                                       "fields":  [
+                                                     ],
+                                       "contextHints":  [
 
-                                                  ],
-                                       "participants":  [
-
-                                                        ],
-                                       "events":  [
-
-                                                  ],
-                                       "lists":  [
-
-                                                 ],
-                                       "resourcePaths":  [
-                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
-                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
-                                                             "https://fonts.googleapis.com/css2",
-                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
-                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
-                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
-                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
-                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
-                                                         ],
-                                       "fetchedAt":  "2026-08-24T09:59:27.5250101+08:00"
+                                                        ]
                                    },
-                        "detailAvailable":  true
+                        "detailAvailable":  false
                     },
                     {
                         "id":  "dash-6821394502331a0e",
@@ -290,42 +242,18 @@
                         "playerCount":  16,
                         "survivalRounds":  4,
                         "detail":  {
-                                       "available":  true,
-                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/V056230820261132117344",
-                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
-                                       "text":  "返回\n对局信息\n对局ID: #V056230820261132117344\nEnglish\n中文\n\nLoading...",
-                                       "headings":  [
-                                                        "对局信息",
-                                                        "对局ID: #V056230820261132117344"
-                                                    ],
-                                       "tables":  [
+                                       "available":  false,
+                                       "captureBuild":  "1.16.16",
+                                       "fetchedAt":  "2026-08-24T12:23:49.0779935+08:00",
+                                       "reason":  "Gaggle detail route was reached, but it never left the Loading state and no readable match API response was captured.",
+                                       "hiddenIds":  [
 
-                                                  ],
-                                       "fields":  [
+                                                     ],
+                                       "contextHints":  [
 
-                                                  ],
-                                       "participants":  [
-
-                                                        ],
-                                       "events":  [
-
-                                                  ],
-                                       "lists":  [
-
-                                                 ],
-                                       "resourcePaths":  [
-                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
-                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
-                                                             "https://fonts.googleapis.com/css2",
-                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
-                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
-                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
-                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
-                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
-                                                         ],
-                                       "fetchedAt":  "2026-08-24T09:59:38.8120170+08:00"
+                                                        ]
                                    },
-                        "detailAvailable":  true
+                        "detailAvailable":  false
                     },
                     {
                         "id":  "dash-4a5819195b1e32d4",
@@ -344,42 +272,18 @@
                         "playerCount":  14,
                         "survivalRounds":  3,
                         "detail":  {
-                                       "available":  true,
-                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/U056080320261422712501",
-                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
-                                       "text":  "返回\n对局信息\n对局ID: #U056080320261422712501\nEnglish\n中文\n\nLoading...",
-                                       "headings":  [
-                                                        "对局信息",
-                                                        "对局ID: #U056080320261422712501"
-                                                    ],
-                                       "tables":  [
+                                       "available":  false,
+                                       "captureBuild":  "1.16.16",
+                                       "fetchedAt":  "2026-08-24T12:24:23.7349698+08:00",
+                                       "reason":  "Gaggle detail route was reached, but it never left the Loading state and no readable match API response was captured.",
+                                       "hiddenIds":  [
 
-                                                  ],
-                                       "fields":  [
+                                                     ],
+                                       "contextHints":  [
 
-                                                  ],
-                                       "participants":  [
-
-                                                        ],
-                                       "events":  [
-
-                                                  ],
-                                       "lists":  [
-
-                                                 ],
-                                       "resourcePaths":  [
-                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
-                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
-                                                             "https://fonts.googleapis.com/css2",
-                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
-                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
-                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
-                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
-                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
-                                                         ],
-                                       "fetchedAt":  "2026-08-24T09:59:43.6744235+08:00"
+                                                        ]
                                    },
-                        "detailAvailable":  true
+                        "detailAvailable":  false
                     },
                     {
                         "id":  "dash-52db9758acd63234",
@@ -398,42 +302,18 @@
                         "playerCount":  12,
                         "survivalRounds":  3,
                         "detail":  {
-                                       "available":  true,
-                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/U056230820261808673661",
-                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
-                                       "text":  "返回\n对局信息\n对局ID: #U056230820261808673661\nEnglish\n中文\n\nLoading...",
-                                       "headings":  [
-                                                        "对局信息",
-                                                        "对局ID: #U056230820261808673661"
-                                                    ],
-                                       "tables":  [
+                                       "available":  false,
+                                       "captureBuild":  "1.16.16",
+                                       "fetchedAt":  "2026-08-24T12:22:16.3880570+08:00",
+                                       "reason":  "Gaggle detail route was reached, but it never left the Loading state and no readable match API response was captured.",
+                                       "hiddenIds":  [
 
-                                                  ],
-                                       "fields":  [
+                                                     ],
+                                       "contextHints":  [
 
-                                                  ],
-                                       "participants":  [
-
-                                                        ],
-                                       "events":  [
-
-                                                  ],
-                                       "lists":  [
-
-                                                 ],
-                                       "resourcePaths":  [
-                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
-                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
-                                                             "https://fonts.googleapis.com/css2",
-                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
-                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
-                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
-                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
-                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
-                                                         ],
-                                       "fetchedAt":  "2026-08-24T09:59:25.9197902+08:00"
+                                                        ]
                                    },
-                        "detailAvailable":  true
+                        "detailAvailable":  false
                     },
                     {
                         "id":  "dash-3bde1c32a30f2995",
@@ -452,42 +332,18 @@
                         "playerCount":  16,
                         "survivalRounds":  0,
                         "detail":  {
-                                       "available":  true,
-                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/V056230820261157912275",
-                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
-                                       "text":  "返回\n对局信息\n对局ID: #V056230820261157912275\nEnglish\n中文\n\nLoading...",
-                                       "headings":  [
-                                                        "对局信息",
-                                                        "对局ID: #V056230820261157912275"
-                                                    ],
-                                       "tables":  [
+                                       "available":  false,
+                                       "captureBuild":  "1.16.16",
+                                       "fetchedAt":  "2026-08-24T12:23:37.5493577+08:00",
+                                       "reason":  "Gaggle detail route was reached, but it never left the Loading state and no readable match API response was captured.",
+                                       "hiddenIds":  [
 
-                                                  ],
-                                       "fields":  [
+                                                     ],
+                                       "contextHints":  [
 
-                                                  ],
-                                       "participants":  [
-
-                                                        ],
-                                       "events":  [
-
-                                                  ],
-                                       "lists":  [
-
-                                                 ],
-                                       "resourcePaths":  [
-                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
-                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
-                                                             "https://fonts.googleapis.com/css2",
-                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
-                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
-                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
-                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
-                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
-                                                         ],
-                                       "fetchedAt":  "2026-08-24T09:59:37.2027793+08:00"
+                                                        ]
                                    },
-                        "detailAvailable":  true
+                        "detailAvailable":  false
                     },
                     {
                         "id":  "dash-cee28b2538d76c08",
@@ -506,42 +362,18 @@
                         "playerCount":  13,
                         "survivalRounds":  1,
                         "detail":  {
-                                       "available":  true,
-                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/Q056230820261314593789",
-                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
-                                       "text":  "返回\n对局信息\n对局ID: #Q056230820261314593789\nEnglish\n中文\n\nLoading...",
-                                       "headings":  [
-                                                        "对局信息",
-                                                        "对局ID: #Q056230820261314593789"
-                                                    ],
-                                       "tables":  [
+                                       "available":  false,
+                                       "captureBuild":  "1.16.16",
+                                       "fetchedAt":  "2026-08-24T12:22:39.5787263+08:00",
+                                       "reason":  "Gaggle detail route was reached, but it never left the Loading state and no readable match API response was captured.",
+                                       "hiddenIds":  [
 
-                                                  ],
-                                       "fields":  [
+                                                     ],
+                                       "contextHints":  [
 
-                                                  ],
-                                       "participants":  [
-
-                                                        ],
-                                       "events":  [
-
-                                                  ],
-                                       "lists":  [
-
-                                                 ],
-                                       "resourcePaths":  [
-                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
-                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
-                                                             "https://fonts.googleapis.com/css2",
-                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
-                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
-                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
-                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
-                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
-                                                         ],
-                                       "fetchedAt":  "2026-08-24T09:59:29.1239422+08:00"
+                                                        ]
                                    },
-                        "detailAvailable":  true
+                        "detailAvailable":  false
                     },
                     {
                         "id":  "dash-06295e8e9333b690",
@@ -560,42 +392,18 @@
                         "playerCount":  14,
                         "survivalRounds":  3,
                         "detail":  {
-                                       "available":  true,
-                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/U056080320261458876925",
-                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
-                                       "text":  "返回\n对局信息\n对局ID: #U056080320261458876925\nEnglish\n中文\n\nLoading...",
-                                       "headings":  [
-                                                        "对局信息",
-                                                        "对局ID: #U056080320261458876925"
-                                                    ],
-                                       "tables":  [
+                                       "available":  false,
+                                       "captureBuild":  "1.16.16",
+                                       "fetchedAt":  "2026-08-24T12:24:00.5738071+08:00",
+                                       "reason":  "Gaggle detail route was reached, but it never left the Loading state and no readable match API response was captured.",
+                                       "hiddenIds":  [
 
-                                                  ],
-                                       "fields":  [
+                                                     ],
+                                       "contextHints":  [
 
-                                                  ],
-                                       "participants":  [
-
-                                                        ],
-                                       "events":  [
-
-                                                  ],
-                                       "lists":  [
-
-                                                 ],
-                                       "resourcePaths":  [
-                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
-                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
-                                                             "https://fonts.googleapis.com/css2",
-                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
-                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
-                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
-                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
-                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
-                                                         ],
-                                       "fetchedAt":  "2026-08-24T09:59:40.4160305+08:00"
+                                                        ]
                                    },
-                        "detailAvailable":  true
+                        "detailAvailable":  false
                     },
                     {
                         "id":  "dash-b0e30a07e654bc03",
@@ -614,41 +422,18 @@
                         "playerCount":  10,
                         "survivalRounds":  3,
                         "detail":  {
-                                       "available":  true,
-                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/U056230820261916317490",
-                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
-                                       "text":  "返回\n对局信息\n对局ID: #U056230820261916317490\nEnglish\n中文\n\nLoading...",
-                                       "headings":  [
-                                                        "对局信息",
-                                                        "对局ID: #U056230820261916317490"
-                                                    ],
-                                       "tables":  [
+                                       "available":  false,
+                                       "captureBuild":  "1.16.16",
+                                       "fetchedAt":  "2026-08-24T12:21:41.4660034+08:00",
+                                       "reason":  "Gaggle detail route was reached, but it never left the Loading state and no readable match API response was captured.",
+                                       "hiddenIds":  [
 
-                                                  ],
-                                       "fields":  [
+                                                     ],
+                                       "contextHints":  [
 
-                                                  ],
-                                       "participants":  [
-
-                                                        ],
-                                       "events":  [
-
-                                                  ],
-                                       "lists":  [
-
-                                                 ],
-                                       "resourcePaths":  [
-                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
-                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
-                                                             "https://fonts.googleapis.com/css2",
-                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
-                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
-                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
-                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
-                                                         ],
-                                       "fetchedAt":  "2026-08-24T09:59:21.0928926+08:00"
+                                                        ]
                                    },
-                        "detailAvailable":  true
+                        "detailAvailable":  false
                     },
                     {
                         "id":  "dash-01d2150d14dfee64",
@@ -667,42 +452,18 @@
                         "playerCount":  16,
                         "survivalRounds":  2,
                         "detail":  {
-                                       "available":  true,
-                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/Q056230820261228661371",
-                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
-                                       "text":  "返回\n对局信息\n对局ID: #Q056230820261228661371\nEnglish\n中文\n\nLoading...",
-                                       "headings":  [
-                                                        "对局信息",
-                                                        "对局ID: #Q056230820261228661371"
-                                                    ],
-                                       "tables":  [
+                                       "available":  false,
+                                       "captureBuild":  "1.16.16",
+                                       "fetchedAt":  "2026-08-24T12:23:14.4335111+08:00",
+                                       "reason":  "Gaggle detail route was reached, but it never left the Loading state and no readable match API response was captured.",
+                                       "hiddenIds":  [
 
-                                                  ],
-                                       "fields":  [
+                                                     ],
+                                       "contextHints":  [
 
-                                                  ],
-                                       "participants":  [
-
-                                                        ],
-                                       "events":  [
-
-                                                  ],
-                                       "lists":  [
-
-                                                 ],
-                                       "resourcePaths":  [
-                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
-                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
-                                                             "https://fonts.googleapis.com/css2",
-                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
-                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
-                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
-                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
-                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
-                                                         ],
-                                       "fetchedAt":  "2026-08-24T09:59:33.9914278+08:00"
+                                                        ]
                                    },
-                        "detailAvailable":  true
+                        "detailAvailable":  false
                     },
                     {
                         "id":  "dash-0ecba28ea70b3297",
@@ -721,42 +482,18 @@
                         "playerCount":  15,
                         "survivalRounds":  2,
                         "detail":  {
-                                       "available":  true,
-                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/U056080320261407283240",
-                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
-                                       "text":  "返回\n对局信息\n对局ID: #U056080320261407283240\nEnglish\n中文\n\nLoading...",
-                                       "headings":  [
-                                                        "对局信息",
-                                                        "对局ID: #U056080320261407283240"
-                                                    ],
-                                       "tables":  [
+                                       "available":  false,
+                                       "captureBuild":  "1.16.16",
+                                       "fetchedAt":  "2026-08-24T12:24:47.0434718+08:00",
+                                       "reason":  "Gaggle detail route was reached, but it never left the Loading state and no readable match API response was captured.",
+                                       "hiddenIds":  [
 
-                                                  ],
-                                       "fields":  [
+                                                     ],
+                                       "contextHints":  [
 
-                                                  ],
-                                       "participants":  [
-
-                                                        ],
-                                       "events":  [
-
-                                                  ],
-                                       "lists":  [
-
-                                                 ],
-                                       "resourcePaths":  [
-                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
-                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
-                                                             "https://fonts.googleapis.com/css2",
-                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
-                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
-                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
-                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
-                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
-                                                         ],
-                                       "fetchedAt":  "2026-08-24T09:59:46.8798980+08:00"
+                                                        ]
                                    },
-                        "detailAvailable":  true
+                        "detailAvailable":  false
                     },
                     {
                         "id":  "dash-b9055ee6157c2183",
@@ -775,42 +512,18 @@
                         "playerCount":  15,
                         "survivalRounds":  4,
                         "detail":  {
-                                       "available":  true,
-                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/U056230820261829892631",
-                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
-                                       "text":  "返回\n对局信息\n对局ID: #U056230820261829892631\nEnglish\n中文\n\nLoading...",
-                                       "headings":  [
-                                                        "对局信息",
-                                                        "对局ID: #U056230820261829892631"
-                                                    ],
-                                       "tables":  [
+                                       "available":  false,
+                                       "captureBuild":  "1.16.16",
+                                       "fetchedAt":  "2026-08-24T12:22:04.7444958+08:00",
+                                       "reason":  "Gaggle detail route was reached, but it never left the Loading state and no readable match API response was captured.",
+                                       "hiddenIds":  [
 
-                                                  ],
-                                       "fields":  [
+                                                     ],
+                                       "contextHints":  [
 
-                                                  ],
-                                       "participants":  [
-
-                                                        ],
-                                       "events":  [
-
-                                                  ],
-                                       "lists":  [
-
-                                                 ],
-                                       "resourcePaths":  [
-                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
-                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
-                                                             "https://fonts.googleapis.com/css2",
-                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
-                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
-                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
-                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
-                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
-                                                         ],
-                                       "fetchedAt":  "2026-08-24T09:59:24.3160292+08:00"
+                                                        ]
                                    },
-                        "detailAvailable":  true
+                        "detailAvailable":  false
                     },
                     {
                         "id":  "dash-c2420d219d8342e9",
@@ -829,42 +542,18 @@
                         "playerCount":  14,
                         "survivalRounds":  3,
                         "detail":  {
-                                       "available":  true,
-                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/Q056230820261254749358",
-                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
-                                       "text":  "返回\n对局信息\n对局ID: #Q056230820261254749358\nEnglish\n中文\n\nLoading...",
-                                       "headings":  [
-                                                        "对局信息",
-                                                        "对局ID: #Q056230820261254749358"
-                                                    ],
-                                       "tables":  [
+                                       "available":  false,
+                                       "captureBuild":  "1.16.16",
+                                       "fetchedAt":  "2026-08-24T12:22:51.1643399+08:00",
+                                       "reason":  "Gaggle detail route was reached, but it never left the Loading state and no readable match API response was captured.",
+                                       "hiddenIds":  [
 
-                                                  ],
-                                       "fields":  [
+                                                     ],
+                                       "contextHints":  [
 
-                                                  ],
-                                       "participants":  [
-
-                                                        ],
-                                       "events":  [
-
-                                                  ],
-                                       "lists":  [
-
-                                                 ],
-                                       "resourcePaths":  [
-                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
-                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
-                                                             "https://fonts.googleapis.com/css2",
-                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
-                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
-                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
-                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
-                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
-                                                         ],
-                                       "fetchedAt":  "2026-08-24T09:59:30.7446138+08:00"
+                                                        ]
                                    },
-                        "detailAvailable":  true
+                        "detailAvailable":  false
                     },
                     {
                         "id":  "dash-d650d4f6a05b7bf9",
@@ -883,42 +572,18 @@
                         "playerCount":  16,
                         "survivalRounds":  1,
                         "detail":  {
-                                       "available":  true,
-                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/Q056230820261245577865",
-                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
-                                       "text":  "返回\n对局信息\n对局ID: #Q056230820261245577865\nEnglish\n中文\n\nLoading...",
-                                       "headings":  [
-                                                        "对局信息",
-                                                        "对局ID: #Q056230820261245577865"
-                                                    ],
-                                       "tables":  [
+                                       "available":  false,
+                                       "captureBuild":  "1.16.16",
+                                       "fetchedAt":  "2026-08-24T12:23:02.7935500+08:00",
+                                       "reason":  "Gaggle detail route was reached, but it never left the Loading state and no readable match API response was captured.",
+                                       "hiddenIds":  [
 
-                                                  ],
-                                       "fields":  [
+                                                     ],
+                                       "contextHints":  [
 
-                                                  ],
-                                       "participants":  [
-
-                                                        ],
-                                       "events":  [
-
-                                                  ],
-                                       "lists":  [
-
-                                                 ],
-                                       "resourcePaths":  [
-                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
-                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
-                                                             "https://fonts.googleapis.com/css2",
-                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
-                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
-                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
-                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
-                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
-                                                         ],
-                                       "fetchedAt":  "2026-08-24T09:59:32.3671121+08:00"
+                                                        ]
                                    },
-                        "detailAvailable":  true
+                        "detailAvailable":  false
                     },
                     {
                         "id":  "dash-db77727f5190949b",
@@ -937,42 +602,18 @@
                         "playerCount":  16,
                         "survivalRounds":  5,
                         "detail":  {
-                                       "available":  true,
-                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/Q056230820261207122987",
-                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
-                                       "text":  "返回\n对局信息\n对局ID: #Q056230820261207122987\nEnglish\n中文\n\nLoading...",
-                                       "headings":  [
-                                                        "对局信息",
-                                                        "对局ID: #Q056230820261207122987"
-                                                    ],
-                                       "tables":  [
+                                       "available":  false,
+                                       "captureBuild":  "1.16.16",
+                                       "fetchedAt":  "2026-08-24T12:23:26.0578691+08:00",
+                                       "reason":  "Gaggle detail route was reached, but it never left the Loading state and no readable match API response was captured.",
+                                       "hiddenIds":  [
 
-                                                  ],
-                                       "fields":  [
+                                                     ],
+                                       "contextHints":  [
 
-                                                  ],
-                                       "participants":  [
-
-                                                        ],
-                                       "events":  [
-
-                                                  ],
-                                       "lists":  [
-
-                                                 ],
-                                       "resourcePaths":  [
-                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
-                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
-                                                             "https://fonts.googleapis.com/css2",
-                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
-                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
-                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
-                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
-                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
-                                                         ],
-                                       "fetchedAt":  "2026-08-24T09:59:35.6016795+08:00"
+                                                        ]
                                    },
-                        "detailAvailable":  true
+                        "detailAvailable":  false
                     },
                     {
                         "id":  "dash-7ab9f775f51a377c",
@@ -991,42 +632,18 @@
                         "playerCount":  13,
                         "survivalRounds":  3,
                         "detail":  {
-                                       "available":  true,
-                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/U056080320261420152648",
-                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
-                                       "text":  "返回\n对局信息\n对局ID: #U056080320261420152648\nEnglish\n中文\n\nLoading...",
-                                       "headings":  [
-                                                        "对局信息",
-                                                        "对局ID: #U056080320261420152648"
-                                                    ],
-                                       "tables":  [
+                                       "available":  false,
+                                       "captureBuild":  "1.16.16",
+                                       "fetchedAt":  "2026-08-24T12:24:35.4366300+08:00",
+                                       "reason":  "Gaggle detail route was reached, but it never left the Loading state and no readable match API response was captured.",
+                                       "hiddenIds":  [
 
-                                                  ],
-                                       "fields":  [
+                                                     ],
+                                       "contextHints":  [
 
-                                                  ],
-                                       "participants":  [
-
-                                                        ],
-                                       "events":  [
-
-                                                  ],
-                                       "lists":  [
-
-                                                 ],
-                                       "resourcePaths":  [
-                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
-                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
-                                                             "https://fonts.googleapis.com/css2",
-                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
-                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
-                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
-                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
-                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
-                                                         ],
-                                       "fetchedAt":  "2026-08-24T09:59:45.2854821+08:00"
+                                                        ]
                                    },
-                        "detailAvailable":  true
+                        "detailAvailable":  false
                     },
                     {
                         "id":  "dash-a8fd37946faed50c",
@@ -1045,42 +662,18 @@
                         "playerCount":  15,
                         "survivalRounds":  1,
                         "detail":  {
-                                       "available":  true,
-                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/U056080320261354732744",
-                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
-                                       "text":  "返回\n对局信息\n对局ID: #U056080320261354732744\nEnglish\n中文\n\nLoading...",
-                                       "headings":  [
-                                                        "对局信息",
-                                                        "对局ID: #U056080320261354732744"
-                                                    ],
-                                       "tables":  [
+                                       "available":  false,
+                                       "captureBuild":  "1.16.16",
+                                       "fetchedAt":  "2026-08-24T12:24:58.5721925+08:00",
+                                       "reason":  "Gaggle detail route was reached, but it never left the Loading state and no readable match API response was captured.",
+                                       "hiddenIds":  [
 
-                                                  ],
-                                       "fields":  [
+                                                     ],
+                                       "contextHints":  [
 
-                                                  ],
-                                       "participants":  [
-
-                                                        ],
-                                       "events":  [
-
-                                                  ],
-                                       "lists":  [
-
-                                                 ],
-                                       "resourcePaths":  [
-                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
-                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
-                                                             "https://fonts.googleapis.com/css2",
-                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
-                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
-                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
-                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
-                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
-                                                         ],
-                                       "fetchedAt":  "2026-08-24T09:59:48.4918715+08:00"
+                                                        ]
                                    },
-                        "detailAvailable":  true
+                        "detailAvailable":  false
                     },
                     {
                         "id":  "dash-0b88c5023c953c79",
@@ -1099,47 +692,23 @@
                         "playerCount":  9,
                         "survivalRounds":  2,
                         "detail":  {
-                                       "available":  true,
-                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/U05623082026190096642",
-                                       "title":  "Gaggle Fun 🎮 Next Level Social Gaming",
-                                       "text":  "返回\n对局信息\n对局ID: #U05623082026190096642\nEnglish\n中文\n\nLoading...",
-                                       "headings":  [
-                                                        "对局信息",
-                                                        "对局ID: #U05623082026190096642"
-                                                    ],
-                                       "tables":  [
+                                       "available":  false,
+                                       "captureBuild":  "1.16.16",
+                                       "fetchedAt":  "2026-08-24T12:21:53.1078831+08:00",
+                                       "reason":  "Gaggle detail route was reached, but it never left the Loading state and no readable match API response was captured.",
+                                       "hiddenIds":  [
 
-                                                  ],
-                                       "fields":  [
+                                                     ],
+                                       "contextHints":  [
 
-                                                  ],
-                                       "participants":  [
-
-                                                        ],
-                                       "events":  [
-
-                                                  ],
-                                       "lists":  [
-
-                                                 ],
-                                       "resourcePaths":  [
-                                                             "https://gaggle.fun/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
-                                                             "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
-                                                             "https://fonts.googleapis.com/css2",
-                                                             "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2",
-                                                             "https://firebase.googleapis.com/v1alpha/projects/-/apps/1:771149490703:web:b92da74121911256af517a/webConfig",
-                                                             "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
-                                                             "https://gaggle.fun/assets/images/company-logos/gaggle-logo.png",
-                                                             "https://gaggle.fun/assets/images/ggd/icon-total_matches.png"
-                                                         ],
-                                       "fetchedAt":  "2026-08-24T09:59:22.7087352+08:00"
+                                                        ]
                                    },
-                        "detailAvailable":  true
+                        "detailAvailable":  false
                     }
                 ],
     "meta":  {
                  "matchCount":  18,
-                 "detailCount":  18,
+                 "detailCount":  0,
                  "playniteSeconds":  44460,
                  "dashboardVisible":  18
              }
