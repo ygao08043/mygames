@@ -1,307 +1,486 @@
 {
-    "build":  "1.16.13",
-    "updatedAt":  "2026-08-24T10:36:54.4009603+08:00",
+    "build":  "1.16.14",
+    "updatedAt":  "2026-08-24T11:08:14.8090723+08:00",
     "status":  "ok",
+    "lastError":  "",
     "binding":  {
                     "bound":  true,
-                    "method":  "screenshot_authoritative",
+                    "method":  "PUBG Developer API",
+                    "platform":  "steam",
                     "weaponMasteryOnly":  true
                 },
     "profile":  {
-                    "name":  "PIANOYMKF"
+                    "name":  "PIANOYMKF",
+                    "accountId":  "account.635b00c0f05d46138d6b6174dffcf5fd"
                 },
-    "source":  {
-                   "name":  "小黑盒武器熟练度截图",
-                   "capturedDate":  "2026-08-24",
-                   "authoritative":  true
-               },
     "weapons":  [
                     {
-                        "name":  "SKS",
-                        "level":  32,
-                        "kills":  46,
-                        "roundMostKills":  5,
-                        "longestKill":  263
-                    },
-                    {
-                        "name":  "Kar98k",
-                        "level":  26,
-                        "kills":  36,
-                        "roundMostKills":  5,
-                        "longestKill":  768
-                    },
-                    {
-                        "name":  "M24",
-                        "level":  26,
-                        "kills":  33,
-                        "roundMostKills":  4,
-                        "longestKill":  348
-                    },
-                    {
-                        "name":  "AUG",
-                        "level":  22,
-                        "kills":  32,
-                        "roundMostKills":  7,
-                        "longestKill":  156
-                    },
-                    {
-                        "name":  "Beryl-M762",
-                        "level":  22,
-                        "kills":  39,
-                        "roundMostKills":  5,
-                        "longestKill":  189
-                    },
-                    {
-                        "name":  "M416",
-                        "level":  21,
-                        "kills":  30,
-                        "roundMostKills":  2,
-                        "longestKill":  271
-                    },
-                    {
-                        "name":  "AKM",
-                        "level":  17,
-                        "kills":  21,
-                        "roundMostKills":  6,
-                        "longestKill":  74
-                    },
-                    {
-                        "name":  "M16A4",
-                        "level":  15,
-                        "kills":  21,
-                        "roundMostKills":  4,
-                        "longestKill":  99
-                    },
-                    {
+                        "id":  "Item_Weapon_ACE32_C",
                         "name":  "ACE32",
                         "level":  14,
                         "kills":  17,
                         "roundMostKills":  3,
-                        "longestKill":  160
+                        "longestKill":  160,
+                        "source":  "小黑盒截图校准"
                     },
                     {
-                        "name":  "M249",
-                        "level":  13,
-                        "kills":  8,
-                        "roundMostKills":  3,
-                        "longestKill":  158
+                        "id":  "Item_Weapon_AK47_C",
+                        "name":  "AKM",
+                        "level":  17,
+                        "kills":  21,
+                        "roundMostKills":  6,
+                        "longestKill":  74,
+                        "source":  "小黑盒截图校准"
                     },
                     {
-                        "name":  "Mk47",
-                        "level":  12,
-                        "kills":  13,
-                        "roundMostKills":  5,
-                        "longestKill":  167
+                        "id":  "Item_Weapon_AUG_C",
+                        "name":  "AUG",
+                        "level":  22,
+                        "kills":  32,
+                        "roundMostKills":  7,
+                        "longestKill":  156,
+                        "source":  "小黑盒截图校准"
                     },
                     {
-                        "name":  "Dragunov",
-                        "level":  11,
-                        "kills":  11,
-                        "roundMostKills":  2,
-                        "longestKill":  188
-                    },
-                    {
-                        "name":  "UMP45",
-                        "level":  11,
-                        "kills":  10,
-                        "roundMostKills":  2,
-                        "longestKill":  125
-                    },
-                    {
-                        "name":  "Vector",
-                        "level":  11,
-                        "kills":  9,
-                        "roundMostKills":  2,
-                        "longestKill":  39
-                    },
-                    {
-                        "name":  "MosinNagant",
-                        "level":  10,
-                        "kills":  6,
-                        "roundMostKills":  1,
-                        "longestKill":  132
-                    },
-                    {
-                        "name":  "G36C",
-                        "level":  9,
-                        "kills":  8,
-                        "roundMostKills":  2,
-                        "longestKill":  138
-                    },
-                    {
-                        "name":  "VSS",
-                        "level":  9,
-                        "kills":  5,
-                        "roundMostKills":  1,
-                        "longestKill":  172
-                    },
-                    {
-                        "name":  "SLR",
-                        "level":  8,
-                        "kills":  6,
-                        "roundMostKills":  3,
-                        "longestKill":  191
-                    },
-                    {
-                        "name":  "MP9",
-                        "level":  8,
-                        "kills":  5,
-                        "roundMostKills":  3,
-                        "longestKill":  39
-                    },
-                    {
-                        "name":  "Mini-14",
-                        "level":  8,
-                        "kills":  4,
-                        "roundMostKills":  2,
-                        "longestKill":  52
-                    },
-                    {
-                        "name":  "Mk12",
-                        "level":  8,
-                        "kills":  4,
-                        "roundMostKills":  1,
-                        "longestKill":  178
-                    },
-                    {
-                        "name":  "QBZ",
-                        "level":  8,
-                        "kills":  8,
-                        "roundMostKills":  3,
-                        "longestKill":  61
-                    },
-                    {
-                        "name":  "PP-19",
-                        "level":  6,
-                        "kills":  7,
-                        "roundMostKills":  2,
-                        "longestKill":  75
-                    },
-                    {
-                        "name":  "Micro-UZI",
-                        "level":  6,
-                        "kills":  4,
-                        "roundMostKills":  1,
-                        "longestKill":  15
-                    },
-                    {
-                        "name":  "JS9",
-                        "level":  5,
-                        "kills":  4,
-                        "roundMostKills":  1,
-                        "longestKill":  41
-                    },
-                    {
-                        "name":  "Win94",
-                        "level":  5,
-                        "kills":  3,
-                        "roundMostKills":  2,
-                        "longestKill":  151
-                    },
-                    {
-                        "name":  "S686",
-                        "level":  4,
-                        "kills":  4,
-                        "roundMostKills":  1,
-                        "longestKill":  12
-                    },
-                    {
-                        "name":  "P90",
-                        "level":  4,
-                        "kills":  3,
-                        "roundMostKills":  2,
-                        "longestKill":  68
-                    },
-                    {
-                        "name":  "S1897",
-                        "level":  4,
-                        "kills":  3,
-                        "roundMostKills":  1,
-                        "longestKill":  12
-                    },
-                    {
-                        "name":  "Skorpion",
-                        "level":  3,
-                        "kills":  1,
-                        "roundMostKills":  1,
-                        "longestKill":  33
-                    },
-                    {
-                        "name":  "DBS",
-                        "level":  2,
-                        "kills":  1,
-                        "roundMostKills":  1,
-                        "longestKill":  1
-                    },
-                    {
-                        "name":  "DP-28",
-                        "level":  2,
-                        "kills":  1,
-                        "roundMostKills":  1,
-                        "longestKill":  5
-                    },
-                    {
-                        "name":  "QBU",
-                        "level":  2,
-                        "kills":  2,
-                        "roundMostKills":  1,
-                        "longestKill":  181
-                    },
-                    {
-                        "name":  "S12K",
-                        "level":  2,
-                        "kills":  1,
-                        "roundMostKills":  1,
-                        "longestKill":  6
-                    },
-                    {
-                        "name":  "汤姆逊",
-                        "level":  2,
-                        "kills":  1,
-                        "roundMostKills":  1,
-                        "longestKill":  14
-                    },
-                    {
+                        "id":  "Item_Weapon_AWM_C",
                         "name":  "AWM",
                         "level":  1,
                         "kills":  0,
                         "roundMostKills":  0,
-                        "longestKill":  0
+                        "longestKill":  0,
+                        "source":  "小黑盒截图校准"
                     },
                     {
+                        "id":  "Item_Weapon_Berreta686_C",
+                        "name":  "S686",
+                        "level":  4,
+                        "kills":  4,
+                        "roundMostKills":  1,
+                        "longestKill":  12,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_BerylM762_C",
+                        "name":  "Beryl-M762",
+                        "level":  22,
+                        "kills":  39,
+                        "roundMostKills":  5,
+                        "longestKill":  189,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_BizonPP19_C",
+                        "name":  "PP-19",
+                        "level":  6,
+                        "kills":  7,
+                        "roundMostKills":  2,
+                        "longestKill":  75,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_Crossbow_C",
                         "name":  "十字弩",
                         "level":  1,
                         "kills":  0,
                         "roundMostKills":  0,
-                        "longestKill":  0
+                        "longestKill":  0,
+                        "source":  "小黑盒截图校准"
                     },
                     {
+                        "id":  "Item_Weapon_DP12_C",
+                        "name":  "DBS",
+                        "level":  2,
+                        "kills":  1,
+                        "roundMostKills":  1,
+                        "longestKill":  1,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_DP28_C",
+                        "name":  "DP-28",
+                        "level":  2,
+                        "kills":  1,
+                        "roundMostKills":  1,
+                        "longestKill":  5,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_DesertEagle_C",
                         "name":  "DesertEagle",
                         "level":  1,
                         "kills":  0,
                         "roundMostKills":  0,
-                        "longestKill":  0
+                        "longestKill":  0,
+                        "source":  "小黑盒截图校准"
                     },
                     {
+                        "id":  "Item_Weapon_Dragunov_C",
+                        "name":  "Dragunov",
+                        "level":  11,
+                        "kills":  11,
+                        "roundMostKills":  2,
+                        "longestKill":  188,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_FAMASG2_C",
                         "name":  "FAMASG2",
                         "level":  1,
                         "kills":  0,
                         "roundMostKills":  0,
-                        "longestKill":  0
+                        "longestKill":  0,
+                        "source":  "小黑盒截图校准"
                     },
                     {
+                        "id":  "Item_Weapon_FNFal_C",
+                        "name":  "SLR",
+                        "level":  8,
+                        "kills":  6,
+                        "roundMostKills":  3,
+                        "longestKill":  191,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_G18_C",
                         "name":  "P18C",
                         "level":  1,
                         "kills":  0,
                         "roundMostKills":  0,
-                        "longestKill":  0
+                        "longestKill":  0,
+                        "source":  "小黑盒截图校准"
                     },
                     {
+                        "id":  "Item_Weapon_G36C_C",
+                        "name":  "G36C",
+                        "level":  9,
+                        "kills":  8,
+                        "roundMostKills":  2,
+                        "longestKill":  138,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_Groza_C",
                         "name":  "Groza",
                         "level":  1,
                         "kills":  0,
                         "roundMostKills":  0,
-                        "longestKill":  0
+                        "longestKill":  0,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_HK416_C",
+                        "name":  "M416",
+                        "level":  21,
+                        "kills":  30,
+                        "roundMostKills":  2,
+                        "longestKill":  271,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_JS9_C",
+                        "name":  "JS9",
+                        "level":  5,
+                        "kills":  4,
+                        "roundMostKills":  1,
+                        "longestKill":  41,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_K2_C",
+                        "name":  "K2",
+                        "level":  1,
+                        "kills":  0,
+                        "roundMostKills":  0,
+                        "longestKill":  0,
+                        "source":  "PUBG Weapon Mastery"
+                    },
+                    {
+                        "id":  "Item_Weapon_Kar98k_C",
+                        "name":  "Kar98k",
+                        "level":  26,
+                        "kills":  36,
+                        "roundMostKills":  5,
+                        "longestKill":  768,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_M16A4_C",
+                        "name":  "M16A4",
+                        "level":  15,
+                        "kills":  21,
+                        "roundMostKills":  4,
+                        "longestKill":  99,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_M1911_C",
+                        "name":  "P1911",
+                        "level":  1,
+                        "kills":  0,
+                        "roundMostKills":  0,
+                        "longestKill":  0,
+                        "source":  "PUBG Weapon Mastery"
+                    },
+                    {
+                        "id":  "Item_Weapon_M249_C",
+                        "name":  "M249",
+                        "level":  13,
+                        "kills":  8,
+                        "roundMostKills":  3,
+                        "longestKill":  158,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_M24_C",
+                        "name":  "M24",
+                        "level":  26,
+                        "kills":  33,
+                        "roundMostKills":  4,
+                        "longestKill":  348,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_M9_C",
+                        "name":  "P92",
+                        "level":  1,
+                        "kills":  0,
+                        "roundMostKills":  0,
+                        "longestKill":  0,
+                        "source":  "PUBG Weapon Mastery"
+                    },
+                    {
+                        "id":  "Item_Weapon_MG3_C",
+                        "name":  "MG3",
+                        "level":  1,
+                        "kills":  0,
+                        "roundMostKills":  0,
+                        "longestKill":  0,
+                        "source":  "PUBG Weapon Mastery"
+                    },
+                    {
+                        "id":  "Item_Weapon_MP5K_C",
+                        "name":  "MP5K",
+                        "level":  1,
+                        "kills":  0,
+                        "roundMostKills":  0,
+                        "longestKill":  0,
+                        "source":  "PUBG Weapon Mastery"
+                    },
+                    {
+                        "id":  "Item_Weapon_MP9_C",
+                        "name":  "MP9",
+                        "level":  8,
+                        "kills":  5,
+                        "roundMostKills":  3,
+                        "longestKill":  39,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_Mini14_C",
+                        "name":  "Mini-14",
+                        "level":  8,
+                        "kills":  4,
+                        "roundMostKills":  2,
+                        "longestKill":  52,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_Mk12_C",
+                        "name":  "Mk12",
+                        "level":  8,
+                        "kills":  4,
+                        "roundMostKills":  1,
+                        "longestKill":  178,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_Mk14_C",
+                        "name":  "Mk14",
+                        "level":  1,
+                        "kills":  0,
+                        "roundMostKills":  0,
+                        "longestKill":  0,
+                        "source":  "PUBG Weapon Mastery"
+                    },
+                    {
+                        "id":  "Item_Weapon_Mk47Mutant_C",
+                        "name":  "Mk47",
+                        "level":  12,
+                        "kills":  13,
+                        "roundMostKills":  5,
+                        "longestKill":  167,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_Mosin_C",
+                        "name":  "MosinNagant",
+                        "level":  10,
+                        "kills":  6,
+                        "roundMostKills":  1,
+                        "longestKill":  132,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_NagantM1895_C",
+                        "name":  "R1895",
+                        "level":  1,
+                        "kills":  0,
+                        "roundMostKills":  0,
+                        "longestKill":  0,
+                        "source":  "PUBG Weapon Mastery"
+                    },
+                    {
+                        "id":  "Item_Weapon_OriginS12_C",
+                        "name":  "O12",
+                        "level":  1,
+                        "kills":  0,
+                        "roundMostKills":  0,
+                        "longestKill":  0,
+                        "source":  "PUBG Weapon Mastery"
+                    },
+                    {
+                        "id":  "Item_Weapon_P90_C",
+                        "name":  "P90",
+                        "level":  4,
+                        "kills":  3,
+                        "roundMostKills":  2,
+                        "longestKill":  68,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_QBU88_C",
+                        "name":  "QBU",
+                        "level":  2,
+                        "kills":  2,
+                        "roundMostKills":  1,
+                        "longestKill":  181,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_QBZ95_C",
+                        "name":  "QBZ",
+                        "level":  8,
+                        "kills":  8,
+                        "roundMostKills":  3,
+                        "longestKill":  61,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_Rhino_C",
+                        "name":  "R45",
+                        "level":  1,
+                        "kills":  0,
+                        "roundMostKills":  0,
+                        "longestKill":  0,
+                        "source":  "PUBG Weapon Mastery"
+                    },
+                    {
+                        "id":  "Item_Weapon_SCAR-L_C",
+                        "name":  "SCAR-L",
+                        "level":  1,
+                        "kills":  0,
+                        "roundMostKills":  0,
+                        "longestKill":  0,
+                        "source":  "PUBG Weapon Mastery"
+                    },
+                    {
+                        "id":  "Item_Weapon_SKS_C",
+                        "name":  "SKS",
+                        "level":  32,
+                        "kills":  46,
+                        "roundMostKills":  5,
+                        "longestKill":  263,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_Saiga12_C",
+                        "name":  "S12K",
+                        "level":  2,
+                        "kills":  1,
+                        "roundMostKills":  1,
+                        "longestKill":  6,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_Sawnoff_C",
+                        "name":  "Sawed-off",
+                        "level":  1,
+                        "kills":  0,
+                        "roundMostKills":  0,
+                        "longestKill":  0,
+                        "source":  "PUBG Weapon Mastery"
+                    },
+                    {
+                        "id":  "Item_Weapon_Thompson_C",
+                        "name":  "汤姆逊",
+                        "level":  2,
+                        "kills":  1,
+                        "roundMostKills":  1,
+                        "longestKill":  14,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_UMP_C",
+                        "name":  "UMP45",
+                        "level":  11,
+                        "kills":  10,
+                        "roundMostKills":  2,
+                        "longestKill":  125,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_UZI_C",
+                        "name":  "Micro-UZI",
+                        "level":  6,
+                        "kills":  4,
+                        "roundMostKills":  1,
+                        "longestKill":  15,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_VSS_C",
+                        "name":  "VSS",
+                        "level":  9,
+                        "kills":  5,
+                        "roundMostKills":  1,
+                        "longestKill":  172,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_Vector_C",
+                        "name":  "Vector",
+                        "level":  11,
+                        "kills":  9,
+                        "roundMostKills":  2,
+                        "longestKill":  39,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_Win1894_C",
+                        "name":  "Win94",
+                        "level":  5,
+                        "kills":  3,
+                        "roundMostKills":  2,
+                        "longestKill":  151,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_Winchester_C",
+                        "name":  "S1897",
+                        "level":  4,
+                        "kills":  3,
+                        "roundMostKills":  1,
+                        "longestKill":  12,
+                        "source":  "小黑盒截图校准"
+                    },
+                    {
+                        "id":  "Item_Weapon_vz61Skorpion_C",
+                        "name":  "Skorpion",
+                        "level":  3,
+                        "kills":  1,
+                        "roundMostKills":  1,
+                        "longestKill":  33,
+                        "source":  "小黑盒截图校准"
                     }
                 ]
 }
