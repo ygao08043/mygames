@@ -4,12 +4,16 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Goose Goose Duck · 战绩</title>
 <style>
-:root{color-scheme:dark;--bg:#0b1016;--panel:#121a24;--panel2:#182331;--line:#283748;--text:#edf4fa;--muted:#91a4b7;--cyan:#6dd8ff;--green:#65e69a;--yellow:#ffd978;--red:#ff8585}
-*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#0b1118,#080c11 45%,#0a0f15);color:var(--text);font:14px/1.55 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif}.wrap{max-width:1180px;margin:auto;padding:22px}.back{color:var(--muted);text-decoration:none}.hero{display:flex;gap:18px;align-items:center;margin:20px 0}.avatar{width:78px;height:78px;border-radius:18px;object-fit:cover;background:#1d2a38;border:1px solid var(--line)}h1{font-size:30px;margin:0}.sub{color:var(--muted);margin-top:4px}.pill{display:inline-flex;padding:4px 9px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:12px}.pill.ok{color:var(--green);border-color:#2f7350}
-.nav{display:flex;gap:8px;overflow-x:auto;margin:18px 0}.nav button,.sortBtn,.pageBtn,select{border:1px solid var(--line);background:#111a24;color:var(--muted);border-radius:10px;padding:9px 13px}.nav button,.sortBtn,.pageBtn{cursor:pointer}.nav button.active{background:#1b2b39;color:#fff;border-color:#40718a}.page{display:none}.page.active{display:block}.section{margin-top:18px}.section h2{font-size:18px;margin:0 0 10px}.notice{background:#171d24;border:1px solid #5c5034;color:#eadca9;border-radius:12px;padding:12px;margin:14px 0}.muted{color:var(--muted)}
-.tableWrap{overflow:auto;border:1px solid var(--line);border-radius:14px;background:var(--panel)}table{width:100%;border-collapse:collapse;min-width:720px}th,td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}th:first-child,td:first-child{text-align:left}th{font-size:12px;color:var(--muted);background:var(--panel2);position:sticky;top:0;z-index:1}tbody tr:last-child td{border-bottom:0}tbody tr:hover{background:#16202c}.roleCell{display:flex;align-items:center;gap:10px;font-weight:700}.roleIcon{width:38px;height:38px;object-fit:contain}.sortBtn{border:0;background:transparent;padding:0;font-weight:700;display:inline-flex;gap:5px;align-items:center}.sortBtn.active{color:var(--text)}.sortMark{color:var(--cyan);min-width:12px}.filters{display:flex;gap:8px;overflow-x:auto;white-space:nowrap;margin:10px 0 14px}.filters select{min-width:130px;color:var(--text);cursor:pointer}
-.matches{display:grid;gap:10px}.match{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}.matchHead{display:grid;grid-template-columns:minmax(230px,2fr) .75fr .8fr .75fr .75fr;gap:10px;align-items:center;padding:12px 14px}.player{display:flex;align-items:center;gap:12px;min-width:0}.matchRoleIcon{width:48px;height:48px;object-fit:contain;flex:0 0 48px}.playerMain{min-width:0}.playerMain b{display:block;font-size:16px}.playerMain span{display:block;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.result{font-weight:700}.result.win{color:var(--green)}.result.loss{color:var(--red)}.metric .label{display:block;color:var(--muted);font-size:12px}.detailBox{border-top:1px solid var(--line)}details{background:#101720}details>summary{cursor:pointer;list-style:none;padding:11px 14px;color:var(--cyan);font-weight:700}details>summary::-webkit-details-marker{display:none}.detailInner{padding:0 14px 16px}.detailFields{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;margin:8px 0}.field{background:#151f2b;border:1px solid var(--line);border-radius:10px;padding:9px}.field .k{font-size:11px;color:var(--muted)}.field .v{margin-top:2px;font-weight:650;white-space:normal;word-break:break-word}.detailSection{margin-top:14px}.detailSection h3{font-size:14px;margin:0 0 8px}.miniCards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px}.miniCard{background:#151f2b;border:1px solid var(--line);border-radius:10px;padding:9px;white-space:pre-wrap;word-break:break-word}.detailTable{overflow:auto;border:1px solid var(--line);border-radius:10px;margin:8px 0}.detailTable table{min-width:520px}.raw{max-height:360px;overflow:auto;background:#0c1219;border:1px solid var(--line);border-radius:10px;padding:11px;white-space:pre-wrap;word-break:break-word;color:#c8d3de;font:12px/1.55 ui-monospace,SFMono-Regular,Consolas,monospace}.noDetail{border-top:1px solid var(--line);padding:10px 14px;color:var(--muted);font-size:12px}.pages{display:flex;gap:8px;align-items:center;justify-content:center;margin:14px 0}.pageBtn:disabled{opacity:.45;cursor:default}.empty{color:var(--muted);padding:28px;text-align:center;border:1px dashed var(--line);border-radius:14px}.count{color:var(--muted);font-size:12px;margin-left:7px}
-@media(max-width:760px){.matchHead{grid-template-columns:1fr 1fr}.player{grid-column:1/-1}.hero{align-items:flex-start}.wrap{padding:16px}.avatar{width:64px;height:64px}h1{font-size:25px}}
+:root{color-scheme:dark;--bg:#0b1016;--panel:#121a24;--panel2:#182331;--line:#283748;--text:#edf4fa;--muted:#91a4b7;--cyan:#6dd8ff;--green:#65e69a;--yellow:#ffd978;--red:#ff6d76;--duck:#e75a63;--goose:#47b979;--neutral:#e3b93d}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#0b1118,#080c11 45%,#0a0f15);color:var(--text);font:14px/1.55 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif}.wrap{max-width:1180px;margin:auto;padding:22px}.back{color:var(--muted);text-decoration:none}.hero{display:flex;gap:18px;align-items:center;margin:20px 0}.avatar{width:78px;height:78px;border-radius:18px;object-fit:cover;background:#1d2a38;border:1px solid var(--line)}h1{font-size:30px;margin:0}.sub,.muted{color:var(--muted)}.pill{display:inline-flex;padding:4px 9px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:12px}.pill.ok{color:var(--green);border-color:#2f7350}
+.nav{display:flex;gap:8px;overflow-x:auto;margin:18px 0}.nav button,.sortBtn,.pageBtn,.seg button,select{border:1px solid var(--line);background:#111a24;color:var(--muted);border-radius:10px;padding:9px 13px}.nav button,.sortBtn,.pageBtn,.seg button{cursor:pointer}.nav button.active,.seg button.active{background:#1b2b39;color:#fff;border-color:#40718a}.page{display:none}.page.active{display:block}.section{margin-top:18px}.section h2{font-size:18px;margin:0 0 10px}.notice{background:#171d24;border:1px solid #5c5034;color:#eadca9;border-radius:12px;padding:12px;margin:14px 0}
+.overviewTop{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.metricCard,.factionCard{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:15px}.metricCard .value{font-size:25px;font-weight:800}.metricCard .label{color:var(--muted);font-size:12px;margin-top:4px}.factionGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.factionCard{display:flex;justify-content:space-between;align-items:center}.factionCard strong{font-size:20px}.factionCard.goose{border-color:#2d6a4c}.factionCard.duck{border-color:#79353c}.factionCard.neutral{border-color:#766127}
+.recentGrid{display:grid;grid-template-columns:repeat(10,minmax(46px,1fr));gap:7px}.recentSquare{aspect-ratio:1;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.035);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.recentSquare.loss{background:rgba(255,255,255,.025);opacity:.55}.recentSquare.win.goose{background:rgba(71,185,121,.5);border-color:rgba(71,185,121,.95)}.recentSquare.win.duck{background:rgba(231,90,99,.5);border-color:rgba(231,90,99,.95)}.recentSquare.win.neutral{background:rgba(227,185,61,.5);border-color:rgba(227,185,61,.95)}.recentSquare img{width:78%;height:78%;object-fit:contain}.recentSquare .n{font-size:11px;color:var(--muted)}
+.tableWrap{overflow:auto;border:1px solid var(--line);border-radius:14px;background:var(--panel)}table{width:100%;border-collapse:collapse;min-width:720px}th,td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}th:first-child,td:first-child{text-align:left}th{font-size:12px;color:var(--muted);background:var(--panel2);position:sticky;top:0;z-index:1}tbody tr:last-child td{border-bottom:0}tbody tr:hover{background:#16202c}.roleCell{display:flex;align-items:center;gap:10px;font-weight:700}.roleIcon{width:38px;height:38px;object-fit:contain}.factionTag{font-size:11px;border-radius:999px;padding:2px 7px;margin-left:6px;border:1px solid var(--line);color:var(--muted)}.factionTag.goose{color:var(--green)}.factionTag.duck{color:var(--red)}.factionTag.neutral{color:var(--yellow)}
+.sortBtn{border:0;background:transparent;padding:0;font-weight:700;display:inline-flex;gap:5px;align-items:center}.sortBtn.active{color:var(--text)}.sortMark{color:var(--cyan);min-width:12px}.seg{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 14px}.seg button{padding:7px 12px}.filters{display:flex;gap:8px;overflow-x:auto;white-space:nowrap;margin:10px 0 14px}.filters select{min-width:130px;color:var(--text);cursor:pointer}
+.matches{display:grid;gap:10px}.match{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}.matchHead{display:grid;grid-template-columns:minmax(230px,2fr) .75fr .8fr .75fr .75fr;gap:10px;align-items:center;padding:12px 14px}.player{display:flex;align-items:center;gap:12px;min-width:0}.matchRoleIcon{width:48px;height:48px;object-fit:contain;flex:0 0 48px}.playerMain{min-width:0}.playerMain b{display:block;font-size:16px}.playerMain span{display:block;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.result{font-weight:700}.result.win{color:var(--green)}.result.loss{color:var(--red)}.metric .label{display:block;color:var(--muted);font-size:12px}
+.detailBox{border-top:1px solid var(--line)}details{background:#101720}details>summary{cursor:pointer;list-style:none;padding:11px 14px;color:var(--cyan);font-weight:700}details>summary::-webkit-details-marker{display:none}.detailInner{padding:0 14px 16px}.detailFields{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;margin:8px 0}.field{background:#151f2b;border:1px solid var(--line);border-radius:10px;padding:9px}.field .k{font-size:11px;color:var(--muted)}.field .v{margin-top:2px;font-weight:650;white-space:normal;word-break:break-word}.detailSection{margin-top:14px}.detailSection h3{font-size:14px;margin:0 0 8px}.miniCards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px}.miniCard{background:#151f2b;border:1px solid var(--line);border-radius:10px;padding:9px;white-space:pre-wrap;word-break:break-word}.board{overflow:auto;border:1px solid var(--line);border-radius:12px}.board table{min-width:720px}.board td,.board th{text-align:center}.board td:nth-child(2),.board th:nth-child(2){text-align:left}.replay{display:grid;gap:8px}.replayItem{background:#151f2b;border:1px solid var(--line);border-radius:10px;padding:10px}.replayItem .eventTitle{font-weight:800}.raw{max-height:360px;overflow:auto;background:#0c1219;border:1px solid var(--line);border-radius:10px;padding:11px;white-space:pre-wrap;word-break:break-word;color:#c8d3de;font:12px/1.55 ui-monospace,SFMono-Regular,Consolas,monospace}.noDetail{border-top:1px solid var(--line);padding:10px 14px;color:var(--muted);font-size:12px}.pages{display:flex;gap:8px;align-items:center;justify-content:center;margin:14px 0}.pageBtn:disabled{opacity:.45;cursor:default}.empty{color:var(--muted);padding:28px;text-align:center;border:1px dashed var(--line);border-radius:14px}.count{color:var(--muted);font-size:12px;margin-left:7px}
+@media(max-width:760px){.matchHead{grid-template-columns:1fr 1fr}.player{grid-column:1/-1}.hero{align-items:flex-start}.wrap{padding:16px}.avatar{width:64px;height:64px}h1{font-size:25px}.overviewTop{grid-template-columns:1fr 1fr}.recentGrid{grid-template-columns:repeat(5,1fr)}.factionGrid{grid-template-columns:1fr}}
 </style>
 <!-- YMKF site icon hf26 -->
 <link rel="icon" type="image/svg+xml" href="../assets/playnite/site-icon.svg">
@@ -25,28 +29,266 @@
 <body><main class="wrap">
 <a class="back" href="../index.html">← 返回游戏库</a>
 <div class="hero"><img id="avatar" class="avatar" alt=""><div><h1>Goose Goose Duck</h1><div id="profileName" class="sub">鹅鸭杀战绩</div><div style="margin-top:8px"><span id="bindPill" class="pill">读取中</span></div></div></div>
-<div class="nav"><button class="active" data-page="roles">身份统计</button><button data-page="matches">全部对局记录</button></div>
-<section id="roles" class="page active"><div class="section"><h2>身份统计 <span id="roleCount" class="count"></span></h2><div class="tableWrap"><table><thead><tr><th>身份</th><th><button class="sortBtn active" data-sort="uses">使用次数 <span class="sortMark"></span></button></th><th><button class="sortBtn" data-sort="wins">胜场 <span class="sortMark"></span></button></th><th><button class="sortBtn" data-sort="losses">败场 <span class="sortMark"></span></button></th><th><button class="sortBtn" data-sort="winRate">胜率 <span class="sortMark"></span></button></th></tr></thead><tbody id="roleBody"></tbody></table></div></div><div class="section"><div class="notice">身份统计按当前已缓存的官方对局记录汇总；同步程序会持续合并以后能从 Gaggle 官方页面取得的对局，不会因为页面只显示近期记录而删除旧缓存。</div></div></section>
-<section id="matches" class="page"><div id="matchNotice"></div><div class="section"><h2>全部对局记录 <span id="matchCount" class="count"></span></h2><div class="muted" style="margin-bottom:8px">默认按时间：新 → 旧</div><div class="filters"><select id="roleFilter"><option value="">全部身份</option></select><select id="resultFilter"><option value="">全部结果</option><option value="win">胜利</option><option value="loss">失败</option></select><select id="modeFilter"><option value="">全部模式</option></select><select id="playerFilter"><option value="">全部玩家人数</option></select><select id="roundFilter"><option value="">全部存活回合</option></select></div><div id="matchList" class="matches"></div><div id="matchPages" class="pages"></div></div></section>
-<div class="sub" style="margin-top:22px">Build v1.16.14</div>
+
+<div class="nav">
+  <button class="active" data-page="overviewPage">总览</button>
+  <button data-page="roles">身份统计</button>
+  <button data-page="matches">全部对局记录</button>
+</div>
+
+<section id="overviewPage" class="page active">
+  <div class="section">
+    <h2>总览</h2>
+    <div class="overviewTop">
+      <div class="metricCard"><div id="ovTime" class="value">—</div><div class="label">游戏时间</div></div>
+      <div class="metricCard"><div id="ovMatches" class="value">—</div><div class="label">总场次</div></div>
+      <div class="metricCard"><div id="ovWinRate" class="value">—</div><div class="label">总胜率</div></div>
+      <div class="metricCard"><div id="ovAchievements" class="value">—</div><div class="label">成就完成</div></div>
+    </div>
+  </div>
+  <div class="section">
+    <h2>阵营表现</h2>
+    <div id="factionOverview" class="factionGrid"></div>
+  </div>
+  <div class="section">
+    <h2>近 50 场比赛</h2>
+    <div class="muted" style="margin-bottom:8px">失败为透明；鸭胜红色、鹅胜绿色、中立胜黄色。按时间新 → 旧。</div>
+    <div id="recent50" class="recentGrid"></div>
+  </div>
+</section>
+
+<section id="roles" class="page">
+  <div class="section">
+    <h2>身份统计 <span id="roleCount" class="count"></span></h2>
+    <div id="factionSeg" class="seg">
+      <button class="active" data-faction="">全部</button>
+      <button data-faction="鹅">鹅</button>
+      <button data-faction="鸭">鸭</button>
+      <button data-faction="中立">中立</button>
+    </div>
+    <div class="tableWrap"><table><thead><tr>
+      <th>身份</th>
+      <th><button class="sortBtn active" data-sort="uses">使用次数 <span class="sortMark"></span></button></th>
+      <th><button class="sortBtn" data-sort="wins">胜场 <span class="sortMark"></span></button></th>
+      <th><button class="sortBtn" data-sort="losses">败场 <span class="sortMark"></span></button></th>
+      <th><button class="sortBtn" data-sort="winRate">胜率 <span class="sortMark"></span></button></th>
+    </tr></thead><tbody id="roleBody"></tbody></table></div>
+  </div>
+</section>
+
+<section id="matches" class="page">
+  <div id="matchNotice"></div>
+  <div class="section">
+    <h2>全部对局记录 <span id="matchCount" class="count"></span></h2>
+    <div class="muted" style="margin-bottom:8px">默认按时间：新 → 旧</div>
+    <div class="filters">
+      <select id="roleFilter"><option value="">全部身份</option></select>
+      <select id="resultFilter"><option value="">全部结果</option><option value="win">胜利</option><option value="loss">失败</option></select>
+      <select id="modeFilter"><option value="">全部模式</option></select>
+      <select id="playerFilter"><option value="">全部玩家人数</option></select>
+      <select id="roundFilter"><option value="">全部存活回合</option></select>
+    </div>
+    <div id="matchList" class="matches"></div>
+    <div id="matchPages" class="pages"></div>
+  </div>
+</section>
+
+<div class="sub" style="margin-top:22px">Build v1.16.15</div>
 </main>
 <script>
-const DATA='../data/goose-goose-duck.json?v=1.16.14';
-let D=null,page=1;const PAGE=20;let roleSort='uses',roleDir='desc';
-const $=s=>document.querySelector(s);const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const num=v=>v==null?'—':Number(v).toLocaleString('zh-CN');const pct=v=>v==null?'—':(Number(v)*100).toFixed(1)+'%';
-function sortRoles(){const rows=Array.isArray(D?.roleStats)?[...D.roleStats]:[];rows.sort((a,b)=>{const av=Number(a?.[roleSort]||0),bv=Number(b?.[roleSort]||0);if(av!==bv)return roleDir==='desc'?bv-av:av-bv;return String(a.role||'').localeCompare(String(b.role||''),'zh-CN')});return rows}
-function renderRoleSort(){document.querySelectorAll('.sortBtn').forEach(b=>{const on=b.dataset.sort===roleSort;b.classList.toggle('active',on);b.querySelector('.sortMark').textContent=on?(roleDir==='desc'?'▼':'▲'):'↕'})}
-function renderRoles(){const rows=sortRoles();$('#roleCount').textContent=`${rows.length} 个身份`;$('#roleBody').innerHTML=rows.length?rows.map(r=>`<tr><td><div class="roleCell">${r.roleIcon?`<img class="roleIcon" src="${esc(r.roleIcon)}" alt="">`:''}<span>${esc(r.role||'—')}</span></div></td><td>${num(r.uses)}</td><td>${num(r.wins)}</td><td>${num(r.losses)}</td><td>${pct(r.winRate)}</td></tr>`).join(''):'<tr><td colspan="5" class="empty">暂无可汇总的身份记录。</td></tr>';renderRoleSort()}
-function matchTime(m){const s=String(m?.date||'').trim();let x=Date.parse(s);if(!Number.isFinite(x)){const q=s.match(/^(\d{1,2})[\/\-.](\d{1,2})[\/\-.](\d{4})$/);if(q)x=Date.UTC(Number(q[3]),Number(q[2])-1,Number(q[1]))}return Number.isFinite(x)?x:0}
-function filteredMatches(){const all=Array.isArray(D?.matches)?[...D.matches]:[];const role=$('#roleFilter').value,res=$('#resultFilter').value,mode=$('#modeFilter').value,players=$('#playerFilter').value,rounds=$('#roundFilter').value;return all.filter(m=>{if(role&&String(m.roleName)!==role)return false;if(mode&&String(m.mode)!==mode)return false;if(res==='win'&&!m.won)return false;if(res==='loss'&&m.won)return false;if(players&&String(m.playerCount)!==players)return false;if(rounds&&String(m.survivalRounds)!==rounds)return false;return true}).sort((a,b)=>{const d=matchTime(b)-matchTime(a);if(d)return d;const ai=Number(a?.sourceIndex??9999),bi=Number(b?.sourceIndex??9999);if(ai!==bi)return ai-bi;return String(b?.id||'').localeCompare(String(a?.id||''))})}
-function renderTable(t){if(!Array.isArray(t)||!t.length)return'';return `<div class="detailTable"><table><tbody>${t.map(r=>`<tr>${(Array.isArray(r)?r:[]).map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`}
+const DATA='../data/goose-goose-duck.json?v=1.16.15';
+let D=null,page=1;const PAGE=20;let roleSort='uses',roleDir='desc',roleFaction='';
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const num=v=>v==null||v===''?'—':Number(v).toLocaleString('zh-CN');
+const pct=v=>v==null||!Number.isFinite(Number(v))?'—':(Number(v)*100).toFixed(1)+'%';
+const factionClass=f=>f==='鹅'?'goose':f==='鸭'?'duck':f==='中立'?'neutral':'';
+
+function matchTime(m){
+  const s=String(m?.date||'').trim();let x=Date.parse(s);
+  if(!Number.isFinite(x)){const q=s.match(/^(\d{1,2})[\/\-.](\d{1,2})[\/\-.](\d{4})$/);if(q)x=Date.UTC(Number(q[3]),Number(q[2])-1,Number(q[1]))}
+  return Number.isFinite(x)?x:0;
+}
+function sortedAllMatches(){
+  const all=Array.isArray(D?.matches)?[...D.matches]:[];
+  return all.sort((a,b)=>{const d=matchTime(b)-matchTime(a);if(d)return d;const ai=Number(a?.sourceIndex??9999),bi=Number(b?.sourceIndex??9999);if(ai!==bi)return ai-bi;return String(b?.id||'').localeCompare(String(a?.id||''))});
+}
+function renderOverview(){
+  const o=D?.overview||{};
+  $('#ovTime').textContent=Number.isFinite(Number(o.gameTimeHours))?Number(o.gameTimeHours).toFixed(1)+'h':'—';
+  $('#ovMatches').textContent=num(o.totalMatches);
+  $('#ovWinRate').textContent=pct(o.totalWinRate);
+  $('#ovAchievements').textContent=o.achievementsCompleted!=null?num(o.achievementsCompleted):(o.achievementsText||'—');
+
+  const fs=Array.isArray(o.factions)?o.factions:[];
+  $('#factionOverview').innerHTML=['鹅','鸭','中立'].map(f=>{
+    const x=fs.find(v=>v?.faction===f)||{games:0,winRate:0};
+    return `<div class="factionCard ${factionClass(f)}"><div><strong>${esc(f)}</strong><div class="muted">${num(x.games)} 场</div></div><div style="text-align:right"><strong>${pct(x.winRate)}</strong><div class="muted">胜率</div></div></div>`;
+  }).join('');
+
+  const rows=sortedAllMatches().filter(m=>m?.roleName).slice(0,50);
+  $('#recent50').innerHTML=rows.length?rows.map((m,i)=>{
+    const f=factionClass(m.faction),state=m.won?`win ${f}`:'loss';
+    const title=`${i+1}. ${m.date||''} · ${m.roleName||''} · ${m.result||''}`;
+    return `<div class="recentSquare ${state}" title="${esc(title)}">${m.roleIcon?`<img src="${esc(m.roleIcon)}" alt="${esc(m.roleName||'')}">`:`<span class="n">${i+1}</span>`}</div>`;
+  }).join(''):'<div class="empty" style="grid-column:1/-1">暂无已缓存对局。</div>';
+}
+function sortRoles(){
+  let rows=Array.isArray(D?.roleStats)?[...D.roleStats]:[];
+  if(roleFaction)rows=rows.filter(r=>r?.faction===roleFaction);
+  rows.sort((a,b)=>{const av=Number(a?.[roleSort]||0),bv=Number(b?.[roleSort]||0);if(av!==bv)return roleDir==='desc'?bv-av:av-bv;return String(a.role||'').localeCompare(String(b.role||''),'zh-CN')});
+  return rows;
+}
+function renderRoleSort(){
+  document.querySelectorAll('.sortBtn').forEach(b=>{const on=b.dataset.sort===roleSort;b.classList.toggle('active',on);b.querySelector('.sortMark').textContent=on?(roleDir==='desc'?'▼':'▲'):'↕'});
+}
+function renderRoles(){
+  const rows=sortRoles();$('#roleCount').textContent=`${rows.length} 个身份`;
+  $('#roleBody').innerHTML=rows.length?rows.map(r=>`<tr><td><div class="roleCell">${r.roleIcon?`<img class="roleIcon" src="${esc(r.roleIcon)}" alt="">`:''}<span>${esc(r.role||'—')}</span><span class="factionTag ${factionClass(r.faction)}">${esc(r.faction||'未知')}</span></div></td><td>${num(r.uses)}</td><td>${num(r.wins)}</td><td>${num(r.losses)}</td><td>${pct(r.winRate)}</td></tr>`).join(''):'<tr><td colspan="5" class="empty">当前阵营筛选下暂无身份记录。</td></tr>';
+  renderRoleSort();
+}
+function filteredMatches(){
+  const all=sortedAllMatches(),role=$('#roleFilter').value,res=$('#resultFilter').value,mode=$('#modeFilter').value,players=$('#playerFilter').value,rounds=$('#roundFilter').value;
+  return all.filter(m=>{if(role&&String(m.roleName)!==role)return false;if(mode&&String(m.mode)!==mode)return false;if(res==='win'&&!m.won)return false;if(res==='loss'&&m.won)return false;if(players&&String(m.playerCount)!==players)return false;if(rounds&&String(m.survivalRounds)!==rounds)return false;return true});
+}
+function renderTable(t){if(!Array.isArray(t)||!t.length)return'';return `<div class="tableWrap"><table><tbody>${t.map(r=>`<tr>${(Array.isArray(r)?r:[]).map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`}
 function cards(title,rows){if(!Array.isArray(rows)||!rows.length)return'';return `<div class="detailSection"><h3>${esc(title)}</h3><div class="miniCards">${rows.map(x=>{const o=typeof x==='string'?{text:x}:x||{};const img=o.image||o.imageData||'';return `<div class="miniCard">${img?`<img src="${esc(img)}" alt="${esc(o.alt||'')}" style="width:36px;height:36px;object-fit:contain;vertical-align:middle;margin-right:8px">`:''}${esc(o.text||'')}</div>`}).join('')}</div></div>`}
-function apiDetails(rows){if(!Array.isArray(rows)||!rows.length)return'';return rows.map((r,i)=>{let body=String(r?.body||'').trim(),shown=body;try{shown=JSON.stringify(JSON.parse(body),null,2)}catch(_){}return `<div class="detailSection"><h3>比赛接口数据 ${i+1}</h3><div class="muted">${esc(r?.url||'')}</div><pre class="raw">${esc(shown)}</pre></div>`}).join('')}
-function renderDetail(d){if(!d||!d.available)return'';const fields=Array.isArray(d.fields)?d.fields:[];const tables=Array.isArray(d.tables)?d.tables:[];const heads=Array.isArray(d.headings)?d.headings.filter(Boolean):[];const lists=Array.isArray(d.lists)?d.lists:[];let out='';if(d.title)out+=`<div class="detailSection"><h3>${esc(d.title)}</h3></div>`;if(fields.length)out+=`<div class="detailFields">${fields.map(f=>`<div class="field"><div class="k">${esc(f.label)}</div><div class="v">${esc(f.value)}</div></div>`).join('')}</div>`;out+=cards('玩家 / 参与者',d.participants);out+=cards('事件 / 回合记录',d.events);if(tables.length)out+=`<div class="detailSection"><h3>表格数据</h3>${tables.map(renderTable).join('')}</div>`;if(lists.length)out+=cards('其他明细',lists.map(text=>({text})));if(heads.length)out+=`<div class="detailSection"><h3>详情章节</h3><div class="miniCards">${heads.map(h=>`<div class="miniCard">${esc(h)}</div>`).join('')}</div></div>`;out+=apiDetails(d.apiResponses);if(d.text)out+=`<div class="detailSection"><h3>完整详情文本</h3><pre class="raw">${esc(d.text)}</pre></div>`;return out||'<div class="muted">详情页已取得，但没有可显示字段。</div>'}
-function matchHtml(m){const basic=`<div class="matchHead"><div class="player">${m.roleIcon?`<img class="matchRoleIcon" src="${esc(m.roleIcon)}" alt="">`:''}<div class="playerMain"><b>${esc(m.roleName||'历史详情')}</b><span>${esc(m.modeMap||[m.mode,m.map].filter(Boolean).join(' · ')||m.source||'—')}</span></div></div><div class="result ${m.won?'win':'loss'}">${esc(m.result||'—')}</div><div class="metric"><span class="label">日期</span><strong>${esc(m.date||'—')}</strong></div><div class="metric"><span class="label">玩家人数</span><strong>${num(m.playerCount)}</strong></div><div class="metric"><span class="label">存活回合</span><strong>${num(m.survivalRounds)}</strong></div></div>`;const detail=m.detailAvailable?`<div class="detailBox"><details><summary>展开详情</summary><div class="detailInner">${renderDetail(m.detail)}</div></details></div>`:`<div class="noDetail">该局目前没有从 Gaggle 官方页面取得可展开详情。</div>`;return `<article class="match">${basic}${detail}</article>`}
-function renderMatches(){const all=filteredMatches(),pages=Math.max(1,Math.ceil(all.length/PAGE));page=Math.min(page,pages);const rows=all.slice((page-1)*PAGE,page*PAGE);$('#matchCount').textContent=`${all.length} 场`;$('#matchNotice').innerHTML=D?.binding?.bound?'':`<div class="notice">尚未绑定 Gaggle 官方战绩。请运行 <b>BIND_GGD.cmd</b>。</div>`;$('#matchList').innerHTML=rows.length?rows.map(matchHtml).join(''):'<div class="empty">当前筛选下没有对局记录。</div>';$('#matchPages').innerHTML=all.length>PAGE?`<button class="pageBtn" ${page<=1?'disabled':''} id="prev">上一页</button><span>${page} / ${pages}</span><button class="pageBtn" ${page>=pages?'disabled':''} id="next">下一页</button>`:'';$('#prev')?.addEventListener('click',()=>{page--;renderMatches()});$('#next')?.addEventListener('click',()=>{page++;renderMatches()})}
-function fillFilters(){const all=Array.isArray(D?.matches)?D.matches:[];const roles=[...new Set(all.map(x=>x.roleName).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'zh-CN'));const modes=[...new Set(all.map(x=>x.mode).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'zh-CN'));const players=[...new Set(all.map(x=>x.playerCount).filter(x=>x!=null&&x!==''))].sort((a,b)=>Number(a)-Number(b));const rounds=[...new Set(all.map(x=>x.survivalRounds).filter(x=>x!=null&&x!==''))].sort((a,b)=>Number(a)-Number(b));$('#roleFilter').innerHTML='<option value="">全部身份</option>'+roles.map(x=>`<option>${esc(x)}</option>`).join('');$('#modeFilter').innerHTML='<option value="">全部模式</option>'+modes.map(x=>`<option>${esc(x)}</option>`).join('');$('#playerFilter').innerHTML='<option value="">全部玩家人数</option>'+players.map(x=>`<option value="${esc(x)}">${esc(x)} 人</option>`).join('');$('#roundFilter').innerHTML='<option value="">全部存活回合</option>'+rounds.map(x=>`<option value="${esc(x)}">${esc(x)} 回合</option>`).join('');['#roleFilter','#resultFilter','#modeFilter','#playerFilter','#roundFilter'].forEach(id=>$(id).addEventListener('change',()=>{page=1;renderMatches()}))}
-function render(){const p=D?.profile||{};if(p.avatar)$('#avatar').src=p.avatar;else $('#avatar').style.visibility='hidden';$('#profileName').textContent=p.name||'鹅鸭杀战绩';const pill=$('#bindPill');pill.textContent=D?.binding?.bound?'Gaggle 已绑定':'Gaggle 未绑定';pill.classList.toggle('ok',!!D?.binding?.bound);renderRoles();fillFilters();renderMatches()}
-document.querySelectorAll('.sortBtn').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.sort;if(roleSort===k)roleDir=roleDir==='desc'?'asc':'desc';else{roleSort=k;roleDir='desc'}renderRoles()}));document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.page').forEach(v=>v.classList.toggle('active',v.id===b.dataset.page))}));
-fetch(DATA,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(x=>{D=x;render()}).catch(e=>{$('#roles').innerHTML=`<div class="notice">鹅鸭杀数据尚未生成：${esc(e.message)}</div>`});
-</script></body></html>
+function normKey(k){return String(k||'').toLowerCase().replace(/[^a-z0-9\u4e00-\u9fff]/g,'')}
+function pick(o,names){
+  if(!o||typeof o!=='object')return null;
+  const map=new Map(Object.keys(o).map(k=>[normKey(k),k]));
+  for(const n of names){const k=map.get(normKey(n));if(k!=null&&o[k]!=null)return o[k]}
+  return null;
+}
+function collectArrays(root){
+  const out=[],seen=new WeakSet();let nodes=0;
+  const walk=(x,path,depth)=>{
+    if(nodes++>12000||depth>8||x==null)return;
+    if(Array.isArray(x)){if(x.length&&x.some(v=>v&&typeof v==='object'))out.push({path,arr:x});for(let i=0;i<Math.min(x.length,80);i++)walk(x[i],path+'['+i+']',depth+1);return}
+    if(typeof x!=='object')return;if(seen.has(x))return;seen.add(x);
+    for(const [k,v] of Object.entries(x))walk(v,path?path+'.'+k:k,depth+1);
+  };
+  walk(root,'',0);return out;
+}
+function parseApiBodies(d){
+  const roots=[];
+  for(const r of Array.isArray(d?.apiResponses)?d.apiResponses:[]){try{roots.push(JSON.parse(String(r?.body||'')))}catch(_){}}
+  return roots;
+}
+function playerShape(o){
+  if(!o||typeof o!=='object')return null;
+  const nickname=pick(o,['nickname','nickName','name','playerName','player_name','userName','username','displayName']);
+  const role=pick(o,['roleName','role_name','role','jobName','job','identityName','identity','profession']);
+  const roleIcon=pick(o,['roleIcon','role_icon','roleImage','role_image','avatar','icon']);
+  const vote=pick(o,['voteAccuracy','vote_accuracy','voteRate','vote_rate','voteCorrect','vote_correct','accurateVote','accurate_vote']);
+  const votes=pick(o,['votes','voteCount','vote_count','vote']);
+  const kills=pick(o,['kills','killCount','kill_count','kill']);
+  const survive=pick(o,['survivalRounds','survival_rounds','surviveRounds','aliveRounds','alive_rounds','roundsAlive']);
+  const faction=pick(o,['faction','team','camp','side','winnerType']);
+  if(nickname==null&&role==null)return null;
+  return {nickname,role,roleIcon,vote,votes,kills,survive,faction,raw:o};
+}
+function findPlayers(roots){
+  let best=[];
+  for(const root of roots)for(const x of collectArrays(root)){
+    const rows=x.arr.map(playerShape).filter(Boolean);
+    const withName=rows.filter(r=>r.nickname!=null).length,withRole=rows.filter(r=>r.role!=null).length;
+    if(rows.length>=2&&(withName>=2||withRole>=2)&&rows.length>best.length)best=rows;
+  }
+  return best.slice(0,32);
+}
+function eventShape(o){
+  if(!o||typeof o!=='object')return null;
+  const type=pick(o,['eventType','event_type','type','action','event','eventId','event_id','id']);
+  const round=pick(o,['round','roundNo','round_no','roundIndex','round_index','discussion','meeting']);
+  const killer=pick(o,['killerName','killer_name','killer','sourceName','source_name','source']);
+  const victim=pick(o,['victimName','victim_name','victim','targetName','target_name','target']);
+  const voter=pick(o,['voterName','voter_name','voter','fromName','from_name']);
+  const target=pick(o,['voteTarget','vote_target','targetName','target_name','target']);
+  const winner=pick(o,['winner','winnerName','winner_name','winnerType','winner_type']);
+  if(type==null&&round==null&&killer==null&&voter==null&&winner==null)return null;
+  return {type,round,killer,victim,voter,target,winner,raw:o};
+}
+function findEvents(roots){
+  let best=[];
+  for(const root of roots)for(const x of collectArrays(root)){
+    const rows=x.arr.map(eventShape).filter(Boolean);
+    if(rows.length>=2&&rows.length>best.length)best=rows;
+  }
+  return best.slice(0,150);
+}
+function renderBoard(players){
+  if(!players.length)return'';
+  return `<div class="detailSection"><h3>对局板</h3><div class="board"><table><thead><tr><th>角色</th><th>昵称</th><th>身份</th><th>票准</th><th>击杀</th><th>存活回合</th></tr></thead><tbody>${players.map(p=>`<tr><td>${p.roleIcon?`<img src="${esc(p.roleIcon)}" alt="" style="width:34px;height:34px;object-fit:contain">`:'—'}</td><td>${esc(p.nickname??'—')}</td><td>${esc(p.role??'—')}</td><td>${esc(p.vote??p.votes??'—')}</td><td>${esc(p.kills??'—')}</td><td>${esc(p.survive??'—')}</td></tr>`).join('')}</tbody></table></div></div>`;
+}
+function renderReplay(events){
+  if(!events.length)return'';
+  return `<div class="detailSection"><h3>复盘 / 投票 / 击杀</h3><div class="replay">${events.map((e,i)=>{
+    let title=e.round!=null?`第 ${esc(e.round)} 轮`:`事件 ${i+1}`,desc=[];
+    if(e.type!=null)desc.push(`类型：${e.type}`);
+    if(e.killer!=null||e.victim!=null)desc.push(`${e.killer??'—'} → ${e.victim??'—'}`);
+    if(e.voter!=null||e.target!=null)desc.push(`投票：${e.voter??'—'} → ${e.target??'弃票'}`);
+    if(e.winner!=null)desc.push(`胜方：${e.winner}`);
+    if(!desc.length)desc.push(JSON.stringify(e.raw));
+    return `<div class="replayItem"><div class="eventTitle">${title}</div><div>${esc(desc.join(' · '))}</div></div>`;
+  }).join('')}</div></div>`;
+}
+function rawApiDetails(rows){
+  if(!Array.isArray(rows)||!rows.length)return'';
+  return `<details style="margin-top:14px"><summary>查看原始比赛接口数据</summary><div class="detailInner">${rows.map((r,i)=>{let body=String(r?.body||'').trim(),shown=body;try{shown=JSON.stringify(JSON.parse(body),null,2)}catch(_){}return `<div class="detailSection"><h3>接口 ${i+1}</h3><div class="muted">${esc(r?.url||'')}</div><pre class="raw">${esc(shown)}</pre></div>`}).join('')}</div></details>`;
+}
+function renderDetail(d){
+  if(!d||!d.available)return'';
+  const roots=parseApiBodies(d),players=findPlayers(roots),events=findEvents(roots);
+  const fields=Array.isArray(d.fields)?d.fields:[],tables=Array.isArray(d.tables)?d.tables:[],heads=Array.isArray(d.headings)?d.headings.filter(Boolean):[],lists=Array.isArray(d.lists)?d.lists:[];
+  let out='';
+  out+=renderBoard(players);
+  out+=renderReplay(events);
+  if(fields.length)out+=`<div class="detailFields">${fields.map(f=>`<div class="field"><div class="k">${esc(f.label)}</div><div class="v">${esc(f.value)}</div></div>`).join('')}</div>`;
+  if(!players.length)out+=cards('玩家 / 参与者',d.participants);
+  if(!events.length)out+=cards('事件 / 回合记录',d.events);
+  if(tables.length)out+=`<div class="detailSection"><h3>其他表格</h3>${tables.map(renderTable).join('')}</div>`;
+  if(lists.length)out+=cards('其他明细',lists.map(text=>({text})));
+  if(heads.length)out+=`<div class="detailSection"><h3>详情章节</h3><div class="miniCards">${heads.map(h=>`<div class="miniCard">${esc(h)}</div>`).join('')}</div></div>`;
+  out+=rawApiDetails(d.apiResponses);
+  if(d.text&&!players.length&&!events.length)out+=`<div class="detailSection"><h3>完整详情文本</h3><pre class="raw">${esc(d.text)}</pre></div>`;
+  return out||'<div class="muted">详情数据已取得，但当前字段结构还没有被识别出来。</div>';
+}
+function matchHtml(m){
+  const basic=`<div class="matchHead"><div class="player">${m.roleIcon?`<img class="matchRoleIcon" src="${esc(m.roleIcon)}" alt="">`:''}<div class="playerMain"><b>${esc(m.roleName||'历史详情')} <span class="factionTag ${factionClass(m.faction)}">${esc(m.faction||'未知')}</span></b><span>${esc(m.modeMap||[m.mode,m.map].filter(Boolean).join(' · ')||m.source||'—')}</span></div></div><div class="result ${m.won?'win':'loss'}">${esc(m.result||'—')}</div><div class="metric"><span class="label">日期</span><strong>${esc(m.date||'—')}</strong></div><div class="metric"><span class="label">玩家人数</span><strong>${num(m.playerCount)}</strong></div><div class="metric"><span class="label">存活回合</span><strong>${num(m.survivalRounds)}</strong></div></div>`;
+  const detail=m.detailAvailable?`<div class="detailBox"><details><summary>展开详情</summary><div class="detailInner">${renderDetail(m.detail)}</div></details></div>`:`<div class="noDetail">该局暂未抓到可展开的逐局详情；基础战绩仍会保留。</div>`;
+  return `<article class="match">${basic}${detail}</article>`;
+}
+function renderMatches(){
+  const all=filteredMatches(),pages=Math.max(1,Math.ceil(all.length/PAGE));page=Math.min(page,pages);const rows=all.slice((page-1)*PAGE,page*PAGE);
+  $('#matchCount').textContent=`${all.length} 场`;
+  $('#matchNotice').innerHTML=D?.binding?.bound?'':`<div class="notice">尚未绑定 Gaggle 官方战绩。请运行 <b>BIND_GGD.cmd</b>。</div>`;
+  $('#matchList').innerHTML=rows.length?rows.map(matchHtml).join(''):'<div class="empty">当前筛选下没有对局记录。</div>';
+  $('#matchPages').innerHTML=all.length>PAGE?`<button class="pageBtn" ${page<=1?'disabled':''} id="prev">上一页</button><span>${page} / ${pages}</span><button class="pageBtn" ${page>=pages?'disabled':''} id="next">下一页</button>`:'';
+  $('#prev')?.addEventListener('click',()=>{page--;renderMatches()});$('#next')?.addEventListener('click',()=>{page++;renderMatches()});
+}
+function fillFilters(){
+  const all=Array.isArray(D?.matches)?D.matches:[];
+  const roles=[...new Set(all.map(x=>x.roleName).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'zh-CN'));
+  const modes=[...new Set(all.map(x=>x.mode).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'zh-CN'));
+  const players=[...new Set(all.map(x=>x.playerCount).filter(x=>x!=null&&x!==''))].sort((a,b)=>Number(a)-Number(b));
+  const rounds=[...new Set(all.map(x=>x.survivalRounds).filter(x=>x!=null&&x!==''))].sort((a,b)=>Number(a)-Number(b));
+  $('#roleFilter').innerHTML='<option value="">全部身份</option>'+roles.map(x=>`<option>${esc(x)}</option>`).join('');
+  $('#modeFilter').innerHTML='<option value="">全部模式</option>'+modes.map(x=>`<option>${esc(x)}</option>`).join('');
+  $('#playerFilter').innerHTML='<option value="">全部玩家人数</option>'+players.map(x=>`<option value="${esc(x)}">${esc(x)} 人</option>`).join('');
+  $('#roundFilter').innerHTML='<option value="">全部存活回合</option>'+rounds.map(x=>`<option value="${esc(x)}">${esc(x)} 回合</option>`).join('');
+  ['#roleFilter','#resultFilter','#modeFilter','#playerFilter','#roundFilter'].forEach(id=>$(id).addEventListener('change',()=>{page=1;renderMatches()}));
+}
+function render(){
+  const p=D?.profile||{};
+  if(p.avatar){$('#avatar').src=p.avatar;$('#avatar').style.visibility='visible'}else $('#avatar').style.visibility='hidden';
+  $('#profileName').textContent=p.name||'鹅鸭杀战绩';
+  const pill=$('#bindPill');pill.textContent=D?.binding?.bound?'Gaggle 已绑定':'Gaggle 未绑定';pill.classList.toggle('ok',!!D?.binding?.bound);
+  renderOverview();renderRoles();fillFilters();renderMatches();
+}
+document.querySelectorAll('.sortBtn').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.sort;if(roleSort===k)roleDir=roleDir==='desc'?'asc':'desc';else{roleSort=k;roleDir='desc'}renderRoles()}));
+document.querySelectorAll('#factionSeg button').forEach(b=>b.addEventListener('click',()=>{roleFaction=b.dataset.faction||'';document.querySelectorAll('#factionSeg button').forEach(x=>x.classList.toggle('active',x===b));renderRoles()}));
+document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.page').forEach(v=>v.classList.toggle('active',v.id===b.dataset.page))}));
+fetch(DATA,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(x=>{D=x;render()}).catch(e=>{$('#overviewPage').innerHTML=`<div class="notice">鹅鸭杀数据尚未生成：${esc(e.message)}</div>`});
+</script>
+</body></html>
