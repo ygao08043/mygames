@@ -1,6 +1,6 @@
 {
     "version":  "1.0",
-    "updatedAt":  "2026-08-24T21:58:09.1423046+08:00",
+    "updatedAt":  "2026-08-25T10:45:13.7912093+08:00",
     "games":  {
                   "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b":  {
                                                                "name":  "CHUNITHM",
@@ -844,7 +844,9 @@
                                                                                                             "iPhone16pro|2026-08-21T16:10:53.0000000+00:00":  6897,
                                                                                                             "iPhone16pro|2026-08-22T03:55:58.0000000+00:00":  1707,
                                                                                                             "iPhone16pro|2026-08-22T16:53:43.0000000+00:00":  29,
-                                                                                                            "iPhone16pro|2026-08-22T16:54:17.0000000+00:00":  831
+                                                                                                            "iPhone16pro|2026-08-22T16:54:17.0000000+00:00":  831,
+                                                                                                            "iPhone16pro|2026-08-24T16:14:43.0000000+00:00":  8809,
+                                                                                                            "iPhone16pro|2026-08-24T18:41:59.0000000+00:00":  1050
                                                                                                         },
                                                                                            "file":  "iOSGameActivity",
                                                                                            "takeAllOnFirstSight":  true,
@@ -861,7 +863,12 @@
                                                                                            "sessions":  {
                                                                                                             "iPad13inchM4|2026-08-21T15:43:46.0000000+00:00":  1053,
                                                                                                             "iPad13inchM4|2026-08-21T16:01:21.0000000+00:00":  1,
-                                                                                                            "iPad13inchM4|2026-08-23T10:06:21.0000000+00:00":  402
+                                                                                                            "iPad13inchM4|2026-08-23T10:06:21.0000000+00:00":  402,
+                                                                                                            "iPad13inchM4|2026-08-24T14:25:32.0000000+00:00":  724,
+                                                                                                            "iPad13inchM4|2026-08-24T14:37:37.0000000+00:00":  2,
+                                                                                                            "iPad13inchM4|2026-08-24T14:37:46.0000000+00:00":  89,
+                                                                                                            "iPad13inchM4|2026-08-24T14:39:19.0000000+00:00":  1427,
+                                                                                                            "iPad13inchM4|2026-08-24T15:03:07.0000000+00:00":  2
                                                                                                         },
                                                                                            "file":  "iOSGameActivity",
                                                                                            "takeAllOnFirstSight":  true,
@@ -903,7 +910,9 @@
                                                                                                             "iPad13inchM4|2026-08-23T12:03:00.0000000+00:00":  4905,
                                                                                                             "iPhone16pro|2026-08-23T17:45:50.0000000+00:00":  5,
                                                                                                             "iPhone16pro|2026-08-23T17:46:36.0000000+00:00":  50,
-                                                                                                            "iPhone16pro|2026-08-23T17:47:36.0000000+00:00":  6151
+                                                                                                            "iPhone16pro|2026-08-23T17:47:36.0000000+00:00":  6151,
+                                                                                                            "iPhone16pro|2026-08-25T01:41:46.0000000+00:00":  53,
+                                                                                                            "iPhone16pro|2026-08-25T01:42:41.0000000+00:00":  4
                                                                                                         },
                                                                                            "file":  "iOSGameActivity",
                                                                                            "takeAllOnFirstSight":  true,
@@ -919,6 +928,21 @@
                                                                                            "available":  true,
                                                                                            "sessions":  {
                                                                                                             "iPhone16pro|2026-08-23T17:18:48.0000000+00:00":  249
+                                                                                                        },
+                                                                                           "file":  "iOSGameActivity",
+                                                                                           "takeAllOnFirstSight":  true,
+                                                                                           "historyMode":  "all-ios-shortcut-sessions",
+                                                                                           "countOnly":  false
+                                                                                       }
+                                                                           }
+                                                           },
+                  "86dcd7ea-9dce-4231-93bd-b7d4ccd8e8f1":  {
+                                                               "name":  "元气骑士",
+                                                               "sources":  {
+                                                                               "ios":  {
+                                                                                           "available":  true,
+                                                                                           "sessions":  {
+                                                                                                            "iPhone16pro|2026-08-24T16:14:39.0000000+00:00":  2
                                                                                                         },
                                                                                            "file":  "iOSGameActivity",
                                                                                            "takeAllOnFirstSight":  true,

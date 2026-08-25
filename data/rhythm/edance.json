@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "build": "1.16.23",
+  "build": "1.17.0",
   "game": "e舞成名升级版",
   "websiteGameName": "e舞成名",
   "player": "YMKF",
@@ -40,7 +40,6 @@
     {
       "id": 1,
       "playedAtLocal": "2026-07-04 17:33:19",
-      "playerLevel": 2,
       "grade": "AA",
       "dancePowerGain": 12,
       "score": 1453000,
@@ -57,7 +56,6 @@
     {
       "id": 2,
       "playedAtLocal": "2026-07-04 17:36:50",
-      "playerLevel": 2,
       "grade": "F",
       "dancePowerGain": 4,
       "score": 1299000,
@@ -74,7 +72,6 @@
     {
       "id": 3,
       "playedAtLocal": "2026-07-04 17:41:14",
-      "playerLevel": 2,
       "grade": "B",
       "dancePowerGain": 8,
       "score": 1140000,
@@ -91,7 +88,6 @@
     {
       "id": 4,
       "playedAtLocal": "2026-07-04 17:45:00",
-      "playerLevel": 2,
       "grade": "C",
       "dancePowerGain": 7,
       "score": 1263000,
@@ -108,7 +104,6 @@
     {
       "id": 5,
       "playedAtLocal": "2026-07-04 17:47:39",
-      "playerLevel": 2,
       "grade": "A",
       "dancePowerGain": 10,
       "score": 1122000,
@@ -126,7 +121,6 @@
     {
       "id": 6,
       "playedAtLocal": "2026-07-20 20:38:40",
-      "playerLevel": 2,
       "grade": "B",
       "dancePowerGain": 8,
       "score": 1634000,
@@ -143,7 +137,6 @@
     {
       "id": 7,
       "playedAtLocal": "2026-07-20 20:41:53",
-      "playerLevel": 2,
       "grade": "A",
       "dancePowerGain": 10,
       "score": 1041000,
@@ -160,7 +153,6 @@
     {
       "id": 8,
       "playedAtLocal": "2026-07-20 20:45:11",
-      "playerLevel": 2,
       "grade": "B",
       "dancePowerGain": 8,
       "score": 1353000,
@@ -169,16 +161,14 @@
       "cool": 49,
       "good": 4,
       "miss": 54,
-      "title": "神的随波逐流（截图标题截断）",
+      "title": "神的随波逐流",
       "mode": "lover",
       "bpm": 135,
-      "stars": 5,
-      "sourceNote": "原截图显示为“神的随波逐流(神...”"
+      "stars": 5
     },
     {
       "id": 9,
       "playedAtLocal": "2026-07-20 20:49:27",
-      "playerLevel": 2,
       "grade": "F",
       "dancePowerGain": 4,
       "score": 1922000,
@@ -195,7 +185,6 @@
     {
       "id": 10,
       "playedAtLocal": "2026-07-20 20:53:49",
-      "playerLevel": 2,
       "grade": "S",
       "dancePowerGain": 13,
       "score": 1571000,
@@ -212,7 +201,6 @@
     {
       "id": 11,
       "playedAtLocal": "2026-07-20 20:57:06",
-      "playerLevel": 0,
       "grade": "S",
       "dancePowerGain": 13,
       "score": 1388000,

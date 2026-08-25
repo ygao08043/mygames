@@ -14,7 +14,7 @@
 .section{border:1px solid var(--line);background:var(--surface);border-radius:18px;margin-bottom:16px;overflow:hidden}.section-h{padding:15px 16px;border-bottom:1px solid var(--line);font-size:17px;font-weight:800}
 .sessions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:14px}.session{border:1px solid var(--line);background:var(--surface2);border-radius:14px;padding:13px}.session strong{font-size:16px}.session .muted{color:var(--muted);font-size:12px;margin-top:4px}
 .toolbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:12px 14px;border-bottom:1px solid var(--line)}select,button{background:var(--surface2);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:8px 10px}
-.table-wrap{overflow:auto}.table{width:100%;border-collapse:separate;border-spacing:0;min-width:1320px}.table th,.table td{padding:11px 10px;border-bottom:1px solid rgba(42,58,74,.7);text-align:right;white-space:nowrap}.table th:first-child,.table td:first-child,.table th:nth-child(2),.table td:nth-child(2),.table th:nth-child(3),.table td:nth-child(3){text-align:left}.table th{position:sticky;top:0;background:#101b26;z-index:2;color:#b9cbda;font-size:12px;cursor:default}.table th.sort{cursor:pointer;user-select:none}.table th.sort:hover{color:#fff}.table tr:hover td{background:rgba(255,255,255,.025)}
+.table-wrap{overflow:auto}.table{width:100%;border-collapse:separate;border-spacing:0;min-width:1240px}.table th,.table td{padding:11px 10px;border-bottom:1px solid rgba(42,58,74,.7);text-align:right;white-space:nowrap}.table th:first-child,.table td:first-child,.table th:nth-child(2),.table td:nth-child(2),.table th:nth-child(3),.table td:nth-child(3){text-align:left}.table th{position:sticky;top:0;background:#101b26;z-index:2;color:#b9cbda;font-size:12px;cursor:default}.table th.sort{cursor:pointer;user-select:none}.table th.sort:hover{color:#fff}.table tr:hover td{background:rgba(255,255,255,.025)}
 .grade{display:inline-flex;min-width:38px;justify-content:center;border-radius:9px;padding:4px 8px;font-weight:900;background:linear-gradient(135deg,#8d72ff,#d26cff);color:#fff}.song{max-width:260px;overflow:hidden;text-overflow:ellipsis}.mode{color:#c6b7ff}.dp{color:#5fe1ff;font-weight:800}.stars{color:#ffd657}.missing{color:#65798b}.sortmark{font-size:10px;margin-left:4px;color:var(--accent2)}
 .note{padding:0 14px 14px;color:var(--muted);font-size:12px}.source-note{font-size:11px;color:#74899c;max-width:250px;white-space:normal;text-align:left}
 @media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}.sessions{grid-template-columns:1fr}.wrap{padding:12px}.hero h1{font-size:22px}}
@@ -32,7 +32,7 @@
 </head>
 <body>
 <div class="wrap">
-  <div class="top"><a class="back" href="../index.html">← 返回游戏库</a><div class="build">Build v1.16.28</div></div>
+  <div class="top"><a class="back" href="../index.html">← 返回游戏库</a><div class="build">Build v1.17.0</div></div>
   <section class="hero">
     <h1>e舞成名 · 升级版战绩</h1>
     <p>YMKF · 来自 11 张成绩详情截图。所有截图中明确显示的数值均按原值录入；截图未显示的字段保留为空。</p>
@@ -54,7 +54,6 @@
       <thead><tr>
         <th>歌曲</th><th>模式</th><th class="sort" data-key="playedAtLocal">时间 ↕</th>
         <th class="sort" data-key="gradeRank">评级 ↕</th>
-        <th class="sort" data-key="playerLevel">Lv ↕</th>
         <th class="sort" data-key="dancePowerGain">舞力+ ↕</th>
         <th class="sort" data-key="score">分数 ↕</th>
         <th class="sort" data-key="stars">星级 ↕</th>
@@ -103,7 +102,7 @@ function render(){
  document.querySelector('#rows').innerHTML=list.map(r=>`<tr>
    <td class="song" title="${r.title||'截图未显示曲名'}">${r.title||'<span class="missing">截图未显示曲名</span>'}${r.sourceNote?`<div class="source-note">${r.sourceNote}</div>`:''}</td>
    <td>${cell(r.mode,'mode')}</td><td>${r.playedAtLocal}</td><td><span class="grade">${r.grade}</span></td>
-   <td>${fmt(r.playerLevel)}</td><td>${cell('+'+r.dancePowerGain,'dp')}</td><td>${fmt(r.score)}</td>
+   <td>${cell('+'+r.dancePowerGain,'dp')}</td><td>${fmt(r.score)}</td>
    <td>${r.stars==null?'<span class="missing">—</span>':`<span class="stars">${'★'.repeat(r.stars)}</span> ${r.stars}`}</td>
    <td>${cell(r.bpm)}</td><td>${fmt(r.combo)}</td><td>${fmt(r.perfect)}</td><td>${fmt(r.cool)}</td><td>${fmt(r.good)}</td><td>${fmt(r.miss)}</td>
  </tr>`).join('');
@@ -111,7 +110,7 @@ function render(){
 document.querySelectorAll('th.sort').forEach(th=>th.addEventListener('click',()=>{const k=th.dataset.key;if(sortKey===k)sortDir=sortDir==='asc'?'desc':'asc';else{sortKey=k;sortDir='desc'}render()}));
 document.querySelector('#modeFilter').addEventListener('change',render);
 document.querySelector('#resetBtn').addEventListener('click',()=>{sortKey='playedAtLocal';sortDir='desc';document.querySelector('#modeFilter').value='all';render()});
-fetch(DATA_URL,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(j=>{data=j;summary();sessions();render()}).catch(e=>{document.querySelector('#rows').innerHTML=`<tr><td colspan="14" style="text-align:left;color:#ff9d9d">数据加载失败：${e.message}</td></tr>`});
+fetch(DATA_URL,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(j=>{data=j;summary();sessions();render()}).catch(e=>{document.querySelector('#rows').innerHTML=`<tr><td colspan="13" style="text-align:left;color:#ff9d9d">数据加载失败：${e.message}</td></tr>`});
 </script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 {
     "version":  "1.0",
-    "updatedAt":  "2026-08-24T21:58:09.1474484+08:00",
+    "updatedAt":  "2026-08-25T10:45:13.7932129+08:00",
     "games":  {
                   "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b":  {
                                                                "name":  "CHUNITHM",
@@ -16,7 +16,7 @@
                                                                "name":  "maimai",
                                                                "resolvedPlayniteId":  "dc0f4891-c9fa-42ff-9dc0-27ce8d0f0d56",
                                                                "targetPlaytimeSeconds":  8820,
-                                                               "sourceDeltaSeconds":  -1080,
+                                                               "sourceDeltaSeconds":  0,
                                                                "exactTarget":  true,
                                                                "externalSessionCountTotal":  10,
                                                                "latestExternalActivityUtc":  "2026-08-22T12:39:00.0000000Z",
@@ -26,7 +26,7 @@
                                                                "name":  "e舞成名",
                                                                "resolvedPlayniteId":  "b1de7fb7-f915-414c-bb77-c4cf36678f06",
                                                                "targetPlaytimeSeconds":  2446,
-                                                               "sourceDeltaSeconds":  2446,
+                                                               "sourceDeltaSeconds":  0,
                                                                "exactTarget":  true,
                                                                "externalSessionCountTotal":  2,
                                                                "latestExternalActivityUtc":  "2026-07-20T13:01:06.0000000Z",
@@ -58,18 +58,18 @@
                                                                "targetPlaytimeSeconds":  1444080,
                                                                "sourceDeltaSeconds":  0,
                                                                "exactTarget":  false,
-                                                               "externalSessionCountTotal":  14,
-                                                               "latestExternalActivityUtc":  "2026-08-22T17:08:08.0000000Z",
+                                                               "externalSessionCountTotal":  16,
+                                                               "latestExternalActivityUtc":  "2026-08-24T18:59:29.0000000Z",
                                                                "repairIOSSeconds":  0
                                                            },
                   "8b5cbfc6-9afb-4892-993e-e9424a9d6555":  {
                                                                "name":  "Phigros",
                                                                "resolvedPlayniteId":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
-                                                               "targetPlaytimeSeconds":  110456,
-                                                               "sourceDeltaSeconds":  0,
+                                                               "targetPlaytimeSeconds":  112700,
+                                                               "sourceDeltaSeconds":  2244,
                                                                "exactTarget":  false,
-                                                               "externalSessionCountTotal":  3,
-                                                               "latestExternalActivityUtc":  "2026-08-23T10:13:03.0000000Z",
+                                                               "externalSessionCountTotal":  8,
+                                                               "latestExternalActivityUtc":  "2026-08-24T15:03:09.0000000Z",
                                                                "repairIOSSeconds":  0
                                                            },
                   "b730c4a7-1f2f-4ec7-aca4-f1df509d18fe":  {
@@ -88,8 +88,8 @@
                                                                "targetPlaytimeSeconds":  44460,
                                                                "sourceDeltaSeconds":  0,
                                                                "exactTarget":  false,
-                                                               "externalSessionCountTotal":  7,
-                                                               "latestExternalActivityUtc":  "2026-08-23T19:30:07.0000000Z",
+                                                               "externalSessionCountTotal":  9,
+                                                               "latestExternalActivityUtc":  "2026-08-25T01:42:45.0000000Z",
                                                                "repairIOSSeconds":  0
                                                            },
                   "bb00e134-2ed0-4e1a-90c8-ee8cb7f71e11":  {
@@ -100,6 +100,16 @@
                                                                "exactTarget":  false,
                                                                "externalSessionCountTotal":  1,
                                                                "latestExternalActivityUtc":  "2026-08-23T17:22:57.0000000Z",
+                                                               "repairIOSSeconds":  0
+                                                           },
+                  "86dcd7ea-9dce-4231-93bd-b7d4ccd8e8f1":  {
+                                                               "name":  "元气骑士",
+                                                               "resolvedPlayniteId":  "86dcd7ea-9dce-4231-93bd-b7d4ccd8e8f1",
+                                                               "targetPlaytimeSeconds":  72002,
+                                                               "sourceDeltaSeconds":  2,
+                                                               "exactTarget":  false,
+                                                               "externalSessionCountTotal":  1,
+                                                               "latestExternalActivityUtc":  "2026-08-24T16:14:41.0000000Z",
                                                                "repairIOSSeconds":  0
                                                            }
               }
