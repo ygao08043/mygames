@@ -1,6 +1,6 @@
 {
     "build":  "1.16.20",
-    "updatedAt":  "2026-08-26T23:30:11.1746283+08:00",
+    "updatedAt":  "2026-08-27T11:49:22.2606004+08:00",
     "status":  "ok",
     "binding":  {
                     "bound":  true,
@@ -8,7 +8,7 @@
                     "source":  "Gaggle Game Stats"
                 },
     "profile":  {
-                    "name":  "PIANOYMKF",
+                    "name":  "YMKF",
                     "avatar":  "https://avatars.steamstatic.com/777da339c1b202114ea1fa2163f546bb8c8c9167_full.jpg",
                     "steamId64":  "76561199392052203",
                     "profileUrl":  "https://steamcommunity.com/profiles/76561199392052203/"
@@ -18,7 +18,7 @@
                      "achievementsCompleted":  10,
                      "achievementsText":  "10/42",
                      "gameTimeHours":  14.4,
-                     "totalMatches":  22,
+                     "totalMatches":  23,
                      "totalWinRate":  0.261,
                      "factions":  [
                                       {
@@ -72,6 +72,16 @@
                           "wins":  0,
                           "losses":  2,
                           "winRate":  0
+                      },
+                      {
+                          "role":  "网红",
+                          "roleId":  "31",
+                          "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Celebrity.png",
+                          "faction":  "鹅",
+                          "uses":  2,
+                          "wins":  1,
+                          "losses":  1,
+                          "winRate":  0.5
                       },
                       {
                           "role":  "超能力鸭",
@@ -138,16 +148,6 @@
                           "roleId":  "57",
                           "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Pelican.png",
                           "faction":  "中立",
-                          "uses":  1,
-                          "wins":  0,
-                          "losses":  1,
-                          "winRate":  0
-                      },
-                      {
-                          "role":  "网红",
-                          "roleId":  "31",
-                          "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Celebrity.png",
-                          "faction":  "鹅",
                           "uses":  1,
                           "wins":  0,
                           "losses":  1,
@@ -557,6 +557,77 @@
                                                         ],
                                        "captureBuild":  "1.16.20",
                                        "fetchedAt":  "2026-08-25T22:32:18.4794902+08:00"
+                                   },
+                        "detailAvailable":  true
+                    },
+                    {
+                        "id":  "dash-52db9758acd63234",
+                        "source":  "Gaggle Game Stats",
+                        "roleName":  "网红",
+                        "roleId":  "31",
+                        "roleIcon":  "https://gaggle.fun/assets/images/ggd/role-icons/Celebrity.png",
+                        "sourceIndex":  8,
+                        "faction":  "鹅",
+                        "mode":  "经典",
+                        "map":  "地下室",
+                        "modeMap":  "经典 在 地下室",
+                        "result":  "胜利",
+                        "won":  true,
+                        "date":  "08/24/2026",
+                        "playerCount":  12,
+                        "survivalRounds":  3,
+                        "votingAccuracy":  0,
+                        "kills":  0,
+                        "winningFaction":  1,
+                        "matchId":  "U056230820261808673661",
+                        "detail":  {
+                                       "available":  true,
+                                       "url":  "https://gaggle.fun/dashboard/game-stats/match/U056230820261808673661",
+                                       "title":  "Gaggle official match timeline",
+                                       "text":  "",
+                                       "headings":  [
+
+                                                    ],
+                                       "tables":  [
+
+                                                  ],
+                                       "fields":  [
+
+                                                  ],
+                                       "participants":  [
+
+                                                        ],
+                                       "events":  [
+
+                                                  ],
+                                       "lists":  [
+
+                                                 ],
+                                       "resourcePaths":  [
+                                                             "https://ggdmatchdata.gaggle.fun/match-timelines/U056230820261808673661.json"
+                                                         ],
+                                       "apiResponses":  [
+                                                            {
+                                                                "kind":  "official-match-summary",
+                                                                "url":  "gaggle://FetchList/U056230820261808673661",
+                                                                "status":  200,
+                                                                "body":  "{\"matchId\":\"U056230820261808673661\",\"uid\":\"ArAtxcaYgUaz8m96fOpYm3sDwnl1\",\"faction\":1,\"role\":31,\"startAt\":\"2026-08-23T18:08:55.730000000Z\",\"endAt\":\"2026-08-23T18:26:43.907000000Z\",\"map\":7,\"mode\":0,\"win\":true,\"numOfPlayers\":12,\"winningFaction\":1,\"votingAccuracy\":0,\"turnsSurvived\":3,\"kills\":0}"
+                                                            },
+                                                            {
+                                                                "kind":  "official-match-timeline",
+                                                                "url":  "https://ggdmatchdata.gaggle.fun/match-timelines/U056230820261808673661.json",
+                                                                "status":  200,
+                                                                "body":  "{\"matchId\":\"U056230820261808673661\",\"startAt\":1787508535730,\"endAt\":1787509603907,\"map\":7,\"mode\":0,\"winningFaction\":1,\"playerData\":{\"2VpmftVv9tWGrrpSoszVW9qTBAC2\":{\"userId\":\"2VpmftVv9tWGrrpSoszVW9qTBAC2\",\"nickname\":\"mars\",\"role\":99,\"faction\":2,\"teamId\":-1,\"win\":false,\"isGhost\":true,\"disconnected\":true,\"deadAt\":1787509380390,\"kills\":1,\"tasks\":1,\"sabotages\":0,\"discussions\":0,\"correctVotes\":0,\"turnsSurvived\":1,\"cosmetics\":{\"feather\":1,\"hat\":\"empty_Hats\",\"clothes\":\"100080007\",\"eyes\":\"empty_Eyes\",\"fart\":\"empty_Farts\",\"pet\":\"empty_Pets\",\"stinger\":\"empty_Stingers\",\"banner\":\"empty_Banners\",\"card\":\"100080893\"}},\"ulARy7HywKO591auz8obGFoKoFp2\":{\"userId\":\"ulARy7HywKO591auz8obGFoKoFp2\",\"nickname\":\"ANAN\",\"role\":13,\"faction\":1,\"teamId\":-1,\"win\":true,\"isGhost\":false,\"disconnected\":false,\"deadAt\":0,\"kills\":0,\"tasks\":1,\"sabotages\":0,\"discussions\":0,\"correctVotes\":2,\"turnsSurvived\":3,\"cosmetics\":{\"feather\":18,\"hat\":\"empty_Hats\",\"clothes\":\"empty_Clothes\",\"eyes\":\"empty_Eyes\",\"fart\":\"empty_Farts\",\"pet\":\"empty_Pets\",\"stinger\":\"empty_Stingers\",\"banner\":\"empty_Banners\",\"card\":\"empty_Cards\"}},\"0F6OoAHO1aThKLeh78SGytD91SA2\":{\"userId\":\"0F6OoAHO1aThKLeh78SGytD91SA2\",\"nickname\":\"教主\",\"role\":1,\"faction\":1,\"teamId\":-1,\"win\":true,\"isGhost\":false,\"disconnected\":false,\"deadAt\":0,\"kills\":0,\"tasks\":0,\"sabotages\":0,\"discussions\":1,\"correctVotes\":2,\"turnsSurvived\":3,\"cosmetics\":{\"feather\":4,\"hat\":\"empty_Hats\",\"clothes\":\"empty_Clothes\",\"eyes\":\"empty_Eyes\",\"fart\":\"100080407\",\"pet\":\"empty_Pets\",\"stinger\":\"empty_Stingers\",\"banner\":\"empty_Banners\",\"card\":\"empty_Cards\"}},\"CGxaCEiKo9Zu07j7NpsXydUmXDE2\":{\"userId\":\"CGxaCEiKo9Zu07j7NpsXydUmXDE2\",\"nickname\":\"GUI.\",\"role\":92,\"faction\":1,\"teamId\":-1,\"win\":true,\"isGhost\":false,\"disconnected\":false,\"deadAt\":0,\"kills\":0,\"tasks\":1,\"sabotages\":0,\"discussions\":1,\"correctVotes\":2,\"turnsSurvived\":3,\"cosmetics\":{\"feather\":9,\"hat\":\"empty_Hats\",\"clothes\":\"100080220\",\"eyes\":\"empty_Eyes\",\"fart\":\"100080156\",\"pet\":\"empty_Pets\",\"stinger\":\"empty_Stingers\",\"banner\":\"100080332\",\"card\":\"100080584\"}},\"BsbynLqHj4TkIJtNMBHzfTMAsHi2\":{\"userId\":\"BsbynLqHj4TkIJtNMBHzfTMAsHi2\",\"nickname\":\"HAMASIKA\",\"role\":8,\"faction\":1,\"teamId\":-1,\"win\":true,\"isGhost\":true,\"disconnected\":false,\"deadAt\":1787508566794,\"kills\":0,\"tasks\":0,\"sabotages\":0,\"discussions\":0,\"correctVotes\":0,\"turnsSurvived\":3,\"cosmetics\":{\"feather\":7,\"hat\":\"empty_Hats\",\"clothes\":\"empty_Clothes\",\"eyes\":\"empty_Eyes\",\"fart\":\"empty_Farts\",\"pet\":\"empty_Pets\",\"stinger\":\"empty_Stingers\",\"banner\":\"empty_Banners\",\"card\":\"empty_Cards\"}},\"ktqS3jTRBxQ65GbgDA8WojyX5UR2\":{\"userId\":\"ktqS3jTRBxQ65GbgDA8WojyX5UR2\",\"nickname\":\"BAI\",\"role\":4,\"faction\":1,\"teamId\":-1,\"win\":true,\"isGhost\":true,\"disconnected\":false,\"deadAt\":1787508938491,\"kills\":0,\"tasks\":2,\"sabotages\":0,\"discussions\":1,\"correctVotes\":0,\"turnsSurvived\":2,\"cosmetics\":{\"feather\":15,\"hat\":\"empty_Hats\",\"clothes\":\"empty_Clothes\",\"eyes\":\"empty_Eyes\",\"fart\":\"empty_Farts\",\"pet\":\"empty_Pets\",\"stinger\":\"empty_Stingers\",\"banner\":\"empty_Banners\",\"card\":\"empty_Cards\"}},\"1SR5FHxyAhNSYcYyEffiEvxLG6C2\":{\"userId\":\"1SR5FHxyAhNSYcYyEffiEvxLG6C2\",\"nickname\":\"dawn\",\"role\":113,\"faction\":3,\"teamId\":-1,\"win\":false,\"isGhost\":false,\"disconnected\":false,\"deadAt\":0,\"kills\":0,\"tasks\":2,\"sabotages\":0,\"discussions\":0,\"correctVotes\":0,\"turnsSurvived\":3,\"cosmetics\":{\"feather\":5,\"hat\":\"100081734\",\"clothes\":\"100081089\",\"eyes\":\"empty_Eyes\",\"fart\":\"100080166\",\"pet\":\"empty_Pets\",\"stinger\":\"empty_Stingers\",\"banner\":\"100080332\",\"card\":\"100080587\"}},\"Po0akbVSrCWSBjJDX8ZqO04NLgV2\":{\"userId\":\"Po0akbVSrCWSBjJDX8ZqO04NLgV2\",\"nickname\":\"熙\",\"role\":17,\"faction\":2,\"teamId\":-1,\"win\":false,\"isGhost\":true,\"disconnected\":false,\"deadAt\":1787509600619,\"kills\":3,\"tasks\":2,\"sabotages\":1,\"discussions\":0,\"correctVotes\":0,\"turnsSurvived\":2,\"cosmetics\":{\"feather\":17,\"hat\":\"100080075\",\"clothes\":\"100080010\",\"eyes\":\"empty_Eyes\",\"fart\":\"100080291\",\"pet\":\"empty_Pets\",\"stinger\":\"empty_Stingers\",\"banner\":\"100080699\",\"card\":\"100080586\"}},\"oTlbEGGTIbTIcc20qtI9misTptt2\":{\"userId\":\"oTlbEGGTIbTIcc20qtI9misTptt2\",\"nickname\":\"MIAO\",\"role\":30,\"faction\":1,\"teamId\":-1,\"win\":true,\"isGhost\":true,\"disconnected\":false,\"deadAt\":1787509440697,\"kills\":0,\"tasks\":0,\"sabotages\":0,\"discussions\":0,\"correctVotes\":1,\"turnsSurvived\":3,\"cosmetics\":{\"feather\":11,\"hat\":\"empty_Hats\",\"clothes\":\"empty_Clothes\",\"eyes\":\"empty_Eyes\",\"fart\":\"empty_Farts\",\"pet\":\"empty_Pets\",\"stinger\":\"empty_Stingers\",\"banner\":\"empty_Banners\",\"card\":\"empty_Cards\"}},\"g4xe6r7YYmVoEoIOjmvekFvVbZD3\":{\"userId\":\"g4xe6r7YYmVoEoIOjmvekFvVbZD3\",\"nickname\":\"洋杨\",\"role\":61,\"faction\":1,\"teamId\":-1,\"win\":true,\"isGhost\":false,\"disconnected\":false,\"deadAt\":0,\"kills\":0,\"tasks\":0,\"sabotages\":0,\"discussions\":0,\"correctVotes\":2,\"turnsSurvived\":3,\"cosmetics\":{\"feather\":14,\"hat\":\"empty_Hats\",\"clothes\":\"empty_Clothes\",\"eyes\":\"empty_Eyes\",\"fart\":\"empty_Farts\",\"pet\":\"empty_Pets\",\"stinger\":\"empty_Stingers\",\"banner\":\"empty_Banners\",\"card\":\"empty_Cards\"}},\"WvOsgPhs60PX26JcBrSXNDwnfE22\":{\"userId\":\"WvOsgPhs60PX26JcBrSXNDwnfE22\",\"nickname\":\"诗述\",\"role\":57,\"faction\":3,\"teamId\":-1,\"win\":false,\"isGhost\":true,\"disconnected\":false,\"deadAt\":1787508966538,\"kills\":0,\"tasks\":0,\"sabotages\":0,\"discussions\":0,\"correctVotes\":0,\"turnsSurvived\":3,\"cosmetics\":{\"feather\":6,\"hat\":\"100080296\",\"clothes\":\"100080471\",\"eyes\":\"empty_Eyes\",\"fart\":\"100080157\",\"pet\":\"empty_Pets\",\"stinger\":\"empty_Stingers\",\"banner\":\"100080717\",\"card\":\"empty_Cards\"}},\"ArAtxcaYgUaz8m96fOpYm3sDwnl1\":{\"userId\":\"ArAtxcaYgUaz8m96fOpYm3sDwnl1\",\"nickname\":\"YMKF\",\"role\":31,\"faction\":1,\"teamId\":-1,\"win\":true,\"isGhost\":true,\"disconnected\":false,\"deadAt\":1787508591237,\"kills\":0,\"tasks\":0,\"sabotages\":0,\"discussions\":0,\"correctVotes\":0,\"turnsSurvived\":3,\"cosmetics\":{\"feather\":2,\"hat\":\"empty_Hats\",\"clothes\":\"empty_Clothes\",\"eyes\":\"empty_Eyes\",\"fart\":\"empty_Farts\",\"pet\":\"empty_Pets\",\"stinger\":\"empty_Stingers\",\"banner\":\"empty_Banners\",\"card\":\"empty_Cards\"}}},\"rounds\":[{\"startAt\":1787508535730,\"endAt\":1787508941546,\"meetingInfo\":{\"starter\":\"ktqS3jTRBxQ65GbgDA8WojyX5UR2\",\"type\":\"Report\",\"startTime\":1787508593710,\"votes\":{\"2VpmftVv9tWGrrpSoszVW9qTBAC2\":\"1SR5FHxyAhNSYcYyEffiEvxLG6C2\",\"ulARy7HywKO591auz8obGFoKoFp2\":\"skip\",\"0F6OoAHO1aThKLeh78SGytD91SA2\":\"ktqS3jTRBxQ65GbgDA8WojyX5UR2\",\"CGxaCEiKo9Zu07j7NpsXydUmXDE2\":\"ktqS3jTRBxQ65GbgDA8WojyX5UR2\",\"ktqS3jTRBxQ65GbgDA8WojyX5UR2\":\"skip\",\"1SR5FHxyAhNSYcYyEffiEvxLG6C2\":\"ktqS3jTRBxQ65GbgDA8WojyX5UR2\",\"Po0akbVSrCWSBjJDX8ZqO04NLgV2\":\"ktqS3jTRBxQ65GbgDA8WojyX5UR2\",\"oTlbEGGTIbTIcc20qtI9misTptt2\":\"ktqS3jTRBxQ65GbgDA8WojyX5UR2\",\"g4xe6r7YYmVoEoIOjmvekFvVbZD3\":\"CGxaCEiKo9Zu07j7NpsXydUmXDE2\",\"WvOsgPhs60PX26JcBrSXNDwnfE22\":\"skip\"},\"result\":\"ktqS3jTRBxQ65GbgDA8WojyX5UR2\"},\"timeline\":[{\"timestamp\":1787508566794,\"type\":2,\"uid\":\"Po0akbVSrCWSBjJDX8ZqO04NLgV2\",\"targetId\":\"BsbynLqHj4TkIJtNMBHzfTMAsHi2\",\"extraData\":\"\"},{\"timestamp\":1787508591237,\"type\":1002,\"uid\":\"ArAtxcaYgUaz8m96fOpYm3sDwnl1\",\"targetId\":\"\",\"extraData\":\"\"},{\"timestamp\":1787508591237,\"type\":2,\"uid\":\"Po0akbVSrCWSBjJDX8ZqO04NLgV2\",\"targetId\":\"ArAtxcaYgUaz8m96fOpYm3sDwnl1\",\"extraData\":\"\"},{\"timestamp\":1787508681714,\"type\":1061,\"uid\":\"1SR5FHxyAhNSYcYyEffiEvxLG6C2\",\"targetId\":\"oTlbEGGTIbTIcc20qtI9misTptt2\",\"extraData\":\"30\"},{\"timestamp\":1787508703817,\"type\":1062,\"uid\":\"1SR5FHxyAhNSYcYyEffiEvxLG6C2\",\"targetId\":\"ArAtxcaYgUaz8m96fOpYm3sDwnl1\",\"extraData\":\"13\"},{\"timestamp\":1787508928488,\"type\":3,\"uid\":\"ktqS3jTRBxQ65GbgDA8WojyX5UR2\",\"targetId\":\"\",\"extraData\":\"\"}]},{\"startAt\":1787508941546,\"endAt\":1787509383437,\"meetingInfo\":{\"starter\":\"CGxaCEiKo9Zu07j7NpsXydUmXDE2\",\"type\":\"Report\",\"startTime\":1787508996672,\"votes\":{\"2VpmftVv9tWGrrpSoszVW9qTBAC2\":\"skip\",\"ulARy7HywKO591auz8obGFoKoFp2\":\"2VpmftVv9tWGrrpSoszVW9qTBAC2\",\"0F6OoAHO1aThKLeh78SGytD91SA2\":\"2VpmftVv9tWGrrpSoszVW9qTBAC2\",\"CGxaCEiKo9Zu07j7NpsXydUmXDE2\":\"2VpmftVv9tWGrrpSoszVW9qTBAC2\",\"1SR5FHxyAhNSYcYyEffiEvxLG6C2\":\"2VpmftVv9tWGrrpSoszVW9qTBAC2\",\"Po0akbVSrCWSBjJDX8ZqO04NLgV2\":\"skip\",\"oTlbEGGTIbTIcc20qtI9misTptt2\":\"2VpmftVv9tWGrrpSoszVW9qTBAC2\",\"g4xe6r7YYmVoEoIOjmvekFvVbZD3\":\"2VpmftVv9tWGrrpSoszVW9qTBAC2\"},\"result\":\"2VpmftVv9tWGrrpSoszVW9qTBAC2\"},\"timeline\":[{\"timestamp\":1787508966538,\"type\":2,\"uid\":\"2VpmftVv9tWGrrpSoszVW9qTBAC2\",\"targetId\":\"WvOsgPhs60PX26JcBrSXNDwnfE22\",\"extraData\":\"\"},{\"timestamp\":1787509108649,\"type\":1062,\"uid\":\"1SR5FHxyAhNSYcYyEffiEvxLG6C2\",\"targetId\":\"WvOsgPhs60PX26JcBrSXNDwnfE22\",\"extraData\":\"13\"},{\"timestamp\":1787509370388,\"type\":3,\"uid\":\"2VpmftVv9tWGrrpSoszVW9qTBAC2\",\"targetId\":\"\",\"extraData\":\"\"}]},{\"startAt\":1787509383437,\"endAt\":1787509603907,\"meetingInfo\":{\"starter\":\"0F6OoAHO1aThKLeh78SGytD91SA2\",\"type\":\"Report\",\"startTime\":1787509445939,\"votes\":{\"ulARy7HywKO591auz8obGFoKoFp2\":\"Po0akbVSrCWSBjJDX8ZqO04NLgV2\",\"0F6OoAHO1aThKLeh78SGytD91SA2\":\"Po0akbVSrCWSBjJDX8ZqO04NLgV2\",\"CGxaCEiKo9Zu07j7NpsXydUmXDE2\":\"Po0akbVSrCWSBjJDX8ZqO04NLgV2\",\"1SR5FHxyAhNSYcYyEffiEvxLG6C2\":\"Po0akbVSrCWSBjJDX8ZqO04NLgV2\",\"Po0akbVSrCWSBjJDX8ZqO04NLgV2\":\"skip\",\"g4xe6r7YYmVoEoIOjmvekFvVbZD3\":\"Po0akbVSrCWSBjJDX8ZqO04NLgV2\"},\"result\":\"Po0akbVSrCWSBjJDX8ZqO04NLgV2\"},\"timeline\":[{\"timestamp\":1787509440697,\"type\":2,\"uid\":\"Po0akbVSrCWSBjJDX8ZqO04NLgV2\",\"targetId\":\"oTlbEGGTIbTIcc20qtI9misTptt2\",\"extraData\":\"\"},{\"timestamp\":1787509524565,\"type\":1061,\"uid\":\"1SR5FHxyAhNSYcYyEffiEvxLG6C2\",\"targetId\":\"oTlbEGGTIbTIcc20qtI9misTptt2\",\"extraData\":\"30\"},{\"timestamp\":1787509533813,\"type\":1062,\"uid\":\"1SR5FHxyAhNSYcYyEffiEvxLG6C2\",\"targetId\":\"ulARy7HywKO591auz8obGFoKoFp2\",\"extraData\":\"1\"},{\"timestamp\":1787509590619,\"type\":3,\"uid\":\"Po0akbVSrCWSBjJDX8ZqO04NLgV2\",\"targetId\":\"\",\"extraData\":\"\"},{\"timestamp\":1787509603907,\"type\":0,\"uid\":\"ulARy7HywKO591auz8obGFoKoFp2\",\"targetId\":\"\",\"extraData\":\"\"},{\"timestamp\":1787509603907,\"type\":0,\"uid\":\"0F6OoAHO1aThKLeh78SGytD91SA2\",\"targetId\":\"\",\"extraData\":\"\"},{\"timestamp\":1787509603907,\"type\":0,\"uid\":\"CGxaCEiKo9Zu07j7NpsXydUmXDE2\",\"targetId\":\"\",\"extraData\":\"\"},{\"timestamp\":1787509603907,\"type\":0,\"uid\":\"BsbynLqHj4TkIJtNMBHzfTMAsHi2\",\"targetId\":\"\",\"extraData\":\"\"},{\"timestamp\":1787509603907,\"type\":0,\"uid\":\"ktqS3jTRBxQ65GbgDA8WojyX5UR2\",\"targetId\":\"\",\"extraData\":\"\"},{\"timestamp\":1787509603907,\"type\":1,\"uid\":\"1SR5FHxyAhNSYcYyEffiEvxLG6C2\",\"targetId\":\"\",\"extraData\":\"\"},{\"timestamp\":1787509603907,\"type\":1,\"uid\":\"Po0akbVSrCWSBjJDX8ZqO04NLgV2\",\"targetId\":\"\",\"extraData\":\"\"},{\"timestamp\":1787509603907,\"type\":0,\"uid\":\"oTlbEGGTIbTIcc20qtI9misTptt2\",\"targetId\":\"\",\"extraData\":\"\"},{\"timestamp\":1787509603907,\"type\":1,\"uid\":\"mWnFCwQ9rdTZAcqmfHhefGJ5Zjx1\",\"targetId\":\"\",\"extraData\":\"\"},{\"timestamp\":1787509603907,\"type\":0,\"uid\":\"g4xe6r7YYmVoEoIOjmvekFvVbZD3\",\"targetId\":\"\",\"extraData\":\"\"},{\"timestamp\":1787509603907,\"type\":1,\"uid\":\"WvOsgPhs60PX26JcBrSXNDwnfE22\",\"targetId\":\"\",\"extraData\":\"\"},{\"timestamp\":1787509603907,\"type\":0,\"uid\":\"ArAtxcaYgUaz8m96fOpYm3sDwnl1\",\"targetId\":\"\",\"extraData\":\"\"}]}],\"gameModeData\":null}"
+                                                            }
+                                                        ],
+                                       "hiddenIds":  [
+                                                         "U056230820261808673661"
+                                                     ],
+                                       "contextHints":  [
+
+                                                        ],
+                                       "captureBuild":  "1.16.20",
+                                       "fetchedAt":  "2026-08-27T11:49:21.2289340+08:00"
                                    },
                         "detailAvailable":  true
                     },
@@ -1769,9 +1840,9 @@
                     }
                 ],
     "meta":  {
-                 "matchCount":  22,
-                 "detailCount":  22,
+                 "matchCount":  23,
+                 "detailCount":  23,
                  "playniteSeconds":  51991,
-                 "dashboardVisible":  0
+                 "dashboardVisible":  20
              }
 }
