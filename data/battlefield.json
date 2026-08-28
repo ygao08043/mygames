@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
     "build":  "v1.18.0",
-    "generatedAt":  "2026-08-28T20:19:46.3867174+08:00",
+    "generatedAt":  "2026-08-28T23:39:20.5559335+08:00",
     "eaId":  "PIANOYMKF",
     "platform":  "pc",
     "source":  {
@@ -14,7 +14,7 @@
                               "key":  "bf1",
                               "title":  "Battlefield 1",
                               "status":  "ok",
-                              "updatedAt":  "2026-08-28T20:19:46.3867174+08:00",
+                              "updatedAt":  "2026-08-28T23:39:20.5559335+08:00",
                               "endpoint":  "https://api.gametools.network/bf1/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "PIANOYMKF",
@@ -8149,7 +8149,7 @@
                               "key":  "bfv",
                               "title":  "Battlefield V",
                               "status":  "ok",
-                              "updatedAt":  "2026-08-28T20:19:46.3867174+08:00",
+                              "updatedAt":  "2026-08-28T23:39:20.5559335+08:00",
                               "endpoint":  "https://api.gametools.network/bfv/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "PIANOYMKF",
@@ -12410,7 +12410,7 @@
                                  "key":  "bf2042",
                                  "title":  "Battlefield 2042",
                                  "status":  "upstream_broken",
-                                 "updatedAt":  "2026-08-28T20:19:46.3867174+08:00",
+                                 "updatedAt":  "2026-08-28T23:39:20.5559335+08:00",
                                  "endpoint":  "https://api.gametools.network/bf2042/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                                  "profile":  null,
                                  "trueSessions":  [
@@ -18765,7 +18765,7 @@
                               "key":  "bf6",
                               "title":  "Battlefield 6",
                               "status":  "ok",
-                              "updatedAt":  "2026-08-28T20:19:46.3867174+08:00",
+                              "updatedAt":  "2026-08-28T23:39:20.5559335+08:00",
                               "endpoint":  "https://api.gametools.network/bf6/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "pianoymkf",
@@ -21099,11 +21099,23 @@
                                                            "secondsPlayed":  4888
                                                        },
                                                        {
+                                                           "mapName":  "Fort Lyndon",
+                                                           "image":  "https://cdn.gametools.network/maps/bf6/Battlefield_6_Redsec.webp",
+                                                           "translationId":  "ID_MP_LVL_GRANITE_NAME",
+                                                           "name":  "Fort Lyndon",
+                                                           "id":  "lvlftpgranite",
+                                                           "wins":  4,
+                                                           "losses":  37,
+                                                           "matches":  41,
+                                                           "winPercent":  9.76,
+                                                           "secondsPlayed":  42144
+                                                       },
+                                                       {
                                                            "mapName":  "REDSEC",
                                                            "image":  "https://cdn.gametools.network/maps/bf6/Battlefield_6_Redsec.webp",
                                                            "translationId":  "ID_ARRIVAL_REDSEC",
                                                            "name":  "REDSEC",
-                                                           "id":  "lvlftpgranite",
+                                                           "id":  "lvlftp",
                                                            "wins":  4,
                                                            "losses":  37,
                                                            "matches":  41,
@@ -23332,6 +23344,70 @@
                                                                                 "secondsPlayed":  14951,
                                                                                 "timePlayed":  "4:09:11",
                                                                                 "extractions":  0
+                                                                            },
+                                                                            {
+                                                                                "modeId":  "MP_SquadDM0",
+                                                                                "mode":  "Squad deathmatch",
+                                                                                "matches":  2,
+                                                                                "wins":  0,
+                                                                                "losses":  2,
+                                                                                "kills":  18,
+                                                                                "rivivals":  1,
+                                                                                "lastPlacement":  0,
+                                                                                "deaths":  24,
+                                                                                "killDeath":  0.75,
+                                                                                "score":  2640,
+                                                                                "secondsPlayed":  784,
+                                                                                "timePlayed":  "0:13:04",
+                                                                                "extractions":  0
+                                                                            },
+                                                                            {
+                                                                                "modeId":  "MP_TeamDM0",
+                                                                                "mode":  "Team deathmatch",
+                                                                                "matches":  3,
+                                                                                "wins":  1,
+                                                                                "losses":  2,
+                                                                                "kills":  25,
+                                                                                "rivivals":  2,
+                                                                                "lastPlacement":  0,
+                                                                                "deaths":  35,
+                                                                                "killDeath":  0.71,
+                                                                                "score":  5660,
+                                                                                "secondsPlayed":  1915,
+                                                                                "timePlayed":  "0:31:55",
+                                                                                "extractions":  0
+                                                                            },
+                                                                            {
+                                                                                "modeId":  "MP_KOTH0",
+                                                                                "mode":  "King of the Hill",
+                                                                                "matches":  2,
+                                                                                "wins":  0,
+                                                                                "losses":  2,
+                                                                                "kills":  15,
+                                                                                "rivivals":  0,
+                                                                                "lastPlacement":  0,
+                                                                                "deaths":  24,
+                                                                                "killDeath":  0.62,
+                                                                                "score":  3500,
+                                                                                "secondsPlayed":  1142,
+                                                                                "timePlayed":  "0:19:02",
+                                                                                "extractions":  0
+                                                                            },
+                                                                            {
+                                                                                "modeId":  "MP_Domination0",
+                                                                                "mode":  "Domination",
+                                                                                "matches":  3,
+                                                                                "wins":  2,
+                                                                                "losses":  1,
+                                                                                "kills":  40,
+                                                                                "rivivals":  0,
+                                                                                "lastPlacement":  0,
+                                                                                "deaths":  42,
+                                                                                "killDeath":  0.95,
+                                                                                "score":  8165,
+                                                                                "secondsPlayed":  1484,
+                                                                                "timePlayed":  "0:24:44",
+                                                                                "extractions":  0
                                                                             }
                                                                         ]
                                                           },
@@ -23411,5 +23487,5 @@
                           }
               },
     "playniteTotalSeconds":  913440,
-    "playniteCapturedAt":  "2026-08-28T20:25:09.4090804+08:00"
+    "playniteCapturedAt":  "2026-08-28T23:40:22.5943749+08:00"
 }
