@@ -1,6 +1,6 @@
 {
     "version":  "1.0",
-    "updatedAt":  "2026-08-29T16:28:23.0097191+08:00",
+    "updatedAt":  "2026-08-29T23:29:08.9021747+08:00",
     "games":  {
                   "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b":  {
                                                                "name":  "CHUNITHM",
@@ -45,11 +45,11 @@
                   "e9125710-44f3-4473-a14c-bde806b1ff76":  {
                                                                "name":  "Arcaea",
                                                                "resolvedPlayniteId":  "e9125710-44f3-4473-a14c-bde806b1ff76",
-                                                               "targetPlaytimeSeconds":  1252319,
-                                                               "sourceDeltaSeconds":  0,
+                                                               "targetPlaytimeSeconds":  1253467,
+                                                               "sourceDeltaSeconds":  1148,
                                                                "exactTarget":  false,
-                                                               "externalSessionCountTotal":  74,
-                                                               "latestExternalActivityUtc":  "2026-08-27T08:12:52.0000000Z",
+                                                               "externalSessionCountTotal":  77,
+                                                               "latestExternalActivityUtc":  "2026-08-29T15:12:08.0000000Z",
                                                                "repairIOSSeconds":  0
                                                            },
                   "1db2dfa2-f00a-4382-b586-e9cfa07b0a12":  {
@@ -110,6 +110,16 @@
                                                                "exactTarget":  false,
                                                                "externalSessionCountTotal":  1,
                                                                "latestExternalActivityUtc":  "2026-08-24T16:14:41.0000000Z",
+                                                               "repairIOSSeconds":  0
+                                                           },
+                  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8":  {
+                                                               "name":  "Project SEKAI",
+                                                               "resolvedPlayniteId":  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8",
+                                                               "targetPlaytimeSeconds":  94758,
+                                                               "sourceDeltaSeconds":  4358,
+                                                               "exactTarget":  false,
+                                                               "externalSessionCountTotal":  4,
+                                                               "latestExternalActivityUtc":  "2026-08-29T14:51:55.0000000Z",
                                                                "repairIOSSeconds":  0
                                                            }
               }

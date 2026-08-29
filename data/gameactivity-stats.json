@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
     "build":  "v1.18.0",
-    "generatedAt":  "2026-08-29T16:28:23.3121730+08:00",
+    "generatedAt":  "2026-08-29T23:29:09.1781377+08:00",
     "source":  {
                    "provider":  "Playnite GameActivity",
                    "fields":  [
@@ -15,15 +15,15 @@
     "analyticsStart":  "2026-03-01",
     "coverageStart":  "2026-03-01",
     "coverageEnd":  "2026-08-29",
-    "sessionCount":  1256,
+    "sessionCount":  1263,
     "syntheticSessionCount":  4,
     "currentMonth":  "2026-08",
     "currentYear":  "2026",
     "totals":  {
-                   "recordedSeconds":  2962511,
-                   "last7DaysSeconds":  86532,
-                   "currentMonthSeconds":  326108,
-                   "currentYearSeconds":  2962511,
+                   "recordedSeconds":  2968017,
+                   "last7DaysSeconds":  92038,
+                   "currentMonthSeconds":  331614,
+                   "currentYearSeconds":  2968017,
                    "activeDays":  181
                },
     "daily":  [
@@ -753,7 +753,7 @@
                   },
                   {
                       "date":  "2026-08-29",
-                      "seconds":  7254
+                      "seconds":  12760
                   }
               ],
     "weekly":  [
@@ -890,7 +890,7 @@
                    {
                        "start":  "2026-08-24",
                        "label":  "8/24",
-                       "seconds":  78607
+                       "seconds":  84113
                    }
                ],
     "monthly":  [
@@ -922,7 +922,7 @@
                     {
                         "month":  "2026-08",
                         "label":  "26/08",
-                        "seconds":  326108
+                        "seconds":  331614
                     }
                 ],
     "hourly":  [
@@ -1012,15 +1012,15 @@
                    },
                    {
                        "hour":  21,
-                       "seconds":  169833
+                       "seconds":  171094
                    },
                    {
                        "hour":  22,
-                       "seconds":  236401
+                       "seconds":  239978
                    },
                    {
                        "hour":  23,
-                       "seconds":  301388
+                       "seconds":  302056
                    }
                ],
     "weekday":  [
@@ -1052,7 +1052,7 @@
                     {
                         "day":  5,
                         "label":  "周六",
-                        "seconds":  384208
+                        "seconds":  389714
                     },
                     {
                         "day":  6,
@@ -1151,15 +1151,15 @@
                                                   },
                                                   {
                                                       "hour":  21,
-                                                      "seconds":  20010
+                                                      "seconds":  21271
                                                   },
                                                   {
                                                       "hour":  22,
-                                                      "seconds":  19981
+                                                      "seconds":  23558
                                                   },
                                                   {
                                                       "hour":  23,
-                                                      "seconds":  46863
+                                                      "seconds":  47531
                                                   }
                                               ],
                                    "weekday":  [
@@ -1191,7 +1191,7 @@
                                                    {
                                                        "day":  5,
                                                        "label":  "周六",
-                                                       "seconds":  49707
+                                                       "seconds":  55213
                                                    },
                                                    {
                                                        "day":  6,
@@ -1910,7 +1910,7 @@
                               {
                                   "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
                                   "name":  "Arcaea",
-                                  "seconds":  47148
+                                  "seconds":  48296
                               },
                               {
                                   "id":  "f0a894ed-b3a2-471e-b081-efdf8f0269cd",
@@ -1928,6 +1928,11 @@
                                   "seconds":  9596
                               },
                               {
+                                  "id":  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8",
+                                  "name":  "Project SEKAI",
+                                  "seconds":  8438
+                              },
+                              {
                                   "id":  "901a387c-5431-4985-89b3-128142b21167",
                                   "name":  "Battlefield 1",
                                   "seconds":  6050
@@ -1936,11 +1941,6 @@
                                   "id":  "579dd5f2-6d58-4423-ba8b-c837014df0bf",
                                   "name":  "Rhythm Doctor",
                                   "seconds":  5806
-                              },
-                              {
-                                  "id":  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8",
-                                  "name":  "Project SEKAI",
-                                  "seconds":  4080
                               },
                               {
                                   "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
@@ -2002,7 +2002,7 @@
                              {
                                  "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
                                  "name":  "Arcaea",
-                                 "seconds":  115273
+                                 "seconds":  116421
                              },
                              {
                                  "id":  "b730c4a7-1f2f-4ec7-aca4-f1df509d18fe",
@@ -2040,6 +2040,11 @@
                                  "seconds":  12653
                              },
                              {
+                                 "id":  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8",
+                                 "name":  "Project SEKAI",
+                                 "seconds":  8438
+                             },
+                             {
                                  "id":  "579dd5f2-6d58-4423-ba8b-c837014df0bf",
                                  "name":  "Rhythm Doctor",
                                  "seconds":  6731
@@ -2048,11 +2053,6 @@
                                  "id":  "bb00e134-2ed0-4e1a-90c8-ee8cb7f71e11",
                                  "name":  "球球大作战",
                                  "seconds":  6249
-                             },
-                             {
-                                 "id":  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8",
-                                 "name":  "Project SEKAI",
-                                 "seconds":  4080
                              },
                              {
                                  "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
@@ -2372,7 +2372,7 @@
                                            {
                                                "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
                                                "name":  "Arcaea",
-                                               "seconds":  47148
+                                               "seconds":  48296
                                            },
                                            {
                                                "id":  "f0a894ed-b3a2-471e-b081-efdf8f0269cd",
@@ -2390,6 +2390,11 @@
                                                "seconds":  9596
                                            },
                                            {
+                                               "id":  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8",
+                                               "name":  "Project SEKAI",
+                                               "seconds":  8438
+                                           },
+                                           {
                                                "id":  "901a387c-5431-4985-89b3-128142b21167",
                                                "name":  "Battlefield 1",
                                                "seconds":  6050
@@ -2398,11 +2403,6 @@
                                                "id":  "579dd5f2-6d58-4423-ba8b-c837014df0bf",
                                                "name":  "Rhythm Doctor",
                                                "seconds":  5806
-                                           },
-                                           {
-                                               "id":  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8",
-                                               "name":  "Project SEKAI",
-                                               "seconds":  4080
                                            },
                                            {
                                                "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
@@ -2444,6 +2444,18 @@
                      ],
     "lastPlayedGames":  [
                             {
+                                "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
+                                "name":  "Arcaea",
+                                "date":  "2026-08-29",
+                                "lastPlayed":  "2026-08-29T23:12:08.0000000"
+                            },
+                            {
+                                "id":  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8",
+                                "name":  "Project SEKAI",
+                                "date":  "2026-08-29",
+                                "lastPlayed":  "2026-08-29T22:51:55.0000000"
+                            },
+                            {
                                 "id":  "bd4bf292-368e-4e00-bdbb-6dee05aff790",
                                 "name":  "osu!",
                                 "date":  "2026-08-29",
@@ -2466,12 +2478,6 @@
                                 "name":  "CHUNITHM",
                                 "date":  "2026-08-28",
                                 "lastPlayed":  "2026-08-28T19:28:00.0000000"
-                            },
-                            {
-                                "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
-                                "name":  "Arcaea",
-                                "date":  "2026-08-27",
-                                "lastPlayed":  "2026-08-27T16:12:52.0000000"
                             },
                             {
                                 "id":  "579dd5f2-6d58-4423-ba8b-c837014df0bf",
@@ -2532,12 +2538,6 @@
                                 "name":  "Battlefield 1",
                                 "date":  "2026-08-15",
                                 "lastPlayed":  "2026-08-15T16:12:03.6804831"
-                            },
-                            {
-                                "id":  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8",
-                                "name":  "Project SEKAI",
-                                "date":  "2026-08-11",
-                                "lastPlayed":  "2026-08-11T16:08:00.0000000"
                             },
                             {
                                 "id":  "cddce5b2-fd9f-4c31-b6a1-54905126c08a",
@@ -2607,7 +2607,7 @@
                                  "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                  "name":  "雀魂麻将",
                                  "seconds":  133906,
-                                 "totalSeconds":  326108
+                                 "totalSeconds":  331614
                              },
                              {
                                  "period":  "2026-07",
@@ -2657,7 +2657,7 @@
                                 "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                 "name":  "雀魂麻将",
                                 "seconds":  1534268,
-                                "totalSeconds":  2962511
+                                "totalSeconds":  2968017
                             }
                         ],
     "timelineWindowDays":  14,
@@ -16843,6 +16843,76 @@
                          "startText":  "15:18",
                          "endText":  "15:59",
                          "seconds":  2460
+                     },
+                     {
+                         "date":  "2026-08-29",
+                         "id":  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8",
+                         "name":  "Project SEKAI",
+                         "startMinute":  1298.98,
+                         "endMinute":  1320.67,
+                         "startText":  "21:38",
+                         "endText":  "22:00",
+                         "seconds":  1301
+                     },
+                     {
+                         "date":  "2026-08-29",
+                         "id":  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8",
+                         "name":  "Project SEKAI",
+                         "startMinute":  1320.85,
+                         "endMinute":  1326.2,
+                         "startText":  "22:00",
+                         "endText":  "22:06",
+                         "seconds":  321
+                     },
+                     {
+                         "date":  "2026-08-29",
+                         "id":  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8",
+                         "name":  "Project SEKAI",
+                         "startMinute":  1326.25,
+                         "endMinute":  1327.47,
+                         "startText":  "22:06",
+                         "endText":  "22:07",
+                         "seconds":  73
+                     },
+                     {
+                         "date":  "2026-08-29",
+                         "id":  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8",
+                         "name":  "Project SEKAI",
+                         "startMinute":  1327.53,
+                         "endMinute":  1371.92,
+                         "startText":  "22:07",
+                         "endText":  "22:51",
+                         "seconds":  2663
+                     },
+                     {
+                         "date":  "2026-08-29",
+                         "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
+                         "name":  "Arcaea",
+                         "startMinute":  1372,
+                         "endMinute":  1386.92,
+                         "startText":  "22:52",
+                         "endText":  "23:06",
+                         "seconds":  895
+                     },
+                     {
+                         "date":  "2026-08-29",
+                         "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
+                         "name":  "Arcaea",
+                         "startMinute":  1386.93,
+                         "endMinute":  1386.95,
+                         "startText":  "23:06",
+                         "endText":  "23:06",
+                         "seconds":  1
+                     },
+                     {
+                         "date":  "2026-08-29",
+                         "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
+                         "name":  "Arcaea",
+                         "startMinute":  1387.93,
+                         "endMinute":  1392.13,
+                         "startText":  "23:07",
+                         "endText":  "23:12",
+                         "seconds":  252
                      }
                  ]
 }

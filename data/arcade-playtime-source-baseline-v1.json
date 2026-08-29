@@ -1,6 +1,6 @@
 {
     "version":  "1.0",
-    "updatedAt":  "2026-08-29T16:28:23.0077333+08:00",
+    "updatedAt":  "2026-08-29T23:29:08.9011726+08:00",
     "games":  {
                   "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b":  {
                                                                "name":  "CHUNITHM",
@@ -828,7 +828,10 @@
                                                                                                             "iPad13inchM4|2026-08-27T05:18:44.0000000+00:00":  14,
                                                                                                             "iPad13inchM4|2026-08-27T05:19:02.0000000+00:00":  444,
                                                                                                             "iPad13inchM4|2026-08-27T07:34:07.0000000+00:00":  2098,
-                                                                                                            "iPad13inchM4|2026-08-27T08:09:06.0000000+00:00":  226
+                                                                                                            "iPad13inchM4|2026-08-27T08:09:06.0000000+00:00":  226,
+                                                                                                            "iPad13inchM4|2026-08-29T14:52:00.0000000+00:00":  895,
+                                                                                                            "iPad13inchM4|2026-08-29T15:06:56.0000000+00:00":  1,
+                                                                                                            "iPad13inchM4|2026-08-29T15:07:56.0000000+00:00":  252
                                                                                                         },
                                                                                            "file":  "iOSGameActivity",
                                                                                            "takeAllOnFirstSight":  true,
@@ -980,6 +983,24 @@
                                                                                            "available":  true,
                                                                                            "sessions":  {
                                                                                                             "iPhone16pro|2026-08-24T16:14:39.0000000+00:00":  2
+                                                                                                        },
+                                                                                           "file":  "iOSGameActivity",
+                                                                                           "takeAllOnFirstSight":  true,
+                                                                                           "historyMode":  "all-ios-shortcut-sessions",
+                                                                                           "countOnly":  false
+                                                                                       }
+                                                                           }
+                                                           },
+                  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8":  {
+                                                               "name":  "Project SEKAI",
+                                                               "sources":  {
+                                                                               "ios":  {
+                                                                                           "available":  true,
+                                                                                           "sessions":  {
+                                                                                                            "iPad13inchM4|2026-08-29T13:38:59.0000000+00:00":  1301,
+                                                                                                            "iPad13inchM4|2026-08-29T14:00:51.0000000+00:00":  321,
+                                                                                                            "iPad13inchM4|2026-08-29T14:06:15.0000000+00:00":  73,
+                                                                                                            "iPad13inchM4|2026-08-29T14:07:32.0000000+00:00":  2663
                                                                                                         },
                                                                                            "file":  "iOSGameActivity",
                                                                                            "takeAllOnFirstSight":  true,
