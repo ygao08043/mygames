@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
     "build":  "v1.18.0",
-    "generatedAt":  "2026-08-28T23:39:20.5559335+08:00",
+    "generatedAt":  "2026-08-29T11:31:47.1500582+08:00",
     "eaId":  "PIANOYMKF",
     "platform":  "pc",
     "source":  {
@@ -14,7 +14,7 @@
                               "key":  "bf1",
                               "title":  "Battlefield 1",
                               "status":  "ok",
-                              "updatedAt":  "2026-08-28T23:39:20.5559335+08:00",
+                              "updatedAt":  "2026-08-29T11:31:47.1500582+08:00",
                               "endpoint":  "https://api.gametools.network/bf1/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "PIANOYMKF",
@@ -8149,7 +8149,7 @@
                               "key":  "bfv",
                               "title":  "Battlefield V",
                               "status":  "ok",
-                              "updatedAt":  "2026-08-28T23:39:20.5559335+08:00",
+                              "updatedAt":  "2026-08-29T11:31:47.1500582+08:00",
                               "endpoint":  "https://api.gametools.network/bfv/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "PIANOYMKF",
@@ -12409,10 +12409,28 @@
                   "bf2042":  {
                                  "key":  "bf2042",
                                  "title":  "Battlefield 2042",
-                                 "status":  "upstream_broken",
+                                 "status":  "cached",
                                  "updatedAt":  "2026-08-28T23:39:20.5559335+08:00",
                                  "endpoint":  "https://api.gametools.network/bf2042/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
-                                 "profile":  null,
+                                 "profile":  {
+                                                 "userName":  "pianoymkf",
+                                                 "avatar":  "",
+                                                 "rank":  0,
+                                                 "secondsPlayed":  0,
+                                                 "kills":  0,
+                                                 "deaths":  0,
+                                                 "kd":  0,
+                                                 "wins":  0,
+                                                 "losses":  0,
+                                                 "rounds":  0,
+                                                 "winPercent":  0,
+                                                 "kpm":  0,
+                                                 "spm":  null,
+                                                 "accuracy":  0,
+                                                 "headshots":  0,
+                                                 "longestHeadshot":  null,
+                                                 "score":  null
+                                             },
                                  "trueSessions":  [
 
                                                   ],
@@ -18755,8 +18773,8 @@
                                                          },
                                              "level":  0
                                          },
-                                 "error":  "GameTools / EA upstream currently returns hasResults=false or an all-zero BF2042 player payload. Data is marked unavailable until the official upstream recovers.",
-                                 "dataQuality":  "官方数据损坏 · 待修复",
+                                 "error":  "curl: (22) The requested URL returned error: 404",
+                                 "dataQuality":  "cached",
                                  "playniteSeconds":  242700,
                                  "playniteName":  "Battlefield 2042",
                                  "playniteId":  "a3908c47-ce9b-40d9-8704-64f182362c83"
@@ -18765,7 +18783,7 @@
                               "key":  "bf6",
                               "title":  "Battlefield 6",
                               "status":  "ok",
-                              "updatedAt":  "2026-08-28T23:39:20.5559335+08:00",
+                              "updatedAt":  "2026-08-29T11:31:47.1500582+08:00",
                               "endpoint":  "https://api.gametools.network/bf6/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "pianoymkf",
@@ -23487,5 +23505,5 @@
                           }
               },
     "playniteTotalSeconds":  913440,
-    "playniteCapturedAt":  "2026-08-28T23:40:22.5943749+08:00"
+    "playniteCapturedAt":  "2026-08-29T11:36:45.0795162+08:00"
 }
