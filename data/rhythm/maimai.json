@@ -1,6 +1,6 @@
 {
     "version":  "1.11.0-lxns-api",
-    "generatedAt":  "2026-08-30T22:55:19.1974908+08:00",
+    "generatedAt":  "2026-08-30T23:30:02.8546376+08:00",
     "source":  {
                    "provider":  "LXNS API + local history cache",
                    "file":  "LXNS API 自动同步",
@@ -2945,12 +2945,48 @@
                ],
     "trend":  [
                   {
+                      "month":  "2025-05",
+                      "total":  555,
+                      "b35":  555,
+                      "b15":  0,
+                      "observedBest50":  555,
+                      "plays":  6,
+                      "charts":  5
+                  },
+                  {
+                      "month":  "2025-07",
+                      "total":  884,
+                      "b35":  884,
+                      "b15":  0,
+                      "observedBest50":  884,
+                      "plays":  3,
+                      "charts":  8
+                  },
+                  {
+                      "month":  "2025-10",
+                      "total":  2196,
+                      "b35":  2196,
+                      "b15":  0,
+                      "observedBest50":  2196,
+                      "plays":  15,
+                      "charts":  18
+                  },
+                  {
+                      "month":  "2025-11",
+                      "total":  3369,
+                      "b35":  3369,
+                      "b15":  0,
+                      "observedBest50":  3369,
+                      "plays":  11,
+                      "charts":  25
+                  },
+                  {
                       "month":  "2026-08",
                       "total":  3968,
-                      "b35":  0,
-                      "b15":  0,
+                      "b35":  3818,
+                      "b15":  150,
                       "observedBest50":  3968,
-                      "plays":  0,
+                      "plays":  4,
                       "charts":  29
                   }
               ]
