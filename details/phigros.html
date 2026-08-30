@@ -71,4 +71,39 @@ fetch(DATA_URL+'?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new 
   });
 })();
 </script>
+<!-- YMKF RHYTHM CONSTANT RANGE v1.18.9 BEGIN -->
+<script>
+(function(){
+  if(window.__YMKF_CONSTANT_RANGE_1189__) return;
+  window.__YMKF_CONSTANT_RANGE_1189__=true;
+  const file=(location.pathname.split('/').pop()||'').toLowerCase();
+  const cfgs={
+    'arcaea.html':{search:'#search',root:'#scoreRows',cell:5,count:'#scoreCount',label:'定数范围，如 14.5-14.8'},
+    'chunithm.html':{search:'#search',root:'#trackBody',cell:2,count:'#trackCount',label:'定数范围，如 14.5-14.8'},
+    'maimai.html':{search:'#search',root:'#scoreRows',cell:3,count:'#scoreCount',label:'定数范围，如 14.5-14.8'},
+    'phigros.html':{search:'#search',root:'#scoreRows',cell:4,count:'#scoreCount',label:'定数范围，如 14.5-14.8'},
+    'osu.html':{search:'#search',root:'#bestBody',cell:4,count:null,label:'星数范围，如 4.5-5.2'},
+    'pjsk.html':{search:'#musicQ',root:'#musicTable',cell:1,count:'#musicCount',label:'定数范围，如 30-32'}
+  };
+  const cfg=cfgs[file]; if(!cfg)return;
+  const search=document.querySelector(cfg.search); if(!search)return;
+  const style=document.createElement('style');
+  style.textContent=`.ymkf-search-pair{display:flex!important;gap:8px!important;align-items:stretch!important;grid-column:1/-1!important;width:100%!important;min-width:0!important}.ymkf-search-pair>input{min-width:0!important;flex:1 1 0!important;grid-column:auto!important;width:auto!important}.ymkf-search-pair>.ymkf-constant-range{flex:0 1 260px!important}.ymkf-range-invalid{border-color:#ff8d9b!important;box-shadow:0 0 0 1px #ff8d9b55 inset!important}@media(max-width:620px){.ymkf-search-pair{flex-direction:column!important}.ymkf-search-pair>.ymkf-constant-range{flex:1 1 auto!important;width:100%!important}}`;
+  document.head.appendChild(style);
+  let pair=search.closest('.ymkf-search-pair'); let range=document.querySelector('#ymkfConstantRange');
+  if(!pair){pair=document.createElement('div');pair.className='ymkf-search-pair';search.parentNode.insertBefore(pair,search);pair.appendChild(search)}
+  if(!range){range=document.createElement('input');range.id='ymkfConstantRange';range.className=(search.className||'')+' ymkf-constant-range';range.type='text';range.inputMode='decimal';range.autocomplete='off';range.placeholder=cfg.label;range.title='支持：14.5-14.8、14.7、14.5-、-14.8；范围包含两端';pair.appendChild(range)}
+  function parseRange(raw){let s=String(raw||'').trim();if(!s)return {ok:true,active:false,min:-Infinity,max:Infinity};s=s.replace(/[－—–~～至]/g,'-').replace(/\s+/g,'');let m=s.match(/^(\d+(?:\.\d+)?)$/);if(m){const v=Number(m[1]);return {ok:Number.isFinite(v),active:true,min:v,max:v}}m=s.match(/^(\d+(?:\.\d+)?)?-(\d+(?:\.\d+)?)?$/);if(!m||(!m[1]&&!m[2]))return {ok:false,active:true,min:0,max:0};let min=m[1]?Number(m[1]):-Infinity,max=m[2]?Number(m[2]):Infinity;if(min>max){const t=min;min=max;max=t}return {ok:true,active:true,min,max}}
+  function rowValue(tr){const td=tr.children[cfg.cell];if(!td)return NaN;const nums=(td.textContent||'').replace(/,/g,'').match(/\d+(?:\.\d+)?/g);return nums&&nums.length?Number(nums[nums.length-1]):NaN}
+  let applying=false;
+  function applyRange(){if(applying)return;applying=true;try{const p=parseRange(range.value);range.classList.toggle('ymkf-range-invalid',!p.ok);const host=document.querySelector(cfg.root);if(!host)return;let rows=host.tagName==='TBODY'?[...host.querySelectorAll(':scope > tr')]:[...host.querySelectorAll('tbody > tr')];let shown=0;for(const tr of rows){if(tr.querySelector('.empty'))continue;const v=rowValue(tr);let keep=true;if(p.active&&p.ok)keep=Number.isFinite(v)&&v+1e-9>=p.min&&v-1e-9<=p.max;tr.style.display=keep?'':'none';if(keep)shown++}if(cfg.count){const c=document.querySelector(cfg.count);if(c){let base=(c.textContent||'').replace(/\s*·\s*(?:定数|星数)范围命中\s*\d+\s*$/,'');if(p.active&&p.ok)c.textContent=base+' · '+(file==='osu.html'?'星数':'定数')+'范围命中 '+shown;else if(!p.active)c.textContent=base}}}finally{applying=false}}
+  let timer=0;const schedule=()=>{clearTimeout(timer);timer=setTimeout(applyRange,0)};
+  range.addEventListener('input',()=>{search.dispatchEvent(new Event('input',{bubbles:true}));schedule()});
+  const target=document.querySelector(cfg.root);if(target)new MutationObserver(schedule).observe(target,{childList:true,subtree:true});else new MutationObserver(()=>{if(document.querySelector(cfg.root))schedule()}).observe(document.body,{childList:true,subtree:true});
+  document.addEventListener('change',e=>{if(e.target!==range&&(e.target.closest('.controls')||e.target.closest('.filters')))schedule()},true);
+  document.addEventListener('click',e=>{if(e.target!==range&&(e.target.closest('.controls')||e.target.closest('.filters')))setTimeout(schedule,0)},true);
+  schedule();
+})();
+</script>
+<!-- YMKF RHYTHM CONSTANT RANGE v1.18.9 END -->
 </body></html>

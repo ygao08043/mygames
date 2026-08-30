@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
     "build":  "v1.18.0",
-    "generatedAt":  "2026-08-30T21:59:12.5646666+08:00",
+    "generatedAt":  "2026-08-30T22:57:08.0038370+08:00",
     "source":  {
                    "provider":  "Playnite GameActivity",
                    "fields":  [
@@ -15,15 +15,15 @@
     "analyticsStart":  "2026-03-01",
     "coverageStart":  "2026-03-01",
     "coverageEnd":  "2026-08-30",
-    "sessionCount":  1271,
+    "sessionCount":  1273,
     "syntheticSessionCount":  4,
     "currentMonth":  "2026-08",
     "currentYear":  "2026",
     "totals":  {
-                   "recordedSeconds":  2982728,
-                   "last7DaysSeconds":  98824,
-                   "currentMonthSeconds":  346325,
-                   "currentYearSeconds":  2982728,
+                   "recordedSeconds":  2984369,
+                   "last7DaysSeconds":  100465,
+                   "currentMonthSeconds":  347966,
+                   "currentYearSeconds":  2984369,
                    "activeDays":  182
                },
     "daily":  [
@@ -757,7 +757,7 @@
                   },
                   {
                       "date":  "2026-08-30",
-                      "seconds":  14711
+                      "seconds":  16352
                   }
               ],
     "weekly":  [
@@ -894,7 +894,7 @@
                    {
                        "start":  "2026-08-24",
                        "label":  "8/24",
-                       "seconds":  98824
+                       "seconds":  100465
                    }
                ],
     "monthly":  [
@@ -926,7 +926,7 @@
                     {
                         "month":  "2026-08",
                         "label":  "26/08",
-                        "seconds":  346325
+                        "seconds":  347966
                     }
                 ],
     "hourly":  [
@@ -1016,7 +1016,7 @@
                    },
                    {
                        "hour":  21,
-                       "seconds":  171094
+                       "seconds":  172735
                    },
                    {
                        "hour":  22,
@@ -1061,7 +1061,7 @@
                     {
                         "day":  6,
                         "label":  "周日",
-                        "seconds":  500173
+                        "seconds":  501814
                     }
                 ],
     "distributionMonths":  [
@@ -1155,7 +1155,7 @@
                                                   },
                                                   {
                                                       "hour":  21,
-                                                      "seconds":  21271
+                                                      "seconds":  22912
                                                   },
                                                   {
                                                       "hour":  22,
@@ -1200,7 +1200,7 @@
                                                    {
                                                        "day":  6,
                                                        "label":  "周日",
-                                                       "seconds":  52623
+                                                       "seconds":  54264
                                                    }
                                                ]
                                },
@@ -1927,14 +1927,14 @@
                                   "seconds":  12653
                               },
                               {
+                                  "id":  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8",
+                                  "name":  "Project SEKAI",
+                                  "seconds":  10079
+                              },
+                              {
                                   "id":  "b730c4a7-1f2f-4ec7-aca4-f1df509d18fe",
                                   "name":  "王者荣耀",
                                   "seconds":  9596
-                              },
-                              {
-                                  "id":  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8",
-                                  "name":  "Project SEKAI",
-                                  "seconds":  8438
                               },
                               {
                                   "id":  "901a387c-5431-4985-89b3-128142b21167",
@@ -2046,7 +2046,7 @@
                              {
                                  "id":  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8",
                                  "name":  "Project SEKAI",
-                                 "seconds":  8438
+                                 "seconds":  10079
                              },
                              {
                                  "id":  "579dd5f2-6d58-4423-ba8b-c837014df0bf",
@@ -2389,14 +2389,14 @@
                                                "seconds":  12653
                                            },
                                            {
+                                               "id":  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8",
+                                               "name":  "Project SEKAI",
+                                               "seconds":  10079
+                                           },
+                                           {
                                                "id":  "b730c4a7-1f2f-4ec7-aca4-f1df509d18fe",
                                                "name":  "王者荣耀",
                                                "seconds":  9596
-                                           },
-                                           {
-                                               "id":  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8",
-                                               "name":  "Project SEKAI",
-                                               "seconds":  8438
                                            },
                                            {
                                                "id":  "901a387c-5431-4985-89b3-128142b21167",
@@ -2448,6 +2448,12 @@
                      ],
     "lastPlayedGames":  [
                             {
+                                "id":  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8",
+                                "name":  "Project SEKAI",
+                                "date":  "2026-08-30",
+                                "lastPlayed":  "2026-08-30T21:56:20.0000000"
+                            },
+                            {
                                 "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                                 "name":  "CHUNITHM",
                                 "date":  "2026-08-30",
@@ -2470,12 +2476,6 @@
                                 "name":  "Arcaea",
                                 "date":  "2026-08-29",
                                 "lastPlayed":  "2026-08-29T23:12:08.0000000"
-                            },
-                            {
-                                "id":  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8",
-                                "name":  "Project SEKAI",
-                                "date":  "2026-08-29",
-                                "lastPlayed":  "2026-08-29T22:51:55.0000000"
                             },
                             {
                                 "id":  "bd4bf292-368e-4e00-bdbb-6dee05aff790",
@@ -2611,7 +2611,7 @@
                                  "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                  "name":  "雀魂麻将",
                                  "seconds":  143249,
-                                 "totalSeconds":  346325
+                                 "totalSeconds":  347966
                              },
                              {
                                  "period":  "2026-07",
@@ -2661,7 +2661,7 @@
                                 "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                 "name":  "雀魂麻将",
                                 "seconds":  1543611,
-                                "totalSeconds":  2982728
+                                "totalSeconds":  2984369
                             }
                         ],
     "timelineWindowDays":  14,
@@ -3406,7 +3406,7 @@
                          "date":  "2026-03-01",
                          "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                          "name":  "CHUNITHM",
-                         "startMinute":  0.02,
+                         "startMinute":  0.01,
                          "endMinute":  3.88,
                          "startText":  "00:00",
                          "endText":  "00:03",
@@ -17001,6 +17001,26 @@
                          "startText":  "19:20",
                          "endText":  "20:41",
                          "seconds":  4860
+                     },
+                     {
+                         "date":  "2026-08-30",
+                         "id":  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8",
+                         "name":  "Project SEKAI",
+                         "startMinute":  1288.97,
+                         "endMinute":  1289.65,
+                         "startText":  "21:28",
+                         "endText":  "21:29",
+                         "seconds":  41
+                     },
+                     {
+                         "date":  "2026-08-30",
+                         "id":  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8",
+                         "name":  "Project SEKAI",
+                         "startMinute":  1289.67,
+                         "endMinute":  1316.33,
+                         "startText":  "21:29",
+                         "endText":  "21:56",
+                         "seconds":  1600
                      }
                  ]
 }
