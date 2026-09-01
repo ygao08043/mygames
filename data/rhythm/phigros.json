@@ -1,21 +1,21 @@
 {
     "version":  "1.11.2",
-    "generatedAt":  "2026-09-01T16:54:10.2078023+08:00",
+    "generatedAt":  "2026-09-01T18:53:11.0632203+08:00",
     "source":  {
                    "type":  "Phigros TapTap cloud save",
-                   "saveUpdatedAt":  "2026-09-01T04:07:43.564Z",
+                   "saveUpdatedAt":  "2026-09-01T09:49:47.841Z",
                    "metadata":  "SonolusHaniwa/phigros-decrypted-data metadata.json",
                    "metadataSongs":  312,
                    "missingMetadata":  0
                },
     "profile":  {
                     "nickname":  "YMKF",
-                    "rks":  15.13550856,
-                    "calculatedRks":  15.13550856,
-                    "cloudSummaryRks":  15.13550949,
+                    "rks":  15.14399726,
+                    "calculatedRks":  15.14399726,
+                    "cloudSummaryRks":  15.14399719,
                     "rksMode":  "calculated",
-                    "phiCount":  9,
-                    "fcCount":  20,
+                    "phiCount":  11,
+                    "fcCount":  22,
                     "playedCharts":  213,
                     "avatar":  "Introduction",
                     "challengeCode":  349
@@ -318,6 +318,20 @@
                        "charter":  "C.Max (PBM)"
                    },
                    {
+                       "songId":  "PRAW.Bluewind.0",
+                       "title":  "[PRAW]",
+                       "composer":  "Bluewind",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  15.1,
+                       "score":  975231,
+                       "accuracy":  99.705383,
+                       "rks":  14.9029267,
+                       "status":  "V",
+                       "isFc":  false,
+                       "charter":  "晨 vs. 阿爽"
+                   },
+                   {
                        "songId":  "DerSchneid.Ωμεγα.0",
                        "title":  "Der Schneid",
                        "composer":  "Ωμεγα",
@@ -428,20 +442,6 @@
                        "status":  "V",
                        "isFc":  false,
                        "charter":  "阿爽 eat Ctymax"
-                   },
-                   {
-                       "songId":  "AvataarReincarnationofKalpa.ScarletteakaCrYmson.0",
-                       "title":  "Avataar ~Reincarnation of Kalpa~",
-                       "composer":  "Scarlette a.k.a CrYmson",
-                       "difficulty":  "AT",
-                       "difficultyIndex":  3,
-                       "constant":  16.6,
-                       "score":  902169,
-                       "accuracy":  97.271881,
-                       "rks":  14.64826571,
-                       "status":  "A",
-                       "isFc":  false,
-                       "charter":  "XMT \u0026 Salt"
                    }
                ],
     "scores":  [
@@ -696,6 +696,20 @@
                        "status":  "S",
                        "isFc":  false,
                        "charter":  "C.Max (PBM)"
+                   },
+                   {
+                       "songId":  "PRAW.Bluewind.0",
+                       "title":  "[PRAW]",
+                       "composer":  "Bluewind",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  15.1,
+                       "score":  975231,
+                       "accuracy":  99.705383,
+                       "rks":  14.9029267,
+                       "status":  "V",
+                       "isFc":  false,
+                       "charter":  "晨 vs. 阿爽"
                    },
                    {
                        "songId":  "DerSchneid.Ωμεγα.0",
@@ -1088,20 +1102,6 @@
                        "status":  "A",
                        "isFc":  false,
                        "charter":  "曦枢 vs. 鎏光 -Lv.70 LEAF-"
-                   },
-                   {
-                       "songId":  "PRAW.Bluewind.0",
-                       "title":  "[PRAW]",
-                       "composer":  "Bluewind",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  15.1,
-                       "score":  921033,
-                       "accuracy":  98.744667,
-                       "rks":  14.26928297,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "晨 vs. 阿爽"
                    },
                    {
                        "songId":  "星拂云锦featkoi.S9ryne.0",
@@ -3406,11 +3406,11 @@
                        "difficulty":  "EZ",
                        "difficultyIndex":  0,
                        "constant":  6,
-                       "score":  967760,
-                       "accuracy":  99.673119,
-                       "rks":  5.91314822,
-                       "status":  "V",
-                       "isFc":  false,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  6,
+                       "status":  "Phi",
+                       "isFc":  true,
                        "charter":  "Likey"
                    },
                    {
@@ -3420,19 +3420,19 @@
                        "difficulty":  "EZ",
                        "difficultyIndex":  0,
                        "constant":  4.5,
-                       "score":  880186,
-                       "accuracy":  91.888298,
-                       "rks":  3.02388118,
-                       "status":  "A",
-                       "isFc":  false,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  4.5,
+                       "status":  "Phi",
+                       "isFc":  true,
                        "charter":  "Ctymax"
                    }
                ],
     "difficultySummary":  {
                               "EZ":  {
                                          "cleared":  2,
-                                         "fullCombo":  0,
-                                         "phi":  0
+                                         "fullCombo":  2,
+                                         "phi":  2
                                      },
                               "HD":  {
                                          "cleared":  23,
@@ -3534,8 +3534,8 @@
                   },
                   {
                       "date":  "2026-09-01",
-                      "rks":  15.13550856,
-                      "saveUpdatedAt":  "2026-09-01T04:07:43.564Z"
+                      "rks":  15.14399726,
+                      "saveUpdatedAt":  "2026-09-01T09:49:47.841Z"
                   }
               ]
 }
