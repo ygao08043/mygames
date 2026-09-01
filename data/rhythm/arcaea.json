@@ -1,6 +1,6 @@
 {
     "version":  "1.10.7-arcaea7-direct",
-    "generatedAt":  "2026-08-31T21:54:56.0323829+08:00",
+    "generatedAt":  "2026-09-01T16:53:56.5282726+08:00",
     "source":  {
                    "provider":  "Yurisaki",
                    "command":  "/a export",
@@ -36244,6 +36244,17 @@
                   {
                       "key":  "2026-08-v7",
                       "label":  "08/27+",
+                      "potential":  12.3,
+                      "legacyB30":  null,
+                      "legacyR10":  null,
+                      "b50":  12.227833333333333,
+                      "b10":  12.664833499999999,
+                      "weighted":  12.300666694444443,
+                      "era":  "v7"
+                  },
+                  {
+                      "key":  "2026-09-v7",
+                      "label":  "26/09",
                       "potential":  12.3,
                       "legacyB30":  null,
                       "legacyR10":  null,

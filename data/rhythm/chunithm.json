@@ -1,6 +1,6 @@
 {
     "version":  "1.9.1-lxns-api-recent-all",
-    "generatedAt":  "2026-08-31T21:54:47.3875388+08:00",
+    "generatedAt":  "2026-09-01T16:53:49.3862240+08:00",
     "profile":  {
                     "name":  "YMKFβ",
                     "countryPC":  1129,
@@ -132,6 +132,13 @@
                         },
                         {
                             "month":  "2026-08",
+                            "countryRating":  16.7991,
+                            "rinRating":  16.84,
+                            "rinRatingSource":  "playlog",
+                            "combinedB30":  17.0477
+                        },
+                        {
+                            "month":  "2026-09",
                             "countryRating":  16.79,
                             "rinRating":  16.84,
                             "rinRatingSource":  "playlog",
@@ -291,6 +298,11 @@
                           {
                               "month":  "2026-08",
                               "country":  393,
+                              "rin":  0
+                          },
+                          {
+                              "month":  "2026-09",
+                              "country":  0,
                               "rin":  0
                           }
                       ],
