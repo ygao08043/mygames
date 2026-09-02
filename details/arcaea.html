@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="zh-CN"><head>
-<!-- hf21 · unified all-score filters and sort order -->
-<!-- hf24 · theoretical status + low-constant history recovery -->
-<!-- YMKF ARCAEA LOCAL JACKET CACHE v1.19.4 -->
+
+
+
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
 <title>Arcaea · 战绩详情</title>
 <style>
@@ -32,8 +32,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="YMKF">
 <!-- /YMKF site icon hf26 -->
+<script id="ymkf-mobile-1192-boot" src="../assets/playnite/mobile-boot-1.19.2.js?v=1.19.2"></script>
+<link id="ymkf-mobile-1192-css" rel="stylesheet" href="../assets/playnite/mobile-1.19.2.css?v=1.19.2">
 </head><body><div class="wrap">
-<div class="topbar"><a class="back" href="../index.html">← 返回游戏库</a><div class="build">Build v1.19.1</div></div>
+<div class="topbar"><a class="back" href="../index.html">← 返回游戏库</a><div class="build">Build v1.19.2</div></div>
 <section class="hero"><div class="eyebrow">YMKF · ARCAEA</div><h1 id="name">Arcaea</h1><div class="sub" id="code"></div><div class="stats"><div class="stat"><small>Potential · 7.0</small><strong id="ptt">—</strong></div><div class="stat"><small>Best 50 Avg.</small><strong id="b30">—</strong></div><div class="stat"><small>Best 10 Avg. · 2x weight</small><strong id="r10">—</strong></div><div class="stat"><small>B50 + B10 Weighted</small><strong id="maxp">—</strong></div></div></section>
 <div class="tabs"><button class="tab active" data-page="best">B50</button><button class="tab" data-page="scores">全部最佳成绩</button><button class="tab" data-page="recent">最近记录</button></div>
 <section class="page active" id="page-best"><div class="section"><div class="section-head"><div><h2>PTT / B30 + R10 → B50 + B10 趋势</h2><div class="note">2026-08-27 前：PTT + B30 + R10。2026-08-27 Arcaea 7.0 起：PTT + B50 + B10，B1-B10 双倍权重，Recent 10 取消。竖线标记机制切换。</div></div></div><div class="trend-switch"><button class="trend-mode active" data-line="ptt">PTT</button><button class="trend-mode active" data-line="b30">B30 · 8/27前</button><button class="trend-mode active" data-line="r10">R10 · 8/27前</button><button class="trend-mode active" data-line="b50">B50 · 8/27起</button><button class="trend-mode active" data-line="b10">B10 · 8/27起</button></div><div class="trend-wrap" id="trend"></div><div class="legend"><span><i style="background:var(--a)"></i>PTT</span><span><i style="background:var(--b)"></i>B30 · 8/27前</span><span><i style="background:var(--r)"></i>R10 · 8/27前</span><span><i style="background:var(--c)"></i>B50 · 8/27起</span><span><i style="background:#f2b7df"></i>B10 · 8/27起</span></div></div><div class="section"><div class="section-head"><div><h2>Best 50</h2><div class="note">由 Yurisaki /a export 的 best_scores.csv 读取当前最佳成绩，按单谱 Potential 排序取前 50；前 10 在 Arcaea 7.0 总 PTT 中计双倍权重。</div></div><div class="note" id="source"></div></div><div class="b30-grid" id="b30grid"></div></div></section>
@@ -89,7 +91,54 @@ fetch(DATA_URL+'?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new 
 })();
 </script>
 
-<!-- YMKF RHYTHM CONSTANT RANGE v1.18.9 BEGIN -->
+<style id="ymkf-arcaea7-v187-style">
+.trend-switch{grid-template-columns:repeat(5,minmax(0,1fr))!important}
+.line-v7b50{fill:none;stroke:var(--c);stroke-width:2.8}.dot-v7b50{fill:var(--c)}
+.line-v7b10{fill:none;stroke:#f2b7df;stroke-width:2.8}.dot-v7b10{fill:#f2b7df}
+.line-oldb30{fill:none;stroke:var(--b);stroke-width:2.5}.dot-oldb30{fill:var(--b)}
+.line-oldr10{fill:none;stroke:var(--r);stroke-width:2.5}.dot-oldr10{fill:var(--r)}
+.v7-divider{stroke:rgba(255,255,255,.55);stroke-width:1.4;stroke-dasharray:6 5}.v7-label{fill:#f5f7ff;font-size:10px;font-weight:800;paint-order:stroke;stroke:#0f1420;stroke-width:3px}
+@media(max-width:850px){.trend-switch{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+</style>
+<script id="ymkf-arcaea7-v187-script">
+(function(){
+  LINES={ptt:true,b30:true,r10:true,b50:true,b10:true};
+  const oldHydrate=hydrateArcaeaCovers;
+  hydrateArcaeaCovers=async function(d){
+    let changed=false;try{changed=await oldHydrate(d)}catch(_){ }
+    const m=new Map((d.scores||[]).map(x=>[String(x.songId||'')+'|'+String(x.difficulty),x.jacketUrl||'']));
+    for(const x of (d.best50||[])){const u=m.get(String(x.songId||'')+'|'+String(x.difficulty));if(u&&!x.jacketUrl){x.jacketUrl=u;changed=true}}
+    return changed;
+  };
+  renderHero=function(){
+    const p=DATA.profile||{};
+    document.querySelector('#name').textContent=p.name||'YMKF';
+    document.querySelector('#code').textContent=p.userCode?`ID: ${p.userCode}`:'';
+    document.querySelector('#ptt').textContent=n(p.potential).toFixed(3);
+    document.querySelector('#b30').textContent=n(p.b50).toFixed(3);
+    document.querySelector('#r10').textContent=n(p.b10).toFixed(3);
+    document.querySelector('#maxp').textContent=n(p.weightedPotential).toFixed(3);
+    document.querySelector('#source').textContent=`${DATA.source?.file||''} · ${(DATA.best50||[]).length} / 50 B50 · B10 2x weight`;
+    document.querySelector('#b30grid').innerHTML=(DATA.best50||[]).map(card).join('')||'<div class="empty">暂无 B50</div>';
+  };
+  renderTrend=function(){
+    const rows=(DATA.trend||[]).filter(x=>[x.potential,x.legacyB30,x.legacyR10,x.b50,x.b10].some(v=>v!=null));
+    if(!rows.length){document.querySelector('#trend').innerHTML='<div class="empty">暂无趋势</div>';return}
+    const W=1000,H=410,L=62,R=24,T=36,B=50,vals=[];
+    for(const x of rows){if(LINES.ptt&&x.potential!=null)vals.push(n(x.potential));if(LINES.b30&&x.legacyB30!=null)vals.push(n(x.legacyB30));if(LINES.r10&&x.legacyR10!=null)vals.push(n(x.legacyR10));if(LINES.b50&&x.b50!=null)vals.push(n(x.b50));if(LINES.b10&&x.b10!=null)vals.push(n(x.b10))}
+    if(!vals.length){document.querySelector('#trend').innerHTML='<div class="empty">至少开启一条趋势</div>';return}
+    let mn=Math.min(...vals),mx=Math.max(...vals);mn=Math.floor((mn-.06)*100)/100;mx=Math.ceil((mx+.06)*100)/100;if(mx<=mn)mx=mn+.1;
+    const X=i=>L+(W-L-R)*(rows.length===1?.5:i/(rows.length-1)),Y=v=>T+(H-T-B)*(mx-n(v))/(mx-mn);
+    const path=(key,on,cls)=>{if(!on)return '';let parts=[],seg=[];rows.forEach((x,i)=>{const v=x[key];if(v==null){if(seg.length)parts.push(seg);seg=[]}else seg.push([X(i),Y(v),v])});if(seg.length)parts.push(seg);return parts.map(p=>`<path class="line-${cls}" d="${p.map((q,j)=>(j?'L':'M')+q[0].toFixed(1)+','+q[1].toFixed(1)).join(' ')}"/>`+p.map(q=>`<circle class="dot-${cls}" cx="${q[0]}" cy="${q[1]}" r="3.4"/><text class="point-label" x="${q[0]}" y="${q[1]-8}">${n(q[2]).toFixed(3)}</text>`).join('')).join('')};
+    let g='';for(let j=0;j<=4;j++){const y=T+(H-T-B)*j/4,v=mx-(mx-mn)*j/4;g+=`<line class="grid" x1="${L}" x2="${W-R}" y1="${y}" y2="${y}"/><text class="axis" x="4" y="${y+4}">${v.toFixed(3)}</text>`}
+    rows.forEach((x,i)=>g+=`<text class="axis" text-anchor="middle" x="${X(i)}" y="${H-18}">${esc(x.label||x.key||'')}</text>`);
+    const firstV7=rows.findIndex(x=>x.era==='v7'||x.b50!=null||x.b10!=null);if(firstV7>=0){const prev=Math.max(0,firstV7-1),dx=(X(prev)+X(firstV7))/2;g+=`<line class="v7-divider" x1="${dx}" x2="${dx}" y1="${T-9}" y2="${H-B+6}"/><text class="v7-label" x="${Math.min(dx+6,W-R-155)}" y="${T-14}">2026-08-27 · Arcaea 7.0</text>`}
+    document.querySelector('#trend').innerHTML=`<svg viewBox="0 0 ${W} ${H}" aria-label="Arcaea PTT rule history">${g}${path('potential',LINES.ptt,'ptt')}${path('legacyB30',LINES.b30,'oldb30')}${path('legacyR10',LINES.r10,'oldr10')}${path('b50',LINES.b50,'v7b50')}${path('b10',LINES.b10,'v7b10')}</svg>`;
+  };
+})();
+</script>
+
+
 <script>
 (function(){
   if(window.__YMKF_CONSTANT_RANGE_1189__) return;
@@ -123,8 +172,8 @@ fetch(DATA_URL+'?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new 
   schedule();
 })();
 </script>
-<!-- YMKF RHYTHM CONSTANT RANGE v1.18.9 END -->
-<!-- YMKF ARCAEA JACKET REPAIR v1.18.9 BEGIN -->
+
+
 <script>
 (function(){
   if(window.__YMKF_ARCAEA_JACKET_REPAIR_1189__)return;
@@ -140,7 +189,8 @@ fetch(DATA_URL+'?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new 
   window.ymkfArcJacketError=async function(img){if(!img||img.dataset.ymkfRepairing==='1')return;img.dataset.ymkfRepairing='1';const hit=await searchWiki(img.dataset.arcSongid,img.dataset.arcTitle);if(hit&&hit.url&&img.src!==hit.url){img.onerror=function(){this.outerHTML='<div class="song-jacket jacket-placeholder '+(this.classList.contains('card-jacket')?'card-jacket':'')+'">♫</div>'};img.src=hit.url;return}img.outerHTML='<div class="song-jacket jacket-placeholder '+(img.classList.contains('card-jacket')?'card-jacket':'')+'">♫</div>'};
 })();
 </script>
-<!-- YMKF ARCAEA JACKET REPAIR v1.18.9 END -->
+
+<script id="ymkf-mobile-1192-js" src="../assets/playnite/mobile-1.19.2.js?v=1.19.2" defer></script>
 <!-- YMKF_ARCAEA7_V187_BEGIN -->
 <style id="ymkf-arcaea7-v187-style">
 .trend-switch{grid-template-columns:repeat(5,minmax(0,1fr))!important}

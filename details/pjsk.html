@@ -17,6 +17,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="YMKF">
 <!-- /YMKF site icon hf26 -->
+<script id="ymkf-mobile-1192-boot" src="../assets/playnite/mobile-boot-1.19.2.js?v=1.19.2"></script>
+<link id="ymkf-mobile-1192-css" rel="stylesheet" href="../assets/playnite/mobile-1.19.2.css?v=1.19.2">
 </head>
 <body>
 <header class="top"><div class="wrap topin"><a class="back" href="../index.html">← 游戏库</a><div class="brand">Project <i>SEKAI</i></div><div class="source" id="sourceLine">Haruki 数据加载中…</div></div></header>
@@ -39,7 +41,7 @@
   <section class="view" data-view="mysekai"><article class="panel"><h2>MySekai</h2><div class="hint" id="mysekaiHint"></div><div class="grid2"><div><h3>大门</h3><div id="gateTable"></div></div><div><h3>材料</h3><div id="materialTable"></div></div></div></article><article class="panel"><h2>画布 / 家具</h2><div id="canvasTable"></div></article></section>
   <section class="view" data-view="coverage"><article class="panel"><h2>数据覆盖</h2><div class="hint">每个 Haruki 返回字段都按来源和语义分类保存；这里列出字段与记录数，便于确认有没有漏项。</div><div id="coverageCards" class="coverage"></div></article><article class="panel"><h2>字段清单</h2><div id="coverageTable"></div></article></section>
 </main>
-<footer>Build v1.19.1 · pjsk-haruki-categories-v1 · Haruki public data snapshot</footer>
+<footer>Build v1.19.2 · pjsk-haruki-categories-v1 · Haruki public data snapshot</footer>
 <script>
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const tabs=[['overview','总览'],['music','歌曲'],['rank','排位'],['cards','卡牌'],['characters','角色'],['challenge','挑战'],['honors','称号'],['events','活动'],['mysekai','MySekai'],['coverage','数据覆盖']];
@@ -64,7 +66,7 @@ function renderStatic(){const chars=D.characters?.records||[];$('#characterTable
 function renderCoverage(){const by=D.coverage?.byCategory||{};$('#coverageCards').innerHTML=Object.entries(by).map(([k,v])=>`<div class="cov"><b>${n(v.records)}</b><span>${esc(k)} · ${n(v.fields)} fields</span></div>`).join('');$('#coverageTable').innerHTML=table([['来源','source'],['分类','category'],['字段','field'],['形态','type'],['记录 / 子项','count',v=>n(v)]],D.coverage?.fields||[])}
 async function main(){renderTabs();try{const r=await fetch('../data/rhythm/pjsk.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);D=await r.json();const s=D.source||{};$('#sourceLine').textContent=`${(s.server||'—').toUpperCase()} · ${s.suiteUploadTimeText||'尚未同步'} · Build ${D.build||'—'}`;if(!s.userId)$('#notice').innerHTML='<div class="notice">尚未绑定 Haruki PJSK 数据。请在 YMKF_Sync 运行 BIND_PJSK_HARUKI.cmd，然后运行 RUN_SYNC.cmd。</div>';renderOverview();options('#musicLevel',[...new Set((D.music?.records||[]).map(r=>Number(r.playLevel||0)).filter(Boolean))].sort((a,b)=>a-b));options('#cardRarity',Object.keys(D.cards?.rarityCounts||{}));options('#cardAttr',Object.keys(D.cards?.attributeCounts||{}));['#musicQ','#musicDiff','#musicStatus','#musicLevel'].forEach(x=>$(x).addEventListener('input',renderMusic));['#cardQ','#cardRarity','#cardAttr'].forEach(x=>$(x).addEventListener('input',renderCards));renderMusic();renderCards();renderStatic();renderCoverage()}catch(e){$('#notice').innerHTML='<div class="notice">PJSK 数据文件加载失败：'+esc(e.message)+'</div>'}}main();
 </script>
-<!-- YMKF RHYTHM CONSTANT RANGE v1.18.9 BEGIN -->
+
 <script>
 (function(){
   if(window.__YMKF_CONSTANT_RANGE_1189__) return;
@@ -98,6 +100,7 @@ async function main(){renderTabs();try{const r=await fetch('../data/rhythm/pjsk.
   schedule();
 })();
 </script>
-<!-- YMKF RHYTHM CONSTANT RANGE v1.18.9 END -->
+
+<script id="ymkf-mobile-1192-js" src="../assets/playnite/mobile-1.19.2.js?v=1.19.2" defer></script>
 </body>
 </html>

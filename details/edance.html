@@ -29,10 +29,12 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="YMKF">
 <!-- /YMKF site icon hf26 -->
+<script id="ymkf-mobile-1192-boot" src="../assets/playnite/mobile-boot-1.19.2.js?v=1.19.2"></script>
+<link id="ymkf-mobile-1192-css" rel="stylesheet" href="../assets/playnite/mobile-1.19.2.css?v=1.19.2">
 </head>
 <body>
 <div class="wrap">
-  <div class="top"><a class="back" href="../index.html">← 返回游戏库</a><div class="build">Build v1.19.1</div></div>
+  <div class="top"><a class="back" href="../index.html">← 返回游戏库</a><div class="build">Build v1.19.2</div></div>
   <section class="hero">
     <h1>e舞成名 · 升级版战绩</h1>
     <p>YMKF · 来自 11 张成绩详情截图。所有截图中明确显示的数值均按原值录入；截图未显示的字段保留为空。</p>
@@ -112,5 +114,6 @@ document.querySelector('#modeFilter').addEventListener('change',render);
 document.querySelector('#resetBtn').addEventListener('click',()=>{sortKey='playedAtLocal';sortDir='desc';document.querySelector('#modeFilter').value='all';render()});
 fetch(DATA_URL,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(j=>{data=j;summary();sessions();render()}).catch(e=>{document.querySelector('#rows').innerHTML=`<tr><td colspan="13" style="text-align:left;color:#ff9d9d">数据加载失败：${e.message}</td></tr>`});
 </script>
+<script id="ymkf-mobile-1192-js" src="../assets/playnite/mobile-1.19.2.js?v=1.19.2" defer></script>
 </body>
 </html>

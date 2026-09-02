@@ -18,10 +18,12 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="YMKF">
 <!-- /YMKF site icon hf26 -->
+<script id="ymkf-mobile-1192-boot" src="../assets/playnite/mobile-boot-1.19.2.js?v=1.19.2"></script>
+<link id="ymkf-mobile-1192-css" rel="stylesheet" href="../assets/playnite/mobile-1.19.2.css?v=1.19.2">
 </head>
 <body>
 <div class="wrap">
-  <div class="top"><div><a class="back" href="../index.html">← 返回游戏库</a><div class="brand"><b>HYPIXEL</b> 战绩</div><div class="sub">Minecraft · 两个 Minecraft 条目共用此详情页 · Build v1.19.1</div></div><button onclick="location.reload()">刷新页面</button></div>
+  <div class="top"><div><a class="back" href="../index.html">← 返回游戏库</a><div class="brand"><b>HYPIXEL</b> 战绩</div><div class="sub">Minecraft · 两个 Minecraft 条目共用此详情页 · Build v1.19.2</div></div><button onclick="location.reload()">刷新页面</button></div>
   <div id="app" class="empty">正在读取 Hypixel 数据…</div>
   <div class="foot">数据来自 Hypixel Public API v2 · 游戏目录来自官方 resources/games · 仅在 RUN_SYNC 时刷新 · 本站与 Hypixel 无隶属或背书关系</div>
 </div>
@@ -65,5 +67,6 @@ fetch('../data/hypixel.json?v='+Date.now()).then(r=>{if(!r.ok)throw Error('HTTP 
   document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>setFilter(b.dataset.filter));$('#modeSearch').oninput=renderButtons;renderButtons();renderMode();
 }).catch(e=>{$('#app').innerHTML=`<div class="card empty"><b>Hypixel 数据尚未生成</b><br><br>先运行 SET_HYPIXEL_API.cmd，再运行 RUN_SYNC.cmd。<br><br>${esc(e.message||e)}</div>`})
 </script>
+<script id="ymkf-mobile-1192-js" src="../assets/playnite/mobile-1.19.2.js?v=1.19.2" defer></script>
 </body>
 </html>
