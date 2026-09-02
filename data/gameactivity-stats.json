@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
     "build":  "v1.19.2",
-    "generatedAt":  "2026-09-02T19:30:13.0511556+08:00",
+    "generatedAt":  "2026-09-02T23:31:41.7165608+08:00",
     "source":  {
                    "provider":  "Playnite GameActivity",
                    "fields":  [
@@ -15,21 +15,21 @@
     "analyticsStart":  "2026-03-01",
     "coverageStart":  "2026-03-01",
     "coverageEnd":  "2026-09-02",
-    "sessionCount":  1296,
+    "sessionCount":  1297,
     "syntheticSessionCount":  4,
     "currentMonth":  "2026-09",
     "currentYear":  "2026",
     "totals":  {
-                   "recordedSeconds":  3019778,
-                   "last7DaysSeconds":  102262,
-                   "currentMonthSeconds":  17422,
-                   "currentYearSeconds":  3019778,
+                   "recordedSeconds":  3020095,
+                   "last7DaysSeconds":  102578,
+                   "currentMonthSeconds":  17738,
+                   "currentYearSeconds":  3020095,
                    "activeDays":  185
                },
     "daily":  [
                   {
                       "date":  "2026-03-01",
-                      "seconds":  39333
+                      "seconds":  39334
                   },
                   {
                       "date":  "2026-03-02",
@@ -769,14 +769,14 @@
                   },
                   {
                       "date":  "2026-09-02",
-                      "seconds":  6456
+                      "seconds":  6772
                   }
               ],
     "weekly":  [
                    {
                        "start":  "2026-02-23",
                        "label":  "2/23",
-                       "seconds":  39333
+                       "seconds":  39334
                    },
                    {
                        "start":  "2026-03-02",
@@ -911,14 +911,14 @@
                    {
                        "start":  "2026-08-31",
                        "label":  "8/31",
-                       "seconds":  35409
+                       "seconds":  35725
                    }
                ],
     "monthly":  [
                     {
                         "month":  "2026-03",
                         "label":  "26/03",
-                        "seconds":  500186
+                        "seconds":  500187
                     },
                     {
                         "month":  "2026-04",
@@ -944,17 +944,12 @@
                         "month":  "2026-08",
                         "label":  "26/08",
                         "seconds":  365953
-                    },
-                    {
-                        "month":  "2026-09",
-                        "label":  "26/09",
-                        "seconds":  17422
                     }
                 ],
     "hourly":  [
                    {
                        "hour":  0,
-                       "seconds":  286176
+                       "seconds":  286177
                    },
                    {
                        "hour":  1,
@@ -1042,7 +1037,7 @@
                    },
                    {
                        "hour":  22,
-                       "seconds":  244493
+                       "seconds":  244809
                    },
                    {
                        "hour":  23,
@@ -1063,7 +1058,7 @@
                     {
                         "day":  2,
                         "label":  "周三",
-                        "seconds":  467455
+                        "seconds":  467771
                     },
                     {
                         "day":  3,
@@ -1083,7 +1078,7 @@
                     {
                         "day":  6,
                         "label":  "周日",
-                        "seconds":  501814
+                        "seconds":  501815
                     }
                 ],
     "distributionMonths":  [
@@ -1181,7 +1176,7 @@
                                                   },
                                                   {
                                                       "hour":  22,
-                                                      "seconds":  1563
+                                                      "seconds":  1879
                                                   },
                                                   {
                                                       "hour":  23,
@@ -1202,7 +1197,7 @@
                                                    {
                                                        "day":  2,
                                                        "label":  "周三",
-                                                       "seconds":  6456
+                                                       "seconds":  6772
                                                    },
                                                    {
                                                        "day":  3,
@@ -1927,7 +1922,7 @@
                                    "hourly":  [
                                                   {
                                                       "hour":  0,
-                                                      "seconds":  48991
+                                                      "seconds":  48992
                                                   },
                                                   {
                                                       "hour":  1,
@@ -2056,7 +2051,7 @@
                                                    {
                                                        "day":  6,
                                                        "label":  "周日",
-                                                       "seconds":  119372
+                                                       "seconds":  119373
                                                    }
                                                ]
                                }
@@ -2095,7 +2090,7 @@
                            {
                                "id":  "bd4bf292-368e-4e00-bdbb-6dee05aff790",
                                "name":  "osu!",
-                               "seconds":  2460
+                               "seconds":  2776
                            }
                        ],
     "currentMonthGames":  [
@@ -2113,6 +2108,11 @@
                                   "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
                                   "name":  "Phigros",
                                   "seconds":  3777
+                              },
+                              {
+                                  "id":  "bd4bf292-368e-4e00-bdbb-6dee05aff790",
+                                  "name":  "osu!",
+                                  "seconds":  316
                               }
                           ],
     "currentYearGames":  [
@@ -2124,7 +2124,7 @@
                              {
                                  "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                                  "name":  "CHUNITHM",
-                                 "seconds":  497927
+                                 "seconds":  497928
                              },
                              {
                                  "id":  "06a6c4ed-ba26-4185-a08c-2874a521d499",
@@ -2179,7 +2179,7 @@
                              {
                                  "id":  "bd4bf292-368e-4e00-bdbb-6dee05aff790",
                                  "name":  "osu!",
-                                 "seconds":  12653
+                                 "seconds":  12969
                              },
                              {
                                  "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
@@ -2259,7 +2259,7 @@
                                            {
                                                "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                                                "name":  "CHUNITHM",
-                                               "seconds":  166081
+                                               "seconds":  166082
                                            },
                                            {
                                                "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
@@ -2577,29 +2577,15 @@
                                                "seconds":  2
                                            }
                                        ]
-                         },
-                         {
-                             "month":  "2026-09",
-                             "games":  [
-                                           {
-                                               "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
-                                               "name":  "雀魂麻将",
-                                               "seconds":  9096
-                                           },
-                                           {
-                                               "id":  "f0a894ed-b3a2-471e-b081-efdf8f0269cd",
-                                               "name":  "Goose Goose Duck",
-                                               "seconds":  4549
-                                           },
-                                           {
-                                               "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
-                                               "name":  "Phigros",
-                                               "seconds":  3777
-                                           }
-                                       ]
                          }
                      ],
     "lastPlayedGames":  [
+                            {
+                                "id":  "bd4bf292-368e-4e00-bdbb-6dee05aff790",
+                                "name":  "osu!",
+                                "date":  "2026-09-02",
+                                "lastPlayed":  "2026-09-02T22:37:01.8690828"
+                            },
                             {
                                 "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                 "name":  "雀魂麻将",
@@ -2635,12 +2621,6 @@
                                 "name":  "Arcaea",
                                 "date":  "2026-08-29",
                                 "lastPlayed":  "2026-08-29T23:12:08.0000000"
-                            },
-                            {
-                                "id":  "bd4bf292-368e-4e00-bdbb-6dee05aff790",
-                                "name":  "osu!",
-                                "date":  "2026-08-29",
-                                "lastPlayed":  "2026-08-29T15:59:35.4446570"
                             },
                             {
                                 "id":  "579dd5f2-6d58-4423-ba8b-c837014df0bf",
@@ -2764,7 +2744,7 @@
                                  "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                  "name":  "雀魂麻将",
                                  "seconds":  9096,
-                                 "totalSeconds":  17422
+                                 "totalSeconds":  17738
                              },
                              {
                                  "period":  "2026-08",
@@ -2812,7 +2792,7 @@
                                  "id":  "06a6c4ed-ba26-4185-a08c-2874a521d499",
                                  "name":  "三国杀",
                                  "seconds":  204171,
-                                 "totalSeconds":  500186
+                                 "totalSeconds":  500187
                              }
                          ],
     "yearlyChampions":  [
@@ -2822,7 +2802,7 @@
                                 "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                 "name":  "雀魂麻将",
                                 "seconds":  1559123,
-                                "totalSeconds":  3019778
+                                "totalSeconds":  3020095
                             }
                         ],
     "timelineWindowDays":  14,
@@ -3579,11 +3559,11 @@
                          "date":  "2026-03-01",
                          "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                          "name":  "CHUNITHM",
-                         "startMinute":  0.01,
+                         "startMinute":  0,
                          "endMinute":  3.88,
                          "startText":  "00:00",
                          "endText":  "00:03",
-                         "seconds":  232
+                         "seconds":  233
                      },
                      {
                          "date":  "2026-03-01",
@@ -17424,6 +17404,16 @@
                          "startText":  "13:55",
                          "endText":  "14:17",
                          "seconds":  1308
+                     },
+                     {
+                         "date":  "2026-09-02",
+                         "id":  "bd4bf292-368e-4e00-bdbb-6dee05aff790",
+                         "name":  "osu!",
+                         "startMinute":  1351.76,
+                         "endMinute":  1357.03,
+                         "startText":  "22:31",
+                         "endText":  "22:37",
+                         "seconds":  316
                      }
                  ]
 }

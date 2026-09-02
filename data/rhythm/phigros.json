@@ -1,9 +1,9 @@
 {
     "version":  "1.11.2",
-    "generatedAt":  "2026-09-02T19:25:13.9847969+08:00",
+    "generatedAt":  "2026-09-02T23:28:52.2327620+08:00",
     "source":  {
                    "type":  "Phigros TapTap cloud save",
-                   "saveUpdatedAt":  "2026-09-01T14:40:44.568Z",
+                   "saveUpdatedAt":  "2026-09-02T15:27:26.499Z",
                    "metadata":  "SonolusHaniwa/phigros-decrypted-data metadata.json",
                    "metadataSongs":  312,
                    "missingMetadata":  0
@@ -22,20 +22,6 @@
                 },
     "phi3":  [
                  {
-                     "songId":  "Cristalisia.onoken.0",
-                     "title":  "Cristalisia",
-                     "composer":  "onoken",
-                     "difficulty":  "IN",
-                     "difficultyIndex":  2,
-                     "constant":  14.4,
-                     "score":  1000000,
-                     "accuracy":  100,
-                     "rks":  14.4,
-                     "status":  "Phi",
-                     "isFc":  true,
-                     "charter":  "Salt"
-                 },
-                 {
                      "songId":  "Re_NascencePsystyleVer.Rinth_live.0",
                      "title":  "Re_Nascence (Psystyle Ver.) ",
                      "composer":  "Rinth_live",
@@ -48,6 +34,20 @@
                      "status":  "Phi",
                      "isFc":  true,
                      "charter":  "NerSAN \u0026 百九十八"
+                 },
+                 {
+                     "songId":  "Cristalisia.onoken.0",
+                     "title":  "Cristalisia",
+                     "composer":  "onoken",
+                     "difficulty":  "IN",
+                     "difficultyIndex":  2,
+                     "constant":  14.4,
+                     "score":  1000000,
+                     "accuracy":  100,
+                     "rks":  14.4,
+                     "status":  "Phi",
+                     "isFc":  true,
+                     "charter":  "Salt"
                  },
                  {
                      "songId":  "GOODTEK.EBIMAYO.0",
@@ -992,20 +992,6 @@
                        "charter":  "Su1fuR -FAISEURS DE PANIQUE-"
                    },
                    {
-                       "songId":  "Cristalisia.onoken.0",
-                       "title":  "Cristalisia",
-                       "composer":  "onoken",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  14.4,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  14.4,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "Salt"
-                   },
-                   {
                        "songId":  "Re_NascencePsystyleVer.Rinth_live.0",
                        "title":  "Re_Nascence (Psystyle Ver.) ",
                        "composer":  "Rinth_live",
@@ -1018,6 +1004,20 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "NerSAN \u0026 百九十八"
+                   },
+                   {
+                       "songId":  "Cristalisia.onoken.0",
+                       "title":  "Cristalisia",
+                       "composer":  "onoken",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  14.4,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  14.4,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "Salt"
                    },
                    {
                        "songId":  "NickofTime.P4koo.0",
@@ -2168,6 +2168,20 @@
                        "charter":  "P \u0026 U"
                    },
                    {
+                       "songId":  "Ark.kanoryo.0",
+                       "title":  "Ark",
+                       "composer":  "kanoryo",
+                       "difficulty":  "AT",
+                       "difficultyIndex":  3,
+                       "constant":  16.5,
+                       "score":  876879,
+                       "accuracy":  95.210815,
+                       "rks":  13.17481959,
+                       "status":  "B",
+                       "isFc":  false,
+                       "charter":  "StupiGGy"
+                   },
+                   {
                        "songId":  "百鬼夜行.SaladSavior.0",
                        "title":  "百鬼֎夜行",
                        "composer":  "Salad Savior",
@@ -2782,20 +2796,6 @@
                        "status":  "A",
                        "isFc":  false,
                        "charter":  "Myna feat.Sleepyhead"
-                   },
-                   {
-                       "songId":  "Ark.kanoryo.0",
-                       "title":  "Ark",
-                       "composer":  "kanoryo",
-                       "difficulty":  "AT",
-                       "difficultyIndex":  3,
-                       "constant":  16.5,
-                       "score":  863804,
-                       "accuracy":  93.758026,
-                       "rks":  12.24002258,
-                       "status":  "B",
-                       "isFc":  false,
-                       "charter":  "StupiGGy"
                    },
                    {
                        "songId":  "CROSSSOUL.HyuNfeatSyepias.0",
@@ -3540,7 +3540,7 @@
                   {
                       "date":  "2026-09-02",
                       "rks":  15.14450551,
-                      "saveUpdatedAt":  "2026-09-01T14:40:44.568Z"
+                      "saveUpdatedAt":  "2026-09-02T15:27:26.499Z"
                   }
               ]
 }
