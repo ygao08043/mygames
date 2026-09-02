@@ -28,8 +28,6 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="YMKF">
 <!-- /YMKF site icon hf26 -->
-<script id="ymkf-mobile-1192-boot" src="../assets/playnite/mobile-boot-1.19.2.js?v=1.19.2"></script>
-<link id="ymkf-mobile-1192-css" rel="stylesheet" href="../assets/playnite/mobile-1.19.2.css?v=1.19.2">
 </head>
 <body>
 <div class="shell">
@@ -107,6 +105,5 @@ function render(){renderTabs();setIdentity();if(current==='overview')renderOverv
 async function load(){try{const [d,g]=await Promise.all([fetch('../data/battlefield.json?v='+BUILD,{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),fetch('../data/gameactivity-stats.json?v='+BUILD,{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null)]);DATA=d||{games:{}};GA=g||{};const q=new URLSearchParams(location.search).get('game');if(q&&DEF[q])current=q;render();window.addEventListener('resize',()=>{if(current==='overview')renderMonthlyChart();else if(document.querySelector('.game-section.active')?.dataset.panel==='overview')renderGameActivityChart(current)})}catch(e){DATA={games:{}};GA={};render();$('#sourceInfo').textContent='读取数据失败：'+e.message}}
 $('#backBtn').onclick=()=>{if(history.length>1)history.back();else location.href='../index.html'};load();
 </script>
-<script id="ymkf-mobile-1192-js" src="../assets/playnite/mobile-1.19.2.js?v=1.19.2" defer></script>
 </body>
 </html>

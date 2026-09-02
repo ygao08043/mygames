@@ -20,8 +20,6 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="YMKF">
 <!-- /YMKF site icon hf26 -->
-<script id="ymkf-mobile-1192-boot" src="../assets/playnite/mobile-boot-1.19.2.js?v=1.19.2"></script>
-<link id="ymkf-mobile-1192-css" rel="stylesheet" href="../assets/playnite/mobile-1.19.2.css?v=1.19.2">
 </head>
 <body><main class="wrap">
 <div class="top"><a class="back" href="../index.html">← 返回游戏库</a><div class="build">Build v1.19.2</div></div>
@@ -89,5 +87,4 @@ $('#content').className='';$('#content').innerHTML=`<section class="grid4"><arti
 const redraw=()=>{const dailyRows=rangeRows(DATA.daily||[],dailyRange),weeklyRows=rangeRows(DATA.weekly||[],weeklyRange),monthlyRows=rangeRows(DATA.monthly||[],monthlyRange);configureLineScroller('#dailyScroll','#dailyStage',dailyRows.length,dailyRange,18);configureLineScroller('#weeklyScroll','#weeklyStage',weeklyRows.length,weeklyRange,30);configureLineScroller('#monthlyScroll','#monthlyStage',monthlyRows.length,monthlyRange,46);drawLine($('#daily'),dailyRows,r=>shortDate(r.date),r=>r.date);drawLine($('#weekly'),weeklyRows,r=>r.label||shortDate(r.start),r=>`周 ${r.start}`);drawLine($('#monthly'),monthlyRows,r=>r.label||r.month,r=>r.month);drawDonut($('#last7Pie'),last7);drawDonut($('#monthPie'),month);drawDonut($('#yearPie'),year);const hm=$('#hourMonth')?.value||'all',wm=$('#weekdayMonth')?.value||'all';drawHourlyRadial($('#hourly'),distRows('hourly',hm));drawBars($('#weekday'),distRows('weekday',wm),x=>x.label,x=>x.seconds,{colorFn:(r,i)=>colorFor(r.label,i)});$('#last7Legend').innerHTML=legendHtml(last7,last7Total);$('#monthLegend').innerHTML=legendHtml(month,monthTotal);$('#yearLegend').innerHTML=legendHtml(year,yearTotal);renderTimeline()};
 redraw();document.querySelectorAll('[data-range-group]').forEach(b=>b.onclick=()=>{const group=b.dataset.rangeGroup,raw=b.dataset.range,value=raw==='all'?'all':Number(raw);if(group==='daily')dailyRange=value;else if(group==='weekly')weeklyRange=value;else if(group==='monthly')monthlyRange=value;setRangeButtons(group,value);redraw()});$('#timelinePrev').onclick=()=>{timelinePage++;renderTimeline()};$('#timelineNext').onclick=()=>{timelinePage=Math.max(0,timelinePage-1);renderTimeline()};$('#hourMonth').onchange=redraw;$('#weekdayMonth').onchange=redraw;window.addEventListener('resize',()=>{clearTimeout(window.__statResize);window.__statResize=setTimeout(redraw,100)})}
 fetch('../data/gameactivity-stats.json?v=1.19.1',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(d=>{DATA=d;render()}).catch(e=>{$('#content').className='loading';$('#content').innerHTML=`统计数据尚未生成。请运行最新 RUN_SYNC。<br><small>${esc(e.message)}</small>`;$('#status').textContent='等待同步'});
-</script><script id="ymkf-mobile-1192-js" src="../assets/playnite/mobile-1.19.2.js?v=1.19.2" defer></script>
-</body></html>
+</script></body></html>

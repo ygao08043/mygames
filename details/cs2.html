@@ -23,8 +23,6 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="YMKF">
 <!-- /YMKF site icon hf26 -->
-<script id="ymkf-mobile-1192-boot" src="../assets/playnite/mobile-boot-1.19.2.js?v=1.19.2"></script>
-<link id="ymkf-mobile-1192-css" rel="stylesheet" href="../assets/playnite/mobile-1.19.2.css?v=1.19.2">
 </head>
 <body><main class="wrap">
 <a class="back" href="../index.html">← 返回游戏库</a>
@@ -94,5 +92,4 @@ fetch('../data/cs2.json?v='+Date.now()).then(r=>{if(!r.ok)throw Error('HTTP '+r.
 const modes=unique((d.matches||[]).map(x=>x.modeName)),maps=unique((d.matches||[]).map(x=>x.map)).sort((a,b)=>a.localeCompare(b));$('#trendMode').innerHTML=[`<option value="全部">全部模式</option>`,`<option value="__official">全部官匹</option>`,`<option value="__perfect">全部完美</option>`,...modes.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`)].join('');$('#trendMap').innerHTML=options(maps,'全部地图');$('#matchMode').innerHTML=options(modes,'全部模式');$('#matchMap').innerHTML=options(maps,'全部地图');$('#matchSource').innerHTML='<option value="全部">全部来源</option><option value="Steam">Steam</option><option value="完美平台">完美平台</option>';const cats=unique((d.weapons||[]).map(x=>x.category));$('#weaponCat').innerHTML=options(cats,'全部分类');
 ['trendRange','trendMode','trendMap'].forEach(id=>$('#'+id).onchange=()=>renderTrends(d));['weaponCat','weaponSort'].forEach(id=>$('#'+id).addEventListener('change',()=>renderWeapons(d)));$('#weaponDir').onclick=e=>{const b=e.currentTarget;b.dataset.dir=b.dataset.dir==='desc'?'asc':'desc';b.textContent=b.dataset.dir==='desc'?'降序 ↓':'升序 ↑';renderWeapons(d)};$('#mapSort').addEventListener('change',()=>renderMaps(d));$('#mapDir').onclick=e=>{const b=e.currentTarget;b.dataset.dir=b.dataset.dir==='desc'?'asc':'desc';b.textContent=b.dataset.dir==='desc'?'降序 ↓':'升序 ↑';renderMaps(d)};['matchSearch','matchMode','matchMap','matchSource','matchResult','matchRank','matchSort'].forEach(id=>$('#'+id).addEventListener(id==='matchSearch'?'input':'change',()=>{matchPage=1;renderMatches(d)}));$('#matchDir').onclick=e=>{const b=e.currentTarget;b.dataset.dir=b.dataset.dir==='desc'?'asc':'desc';b.textContent=b.dataset.dir==='desc'?'降序 ↓':'升序 ↑';matchPage=1;renderMatches(d)};$$('[data-detail-scope]').forEach(b=>b.onclick=()=>{detailScope=b.dataset.detailScope;renderDetailedSummary(d)});$$('[data-recent-scope]').forEach(b=>b.onclick=()=>{recentScope=b.dataset.recentScope;renderRecent50(d)});renderDetailedSummary(d);renderRecent50(d);renderTrends(d);renderWeapons(d);renderMaps(d);renderMatches(d);$$('.tabBtn').forEach(b=>b.onclick=()=>setTab(b.dataset.tab));setTab(location.hash.replace('#','')||'summary')}).catch(e=>{$('#app').innerHTML=`<div class="card empty"><b>CS2 数据读取失败</b><br><br>${esc(e.message||e)}</div>`});
 </script>
-<script id="ymkf-mobile-1192-js" src="../assets/playnite/mobile-1.19.2.js?v=1.19.2" defer></script>
 </body></html>

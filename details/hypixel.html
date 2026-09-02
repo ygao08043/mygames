@@ -18,8 +18,6 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="YMKF">
 <!-- /YMKF site icon hf26 -->
-<script id="ymkf-mobile-1192-boot" src="../assets/playnite/mobile-boot-1.19.2.js?v=1.19.2"></script>
-<link id="ymkf-mobile-1192-css" rel="stylesheet" href="../assets/playnite/mobile-1.19.2.css?v=1.19.2">
 </head>
 <body>
 <div class="wrap">
@@ -67,6 +65,5 @@ fetch('../data/hypixel.json?v='+Date.now()).then(r=>{if(!r.ok)throw Error('HTTP 
   document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>setFilter(b.dataset.filter));$('#modeSearch').oninput=renderButtons;renderButtons();renderMode();
 }).catch(e=>{$('#app').innerHTML=`<div class="card empty"><b>Hypixel 数据尚未生成</b><br><br>先运行 SET_HYPIXEL_API.cmd，再运行 RUN_SYNC.cmd。<br><br>${esc(e.message||e)}</div>`})
 </script>
-<script id="ymkf-mobile-1192-js" src="../assets/playnite/mobile-1.19.2.js?v=1.19.2" defer></script>
 </body>
 </html>
