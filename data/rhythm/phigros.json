@@ -1,18 +1,18 @@
 {
     "version":  "1.11.2",
-    "generatedAt":  "2026-09-01T21:39:57.3056945+08:00",
+    "generatedAt":  "2026-09-02T11:16:20.2786380+08:00",
     "source":  {
                    "type":  "Phigros TapTap cloud save",
-                   "saveUpdatedAt":  "2026-09-01T09:49:47.841Z",
+                   "saveUpdatedAt":  "2026-09-01T14:40:44.568Z",
                    "metadata":  "SonolusHaniwa/phigros-decrypted-data metadata.json",
                    "metadataSongs":  312,
                    "missingMetadata":  0
                },
     "profile":  {
                     "nickname":  "YMKF",
-                    "rks":  15.14399726,
-                    "calculatedRks":  15.14399726,
-                    "cloudSummaryRks":  15.14399719,
+                    "rks":  15.14450551,
+                    "calculatedRks":  15.14450551,
+                    "cloudSummaryRks":  15.1445055,
                     "rksMode":  "calculated",
                     "phiCount":  11,
                     "fcCount":  22,
@@ -416,6 +416,20 @@
                        "charter":  "RDRT -p 20:08:31"
                    },
                    {
+                       "songId":  "Trojan.litmus.0",
+                       "title":  "Trojan",
+                       "composer":  "litmus*",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  15,
+                       "score":  992023,
+                       "accuracy":  99.547897,
+                       "rks":  14.70011228,
+                       "status":  "V",
+                       "isFc":  false,
+                       "charter":  "Warning: XMT is infected by Trojan!!"
+                   },
+                   {
                        "songId":  "Igallta.SeURa.0",
                        "title":  "Igallta",
                        "composer":  "Se-U-Ra",
@@ -428,20 +442,6 @@
                        "status":  "S",
                        "isFc":  false,
                        "charter":  "夜明の剣『靈』"
-                   },
-                   {
-                       "songId":  "Ark.kanoryo.0",
-                       "title":  "Ark",
-                       "composer":  "kanoryo",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  15,
-                       "score":  974098,
-                       "accuracy":  99.524788,
-                       "rks":  14.68486472,
-                       "status":  "V",
-                       "isFc":  false,
-                       "charter":  "阿爽 eat Ctymax"
                    }
                ],
     "scores":  [
@@ -794,6 +794,20 @@
                        "status":  "S",
                        "isFc":  false,
                        "charter":  "RDRT -p 20:08:31"
+                   },
+                   {
+                       "songId":  "Trojan.litmus.0",
+                       "title":  "Trojan",
+                       "composer":  "litmus*",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  15,
+                       "score":  992023,
+                       "accuracy":  99.547897,
+                       "rks":  14.70011228,
+                       "status":  "V",
+                       "isFc":  false,
+                       "charter":  "Warning: XMT is infected by Trojan!!"
                    },
                    {
                        "songId":  "Igallta.SeURa.0",
@@ -1188,6 +1202,20 @@
                        "charter":  "百九十八 feat. Likey"
                    },
                    {
+                       "songId":  "QuantumHyperspace.D_AAN.0",
+                       "title":  "Quantum Hyperspace",
+                       "composer":  "D_AAN",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  15,
+                       "score":  935158,
+                       "accuracy":  98.626122,
+                       "rks":  14.09806281,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  "IMD_0b0110"
+                   },
+                   {
                        "songId":  "白と黒のバケモノ.テヅカ.0",
                        "title":  "白と黒のバケモノ",
                        "composer":  "テヅカ",
@@ -1368,20 +1396,6 @@
                        "status":  "A",
                        "isFc":  false,
                        "charter":  "逆天使の悪魔 【Likey】"
-                   },
-                   {
-                       "songId":  "QuantumHyperspace.D_AAN.0",
-                       "title":  "Quantum Hyperspace",
-                       "composer":  "D_AAN",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  15,
-                       "score":  922877,
-                       "accuracy":  98.35022,
-                       "rks":  13.92030778,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "IMD_0b0110"
                    },
                    {
                        "songId":  "幽世桔梗.Capchiifeatまるもこ.0",
@@ -2280,20 +2294,6 @@
                        "charter":  "XMT as \"eX-MentalisT\""
                    },
                    {
-                       "songId":  "Trojan.litmus.0",
-                       "title":  "Trojan",
-                       "composer":  "litmus*",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  15,
-                       "score":  901820,
-                       "accuracy":  96.99234,
-                       "rks":  13.06190093,
-                       "status":  "A",
-                       "isFc":  false,
-                       "charter":  "Warning: XMT is infected by Trojan!!"
-                   },
-                   {
                        "songId":  "inferior.姜米條.0",
                        "title":  "inferior",
                        "composer":  "姜米條",
@@ -2644,6 +2644,20 @@
                        "charter":  "弧光 With Opposition"
                    },
                    {
+                       "songId":  "GungnirFracture.Kryexe.0",
+                       "title":  "Gungnir Fracture",
+                       "composer":  "Kry.exe",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  16.6,
+                       "score":  862966,
+                       "accuracy":  93.953583,
+                       "rks":  12.43878258,
+                       "status":  "B",
+                       "isFc":  false,
+                       "charter":  "「Barbarianerman AKA. Alloces」Revive"
+                   },
+                   {
                        "songId":  "GetReady.iF.0",
                        "title":  "Get Ready!! ",
                        "composer":  "iF",
@@ -2838,20 +2852,6 @@
                        "status":  "V",
                        "isFc":  false,
                        "charter":  "壹號阿爽"
-                   },
-                   {
-                       "songId":  "GungnirFracture.Kryexe.0",
-                       "title":  "Gungnir Fracture",
-                       "composer":  "Kry.exe",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  16.6,
-                       "score":  857633,
-                       "accuracy":  93.210976,
-                       "rks":  11.96903988,
-                       "status":  "B",
-                       "isFc":  false,
-                       "charter":  "「Barbarianerman AKA. Alloces」Revive"
                    },
                    {
                        "songId":  "DevIAtiOnshortver.polysha.0",
@@ -3536,6 +3536,11 @@
                       "date":  "2026-09-01",
                       "rks":  15.14399726,
                       "saveUpdatedAt":  "2026-09-01T09:49:47.841Z"
+                  },
+                  {
+                      "date":  "2026-09-02",
+                      "rks":  15.14450551,
+                      "saveUpdatedAt":  "2026-09-01T14:40:44.568Z"
                   }
               ]
 }
