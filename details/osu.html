@@ -42,7 +42,7 @@
 </div>
 
 <section class="card section">
- <div class="sectionhead"><div><h2 id="trendTitle">osu!mania 趋势</h2><div class="muted" id="trendSub">每次 RUN_SYNC 自动记录当天快照</div></div><div class="trendcontrols"><button class="tabbtn active" data-trend="pp">PP</button><button class="tabbtn" data-trend="globalRank">全球排名</button></div></div>
+ <div class="sectionhead"><div><h2 id="trendTitle">osu!mania 趋势</h2><div class="muted" id="trendSub">每次 RUN_SYNC 自动记录当天快照 · 点击数据点查看详情</div></div><div class="trendcontrols"><button class="tabbtn active" data-trend="pp">PP</button><button class="tabbtn" data-trend="globalRank">全球排名</button></div></div>
  <div class="trendbox"><canvas id="trendCanvas"></canvas></div>
 </section>
 
@@ -131,6 +131,22 @@ fetch(`../data/rhythm/osu.json?v=${Date.now()}`,{cache:'no-store'}).then(r=>{if(
   document.addEventListener('change',e=>{if(e.target!==range&&(e.target.closest('.controls')||e.target.closest('.filters')))schedule()},true);
   document.addEventListener('click',e=>{if(e.target!==range&&(e.target.closest('.controls')||e.target.closest('.filters')))setTimeout(schedule,0)},true);
   schedule();
+})();
+</script>
+
+
+<style>
+.trendbox canvas{cursor:pointer;touch-action:pan-y}.osu-trend-detail{margin-top:10px;min-height:46px;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;border:1px solid var(--line);border-radius:13px;background:var(--panel2);padding:9px 12px;color:#dce3ee;font-size:12px}.osu-trend-detail b{font-size:13px}.osu-trend-detail span{display:inline-flex;align-items:center;gap:6px}.osu-trend-detail i{width:8px;height:8px;border-radius:50%;display:inline-block;background:#ff66aa}
+</style>
+<script>
+(function(){
+  if(window.__YMKF_OSU_TREND_INTERACTION_1199__)return;window.__YMKF_OSU_TREND_INTERACTION_1199__=true;
+  let selectedDate='';const previousDrawTrend=drawTrend;
+  function rows(){const raw=modeData().trend;return (Array.isArray(raw)?raw:(raw&&typeof raw==='object'?[raw]:[])).filter(x=>x&&x[TREND]!=null)}
+  function detailHost(){let box=document.querySelector('#osuTrendDetail');if(!box){box=document.createElement('div');box.id='osuTrendDetail';box.className='osu-trend-detail';document.querySelector('.trendbox').insertAdjacentElement('afterend',box)}return box}
+  function formatValue(v){return TREND==='globalRank'?'#'+Number(v).toLocaleString('en-US'):Number(v).toFixed(2)+' PP'}
+  function enhance(){const canvas=$('#trendCanvas'),list=rows(),box=detailHost();if(!canvas||!list.length){if(canvas)canvas._ymkfTrendPoints=[];box.innerHTML='<span>暂无可选择的趋势数据</span>';return}const dpr=Math.max(1,window.devicePixelRatio||1),w=canvas.width/dpr,h=canvas.height/dpr,vals=list.map(x=>Number(x[TREND]));let lo=Math.min(...vals),hi=Math.max(...vals);if(lo===hi){lo-=Math.max(1,Math.abs(lo)*.02);hi+=Math.max(1,Math.abs(hi)*.02)}const pad={l:55,r:18,t:16,b:34},inv=TREND==='globalRank',y=v=>pad.t+(inv?(v-lo):(hi-v))/(hi-lo)*(h-pad.t-pad.b),x=i=>pad.l+(list.length===1?.5:i/(list.length-1))*(w-pad.l-pad.r);let index=list.findIndex(r=>String(r.date||'')===selectedDate);if(index<0)index=list.length-1;selectedDate=String(list[index].date||'');const points=list.map((row,i)=>({x:x(i),y:y(Number(row[TREND])),row,index:i}));canvas._ymkfTrendPoints=points;canvas.setAttribute('role','button');canvas.setAttribute('tabindex','0');canvas.setAttribute('aria-label',`${MODE==='mania'?'osu!mania':'osu!standard'} ${TREND==='globalRank'?'全球排名':'PP'}趋势，点击数据点查看详情`);const point=points[index],c=canvas.getContext('2d');c.save();c.strokeStyle='#fff';c.lineWidth=2;c.beginPath();c.arc(point.x,point.y,7,0,Math.PI*2);c.stroke();c.restore();box.innerHTML=`<b>${esc(selectedDate||'未知日期')}</b><span><i></i>${TREND==='globalRank'?'全球排名':'PP'} ${formatValue(point.row[TREND])}</span>`;if(canvas.dataset.trendInteractionBound!=='1'){canvas.dataset.trendInteractionBound='1';canvas.addEventListener('click',e=>{const rect=canvas.getBoundingClientRect(),scaleX=(canvas.width/Math.max(1,window.devicePixelRatio||1))/rect.width,scaleY=(canvas.height/Math.max(1,window.devicePixelRatio||1))/rect.height,px=(e.clientX-rect.left)*scaleX,py=(e.clientY-rect.top)*scaleY,pts=canvas._ymkfTrendPoints||[];let best=null,dist=Infinity;for(const p of pts){const d=Math.hypot(p.x-px,p.y-py);if(d<dist){dist=d;best=p}}if(best&&dist<=32){selectedDate=String(best.row.date||'');drawTrend()}});canvas.addEventListener('keydown',e=>{if(e.key!=='ArrowLeft'&&e.key!=='ArrowRight')return;const pts=canvas._ymkfTrendPoints||[];if(!pts.length)return;e.preventDefault();let i=pts.findIndex(p=>String(p.row.date||'')===selectedDate);i=Math.max(0,Math.min(pts.length-1,i+(e.key==='ArrowRight'?1:-1)));selectedDate=String(pts[i].row.date||'');drawTrend()})}}
+  drawTrend=function(){previousDrawTrend();enhance()};if(DATA)drawTrend();
 })();
 </script>
 
