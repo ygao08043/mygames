@@ -1,18 +1,18 @@
 {
     "version":  "1.11.2",
-    "generatedAt":  "2026-09-02T23:28:52.2327620+08:00",
+    "generatedAt":  "2026-09-03T11:22:34.1303059+08:00",
     "source":  {
                    "type":  "Phigros TapTap cloud save",
-                   "saveUpdatedAt":  "2026-09-02T15:27:26.499Z",
+                   "saveUpdatedAt":  "2026-09-02T15:33:47.067Z",
                    "metadata":  "SonolusHaniwa/phigros-decrypted-data metadata.json",
                    "metadataSongs":  312,
                    "missingMetadata":  0
                },
     "profile":  {
                     "nickname":  "YMKF",
-                    "rks":  15.14450551,
-                    "calculatedRks":  15.14450551,
-                    "cloudSummaryRks":  15.1445055,
+                    "rks":  15.14743749,
+                    "calculatedRks":  15.14743749,
+                    "cloudSummaryRks":  15.1474371,
                     "rksMode":  "calculated",
                     "phiCount":  11,
                     "fcCount":  22,
@@ -304,6 +304,20 @@
                        "charter":  "Snorkel vs. NerSAN"
                    },
                    {
+                       "songId":  "BANGINGSTRIKE.DewPleiades.0",
+                       "title":  "BANGING STRIKE",
+                       "composer":  "Dew Pleiades",
+                       "difficulty":  "AT",
+                       "difficultyIndex":  3,
+                       "constant":  16.8,
+                       "score":  899863,
+                       "accuracy":  97.394165,
+                       "rks":  14.91064487,
+                       "status":  "A",
+                       "isFc":  false,
+                       "charter":  "魔王、大咩兔の兄 『大咩免』!!"
+                   },
+                   {
                        "songId":  "KMoeVIP.ZxNX.0",
                        "title":  "K.Moe (VIP)",
                        "composer":  "ZxNX",
@@ -386,20 +400,6 @@
                        "status":  "S",
                        "isFc":  false,
                        "charter":  "晨_鉄"
-                   },
-                   {
-                       "songId":  "BANGINGSTRIKE.DewPleiades.0",
-                       "title":  "BANGING STRIKE",
-                       "composer":  "Dew Pleiades",
-                       "difficulty":  "AT",
-                       "difficultyIndex":  3,
-                       "constant":  16.8,
-                       "score":  896351,
-                       "accuracy":  97.268936,
-                       "rks":  14.82268533,
-                       "status":  "A",
-                       "isFc":  false,
-                       "charter":  "魔王、大咩兔の兄 『大咩免』!!"
                    },
                    {
                        "songId":  "Rrharil.TeamGrimoire.0",
@@ -684,6 +684,20 @@
                        "charter":  "Snorkel vs. NerSAN"
                    },
                    {
+                       "songId":  "BANGINGSTRIKE.DewPleiades.0",
+                       "title":  "BANGING STRIKE",
+                       "composer":  "Dew Pleiades",
+                       "difficulty":  "AT",
+                       "difficultyIndex":  3,
+                       "constant":  16.8,
+                       "score":  899863,
+                       "accuracy":  97.394165,
+                       "rks":  14.91064487,
+                       "status":  "A",
+                       "isFc":  false,
+                       "charter":  "魔王、大咩兔の兄 『大咩免』!!"
+                   },
+                   {
                        "songId":  "KMoeVIP.ZxNX.0",
                        "title":  "K.Moe (VIP)",
                        "composer":  "ZxNX",
@@ -766,20 +780,6 @@
                        "status":  "S",
                        "isFc":  false,
                        "charter":  "晨_鉄"
-                   },
-                   {
-                       "songId":  "BANGINGSTRIKE.DewPleiades.0",
-                       "title":  "BANGING STRIKE",
-                       "composer":  "Dew Pleiades",
-                       "difficulty":  "AT",
-                       "difficultyIndex":  3,
-                       "constant":  16.8,
-                       "score":  896351,
-                       "accuracy":  97.268936,
-                       "rks":  14.82268533,
-                       "status":  "A",
-                       "isFc":  false,
-                       "charter":  "魔王、大咩兔の兄 『大咩免』!!"
                    },
                    {
                        "songId":  "Rrharil.TeamGrimoire.0",
@@ -1558,7 +1558,7 @@
                        "difficulty":  "AT",
                        "difficultyIndex":  3,
                        "constant":  17.6,
-                       "score":  871781,
+                       "score":  872146,
                        "accuracy":  94.79615,
                        "rks":  13.76479548,
                        "status":  "B",
@@ -3541,6 +3541,11 @@
                       "date":  "2026-09-02",
                       "rks":  15.14450551,
                       "saveUpdatedAt":  "2026-09-02T15:27:26.499Z"
+                  },
+                  {
+                      "date":  "2026-09-03",
+                      "rks":  15.14743749,
+                      "saveUpdatedAt":  "2026-09-02T15:33:47.067Z"
                   }
               ]
 }

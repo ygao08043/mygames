@@ -257,18 +257,22 @@ function jacketCandidates(r){
   const bundle=jacketBundle(r);if(!bundle)return [];
   const server=String(D?.source?.server||'jp').toLowerCase();
   const regions=[...new Set([server,'jp'])];
-  return regions.flatMap(region=>['webp','png'].map(ext=>`https://storage.sekai.best/sekai-${encodeURIComponent(region)}-assets/music/jacket/${encodeURIComponent(bundle)}/${encodeURIComponent(bundle)}.${ext}`))
+  const paths=regions.map(region=>`storage.sekai.best/sekai-${encodeURIComponent(region)}-assets/music/jacket/${encodeURIComponent(bundle)}/${encodeURIComponent(bundle)}.png`);
+  const proxied=paths.map(path=>`https://images.weserv.nl/?url=${path}&w=128&h=128&fit=cover&output=webp`);
+  const direct=paths.map(path=>'https://'+path);
+  return [...proxied,...direct]
 }
 function musicTitleCell(v,r){
   const urls=jacketCandidates(r),encoded=esc(JSON.stringify(urls));
-  const image=urls.length?`<img class="music-jacket" loading="lazy" decoding="async" alt="${esc(v)} 曲绘" src="${esc(urls[0])}" data-jacket-candidates="${encoded}">`:'';
+  const image=urls.length?`<img class="music-jacket" loading="lazy" decoding="async" alt="${esc(v)} 曲绘" data-jacket-candidates="${encoded}">`:'';
   return `<div class="music-cell">${image}<span class="music-title">${esc(v)}<small class="music-id">Music #${n(r.musicId)}</small></span></div>`
 }
 function hydrateJackets(root){
   root.querySelectorAll('img[data-jacket-candidates]').forEach(img=>{
     let urls=[];try{urls=JSON.parse(img.dataset.jacketCandidates||'[]')}catch(_e){}
-    let i=Math.max(0,urls.indexOf(img.currentSrc||img.src));
-    img.onerror=()=>{i++;if(i<urls.length)img.src=urls[i];else{img.onerror=null;img.removeAttribute('src');img.classList.add('missing')}}
+    let i=0;
+    img.onerror=()=>{i++;if(i<urls.length)img.src=urls[i];else{img.onerror=null;img.removeAttribute('src');img.classList.add('missing')}};
+    if(urls.length)img.src=urls[0]
   })
 }
 function renderMusic(){
