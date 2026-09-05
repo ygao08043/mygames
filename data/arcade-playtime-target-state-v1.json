@@ -1,12 +1,12 @@
 {
     "version":  "1.0",
-    "updatedAt":  "2026-09-04T22:54:06.3896846+08:00",
+    "updatedAt":  "2026-09-05T15:40:42.4934648+08:00",
     "games":  {
                   "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b":  {
                                                                "name":  "CHUNITHM",
                                                                "resolvedPlayniteId":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                                                                "targetPlaytimeSeconds":  1602025,
-                                                               "sourceDeltaSeconds":  7800,
+                                                               "sourceDeltaSeconds":  0,
                                                                "exactTarget":  false,
                                                                "exactTargetAllowDecreaseFromIndependentSource":  false,
                                                                "exactTargetNoDecrease":  false,
@@ -62,7 +62,7 @@
                                                                "name":  "Arcaea",
                                                                "resolvedPlayniteId":  "e9125710-44f3-4473-a14c-bde806b1ff76",
                                                                "targetPlaytimeSeconds":  1255923,
-                                                               "sourceDeltaSeconds":  2456,
+                                                               "sourceDeltaSeconds":  0,
                                                                "exactTarget":  false,
                                                                "exactTargetAllowDecreaseFromIndependentSource":  false,
                                                                "exactTargetNoDecrease":  false,
@@ -89,15 +89,15 @@
                   "8b5cbfc6-9afb-4892-993e-e9424a9d6555":  {
                                                                "name":  "Phigros",
                                                                "resolvedPlayniteId":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
-                                                               "targetPlaytimeSeconds":  118002,
-                                                               "sourceDeltaSeconds":  234,
+                                                               "targetPlaytimeSeconds":  118072,
+                                                               "sourceDeltaSeconds":  70,
                                                                "exactTarget":  false,
                                                                "exactTargetAllowDecreaseFromIndependentSource":  false,
                                                                "exactTargetNoDecrease":  false,
                                                                "exactGuardAlreadyEstablished":  false,
                                                                "exactOverrideSeconds":  0,
-                                                               "externalSessionCountTotal":  21,
-                                                               "latestExternalActivityUtc":  "2026-09-04T03:05:04.0000000Z",
+                                                               "externalSessionCountTotal":  22,
+                                                               "latestExternalActivityUtc":  "2026-09-05T06:00:39.0000000Z",
                                                                "repairIOSSeconds":  0
                                                            },
                   "b730c4a7-1f2f-4ec7-aca4-f1df509d18fe":  {
@@ -124,8 +124,8 @@
                                                                "exactTargetNoDecrease":  false,
                                                                "exactGuardAlreadyEstablished":  false,
                                                                "exactOverrideSeconds":  0,
-                                                               "externalSessionCountTotal":  20,
-                                                               "latestExternalActivityUtc":  "2026-09-04T13:27:06.0000000Z",
+                                                               "externalSessionCountTotal":  24,
+                                                               "latestExternalActivityUtc":  "2026-09-04T18:43:07.0000000Z",
                                                                "repairIOSSeconds":  0
                                                            },
                   "bb00e134-2ed0-4e1a-90c8-ee8cb7f71e11":  {
