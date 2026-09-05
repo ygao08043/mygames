@@ -1,9 +1,9 @@
 {
     "version":  "1.11.2",
-    "generatedAt":  "2026-09-05T21:57:37.5374109+08:00",
+    "generatedAt":  "2026-09-05T22:33:34.6695301+08:00",
     "source":  {
                    "type":  "Phigros TapTap cloud save",
-                   "saveUpdatedAt":  "2026-09-05T07:57:29.661Z",
+                   "saveUpdatedAt":  "2026-09-05T14:31:38.585Z",
                    "metadata":  "SonolusHaniwa/phigros-decrypted-data metadata.json",
                    "metadataSongs":  312,
                    "missingMetadata":  0
@@ -14,27 +14,13 @@
                     "calculatedRks":  15.14743749,
                     "cloudSummaryRks":  15.1474371,
                     "rksMode":  "calculated",
-                    "phiCount":  12,
-                    "fcCount":  23,
-                    "playedCharts":  214,
+                    "phiCount":  14,
+                    "fcCount":  24,
+                    "playedCharts":  215,
                     "avatar":  "Introduction",
                     "challengeCode":  349
                 },
     "phi3":  [
-                 {
-                     "songId":  "Re_NascencePsystyleVer.Rinth_live.0",
-                     "title":  "Re_Nascence (Psystyle Ver.) ",
-                     "composer":  "Rinth_live",
-                     "difficulty":  "IN",
-                     "difficultyIndex":  2,
-                     "constant":  14.4,
-                     "score":  1000000,
-                     "accuracy":  100,
-                     "rks":  14.4,
-                     "status":  "Phi",
-                     "isFc":  true,
-                     "charter":  "NerSAN \u0026 百九十八"
-                 },
                  {
                      "songId":  "Cristalisia.onoken.0",
                      "title":  "Cristalisia",
@@ -48,6 +34,20 @@
                      "status":  "Phi",
                      "isFc":  true,
                      "charter":  "Salt"
+                 },
+                 {
+                     "songId":  "Re_NascencePsystyleVer.Rinth_live.0",
+                     "title":  "Re_Nascence (Psystyle Ver.) ",
+                     "composer":  "Rinth_live",
+                     "difficulty":  "IN",
+                     "difficultyIndex":  2,
+                     "constant":  14.4,
+                     "score":  1000000,
+                     "accuracy":  100,
+                     "rks":  14.4,
+                     "status":  "Phi",
+                     "isFc":  true,
+                     "charter":  "NerSAN \u0026 百九十八"
                  },
                  {
                      "songId":  "GOODTEK.EBIMAYO.0",
@@ -992,20 +992,6 @@
                        "charter":  "Su1fuR -FAISEURS DE PANIQUE-"
                    },
                    {
-                       "songId":  "Re_NascencePsystyleVer.Rinth_live.0",
-                       "title":  "Re_Nascence (Psystyle Ver.) ",
-                       "composer":  "Rinth_live",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  14.4,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  14.4,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "NerSAN \u0026 百九十八"
-                   },
-                   {
                        "songId":  "Cristalisia.onoken.0",
                        "title":  "Cristalisia",
                        "composer":  "onoken",
@@ -1018,6 +1004,20 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "Salt"
+                   },
+                   {
+                       "songId":  "Re_NascencePsystyleVer.Rinth_live.0",
+                       "title":  "Re_Nascence (Psystyle Ver.) ",
+                       "composer":  "Rinth_live",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  14.4,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  14.4,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "NerSAN \u0026 百九十八"
                    },
                    {
                        "songId":  "NickofTime.P4koo.0",
@@ -1412,6 +1412,20 @@
                        "charter":  "Su1fuR、快斬！"
                    },
                    {
+                       "songId":  "PRAGMATISMRESURRECTION.Laur.0",
+                       "title":  "PRAGMATISM -RESURRECTION-",
+                       "composer":  "Laur",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  16,
+                       "score":  904219,
+                       "accuracy":  96.931931,
+                       "rks":  13.89263644,
+                       "status":  "A",
+                       "isFc":  false,
+                       "charter":  "-NerSAN \u0026 Su1fuR-"
+                   },
+                   {
                        "songId":  "INFiNiTEENERZYOverdoze.RekuMochizuki.0",
                        "title":  "INFiNiTE ENERZY -Overdoze-",
                        "composer":  "Reku Mochizuki",
@@ -1536,6 +1550,20 @@
                        "status":  "A",
                        "isFc":  false,
                        "charter":  "NerSAN"
+                   },
+                   {
+                       "songId":  "BonusTime.MegaloPaleWhite.0",
+                       "title":  "Bonus Time",
+                       "composer":  "Megalo_PaleWhite",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  13.8,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  13.8,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "Uvernight fixed by 百九十八"
                    },
                    {
                        "songId":  "Spotlight.Ardolf.0",
@@ -1748,20 +1776,6 @@
                        "charter":  "NerSAN vs. 阿爽 『Collapse』"
                    },
                    {
-                       "songId":  "TheWholeRest.KIVΛ.0",
-                       "title":  "The Whole Rest",
-                       "composer":  "KIVΛ",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  13.6,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  13.6,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "Uvernight from CYTUS II"
-                   },
-                   {
                        "songId":  "cryout.JuE.0",
                        "title":  "cryout",
                        "composer":  "Ju_E",
@@ -1774,6 +1788,34 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "Ctymax but 5 years later"
+                   },
+                   {
+                       "songId":  "TimetoNightSkyfeatLeeYuJin.HyuNKLYDIX.0",
+                       "title":  "Time to Night Sky (feat. Lee Yu Jin)",
+                       "composer":  "HyuN \u0026 KLYDIX",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  13.6,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  13.6,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "Likey \u0026 198ar"
+                   },
+                   {
+                       "songId":  "TheWholeRest.KIVΛ.0",
+                       "title":  "The Whole Rest",
+                       "composer":  "KIVΛ",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  13.6,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  13.6,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "Uvernight from CYTUS II"
                    },
                    {
                        "songId":  "千紫万紅.r0yvsWABI.0",
@@ -1844,20 +1886,6 @@
                        "status":  "A",
                        "isFc":  false,
                        "charter":  "{Destruction}"
-                   },
-                   {
-                       "songId":  "TimetoNightSkyfeatLeeYuJin.HyuNKLYDIX.0",
-                       "title":  "Time to Night Sky (feat. Lee Yu Jin)",
-                       "composer":  "HyuN \u0026 KLYDIX",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  13.6,
-                       "score":  998833,
-                       "accuracy":  99.870369,
-                       "rks":  13.52175809,
-                       "status":  "FC",
-                       "isFc":  true,
-                       "charter":  "Likey \u0026 198ar"
                    },
                    {
                        "songId":  "暗夜苏醒REANIMATE.Warak.0",
@@ -2110,20 +2138,6 @@
                        "status":  "S",
                        "isFc":  false,
                        "charter":  "Salt"
-                   },
-                   {
-                       "songId":  "PRAGMATISMRESURRECTION.Laur.0",
-                       "title":  "PRAGMATISM -RESURRECTION-",
-                       "composer":  "Laur",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  16,
-                       "score":  883258,
-                       "accuracy":  95.950951,
-                       "rks":  13.25021517,
-                       "status":  "A",
-                       "isFc":  false,
-                       "charter":  "-NerSAN \u0026 Su1fuR-"
                    },
                    {
                        "songId":  "Wintercube.CtymaxfeatNceS.0",
@@ -3454,9 +3468,9 @@
                                          "phi":  0
                                      },
                               "IN":  {
-                                         "cleared":  176,
-                                         "fullCombo":  17,
-                                         "phi":  10
+                                         "cleared":  177,
+                                         "fullCombo":  18,
+                                         "phi":  12
                                      },
                               "AT":  {
                                          "cleared":  13,
@@ -3569,7 +3583,7 @@
                   {
                       "date":  "2026-09-05",
                       "rks":  15.14743749,
-                      "saveUpdatedAt":  "2026-09-05T07:57:29.661Z"
+                      "saveUpdatedAt":  "2026-09-05T14:31:38.585Z"
                   }
               ]
 }
