@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
     "build":  "v1.19.2",
-    "generatedAt":  "2026-09-05T21:22:16.4424923+08:00",
+    "generatedAt":  "2026-09-05T22:00:04.6172471+08:00",
     "source":  {
                    "provider":  "Playnite GameActivity",
                    "fields":  [
@@ -15,15 +15,15 @@
     "analyticsStart":  "2026-03-01",
     "coverageStart":  "2026-03-01",
     "coverageEnd":  "2026-09-05",
-    "sessionCount":  1330,
+    "sessionCount":  1331,
     "syntheticSessionCount":  4,
     "currentMonth":  "2026-09",
     "currentYear":  "2026",
     "totals":  {
-                   "recordedSeconds":  3079159,
-                   "last7DaysSeconds":  111142,
-                   "currentMonthSeconds":  76803,
-                   "currentYearSeconds":  3079159,
+                   "recordedSeconds":  3079357,
+                   "last7DaysSeconds":  111340,
+                   "currentMonthSeconds":  77001,
+                   "currentYearSeconds":  3079357,
                    "activeDays":  188
                },
     "daily":  [
@@ -781,7 +781,7 @@
                   },
                   {
                       "date":  "2026-09-05",
-                      "seconds":  11627
+                      "seconds":  11825
                   }
               ],
     "weekly":  [
@@ -923,7 +923,7 @@
                    {
                        "start":  "2026-08-31",
                        "label":  "8/31",
-                       "seconds":  94790
+                       "seconds":  94988
                    }
                ],
     "monthly":  [
@@ -960,7 +960,7 @@
                     {
                         "month":  "2026-09",
                         "label":  "26/09",
-                        "seconds":  76803
+                        "seconds":  77001
                     }
                 ],
     "hourly":  [
@@ -1050,7 +1050,7 @@
                    },
                    {
                        "hour":  21,
-                       "seconds":  174313
+                       "seconds":  174511
                    },
                    {
                        "hour":  22,
@@ -1090,7 +1090,7 @@
                     {
                         "day":  5,
                         "label":  "周六",
-                        "seconds":  401341
+                        "seconds":  401539
                     },
                     {
                         "day":  6,
@@ -1189,7 +1189,7 @@
                                                   },
                                                   {
                                                       "hour":  21,
-                                                      "seconds":  1578
+                                                      "seconds":  1776
                                                   },
                                                   {
                                                       "hour":  22,
@@ -1229,7 +1229,7 @@
                                                    {
                                                        "day":  5,
                                                        "label":  "周六",
-                                                       "seconds":  11627
+                                                       "seconds":  11825
                                                    },
                                                    {
                                                        "day":  6,
@@ -2092,7 +2092,7 @@
                            {
                                "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
                                "name":  "Phigros",
-                               "seconds":  6494
+                               "seconds":  6692
                            },
                            {
                                "id":  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8",
@@ -2134,7 +2134,7 @@
                               {
                                   "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
                                   "name":  "Phigros",
-                                  "seconds":  5986
+                                  "seconds":  6184
                               },
                               {
                                   "id":  "bd4bf292-368e-4e00-bdbb-6dee05aff790",
@@ -2221,7 +2221,7 @@
                              {
                                  "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
                                  "name":  "Phigros",
-                                 "seconds":  10194
+                                 "seconds":  10392
                              },
                              {
                                  "id":  "579dd5f2-6d58-4423-ba8b-c837014df0bf",
@@ -2636,7 +2636,7 @@
                                            {
                                                "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
                                                "name":  "Phigros",
-                                               "seconds":  5986
+                                               "seconds":  6184
                                            },
                                            {
                                                "id":  "bd4bf292-368e-4e00-bdbb-6dee05aff790",
@@ -2658,16 +2658,16 @@
                      ],
     "lastPlayedGames":  [
                             {
+                                "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
+                                "name":  "Phigros",
+                                "date":  "2026-09-05",
+                                "lastPlayed":  "2026-09-05T21:33:26.0000000"
+                            },
+                            {
                                 "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
                                 "name":  "Arcaea",
                                 "date":  "2026-09-05",
                                 "lastPlayed":  "2026-09-05T16:09:51.0000000"
-                            },
-                            {
-                                "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
-                                "name":  "Phigros",
-                                "date":  "2026-09-05",
-                                "lastPlayed":  "2026-09-05T15:58:48.0000000"
                             },
                             {
                                 "id":  "f0a894ed-b3a2-471e-b081-efdf8f0269cd",
@@ -2821,7 +2821,7 @@
                                  "id":  "f0a894ed-b3a2-471e-b081-efdf8f0269cd",
                                  "name":  "Goose Goose Duck",
                                  "seconds":  27983,
-                                 "totalSeconds":  76803
+                                 "totalSeconds":  77001
                              },
                              {
                                  "period":  "2026-08",
@@ -2879,7 +2879,7 @@
                                 "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                 "name":  "雀魂麻将",
                                 "seconds":  1572175,
-                                "totalSeconds":  3079159
+                                "totalSeconds":  3079357
                             }
                         ],
     "timelineWindowDays":  14,
@@ -17863,6 +17863,16 @@
                          "startText":  "15:58",
                          "endText":  "16:09",
                          "seconds":  658
+                     },
+                     {
+                         "date":  "2026-09-05",
+                         "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
+                         "name":  "Phigros",
+                         "startMinute":  1290.13,
+                         "endMinute":  1293.43,
+                         "startText":  "21:30",
+                         "endText":  "21:33",
+                         "seconds":  198
                      }
                  ]
 }
