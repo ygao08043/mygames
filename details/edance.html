@@ -112,5 +112,5 @@ document.querySelector('#modeFilter').addEventListener('change',render);
 document.querySelector('#resetBtn').addEventListener('click',()=>{sortKey='playedAtLocal';sortDir='desc';document.querySelector('#modeFilter').value='all';render()});
 fetch(DATA_URL,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(j=>{data=j;summary();sessions();render()}).catch(e=>{document.querySelector('#rows').innerHTML=`<tr><td colspan="13" style="text-align:left;color:#ff9d9d">数据加载失败：${e.message}</td></tr>`});
 </script>
-</body>
+<script id="ymkf-rhythm-history-enhancer-v11925" src="./rhythm-history-enhancer.js?v=1.19.25"></script></body>
 </html>
