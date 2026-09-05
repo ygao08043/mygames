@@ -1,9 +1,9 @@
 {
     "version":  "1.11.2",
-    "generatedAt":  "2026-09-05T15:37:57.1913487+08:00",
+    "generatedAt":  "2026-09-05T16:26:09.1099525+08:00",
     "source":  {
                    "type":  "Phigros TapTap cloud save",
-                   "saveUpdatedAt":  "2026-09-04T03:04:37.777Z",
+                   "saveUpdatedAt":  "2026-09-05T07:57:29.661Z",
                    "metadata":  "SonolusHaniwa/phigros-decrypted-data metadata.json",
                    "metadataSongs":  312,
                    "missingMetadata":  0
@@ -14,9 +14,9 @@
                     "calculatedRks":  15.14743749,
                     "cloudSummaryRks":  15.1474371,
                     "rksMode":  "calculated",
-                    "phiCount":  11,
-                    "fcCount":  22,
-                    "playedCharts":  213,
+                    "phiCount":  12,
+                    "fcCount":  23,
+                    "playedCharts":  214,
                     "avatar":  "Introduction",
                     "challengeCode":  349
                 },
@@ -3330,6 +3330,20 @@
                        "charter":  "Another M3"
                    },
                    {
+                       "songId":  "dBdoll.YUESTEVENuen.0",
+                       "title":  "dB doll",
+                       "composer":  "YUE.STEVEN/uen",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  8.3,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  8.3,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "阿爽"
+                   },
+                   {
                        "songId":  "GOODFORTUNE.EBIMAYO.0",
                        "title":  "GOODFORTUNE",
                        "composer":  "EBIMAYO",
@@ -3440,9 +3454,9 @@
                                          "phi":  0
                                      },
                               "IN":  {
-                                         "cleared":  175,
-                                         "fullCombo":  16,
-                                         "phi":  9
+                                         "cleared":  176,
+                                         "fullCombo":  17,
+                                         "phi":  10
                                      },
                               "AT":  {
                                          "cleared":  13,
@@ -3555,7 +3569,7 @@
                   {
                       "date":  "2026-09-05",
                       "rks":  15.14743749,
-                      "saveUpdatedAt":  "2026-09-04T03:04:37.777Z"
+                      "saveUpdatedAt":  "2026-09-05T07:57:29.661Z"
                   }
               ]
 }

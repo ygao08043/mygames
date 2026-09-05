@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
     "build":  "v1.19.2",
-    "generatedAt":  "2026-09-05T15:40:42.8168877+08:00",
+    "generatedAt":  "2026-09-05T16:28:35.9618990+08:00",
     "source":  {
                    "provider":  "Playnite GameActivity",
                    "fields":  [
@@ -15,15 +15,15 @@
     "analyticsStart":  "2026-03-01",
     "coverageStart":  "2026-03-01",
     "coverageEnd":  "2026-09-05",
-    "sessionCount":  1328,
+    "sessionCount":  1330,
     "syntheticSessionCount":  4,
     "currentMonth":  "2026-09",
     "currentYear":  "2026",
     "totals":  {
-                   "recordedSeconds":  3077380,
-                   "last7DaysSeconds":  109362,
-                   "currentMonthSeconds":  75023,
-                   "currentYearSeconds":  3077380,
+                   "recordedSeconds":  3079160,
+                   "last7DaysSeconds":  111142,
+                   "currentMonthSeconds":  76803,
+                   "currentYearSeconds":  3079160,
                    "activeDays":  188
                },
     "daily":  [
@@ -781,7 +781,7 @@
                   },
                   {
                       "date":  "2026-09-05",
-                      "seconds":  9847
+                      "seconds":  11627
                   }
               ],
     "weekly":  [
@@ -923,7 +923,7 @@
                    {
                        "start":  "2026-08-31",
                        "label":  "8/31",
-                       "seconds":  93010
+                       "seconds":  94790
                    }
                ],
     "monthly":  [
@@ -1021,11 +1021,11 @@
                    },
                    {
                        "hour":  15,
-                       "seconds":  104340
+                       "seconds":  105529
                    },
                    {
                        "hour":  16,
-                       "seconds":  125557
+                       "seconds":  126148
                    },
                    {
                        "hour":  17,
@@ -1085,7 +1085,7 @@
                     {
                         "day":  5,
                         "label":  "周六",
-                        "seconds":  399561
+                        "seconds":  401341
                     },
                     {
                         "day":  6,
@@ -1160,11 +1160,11 @@
                                                   },
                                                   {
                                                       "hour":  15,
-                                                      "seconds":  1452
+                                                      "seconds":  2641
                                                   },
                                                   {
                                                       "hour":  16,
-                                                      "seconds":  2311
+                                                      "seconds":  2902
                                                   },
                                                   {
                                                       "hour":  17,
@@ -1224,7 +1224,7 @@
                                                    {
                                                        "day":  5,
                                                        "label":  "周六",
-                                                       "seconds":  9847
+                                                       "seconds":  11627
                                                    },
                                                    {
                                                        "day":  6,
@@ -2085,6 +2085,11 @@
                                "seconds":  23700
                            },
                            {
+                               "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
+                               "name":  "Phigros",
+                               "seconds":  6494
+                           },
+                           {
                                "id":  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8",
                                "name":  "Project SEKAI",
                                "seconds":  6192
@@ -2095,14 +2100,9 @@
                                "seconds":  5750
                            },
                            {
-                               "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
-                               "name":  "Phigros",
-                               "seconds":  5372
-                           },
-                           {
                                "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
                                "name":  "Arcaea",
-                               "seconds":  2456
+                               "seconds":  3114
                            },
                            {
                                "id":  "b730c4a7-1f2f-4ec7-aca4-f1df509d18fe",
@@ -2127,19 +2127,19 @@
                                   "seconds":  11820
                               },
                               {
+                                  "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
+                                  "name":  "Phigros",
+                                  "seconds":  5986
+                              },
+                              {
                                   "id":  "bd4bf292-368e-4e00-bdbb-6dee05aff790",
                                   "name":  "osu!",
                                   "seconds":  5750
                               },
                               {
-                                  "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
-                                  "name":  "Phigros",
-                                  "seconds":  4864
-                              },
-                              {
                                   "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
                                   "name":  "Arcaea",
-                                  "seconds":  2456
+                                  "seconds":  3114
                               },
                               {
                                   "id":  "b730c4a7-1f2f-4ec7-aca4-f1df509d18fe",
@@ -2164,14 +2164,14 @@
                                  "seconds":  483043
                              },
                              {
+                                 "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
+                                 "name":  "Arcaea",
+                                 "seconds":  119535
+                             },
+                             {
                                  "id":  "c263bdfe-2d98-43b9-8f6e-b3335a7ed763",
                                  "name":  "Plants vs. Zombies",
                                  "seconds":  119317
-                             },
-                             {
-                                 "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
-                                 "name":  "Arcaea",
-                                 "seconds":  118877
                              },
                              {
                                  "id":  "f0a894ed-b3a2-471e-b081-efdf8f0269cd",
@@ -2216,7 +2216,7 @@
                              {
                                  "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
                                  "name":  "Phigros",
-                                 "seconds":  9072
+                                 "seconds":  10194
                              },
                              {
                                  "id":  "579dd5f2-6d58-4423-ba8b-c837014df0bf",
@@ -2613,10 +2613,16 @@
                      ],
     "lastPlayedGames":  [
                             {
+                                "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
+                                "name":  "Arcaea",
+                                "date":  "2026-09-05",
+                                "lastPlayed":  "2026-09-05T16:09:51.0000000"
+                            },
+                            {
                                 "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
                                 "name":  "Phigros",
                                 "date":  "2026-09-05",
-                                "lastPlayed":  "2026-09-05T14:00:39.0000000"
+                                "lastPlayed":  "2026-09-05T15:58:48.0000000"
                             },
                             {
                                 "id":  "f0a894ed-b3a2-471e-b081-efdf8f0269cd",
@@ -2641,12 +2647,6 @@
                                 "name":  "osu!",
                                 "date":  "2026-09-04",
                                 "lastPlayed":  "2026-09-04T10:16:07.5908527"
-                            },
-                            {
-                                "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
-                                "name":  "Arcaea",
-                                "date":  "2026-09-04",
-                                "lastPlayed":  "2026-09-04T00:04:12.0000000"
                             },
                             {
                                 "id":  "b730c4a7-1f2f-4ec7-aca4-f1df509d18fe",
@@ -2776,7 +2776,7 @@
                                  "id":  "f0a894ed-b3a2-471e-b081-efdf8f0269cd",
                                  "name":  "Goose Goose Duck",
                                  "seconds":  27983,
-                                 "totalSeconds":  75023
+                                 "totalSeconds":  76803
                              },
                              {
                                  "period":  "2026-08",
@@ -2834,7 +2834,7 @@
                                 "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                 "name":  "雀魂麻将",
                                 "seconds":  1572175,
-                                "totalSeconds":  3077380
+                                "totalSeconds":  3079160
                             }
                         ],
     "timelineWindowDays":  14,
@@ -3603,7 +3603,7 @@
                          "date":  "2026-03-01",
                          "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                          "name":  "CHUNITHM",
-                         "startMinute":  0,
+                         "startMinute":  0.01,
                          "endMinute":  3.88,
                          "startText":  "00:00",
                          "endText":  "00:03",
@@ -17798,6 +17798,26 @@
                          "startText":  "13:59",
                          "endText":  "14:00",
                          "seconds":  70
+                     },
+                     {
+                         "date":  "2026-09-05",
+                         "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
+                         "name":  "Phigros",
+                         "startMinute":  940.1,
+                         "endMinute":  958.8,
+                         "startText":  "15:40",
+                         "endText":  "15:58",
+                         "seconds":  1122
+                     },
+                     {
+                         "date":  "2026-09-05",
+                         "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
+                         "name":  "Arcaea",
+                         "startMinute":  958.88,
+                         "endMinute":  969.85,
+                         "startText":  "15:58",
+                         "endText":  "16:09",
+                         "seconds":  658
                      }
                  ]
 }
