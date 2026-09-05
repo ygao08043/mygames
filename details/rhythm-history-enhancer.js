@@ -1,4 +1,4 @@
-/* YMKF rhythm recent-history enhancer v1.19.25
+/* YMKF rhythm recent-history enhancer v1.19.27
  * CHUNITHM / maimai / Arcaea / osu! / E舞成名
  * - per-song + per-chart filtering
  * - timeline keeps the first play as 初见
