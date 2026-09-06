@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
     "build":  "v1.19.2",
-    "generatedAt":  "2026-09-06T22:50:49.4058500+08:00",
+    "generatedAt":  "2026-09-07T00:01:32.3822804+08:00",
     "source":  {
                    "provider":  "Playnite GameActivity",
                    "fields":  [
@@ -21,7 +21,7 @@
     "currentYear":  "2026",
     "totals":  {
                    "recordedSeconds":  3091330,
-                   "last7DaysSeconds":  106961,
+                   "last7DaysSeconds":  88974,
                    "currentMonthSeconds":  88974,
                    "currentYearSeconds":  3091330,
                    "activeDays":  189
@@ -786,6 +786,10 @@
                   {
                       "date":  "2026-09-06",
                       "seconds":  10490
+                  },
+                  {
+                      "date":  "2026-09-07",
+                      "seconds":  0
                   }
               ],
     "weekly":  [
@@ -928,6 +932,11 @@
                        "start":  "2026-08-31",
                        "label":  "8/31",
                        "seconds":  106961
+                   },
+                   {
+                       "start":  "2026-09-07",
+                       "label":  "9/7",
+                       "seconds":  0
                    }
                ],
     "monthly":  [
@@ -2079,19 +2088,14 @@
                            ],
     "last7DaysGames":  [
                            {
-                               "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
-                               "name":  "雀魂麻将",
-                               "seconds":  31733
-                           },
-                           {
                                "id":  "f0a894ed-b3a2-471e-b081-efdf8f0269cd",
                                "name":  "Goose Goose Duck",
                                "seconds":  27983
                            },
                            {
-                               "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
-                               "name":  "CHUNITHM",
-                               "seconds":  18840
+                               "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
+                               "name":  "雀魂麻将",
+                               "seconds":  25317
                            },
                            {
                                "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
@@ -2099,14 +2103,14 @@
                                "seconds":  14988
                            },
                            {
+                               "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
+                               "name":  "CHUNITHM",
+                               "seconds":  11820
+                           },
+                           {
                                "id":  "bd4bf292-368e-4e00-bdbb-6dee05aff790",
                                "name":  "osu!",
                                "seconds":  5750
-                           },
-                           {
-                               "id":  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8",
-                               "name":  "Project SEKAI",
-                               "seconds":  4551
                            },
                            {
                                "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
@@ -2888,7 +2892,7 @@
                         ],
     "timelineWindowDays":  14,
     "timelineStart":  "2026-03-01",
-    "timelineEnd":  "2026-09-06",
+    "timelineEnd":  "2026-09-07",
     "timelineDays":  [
                          {
                              "date":  "2026-03-01",
@@ -3649,6 +3653,10 @@
                          {
                              "date":  "2026-09-06",
                              "label":  "周日"
+                         },
+                         {
+                             "date":  "2026-09-07",
+                             "label":  "周一"
                          }
                      ],
     "timeline":  [

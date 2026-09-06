@@ -1,18 +1,18 @@
 {
     "version":  "1.11.2",
-    "generatedAt":  "2026-09-06T22:50:01.0520784+08:00",
+    "generatedAt":  "2026-09-07T00:00:36.5946769+08:00",
     "source":  {
                    "type":  "Phigros TapTap cloud save",
-                   "saveUpdatedAt":  "2026-09-06T13:39:29.121Z",
+                   "saveUpdatedAt":  "2026-09-06T15:16:05.341Z",
                    "metadata":  "SonolusHaniwa/phigros-decrypted-data metadata.json",
                    "metadataSongs":  314,
                    "missingMetadata":  0
                },
     "profile":  {
                     "nickname":  "YMKF",
-                    "rks":  15.19847971,
-                    "calculatedRks":  15.19847971,
-                    "cloudSummaryRks":  15.19212151,
+                    "rks":  15.26771774,
+                    "calculatedRks":  15.26771774,
+                    "cloudSummaryRks":  15.26135921,
                     "rksMode":  "calculated",
                     "phiCount":  18,
                     "fcCount":  28,
@@ -94,6 +94,20 @@
                        "charter":  "兔咩小 VS 咩小兔 VS 小兔咩 VS 咩兔小 VS 兔小咩"
                    },
                    {
+                       "songId":  "BANGINGSTRIKE.DewPleiades.0",
+                       "title":  "BANGING STRIKE",
+                       "composer":  "Dew Pleiades",
+                       "difficulty":  "AT",
+                       "difficultyIndex":  3,
+                       "constant":  16.8,
+                       "score":  975361,
+                       "accuracy":  99.057838,
+                       "rks":  16.10388373,
+                       "status":  "V",
+                       "isFc":  false,
+                       "charter":  "魔王、大咩兔の兄 『大咩免』!!"
+                   },
+                   {
                        "songId":  "Cthugha.USAO.0",
                        "title":  "Cthugha",
                        "composer":  "USAO",
@@ -162,6 +176,20 @@
                        "status":  "V",
                        "isFc":  false,
                        "charter":  "Gausbon"
+                   },
+                   {
+                       "songId":  "GOODRAGE.EBIMAYO.0",
+                       "title":  "GOODRAGE",
+                       "composer":  "EBIMAYO",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  16,
+                       "score":  955962,
+                       "accuracy":  99.50193,
+                       "rks":  15.64777714,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  "Ctymax vs. 阿爽"
                    },
                    {
                        "songId":  "Hydra.JamesLandinoXAkiraComplex.0",
@@ -330,20 +358,6 @@
                        "status":  "V",
                        "isFc":  false,
                        "charter":  "Snorkel vs. NerSAN"
-                   },
-                   {
-                       "songId":  "BANGINGSTRIKE.DewPleiades.0",
-                       "title":  "BANGING STRIKE",
-                       "composer":  "Dew Pleiades",
-                       "difficulty":  "AT",
-                       "difficultyIndex":  3,
-                       "constant":  16.8,
-                       "score":  899863,
-                       "accuracy":  97.394165,
-                       "rks":  14.91064487,
-                       "status":  "A",
-                       "isFc":  false,
-                       "charter":  "魔王、大咩兔の兄 『大咩免』!!"
                    },
                    {
                        "songId":  "KMoeVIP.ZxNX.0",
@@ -428,20 +442,6 @@
                        "status":  "S",
                        "isFc":  false,
                        "charter":  "夜明の剣『靈』"
-                   },
-                   {
-                       "songId":  "Rrharil.TeamGrimoire.0",
-                       "title":  "Rrhar\u0027il",
-                       "composer":  "Team Grimoire",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  16.1,
-                       "score":  931908,
-                       "accuracy":  98.092308,
-                       "rks":  14.76387501,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "RDRT -p 20:08:31"
                    }
                ],
     "scores":  [
@@ -472,6 +472,20 @@
                        "status":  "S",
                        "isFc":  false,
                        "charter":  "兔咩小 VS 咩小兔 VS 小兔咩 VS 咩兔小 VS 兔小咩"
+                   },
+                   {
+                       "songId":  "BANGINGSTRIKE.DewPleiades.0",
+                       "title":  "BANGING STRIKE",
+                       "composer":  "Dew Pleiades",
+                       "difficulty":  "AT",
+                       "difficultyIndex":  3,
+                       "constant":  16.8,
+                       "score":  975361,
+                       "accuracy":  99.057838,
+                       "rks":  16.10388373,
+                       "status":  "V",
+                       "isFc":  false,
+                       "charter":  "魔王、大咩兔の兄 『大咩免』!!"
                    },
                    {
                        "songId":  "Cthugha.USAO.0",
@@ -542,6 +556,20 @@
                        "status":  "V",
                        "isFc":  false,
                        "charter":  "Gausbon"
+                   },
+                   {
+                       "songId":  "GOODRAGE.EBIMAYO.0",
+                       "title":  "GOODRAGE",
+                       "composer":  "EBIMAYO",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  16,
+                       "score":  955962,
+                       "accuracy":  99.50193,
+                       "rks":  15.64777714,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  "Ctymax vs. 阿爽"
                    },
                    {
                        "songId":  "Hydra.JamesLandinoXAkiraComplex.0",
@@ -710,20 +738,6 @@
                        "status":  "V",
                        "isFc":  false,
                        "charter":  "Snorkel vs. NerSAN"
-                   },
-                   {
-                       "songId":  "BANGINGSTRIKE.DewPleiades.0",
-                       "title":  "BANGING STRIKE",
-                       "composer":  "Dew Pleiades",
-                       "difficulty":  "AT",
-                       "difficultyIndex":  3,
-                       "constant":  16.8,
-                       "score":  899863,
-                       "accuracy":  97.394165,
-                       "rks":  14.91064487,
-                       "status":  "A",
-                       "isFc":  false,
-                       "charter":  "魔王、大咩兔の兄 『大咩免』!!"
                    },
                    {
                        "songId":  "KMoeVIP.ZxNX.0",
@@ -1074,20 +1088,6 @@
                        "status":  "A",
                        "isFc":  false,
                        "charter":  "Gausbon"
-                   },
-                   {
-                       "songId":  "GOODRAGE.EBIMAYO.0",
-                       "title":  "GOODRAGE",
-                       "composer":  "EBIMAYO",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  16,
-                       "score":  932263,
-                       "accuracy":  97.620895,
-                       "rks":  14.35291436,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "Ctymax vs. 阿爽"
                    },
                    {
                        "songId":  "望影の方舟Six.SeURa.0",
@@ -3603,6 +3603,11 @@
                       "date":  "2026-09-06",
                       "rks":  15.19847971,
                       "saveUpdatedAt":  "2026-09-06T13:39:29.121Z"
+                  },
+                  {
+                      "date":  "2026-09-07",
+                      "rks":  15.26771774,
+                      "saveUpdatedAt":  "2026-09-06T15:16:05.341Z"
                   }
               ]
 }
