@@ -1,9 +1,9 @@
 {
     "version":  "1.11.2",
-    "generatedAt":  "2026-09-07T16:33:16.4175112+08:00",
+    "generatedAt":  "2026-09-07T21:42:05.1380221+08:00",
     "source":  {
                    "type":  "Phigros TapTap cloud save",
-                   "saveUpdatedAt":  "2026-09-07T06:51:14.813Z",
+                   "saveUpdatedAt":  "2026-09-07T09:07:10.533Z",
                    "metadata":  "SonolusHaniwa/phigros-decrypted-data metadata.json",
                    "metadataSongs":  314,
                    "missingMetadata":  0
@@ -1370,6 +1370,20 @@
                        "charter":  "百九十八"
                    },
                    {
+                       "songId":  "Rrharil.TeamGrimoire.0",
+                       "title":  "Rrhar\u0027il",
+                       "composer":  "Team Grimoire",
+                       "difficulty":  "AT",
+                       "difficultyIndex":  3,
+                       "constant":  17.6,
+                       "score":  872146,
+                       "accuracy":  95.142303,
+                       "rks":  14.00529367,
+                       "status":  "B",
+                       "isFc":  false,
+                       "charter":  "RWND -p 16493:62786:92551"
+                   },
+                   {
                        "songId":  "GOODFORTUNE.EBIMAYO.0",
                        "title":  "GOODFORTUNE",
                        "composer":  "EBIMAYO",
@@ -1650,20 +1664,6 @@
                        "charter":  "Likey \u003eIT\u0027S SHOWTIME!"
                    },
                    {
-                       "songId":  "Rrharil.TeamGrimoire.0",
-                       "title":  "Rrhar\u0027il",
-                       "composer":  "Team Grimoire",
-                       "difficulty":  "AT",
-                       "difficultyIndex":  3,
-                       "constant":  17.6,
-                       "score":  872146,
-                       "accuracy":  94.79615,
-                       "rks":  13.76479548,
-                       "status":  "B",
-                       "isFc":  false,
-                       "charter":  "RWND -p 16493:62786:92551"
-                   },
-                   {
                        "songId":  "ClassMemories.AntistarfeatCtymax.0",
                        "title":  "Class Memories",
                        "composer":  "Antistar feat. Ctymax",
@@ -1704,6 +1704,20 @@
                        "status":  "A",
                        "isFc":  false,
                        "charter":  "Jeitie"
+                   },
+                   {
+                       "songId":  "DistortedFate.Sakuzyo.0",
+                       "title":  "Distorted Fate",
+                       "composer":  "Sakuzyo",
+                       "difficulty":  "AT",
+                       "difficultyIndex":  3,
+                       "constant":  17.4,
+                       "score":  881625,
+                       "accuracy":  94.953239,
+                       "rks":  13.71602338,
+                       "status":  "A",
+                       "isFc":  false,
+                       "charter":  "unDefined Future"
                    },
                    {
                        "songId":  "Dlyrotz.Likey.0",
@@ -1832,9 +1846,9 @@
                        "charter":  "Likey \u0026 198ar"
                    },
                    {
-                       "songId":  "TheWholeRest.KIVΛ.0",
-                       "title":  "The Whole Rest",
-                       "composer":  "KIVΛ",
+                       "songId":  "cryout.JuE.0",
+                       "title":  "cryout",
+                       "composer":  "Ju_E",
                        "difficulty":  "IN",
                        "difficultyIndex":  2,
                        "constant":  13.6,
@@ -1843,7 +1857,7 @@
                        "rks":  13.6,
                        "status":  "Phi",
                        "isFc":  true,
-                       "charter":  "Uvernight from CYTUS II"
+                       "charter":  "Ctymax but 5 years later"
                    },
                    {
                        "songId":  "AnotherMe.NeutralMoon.0",
@@ -1860,9 +1874,9 @@
                        "charter":  "NerSAN"
                    },
                    {
-                       "songId":  "cryout.JuE.0",
-                       "title":  "cryout",
-                       "composer":  "Ju_E",
+                       "songId":  "TheWholeRest.KIVΛ.0",
+                       "title":  "The Whole Rest",
+                       "composer":  "KIVΛ",
                        "difficulty":  "IN",
                        "difficultyIndex":  2,
                        "constant":  13.6,
@@ -1871,7 +1885,7 @@
                        "rks":  13.6,
                        "status":  "Phi",
                        "isFc":  true,
-                       "charter":  "Ctymax but 5 years later"
+                       "charter":  "Uvernight from CYTUS II"
                    },
                    {
                        "songId":  "千紫万紅.r0yvsWABI.0",
@@ -2462,6 +2476,20 @@
                        "charter":  "クラッタ・アナザー・ラウンド"
                    },
                    {
+                       "songId":  "slips.rintarosoma.0",
+                       "title":  "sølips",
+                       "composer":  "rintaro soma",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  16,
+                       "score":  872407,
+                       "accuracy":  95.456558,
+                       "rks":  12.93221218,
+                       "status":  "B",
+                       "isFc":  false,
+                       "charter":  "St2.1GHz -Før The Pigeons-"
+                   },
+                   {
                        "songId":  "心之所向.姜米條.0",
                        "title":  "心之所向",
                        "composer":  "姜米條",
@@ -2600,20 +2628,6 @@
                        "status":  "A",
                        "isFc":  false,
                        "charter":  "弧光 With Opposition"
-                   },
-                   {
-                       "songId":  "slips.rintarosoma.0",
-                       "title":  "sølips",
-                       "composer":  "rintaro soma",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  16,
-                       "score":  866179,
-                       "accuracy":  94.813828,
-                       "rks":  12.52456977,
-                       "status":  "B",
-                       "isFc":  false,
-                       "charter":  "St2.1GHz -Før The Pigeons-"
                    },
                    {
                        "songId":  "CROSSSOUL.HyuNfeatSyepias.0",
@@ -3162,20 +3176,6 @@
                        "charter":  "百九十八"
                    },
                    {
-                       "songId":  "DistortedFate.Sakuzyo.0",
-                       "title":  "Distorted Fate",
-                       "composer":  "Sakuzyo",
-                       "difficulty":  "AT",
-                       "difficultyIndex":  3,
-                       "constant":  17.4,
-                       "score":  829170,
-                       "accuracy":  90.744347,
-                       "rks":  10.97839738,
-                       "status":  "B",
-                       "isFc":  false,
-                       "charter":  "unDefined Future"
-                   },
-                   {
                        "songId":  "XING.ginkiha.0",
                        "title":  "XING",
                        "composer":  "ginkiha",
@@ -3621,7 +3621,7 @@
                   {
                       "date":  "2026-09-07",
                       "rks":  15.33397107,
-                      "saveUpdatedAt":  "2026-09-07T06:51:14.813Z"
+                      "saveUpdatedAt":  "2026-09-07T09:07:10.533Z"
                   }
               ]
 }
