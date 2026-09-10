@@ -7,7 +7,7 @@
 
 
 
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
 <title>CHUNITHM · 战绩详情</title>
 <style>
 :root{color-scheme:dark;--bg:#0b0d12;--panel:#141821;--panel2:#1a1f2a;--text:#f5f7fb;--muted:#9aa4b5;--line:rgba(255,255,255,.09);--accent:#b89cff;--accent2:#60d8ff;--good:#5ce0a4;--warn:#ffc86b;--country:#60d8ff;--rin:#b89cff;--combined:#5ce0a4}
@@ -42,7 +42,38 @@
 .b30-card .song-jacket{position:absolute;left:13px;top:13px;width:54px;height:54px}
 .b30-card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}.b30-rank{font-weight:900;color:#dcd1ff}.b30-card-title{font-weight:850;margin-top:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.b30-card-score{font-size:18px;font-weight:900;margin-top:8px}.b30-card-meta{display:flex;flex-wrap:wrap;gap:6px 8px;margin-top:5px;color:var(--muted);font-size:11px}.b30-card-meta .rating-value{font-size:12px}
 @media(max-width:820px){.b30-grid{grid-template-columns:1fr}.b30-summary{grid-template-columns:repeat(2,minmax(0,1fr))}}
-</style><!-- YMKF site icon hf26 -->
+</style><style id="ymkf-mobile-display-safearea">
+/* YMKF · phone/iPad top browser-control safe area · display only */
+@media (max-width: 1024px), (hover: none) and (pointer: coarse) {
+  html {
+    scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 16px);
+  }
+
+  body {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 16px) !important;
+  }
+
+  .topbar {
+    margin-top: 4px !important;
+  }
+
+  .tabs {
+    top: calc(env(safe-area-inset-top, 0px) + 8px) !important;
+  }
+}
+
+/* Landscape phones/tablets still keep a little breathing room. */
+@media (max-height: 600px) and (hover: none) and (pointer: coarse) {
+  body {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 12px) !important;
+  }
+
+  .tabs {
+    top: calc(env(safe-area-inset-top, 0px) + 6px) !important;
+  }
+}
+</style>
+<!-- YMKF site icon hf26 -->
 <link rel="icon" href="../assets/playnite/favicon.ico?v=1.19.34" sizes="any">
 <link rel="shortcut icon" href="../assets/playnite/favicon.ico?v=1.19.34">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/playnite/site-icon-32.png?v=1.19.34">

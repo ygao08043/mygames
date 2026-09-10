@@ -10,6 +10,37 @@
 @media(max-width:900px){.grid4{grid-template-columns:1fr 1fr}.threecol,.twocol,.pie-three{grid-template-columns:1fr}.pie-layout,.pie-three .pie-layout{grid-template-columns:170px minmax(0,1fr)}.pie,.pie-three .pie{height:170px}.chart.radial{height:460px;max-height:none}}
 @media(max-width:560px){.wrap{width:calc(100% - 18px);padding-top:12px}.hero{align-items:flex-start;flex-direction:column}.hero h1{font-size:29px}.status{text-align:left}.grid4{grid-template-columns:1fr 1fr}.metric{padding:14px}.metric b{font-size:22px}.section{padding:13px}.chart{height:220px}.pie-layout{grid-template-columns:1fr;gap:12px}.pie{height:210px;width:min(210px,100%);justify-self:center}.chart.radial{height:340px;min-height:320px}.legend{grid-template-columns:1fr 1fr}.record-row{grid-template-columns:78px minmax(0,1fr) auto}}
 </style>
+<style id="ymkf-mobile-display-safearea">
+/* YMKF · phone/iPad top browser-control safe area · display only */
+@media (max-width: 1024px), (hover: none) and (pointer: coarse) {
+  html {
+    scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 16px);
+  }
+
+  body {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 16px) !important;
+  }
+
+  .topbar {
+    margin-top: 4px !important;
+  }
+
+  .tabs {
+    top: calc(env(safe-area-inset-top, 0px) + 8px) !important;
+  }
+}
+
+/* Landscape phones/tablets still keep a little breathing room. */
+@media (max-height: 600px) and (hover: none) and (pointer: coarse) {
+  body {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 12px) !important;
+  }
+
+  .tabs {
+    top: calc(env(safe-area-inset-top, 0px) + 6px) !important;
+  }
+}
+</style>
 <!-- YMKF site icon hf26 -->
 <link rel="icon" href="../assets/playnite/favicon.ico?v=1.19.34" sizes="any">
 <link rel="shortcut icon" href="../assets/playnite/favicon.ico?v=1.19.34">

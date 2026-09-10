@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
     "build":  "v1.19.37",
-    "generatedAt":  "2026-09-10T22:19:17.4593493+08:00",
+    "generatedAt":  "2026-09-11T00:23:00.4042726+08:00",
     "source":  {
                    "provider":  "Playnite GameActivity",
                    "fields":  [
@@ -21,7 +21,7 @@
     "currentYear":  "2026",
     "totals":  {
                    "recordedSeconds":  3172966,
-                   "last7DaysSeconds":  132073,
+                   "last7DaysSeconds":  103994,
                    "currentMonthSeconds":  169170,
                    "currentYearSeconds":  3172966,
                    "activeDays":  193
@@ -802,6 +802,10 @@
                   {
                       "date":  "2026-09-10",
                       "seconds":  12628
+                  },
+                  {
+                      "date":  "2026-09-11",
+                      "seconds":  0
                   }
               ],
     "weekly":  [
@@ -2100,39 +2104,39 @@
                            ],
     "last7DaysGames":  [
                            {
-                               "id":  "f0a894ed-b3a2-471e-b081-efdf8f0269cd",
-                               "name":  "Goose Goose Duck",
-                               "seconds":  37426
-                           },
-                           {
-                               "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
-                               "name":  "CHUNITHM",
-                               "seconds":  28500
-                           },
-                           {
                                "id":  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8",
                                "name":  "Project SEKAI",
                                "seconds":  24154
                            },
                            {
+                               "id":  "f0a894ed-b3a2-471e-b081-efdf8f0269cd",
+                               "name":  "Goose Goose Duck",
+                               "seconds":  23769
+                           },
+                           {
+                               "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
+                               "name":  "CHUNITHM",
+                               "seconds":  20700
+                           },
+                           {
                                "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
                                "name":  "Phigros",
-                               "seconds":  19707
+                               "seconds":  19473
                            },
                            {
                                "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                "name":  "雀魂麻将",
-                               "seconds":  15114
+                               "seconds":  9830
                            },
                            {
                                "id":  "bd4bf292-368e-4e00-bdbb-6dee05aff790",
                                "name":  "osu!",
-                               "seconds":  5083
+                               "seconds":  4231
                            },
                            {
                                "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
                                "name":  "Arcaea",
-                               "seconds":  2089
+                               "seconds":  1837
                            }
                        ],
     "currentMonthGames":  [
@@ -2914,7 +2918,7 @@
                         ],
     "timelineWindowDays":  14,
     "timelineStart":  "2026-03-01",
-    "timelineEnd":  "2026-09-10",
+    "timelineEnd":  "2026-09-11",
     "timelineDays":  [
                          {
                              "date":  "2026-03-01",
@@ -3691,6 +3695,10 @@
                          {
                              "date":  "2026-09-10",
                              "label":  "周四"
+                         },
+                         {
+                             "date":  "2026-09-11",
+                             "label":  "周五"
                          }
                      ],
     "timeline":  [
@@ -3698,7 +3706,7 @@
                          "date":  "2026-03-01",
                          "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                          "name":  "CHUNITHM",
-                         "startMinute":  0.02,
+                         "startMinute":  0.01,
                          "endMinute":  3.88,
                          "startText":  "00:00",
                          "endText":  "00:03",

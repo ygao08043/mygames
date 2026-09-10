@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Goose Goose Duck · 战绩</title>
 <style>
 :root{color-scheme:dark;--bg:#0b1016;--panel:#121a24;--panel2:#182331;--line:#283748;--text:#edf4fa;--muted:#91a4b7;--cyan:#6dd8ff;--green:#65e69a;--yellow:#ffd978;--red:#ff6d76;--duck:#e75a63;--goose:#47b979;--neutral:#e3b93d}
@@ -14,6 +14,37 @@
 .matches{display:grid;gap:10px}.match{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}.matchHead{display:grid;grid-template-columns:minmax(230px,2fr) .75fr .8fr .75fr .75fr;gap:10px;align-items:center;padding:12px 14px}.player{display:flex;align-items:center;gap:12px;min-width:0}.matchRoleIcon{width:48px;height:48px;object-fit:contain;flex:0 0 48px}.playerMain{min-width:0}.playerMain b{display:block;font-size:16px}.playerMain span{display:block;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.result{font-weight:700}.result.win{color:var(--green)}.result.loss{color:var(--red)}.metric .label{display:block;color:var(--muted);font-size:12px}
 .detailBox{border-top:1px solid var(--line)}details{background:#101720}details>summary{cursor:pointer;list-style:none;padding:11px 14px;color:var(--cyan);font-weight:700}details>summary::-webkit-details-marker{display:none}.detailInner{padding:0 14px 16px}.detailFields{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;margin:8px 0}.field{background:#151f2b;border:1px solid var(--line);border-radius:10px;padding:9px}.field .k{font-size:11px;color:var(--muted)}.field .v{margin-top:2px;font-weight:650;white-space:normal;word-break:break-word}.detailSection{margin-top:14px}.detailSection h3{font-size:14px;margin:0 0 8px}.miniCards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px}.miniCard{background:#151f2b;border:1px solid var(--line);border-radius:10px;padding:9px;white-space:pre-wrap;word-break:break-word}.board{overflow:auto;border:1px solid var(--line);border-radius:12px}.board table{min-width:720px}.board td,.board th{text-align:center}.board td:nth-child(2),.board th:nth-child(2){text-align:left}.replayDetails{margin-top:14px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#0f1720}.replayDetails>summary{display:flex;align-items:center;justify-content:space-between;background:#151f2b}.replayDetails>summary:after{content:'展开';font-size:11px;color:var(--muted);font-weight:500}.replayDetails[open]>summary:after{content:'收起'}.replay{display:grid;gap:10px;padding:0 12px 12px}.roundBlock{background:#111a24;border:1px solid var(--line);border-radius:12px;overflow:hidden}.roundTitle{padding:9px 11px;font-weight:800;background:#182331;border-bottom:1px solid var(--line)}.eventList{display:grid;gap:7px;padding:9px}.eventRow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:#151f2b;border:1px solid #263747;border-radius:9px;padding:7px 9px}.eventAction{font-weight:800;color:#dfeaf4;white-space:nowrap}.eventAction.kill{color:var(--red)}.eventAction.ability{color:#f6cf72}.eventAction.infect{color:#86df92}.eventAction.swallow{color:#72d9b0}.eventAction.disconnect{color:var(--muted)}.inferTag{font-size:10px;color:#d7bc72;border:1px solid #6a5d36;border-radius:999px;padding:1px 5px}.personChip{display:inline-flex;align-items:center;gap:6px;min-width:0;background:#111b26;border:1px solid #2a3a4c;border-radius:8px;padding:4px 7px}.personChip img{width:28px;height:28px;object-fit:contain;flex:0 0 28px}.personText{display:flex;flex-direction:column;line-height:1.15;min-width:0}.personName{font-weight:750;max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.personRole{font-size:10px;color:var(--muted);margin-top:2px}.meetingPanel{margin:9px;border:1px solid #33445a;border-radius:10px;overflow:hidden;background:#121a24}.meetingHead{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:8px 10px;background:#1a2533;font-weight:800}.meetingGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:9px}.meetingPlayer{background:#151f2b;border:1px solid #2b3d50;border-radius:10px;padding:9px;min-width:0}.meetingPlayer.dead{background:#171a20;border-color:#4b3c42}.meetingPlayer.votedOut{background:#2b2026;border-color:#8e4e59}.meetingPlayer.balloon{border-color:#9c6a58}.meetingPlayer .personChip{background:transparent;border:0;padding:0}.meetingPlayerTop{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}.meetingStatus{display:flex;flex-direction:column;align-items:flex-end;gap:4px;max-width:48%}.deathTag{display:inline-flex;align-items:center;gap:4px;border-radius:999px;padding:3px 7px;font-size:10px;font-weight:800;color:#ffd8dc;background:#3b2027;border:1px solid #7f3e4a;white-space:nowrap}.deathTag.balloon{color:#ffe0cf;background:#3b2922;border-color:#875641}.deathTag.disconnect{color:#c0cad3;background:#202832;border-color:#465666}.deathSource{font-size:10px;color:var(--muted);display:flex;align-items:center;gap:4px}.deathSource img{width:18px;height:18px;object-fit:contain}.voteReceived{margin-top:8px;padding-top:8px;border-top:1px solid #28394a}.voteReceivedLabel{font-size:10px;color:var(--muted);margin-bottom:5px}.voterList{display:flex;gap:5px;flex-wrap:wrap}.voterList .personChip{background:#111b26;border:1px solid #2a3a4c;padding:3px 5px}.voterList .personChip img{width:22px;height:22px;flex-basis:22px}.voterList .personName{font-size:11px;max-width:96px}.noVotes{font-size:11px;color:#64778a}.skipVote{color:var(--muted);font-weight:700;padding:5px 8px;border:1px solid #39495a;border-radius:7px}.skipBlock{margin:0 9px 9px;padding:8px 9px;border:1px dashed #3b4d60;border-radius:9px;background:#111922}.meetingResult{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:0 9px 9px;color:#dce7f1}.meetingEvents{border-top:1px solid var(--line);padding:8px 9px}.meetingEventsTitle{font-size:11px;color:var(--muted);font-weight:800;margin-bottom:5px}.meetingEvents .eventList{padding:0}.endSummary{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:10px 0 2px;padding:10px;border:1px solid #355841;background:#14241d;border-radius:10px}.endSummary strong{color:var(--green);font-size:15px}.peopleLine{display:flex;gap:6px;flex-wrap:wrap}.raw{max-height:360px;overflow:auto;background:#0c1219;border:1px solid var(--line);border-radius:10px;padding:11px;white-space:pre-wrap;word-break:break-word;color:#c8d3de;font:12px/1.55 ui-monospace,SFMono-Regular,Consolas,monospace}.noDetail{border-top:1px solid var(--line);padding:10px 14px;color:var(--muted);font-size:12px}.pages{display:flex;gap:8px;align-items:center;justify-content:center;margin:14px 0}.pageBtn:disabled{opacity:.45;cursor:default}.empty{color:var(--muted);padding:28px;text-align:center;border:1px dashed var(--line);border-radius:14px}.count{color:var(--muted);font-size:12px;margin-left:7px}
 @media(max-width:760px){.meetingGrid{grid-template-columns:1fr}.matchHead{grid-template-columns:1fr 1fr}.player{grid-column:1/-1}.hero{align-items:flex-start}.wrap{padding:16px}.avatar{width:64px;height:64px}h1{font-size:25px}.overviewTop{grid-template-columns:1fr 1fr}.recentGrid{grid-template-columns:repeat(5,1fr)}.factionGrid{grid-template-columns:1fr}}
+</style>
+<style id="ymkf-mobile-display-safearea">
+/* YMKF · phone/iPad top browser-control safe area · display only */
+@media (max-width: 1024px), (hover: none) and (pointer: coarse) {
+  html {
+    scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 16px);
+  }
+
+  body {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 16px) !important;
+  }
+
+  .topbar {
+    margin-top: 4px !important;
+  }
+
+  .tabs {
+    top: calc(env(safe-area-inset-top, 0px) + 8px) !important;
+  }
+}
+
+/* Landscape phones/tablets still keep a little breathing room. */
+@media (max-height: 600px) and (hover: none) and (pointer: coarse) {
+  body {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 12px) !important;
+  }
+
+  .tabs {
+    top: calc(env(safe-area-inset-top, 0px) + 6px) !important;
+  }
+}
 </style>
 <!-- YMKF site icon hf26 -->
 <link rel="icon" href="../assets/playnite/favicon.ico?v=1.19.34" sizes="any">

@@ -3,7 +3,7 @@
 <head>
 
 
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>osu! · 战绩详情</title>
 <style>
 :root{color-scheme:dark;--bg:#080a10;--panel:#111521;--panel2:#161b29;--line:#262d3e;--text:#f5f7fb;--muted:#98a3b8;--pink:#ff66aa;--blue:#67b7ff;--good:#83e6bd;--gold:#ffd37a;--bad:#ff8d9b}
@@ -22,6 +22,37 @@
 #panel-b100 .bestcards{grid-template-columns:repeat(5,minmax(0,1fr))}
 @media(max-width:1000px){.controls{grid-template-columns:repeat(2,minmax(0,1fr))}#panel-b100 .bestcards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.controls{grid-template-columns:1fr}#panel-b100 .bestcards{grid-template-columns:1fr}}
+</style>
+<style id="ymkf-mobile-display-safearea">
+/* YMKF · phone/iPad top browser-control safe area · display only */
+@media (max-width: 1024px), (hover: none) and (pointer: coarse) {
+  html {
+    scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 16px);
+  }
+
+  body {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 16px) !important;
+  }
+
+  .topbar {
+    margin-top: 4px !important;
+  }
+
+  .tabs {
+    top: calc(env(safe-area-inset-top, 0px) + 8px) !important;
+  }
+}
+
+/* Landscape phones/tablets still keep a little breathing room. */
+@media (max-height: 600px) and (hover: none) and (pointer: coarse) {
+  body {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 12px) !important;
+  }
+
+  .tabs {
+    top: calc(env(safe-area-inset-top, 0px) + 6px) !important;
+  }
+}
 </style>
 <!-- YMKF site icon hf26 -->
 <link rel="icon" href="../assets/playnite/favicon.ico?v=1.19.34" sizes="any">

@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>e舞成名 · 详细战绩</title>
 <style>
 :root{--bg:#081018;--surface:#101b26;--surface2:#152332;--line:#2a3a4a;--text:#eef6ff;--muted:#91a6ba;--accent:#9f7cff;--accent2:#5fe1ff;--good:#5be39b;--warn:#ffd66b}
@@ -18,6 +18,37 @@
 .grade{display:inline-flex;min-width:38px;justify-content:center;border-radius:9px;padding:4px 8px;font-weight:900;background:linear-gradient(135deg,#8d72ff,#d26cff);color:#fff}.song{max-width:260px;overflow:hidden;text-overflow:ellipsis}.mode{color:#c6b7ff}.dp{color:#5fe1ff;font-weight:800}.stars{color:#ffd657}.missing{color:#65798b}.sortmark{font-size:10px;margin-left:4px;color:var(--accent2)}
 .note{padding:0 14px 14px;color:var(--muted);font-size:12px}.source-note{font-size:11px;color:#74899c;max-width:250px;white-space:normal;text-align:left}
 @media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}.sessions{grid-template-columns:1fr}.wrap{padding:12px}.hero h1{font-size:22px}}
+</style>
+<style id="ymkf-mobile-display-safearea">
+/* YMKF · phone/iPad top browser-control safe area · display only */
+@media (max-width: 1024px), (hover: none) and (pointer: coarse) {
+  html {
+    scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 16px);
+  }
+
+  body {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 16px) !important;
+  }
+
+  .topbar {
+    margin-top: 4px !important;
+  }
+
+  .tabs {
+    top: calc(env(safe-area-inset-top, 0px) + 8px) !important;
+  }
+}
+
+/* Landscape phones/tablets still keep a little breathing room. */
+@media (max-height: 600px) and (hover: none) and (pointer: coarse) {
+  body {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 12px) !important;
+  }
+
+  .tabs {
+    top: calc(env(safe-area-inset-top, 0px) + 6px) !important;
+  }
+}
 </style>
 <!-- YMKF site icon hf26 -->
 <link rel="icon" href="../assets/playnite/favicon.ico?v=1.19.34" sizes="any">

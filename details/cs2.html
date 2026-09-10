@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>CS2 战绩 · YMKF</title>
 <style>
 :root{--bg:#0f141b;--panel:#17212b;--panel2:#1d2b38;--line:#2d3d4d;--text:#e8eef5;--muted:#94a7ba;--accent:#66c0f4;--green:#59bf75;--red:#e45b63;--yellow:#f3bd54;--blue:#67a8ff;--purple:#c98cff}
@@ -12,6 +12,37 @@
 .singleRow{display:flex;flex-wrap:nowrap;gap:8px;align-items:center;overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-width:thin}.singleRow>*{flex:0 0 auto}.singleRow select,.singleRow button{white-space:nowrap}.scopeBar{display:flex;flex-wrap:nowrap;gap:7px;overflow-x:auto;overscroll-behavior-inline:contain;margin:0 0 11px;padding-bottom:2px}.scopeBtn{border:1px solid #344658;background:#17212b;color:var(--text);border-radius:9px;padding:8px 12px;cursor:pointer;font-weight:700;white-space:nowrap;flex:0 0 auto}.scopeBtn.active{background:#234665;border-color:#4c8ab8;color:#fff}.seasonDetails{margin-top:12px;border-top:1px solid #2b3e4e;padding-top:10px}.seasonDetails summary{cursor:pointer;color:#bcd0e0;font-size:12px;font-weight:800}.seasonDetails .metrics{margin-top:10px}.matchFilterRow{display:flex;gap:8px;align-items:center;margin-bottom:8px;overflow-x:auto;overscroll-behavior-inline:contain}.matchFilterRow input,.matchFilterRow select,.matchFilterRow button{border:1px solid #344658;background:#17212b;color:var(--text);border-radius:9px;padding:9px 11px}.matchFilterRow select,.matchFilterRow button{cursor:pointer;white-space:nowrap;flex:0 0 auto}.matchFilterRow:last-child{margin-bottom:0}.matchSearchRow input{width:100%;min-width:0}.matchAllRow{flex-wrap:nowrap}.matchSortRow{flex-wrap:nowrap}.matchAllRow select,.matchSortRow select,.matchSortRow button{flex:0 0 auto}.matchItem.enhanced{border-color:#397958;box-shadow:0 0 0 1px #39795855}.playerExtraBtn{border:1px solid #3d647f;background:#13283a;color:#bde4ff;border-radius:6px;padding:2px 6px;font-size:9px;cursor:pointer;white-space:nowrap}.playerExtraBtn[aria-expanded="true"]{border-color:#4e9168;background:#173b28;color:#9be5b1}.playerExtraRow{display:none}.playerExtraRow.open{display:table-row}.playerExtraRow td{padding:8px 10px!important;background:#101a23!important}.extraGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(105px,1fr));gap:6px;text-align:left}.extraStat{border:1px solid #2b4051;background:#15232e;border-radius:7px;padding:7px 8px}.extraStat b{display:block;font-size:12px}.extraStat span{display:block;color:var(--muted);font-size:9px;margin-top:3px}.trendValues{margin-top:10px;border:1px solid #2d3d4d;background:#131d26;border-radius:10px;padding:9px 11px}.trendValues summary{cursor:pointer;font-size:11px;font-weight:800;color:#b9cbd9}.trendValueWrap{overflow:auto;margin-top:8px}.trendValueTable{width:100%;border-collapse:collapse;min-width:660px;font-size:10px}.trendValueTable th,.trendValueTable td{padding:6px 7px;border-bottom:1px solid #263847;text-align:right;white-space:nowrap}.trendValueTable th:first-child,.trendValueTable td:first-child{text-align:left}.trendValueTable th{color:#9db2c5}.toolbar.singleRow{flex-wrap:nowrap}.pageTabs{flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-inline:contain}.pageTabs button{flex:0 0 auto;white-space:nowrap}
 @media(max-width:760px){.hero{align-items:flex-start}.status{display:none}.pageTabs{overflow:auto}.pageTabs button{flex:0 0 auto}.chartGrid{grid-template-columns:1fr}.matchStrip{grid-template-columns:6px 1fr 70px 105px 60px}.steamMatch{grid-template-columns:1fr}.steamMapImage{height:180px}.recentGrid{gap:4px}.mapCard{grid-template-columns:72px 1fr}.mapThumb{width:72px;height:72px}}
 @media(max-width:760px){.singleRow{overflow-x:auto}.matchAllRow,.matchSortRow{display:flex;flex-wrap:nowrap;overflow-x:auto}.matchSearchRow{display:block;overflow:visible}.scopeBar{overflow-x:auto}.extraGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+<style id="ymkf-mobile-display-safearea">
+/* YMKF · phone/iPad top browser-control safe area · display only */
+@media (max-width: 1024px), (hover: none) and (pointer: coarse) {
+  html {
+    scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 16px);
+  }
+
+  body {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 16px) !important;
+  }
+
+  .topbar {
+    margin-top: 4px !important;
+  }
+
+  .tabs {
+    top: calc(env(safe-area-inset-top, 0px) + 8px) !important;
+  }
+}
+
+/* Landscape phones/tablets still keep a little breathing room. */
+@media (max-height: 600px) and (hover: none) and (pointer: coarse) {
+  body {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 12px) !important;
+  }
+
+  .tabs {
+    top: calc(env(safe-area-inset-top, 0px) + 6px) !important;
+  }
+}
 </style>
 <!-- YMKF site icon hf26 -->
 <link rel="icon" href="../assets/playnite/favicon.ico?v=1.19.34" sizes="any">

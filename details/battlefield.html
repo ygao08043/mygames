@@ -18,6 +18,37 @@
 @media(max-width:850px){.span-8,.span-7,.span-6,.span-5,.span-4{grid-column:span 12}.series-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-row{align-items:flex-start;flex-direction:column}.source-pill{white-space:normal}.raw-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.shell{width:calc(100% - 16px);padding-top:10px}.hero{padding:20px;border-radius:20px}.avatar,.avatar-fallback{width:60px;height:60px}.player-name{font-size:23px}.series-grid{grid-template-columns:1fr 1fr}.series-card{padding:12px}.series-card .play{font-size:19px}.game-head h2{font-size:24px}.chart-wrap{height:240px}.raw-grid{grid-template-columns:1fr}.stats{gap:7px}.stat b{font-size:18px}}
 </style>
+<style id="ymkf-mobile-display-safearea">
+/* YMKF · phone/iPad top browser-control safe area · display only */
+@media (max-width: 1024px), (hover: none) and (pointer: coarse) {
+  html {
+    scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 16px);
+  }
+
+  body {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 16px) !important;
+  }
+
+  .topbar {
+    margin-top: 4px !important;
+  }
+
+  .tabs {
+    top: calc(env(safe-area-inset-top, 0px) + 8px) !important;
+  }
+}
+
+/* Landscape phones/tablets still keep a little breathing room. */
+@media (max-height: 600px) and (hover: none) and (pointer: coarse) {
+  body {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 12px) !important;
+  }
+
+  .tabs {
+    top: calc(env(safe-area-inset-top, 0px) + 6px) !important;
+  }
+}
+</style>
 <!-- YMKF site icon hf26 -->
 <link rel="icon" href="../assets/playnite/favicon.ico?v=1.19.34" sizes="any">
 <link rel="shortcut icon" href="../assets/playnite/favicon.ico?v=1.19.34">

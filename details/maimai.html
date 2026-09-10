@@ -3,7 +3,7 @@
 
 
 
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
 <title>舞萌DX · 战绩详情</title>
 <style>
 :root{color-scheme:dark;--bg:#0a0d12;--panel:#151923;--panel2:#1b202c;--text:#f6f7fb;--muted:#9da5b3;--line:rgba(255,255,255,.09);--total:#ffd166;--old:#73d2ff;--new:#c09bff;--good:#65e6a6}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 75% -15%,rgba(255,104,188,.19),transparent 38%),radial-gradient(circle at 8% 8%,rgba(74,165,255,.16),transparent 34%),var(--bg);color:var(--text);font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif}.wrap{max-width:1180px;margin:auto;padding:22px 18px 64px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}.back{color:var(--text);text-decoration:none;border:1px solid var(--line);background:rgba(255,255,255,.04);padding:9px 13px;border-radius:12px;font-weight:760}.build{color:var(--muted);font-size:12px}.hero{border:1px solid var(--line);border-radius:26px;padding:30px;background:linear-gradient(135deg,rgba(21,45,63,.92),rgba(64,28,76,.88) 56%,rgba(76,42,25,.76));box-shadow:0 22px 70px rgba(0,0,0,.34)}.eyebrow{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:#d4d9e5;font-weight:800}.hero h1{font-size:clamp(40px,7vw,70px);line-height:.95;margin:10px 0 5px;letter-spacing:-.05em}.sub{color:#d7dbea;font-size:13px;line-height:1.55}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:22px}.stat{padding:14px;border-radius:15px;background:rgba(7,10,18,.48);border:1px solid rgba(255,255,255,.12)}.stat small{display:block;color:#c8ced9;font-weight:700;font-size:11px;margin-bottom:4px}.stat strong{font-size:28px;letter-spacing:-.035em}.hero-note{margin-top:12px;padding:9px 11px;border-radius:11px;background:rgba(8,10,15,.4);border:1px solid rgba(255,255,255,.1);font-size:11px;color:#c3cad6;line-height:1.65}.tabs{display:flex;gap:8px;overflow:auto;padding:18px 0 12px;position:sticky;top:0;z-index:10;background:linear-gradient(var(--bg) 70%,transparent)}.tab{white-space:nowrap;border:1px solid var(--line);background:#11151d;color:var(--muted);border-radius:12px;padding:10px 15px;font-weight:800;cursor:pointer}.tab.active{background:#f2efff;color:#11131a;border-color:transparent}.page{display:none}.page.active{display:block}.section{background:rgba(21,25,35,.9);border:1px solid var(--line);border-radius:20px;padding:20px}.section+.section{margin-top:16px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:14px}.section h2{margin:0;font-size:20px}.note{color:var(--muted);font-size:12px;line-height:1.6}.b-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.score-card{border:1px solid var(--line);border-radius:15px;background:var(--panel2);padding:13px;min-width:0}.score-top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}.rank{font-weight:900}.bucket-old{color:var(--old)}.bucket-new{color:var(--new)}.title{font-weight:850;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:5px}.diff{display:inline-flex;border-radius:999px;padding:3px 7px;font-size:10px;font-weight:900;background:rgba(255,255,255,.08)}.big{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:20px;font-weight:850;margin:9px 0 4px}.meta{color:var(--muted);font-size:11px;line-height:1.65}.meta b{color:#eef1f7}.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px}.chip{font-size:10px;padding:3px 7px;border-radius:999px;border:1px solid var(--line);font-weight:800}.controls{display:grid;grid-template-columns:minmax(205px,1fr) 110px 105px 105px 105px repeat(3,105px);gap:7px;margin-bottom:12px;align-items:stretch}.input,.select,.sort{background:#0f131b;color:var(--text);border:1px solid var(--line);border-radius:11px;padding:10px 11px;min-width:0}.input{width:100%}.select{width:100%}.sort{cursor:pointer;font-weight:760;transition:.15s}.sort.active{background:#f2efff;color:#11131a;border-color:transparent;box-shadow:0 0 0 1px rgba(255,255,255,.04) inset}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px}table{width:100%;border-collapse:collapse;min-width:1040px}th,td{padding:10px 11px;border-bottom:1px solid var(--line);text-align:left;font-size:12px}th{position:sticky;top:0;background:#181d27;color:var(--muted);font-size:11px}tr:last-child td{border-bottom:0}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-variant-numeric:tabular-nums}.trend-switch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-bottom:10px}.trend-mode{border:1px solid var(--line);background:#0f131b;color:var(--muted);border-radius:10px;padding:8px;font-size:11px;font-weight:800;cursor:pointer}.trend-mode.active{background:#f2efff;color:#11131a;border-color:transparent}.trend-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;background:#10141c;padding:8px}.trend-wrap svg{display:block;width:100%;min-width:760px}.grid{stroke:rgba(255,255,255,.08);stroke-width:1}.axis{fill:#8994a6;font-size:10px}.line-total{fill:none;stroke:var(--total);stroke-width:2.8}.line-old{fill:none;stroke:var(--old);stroke-width:2.8}.line-new{fill:none;stroke:var(--new);stroke-width:2.8}.dot-total{fill:var(--total)}.dot-old{fill:var(--old)}.dot-new{fill:var(--new)}.point-label{fill:#dce3ee;font-size:9px;text-anchor:middle;paint-order:stroke;stroke:#10141c;stroke-width:3px}.legend{display:flex;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:12px;margin-top:9px}.legend i{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:5px}.empty{padding:28px;text-align:center;color:var(--muted)}.warn{color:#ffc96b}.good{color:var(--good)}@media(max-width:1000px){.controls{grid-template-columns:repeat(4,minmax(0,1fr))}.input{grid-column:1/-1}}@media(max-width:850px){.stats{grid-template-columns:repeat(2,1fr)}.b-grid{grid-template-columns:1fr}.hero{padding:22px}.controls{grid-template-columns:1fr 1fr}.input{grid-column:1/-1}.trend-switch{grid-template-columns:repeat(3,minmax(0,1fr))}}
@@ -19,7 +19,38 @@
 #page-scores .controls{grid-template-columns:repeat(7,minmax(105px,1fr))}
 #page-scores .controls .input{grid-column:1/-1}
 @media(max-width:850px){#page-scores .controls{grid-template-columns:repeat(2,minmax(0,1fr))}}
-</style><!-- YMKF site icon hf26 -->
+</style><style id="ymkf-mobile-display-safearea">
+/* YMKF · phone/iPad top browser-control safe area · display only */
+@media (max-width: 1024px), (hover: none) and (pointer: coarse) {
+  html {
+    scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 16px);
+  }
+
+  body {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 16px) !important;
+  }
+
+  .topbar {
+    margin-top: 4px !important;
+  }
+
+  .tabs {
+    top: calc(env(safe-area-inset-top, 0px) + 8px) !important;
+  }
+}
+
+/* Landscape phones/tablets still keep a little breathing room. */
+@media (max-height: 600px) and (hover: none) and (pointer: coarse) {
+  body {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 12px) !important;
+  }
+
+  .tabs {
+    top: calc(env(safe-area-inset-top, 0px) + 6px) !important;
+  }
+}
+</style>
+<!-- YMKF site icon hf26 -->
 <link rel="icon" href="../assets/playnite/favicon.ico?v=1.19.34" sizes="any">
 <link rel="shortcut icon" href="../assets/playnite/favicon.ico?v=1.19.34">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/playnite/site-icon-32.png?v=1.19.34">
