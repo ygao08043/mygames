@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
     "build":  "v1.19.37",
-    "generatedAt":  "2026-09-12T11:26:30.2268861+08:00",
+    "generatedAt":  "2026-09-12T21:10:19.1860625+08:00",
     "eaId":  "PIANOYMKF",
     "platform":  "pc",
     "source":  {
@@ -14,7 +14,7 @@
                               "key":  "bf1",
                               "title":  "Battlefield 1",
                               "status":  "ok",
-                              "updatedAt":  "2026-09-12T11:26:30.2268861+08:00",
+                              "updatedAt":  "2026-09-12T21:10:19.1860625+08:00",
                               "endpoint":  "https://api.gametools.network/bf1/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "PIANOYMKF",
@@ -8149,7 +8149,7 @@
                               "key":  "bfv",
                               "title":  "Battlefield V",
                               "status":  "ok",
-                              "updatedAt":  "2026-09-12T11:26:30.2268861+08:00",
+                              "updatedAt":  "2026-09-12T21:10:19.1860625+08:00",
                               "endpoint":  "https://api.gametools.network/bfv/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "PIANOYMKF",
@@ -12410,7 +12410,7 @@
                                  "key":  "bf2042",
                                  "title":  "Battlefield 2042",
                                  "status":  "upstream_broken",
-                                 "updatedAt":  "2026-09-12T11:26:30.2268861+08:00",
+                                 "updatedAt":  "2026-09-12T21:10:19.1860625+08:00",
                                  "endpoint":  "https://api.gametools.network/bf2042/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                                  "profile":  null,
                                  "trueSessions":  [
@@ -18765,7 +18765,7 @@
                               "key":  "bf6",
                               "title":  "Battlefield 6",
                               "status":  "ok",
-                              "updatedAt":  "2026-09-12T11:26:30.2268861+08:00",
+                              "updatedAt":  "2026-09-12T21:10:19.1860625+08:00",
                               "endpoint":  "https://api.gametools.network/bf6/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "pianoymkf",
@@ -23275,209 +23275,7 @@
                                           "bestClass":  "All",
                                           "hasResults":  true,
                                           "platform":  "pc",
-                                          "platformId":  1,
-                                          "seasons":  [
-                                                          {
-                                                              "seasonId":  "Season1",
-                                                              "season":  "Season 1",
-                                                              "modes":  [
-                                                                            {
-                                                                                "modeId":  "Breakthrough0",
-                                                                                "mode":  "Breakthrough Large",
-                                                                                "matches":  5,
-                                                                                "wins":  1,
-                                                                                "losses":  4,
-                                                                                "kills":  48,
-                                                                                "rivivals":  19,
-                                                                                "lastPlacement":  0,
-                                                                                "deaths":  57,
-                                                                                "killDeath":  0.84,
-                                                                                "score":  26130,
-                                                                                "secondsPlayed":  5939,
-                                                                                "timePlayed":  "1:38:59",
-                                                                                "extractions":  0
-                                                                            },
-                                                                            {
-                                                                                "modeId":  "Rush0",
-                                                                                "mode":  "Rush",
-                                                                                "matches":  2,
-                                                                                "wins":  0,
-                                                                                "losses":  2,
-                                                                                "kills":  30,
-                                                                                "rivivals":  24,
-                                                                                "lastPlacement":  0,
-                                                                                "deaths":  34,
-                                                                                "killDeath":  0.88,
-                                                                                "score":  16910,
-                                                                                "secondsPlayed":  1980,
-                                                                                "timePlayed":  "0:33:00",
-                                                                                "extractions":  0
-                                                                            },
-                                                                            {
-                                                                                "modeId":  "Conquest0",
-                                                                                "mode":  "Conquest large",
-                                                                                "matches":  11,
-                                                                                "wins":  5,
-                                                                                "losses":  6,
-                                                                                "kills":  167,
-                                                                                "rivivals":  36,
-                                                                                "lastPlacement":  0,
-                                                                                "deaths":  180,
-                                                                                "killDeath":  0.93,
-                                                                                "score":  57050,
-                                                                                "secondsPlayed":  15715,
-                                                                                "timePlayed":  "4:21:55",
-                                                                                "extractions":  0
-                                                                            },
-                                                                            {
-                                                                                "modeId":  "MP_Escalation0",
-                                                                                "mode":  "Escalation",
-                                                                                "matches":  7,
-                                                                                "wins":  2,
-                                                                                "losses":  5,
-                                                                                "kills":  92,
-                                                                                "rivivals":  22,
-                                                                                "lastPlacement":  0,
-                                                                                "deaths":  130,
-                                                                                "killDeath":  0.71,
-                                                                                "score":  55620,
-                                                                                "secondsPlayed":  14951,
-                                                                                "timePlayed":  "4:09:11",
-                                                                                "extractions":  0
-                                                                            },
-                                                                            {
-                                                                                "modeId":  "MP_SquadDM0",
-                                                                                "mode":  "Squad deathmatch",
-                                                                                "matches":  2,
-                                                                                "wins":  0,
-                                                                                "losses":  2,
-                                                                                "kills":  18,
-                                                                                "rivivals":  1,
-                                                                                "lastPlacement":  0,
-                                                                                "deaths":  24,
-                                                                                "killDeath":  0.75,
-                                                                                "score":  2640,
-                                                                                "secondsPlayed":  784,
-                                                                                "timePlayed":  "0:13:04",
-                                                                                "extractions":  0
-                                                                            },
-                                                                            {
-                                                                                "modeId":  "MP_TeamDM0",
-                                                                                "mode":  "Team deathmatch",
-                                                                                "matches":  3,
-                                                                                "wins":  1,
-                                                                                "losses":  2,
-                                                                                "kills":  25,
-                                                                                "rivivals":  2,
-                                                                                "lastPlacement":  0,
-                                                                                "deaths":  35,
-                                                                                "killDeath":  0.71,
-                                                                                "score":  5660,
-                                                                                "secondsPlayed":  1915,
-                                                                                "timePlayed":  "0:31:55",
-                                                                                "extractions":  0
-                                                                            },
-                                                                            {
-                                                                                "modeId":  "MP_KOTH0",
-                                                                                "mode":  "King of the Hill",
-                                                                                "matches":  2,
-                                                                                "wins":  0,
-                                                                                "losses":  2,
-                                                                                "kills":  15,
-                                                                                "rivivals":  0,
-                                                                                "lastPlacement":  0,
-                                                                                "deaths":  24,
-                                                                                "killDeath":  0.62,
-                                                                                "score":  3500,
-                                                                                "secondsPlayed":  1142,
-                                                                                "timePlayed":  "0:19:02",
-                                                                                "extractions":  0
-                                                                            },
-                                                                            {
-                                                                                "modeId":  "MP_Domination0",
-                                                                                "mode":  "Domination",
-                                                                                "matches":  3,
-                                                                                "wins":  2,
-                                                                                "losses":  1,
-                                                                                "kills":  40,
-                                                                                "rivivals":  0,
-                                                                                "lastPlacement":  0,
-                                                                                "deaths":  42,
-                                                                                "killDeath":  0.95,
-                                                                                "score":  8165,
-                                                                                "secondsPlayed":  1484,
-                                                                                "timePlayed":  "0:24:44",
-                                                                                "extractions":  0
-                                                                            }
-                                                                        ]
-                                                          },
-                                                          {
-                                                              "seasonId":  "Season2",
-                                                              "season":  "Season 2",
-                                                              "modes":  [
-
-                                                                        ]
-                                                          },
-                                                          {
-                                                              "seasonId":  "Season3",
-                                                              "season":  "Season 3",
-                                                              "modes":  [
-
-                                                                        ]
-                                                          },
-                                                          {
-                                                              "seasonId":  "Season4",
-                                                              "season":  "Season 4",
-                                                              "modes":  [
-
-                                                                        ]
-                                                          }
-                                                      ],
-                                          "redsec":  [
-                                                         {
-                                                             "seasonId":  "Season1",
-                                                             "season":  "Season 1",
-                                                             "modes":  [
-                                                                           {
-                                                                               "modeId":  "GraniteGauntlet0",
-                                                                               "mode":  "Gauntlet",
-                                                                               "matches":  2,
-                                                                               "wins":  0,
-                                                                               "losses":  2,
-                                                                               "kills":  21,
-                                                                               "rivivals":  1,
-                                                                               "lastPlacement":  3,
-                                                                               "deaths":  18,
-                                                                               "killDeath":  1.17,
-                                                                               "score":  13125,
-                                                                               "secondsPlayed":  2420,
-                                                                               "timePlayed":  "0:40:20",
-                                                                               "extractions":  0
-                                                                           }
-                                                                       ]
-                                                         },
-                                                         {
-                                                             "seasonId":  "Season2",
-                                                             "season":  "Season 2",
-                                                             "modes":  [
-
-                                                                       ]
-                                                         },
-                                                         {
-                                                             "seasonId":  "Season3",
-                                                             "season":  "Season 3",
-                                                             "modes":  [
-
-                                                                       ]
-                                                         },
-                                                         {
-                                                             "seasonId":  "Season4",
-                                                             "season":  "Season 4",
-                                                             "modes":  [
-
-                                                                       ]
-                                                         }
-                                                     ]
+                                          "platformId":  1
                                       },
                               "error":  null,
                               "dataQuality":  "online",
@@ -23487,5 +23285,5 @@
                           }
               },
     "playniteTotalSeconds":  918900,
-    "playniteCapturedAt":  "2026-09-12T11:27:17.5866431+08:00"
+    "playniteCapturedAt":  "2026-09-12T21:11:13.0523794+08:00"
 }
