@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-CN"><head>
-<!-- hf21 · unified all-score filters and sort order -->
-<!-- hf24 · theoretical status + low-constant history recovery -->
+
+
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
 <title>Arcaea · 战绩详情</title>
 <style>
@@ -298,6 +298,19 @@
   }
 })();
 </script>
+<!-- YMKF site icon hf26 -->
+<link rel="icon" href="../assets/playnite/favicon.ico?v=1.19.34" sizes="any">
+<link rel="shortcut icon" href="../assets/playnite/favicon.ico?v=1.19.34">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/playnite/site-icon-32.png?v=1.19.34">
+<link rel="icon" type="image/png" sizes="48x48" href="../assets/playnite/site-icon-48.png?v=1.19.34">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/playnite/site-icon-180.png?v=1.19.34">
+<link rel="manifest" href="../assets/playnite/site.webmanifest?v=1.19.34">
+<meta name="msapplication-TileImage" content="../assets/playnite/site-icon-180.png?v=1.19.34">
+<meta name="theme-color" content="#10131d">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="YMKF">
+<!-- /YMKF site icon hf26 -->
 </head><body><div class="wrap">
 <div class="topbar"><a class="back" href="../index.html">← 返回游戏库</a><div class="build">Build v1.19.37</div></div>
 <section class="hero"><div class="eyebrow">YMKF · ARCAEA</div><h1 id="name">Arcaea</h1><div class="sub" id="code"></div><div class="stats"><div class="stat"><small>Potential · 7.0</small><strong id="ptt">—</strong></div><div class="stat"><small>Best 50 Avg.</small><strong id="b30">—</strong></div><div class="stat"><small>Best 10 Avg. · 2x weight</small><strong id="r10">—</strong></div><div class="stat"><small>B50 + B10 Weighted</small><strong id="maxp">—</strong></div></div></section>
@@ -353,77 +366,6 @@ fetch(DATA_URL+'?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new 
 })();
 </script>
 
-<!-- YMKF RHYTHM CONSTANT RANGE v1.18.9 BEGIN -->
-<script>
-(function(){
-  if(window.__YMKF_CONSTANT_RANGE_1189__) return;
-  window.__YMKF_CONSTANT_RANGE_1189__=true;
-  const file=(location.pathname.split('/').pop()||'').toLowerCase();
-  const cfgs={
-    'arcaea.html':{search:'#search',root:'#scoreRows',cell:5,count:'#scoreCount',label:'定数范围，如 14.5-14.8'},
-    'chunithm.html':{search:'#search',root:'#trackBody',cell:2,count:'#trackCount',label:'定数范围，如 14.5-14.8'},
-    'maimai.html':{search:'#search',root:'#scoreRows',cell:3,count:'#scoreCount',label:'定数范围，如 14.5-14.8'},
-    'phigros.html':{search:'#search',root:'#scoreRows',cell:4,count:'#scoreCount',label:'定数范围，如 14.5-14.8'},
-    'osu.html':{search:'#search',root:'#bestBody',cell:4,count:null,label:'星数范围，如 4.5-5.2'},
-    'pjsk.html':{search:'#musicQ',root:'#musicTable',cell:1,count:'#musicCount',label:'定数范围，如 30-32'}
-  };
-  const cfg=cfgs[file]; if(!cfg)return;
-  const search=document.querySelector(cfg.search); if(!search)return;
-  const style=document.createElement('style');
-  style.textContent=`.ymkf-search-pair{display:flex!important;gap:8px!important;align-items:stretch!important;grid-column:1/-1!important;width:100%!important;min-width:0!important}.ymkf-search-pair>input{min-width:0!important;flex:1 1 0!important;grid-column:auto!important;width:auto!important}.ymkf-search-pair>.ymkf-constant-range{flex:0 1 260px!important}.ymkf-range-invalid{border-color:#ff8d9b!important;box-shadow:0 0 0 1px #ff8d9b55 inset!important}@media(max-width:620px){.ymkf-search-pair{flex-direction:column!important}.ymkf-search-pair>.ymkf-constant-range{flex:1 1 auto!important;width:100%!important}}`;
-  document.head.appendChild(style);
-  let pair=search.closest('.ymkf-search-pair'); let range=document.querySelector('#ymkfConstantRange');
-  if(!pair){pair=document.createElement('div');pair.className='ymkf-search-pair';search.parentNode.insertBefore(pair,search);pair.appendChild(search)}
-  if(!range){range=document.createElement('input');range.id='ymkfConstantRange';range.className=(search.className||'')+' ymkf-constant-range';range.type='text';range.inputMode='decimal';range.autocomplete='off';range.placeholder=cfg.label;range.title='支持：14.5-14.8、14.7、14.5-、-14.8；范围包含两端';pair.appendChild(range)}
-  function parseRange(raw){let s=String(raw||'').trim();if(!s)return {ok:true,active:false,min:-Infinity,max:Infinity};s=s.replace(/[－—–~～至]/g,'-').replace(/\s+/g,'');let m=s.match(/^(\d+(?:\.\d+)?)$/);if(m){const v=Number(m[1]);return {ok:Number.isFinite(v),active:true,min:v,max:v}}m=s.match(/^(\d+(?:\.\d+)?)?-(\d+(?:\.\d+)?)?$/);if(!m||(!m[1]&&!m[2]))return {ok:false,active:true,min:0,max:0};let min=m[1]?Number(m[1]):-Infinity,max=m[2]?Number(m[2]):Infinity;if(min>max){const t=min;min=max;max=t}return {ok:true,active:true,min,max}}
-  function rowValue(tr){const td=tr.children[cfg.cell];if(!td)return NaN;const nums=(td.textContent||'').replace(/,/g,'').match(/\d+(?:\.\d+)?/g);return nums&&nums.length?Number(nums[nums.length-1]):NaN}
-  let applying=false;
-  function applyRange(){if(applying)return;applying=true;try{const p=parseRange(range.value);range.classList.toggle('ymkf-range-invalid',!p.ok);const host=document.querySelector(cfg.root);if(!host)return;let rows=host.tagName==='TBODY'?[...host.querySelectorAll(':scope > tr')]:[...host.querySelectorAll('tbody > tr')];let shown=0;for(const tr of rows){if(tr.querySelector('.empty'))continue;const v=rowValue(tr);let keep=true;if(p.active&&p.ok)keep=Number.isFinite(v)&&v+1e-9>=p.min&&v-1e-9<=p.max;tr.style.display=keep?'':'none';if(keep)shown++}if(cfg.count){const c=document.querySelector(cfg.count);if(c){let base=(c.textContent||'').replace(/\s*·\s*(?:定数|星数)范围命中\s*\d+\s*$/,'');if(p.active&&p.ok)c.textContent=base+' · '+(file==='osu.html'?'星数':'定数')+'范围命中 '+shown;else if(!p.active)c.textContent=base}}}finally{applying=false}}
-  let timer=0;const schedule=()=>{clearTimeout(timer);timer=setTimeout(applyRange,0)};
-  range.addEventListener('input',()=>{search.dispatchEvent(new Event('input',{bubbles:true}));schedule()});
-  const target=document.querySelector(cfg.root);if(target)new MutationObserver(schedule).observe(target,{childList:true,subtree:true});else new MutationObserver(()=>{if(document.querySelector(cfg.root))schedule()}).observe(document.body,{childList:true,subtree:true});
-  document.addEventListener('change',e=>{if(e.target!==range&&(e.target.closest('.controls')||e.target.closest('.filters')))schedule()},true);
-  document.addEventListener('click',e=>{if(e.target!==range&&(e.target.closest('.controls')||e.target.closest('.filters')))setTimeout(schedule,0)},true);
-  schedule();
-})();
-</script>
-<!-- YMKF RHYTHM CONSTANT RANGE v1.18.9 END -->
-<!-- YMKF ARCAEA JACKET REPAIR v1.18.9 BEGIN -->
-<script>
-(function(){
-  if(window.__YMKF_ARCAEA_JACKET_REPAIR_1189__)return;
-  window.__YMKF_ARCAEA_JACKET_REPAIR_1189__=true;
-  if(typeof hydrateArcaeaCovers!=='function')return;
-  const cache=new Map();
-  function norm(s){return String(s||'').toLowerCase().replace(/[\s_\-:：'"“”‘’()[\]{}·.!?！？,，/\\]+/g,'')}
-  async function searchWiki(songId,title){const key=String(songId||title||'').toLowerCase();if(cache.has(key))return cache.get(key);const terms=[title,songId].filter(Boolean).filter((v,i,a)=>a.findIndex(x=>String(x).toLowerCase()===String(v).toLowerCase())===i);let best=null;for(const term of terms){try{const url='https://arcaea.fandom.com/api.php?action=query&generator=search&gsrnamespace=0&gsrlimit=6&gsrsearch='+encodeURIComponent(String(term))+'&prop=pageimages&piprop=thumbnail&pithumbsize=220&format=json&formatversion=2&origin=*';const r=await fetch(url,{cache:'force-cache'});if(!r.ok)continue;const j=await r.json(),pages=(j.query&&j.query.pages)||[],wanted=norm(title),sid=norm(songId);const cand=pages.filter(p=>p&&p.thumbnail&&p.thumbnail.source).map(p=>{const pn=norm(p.title);let score=0;if(wanted&&pn===wanted)score+=100;if(wanted&&(pn.includes(wanted)||wanted.includes(pn)))score+=40;if(sid&&pn===sid)score+=80;return {p,score}}).sort((a,b)=>b.score-a.score);if(cand.length){best={url:cand[0].p.thumbnail.source,title:cand[0].p.title||title};break}}catch(_){}}cache.set(key,best);return best}
-  async function mapLimit(items,limit,fn){let next=0;await Promise.all(Array.from({length:Math.min(limit,items.length)},async()=>{while(true){const i=next++;if(i>=items.length)return;await fn(items[i],i)}}))}
-  const previousHydrate=hydrateArcaeaCovers;
-  hydrateArcaeaCovers=async function(d){let changed=false;try{changed=!!(await previousHydrate(d))}catch(_){}const lists=[d.scores||[],d.best50||[],d.best30||[],d.recent||[]],all=lists.flat().filter(Boolean),missing=[],seen=new Set();for(const x of all){if(x.jacketUrl)continue;const key=String(x.songId||x.title||'').toLowerCase();if(!key||seen.has(key))continue;seen.add(key);missing.push(x)}await mapLimit(missing,6,async x=>{const hit=await searchWiki(x.songId,x.title);if(!hit||!hit.url)return;for(const y of all){if(String(y.songId||'').toLowerCase()===String(x.songId||'').toLowerCase()){y.jacketUrl=hit.url;if((!y.title||y.title===y.songId)&&hit.title)y.title=hit.title}}changed=true});return changed};
-  if(typeof jacketHtml==='function'){jacketHtml=function(x,extra=''){const u=x&&x.jacketUrl||'',sid=String(x&&x.songId||''),title=String(x&&x.title||sid);if(!u)return `<div class="song-jacket jacket-placeholder ${extra}" data-arc-songid="${esc(sid)}" data-arc-title="${esc(title)}">♫</div>`;return `<img class="song-jacket ${extra}" src="${esc(u)}" data-arc-songid="${esc(sid)}" data-arc-title="${esc(title)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="ymkfArcJacketError(this)">`}}
-  window.ymkfArcJacketError=async function(img){if(!img||img.dataset.ymkfRepairing==='1')return;img.dataset.ymkfRepairing='1';const hit=await searchWiki(img.dataset.arcSongid,img.dataset.arcTitle);if(hit&&hit.url&&img.src!==hit.url){img.onerror=function(){this.outerHTML='<div class="song-jacket jacket-placeholder '+(this.classList.contains('card-jacket')?'card-jacket':'')+'">♫</div>'};img.src=hit.url;return}img.outerHTML='<div class="song-jacket jacket-placeholder '+(img.classList.contains('card-jacket')?'card-jacket':'')+'">♫</div>'};
-})();
-</script>
-<!-- YMKF ARCAEA JACKET REPAIR v1.18.9 END -->
-<!-- YMKF RHYTHM TREND INTERACTION v1.19.9 BEGIN -->
-<style>
-.trend-point-target{fill:transparent;stroke:transparent;pointer-events:all;cursor:pointer}.trend-point-target:focus{outline:none}.trend-point-selected{stroke:#fff!important;stroke-width:2.4!important;filter:drop-shadow(0 0 4px rgba(255,255,255,.72))}.trend-select-line{stroke:rgba(255,255,255,.32);stroke-width:1;stroke-dasharray:4 5;pointer-events:none}.trend-point-detail{margin-top:10px;min-height:46px;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;border:1px solid var(--line);border-radius:13px;background:var(--panel2);padding:9px 12px;color:#dce3ee;font-size:12px}.trend-point-detail b{font-size:13px}.trend-point-detail span{display:inline-flex;align-items:center;gap:6px}.trend-point-detail i{width:8px;height:8px;border-radius:50%;display:inline-block}
-</style>
-<script>
-(function(){
-  if(window.__YMKF_ARCAEA_TREND_INTERACTION_1199__)return;window.__YMKF_ARCAEA_TREND_INTERACTION_1199__=true;
-  let selectedIndex=-1;const previousRenderTrend=renderTrend;
-  const specs=()=>[{key:'potential',on:LINES.ptt,cls:'dot-ptt',label:'PTT',color:'var(--a)'},{key:'legacyB30',on:LINES.b30,cls:'dot-oldb30',label:'B30',color:'var(--b)'},{key:'legacyR10',on:LINES.r10,cls:'dot-oldr10',label:'R10',color:'var(--r)'},{key:'b50',on:LINES.b50,cls:'dot-v7b50',label:'B50',color:'var(--c)'},{key:'b10',on:LINES.b10,cls:'dot-v7b10',label:'B10',color:'#f2b7df'}].filter(x=>x.on);
-  const rows=()=>((DATA&&DATA.trend)||[]).filter(x=>[x.potential,x.legacyB30,x.legacyR10,x.b50,x.b10].some(v=>v!=null));
-  function detailHost(){let box=document.querySelector('#arcaeaTrendDetail');if(!box){box=document.createElement('div');box.id='arcaeaTrendDetail';box.className='trend-point-detail';document.querySelector('#trend').insertAdjacentElement('afterend',box)}return box}
-  function labelOf(row){return String(row.label||row.key||row.month||row.date||'当前记录')}
-  function selectPoint(index){const list=rows(),row=list[index],host=document.querySelector('#trend'),svg=host&&host.querySelector('svg'),box=detailHost();if(!row||!svg){box.innerHTML='<span>暂无趋势数据</span>';return}selectedIndex=index;svg.querySelectorAll('.trend-point-selected').forEach(x=>x.classList.remove('trend-point-selected'));const targets=[...svg.querySelectorAll('.trend-point-target')].filter(x=>Number(x.dataset.index)===index);targets.forEach(x=>{const visible=x.previousElementSibling;if(visible&&visible.tagName.toLowerCase()==='circle')visible.classList.add('trend-point-selected')});const first=targets[0];let line=svg.querySelector('.trend-select-line');if(!line){line=document.createElementNS('http://www.w3.org/2000/svg','line');line.setAttribute('class','trend-select-line');svg.insertBefore(line,svg.firstChild)}if(first){const cx=first.getAttribute('cx');line.setAttribute('x1',cx);line.setAttribute('x2',cx);line.setAttribute('y1','20');line.setAttribute('y2','366');line.style.display=''}else line.style.display='none';const values=specs().map(sp=>{const v=row[sp.key];return v==null?'':`<span><i style="background:${sp.color}"></i>${sp.label} ${n(v).toFixed(3)}</span>`}).filter(Boolean).join('');box.innerHTML=`<b>${esc(labelOf(row))}</b>${values}`}
-  function decorate(){const host=document.querySelector('#trend'),svg=host&&host.querySelector('svg'),list=rows(),box=detailHost(),activeSpecs=specs();if(!svg||!list.length||!activeSpecs.length){box.innerHTML='<span>暂无可选择的趋势数据</span>';return}for(const sp of activeSpecs){const dots=[...svg.querySelectorAll('circle.'+sp.cls)],valid=list.map((row,index)=>({row,index})).filter(x=>x.row[sp.key]!=null);dots.forEach((dot,i)=>{const hitRow=valid[i];if(!hitRow)return;const hit=document.createElementNS('http://www.w3.org/2000/svg','circle');hit.setAttribute('class','trend-point-target');hit.setAttribute('cx',dot.getAttribute('cx'));hit.setAttribute('cy',dot.getAttribute('cy'));hit.setAttribute('r','13');hit.setAttribute('role','button');hit.setAttribute('tabindex','0');hit.setAttribute('aria-label',`${labelOf(hitRow.row)} ${sp.label} ${n(hitRow.row[sp.key]).toFixed(3)}`);hit.dataset.index=String(hitRow.index);hit.addEventListener('click',()=>selectPoint(hitRow.index));hit.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selectPoint(hitRow.index)}});dot.after(hit)})}const activeIndexes=list.map((row,index)=>({row,index})).filter(x=>activeSpecs.some(sp=>x.row[sp.key]!=null)).map(x=>x.index);if(!activeIndexes.includes(selectedIndex))selectedIndex=activeIndexes[activeIndexes.length-1];selectPoint(selectedIndex)}
-  renderTrend=function(){previousRenderTrend();decorate()};if(DATA)renderTrend();
-})();
-</script>
-<!-- YMKF RHYTHM TREND INTERACTION v1.19.9 END -->
-<!-- YMKF_ARCAEA7_V187_BEGIN -->
 <style id="ymkf-arcaea7-v187-style">
 .trend-switch{grid-template-columns:repeat(5,minmax(0,1fr))!important}
 .line-v7b50{fill:none;stroke:var(--c);stroke-width:2.8}.dot-v7b50{fill:var(--c)}
@@ -470,5 +412,75 @@ fetch(DATA_URL+'?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new 
   };
 })();
 </script>
-<!-- YMKF_ARCAEA7_V187_END -->
-</body></html>
+
+
+<script>
+(function(){
+  if(window.__YMKF_CONSTANT_RANGE_1189__) return;
+  window.__YMKF_CONSTANT_RANGE_1189__=true;
+  const file=(location.pathname.split('/').pop()||'').toLowerCase();
+  const cfgs={
+    'arcaea.html':{search:'#search',root:'#scoreRows',cell:5,count:'#scoreCount',label:'定数范围，如 14.5-14.8'},
+    'chunithm.html':{search:'#search',root:'#trackBody',cell:2,count:'#trackCount',label:'定数范围，如 14.5-14.8'},
+    'maimai.html':{search:'#search',root:'#scoreRows',cell:3,count:'#scoreCount',label:'定数范围，如 14.5-14.8'},
+    'phigros.html':{search:'#search',root:'#scoreRows',cell:4,count:'#scoreCount',label:'定数范围，如 14.5-14.8'},
+    'osu.html':{search:'#search',root:'#bestBody',cell:4,count:null,label:'星数范围，如 4.5-5.2'},
+    'pjsk.html':{search:'#musicQ',root:'#musicTable',cell:1,count:'#musicCount',label:'定数范围，如 30-32'}
+  };
+  const cfg=cfgs[file]; if(!cfg)return;
+  const search=document.querySelector(cfg.search); if(!search)return;
+  const style=document.createElement('style');
+  style.textContent=`.ymkf-search-pair{display:flex!important;gap:8px!important;align-items:stretch!important;grid-column:1/-1!important;width:100%!important;min-width:0!important}.ymkf-search-pair>input{min-width:0!important;flex:1 1 0!important;grid-column:auto!important;width:auto!important}.ymkf-search-pair>.ymkf-constant-range{flex:0 1 260px!important}.ymkf-range-invalid{border-color:#ff8d9b!important;box-shadow:0 0 0 1px #ff8d9b55 inset!important}@media(max-width:620px){.ymkf-search-pair{flex-direction:column!important}.ymkf-search-pair>.ymkf-constant-range{flex:1 1 auto!important;width:100%!important}}`;
+  document.head.appendChild(style);
+  let pair=search.closest('.ymkf-search-pair'); let range=document.querySelector('#ymkfConstantRange');
+  if(!pair){pair=document.createElement('div');pair.className='ymkf-search-pair';search.parentNode.insertBefore(pair,search);pair.appendChild(search)}
+  if(!range){range=document.createElement('input');range.id='ymkfConstantRange';range.className=(search.className||'')+' ymkf-constant-range';range.type='text';range.inputMode='decimal';range.autocomplete='off';range.placeholder=cfg.label;range.title='支持：14.5-14.8、14.7、14.5-、-14.8；范围包含两端';pair.appendChild(range)}
+  function parseRange(raw){let s=String(raw||'').trim();if(!s)return {ok:true,active:false,min:-Infinity,max:Infinity};s=s.replace(/[－—–~～至]/g,'-').replace(/\s+/g,'');let m=s.match(/^(\d+(?:\.\d+)?)$/);if(m){const v=Number(m[1]);return {ok:Number.isFinite(v),active:true,min:v,max:v}}m=s.match(/^(\d+(?:\.\d+)?)?-(\d+(?:\.\d+)?)?$/);if(!m||(!m[1]&&!m[2]))return {ok:false,active:true,min:0,max:0};let min=m[1]?Number(m[1]):-Infinity,max=m[2]?Number(m[2]):Infinity;if(min>max){const t=min;min=max;max=t}return {ok:true,active:true,min,max}}
+  function rowValue(tr){const td=tr.children[cfg.cell];if(!td)return NaN;const nums=(td.textContent||'').replace(/,/g,'').match(/\d+(?:\.\d+)?/g);return nums&&nums.length?Number(nums[nums.length-1]):NaN}
+  let applying=false;
+  function applyRange(){if(applying)return;applying=true;try{const p=parseRange(range.value);range.classList.toggle('ymkf-range-invalid',!p.ok);const host=document.querySelector(cfg.root);if(!host)return;let rows=host.tagName==='TBODY'?[...host.querySelectorAll(':scope > tr')]:[...host.querySelectorAll('tbody > tr')];let shown=0;for(const tr of rows){if(tr.querySelector('.empty'))continue;const v=rowValue(tr);let keep=true;if(p.active&&p.ok)keep=Number.isFinite(v)&&v+1e-9>=p.min&&v-1e-9<=p.max;tr.style.display=keep?'':'none';if(keep)shown++}if(cfg.count){const c=document.querySelector(cfg.count);if(c){let base=(c.textContent||'').replace(/\s*·\s*(?:定数|星数)范围命中\s*\d+\s*$/,'');if(p.active&&p.ok)c.textContent=base+' · '+(file==='osu.html'?'星数':'定数')+'范围命中 '+shown;else if(!p.active)c.textContent=base}}}finally{applying=false}}
+  let timer=0;const schedule=()=>{clearTimeout(timer);timer=setTimeout(applyRange,0)};
+  range.addEventListener('input',()=>{search.dispatchEvent(new Event('input',{bubbles:true}));schedule()});
+  const target=document.querySelector(cfg.root);if(target)new MutationObserver(schedule).observe(target,{childList:true,subtree:true});else new MutationObserver(()=>{if(document.querySelector(cfg.root))schedule()}).observe(document.body,{childList:true,subtree:true});
+  document.addEventListener('change',e=>{if(e.target!==range&&(e.target.closest('.controls')||e.target.closest('.filters')))schedule()},true);
+  document.addEventListener('click',e=>{if(e.target!==range&&(e.target.closest('.controls')||e.target.closest('.filters')))setTimeout(schedule,0)},true);
+  schedule();
+})();
+</script>
+
+
+<script>
+(function(){
+  if(window.__YMKF_ARCAEA_JACKET_REPAIR_1189__)return;
+  window.__YMKF_ARCAEA_JACKET_REPAIR_1189__=true;
+  if(typeof hydrateArcaeaCovers!=='function')return;
+  const cache=new Map();
+  function norm(s){return String(s||'').toLowerCase().replace(/[\s_\-:：'"“”‘’()[\]{}·.!?！？,，/\\]+/g,'')}
+  async function searchWiki(songId,title){const key=String(songId||title||'').toLowerCase();if(cache.has(key))return cache.get(key);const terms=[title,songId].filter(Boolean).filter((v,i,a)=>a.findIndex(x=>String(x).toLowerCase()===String(v).toLowerCase())===i);let best=null;for(const term of terms){try{const url='https://arcaea.fandom.com/api.php?action=query&generator=search&gsrnamespace=0&gsrlimit=6&gsrsearch='+encodeURIComponent(String(term))+'&prop=pageimages&piprop=thumbnail&pithumbsize=220&format=json&formatversion=2&origin=*';const r=await fetch(url,{cache:'force-cache'});if(!r.ok)continue;const j=await r.json(),pages=(j.query&&j.query.pages)||[],wanted=norm(title),sid=norm(songId);const cand=pages.filter(p=>p&&p.thumbnail&&p.thumbnail.source).map(p=>{const pn=norm(p.title);let score=0;if(wanted&&pn===wanted)score+=100;if(wanted&&(pn.includes(wanted)||wanted.includes(pn)))score+=40;if(sid&&pn===sid)score+=80;return {p,score}}).sort((a,b)=>b.score-a.score);if(cand.length){best={url:cand[0].p.thumbnail.source,title:cand[0].p.title||title};break}}catch(_){}}cache.set(key,best);return best}
+  async function mapLimit(items,limit,fn){let next=0;await Promise.all(Array.from({length:Math.min(limit,items.length)},async()=>{while(true){const i=next++;if(i>=items.length)return;await fn(items[i],i)}}))}
+  const previousHydrate=hydrateArcaeaCovers;
+  hydrateArcaeaCovers=async function(d){let changed=false;try{changed=!!(await previousHydrate(d))}catch(_){}const lists=[d.scores||[],d.best50||[],d.best30||[],d.recent||[]],all=lists.flat().filter(Boolean),missing=[],seen=new Set();for(const x of all){if(x.jacketUrl)continue;const key=String(x.songId||x.title||'').toLowerCase();if(!key||seen.has(key))continue;seen.add(key);missing.push(x)}await mapLimit(missing,6,async x=>{const hit=await searchWiki(x.songId,x.title);if(!hit||!hit.url)return;for(const y of all){if(String(y.songId||'').toLowerCase()===String(x.songId||'').toLowerCase()){y.jacketUrl=hit.url;if((!y.title||y.title===y.songId)&&hit.title)y.title=hit.title}}changed=true});return changed};
+  if(typeof jacketHtml==='function'){jacketHtml=function(x,extra=''){const u=x&&x.jacketUrl||'',sid=String(x&&x.songId||''),title=String(x&&x.title||sid);if(!u)return `<div class="song-jacket jacket-placeholder ${extra}" data-arc-songid="${esc(sid)}" data-arc-title="${esc(title)}">♫</div>`;return `<img class="song-jacket ${extra}" src="${esc(u)}" data-arc-songid="${esc(sid)}" data-arc-title="${esc(title)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="ymkfArcJacketError(this)">`}}
+  window.ymkfArcJacketError=async function(img){if(!img||img.dataset.ymkfRepairing==='1')return;img.dataset.ymkfRepairing='1';const hit=await searchWiki(img.dataset.arcSongid,img.dataset.arcTitle);if(hit&&hit.url&&img.src!==hit.url){img.onerror=function(){this.outerHTML='<div class="song-jacket jacket-placeholder '+(this.classList.contains('card-jacket')?'card-jacket':'')+'">♫</div>'};img.src=hit.url;return}img.outerHTML='<div class="song-jacket jacket-placeholder '+(img.classList.contains('card-jacket')?'card-jacket':'')+'">♫</div>'};
+})();
+</script>
+
+
+<style>
+.trend-point-target{fill:transparent;stroke:transparent;pointer-events:all;cursor:pointer}.trend-point-target:focus{outline:none}.trend-point-selected{stroke:#fff!important;stroke-width:2.4!important;filter:drop-shadow(0 0 4px rgba(255,255,255,.72))}.trend-select-line{stroke:rgba(255,255,255,.32);stroke-width:1;stroke-dasharray:4 5;pointer-events:none}.trend-point-detail{margin-top:10px;min-height:46px;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;border:1px solid var(--line);border-radius:13px;background:var(--panel2);padding:9px 12px;color:#dce3ee;font-size:12px}.trend-point-detail b{font-size:13px}.trend-point-detail span{display:inline-flex;align-items:center;gap:6px}.trend-point-detail i{width:8px;height:8px;border-radius:50%;display:inline-block}
+</style>
+<script>
+(function(){
+  if(window.__YMKF_ARCAEA_TREND_INTERACTION_1199__)return;window.__YMKF_ARCAEA_TREND_INTERACTION_1199__=true;
+  let selectedIndex=-1;const previousRenderTrend=renderTrend;
+  const specs=()=>[{key:'potential',on:LINES.ptt,cls:'dot-ptt',label:'PTT',color:'var(--a)'},{key:'legacyB30',on:LINES.b30,cls:'dot-oldb30',label:'B30',color:'var(--b)'},{key:'legacyR10',on:LINES.r10,cls:'dot-oldr10',label:'R10',color:'var(--r)'},{key:'b50',on:LINES.b50,cls:'dot-v7b50',label:'B50',color:'var(--c)'},{key:'b10',on:LINES.b10,cls:'dot-v7b10',label:'B10',color:'#f2b7df'}].filter(x=>x.on);
+  const rows=()=>((DATA&&DATA.trend)||[]).filter(x=>[x.potential,x.legacyB30,x.legacyR10,x.b50,x.b10].some(v=>v!=null));
+  function detailHost(){let box=document.querySelector('#arcaeaTrendDetail');if(!box){box=document.createElement('div');box.id='arcaeaTrendDetail';box.className='trend-point-detail';document.querySelector('#trend').insertAdjacentElement('afterend',box)}return box}
+  function labelOf(row){return String(row.label||row.key||row.month||row.date||'当前记录')}
+  function selectPoint(index){const list=rows(),row=list[index],host=document.querySelector('#trend'),svg=host&&host.querySelector('svg'),box=detailHost();if(!row||!svg){box.innerHTML='<span>暂无趋势数据</span>';return}selectedIndex=index;svg.querySelectorAll('.trend-point-selected').forEach(x=>x.classList.remove('trend-point-selected'));const targets=[...svg.querySelectorAll('.trend-point-target')].filter(x=>Number(x.dataset.index)===index);targets.forEach(x=>{const visible=x.previousElementSibling;if(visible&&visible.tagName.toLowerCase()==='circle')visible.classList.add('trend-point-selected')});const first=targets[0];let line=svg.querySelector('.trend-select-line');if(!line){line=document.createElementNS('http://www.w3.org/2000/svg','line');line.setAttribute('class','trend-select-line');svg.insertBefore(line,svg.firstChild)}if(first){const cx=first.getAttribute('cx');line.setAttribute('x1',cx);line.setAttribute('x2',cx);line.setAttribute('y1','20');line.setAttribute('y2','366');line.style.display=''}else line.style.display='none';const values=specs().map(sp=>{const v=row[sp.key];return v==null?'':`<span><i style="background:${sp.color}"></i>${sp.label} ${n(v).toFixed(3)}</span>`}).filter(Boolean).join('');box.innerHTML=`<b>${esc(labelOf(row))}</b>${values}`}
+  function decorate(){const host=document.querySelector('#trend'),svg=host&&host.querySelector('svg'),list=rows(),box=detailHost(),activeSpecs=specs();if(!svg||!list.length||!activeSpecs.length){box.innerHTML='<span>暂无可选择的趋势数据</span>';return}for(const sp of activeSpecs){const dots=[...svg.querySelectorAll('circle.'+sp.cls)],valid=list.map((row,index)=>({row,index})).filter(x=>x.row[sp.key]!=null);dots.forEach((dot,i)=>{const hitRow=valid[i];if(!hitRow)return;const hit=document.createElementNS('http://www.w3.org/2000/svg','circle');hit.setAttribute('class','trend-point-target');hit.setAttribute('cx',dot.getAttribute('cx'));hit.setAttribute('cy',dot.getAttribute('cy'));hit.setAttribute('r','13');hit.setAttribute('role','button');hit.setAttribute('tabindex','0');hit.setAttribute('aria-label',`${labelOf(hitRow.row)} ${sp.label} ${n(hitRow.row[sp.key]).toFixed(3)}`);hit.dataset.index=String(hitRow.index);hit.addEventListener('click',()=>selectPoint(hitRow.index));hit.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selectPoint(hitRow.index)}});dot.after(hit)})}const activeIndexes=list.map((row,index)=>({row,index})).filter(x=>activeSpecs.some(sp=>x.row[sp.key]!=null)).map(x=>x.index);if(!activeIndexes.includes(selectedIndex))selectedIndex=activeIndexes[activeIndexes.length-1];selectPoint(selectedIndex)}
+  renderTrend=function(){previousRenderTrend();decorate()};if(DATA)renderTrend();
+})();
+</script>
+
+<script id="ymkf-rhythm-history-enhancer-v11934" src="./rhythm-history-enhancer.js?v=1.19.34"></script></body></html>
