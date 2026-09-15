@@ -49,255 +49,6 @@
   }
 }
 </style>
-<style id="ymkf-device-page-patch-v1">
-.ymkf-device-hidden-preview{display:none !important}
-.ymkf-omen9-details{margin-top:10px}
-.ymkf-omen9-details > summary{
-  cursor:pointer;
-  list-style:none;
-  user-select:none;
-  font-size:12px;
-  opacity:.92;
-}
-.ymkf-omen9-details > summary::-webkit-details-marker{display:none}
-.ymkf-omen9-summary-chip{
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  padding:6px 10px;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,.14);
-  background:rgba(255,255,255,.06);
-}
-.ymkf-omen9-specs{
-  margin-top:10px;
-  display:grid;
-  gap:6px;
-}
-.ymkf-omen9-specs .line{
-  padding:6px 10px;
-  border-radius:10px;
-  background:rgba(255,255,255,.04);
-}
-.ymkf-device-added-note{
-  font-size:12px;
-  opacity:.76;
-}
-</style>
-<script id="ymkf-device-page-patch-v1-js">
-(function(){
-  function n(s){return String(s||'').replace(/\s+/g,' ').trim();}
-  function containsAny(el, arr){
-    const t=n(el.textContent).toLowerCase();
-    return arr.some(x=>t.includes(String(x).toLowerCase()));
-  }
-  function unique(arr){return Array.from(new Set(arr));}
-  function isLikelyCard(el){
-    if(!el || !el.textContent) return false;
-    const t=n(el.textContent);
-    if(t.length<2 || t.length>1200) return false;
-    if(el.querySelector('img,svg,canvas,video,picture')) return true;
-    const cls=(el.className&&typeof el.className==='string')?el.className.toLowerCase():'';
-    return /(card|item|device|equip|hardware|panel|box)/.test(cls);
-  }
-  function nearestCard(node){
-    let cur=node;
-    while(cur && cur!==document.body){
-      if(isLikelyCard(cur)) return cur;
-      cur=cur.parentElement;
-    }
-    return null;
-  }
-  function textNodeReplaceWithin(root, regex, replacement){
-    const walker=document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null);
-    const hits=[];
-    while(walker.nextNode()){
-      const node=walker.currentNode;
-      if(regex.test(node.nodeValue||'')) hits.push(node);
-    }
-    hits.forEach(node=>{ node.nodeValue=(node.nodeValue||'').replace(regex,replacement); });
-    return hits.length;
-  }
-  function firstTitleEl(card){
-    return card.querySelector('h1,h2,h3,h4,h5,h6,.title,.name,.device-name,strong,b,.card-title') || null;
-  }
-  function normalizeDeviceSections(){
-    const candidates = Array.from(document.querySelectorAll('section,div,main,article'));
-    const roots = [];
-    candidates.forEach(el=>{
-      const t=n(el.textContent);
-      if(!t) return;
-      if((/设备|device|hardware/i.test(t) && t.length<4000) || /OMEN9/i.test(t) || /iPad/i.test(t)){
-        roots.push(el);
-      }
-    });
-    return unique(roots);
-  }
-
-  function findCardsByKeyword(root, keywordRe){
-    const hits=[];
-    Array.from(root.querySelectorAll('*')).forEach(el=>{
-      if(!el || !el.textContent) return;
-      if(keywordRe.test(n(el.textContent))){
-        const card=nearestCard(el);
-        if(card && !hits.includes(card)) hits.push(card);
-      }
-    });
-    return hits;
-  }
-
-  function buildMouseCardLike(sampleCard){
-    const card = sampleCard.cloneNode(true);
-    card.setAttribute('data-ymkf-g102','1');
-
-    // remove old dynamic detail injections
-    card.querySelectorAll('.ymkf-omen9-details').forEach(x=>x.remove());
-    card.querySelectorAll('.ymkf-device-hidden-preview').forEach(x=>x.classList.remove('ymkf-device-hidden-preview'));
-
-    const title = firstTitleEl(card);
-    if(title) title.textContent = '罗技 G102';
-
-    // replace descriptive lines
-    let descNodes = Array.from(card.querySelectorAll('p,li,.meta,.subtitle,.desc,.detail,.sub,.label,.value,small,span'))
-      .filter(el => !el.closest('.ymkf-omen9-details') && n(el.textContent));
-    descNodes.forEach((el, idx)=>{
-      if(idx===0) el.textContent='鼠标';
-      else if(idx===1) el.textContent='当前使用：罗技 G102';
-      else if(idx===2) el.textContent='外设';
-      else el.classList.add('ymkf-device-hidden-preview');
-    });
-
-    if(descNodes.length===0){
-      const p=document.createElement('p');
-      p.textContent='当前使用：罗技 G102';
-      card.appendChild(p);
-    }
-
-    const imgs = card.querySelectorAll('img');
-    if(imgs.length){
-      imgs.forEach(img=>{
-        if(!img.getAttribute('alt') || /omen|ipad|电脑|设备|mouse/i.test(img.getAttribute('alt'))){
-          img.setAttribute('alt','Logitech G102');
-        }
-      });
-    }
-    return card;
-  }
-
-  function normalizeOmenCard(card){
-    if(card.getAttribute('data-ymkf-omen9')==='1') return;
-
-    card.setAttribute('data-ymkf-omen9','1');
-    const title = firstTitleEl(card);
-    if(title) title.textContent = 'OMEN9';
-
-    // Collect likely preview detail nodes.
-    let detailNodes = Array.from(card.querySelectorAll('p,li,.meta,.subtitle,.desc,.detail,.sub,.label,.value,small,span'))
-      .filter(el => !el.closest('.ymkf-omen9-details') && n(el.textContent) && (!title || el!==title) && !el.closest('summary'));
-
-    // Hide detail nodes in preview.
-    detailNodes.forEach(el => el.classList.add('ymkf-device-hidden-preview'));
-
-    // Extract text lines, removing redundant title/spec headers.
-    let lines = detailNodes.map(el => n(el.textContent))
-      .filter(t => t && !/^OMEN9$/i.test(t) && !/^设备$/i.test(t) && !/^details?$/i.test(t));
-
-    // Remove old storage/RAM lines if present; we will normalize them.
-    lines = lines.filter(t => !/(存储|储存|SSD|硬盘|RAM|内存)/i.test(t));
-
-    const details = document.createElement('details');
-    details.className='ymkf-omen9-details';
-    const summary = document.createElement('summary');
-    summary.innerHTML='<span class="ymkf-omen9-summary-chip">点击查看配置 <span aria-hidden="true">▾</span></span>';
-    details.appendChild(summary);
-
-    const wrap = document.createElement('div');
-    wrap.className='ymkf-omen9-specs';
-
-    // Always normalize these two user-confirmed specs.
-    const normalized = [
-      '存储空间：1T',
-      '运行内存：32G'
-    ];
-
-    if(lines.length===0){
-      lines = ['笔记本电脑','点击展开查看设备配置'];
-    }
-
-    // Try to keep other existing lines, but make the confirmed specs explicit.
-    lines.forEach(t=>{
-      const div=document.createElement('div');
-      div.className='line';
-      div.textContent=t;
-      wrap.appendChild(div);
-    });
-
-    normalized.forEach(t=>{
-      const div=document.createElement('div');
-      div.className='line';
-      div.textContent=t;
-      wrap.appendChild(div);
-    });
-
-    const note=document.createElement('div');
-    note.className='ymkf-device-added-note';
-    note.textContent='预览卡片仅显示 OMEN9，详细配置点开查看。';
-    wrap.appendChild(note);
-
-    details.appendChild(wrap);
-    card.appendChild(details);
-  }
-
-  function renameIpad(root){
-    let changed = 0;
-    changed += textNodeReplaceWithin(root, /\biPad\s*Pro\s*(?:11|12\.9|13)?(?:-?inch)?\s*M4\b/gi, 'iPad Pro 13-inch M4');
-    changed += textNodeReplaceWithin(root, /\biPad\s*(?:Pro|Air)?\b/gi, 'iPad Pro 13-inch M4');
-    return changed;
-  }
-
-  function addMouse(root){
-    if(/G102|Logitech\s*G102|罗技\s*G102/i.test(n(root.textContent))) return false;
-
-    const omenCard = findCardsByKeyword(root, /OMEN9/i)[0];
-    const ipadCard = findCardsByKeyword(root, /iPad/i)[0];
-    const sample = omenCard || ipadCard || Array.from(root.querySelectorAll('article,section,li,div')).find(isLikelyCard);
-    if(!sample) return false;
-
-    const grid = sample.parentElement;
-    if(!grid) return false;
-
-    const newCard = buildMouseCardLike(sample);
-    grid.appendChild(newCard);
-    return true;
-  }
-
-  function run(){
-    const roots = normalizeDeviceSections();
-    let touched = false;
-
-    roots.forEach(root=>{
-      if(/iPad/i.test(n(root.textContent)) || /OMEN9/i.test(n(root.textContent)) || /设备|device/i.test(n(root.textContent))){
-        renameIpad(root);
-        findCardsByKeyword(root, /OMEN9/i).forEach(card=>{ normalizeOmenCard(card); touched = true; });
-        if(addMouse(root)) touched = true;
-      }
-    });
-
-    // fallback: direct global iPad rename if no structured root worked
-    if(!touched){
-      renameIpad(document.body);
-      findCardsByKeyword(document.body, /OMEN9/i).forEach(card=>{ normalizeOmenCard(card); touched = true; });
-      addMouse(document.body);
-    }
-  }
-
-  if(document.readyState==='loading'){
-    document.addEventListener('DOMContentLoaded', run);
-  }else{
-    run();
-  }
-})();
-</script>
 <!-- YMKF site icon hf26 -->
 <link rel="icon" href="../assets/playnite/favicon.ico?v=1.19.34" sizes="any">
 <link rel="shortcut icon" href="../assets/playnite/favicon.ico?v=1.19.34">
@@ -483,4 +234,53 @@ fetch(DATA_URL+'?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new 
 })();
 </script>
 
-<script id="ymkf-rhythm-history-enhancer-v11934" src="./rhythm-history-enhancer.js?v=1.19.34"></script></body></html>
+<script id="ymkf-rhythm-history-enhancer-v11934" src="./rhythm-history-enhancer.js?v=1.19.34"></script>
+<!-- YMKF_ARCAEA7_V187_BEGIN -->
+<style id="ymkf-arcaea7-v187-style">
+.trend-switch{grid-template-columns:repeat(5,minmax(0,1fr))!important}
+.line-v7b50{fill:none;stroke:var(--c);stroke-width:2.8}.dot-v7b50{fill:var(--c)}
+.line-v7b10{fill:none;stroke:#f2b7df;stroke-width:2.8}.dot-v7b10{fill:#f2b7df}
+.line-oldb30{fill:none;stroke:var(--b);stroke-width:2.5}.dot-oldb30{fill:var(--b)}
+.line-oldr10{fill:none;stroke:var(--r);stroke-width:2.5}.dot-oldr10{fill:var(--r)}
+.v7-divider{stroke:rgba(255,255,255,.55);stroke-width:1.4;stroke-dasharray:6 5}.v7-label{fill:#f5f7ff;font-size:10px;font-weight:800;paint-order:stroke;stroke:#0f1420;stroke-width:3px}
+@media(max-width:850px){.trend-switch{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+</style>
+<script id="ymkf-arcaea7-v187-script">
+(function(){
+  LINES={ptt:true,b30:true,r10:true,b50:true,b10:true};
+  const oldHydrate=hydrateArcaeaCovers;
+  hydrateArcaeaCovers=async function(d){
+    let changed=false;try{changed=await oldHydrate(d)}catch(_){ }
+    const m=new Map((d.scores||[]).map(x=>[String(x.songId||'')+'|'+String(x.difficulty),x.jacketUrl||'']));
+    for(const x of (d.best50||[])){const u=m.get(String(x.songId||'')+'|'+String(x.difficulty));if(u&&!x.jacketUrl){x.jacketUrl=u;changed=true}}
+    return changed;
+  };
+  renderHero=function(){
+    const p=DATA.profile||{};
+    document.querySelector('#name').textContent=p.name||'YMKF';
+    document.querySelector('#code').textContent=p.userCode?`ID: ${p.userCode}`:'';
+    document.querySelector('#ptt').textContent=n(p.potential).toFixed(3);
+    document.querySelector('#b30').textContent=n(p.b50).toFixed(3);
+    document.querySelector('#r10').textContent=n(p.b10).toFixed(3);
+    document.querySelector('#maxp').textContent=n(p.weightedPotential).toFixed(3);
+    document.querySelector('#source').textContent=`${DATA.source?.file||''} · ${(DATA.best50||[]).length} / 50 B50 · B10 2x weight`;
+    document.querySelector('#b30grid').innerHTML=(DATA.best50||[]).map(card).join('')||'<div class="empty">暂无 B50</div>';
+  };
+  renderTrend=function(){
+    const rows=(DATA.trend||[]).filter(x=>[x.potential,x.legacyB30,x.legacyR10,x.b50,x.b10].some(v=>v!=null));
+    if(!rows.length){document.querySelector('#trend').innerHTML='<div class="empty">暂无趋势</div>';return}
+    const W=1000,H=410,L=62,R=24,T=36,B=50,vals=[];
+    for(const x of rows){if(LINES.ptt&&x.potential!=null)vals.push(n(x.potential));if(LINES.b30&&x.legacyB30!=null)vals.push(n(x.legacyB30));if(LINES.r10&&x.legacyR10!=null)vals.push(n(x.legacyR10));if(LINES.b50&&x.b50!=null)vals.push(n(x.b50));if(LINES.b10&&x.b10!=null)vals.push(n(x.b10))}
+    if(!vals.length){document.querySelector('#trend').innerHTML='<div class="empty">至少开启一条趋势</div>';return}
+    let mn=Math.min(...vals),mx=Math.max(...vals);mn=Math.floor((mn-.06)*100)/100;mx=Math.ceil((mx+.06)*100)/100;if(mx<=mn)mx=mn+.1;
+    const X=i=>L+(W-L-R)*(rows.length===1?.5:i/(rows.length-1)),Y=v=>T+(H-T-B)*(mx-n(v))/(mx-mn);
+    const path=(key,on,cls)=>{if(!on)return '';let parts=[],seg=[];rows.forEach((x,i)=>{const v=x[key];if(v==null){if(seg.length)parts.push(seg);seg=[]}else seg.push([X(i),Y(v),v])});if(seg.length)parts.push(seg);return parts.map(p=>`<path class="line-${cls}" d="${p.map((q,j)=>(j?'L':'M')+q[0].toFixed(1)+','+q[1].toFixed(1)).join(' ')}"/>`+p.map(q=>`<circle class="dot-${cls}" cx="${q[0]}" cy="${q[1]}" r="3.4"/><text class="point-label" x="${q[0]}" y="${q[1]-8}">${n(q[2]).toFixed(3)}</text>`).join('')).join('')};
+    let g='';for(let j=0;j<=4;j++){const y=T+(H-T-B)*j/4,v=mx-(mx-mn)*j/4;g+=`<line class="grid" x1="${L}" x2="${W-R}" y1="${y}" y2="${y}"/><text class="axis" x="4" y="${y+4}">${v.toFixed(3)}</text>`}
+    rows.forEach((x,i)=>g+=`<text class="axis" text-anchor="middle" x="${X(i)}" y="${H-18}">${esc(x.label||x.key||'')}</text>`);
+    const firstV7=rows.findIndex(x=>x.era==='v7'||x.b50!=null||x.b10!=null);if(firstV7>=0){const prev=Math.max(0,firstV7-1),dx=(X(prev)+X(firstV7))/2;g+=`<line class="v7-divider" x1="${dx}" x2="${dx}" y1="${T-9}" y2="${H-B+6}"/><text class="v7-label" x="${Math.min(dx+6,W-R-155)}" y="${T-14}">2026-08-27 · Arcaea 7.0</text>`}
+    document.querySelector('#trend').innerHTML=`<svg viewBox="0 0 ${W} ${H}" aria-label="Arcaea PTT rule history">${g}${path('potential',LINES.ptt,'ptt')}${path('legacyB30',LINES.b30,'oldb30')}${path('legacyR10',LINES.r10,'oldr10')}${path('b50',LINES.b50,'v7b50')}${path('b10',LINES.b10,'v7b10')}</svg>`;
+  };
+})();
+</script>
+<!-- YMKF_ARCAEA7_V187_END -->
+</body></html>
