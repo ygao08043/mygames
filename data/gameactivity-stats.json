@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
-    "build":  "v1.19.37-fix1",
-    "generatedAt":  "2026-09-15T23:56:09.6640871+08:00",
+    "build":  "v1.19.37-fix2",
+    "generatedAt":  "2026-09-16T00:11:07.9016406+08:00",
     "source":  {
                    "provider":  "Playnite GameActivity",
                    "fields":  [
@@ -21,7 +21,7 @@
     "currentYear":  "2026",
     "totals":  {
                    "recordedSeconds":  3209154,
-                   "last7DaysSeconds":  75291,
+                   "last7DaysSeconds":  48815,
                    "currentMonthSeconds":  205357,
                    "currentYearSeconds":  3209154,
                    "activeDays":  198
@@ -822,6 +822,10 @@
                   {
                       "date":  "2026-09-15",
                       "seconds":  7599
+                  },
+                  {
+                      "date":  "2026-09-16",
+                      "seconds":  0
                   }
               ],
     "weekly":  [
@@ -2122,27 +2126,22 @@
                            {
                                "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                                "name":  "CHUNITHM",
-                               "seconds":  39180
+                               "seconds":  28680
                            },
                            {
                                "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                "name":  "雀魂麻将",
-                               "seconds":  14939
-                           },
-                           {
-                               "id":  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8",
-                               "name":  "Project SEKAI",
-                               "seconds":  12209
-                           },
-                           {
-                               "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
-                               "name":  "Phigros",
-                               "seconds":  4135
+                               "seconds":  12919
                            },
                            {
                                "id":  "901a387c-5431-4985-89b3-128142b21167",
                                "name":  "Battlefield 1",
                                "seconds":  2717
+                           },
+                           {
+                               "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
+                               "name":  "Phigros",
+                               "seconds":  2388
                            },
                            {
                                "id":  "86dcd7ea-9dce-4231-93bd-b7d4ccd8e8f1",
@@ -2925,7 +2924,7 @@
                         ],
     "timelineWindowDays":  14,
     "timelineStart":  "2026-03-01",
-    "timelineEnd":  "2026-09-15",
+    "timelineEnd":  "2026-09-16",
     "timelineDays":  [
                          {
                              "date":  "2026-03-01",
@@ -3722,6 +3721,10 @@
                          {
                              "date":  "2026-09-15",
                              "label":  "周二"
+                         },
+                         {
+                             "date":  "2026-09-16",
+                             "label":  "周三"
                          }
                      ],
     "timeline":  [
