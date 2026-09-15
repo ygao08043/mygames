@@ -1,18 +1,18 @@
 {
     "version":  "1.11.2",
-    "generatedAt":  "2026-09-14T22:43:38.8201744+08:00",
+    "generatedAt":  "2026-09-15T17:05:53.5231606+08:00",
     "source":  {
                    "type":  "Phigros TapTap cloud save",
-                   "saveUpdatedAt":  "2026-09-11T04:43:38.161Z",
+                   "saveUpdatedAt":  "2026-09-15T04:41:01.768Z",
                    "metadata":  "SonolusHaniwa/phigros-decrypted-data metadata.json",
                    "metadataSongs":  314,
                    "missingMetadata":  0
                },
     "profile":  {
                     "nickname":  "YMKF",
-                    "rks":  15.35171725,
-                    "calculatedRks":  15.35171725,
-                    "cloudSummaryRks":  15.351717,
+                    "rks":  15.36817592,
+                    "calculatedRks":  15.36817592,
+                    "cloudSummaryRks":  15.36817646,
                     "rksMode":  "calculated",
                     "phiCount":  20,
                     "fcCount":  30,
@@ -248,6 +248,20 @@
                        "charter":  "artifact::\u003c0x04, 0x53, 0x12\u003e"
                    },
                    {
+                       "songId":  "PANICPARADISE.DJSHIONY.0",
+                       "title":  "PANIC PARADISE",
+                       "composer":  "DJ SHION.Y",
+                       "difficulty":  "AT",
+                       "difficultyIndex":  3,
+                       "constant":  16.6,
+                       "score":  952160,
+                       "accuracy":  98.334831,
+                       "rks":  15.3942055,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  "StR-1"
+                   },
+                   {
                        "songId":  "Hydra.JamesLandinoXAkiraComplex.0",
                        "title":  "Hydra",
                        "composer":  "James Landino X Akira Complex",
@@ -428,20 +442,6 @@
                        "status":  "A",
                        "isFc":  false,
                        "charter":  "Der Mut und der Richter"
-                   },
-                   {
-                       "songId":  "Chronomia.Lime.0",
-                       "title":  "Chronomia",
-                       "composer":  "Lime",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  15.4,
-                       "score":  978962,
-                       "accuracy":  99.264114,
-                       "rks":  14.90044546,
-                       "status":  "V",
-                       "isFc":  false,
-                       "charter":  "時の希 \u0026 百九十八"
                    }
                ],
     "scores":  [
@@ -626,6 +626,20 @@
                        "status":  "A",
                        "isFc":  false,
                        "charter":  "artifact::\u003c0x04, 0x53, 0x12\u003e"
+                   },
+                   {
+                       "songId":  "PANICPARADISE.DJSHIONY.0",
+                       "title":  "PANIC PARADISE",
+                       "composer":  "DJ SHION.Y",
+                       "difficulty":  "AT",
+                       "difficultyIndex":  3,
+                       "constant":  16.6,
+                       "score":  952160,
+                       "accuracy":  98.334831,
+                       "rks":  15.3942055,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  "StR-1"
                    },
                    {
                        "songId":  "Hydra.JamesLandinoXAkiraComplex.0",
@@ -981,20 +995,6 @@
                        "songId":  "PANICPARADISE.DJSHIONY.0",
                        "title":  "PANIC PARADISE",
                        "composer":  "DJ SHION.Y",
-                       "difficulty":  "AT",
-                       "difficultyIndex":  3,
-                       "constant":  16.6,
-                       "score":  918767,
-                       "accuracy":  97.074707,
-                       "rks":  14.5119329,
-                       "status":  "A",
-                       "isFc":  false,
-                       "charter":  "StR-1"
-                   },
-                   {
-                       "songId":  "PANICPARADISE.DJSHIONY.0",
-                       "title":  "PANIC PARADISE",
-                       "composer":  "DJ SHION.Y",
                        "difficulty":  "IN",
                        "difficultyIndex":  2,
                        "constant":  15.5,
@@ -1286,18 +1286,18 @@
                        "charter":  "ST AS is XMT"
                    },
                    {
-                       "songId":  "Elúltimobaile.Θ.0",
-                       "title":  "El último baile",
-                       "composer":  "Θ",
+                       "songId":  "幽世桔梗.Capchiifeatまるもこ.0",
+                       "title":  "幽世桔梗",
+                       "composer":  "Capchii feat. まるもこ",
                        "difficulty":  "IN",
                        "difficultyIndex":  2,
-                       "constant":  14.1,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  14.1,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "百九十八 feat. Likey"
+                       "constant":  14.8,
+                       "score":  950785,
+                       "accuracy":  98.960243,
+                       "rks":  14.12397243,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  "Su1fuR、快斬！"
                    },
                    {
                        "songId":  "君往何处QuoVadis.M2U.0",
@@ -1312,6 +1312,20 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "Salt"
+                   },
+                   {
+                       "songId":  "Elúltimobaile.Θ.0",
+                       "title":  "El último baile",
+                       "composer":  "Θ",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  14.1,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  14.1,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "百九十八 feat. Likey"
                    },
                    {
                        "songId":  "QuantumHyperspace.D_AAN.0",
@@ -1508,20 +1522,6 @@
                        "status":  "A",
                        "isFc":  false,
                        "charter":  "逆天使の悪魔 【Likey】"
-                   },
-                   {
-                       "songId":  "幽世桔梗.Capchiifeatまるもこ.0",
-                       "title":  "幽世桔梗",
-                       "composer":  "Capchii feat. まるもこ",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  14.8,
-                       "score":  916621,
-                       "accuracy":  98.618759,
-                       "rks":  13.90539409,
-                       "status":  "A",
-                       "isFc":  false,
-                       "charter":  "Su1fuR、快斬！"
                    },
                    {
                        "songId":  "PRAGMATISMRESURRECTION.Laur.0",
@@ -3666,6 +3666,11 @@
                       "date":  "2026-09-14",
                       "rks":  15.35171725,
                       "saveUpdatedAt":  "2026-09-11T04:43:38.161Z"
+                  },
+                  {
+                      "date":  "2026-09-15",
+                      "rks":  15.36817592,
+                      "saveUpdatedAt":  "2026-09-15T04:41:01.768Z"
                   }
               ]
 }

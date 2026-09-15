@@ -1,12 +1,12 @@
 {
     "version":  "1.0",
-    "updatedAt":  "2026-09-14T22:44:45.9544256+08:00",
+    "updatedAt":  "2026-09-15T17:06:49.7491441+08:00",
     "games":  {
                   "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b":  {
                                                                "name":  "CHUNITHM",
                                                                "resolvedPlayniteId":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                                                                "targetPlaytimeSeconds":  1649605,
-                                                               "sourceDeltaSeconds":  7800,
+                                                               "sourceDeltaSeconds":  0,
                                                                "exactTarget":  false,
                                                                "exactTargetAllowDecreaseFromIndependentSource":  false,
                                                                "exactTargetNoDecrease":  false,
@@ -82,36 +82,36 @@
                                                                "exactTargetNoDecrease":  false,
                                                                "exactGuardAlreadyEstablished":  false,
                                                                "exactOverrideSeconds":  0,
-                                                               "externalSessionCountTotal":  67,
-                                                               "latestExternalActivityUtc":  "2026-09-11T18:18:40.0000000Z",
+                                                               "externalSessionCountTotal":  79,
+                                                               "latestExternalActivityUtc":  "2026-09-15T02:04:02.0000000Z",
                                                                "repairIOSSeconds":  0
                                                            },
                   "8b5cbfc6-9afb-4892-993e-e9424a9d6555":  {
                                                                "name":  "Phigros",
                                                                "resolvedPlayniteId":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
-                                                               "targetPlaytimeSeconds":  138265,
-                                                               "sourceDeltaSeconds":  0,
+                                                               "targetPlaytimeSeconds":  139863,
+                                                               "sourceDeltaSeconds":  1598,
                                                                "exactTarget":  false,
                                                                "exactTargetAllowDecreaseFromIndependentSource":  false,
                                                                "exactTargetNoDecrease":  false,
                                                                "exactGuardAlreadyEstablished":  false,
                                                                "exactOverrideSeconds":  0,
-                                                               "externalSessionCountTotal":  62,
-                                                               "latestExternalActivityUtc":  "2026-09-11T04:43:51.0000000Z",
+                                                               "externalSessionCountTotal":  63,
+                                                               "latestExternalActivityUtc":  "2026-09-15T04:41:14.0000000Z",
                                                                "repairIOSSeconds":  0
                                                            },
                   "b730c4a7-1f2f-4ec7-aca4-f1df509d18fe":  {
                                                                "name":  "王者荣耀",
                                                                "resolvedPlayniteId":  "b730c4a7-1f2f-4ec7-aca4-f1df509d18fe",
-                                                               "targetPlaytimeSeconds":  3380938,
-                                                               "sourceDeltaSeconds":  0,
+                                                               "targetPlaytimeSeconds":  3380976,
+                                                               "sourceDeltaSeconds":  38,
                                                                "exactTarget":  false,
                                                                "exactTargetAllowDecreaseFromIndependentSource":  false,
                                                                "exactTargetNoDecrease":  false,
                                                                "exactGuardAlreadyEstablished":  false,
                                                                "exactOverrideSeconds":  0,
-                                                               "externalSessionCountTotal":  8,
-                                                               "latestExternalActivityUtc":  "2026-09-03T05:24:27.0000000Z",
+                                                               "externalSessionCountTotal":  9,
+                                                               "latestExternalActivityUtc":  "2026-09-13T13:02:40.0000000Z",
                                                                "repairIOSSeconds":  0
                                                            },
                   "f0a894ed-b3a2-471e-b081-efdf8f0269cd":  {
@@ -145,15 +145,15 @@
                   "86dcd7ea-9dce-4231-93bd-b7d4ccd8e8f1":  {
                                                                "name":  "元气骑士",
                                                                "resolvedPlayniteId":  "86dcd7ea-9dce-4231-93bd-b7d4ccd8e8f1",
-                                                               "targetPlaytimeSeconds":  72002,
-                                                               "sourceDeltaSeconds":  0,
+                                                               "targetPlaytimeSeconds":  73789,
+                                                               "sourceDeltaSeconds":  1787,
                                                                "exactTarget":  false,
                                                                "exactTargetAllowDecreaseFromIndependentSource":  false,
                                                                "exactTargetNoDecrease":  false,
                                                                "exactGuardAlreadyEstablished":  false,
                                                                "exactOverrideSeconds":  0,
-                                                               "externalSessionCountTotal":  1,
-                                                               "latestExternalActivityUtc":  "2026-08-24T16:14:41.0000000Z",
+                                                               "externalSessionCountTotal":  7,
+                                                               "latestExternalActivityUtc":  "2026-09-13T13:27:40.0000000Z",
                                                                "repairIOSSeconds":  0
                                                            },
                   "b05c2d25-74a9-4700-9c38-dae8c9cda7e8":  {
@@ -168,6 +168,20 @@
                                                                "exactOverrideSeconds":  0,
                                                                "externalSessionCountTotal":  18,
                                                                "latestExternalActivityUtc":  "2026-09-09T05:57:39.0000000Z",
+                                                               "repairIOSSeconds":  0
+                                                           },
+                  "fab64cd7-e82f-4196-b864-9f65e836341e":  {
+                                                               "name":  "决战！平安京",
+                                                               "resolvedPlayniteId":  "fab64cd7-e82f-4196-b864-9f65e836341e",
+                                                               "targetPlaytimeSeconds":  342002,
+                                                               "sourceDeltaSeconds":  2,
+                                                               "exactTarget":  false,
+                                                               "exactTargetAllowDecreaseFromIndependentSource":  false,
+                                                               "exactTargetNoDecrease":  false,
+                                                               "exactGuardAlreadyEstablished":  false,
+                                                               "exactOverrideSeconds":  0,
+                                                               "externalSessionCountTotal":  1,
+                                                               "latestExternalActivityUtc":  "2026-09-14T01:47:33.0000000Z",
                                                                "repairIOSSeconds":  0
                                                            }
               }

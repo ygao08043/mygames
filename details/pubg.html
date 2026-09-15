@@ -30,6 +30,255 @@
   }
 }
 </style>
+<style id="ymkf-device-page-patch-v1">
+.ymkf-device-hidden-preview{display:none !important}
+.ymkf-omen9-details{margin-top:10px}
+.ymkf-omen9-details > summary{
+  cursor:pointer;
+  list-style:none;
+  user-select:none;
+  font-size:12px;
+  opacity:.92;
+}
+.ymkf-omen9-details > summary::-webkit-details-marker{display:none}
+.ymkf-omen9-summary-chip{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.06);
+}
+.ymkf-omen9-specs{
+  margin-top:10px;
+  display:grid;
+  gap:6px;
+}
+.ymkf-omen9-specs .line{
+  padding:6px 10px;
+  border-radius:10px;
+  background:rgba(255,255,255,.04);
+}
+.ymkf-device-added-note{
+  font-size:12px;
+  opacity:.76;
+}
+</style>
+<script id="ymkf-device-page-patch-v1-js">
+(function(){
+  function n(s){return String(s||'').replace(/\s+/g,' ').trim();}
+  function containsAny(el, arr){
+    const t=n(el.textContent).toLowerCase();
+    return arr.some(x=>t.includes(String(x).toLowerCase()));
+  }
+  function unique(arr){return Array.from(new Set(arr));}
+  function isLikelyCard(el){
+    if(!el || !el.textContent) return false;
+    const t=n(el.textContent);
+    if(t.length<2 || t.length>1200) return false;
+    if(el.querySelector('img,svg,canvas,video,picture')) return true;
+    const cls=(el.className&&typeof el.className==='string')?el.className.toLowerCase():'';
+    return /(card|item|device|equip|hardware|panel|box)/.test(cls);
+  }
+  function nearestCard(node){
+    let cur=node;
+    while(cur && cur!==document.body){
+      if(isLikelyCard(cur)) return cur;
+      cur=cur.parentElement;
+    }
+    return null;
+  }
+  function textNodeReplaceWithin(root, regex, replacement){
+    const walker=document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null);
+    const hits=[];
+    while(walker.nextNode()){
+      const node=walker.currentNode;
+      if(regex.test(node.nodeValue||'')) hits.push(node);
+    }
+    hits.forEach(node=>{ node.nodeValue=(node.nodeValue||'').replace(regex,replacement); });
+    return hits.length;
+  }
+  function firstTitleEl(card){
+    return card.querySelector('h1,h2,h3,h4,h5,h6,.title,.name,.device-name,strong,b,.card-title') || null;
+  }
+  function normalizeDeviceSections(){
+    const candidates = Array.from(document.querySelectorAll('section,div,main,article'));
+    const roots = [];
+    candidates.forEach(el=>{
+      const t=n(el.textContent);
+      if(!t) return;
+      if((/设备|device|hardware/i.test(t) && t.length<4000) || /OMEN9/i.test(t) || /iPad/i.test(t)){
+        roots.push(el);
+      }
+    });
+    return unique(roots);
+  }
+
+  function findCardsByKeyword(root, keywordRe){
+    const hits=[];
+    Array.from(root.querySelectorAll('*')).forEach(el=>{
+      if(!el || !el.textContent) return;
+      if(keywordRe.test(n(el.textContent))){
+        const card=nearestCard(el);
+        if(card && !hits.includes(card)) hits.push(card);
+      }
+    });
+    return hits;
+  }
+
+  function buildMouseCardLike(sampleCard){
+    const card = sampleCard.cloneNode(true);
+    card.setAttribute('data-ymkf-g102','1');
+
+    // remove old dynamic detail injections
+    card.querySelectorAll('.ymkf-omen9-details').forEach(x=>x.remove());
+    card.querySelectorAll('.ymkf-device-hidden-preview').forEach(x=>x.classList.remove('ymkf-device-hidden-preview'));
+
+    const title = firstTitleEl(card);
+    if(title) title.textContent = '罗技 G102';
+
+    // replace descriptive lines
+    let descNodes = Array.from(card.querySelectorAll('p,li,.meta,.subtitle,.desc,.detail,.sub,.label,.value,small,span'))
+      .filter(el => !el.closest('.ymkf-omen9-details') && n(el.textContent));
+    descNodes.forEach((el, idx)=>{
+      if(idx===0) el.textContent='鼠标';
+      else if(idx===1) el.textContent='当前使用：罗技 G102';
+      else if(idx===2) el.textContent='外设';
+      else el.classList.add('ymkf-device-hidden-preview');
+    });
+
+    if(descNodes.length===0){
+      const p=document.createElement('p');
+      p.textContent='当前使用：罗技 G102';
+      card.appendChild(p);
+    }
+
+    const imgs = card.querySelectorAll('img');
+    if(imgs.length){
+      imgs.forEach(img=>{
+        if(!img.getAttribute('alt') || /omen|ipad|电脑|设备|mouse/i.test(img.getAttribute('alt'))){
+          img.setAttribute('alt','Logitech G102');
+        }
+      });
+    }
+    return card;
+  }
+
+  function normalizeOmenCard(card){
+    if(card.getAttribute('data-ymkf-omen9')==='1') return;
+
+    card.setAttribute('data-ymkf-omen9','1');
+    const title = firstTitleEl(card);
+    if(title) title.textContent = 'OMEN9';
+
+    // Collect likely preview detail nodes.
+    let detailNodes = Array.from(card.querySelectorAll('p,li,.meta,.subtitle,.desc,.detail,.sub,.label,.value,small,span'))
+      .filter(el => !el.closest('.ymkf-omen9-details') && n(el.textContent) && (!title || el!==title) && !el.closest('summary'));
+
+    // Hide detail nodes in preview.
+    detailNodes.forEach(el => el.classList.add('ymkf-device-hidden-preview'));
+
+    // Extract text lines, removing redundant title/spec headers.
+    let lines = detailNodes.map(el => n(el.textContent))
+      .filter(t => t && !/^OMEN9$/i.test(t) && !/^设备$/i.test(t) && !/^details?$/i.test(t));
+
+    // Remove old storage/RAM lines if present; we will normalize them.
+    lines = lines.filter(t => !/(存储|储存|SSD|硬盘|RAM|内存)/i.test(t));
+
+    const details = document.createElement('details');
+    details.className='ymkf-omen9-details';
+    const summary = document.createElement('summary');
+    summary.innerHTML='<span class="ymkf-omen9-summary-chip">点击查看配置 <span aria-hidden="true">▾</span></span>';
+    details.appendChild(summary);
+
+    const wrap = document.createElement('div');
+    wrap.className='ymkf-omen9-specs';
+
+    // Always normalize these two user-confirmed specs.
+    const normalized = [
+      '存储空间：1T',
+      '运行内存：32G'
+    ];
+
+    if(lines.length===0){
+      lines = ['笔记本电脑','点击展开查看设备配置'];
+    }
+
+    // Try to keep other existing lines, but make the confirmed specs explicit.
+    lines.forEach(t=>{
+      const div=document.createElement('div');
+      div.className='line';
+      div.textContent=t;
+      wrap.appendChild(div);
+    });
+
+    normalized.forEach(t=>{
+      const div=document.createElement('div');
+      div.className='line';
+      div.textContent=t;
+      wrap.appendChild(div);
+    });
+
+    const note=document.createElement('div');
+    note.className='ymkf-device-added-note';
+    note.textContent='预览卡片仅显示 OMEN9，详细配置点开查看。';
+    wrap.appendChild(note);
+
+    details.appendChild(wrap);
+    card.appendChild(details);
+  }
+
+  function renameIpad(root){
+    let changed = 0;
+    changed += textNodeReplaceWithin(root, /\biPad\s*Pro\s*(?:11|12\.9|13)?(?:-?inch)?\s*M4\b/gi, 'iPad Pro 13-inch M4');
+    changed += textNodeReplaceWithin(root, /\biPad\s*(?:Pro|Air)?\b/gi, 'iPad Pro 13-inch M4');
+    return changed;
+  }
+
+  function addMouse(root){
+    if(/G102|Logitech\s*G102|罗技\s*G102/i.test(n(root.textContent))) return false;
+
+    const omenCard = findCardsByKeyword(root, /OMEN9/i)[0];
+    const ipadCard = findCardsByKeyword(root, /iPad/i)[0];
+    const sample = omenCard || ipadCard || Array.from(root.querySelectorAll('article,section,li,div')).find(isLikelyCard);
+    if(!sample) return false;
+
+    const grid = sample.parentElement;
+    if(!grid) return false;
+
+    const newCard = buildMouseCardLike(sample);
+    grid.appendChild(newCard);
+    return true;
+  }
+
+  function run(){
+    const roots = normalizeDeviceSections();
+    let touched = false;
+
+    roots.forEach(root=>{
+      if(/iPad/i.test(n(root.textContent)) || /OMEN9/i.test(n(root.textContent)) || /设备|device/i.test(n(root.textContent))){
+        renameIpad(root);
+        findCardsByKeyword(root, /OMEN9/i).forEach(card=>{ normalizeOmenCard(card); touched = true; });
+        if(addMouse(root)) touched = true;
+      }
+    });
+
+    // fallback: direct global iPad rename if no structured root worked
+    if(!touched){
+      renameIpad(document.body);
+      findCardsByKeyword(document.body, /OMEN9/i).forEach(card=>{ normalizeOmenCard(card); touched = true; });
+      addMouse(document.body);
+    }
+  }
+
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded', run);
+  }else{
+    run();
+  }
+})();
+</script>
 <!-- YMKF site icon hf26 -->
 <link rel="icon" href="../assets/playnite/favicon.ico?v=1.19.34" sizes="any">
 <link rel="shortcut icon" href="../assets/playnite/favicon.ico?v=1.19.34">
