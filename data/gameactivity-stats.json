@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
     "build":  "v1.19.37-fix7",
-    "generatedAt":  "2026-09-25T22:44:08.8725820+08:00",
+    "generatedAt":  "2026-09-26T01:51:57.8917870+08:00",
     "source":  {
                    "provider":  "Playnite GameActivity",
                    "fields":  [
@@ -21,7 +21,7 @@
     "currentYear":  "2026",
     "totals":  {
                    "recordedSeconds":  3379620,
-                   "last7DaysSeconds":  113466,
+                   "last7DaysSeconds":  109480,
                    "currentMonthSeconds":  354951,
                    "currentYearSeconds":  3379620,
                    "activeDays":  208
@@ -862,6 +862,10 @@
                   {
                       "date":  "2026-09-25",
                       "seconds":  12300
+                  },
+                  {
+                      "date":  "2026-09-26",
+                      "seconds":  0
                   }
               ],
     "weekly":  [
@@ -2167,7 +2171,7 @@
                            {
                                "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                "name":  "雀魂麻将",
-                               "seconds":  69338
+                               "seconds":  66693
                            },
                            {
                                "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
@@ -2180,14 +2184,14 @@
                                "seconds":  6284
                            },
                            {
-                               "id":  "901a387c-5431-4985-89b3-128142b21167",
-                               "name":  "Battlefield 1",
-                               "seconds":  6220
-                           },
-                           {
                                "id":  "06a6c4ed-ba26-4185-a08c-2874a521d499",
                                "name":  "三国杀",
                                "seconds":  5090
+                           },
+                           {
+                               "id":  "901a387c-5431-4985-89b3-128142b21167",
+                               "name":  "Battlefield 1",
+                               "seconds":  4879
                            },
                            {
                                "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
@@ -3017,7 +3021,7 @@
                         ],
     "timelineWindowDays":  14,
     "timelineStart":  "2026-03-01",
-    "timelineEnd":  "2026-09-25",
+    "timelineEnd":  "2026-09-26",
     "timelineDays":  [
                          {
                              "date":  "2026-03-01",
@@ -3854,6 +3858,10 @@
                          {
                              "date":  "2026-09-25",
                              "label":  "周五"
+                         },
+                         {
+                             "date":  "2026-09-26",
+                             "label":  "周六"
                          }
                      ],
     "timeline":  [
@@ -3861,7 +3869,7 @@
                          "date":  "2026-03-01",
                          "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                          "name":  "CHUNITHM",
-                         "startMinute":  0.01,
+                         "startMinute":  0,
                          "endMinute":  3.88,
                          "startText":  "00:00",
                          "endText":  "00:03",
