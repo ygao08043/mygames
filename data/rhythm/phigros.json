@@ -1,18 +1,18 @@
 {
     "version":  "1.11.2",
-    "generatedAt":  "2026-09-23T21:49:42.7947506+08:00",
+    "generatedAt":  "2026-09-25T22:35:48.0604289+08:00",
     "source":  {
                    "type":  "Phigros TapTap cloud save",
-                   "saveUpdatedAt":  "2026-09-23T13:35:42.265Z",
+                   "saveUpdatedAt":  "2026-09-25T08:06:56.836Z",
                    "metadata":  "SonolusHaniwa/phigros-decrypted-data metadata.json",
                    "metadataSongs":  314,
                    "missingMetadata":  0
                },
     "profile":  {
                     "nickname":  "YMKF",
-                    "rks":  15.41580987,
-                    "calculatedRks":  15.41580987,
-                    "cloudSummaryRks":  15.41581059,
+                    "rks":  15.41624848,
+                    "calculatedRks":  15.41624848,
+                    "cloudSummaryRks":  15.41624832,
                     "rksMode":  "calculated",
                     "phiCount":  20,
                     "fcCount":  30,
@@ -430,18 +430,18 @@
                        "charter":  "198 in Kowloon"
                    },
                    {
-                       "songId":  "KMoeVIP.ZxNX.0",
-                       "title":  "K.Moe (VIP)",
-                       "composer":  "ZxNX",
+                       "songId":  "Rrharil.TeamGrimoire.0",
+                       "title":  "Rrhar\u0027il",
+                       "composer":  "Team Grimoire",
                        "difficulty":  "IN",
                        "difficultyIndex":  2,
-                       "constant":  15.9,
-                       "score":  940859,
-                       "accuracy":  98.57547,
-                       "rks":  14.90926576,
+                       "constant":  16.1,
+                       "score":  937369,
+                       "accuracy":  98.323074,
+                       "rks":  14.9224243,
                        "status":  "S",
                        "isFc":  false,
-                       "charter":  "C.Max (PBM)"
+                       "charter":  "RDRT -p 20:08:31"
                    }
                ],
     "scores":  [
@@ -810,6 +810,20 @@
                        "charter":  "198 in Kowloon"
                    },
                    {
+                       "songId":  "Rrharil.TeamGrimoire.0",
+                       "title":  "Rrhar\u0027il",
+                       "composer":  "Team Grimoire",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  16.1,
+                       "score":  937369,
+                       "accuracy":  98.323074,
+                       "rks":  14.9224243,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  "RDRT -p 20:08:31"
+                   },
+                   {
                        "songId":  "KMoeVIP.ZxNX.0",
                        "title":  "K.Moe (VIP)",
                        "composer":  "ZxNX",
@@ -906,20 +920,6 @@
                        "status":  "S",
                        "isFc":  false,
                        "charter":  "夜明の剣『靈』"
-                   },
-                   {
-                       "songId":  "Rrharil.TeamGrimoire.0",
-                       "title":  "Rrhar\u0027il",
-                       "composer":  "Team Grimoire",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  16.1,
-                       "score":  931908,
-                       "accuracy":  98.092308,
-                       "rks":  14.76387501,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "RDRT -p 20:08:31"
                    },
                    {
                        "songId":  "Trojan.litmus.0",
@@ -3753,6 +3753,11 @@
                       "date":  "2026-09-23",
                       "rks":  15.41580987,
                       "saveUpdatedAt":  "2026-09-23T13:35:42.265Z"
+                  },
+                  {
+                      "date":  "2026-09-25",
+                      "rks":  15.41624848,
+                      "saveUpdatedAt":  "2026-09-25T08:06:56.836Z"
                   }
               ]
 }
