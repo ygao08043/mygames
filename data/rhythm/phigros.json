@@ -1,26 +1,40 @@
 {
     "version":  "1.11.2",
-    "generatedAt":  "2026-09-27T10:42:26.9379387+08:00",
+    "generatedAt":  "2026-09-28T10:00:32.9402603+08:00",
     "source":  {
                    "type":  "Phigros TapTap cloud save",
-                   "saveUpdatedAt":  "2026-09-26T16:24:45.153Z",
+                   "saveUpdatedAt":  "2026-09-27T16:02:59.255Z",
                    "metadata":  "SonolusHaniwa/phigros-decrypted-data metadata.json",
                    "metadataSongs":  314,
                    "missingMetadata":  5
                },
     "profile":  {
                     "nickname":  "YMKF",
-                    "rks":  15.4906168,
-                    "calculatedRks":  15.4906167,
-                    "cloudSummaryRks":  15.4906168,
+                    "rks":  15.5878315,
+                    "calculatedRks":  15.58783162,
+                    "cloudSummaryRks":  15.5878315,
                     "rksMode":  "cloud-summary-fallback",
-                    "phiCount":  20,
-                    "fcCount":  32,
-                    "playedCharts":  229,
+                    "phiCount":  23,
+                    "fcCount":  37,
+                    "playedCharts":  235,
                     "avatar":  "Introduction",
                     "challengeCode":  251
                 },
     "phi3":  [
+                 {
+                     "songId":  "AnotherMe.DAAN.0",
+                     "title":  "Another Me",
+                     "composer":  "D_AAN",
+                     "difficulty":  "IN",
+                     "difficultyIndex":  2,
+                     "constant":  15.6,
+                     "score":  1000000,
+                     "accuracy":  100,
+                     "rks":  15.6,
+                     "status":  "Phi",
+                     "isFc":  true,
+                     "charter":  "NerSAN vs. Ctymax as \"泥头鱼\""
+                 },
                  {
                      "songId":  "LuminousEntitiesLostHeart.NormalMfeatUsagiDenki.0",
                      "title":  "Luminous Entities Lost Heart",
@@ -36,32 +50,18 @@
                      "charter":  "光る星"
                  },
                  {
-                     "songId":  "Re_NascencePsystyleVer.Rinth_live.0",
-                     "title":  "Re_Nascence (Psystyle Ver.) ",
-                     "composer":  "Rinth_live",
+                     "songId":  "HAZARD.Limpid.0",
+                     "title":  "HAZARD",
+                     "composer":  "Limpid",
                      "difficulty":  "IN",
                      "difficultyIndex":  2,
-                     "constant":  14.4,
+                     "constant":  14.8,
                      "score":  1000000,
                      "accuracy":  100,
-                     "rks":  14.4,
+                     "rks":  14.8,
                      "status":  "Phi",
                      "isFc":  true,
-                     "charter":  "NerSAN \u0026 百九十八"
-                 },
-                 {
-                     "songId":  "Cristalisia.onoken.0",
-                     "title":  "Cristalisia",
-                     "composer":  "onoken",
-                     "difficulty":  "IN",
-                     "difficultyIndex":  2,
-                     "constant":  14.4,
-                     "score":  1000000,
-                     "accuracy":  100,
-                     "rks":  14.4,
-                     "status":  "Phi",
-                     "isFc":  true,
-                     "charter":  "Salt"
+                     "charter":  "阿爽"
                  }
              ],
     "best27":  [
@@ -192,6 +192,20 @@
                        "charter":  "Divination Fortune"
                    },
                    {
+                       "songId":  "DerSchneid.Ωμεγα.0",
+                       "title":  "Der Schneid",
+                       "composer":  "Ωμεγα",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  16.1,
+                       "score":  938001,
+                       "accuracy":  99.375877,
+                       "rks":  15.65650259,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  "Der Mut und der Richter"
+                   },
+                   {
                        "songId":  "Cthugha.USAO.0",
                        "title":  "Cthugha",
                        "composer":  "USAO",
@@ -234,6 +248,20 @@
                        "charter":  "上班摸大鱼 a.k.a. 海洋咩兔"
                    },
                    {
+                       "songId":  "AnotherMe.DAAN.0",
+                       "title":  "Another Me",
+                       "composer":  "D_AAN",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  15.6,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  15.6,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "NerSAN vs. Ctymax as \"泥头鱼\""
+                   },
+                   {
                        "songId":  "BANGINGSTRIKE.DewPleiades.0",
                        "title":  "BANGING STRIKE",
                        "composer":  "Dew Pleiades",
@@ -262,18 +290,18 @@
                        "charter":  "artifact::\u003c0x04, 0x53, 0x12\u003e"
                    },
                    {
-                       "songId":  "AnotherMe.DAAN.0",
-                       "title":  "Another Me",
-                       "composer":  "D_AAN",
+                       "songId":  "Kerberos.Zris.0",
+                       "title":  "Kerberos",
+                       "composer":  "Zris",
                        "difficulty":  "IN",
                        "difficultyIndex":  2,
-                       "constant":  15.6,
-                       "score":  998175,
-                       "accuracy":  99.858521,
-                       "rks":  15.50206175,
-                       "status":  "V",
-                       "isFc":  false,
-                       "charter":  "NerSAN vs. Ctymax as \"泥头鱼\""
+                       "constant":  15.8,
+                       "score":  996457,
+                       "accuracy":  99.606339,
+                       "rks":  15.52477129,
+                       "status":  "FC",
+                       "isFc":  true,
+                       "charter":  "Snorkel vs. NerSAN"
                    },
                    {
                        "songId":  "DESTRUCTION321.Normal1zervsBrokenNerdz.0",
@@ -288,6 +316,20 @@
                        "status":  "S",
                        "isFc":  false,
                        "charter":  "{Destruction}"
+                   },
+                   {
+                       "songId":  "ElCondorPasaPhigrosEdit.PlasticFruits.0",
+                       "title":  "El Condor Pasa (Phigros Edit)",
+                       "composer":  "Plastic Fruits",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  15.6,
+                       "score":  972140,
+                       "accuracy":  99.789467,
+                       "rks":  15.45437182,
+                       "status":  "V",
+                       "isFc":  false,
+                       "charter":  "XMT小咩兔"
                    },
                    {
                        "songId":  "PANICPARADISE.DJSHIONY.0",
@@ -400,48 +442,6 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "光る星"
-                   },
-                   {
-                       "songId":  "Kerberos.Zris.0",
-                       "title":  "Kerberos",
-                       "composer":  "Zris",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  15.8,
-                       "score":  980031,
-                       "accuracy":  99.110428,
-                       "rks":  15.18149707,
-                       "status":  "V",
-                       "isFc":  false,
-                       "charter":  "Snorkel vs. NerSAN"
-                   },
-                   {
-                       "songId":  "Chronostasis.黒皇帝.0",
-                       "title":  "Chronostasis",
-                       "composer":  "黒皇帝",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  16,
-                       "score":  952130,
-                       "accuracy":  98.812218,
-                       "rks":  15.16650209,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "Gausbon fixed by XMT"
-                   },
-                   {
-                       "songId":  "AfterZABANIYAMUGEdit.Daily天利.0",
-                       "title":  "After ZABANIYA (MUG Edit)",
-                       "composer":  "Daily天利",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  15.8,
-                       "score":  945743,
-                       "accuracy":  98.946892,
-                       "rks":  15.06913724,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "After CHARTERS"
                    }
                ],
     "scores":  [
@@ -572,6 +572,20 @@
                        "charter":  "Divination Fortune"
                    },
                    {
+                       "songId":  "DerSchneid.Ωμεγα.0",
+                       "title":  "Der Schneid",
+                       "composer":  "Ωμεγα",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  16.1,
+                       "score":  938001,
+                       "accuracy":  99.375877,
+                       "rks":  15.65650259,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  "Der Mut und der Richter"
+                   },
+                   {
                        "songId":  "Cthugha.USAO.0",
                        "title":  "Cthugha",
                        "composer":  "USAO",
@@ -614,6 +628,20 @@
                        "charter":  "上班摸大鱼 a.k.a. 海洋咩兔"
                    },
                    {
+                       "songId":  "AnotherMe.DAAN.0",
+                       "title":  "Another Me",
+                       "composer":  "D_AAN",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  15.6,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  15.6,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "NerSAN vs. Ctymax as \"泥头鱼\""
+                   },
+                   {
                        "songId":  "BANGINGSTRIKE.DewPleiades.0",
                        "title":  "BANGING STRIKE",
                        "composer":  "Dew Pleiades",
@@ -642,18 +670,18 @@
                        "charter":  "artifact::\u003c0x04, 0x53, 0x12\u003e"
                    },
                    {
-                       "songId":  "AnotherMe.DAAN.0",
-                       "title":  "Another Me",
-                       "composer":  "D_AAN",
+                       "songId":  "Kerberos.Zris.0",
+                       "title":  "Kerberos",
+                       "composer":  "Zris",
                        "difficulty":  "IN",
                        "difficultyIndex":  2,
-                       "constant":  15.6,
-                       "score":  998175,
-                       "accuracy":  99.858521,
-                       "rks":  15.50206175,
-                       "status":  "V",
-                       "isFc":  false,
-                       "charter":  "NerSAN vs. Ctymax as \"泥头鱼\""
+                       "constant":  15.8,
+                       "score":  996457,
+                       "accuracy":  99.606339,
+                       "rks":  15.52477129,
+                       "status":  "FC",
+                       "isFc":  true,
+                       "charter":  "Snorkel vs. NerSAN"
                    },
                    {
                        "songId":  "DESTRUCTION321.Normal1zervsBrokenNerdz.0",
@@ -668,6 +696,20 @@
                        "status":  "S",
                        "isFc":  false,
                        "charter":  "{Destruction}"
+                   },
+                   {
+                       "songId":  "ElCondorPasaPhigrosEdit.PlasticFruits.0",
+                       "title":  "El Condor Pasa (Phigros Edit)",
+                       "composer":  "Plastic Fruits",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  15.6,
+                       "score":  972140,
+                       "accuracy":  99.789467,
+                       "rks":  15.45437182,
+                       "status":  "V",
+                       "isFc":  false,
+                       "charter":  "XMT小咩兔"
                    },
                    {
                        "songId":  "PANICPARADISE.DJSHIONY.0",
@@ -782,20 +824,6 @@
                        "charter":  "光る星"
                    },
                    {
-                       "songId":  "Kerberos.Zris.0",
-                       "title":  "Kerberos",
-                       "composer":  "Zris",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  15.8,
-                       "score":  980031,
-                       "accuracy":  99.110428,
-                       "rks":  15.18149707,
-                       "status":  "V",
-                       "isFc":  false,
-                       "charter":  "Snorkel vs. NerSAN"
-                   },
-                   {
                        "songId":  "Chronostasis.黒皇帝.0",
                        "title":  "Chronostasis",
                        "composer":  "黒皇帝",
@@ -880,20 +908,6 @@
                        "charter":  "晨 vs. 阿爽"
                    },
                    {
-                       "songId":  "DerSchneid.Ωμεγα.0",
-                       "title":  "Der Schneid",
-                       "composer":  "Ωμεγα",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  16.1,
-                       "score":  927423,
-                       "accuracy":  98.292427,
-                       "rks":  14.90131915,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "Der Mut und der Richter"
-                   },
-                   {
                        "songId":  "Chronomia.Lime.0",
                        "title":  "Chronomia",
                        "composer":  "Lime",
@@ -934,6 +948,20 @@
                        "status":  "S",
                        "isFc":  false,
                        "charter":  "Rft."
+                   },
+                   {
+                       "songId":  "HAZARD.Limpid.0",
+                       "title":  "HAZARD",
+                       "composer":  "Limpid",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  14.8,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  14.8,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "阿爽"
                    },
                    {
                        "songId":  "Igallta.SeURa.0",
@@ -1046,6 +1074,20 @@
                        "status":  "A",
                        "isFc":  false,
                        "charter":  "Hara is golden, Kuma is golden"
+                   },
+                   {
+                       "songId":  "Nhelv.Silentroom.0",
+                       "title":  "Nhelv",
+                       "composer":  "Silentroom",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  15.6,
+                       "score":  936068,
+                       "accuracy":  98.445374,
+                       "rks":  14.54074445,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  "森德雷斯 vs. 百九十八"
                    },
                    {
                        "songId":  "ComputeItWithSomeDevilishAlcoholicSteampunkEngines.かめりあ.0",
@@ -1202,20 +1244,6 @@
                        "charter":  "Sempiternal Fxxxxxx Resolution!"
                    },
                    {
-                       "songId":  "Cristalisia.onoken.0",
-                       "title":  "Cristalisia",
-                       "composer":  "onoken",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  14.4,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  14.4,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "Salt"
-                   },
-                   {
                        "songId":  "Re_NascencePsystyleVer.Rinth_live.0",
                        "title":  "Re_Nascence (Psystyle Ver.) ",
                        "composer":  "Rinth_live",
@@ -1228,6 +1256,20 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "NerSAN \u0026 百九十八"
+                   },
+                   {
+                       "songId":  "Cristalisia.onoken.0",
+                       "title":  "Cristalisia",
+                       "composer":  "onoken",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  14.4,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  14.4,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "Salt"
                    },
                    {
                        "songId":  "NickofTime.P4koo.0",
@@ -1496,18 +1538,18 @@
                        "charter":  "XMT小咩兔 vs. 上班睡大觉_Sleepyhead"
                    },
                    {
-                       "songId":  "HAZARD.Limpid.0",
-                       "title":  "HAZARD",
-                       "composer":  "Limpid",
+                       "songId":  "OnAndOn.ETIAfeatJenga.0",
+                       "title":  "On And On!!",
+                       "composer":  "ETIA. feat. Jenga",
                        "difficulty":  "IN",
                        "difficultyIndex":  2,
-                       "constant":  14.8,
-                       "score":  951446,
-                       "accuracy":  98.894562,
-                       "rks":  14.08179841,
+                       "constant":  15.2,
+                       "score":  935247,
+                       "accuracy":  98.307228,
+                       "rks":  14.077947289999999,
                        "status":  "S",
                        "isFc":  false,
-                       "charter":  "阿爽"
+                       "charter":  "NerSAN feat. Takanashi Rikko"
                    },
                    {
                        "songId":  "Xepion.Acotto.0",
@@ -2000,20 +2042,6 @@
                        "charter":  "Uvernight from CYTUS II"
                    },
                    {
-                       "songId":  "AnotherMe.NeutralMoon.0",
-                       "title":  "Another Me",
-                       "composer":  "Neutral Moon",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  13.6,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  13.6,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "NerSAN"
-                   },
-                   {
                        "songId":  "TimetoNightSkyfeatLeeYuJin.HyuNKLYDIX.0",
                        "title":  "Time to Night Sky (feat. Lee Yu Jin)",
                        "composer":  "HyuN \u0026 KLYDIX",
@@ -2040,6 +2068,20 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "Ctymax but 5 years later"
+                   },
+                   {
+                       "songId":  "AnotherMe.NeutralMoon.0",
+                       "title":  "Another Me",
+                       "composer":  "Neutral Moon",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  13.6,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  13.6,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "NerSAN"
                    },
                    {
                        "songId":  "千紫万紅.r0yvsWABI.0",
@@ -2560,6 +2602,20 @@
                        "charter":  "百九十八"
                    },
                    {
+                       "songId":  "opia.rN.0",
+                       "title":  "opia",
+                       "composer":  "rN",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  15.6,
+                       "score":  914275,
+                       "accuracy":  96.065575,
+                       "rks":  12.9913828,
+                       "status":  "A",
+                       "isFc":  false,
+                       "charter":  "Jeitie \u0026 CorruptedEntity 『Hollow』"
+                   },
+                   {
                        "songId":  "Ajourneytothemoonlight.Yesod.0",
                        "title":  "A journey to the moonlight",
                        "composer":  "Yesod",
@@ -2740,6 +2796,20 @@
                        "status":  "A",
                        "isFc":  false,
                        "charter":  "弧光 With Opposition"
+                   },
+                   {
+                       "songId":  "CROSSSOUL.HyuNfeatSyepias.0",
+                       "title":  "CROSS†SOUL",
+                       "composer":  "HyuN feat. Syepias",
+                       "difficulty":  "HD",
+                       "difficultyIndex":  1,
+                       "constant":  12.6,
+                       "score":  998941,
+                       "accuracy":  99.882286,
+                       "rks":  12.53416642,
+                       "status":  "FC",
+                       "isFc":  true,
+                       "charter":  "無†極 fixed by Rikko"
                    },
                    {
                        "songId":  "盏茗.茶鸣拾贰律.0",
@@ -2950,20 +3020,6 @@
                        "status":  "A",
                        "isFc":  false,
                        "charter":  "Myna feat.Sleepyhead"
-                   },
-                   {
-                       "songId":  "CROSSSOUL.HyuNfeatSyepias.0",
-                       "title":  "CROSS†SOUL",
-                       "composer":  "HyuN feat. Syepias",
-                       "difficulty":  "HD",
-                       "difficultyIndex":  1,
-                       "constant":  12.6,
-                       "score":  959260,
-                       "accuracy":  99.260094,
-                       "rks":  12.18905889,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "無†極 fixed by Rikko"
                    },
                    {
                        "songId":  "光.姜米條.0",
@@ -3456,6 +3512,20 @@
                        "charter":  "Salt"
                    },
                    {
+                       "songId":  "ArtificialExistence.JunKuroda.0",
+                       "title":  "Artificial Existence",
+                       "composer":  "Jun Kuroda",
+                       "difficulty":  "HD",
+                       "difficultyIndex":  1,
+                       "constant":  9.4,
+                       "score":  942700,
+                       "accuracy":  99.049995,
+                       "rks":  9.00729862,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  "Salt"
+                   },
+                   {
                        "songId":  "AnotherMe.NeutralMoon.0",
                        "title":  "Another Me",
                        "composer":  "Neutral Moon",
@@ -3468,6 +3538,20 @@
                        "status":  "S",
                        "isFc":  false,
                        "charter":  "Another M3"
+                   },
+                   {
+                       "songId":  "Xenolith.Tatsh.0",
+                       "title":  "Xenolith",
+                       "composer":  "Tatsh",
+                       "difficulty":  "HD",
+                       "difficultyIndex":  1,
+                       "constant":  8.5,
+                       "score":  987214,
+                       "accuracy":  99.559105,
+                       "rks":  8.33425559,
+                       "status":  "V",
+                       "isFc":  false,
+                       "charter":  "RXhuang"
                    },
                    {
                        "songId":  "dBdoll.YUESTEVENuen.0",
@@ -3546,11 +3630,11 @@
                        "difficulty":  "HD",
                        "difficultyIndex":  1,
                        "constant":  6.5,
-                       "score":  967710,
-                       "accuracy":  99.211189,
-                       "rks":  6.2741186,
-                       "status":  "V",
-                       "isFc":  false,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  6.5,
+                       "status":  "Phi",
+                       "isFc":  true,
                        "charter":  "阿爽 fixed by Clutter"
                    },
                    {
@@ -3659,14 +3743,14 @@
                                          "phi":  2
                                      },
                               "HD":  {
-                                         "cleared":  23,
-                                         "fullCombo":  4,
-                                         "phi":  0
+                                         "cleared":  25,
+                                         "fullCombo":  6,
+                                         "phi":  1
                                      },
                               "IN":  {
-                                         "cleared":  187,
-                                         "fullCombo":  24,
-                                         "phi":  17
+                                         "cleared":  191,
+                                         "fullCombo":  27,
+                                         "phi":  19
                                      },
                               "AT":  {
                                          "cleared":  17,
@@ -3880,6 +3964,11 @@
                       "date":  "2026-09-27",
                       "rks":  15.4906168,
                       "saveUpdatedAt":  "2026-09-26T16:24:45.153Z"
+                  },
+                  {
+                      "date":  "2026-09-28",
+                      "rks":  15.5878315,
+                      "saveUpdatedAt":  "2026-09-27T16:02:59.255Z"
                   }
               ]
 }
