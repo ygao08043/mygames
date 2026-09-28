@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
     "build":  "v1.20.0",
-    "generatedAt":  "2026-09-28T10:00:45.4983728+08:00",
+    "generatedAt":  "2026-09-28T21:23:38.7810198+08:00",
     "eaId":  "PIANOYMKF",
     "platform":  "pc",
     "source":  {
@@ -14,7 +14,7 @@
                               "key":  "bf1",
                               "title":  "Battlefield 1",
                               "status":  "ok",
-                              "updatedAt":  "2026-09-28T10:00:45.4983728+08:00",
+                              "updatedAt":  "2026-09-28T21:23:38.7810198+08:00",
                               "endpoint":  "https://api.gametools.network/bf1/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "PIANOYMKF",
@@ -8208,7 +8208,7 @@
                               "key":  "bfv",
                               "title":  "Battlefield V",
                               "status":  "ok",
-                              "updatedAt":  "2026-09-28T10:00:45.4983728+08:00",
+                              "updatedAt":  "2026-09-28T21:23:38.7810198+08:00",
                               "endpoint":  "https://api.gametools.network/bfv/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "PIANOYMKF",
@@ -18841,7 +18841,7 @@
                   "bf6":  {
                               "key":  "bf6",
                               "title":  "Battlefield 6",
-                              "status":  "ok",
+                              "status":  "cached",
                               "updatedAt":  "2026-09-28T10:00:45.4983728+08:00",
                               "endpoint":  "https://api.gametools.network/bf6/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
@@ -23354,13 +23354,13 @@
                                           "platform":  "pc",
                                           "platformId":  1
                                       },
-                              "error":  null,
-                              "dataQuality":  "online",
+                              "error":  "curl: (22) The requested URL returned error: 404",
+                              "dataQuality":  "cached",
                               "playniteSeconds":  335340,
                               "playniteName":  "Battlefield 6",
                               "playniteId":  "755257c8-8508-4fd1-9bfd-8be1de672318"
                           }
               },
     "playniteTotalSeconds":  928628,
-    "playniteCapturedAt":  "2026-09-28T10:02:17.8791515+08:00"
+    "playniteCapturedAt":  "2026-09-28T21:24:55.2177377+08:00"
 }
