@@ -23,6 +23,8 @@
     const app = apps[key];
     if (!app || !mobile) return;
     clearAttempt();
+    // Use the official entry confirmed working on the owner's phone.
+    if (key === 'sgs') { window.location.href = app.web; return; }
     if (embedded) {
       if (!page) { window.location.href = fallback; return; }
       showHint('请使用右上角菜单，在系统浏览器中打开本页，再点击打开 App。'); return;
@@ -50,6 +52,7 @@
   });
   if (page) {
     const requested = new URLSearchParams(location.search).get('app');
+    if (requested === 'delta') document.querySelector('[data-app="delta"]').classList.add('selected');
     for (const [key, app] of Object.entries(apps)) {
       const card = document.querySelector('[data-app="' + key + '"]');
       if (key === requested) card.classList.add('selected');
