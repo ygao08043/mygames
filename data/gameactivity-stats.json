@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
-    "build":  "v1.20.1-fix1",
-    "generatedAt":  "2026-09-29T12:56:31.8037352+08:00",
+    "build":  "v1.20.1-fix2",
+    "generatedAt":  "2026-09-29T14:00:05.7595326+08:00",
     "source":  {
                    "provider":  "Playnite GameActivity",
                    "fields":  [
@@ -15,15 +15,15 @@
     "analyticsStart":  "2026-03-01",
     "coverageStart":  "2026-03-01",
     "coverageEnd":  "2026-09-29",
-    "sessionCount":  1635,
+    "sessionCount":  1636,
     "syntheticSessionCount":  4,
     "currentMonth":  "2026-09",
     "currentYear":  "2026",
     "totals":  {
-                   "recordedSeconds":  3436181,
-                   "last7DaysSeconds":  106187,
-                   "currentMonthSeconds":  411512,
-                   "currentYearSeconds":  3436181,
+                   "recordedSeconds":  3437872,
+                   "last7DaysSeconds":  107878,
+                   "currentMonthSeconds":  413203,
+                   "currentYearSeconds":  3437872,
                    "activeDays":  212
                },
     "daily":  [
@@ -877,7 +877,7 @@
                   },
                   {
                       "date":  "2026-09-29",
-                      "seconds":  10841
+                      "seconds":  12532
                   }
               ],
     "weekly":  [
@@ -1039,7 +1039,7 @@
                    {
                        "start":  "2026-09-28",
                        "label":  "9/28",
-                       "seconds":  31132
+                       "seconds":  32823
                    }
                ],
     "monthly":  [
@@ -1076,7 +1076,7 @@
                     {
                         "month":  "2026-09",
                         "label":  "26/09",
-                        "seconds":  411512
+                        "seconds":  413203
                     }
                 ],
     "hourly":  [
@@ -1134,7 +1134,7 @@
                    },
                    {
                        "hour":  13,
-                       "seconds":  117616
+                       "seconds":  119307
                    },
                    {
                        "hour":  14,
@@ -1186,7 +1186,7 @@
                     {
                         "day":  1,
                         "label":  "周二",
-                        "seconds":  438883
+                        "seconds":  440574
                     },
                     {
                         "day":  2,
@@ -1273,7 +1273,7 @@
                                                   },
                                                   {
                                                       "hour":  13,
-                                                      "seconds":  19607
+                                                      "seconds":  21298
                                                   },
                                                   {
                                                       "hour":  14,
@@ -1325,7 +1325,7 @@
                                                    {
                                                        "day":  1,
                                                        "label":  "周二",
-                                                       "seconds":  66793
+                                                       "seconds":  68484
                                                    },
                                                    {
                                                        "day":  2,
@@ -2221,6 +2221,11 @@
                                "seconds":  2008
                            },
                            {
+                               "id":  "66dc715c-d550-4152-a58b-39a4e6e33318",
+                               "name":  "生死狙击",
+                               "seconds":  1691
+                           },
+                           {
                                "id":  "0a823c8e-5a90-4685-8edf-0d9edf23b71d",
                                "name":  "英雄联盟手游",
                                "seconds":  782
@@ -2301,6 +2306,11 @@
                                   "id":  "86dcd7ea-9dce-4231-93bd-b7d4ccd8e8f1",
                                   "name":  "元气骑士",
                                   "seconds":  1787
+                              },
+                              {
+                                  "id":  "66dc715c-d550-4152-a58b-39a4e6e33318",
+                                  "name":  "生死狙击",
+                                  "seconds":  1691
                               },
                               {
                                   "id":  "0a823c8e-5a90-4685-8edf-0d9edf23b71d",
@@ -2430,6 +2440,11 @@
                                  "seconds":  1789
                              },
                              {
+                                 "id":  "66dc715c-d550-4152-a58b-39a4e6e33318",
+                                 "name":  "生死狙击",
+                                 "seconds":  1735
+                             },
+                             {
                                  "id":  "3c0b3f5d-79bf-4260-9494-d72477b8e522",
                                  "name":  "Counter-Strike 2",
                                  "seconds":  1211
@@ -2463,11 +2478,6 @@
                                  "id":  "345007a4-407d-415e-ac50-585756ce0f1c",
                                  "name":  "Zuma Deluxe",
                                  "seconds":  312
-                             },
-                             {
-                                 "id":  "66dc715c-d550-4152-a58b-39a4e6e33318",
-                                 "name":  "生死狙击",
-                                 "seconds":  44
                              },
                              {
                                  "id":  "755257c8-8508-4fd1-9bfd-8be1de672318",
@@ -2880,6 +2890,11 @@
                                                "seconds":  1787
                                            },
                                            {
+                                               "id":  "66dc715c-d550-4152-a58b-39a4e6e33318",
+                                               "name":  "生死狙击",
+                                               "seconds":  1691
+                                           },
+                                           {
                                                "id":  "0a823c8e-5a90-4685-8edf-0d9edf23b71d",
                                                "name":  "英雄联盟手游",
                                                "seconds":  782
@@ -2903,6 +2918,12 @@
                          }
                      ],
     "lastPlayedGames":  [
+                            {
+                                "id":  "66dc715c-d550-4152-a58b-39a4e6e33318",
+                                "name":  "生死狙击",
+                                "date":  "2026-09-29",
+                                "lastPlayed":  "2026-09-29T13:53:15.9985618"
+                            },
                             {
                                 "id":  "901a387c-5431-4985-89b3-128142b21167",
                                 "name":  "Battlefield 1",
@@ -3006,12 +3027,6 @@
                                 "lastPlayed":  "2026-08-22T20:39:00.0000000"
                             },
                             {
-                                "id":  "66dc715c-d550-4152-a58b-39a4e6e33318",
-                                "name":  "生死狙击",
-                                "date":  "2026-08-18",
-                                "lastPlayed":  "2026-08-18T22:08:24.3437585"
-                            },
-                            {
                                 "id":  "409ef4d9-ef3b-47ee-bbef-57a565825af2",
                                 "name":  "斗牌魂",
                                 "date":  "2026-08-15",
@@ -3091,7 +3106,7 @@
                                  "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                  "name":  "雀魂麻将",
                                  "seconds":  146754,
-                                 "totalSeconds":  411512
+                                 "totalSeconds":  413203
                              },
                              {
                                  "period":  "2026-08",
@@ -3149,7 +3164,7 @@
                                 "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                 "name":  "雀魂麻将",
                                 "seconds":  1696781,
-                                "totalSeconds":  3436181
+                                "totalSeconds":  3437872
                             }
                         ],
     "timelineWindowDays":  14,
@@ -21369,6 +21384,16 @@
                          "startText":  "12:07",
                          "endText":  "12:45",
                          "seconds":  2285
+                     },
+                     {
+                         "date":  "2026-09-29",
+                         "id":  "66dc715c-d550-4152-a58b-39a4e6e33318",
+                         "name":  "生死狙击",
+                         "startMinute":  805.08,
+                         "endMinute":  833.27,
+                         "startText":  "13:25",
+                         "endText":  "13:53",
+                         "seconds":  1691
                      }
                  ]
 }

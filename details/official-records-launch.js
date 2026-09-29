@@ -52,7 +52,10 @@
   });
   if (page) {
     const requested = new URLSearchParams(location.search).get('app');
-    if (requested === 'delta') document.querySelector('[data-app="delta"]').classList.add('selected');
+    if (requested === 'delta' || requested === 'ssjj') {
+      const selectedCard = document.querySelector('[data-app="' + requested + '"]');
+      if (selectedCard) selectedCard.classList.add('selected');
+    }
     for (const [key, app] of Object.entries(apps)) {
       const card = document.querySelector('[data-app="' + key + '"]');
       if (key === requested) card.classList.add('selected');
