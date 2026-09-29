@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
-    "build":  "v1.20.0",
-    "generatedAt":  "2026-09-29T11:33:59.6773123+08:00",
+    "build":  "v1.20.1-fix1",
+    "generatedAt":  "2026-09-29T12:55:42.8639873+08:00",
     "eaId":  "PIANOYMKF",
     "platform":  "pc",
     "source":  {
@@ -14,23 +14,23 @@
                               "key":  "bf1",
                               "title":  "Battlefield 1",
                               "status":  "ok",
-                              "updatedAt":  "2026-09-29T11:33:59.6773123+08:00",
+                              "updatedAt":  "2026-09-29T12:55:42.8639873+08:00",
                               "endpoint":  "https://api.gametools.network/bf1/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "PIANOYMKF",
                                               "avatar":  "https://eaavatarservice.akamaized.net/production/avatar/prod/userAvatar/47880937/416x416.JPEG",
-                                              "rank":  51,
-                                              "secondsPlayed":  189458,
-                                              "kills":  1420,
-                                              "deaths":  2211,
-                                              "kd":  0.64,
-                                              "wins":  70,
+                                              "rank":  52,
+                                              "secondsPlayed":  191210,
+                                              "kills":  1439,
+                                              "deaths":  2229,
+                                              "kd":  0.65,
+                                              "wins":  71,
                                               "losses":  88,
-                                              "rounds":  158,
-                                              "winPercent":  44.3,
+                                              "rounds":  159,
+                                              "winPercent":  44.65,
                                               "kpm":  0.45,
-                                              "spm":  678.7,
-                                              "accuracy":  7.42,
+                                              "spm":  677.82,
+                                              "accuracy":  7.45,
                                               "headshots":  159,
                                               "longestHeadshot":  227.29,
                                               "score":  null
@@ -98,6 +98,18 @@
                                                     "losses":  1,
                                                     "rounds":  1,
                                                     "score":  null
+                                                },
+                                                {
+                                                    "kind":  "sync_interval",
+                                                    "startAt":  "2026-09-29T11:33:59.6773123+08:00",
+                                                    "endAt":  "2026-09-29T12:55:42.8639873+08:00",
+                                                    "secondsPlayed":  1752,
+                                                    "kills":  19,
+                                                    "deaths":  18,
+                                                    "wins":  1,
+                                                    "losses":  0,
+                                                    "rounds":  1,
+                                                    "score":  null
                                                 }
                                             ],
                               "raw":  {
@@ -106,41 +118,41 @@
                                                         "avatar":  "https://eaavatarservice.akamaized.net/production/avatar/prod/userAvatar/47880937/416x416.JPEG",
                                                         "userName":  "PIANOYMKF",
                                                         "id":  1007369860725,
-                                                        "rank":  51,
+                                                        "rank":  52,
                                                         "rankImg":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/46/64/Rank06-2ec02d6d.png",
-                                                        "rankName":  "Rank 51",
-                                                        "skill":  260.32,
-                                                        "scorePerMinute":  678.7,
+                                                        "rankName":  "Rank 52",
+                                                        "skill":  255.36,
+                                                        "scorePerMinute":  677.82,
                                                         "killsPerMinute":  0.45,
-                                                        "winPercent":  44.3,
+                                                        "winPercent":  44.65,
                                                         "bestClass":  "Support",
-                                                        "accuracy":  7.42,
-                                                        "headshots":  11.2,
-                                                        "timePlayed":  "2 days, 4:37:38",
-                                                        "secondsPlayed":  189458,
-                                                        "killDeath":  0.64,
+                                                        "accuracy":  7.45,
+                                                        "headshots":  11.05,
+                                                        "timePlayed":  "2 days, 5:06:50",
+                                                        "secondsPlayed":  191210,
+                                                        "killDeath":  0.65,
                                                         "infantryKillDeath":  0.54,
                                                         "infantryKillsPerMinute":  0.38,
-                                                        "kills":  1420,
-                                                        "deaths":  2211,
-                                                        "wins":  70,
+                                                        "kills":  1439,
+                                                        "deaths":  2229,
+                                                        "wins":  71,
                                                         "loses":  88,
                                                         "longestHeadShot":  227.29,
                                                         "revives":  64.0,
-                                                        "dogtagsTaken":  10,
+                                                        "dogtagsTaken":  12,
                                                         "highestKillStreak":  13,
-                                                        "roundsPlayed":  158,
-                                                        "awardScore":  696000.0,
-                                                        "bonusScore":  305949.0,
-                                                        "squadScore":  116644.0,
-                                                        "currentRankProgress":  58080.0,
+                                                        "roundsPlayed":  159,
+                                                        "awardScore":  699500.0,
+                                                        "bonusScore":  309994.0,
+                                                        "squadScore":  117044.0,
+                                                        "currentRankProgress":  5100.0,
                                                         "totalRankProgress":  70000.0,
-                                                        "avengerKills":  132,
+                                                        "avengerKills":  133,
                                                         "saviorKills":  146,
                                                         "headShots":  159,
                                                         "heals":  91.0,
                                                         "repairs":  36.0,
-                                                        "killAssists":  103.0
+                                                        "killAssists":  104.0
                                                     },
                                           "weapons":  {
                                                           "userId":  1015988860725,
@@ -320,14 +332,14 @@
                                                                               "weaponName":  "Anti-Tank Grenade",
                                                                               "type":  "Gadget",
                                                                               "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/75/19/GadgetATGrenade-4b135d46.png",
-                                                                              "timeEquipped":  1664,
+                                                                              "timeEquipped":  1680,
                                                                               "kills":  11,
-                                                                              "killsPerMinute":  0.4,
+                                                                              "killsPerMinute":  0.39,
                                                                               "headshotKills":  0,
                                                                               "headshots":  0.0,
-                                                                              "shotsFired":  402,
+                                                                              "shotsFired":  406,
                                                                               "shotsHit":  59,
-                                                                              "accuracy":  14.7,
+                                                                              "accuracy":  14.5,
                                                                               "hitVKills":  5.36
                                                                           },
                                                                           {
@@ -376,14 +388,14 @@
                                                                               "weaponName":  "Tripwire Bomb â HE",
                                                                               "type":  "Gadget",
                                                                               "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/22/24/GadgetTripWireGrenade-1618bbc3.png",
-                                                                              "timeEquipped":  271,
+                                                                              "timeEquipped":  285,
                                                                               "kills":  11,
-                                                                              "killsPerMinute":  2.44,
+                                                                              "killsPerMinute":  2.32,
                                                                               "headshotKills":  0,
                                                                               "headshots":  0.0,
-                                                                              "shotsFired":  121,
+                                                                              "shotsFired":  124,
                                                                               "shotsHit":  20,
-                                                                              "accuracy":  16.5,
+                                                                              "accuracy":  16.1,
                                                                               "hitVKills":  1.82
                                                                           },
                                                                           {
@@ -404,14 +416,14 @@
                                                                               "weaponName":  "Flare Gun â Spot",
                                                                               "type":  "Gadget",
                                                                               "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/68/56/GadgetWebleyScottFlaregun-4438a413.png",
-                                                                              "timeEquipped":  1752,
+                                                                              "timeEquipped":  1770,
                                                                               "kills":  0,
                                                                               "killsPerMinute":  0.0,
                                                                               "headshotKills":  0,
                                                                               "headshots":  0.0,
-                                                                              "shotsFired":  456,
+                                                                              "shotsFired":  461,
                                                                               "shotsHit":  122,
-                                                                              "accuracy":  26.8,
+                                                                              "accuracy":  26.5,
                                                                               "hitVKills":  0.0
                                                                           },
                                                                           {
@@ -530,14 +542,14 @@
                                                                               "weaponName":  "AT Rocket Gun",
                                                                               "type":  "Gadget",
                                                                               "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/14/24/GadgetBreechgun-f2188c3f.png",
-                                                                              "timeEquipped":  3172,
+                                                                              "timeEquipped":  3259,
                                                                               "kills":  22,
-                                                                              "killsPerMinute":  0.42,
+                                                                              "killsPerMinute":  0.41,
                                                                               "headshotKills":  1,
                                                                               "headshots":  4.55,
-                                                                              "shotsFired":  196,
+                                                                              "shotsFired":  201,
                                                                               "shotsHit":  59,
-                                                                              "accuracy":  30.1,
+                                                                              "accuracy":  29.4,
                                                                               "hitVKills":  2.68
                                                                           },
                                                                           {
@@ -1426,15 +1438,15 @@
                                                                               "weaponName":  "M1911",
                                                                               "type":  "Sidearm",
                                                                               "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/19/50/Colt1911-ed324bf1.png",
-                                                                              "timeEquipped":  6094,
+                                                                              "timeEquipped":  6160,
                                                                               "kills":  69,
-                                                                              "killsPerMinute":  0.68,
+                                                                              "killsPerMinute":  0.67,
                                                                               "headshotKills":  6,
                                                                               "headshots":  8.7,
-                                                                              "shotsFired":  1670,
-                                                                              "shotsHit":  280,
+                                                                              "shotsFired":  1691,
+                                                                              "shotsHit":  284,
                                                                               "accuracy":  16.8,
-                                                                              "hitVKills":  4.06
+                                                                              "hitVKills":  4.12
                                                                           },
                                                                           {
                                                                               "weaponName":  "Kolibri",
@@ -1762,15 +1774,15 @@
                                                                               "weaponName":  "MG15 n.A. Low Weight",
                                                                               "type":  "Lmg",
                                                                               "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/119/26/Bergmann1915MG-891af31f.png",
-                                                                              "timeEquipped":  186,
-                                                                              "kills":  4,
-                                                                              "killsPerMinute":  1.29,
+                                                                              "timeEquipped":  236,
+                                                                              "kills":  5,
+                                                                              "killsPerMinute":  1.27,
                                                                               "headshotKills":  1,
-                                                                              "headshots":  25.0,
-                                                                              "shotsFired":  183,
-                                                                              "shotsHit":  21,
-                                                                              "accuracy":  11.5,
-                                                                              "hitVKills":  5.25
+                                                                              "headshots":  20.0,
+                                                                              "shotsFired":  233,
+                                                                              "shotsHit":  25,
+                                                                              "accuracy":  10.7,
+                                                                              "hitVKills":  5.0
                                                                           },
                                                                           {
                                                                               "weaponName":  "Chauchat Telescopic",
@@ -2127,8 +2139,8 @@
                                                                               "type":  "Melee",
                                                                               "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/105/98/GadgetSaber-9762402c.png",
                                                                               "timeEquipped":  1,
-                                                                              "kills":  9,
-                                                                              "killsPerMinute":  540.0,
+                                                                              "kills":  14,
+                                                                              "killsPerMinute":  840.0,
                                                                               "headshotKills":  0,
                                                                               "headshots":  0.0,
                                                                               "shotsFired":  3,
@@ -2462,15 +2474,15 @@
                                                                               "weaponName":  "Yatagan Sword",
                                                                               "type":  "Melee",
                                                                               "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/66/72/YataganSword-be484415.png",
-                                                                              "timeEquipped":  528,
-                                                                              "kills":  5,
-                                                                              "killsPerMinute":  0.57,
+                                                                              "timeEquipped":  535,
+                                                                              "kills":  7,
+                                                                              "killsPerMinute":  0.79,
                                                                               "headshotKills":  0,
                                                                               "headshots":  0.0,
-                                                                              "shotsFired":  386,
-                                                                              "shotsHit":  9,
+                                                                              "shotsFired":  391,
+                                                                              "shotsHit":  12,
                                                                               "accuracy":  0.0,
-                                                                              "hitVKills":  1.8
+                                                                              "hitVKills":  1.71
                                                                           },
                                                                           {
                                                                               "weaponName":  "Meat Cleaver",
@@ -2714,15 +2726,15 @@
                                                                               "weaponName":  "Russian 1895 Infantry",
                                                                               "type":  "Rifle",
                                                                               "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/105/43/Winchester1895-69d56c0b.png",
-                                                                              "timeEquipped":  166,
-                                                                              "kills":  1,
-                                                                              "killsPerMinute":  0.36,
+                                                                              "timeEquipped":  187,
+                                                                              "kills":  2,
+                                                                              "killsPerMinute":  0.64,
                                                                               "headshotKills":  0,
                                                                               "headshots":  0.0,
-                                                                              "shotsFired":  34,
-                                                                              "shotsHit":  0,
-                                                                              "accuracy":  0.0,
-                                                                              "hitVKills":  0.0
+                                                                              "shotsFired":  36,
+                                                                              "shotsHit":  2,
+                                                                              "accuracy":  5.6,
+                                                                              "hitVKills":  1.0
                                                                           },
                                                                           {
                                                                               "weaponName":  "M1903 Sniper",
@@ -2966,29 +2978,29 @@
                                                                               "weaponName":  "M1917 Enfield Silenced",
                                                                               "type":  "Rifle",
                                                                               "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/45/63/Enfield1917-d33fc14d.png",
-                                                                              "timeEquipped":  11713,
-                                                                              "kills":  140,
-                                                                              "killsPerMinute":  0.72,
+                                                                              "timeEquipped":  12141,
+                                                                              "kills":  142,
+                                                                              "killsPerMinute":  0.7,
                                                                               "headshotKills":  51,
-                                                                              "headshots":  36.43,
-                                                                              "shotsFired":  796,
-                                                                              "shotsHit":  256,
+                                                                              "headshots":  35.92,
+                                                                              "shotsFired":  814,
+                                                                              "shotsHit":  262,
                                                                               "accuracy":  32.2,
-                                                                              "hitVKills":  1.83
+                                                                              "hitVKills":  1.85
                                                                           },
                                                                           {
                                                                               "weaponName":  "Incendiary Grenade",
                                                                               "type":  "Grenade",
                                                                               "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/104/44/GadgetIncindiary-68d49a3a.png",
-                                                                              "timeEquipped":  134,
+                                                                              "timeEquipped":  136,
                                                                               "kills":  19,
-                                                                              "killsPerMinute":  8.51,
+                                                                              "killsPerMinute":  8.38,
                                                                               "headshotKills":  0,
                                                                               "headshots":  0.0,
-                                                                              "shotsFired":  255,
-                                                                              "shotsHit":  277,
+                                                                              "shotsFired":  257,
+                                                                              "shotsHit":  278,
                                                                               "accuracy":  100.0,
-                                                                              "hitVKills":  14.58
+                                                                              "hitVKills":  14.63
                                                                           },
                                                                           {
                                                                               "weaponName":  "Rifle Grenade â FRG",
@@ -3274,15 +3286,15 @@
                                                                               "weaponName":  "Frommer Stop Auto",
                                                                               "type":  "Tanker/pilot",
                                                                               "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/80/109/FrommerStop-506df97e.png",
-                                                                              "timeEquipped":  1984,
-                                                                              "kills":  27,
-                                                                              "killsPerMinute":  0.82,
+                                                                              "timeEquipped":  2004,
+                                                                              "kills":  28,
+                                                                              "killsPerMinute":  0.84,
                                                                               "headshotKills":  3,
-                                                                              "headshots":  11.11,
-                                                                              "shotsFired":  1351,
-                                                                              "shotsHit":  172,
-                                                                              "accuracy":  12.7,
-                                                                              "hitVKills":  6.37
+                                                                              "headshots":  10.71,
+                                                                              "shotsFired":  1370,
+                                                                              "shotsHit":  177,
+                                                                              "accuracy":  12.9,
+                                                                              "hitVKills":  6.32
                                                                           },
                                                                           {
                                                                               "weaponName":  "P08 Artillerie",
@@ -3414,15 +3426,15 @@
                                                                               "weaponName":  "Automatico M1918 Trench",
                                                                               "type":  "Smg",
                                                                               "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/61/86/Beretta1918-3daab991.png",
-                                                                              "timeEquipped":  4271,
-                                                                              "kills":  48,
-                                                                              "killsPerMinute":  0.67,
+                                                                              "timeEquipped":  4488,
+                                                                              "kills":  53,
+                                                                              "killsPerMinute":  0.71,
                                                                               "headshotKills":  6,
-                                                                              "headshots":  12.5,
-                                                                              "shotsFired":  2942,
-                                                                              "shotsHit":  364,
-                                                                              "accuracy":  12.4,
-                                                                              "hitVKills":  7.58
+                                                                              "headshots":  11.32,
+                                                                              "shotsFired":  3158,
+                                                                              "shotsHit":  390,
+                                                                              "accuracy":  12.3,
+                                                                              "hitVKills":  7.36
                                                                           },
                                                                           {
                                                                               "weaponName":  "Hellriegel 1915 Factory",
@@ -3601,24 +3613,14 @@
                                                           "id":  1007369860725,
                                                           "classes":  [
                                                                           {
-                                                                              "className":  "Assault",
-                                                                              "score":  100379,
-                                                                              "kills":  180,
-                                                                              "kpm":  0.53,
-                                                                              "image":  "https://cdn.gametools.network/classes/bf1/white/Assault.png",
-                                                                              "altImage":  "https://cdn.gametools.network/classes/bf1/black/Assault.png",
-                                                                              "timePlayed":  "5:40:48.700000",
-                                                                              "secondsPlayed":  20448
-                                                                          },
-                                                                          {
-                                                                              "className":  "Support",
-                                                                              "score":  548883,
-                                                                              "kills":  393,
-                                                                              "kpm":  0.28,
-                                                                              "image":  "https://cdn.gametools.network/classes/bf1/white/Support.png",
-                                                                              "altImage":  "https://cdn.gametools.network/classes/bf1/black/Support.png",
-                                                                              "timePlayed":  "23:13:37.900000",
-                                                                              "secondsPlayed":  83617
+                                                                              "className":  "Scout",
+                                                                              "score":  223060,
+                                                                              "kills":  372,
+                                                                              "kpm":  0.5,
+                                                                              "image":  "https://cdn.gametools.network/classes/bf1/white/Scout.png",
+                                                                              "altImage":  "https://cdn.gametools.network/classes/bf1/black/Scout.png",
+                                                                              "timePlayed":  "12:19:09.400000",
+                                                                              "secondsPlayed":  44349
                                                                           },
                                                                           {
                                                                               "className":  "Medic",
@@ -3631,34 +3633,34 @@
                                                                               "secondsPlayed":  6220
                                                                           },
                                                                           {
-                                                                              "className":  "Scout",
-                                                                              "score":  219301,
-                                                                              "kills":  369,
-                                                                              "kpm":  0.51,
-                                                                              "image":  "https://cdn.gametools.network/classes/bf1/white/Scout.png",
-                                                                              "altImage":  "https://cdn.gametools.network/classes/bf1/black/Scout.png",
-                                                                              "timePlayed":  "12:08:48.700000",
-                                                                              "secondsPlayed":  43728
+                                                                              "className":  "Support",
+                                                                              "score":  550230,
+                                                                              "kills":  394,
+                                                                              "kpm":  0.28,
+                                                                              "image":  "https://cdn.gametools.network/classes/bf1/white/Support.png",
+                                                                              "altImage":  "https://cdn.gametools.network/classes/bf1/black/Support.png",
+                                                                              "timePlayed":  "23:16:07.700000",
+                                                                              "secondsPlayed":  83767
+                                                                          },
+                                                                          {
+                                                                              "className":  "Assault",
+                                                                              "score":  101836,
+                                                                              "kills":  186,
+                                                                              "kpm":  0.54,
+                                                                              "image":  "https://cdn.gametools.network/classes/bf1/white/Assault.png",
+                                                                              "altImage":  "https://cdn.gametools.network/classes/bf1/black/Assault.png",
+                                                                              "timePlayed":  "5:46:17.700000",
+                                                                              "secondsPlayed":  20777
                                                                           },
                                                                           {
                                                                               "className":  "Cavalry",
-                                                                              "score":  15907,
+                                                                              "score":  18184,
                                                                               "kills":  0,
                                                                               "kpm":  0.0,
                                                                               "image":  "https://cdn.gametools.network/classes/bf1/white/Cavalry.png",
                                                                               "altImage":  "https://cdn.gametools.network/classes/bf1/black/Cavalry.png",
-                                                                              "timePlayed":  "0:58:45.090000",
-                                                                              "secondsPlayed":  3525
-                                                                          },
-                                                                          {
-                                                                              "className":  "Pilot",
-                                                                              "score":  68953,
-                                                                              "kills":  8,
-                                                                              "kpm":  0.03,
-                                                                              "image":  "https://cdn.gametools.network/classes/bf1/white/Pilot.png",
-                                                                              "altImage":  "https://cdn.gametools.network/classes/bf1/black/Pilot.png",
-                                                                              "timePlayed":  "4:43:04.900000",
-                                                                              "secondsPlayed":  16984
+                                                                              "timePlayed":  "1:07:06.530000",
+                                                                              "secondsPlayed":  4026
                                                                           },
                                                                           {
                                                                               "className":  "Tanker",
@@ -3669,6 +3671,16 @@
                                                                               "altImage":  "https://cdn.gametools.network/classes/bf1/black/Tanker.png",
                                                                               "timePlayed":  "3:49:56.400000",
                                                                               "secondsPlayed":  13796
+                                                                          },
+                                                                          {
+                                                                              "className":  "Pilot",
+                                                                              "score":  69593,
+                                                                              "kills":  9,
+                                                                              "kpm":  0.03,
+                                                                              "image":  "https://cdn.gametools.network/classes/bf1/white/Pilot.png",
+                                                                              "altImage":  "https://cdn.gametools.network/classes/bf1/black/Pilot.png",
+                                                                              "timePlayed":  "4:45:43.300000",
+                                                                              "secondsPlayed":  17143
                                                                           }
                                                                       ]
                                                       },
@@ -3721,7 +3733,7 @@
                                                                                 "kills":  8,
                                                                                 "killsPerMinute":  0.2,
                                                                                 "destroyed":  0,
-                                                                                "timeIn":  2348
+                                                                                "timeIn":  2373
                                                                             },
                                                                             {
                                                                                 "vehicleName":  "Putilov garford",
@@ -3764,9 +3776,9 @@
                                                                                 "type":  "Attack plane",
                                                                                 "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/21/69/AHU_Rumpler_CI-eb45a6be.png",
                                                                                 "kills":  16,
-                                                                                "killsPerMinute":  0.25,
+                                                                                "killsPerMinute":  0.24,
                                                                                 "destroyed":  3,
-                                                                                "timeIn":  3845
+                                                                                "timeIn":  3983
                                                                             },
                                                                             {
                                                                                 "vehicleName":  "Gotha g.iv bomber",
@@ -3907,10 +3919,10 @@
                                                                                 "vehicleName":  "Rnas armored car",
                                                                                 "type":  "Land vehicle",
                                                                                 "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/76/108/GBRRollsRoyceArmoredCar-4c6ccdf0.png",
-                                                                                "kills":  7,
-                                                                                "killsPerMinute":  0.66,
+                                                                                "kills":  8,
+                                                                                "killsPerMinute":  0.67,
                                                                                 "destroyed":  0,
-                                                                                "timeIn":  637
+                                                                                "timeIn":  718
                                                                             },
                                                                             {
                                                                                 "vehicleName":  "Romfell armored car",
@@ -3919,7 +3931,7 @@
                                                                                 "kills":  6,
                                                                                 "killsPerMinute":  0.64,
                                                                                 "destroyed":  1,
-                                                                                "timeIn":  562
+                                                                                "timeIn":  564
                                                                             },
                                                                             {
                                                                                 "vehicleName":  "Ev4 armored car",
@@ -3971,9 +3983,9 @@
                                                                                 "type":  "Stationary weapon",
                                                                                 "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/118/13/GERFk96nA-760d0461.png",
                                                                                 "kills":  5,
-                                                                                "killsPerMinute":  0.33,
+                                                                                "killsPerMinute":  0.31,
                                                                                 "destroyed":  0,
-                                                                                "timeIn":  902
+                                                                                "timeIn":  981
                                                                             },
                                                                             {
                                                                                 "vehicleName":  "Fortress gun",
@@ -4069,10 +4081,10 @@
                                                                                 "vehicleName":  "Horse",
                                                                                 "type":  "Horse",
                                                                                 "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/64/120/Horse-c07830d0.png",
-                                                                                "kills":  23,
-                                                                                "killsPerMinute":  0.41,
+                                                                                "kills":  30,
+                                                                                "killsPerMinute":  0.47,
                                                                                 "destroyed":  0,
-                                                                                "timeIn":  3335
+                                                                                "timeIn":  3814
                                                                             }
                                                                         ]
                                                        },
@@ -4090,18 +4102,11 @@
                                                                                   "winPercent":  0.0
                                                                               },
                                                                               {
-                                                                                  "gamemodeName":  "Shock operations",
-                                                                                  "wins":  21,
-                                                                                  "losses":  31,
-                                                                                  "score":  52950,
-                                                                                  "winPercent":  40.38
-                                                                              },
-                                                                              {
                                                                                   "gamemodeName":  "Conquest",
-                                                                                  "wins":  46,
+                                                                                  "wins":  47,
                                                                                   "losses":  50,
-                                                                                  "score":  320150,
-                                                                                  "winPercent":  47.92
+                                                                                  "score":  324850,
+                                                                                  "winPercent":  48.45
                                                                               },
                                                                               {
                                                                                   "gamemodeName":  "Frontlines",
@@ -4125,18 +4130,25 @@
                                                                                   "winPercent":  0.0
                                                                               },
                                                                               {
-                                                                                  "gamemodeName":  "Operations",
-                                                                                  "wins":  21,
-                                                                                  "losses":  31,
-                                                                                  "score":  52950,
-                                                                                  "winPercent":  40.38
-                                                                              },
-                                                                              {
                                                                                   "gamemodeName":  "Rush",
                                                                                   "wins":  0,
                                                                                   "losses":  0,
                                                                                   "score":  0,
                                                                                   "winPercent":  0.0
+                                                                              },
+                                                                              {
+                                                                                  "gamemodeName":  "Shock operations",
+                                                                                  "wins":  21,
+                                                                                  "losses":  31,
+                                                                                  "score":  53775,
+                                                                                  "winPercent":  40.38
+                                                                              },
+                                                                              {
+                                                                                  "gamemodeName":  "Operations",
+                                                                                  "wins":  21,
+                                                                                  "losses":  31,
+                                                                                  "score":  53775,
+                                                                                  "winPercent":  40.38
                                                                               }
                                                                           ]
                                                         },
@@ -4145,41 +4157,41 @@
                                                       "avatar":  "https://eaavatarservice.akamaized.net/production/avatar/prod/userAvatar/47880937/416x416.JPEG",
                                                       "userName":  "PIANOYMKF",
                                                       "id":  1007369860725,
-                                                      "rank":  51,
+                                                      "rank":  52,
                                                       "rankImg":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/46/64/Rank06-2ec02d6d.png",
-                                                      "rankName":  "Rank 51",
-                                                      "skill":  260.32,
-                                                      "scorePerMinute":  678.7,
+                                                      "rankName":  "Rank 52",
+                                                      "skill":  255.36,
+                                                      "scorePerMinute":  677.82,
                                                       "killsPerMinute":  0.45,
-                                                      "winPercent":  44.3,
+                                                      "winPercent":  44.65,
                                                       "bestClass":  "Support",
-                                                      "accuracy":  7.42,
-                                                      "headshots":  11.2,
-                                                      "timePlayed":  "2 days, 4:37:38",
-                                                      "secondsPlayed":  189458,
-                                                      "killDeath":  0.64,
+                                                      "accuracy":  7.45,
+                                                      "headshots":  11.05,
+                                                      "timePlayed":  "2 days, 5:06:50",
+                                                      "secondsPlayed":  191210,
+                                                      "killDeath":  0.65,
                                                       "infantryKillDeath":  0.54,
                                                       "infantryKillsPerMinute":  0.38,
-                                                      "kills":  1420,
-                                                      "deaths":  2211,
-                                                      "wins":  70,
+                                                      "kills":  1439,
+                                                      "deaths":  2229,
+                                                      "wins":  71,
                                                       "loses":  88,
                                                       "longestHeadShot":  227.29,
                                                       "revives":  64.0,
-                                                      "dogtagsTaken":  10,
+                                                      "dogtagsTaken":  12,
                                                       "highestKillStreak":  13,
-                                                      "roundsPlayed":  158,
-                                                      "awardScore":  696000.0,
-                                                      "bonusScore":  305949.0,
-                                                      "squadScore":  116644.0,
-                                                      "currentRankProgress":  58080.0,
+                                                      "roundsPlayed":  159,
+                                                      "awardScore":  699500.0,
+                                                      "bonusScore":  309994.0,
+                                                      "squadScore":  117044.0,
+                                                      "currentRankProgress":  5100.0,
                                                       "totalRankProgress":  70000.0,
-                                                      "avengerKills":  132,
+                                                      "avengerKills":  133,
                                                       "saviorKills":  146,
                                                       "headShots":  159,
                                                       "heals":  91.0,
                                                       "repairs":  36.0,
-                                                      "killAssists":  103.0,
+                                                      "killAssists":  104.0,
                                                       "weapons":  [
                                                                       {
                                                                           "weaponName":  "Wex",
@@ -4353,14 +4365,14 @@
                                                                           "weaponName":  "Anti-Tank Grenade",
                                                                           "type":  "Gadget",
                                                                           "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/75/19/GadgetATGrenade-4b135d46.png",
-                                                                          "timeEquipped":  1664,
+                                                                          "timeEquipped":  1680,
                                                                           "kills":  11,
-                                                                          "killsPerMinute":  0.4,
+                                                                          "killsPerMinute":  0.39,
                                                                           "headshotKills":  0,
                                                                           "headshots":  0.0,
-                                                                          "shotsFired":  402,
+                                                                          "shotsFired":  406,
                                                                           "shotsHit":  59,
-                                                                          "accuracy":  14.7,
+                                                                          "accuracy":  14.5,
                                                                           "hitVKills":  5.36
                                                                       },
                                                                       {
@@ -4409,14 +4421,14 @@
                                                                           "weaponName":  "Tripwire Bomb â HE",
                                                                           "type":  "Gadget",
                                                                           "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/22/24/GadgetTripWireGrenade-1618bbc3.png",
-                                                                          "timeEquipped":  271,
+                                                                          "timeEquipped":  285,
                                                                           "kills":  11,
-                                                                          "killsPerMinute":  2.44,
+                                                                          "killsPerMinute":  2.32,
                                                                           "headshotKills":  0,
                                                                           "headshots":  0.0,
-                                                                          "shotsFired":  121,
+                                                                          "shotsFired":  124,
                                                                           "shotsHit":  20,
-                                                                          "accuracy":  16.5,
+                                                                          "accuracy":  16.1,
                                                                           "hitVKills":  1.82
                                                                       },
                                                                       {
@@ -4437,14 +4449,14 @@
                                                                           "weaponName":  "Flare Gun â Spot",
                                                                           "type":  "Gadget",
                                                                           "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/68/56/GadgetWebleyScottFlaregun-4438a413.png",
-                                                                          "timeEquipped":  1752,
+                                                                          "timeEquipped":  1770,
                                                                           "kills":  0,
                                                                           "killsPerMinute":  0.0,
                                                                           "headshotKills":  0,
                                                                           "headshots":  0.0,
-                                                                          "shotsFired":  456,
+                                                                          "shotsFired":  461,
                                                                           "shotsHit":  122,
-                                                                          "accuracy":  26.8,
+                                                                          "accuracy":  26.5,
                                                                           "hitVKills":  0.0
                                                                       },
                                                                       {
@@ -4563,14 +4575,14 @@
                                                                           "weaponName":  "AT Rocket Gun",
                                                                           "type":  "Gadget",
                                                                           "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/14/24/GadgetBreechgun-f2188c3f.png",
-                                                                          "timeEquipped":  3172,
+                                                                          "timeEquipped":  3259,
                                                                           "kills":  22,
-                                                                          "killsPerMinute":  0.42,
+                                                                          "killsPerMinute":  0.41,
                                                                           "headshotKills":  1,
                                                                           "headshots":  4.55,
-                                                                          "shotsFired":  196,
+                                                                          "shotsFired":  201,
                                                                           "shotsHit":  59,
-                                                                          "accuracy":  30.1,
+                                                                          "accuracy":  29.4,
                                                                           "hitVKills":  2.68
                                                                       },
                                                                       {
@@ -5459,15 +5471,15 @@
                                                                           "weaponName":  "M1911",
                                                                           "type":  "Sidearm",
                                                                           "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/19/50/Colt1911-ed324bf1.png",
-                                                                          "timeEquipped":  6094,
+                                                                          "timeEquipped":  6160,
                                                                           "kills":  69,
-                                                                          "killsPerMinute":  0.68,
+                                                                          "killsPerMinute":  0.67,
                                                                           "headshotKills":  6,
                                                                           "headshots":  8.7,
-                                                                          "shotsFired":  1670,
-                                                                          "shotsHit":  280,
+                                                                          "shotsFired":  1691,
+                                                                          "shotsHit":  284,
                                                                           "accuracy":  16.8,
-                                                                          "hitVKills":  4.06
+                                                                          "hitVKills":  4.12
                                                                       },
                                                                       {
                                                                           "weaponName":  "Kolibri",
@@ -5795,15 +5807,15 @@
                                                                           "weaponName":  "MG15 n.A. Low Weight",
                                                                           "type":  "Lmg",
                                                                           "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/119/26/Bergmann1915MG-891af31f.png",
-                                                                          "timeEquipped":  186,
-                                                                          "kills":  4,
-                                                                          "killsPerMinute":  1.29,
+                                                                          "timeEquipped":  236,
+                                                                          "kills":  5,
+                                                                          "killsPerMinute":  1.27,
                                                                           "headshotKills":  1,
-                                                                          "headshots":  25.0,
-                                                                          "shotsFired":  183,
-                                                                          "shotsHit":  21,
-                                                                          "accuracy":  11.5,
-                                                                          "hitVKills":  5.25
+                                                                          "headshots":  20.0,
+                                                                          "shotsFired":  233,
+                                                                          "shotsHit":  25,
+                                                                          "accuracy":  10.7,
+                                                                          "hitVKills":  5.0
                                                                       },
                                                                       {
                                                                           "weaponName":  "Chauchat Telescopic",
@@ -6160,8 +6172,8 @@
                                                                           "type":  "Melee",
                                                                           "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/105/98/GadgetSaber-9762402c.png",
                                                                           "timeEquipped":  1,
-                                                                          "kills":  9,
-                                                                          "killsPerMinute":  540.0,
+                                                                          "kills":  14,
+                                                                          "killsPerMinute":  840.0,
                                                                           "headshotKills":  0,
                                                                           "headshots":  0.0,
                                                                           "shotsFired":  3,
@@ -6495,15 +6507,15 @@
                                                                           "weaponName":  "Yatagan Sword",
                                                                           "type":  "Melee",
                                                                           "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/66/72/YataganSword-be484415.png",
-                                                                          "timeEquipped":  528,
-                                                                          "kills":  5,
-                                                                          "killsPerMinute":  0.57,
+                                                                          "timeEquipped":  535,
+                                                                          "kills":  7,
+                                                                          "killsPerMinute":  0.79,
                                                                           "headshotKills":  0,
                                                                           "headshots":  0.0,
-                                                                          "shotsFired":  386,
-                                                                          "shotsHit":  9,
+                                                                          "shotsFired":  391,
+                                                                          "shotsHit":  12,
                                                                           "accuracy":  0.0,
-                                                                          "hitVKills":  1.8
+                                                                          "hitVKills":  1.71
                                                                       },
                                                                       {
                                                                           "weaponName":  "Meat Cleaver",
@@ -6747,15 +6759,15 @@
                                                                           "weaponName":  "Russian 1895 Infantry",
                                                                           "type":  "Rifle",
                                                                           "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/105/43/Winchester1895-69d56c0b.png",
-                                                                          "timeEquipped":  166,
-                                                                          "kills":  1,
-                                                                          "killsPerMinute":  0.36,
+                                                                          "timeEquipped":  187,
+                                                                          "kills":  2,
+                                                                          "killsPerMinute":  0.64,
                                                                           "headshotKills":  0,
                                                                           "headshots":  0.0,
-                                                                          "shotsFired":  34,
-                                                                          "shotsHit":  0,
-                                                                          "accuracy":  0.0,
-                                                                          "hitVKills":  0.0
+                                                                          "shotsFired":  36,
+                                                                          "shotsHit":  2,
+                                                                          "accuracy":  5.6,
+                                                                          "hitVKills":  1.0
                                                                       },
                                                                       {
                                                                           "weaponName":  "M1903 Sniper",
@@ -6999,29 +7011,29 @@
                                                                           "weaponName":  "M1917 Enfield Silenced",
                                                                           "type":  "Rifle",
                                                                           "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/45/63/Enfield1917-d33fc14d.png",
-                                                                          "timeEquipped":  11713,
-                                                                          "kills":  140,
-                                                                          "killsPerMinute":  0.72,
+                                                                          "timeEquipped":  12141,
+                                                                          "kills":  142,
+                                                                          "killsPerMinute":  0.7,
                                                                           "headshotKills":  51,
-                                                                          "headshots":  36.43,
-                                                                          "shotsFired":  796,
-                                                                          "shotsHit":  256,
+                                                                          "headshots":  35.92,
+                                                                          "shotsFired":  814,
+                                                                          "shotsHit":  262,
                                                                           "accuracy":  32.2,
-                                                                          "hitVKills":  1.83
+                                                                          "hitVKills":  1.85
                                                                       },
                                                                       {
                                                                           "weaponName":  "Incendiary Grenade",
                                                                           "type":  "Grenade",
                                                                           "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/104/44/GadgetIncindiary-68d49a3a.png",
-                                                                          "timeEquipped":  134,
+                                                                          "timeEquipped":  136,
                                                                           "kills":  19,
-                                                                          "killsPerMinute":  8.51,
+                                                                          "killsPerMinute":  8.38,
                                                                           "headshotKills":  0,
                                                                           "headshots":  0.0,
-                                                                          "shotsFired":  255,
-                                                                          "shotsHit":  277,
+                                                                          "shotsFired":  257,
+                                                                          "shotsHit":  278,
                                                                           "accuracy":  100.0,
-                                                                          "hitVKills":  14.58
+                                                                          "hitVKills":  14.63
                                                                       },
                                                                       {
                                                                           "weaponName":  "Rifle Grenade â FRG",
@@ -7307,15 +7319,15 @@
                                                                           "weaponName":  "Frommer Stop Auto",
                                                                           "type":  "Tanker/pilot",
                                                                           "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/80/109/FrommerStop-506df97e.png",
-                                                                          "timeEquipped":  1984,
-                                                                          "kills":  27,
-                                                                          "killsPerMinute":  0.82,
+                                                                          "timeEquipped":  2004,
+                                                                          "kills":  28,
+                                                                          "killsPerMinute":  0.84,
                                                                           "headshotKills":  3,
-                                                                          "headshots":  11.11,
-                                                                          "shotsFired":  1351,
-                                                                          "shotsHit":  172,
-                                                                          "accuracy":  12.7,
-                                                                          "hitVKills":  6.37
+                                                                          "headshots":  10.71,
+                                                                          "shotsFired":  1370,
+                                                                          "shotsHit":  177,
+                                                                          "accuracy":  12.9,
+                                                                          "hitVKills":  6.32
                                                                       },
                                                                       {
                                                                           "weaponName":  "P08 Artillerie",
@@ -7447,15 +7459,15 @@
                                                                           "weaponName":  "Automatico M1918 Trench",
                                                                           "type":  "Smg",
                                                                           "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/61/86/Beretta1918-3daab991.png",
-                                                                          "timeEquipped":  4271,
-                                                                          "kills":  48,
-                                                                          "killsPerMinute":  0.67,
+                                                                          "timeEquipped":  4488,
+                                                                          "kills":  53,
+                                                                          "killsPerMinute":  0.71,
                                                                           "headshotKills":  6,
-                                                                          "headshots":  12.5,
-                                                                          "shotsFired":  2942,
-                                                                          "shotsHit":  364,
-                                                                          "accuracy":  12.4,
-                                                                          "hitVKills":  7.58
+                                                                          "headshots":  11.32,
+                                                                          "shotsFired":  3158,
+                                                                          "shotsHit":  390,
+                                                                          "accuracy":  12.3,
+                                                                          "hitVKills":  7.36
                                                                       },
                                                                       {
                                                                           "weaponName":  "Hellriegel 1915 Factory",
@@ -7670,7 +7682,7 @@
                                                                            "kills":  8,
                                                                            "killsPerMinute":  0.2,
                                                                            "destroyed":  0,
-                                                                           "timeIn":  2348
+                                                                           "timeIn":  2373
                                                                        },
                                                                        {
                                                                            "vehicleName":  "Putilov garford",
@@ -7713,9 +7725,9 @@
                                                                            "type":  "Attack plane",
                                                                            "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/21/69/AHU_Rumpler_CI-eb45a6be.png",
                                                                            "kills":  16,
-                                                                           "killsPerMinute":  0.25,
+                                                                           "killsPerMinute":  0.24,
                                                                            "destroyed":  3,
-                                                                           "timeIn":  3845
+                                                                           "timeIn":  3983
                                                                        },
                                                                        {
                                                                            "vehicleName":  "Gotha g.iv bomber",
@@ -7856,10 +7868,10 @@
                                                                            "vehicleName":  "Rnas armored car",
                                                                            "type":  "Land vehicle",
                                                                            "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/76/108/GBRRollsRoyceArmoredCar-4c6ccdf0.png",
-                                                                           "kills":  7,
-                                                                           "killsPerMinute":  0.66,
+                                                                           "kills":  8,
+                                                                           "killsPerMinute":  0.67,
                                                                            "destroyed":  0,
-                                                                           "timeIn":  637
+                                                                           "timeIn":  718
                                                                        },
                                                                        {
                                                                            "vehicleName":  "Romfell armored car",
@@ -7868,7 +7880,7 @@
                                                                            "kills":  6,
                                                                            "killsPerMinute":  0.64,
                                                                            "destroyed":  1,
-                                                                           "timeIn":  562
+                                                                           "timeIn":  564
                                                                        },
                                                                        {
                                                                            "vehicleName":  "Ev4 armored car",
@@ -7920,9 +7932,9 @@
                                                                            "type":  "Stationary weapon",
                                                                            "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/118/13/GERFk96nA-760d0461.png",
                                                                            "kills":  5,
-                                                                           "killsPerMinute":  0.33,
+                                                                           "killsPerMinute":  0.31,
                                                                            "destroyed":  0,
-                                                                           "timeIn":  902
+                                                                           "timeIn":  981
                                                                        },
                                                                        {
                                                                            "vehicleName":  "Fortress gun",
@@ -8018,10 +8030,10 @@
                                                                            "vehicleName":  "Horse",
                                                                            "type":  "Horse",
                                                                            "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/64/120/Horse-c07830d0.png",
-                                                                           "kills":  23,
-                                                                           "killsPerMinute":  0.41,
+                                                                           "kills":  30,
+                                                                           "killsPerMinute":  0.47,
                                                                            "destroyed":  0,
-                                                                           "timeIn":  3335
+                                                                           "timeIn":  3814
                                                                        }
                                                                    ],
                                                       "activePlatoon":  {
@@ -8038,24 +8050,14 @@
                                                                    ],
                                                       "classes":  [
                                                                       {
-                                                                          "className":  "Assault",
-                                                                          "score":  100379,
-                                                                          "kills":  180,
-                                                                          "kpm":  0.53,
-                                                                          "image":  "https://cdn.gametools.network/classes/bf1/white/Assault.png",
-                                                                          "altImage":  "https://cdn.gametools.network/classes/bf1/black/Assault.png",
-                                                                          "timePlayed":  "5:40:48.700000",
-                                                                          "secondsPlayed":  20448
-                                                                      },
-                                                                      {
-                                                                          "className":  "Support",
-                                                                          "score":  548883,
-                                                                          "kills":  393,
-                                                                          "kpm":  0.28,
-                                                                          "image":  "https://cdn.gametools.network/classes/bf1/white/Support.png",
-                                                                          "altImage":  "https://cdn.gametools.network/classes/bf1/black/Support.png",
-                                                                          "timePlayed":  "23:13:37.900000",
-                                                                          "secondsPlayed":  83617
+                                                                          "className":  "Scout",
+                                                                          "score":  223060,
+                                                                          "kills":  372,
+                                                                          "kpm":  0.5,
+                                                                          "image":  "https://cdn.gametools.network/classes/bf1/white/Scout.png",
+                                                                          "altImage":  "https://cdn.gametools.network/classes/bf1/black/Scout.png",
+                                                                          "timePlayed":  "12:19:09.400000",
+                                                                          "secondsPlayed":  44349
                                                                       },
                                                                       {
                                                                           "className":  "Medic",
@@ -8068,34 +8070,34 @@
                                                                           "secondsPlayed":  6220
                                                                       },
                                                                       {
-                                                                          "className":  "Scout",
-                                                                          "score":  219301,
-                                                                          "kills":  369,
-                                                                          "kpm":  0.51,
-                                                                          "image":  "https://cdn.gametools.network/classes/bf1/white/Scout.png",
-                                                                          "altImage":  "https://cdn.gametools.network/classes/bf1/black/Scout.png",
-                                                                          "timePlayed":  "12:08:48.700000",
-                                                                          "secondsPlayed":  43728
+                                                                          "className":  "Support",
+                                                                          "score":  550230,
+                                                                          "kills":  394,
+                                                                          "kpm":  0.28,
+                                                                          "image":  "https://cdn.gametools.network/classes/bf1/white/Support.png",
+                                                                          "altImage":  "https://cdn.gametools.network/classes/bf1/black/Support.png",
+                                                                          "timePlayed":  "23:16:07.700000",
+                                                                          "secondsPlayed":  83767
+                                                                      },
+                                                                      {
+                                                                          "className":  "Assault",
+                                                                          "score":  101836,
+                                                                          "kills":  186,
+                                                                          "kpm":  0.54,
+                                                                          "image":  "https://cdn.gametools.network/classes/bf1/white/Assault.png",
+                                                                          "altImage":  "https://cdn.gametools.network/classes/bf1/black/Assault.png",
+                                                                          "timePlayed":  "5:46:17.700000",
+                                                                          "secondsPlayed":  20777
                                                                       },
                                                                       {
                                                                           "className":  "Cavalry",
-                                                                          "score":  15907,
+                                                                          "score":  18184,
                                                                           "kills":  0,
                                                                           "kpm":  0.0,
                                                                           "image":  "https://cdn.gametools.network/classes/bf1/white/Cavalry.png",
                                                                           "altImage":  "https://cdn.gametools.network/classes/bf1/black/Cavalry.png",
-                                                                          "timePlayed":  "0:58:45.090000",
-                                                                          "secondsPlayed":  3525
-                                                                      },
-                                                                      {
-                                                                          "className":  "Pilot",
-                                                                          "score":  68953,
-                                                                          "kills":  8,
-                                                                          "kpm":  0.03,
-                                                                          "image":  "https://cdn.gametools.network/classes/bf1/white/Pilot.png",
-                                                                          "altImage":  "https://cdn.gametools.network/classes/bf1/black/Pilot.png",
-                                                                          "timePlayed":  "4:43:04.900000",
-                                                                          "secondsPlayed":  16984
+                                                                          "timePlayed":  "1:07:06.530000",
+                                                                          "secondsPlayed":  4026
                                                                       },
                                                                       {
                                                                           "className":  "Tanker",
@@ -8106,6 +8108,16 @@
                                                                           "altImage":  "https://cdn.gametools.network/classes/bf1/black/Tanker.png",
                                                                           "timePlayed":  "3:49:56.400000",
                                                                           "secondsPlayed":  13796
+                                                                      },
+                                                                      {
+                                                                          "className":  "Pilot",
+                                                                          "score":  69593,
+                                                                          "kills":  9,
+                                                                          "kpm":  0.03,
+                                                                          "image":  "https://cdn.gametools.network/classes/bf1/white/Pilot.png",
+                                                                          "altImage":  "https://cdn.gametools.network/classes/bf1/black/Pilot.png",
+                                                                          "timePlayed":  "4:45:43.300000",
+                                                                          "secondsPlayed":  17143
                                                                       }
                                                                   ],
                                                       "gamemodes":  [
@@ -8117,18 +8129,11 @@
                                                                             "winPercent":  0.0
                                                                         },
                                                                         {
-                                                                            "gamemodeName":  "Shock operations",
-                                                                            "wins":  21,
-                                                                            "losses":  31,
-                                                                            "score":  52950,
-                                                                            "winPercent":  40.38
-                                                                        },
-                                                                        {
                                                                             "gamemodeName":  "Conquest",
-                                                                            "wins":  46,
+                                                                            "wins":  47,
                                                                             "losses":  50,
-                                                                            "score":  320150,
-                                                                            "winPercent":  47.92
+                                                                            "score":  324850,
+                                                                            "winPercent":  48.45
                                                                         },
                                                                         {
                                                                             "gamemodeName":  "Frontlines",
@@ -8152,18 +8157,25 @@
                                                                             "winPercent":  0.0
                                                                         },
                                                                         {
-                                                                            "gamemodeName":  "Operations",
-                                                                            "wins":  21,
-                                                                            "losses":  31,
-                                                                            "score":  52950,
-                                                                            "winPercent":  40.38
-                                                                        },
-                                                                        {
                                                                             "gamemodeName":  "Rush",
                                                                             "wins":  0,
                                                                             "losses":  0,
                                                                             "score":  0,
                                                                             "winPercent":  0.0
+                                                                        },
+                                                                        {
+                                                                            "gamemodeName":  "Shock operations",
+                                                                            "wins":  21,
+                                                                            "losses":  31,
+                                                                            "score":  53775,
+                                                                            "winPercent":  40.38
+                                                                        },
+                                                                        {
+                                                                            "gamemodeName":  "Operations",
+                                                                            "wins":  21,
+                                                                            "losses":  31,
+                                                                            "score":  53775,
+                                                                            "winPercent":  40.38
                                                                         }
                                                                     ],
                                                       "progress":  [
@@ -8200,7 +8212,7 @@
                                       },
                               "error":  null,
                               "dataQuality":  "online",
-                              "playniteSeconds":  327608,
+                              "playniteSeconds":  332880,
                               "playniteName":  "Battlefield 1",
                               "playniteId":  "901a387c-5431-4985-89b3-128142b21167"
                           },
@@ -8208,7 +8220,7 @@
                               "key":  "bfv",
                               "title":  "Battlefield V",
                               "status":  "ok",
-                              "updatedAt":  "2026-09-29T11:33:59.6773123+08:00",
+                              "updatedAt":  "2026-09-29T12:55:42.8639873+08:00",
                               "endpoint":  "https://api.gametools.network/bfv/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "PIANOYMKF",
@@ -12461,7 +12473,7 @@
                                       },
                               "error":  null,
                               "dataQuality":  "online",
-                              "playniteSeconds":  22980,
+                              "playniteSeconds":  23040,
                               "playniteName":  "Battlefield 5",
                               "playniteId":  "27cc7cf4-8d39-433d-8d7c-b1069eb0c11e"
                           },
@@ -12469,7 +12481,7 @@
                                  "key":  "bf2042",
                                  "title":  "Battlefield 2042",
                                  "status":  "upstream_broken",
-                                 "updatedAt":  "2026-09-29T11:33:59.6773123+08:00",
+                                 "updatedAt":  "2026-09-29T12:55:42.8639873+08:00",
                                  "endpoint":  "https://api.gametools.network/bf2042/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                                  "profile":  null,
                                  "trueSessions":  [
@@ -18816,7 +18828,7 @@
                                          },
                                  "error":  "GameTools / EA upstream currently returns hasResults=false or an all-zero BF2042 player payload. Data is marked unavailable until the official upstream recovers.",
                                  "dataQuality":  "官方数据损坏 · 待修复",
-                                 "playniteSeconds":  242700,
+                                 "playniteSeconds":  247920,
                                  "playniteName":  "Battlefield 2042",
                                  "playniteId":  "a3908c47-ce9b-40d9-8704-64f182362c83"
                              },
@@ -18824,7 +18836,7 @@
                               "key":  "bf6",
                               "title":  "Battlefield 6",
                               "status":  "ok",
-                              "updatedAt":  "2026-09-29T11:33:59.6773123+08:00",
+                              "updatedAt":  "2026-09-29T12:55:42.8639873+08:00",
                               "endpoint":  "https://api.gametools.network/bf6/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "pianoymkf",
@@ -23343,6 +23355,6 @@
                               "playniteId":  "755257c8-8508-4fd1-9bfd-8be1de672318"
                           }
               },
-    "playniteTotalSeconds":  928628,
-    "playniteCapturedAt":  "2026-09-29T11:34:50.7441887+08:00"
+    "playniteTotalSeconds":  939180,
+    "playniteCapturedAt":  "2026-09-29T12:56:34.3594383+08:00"
 }

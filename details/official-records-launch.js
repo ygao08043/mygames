@@ -56,14 +56,13 @@
     for (const [key, app] of Object.entries(apps)) {
       const card = document.querySelector('[data-app="' + key + '"]');
       if (key === requested) card.classList.add('selected');
-      const button = card.querySelector('button');
-      button.hidden = !mobile;
-      button.addEventListener('click', () => launch(key, location.href));
-      card.querySelector('.official-link').href = app.web;
-      const store = card.querySelector('.store-link');
-      store.hidden = !ios; store.href = app.store;
+      const link = card.querySelector('.official-link');
+      link.href = app.web;
+      if (mobile) link.addEventListener('click', event => {
+        if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+        event.preventDefault(); launch(key, location.href);
+      });
     }
-    document.getElementById('mobile-help').hidden = !mobile;
     if (embedded) showHint('请在系统浏览器中打开本页，再点击打开 App。');
   }
 })();
