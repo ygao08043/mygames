@@ -1,9 +1,9 @@
 {
     "version":  "1.11.2",
-    "generatedAt":  "2026-10-01T21:33:02.8701101+08:00",
+    "generatedAt":  "2026-10-02T20:46:04.0717721+08:00",
     "source":  {
                    "type":  "Phigros TapTap cloud save",
-                   "saveUpdatedAt":  "2026-09-30T04:14:03.994Z",
+                   "saveUpdatedAt":  "2026-10-02T02:19:55.856Z",
                    "metadata":  "SonolusHaniwa/phigros-decrypted-data metadata.json",
                    "metadataSongs":  314,
                    "missingMetadata":  5
@@ -14,8 +14,8 @@
                     "calculatedRks":  15.63364059,
                     "cloudSummaryRks":  15.63364029,
                     "rksMode":  "cloud-summary-fallback",
-                    "phiCount":  26,
-                    "fcCount":  42,
+                    "phiCount":  27,
+                    "fcCount":  43,
                     "playedCharts":  241,
                     "avatar":  "Introduction",
                     "challengeCode":  251
@@ -3700,11 +3700,11 @@
                        "difficulty":  "HD",
                        "difficultyIndex":  1,
                        "constant":  7,
-                       "score":  945720,
-                       "accuracy":  99.336159,
-                       "rks":  6.79499497,
-                       "status":  "S",
-                       "isFc":  false,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  7,
+                       "status":  "Phi",
+                       "isFc":  true,
                        "charter":  "NerSAN"
                    },
                    {
@@ -3828,8 +3828,8 @@
                                      },
                               "HD":  {
                                          "cleared":  27,
-                                         "fullCombo":  9,
-                                         "phi":  3
+                                         "fullCombo":  10,
+                                         "phi":  4
                                      },
                               "IN":  {
                                          "cleared":  194,
@@ -4068,6 +4068,11 @@
                       "date":  "2026-10-01",
                       "rks":  15.63364029,
                       "saveUpdatedAt":  "2026-09-30T04:14:03.994Z"
+                  },
+                  {
+                      "date":  "2026-10-02",
+                      "rks":  15.63364029,
+                      "saveUpdatedAt":  "2026-10-02T02:19:55.856Z"
                   }
               ]
 }
