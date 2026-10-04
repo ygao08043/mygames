@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Rhythm Doctor · 关卡战绩</title>
+<style>
+:root{color-scheme:dark;--bg:#0a0f11;--panel:#12191c;--panel2:#172226;--text:#f4f8f7;--muted:#93a49f;--line:rgba(255,255,255,.09);--mint:#7debc1;--cyan:#73d6ff;--gold:#ffe080}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 75% -12%,rgba(80,235,185,.14),transparent 34%),var(--bg);color:var(--text);font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif}.wrap{max-width:1260px;margin:auto;padding:22px 18px 64px}.hero{border:1px solid var(--line);background:linear-gradient(135deg,#101719,#17322d 56%,#102630);border-radius:25px;padding:28px;box-shadow:0 24px 70px rgba(0,0,0,.34)}.eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#b5c8c0;font-weight:850}.hero h1{font-size:clamp(40px,7vw,70px);line-height:.95;margin:10px 0 7px;letter-spacing:-.05em}.sub{font-size:12px;color:#becdc8;line-height:1.6}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin-top:18px}.stat{padding:13px 14px;border:1px solid rgba(255,255,255,.1);background:rgba(7,11,13,.48);border-radius:14px}.stat small{display:block;color:var(--muted);font-size:10px;font-weight:750;margin-bottom:4px}.stat strong{font-size:25px}.slotbar{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px}.slotbtn{border:1px solid var(--line);background:#11181b;color:var(--muted);padding:9px 13px;border-radius:11px;font-weight:800;cursor:pointer}.slotbtn.active{background:#eafbf5;color:#0d1513;border-color:transparent}.act{margin-top:18px;border:1px solid var(--line);background:rgba(18,25,28,.9);border-radius:19px;padding:17px}.act-head{display:flex;justify-content:space-between;align-items:end;gap:10px;margin-bottom:12px}.act-head h2{margin:0;font-size:19px}.note{font-size:11px;color:var(--muted)}.rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(174px,174px);gap:10px;overflow-x:auto;padding:2px 2px 9px;scroll-snap-type:x proximity}.card{scroll-snap-align:start;min-height:118px;border:1px solid var(--line);border-radius:15px;background:var(--panel2);padding:13px;display:flex;flex-direction:column;justify-content:space-between;transition:.16s}.card.played{border-color:rgba(125,235,193,.25);box-shadow:0 8px 24px rgba(0,0,0,.15)}.card.unplayed{opacity:.52}.card.night{background:linear-gradient(145deg,#171d28,#152126)}.label{font-size:14px;font-weight:850;line-height:1.4}.stage{font-size:12px;font-weight:950;color:var(--mint);letter-spacing:.02em;margin-right:5px}.song{font-size:14px;font-weight:850}.rank{font-size:31px;font-weight:950;letter-spacing:-.03em;margin-top:13px}.rank.sp{color:var(--gold)}.rank.s{color:var(--mint)}.rank.a{color:var(--cyan)}.rank.empty{font-size:14px;color:var(--muted);font-weight:750;letter-spacing:0}.tries{font-size:10px;color:var(--muted);margin-top:3px}.unknown{margin-top:18px;border:1px dashed rgba(255,255,255,.14);border-radius:15px;padding:14px}.unknown h3{font-size:14px;margin:0 0 8px}.unknown-list{display:flex;flex-wrap:wrap;gap:7px}.pill{border:1px solid var(--line);background:#10171a;padding:7px 9px;border-radius:10px;font-size:11px}.empty-page{padding:36px;text-align:center;color:var(--muted);border:1px solid var(--line);border-radius:16px;background:var(--panel)}
+@media(max-width:720px){.wrap{padding:14px 12px 50px}.hero{padding:22px}.stats{grid-template-columns:repeat(2,1fr)}.act{padding:14px}.rail{grid-auto-columns:minmax(160px,160px)}}
+</style>
+<!-- YMKF site icon hf26 -->
+<link rel="icon" href="../assets/playnite/favicon.ico?v=1.19.34" sizes="any">
+<link rel="shortcut icon" href="../assets/playnite/favicon.ico?v=1.19.34">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/playnite/site-icon-32.png?v=1.19.34">
+<link rel="icon" type="image/png" sizes="48x48" href="../assets/playnite/site-icon-48.png?v=1.19.34">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/playnite/site-icon-180.png?v=1.19.34">
+<link rel="manifest" href="../assets/playnite/site.webmanifest?v=1.19.34">
+<meta name="msapplication-TileImage" content="../assets/playnite/site-icon-180.png?v=1.19.34">
+<meta name="theme-color" content="#10131d">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="YMKF">
+<!-- /YMKF site icon hf26 -->
+</head>
+<body>
+<div class="wrap">
+<section class="hero">
+  <div class="eyebrow">YMKF · RHYTHM DOCTOR · LOCAL SAVE</div>
+  <h1>Rhythm Doctor</h1>
+  <div class="sub" id="source">读取本机 .rdsave · 只读，不修改游戏存档</div>
+  <div class="stats">
+    <div class="stat"><small>当前存档已记录</small><strong id="levels">—</strong></div>
+    <div class="stat"><small>S+</small><strong id="sp">—</strong></div>
+    <div class="stat"><small>S</small><strong id="s">—</strong></div>
+    <div class="stat"><small>A+ 及以上</small><strong id="ap">—</strong></div>
+  </div>
+  <div class="slotbar" id="slotbar"></div>
+</section>
+<div id="acts"></div>
+<div class="unknown" id="unknownBox" hidden>
+  <h3>未映射的内部关卡</h3>
+  <div class="note">这些成绩已经读取，但暂时没有对应到正式关卡编号。保留在这里，避免丢数据。</div>
+  <div class="unknown-list" id="unknownList"></div>
+</div>
+</div>
+<script src="../data/rhythm-doctor-data.js"></script>
+<script src="../data/rd-level-catalog.js"></script>
+<script>
+const D=window.RHYTHM_DOCTOR_DATA||null;
+const C=window.RD_LEVEL_CATALOG||[];
+const $=id=>document.getElementById(id);
+function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function norm(s){return String(s||'').replace(/^Level_/i,'').replace(/[^a-z0-9]/gi,'').toLowerCase()}
+function rankClass(r){r=String(r||'');if(r==='完美')return'sp';if(r==='S+')return'sp';if(r==='S')return's';if(r==='无检查点'||r==='通过'||r.startsWith('A'))return'a';return''}
+function isUnfinished(r){return /^(NotFinished|NotFinishid|NeverSelected|NotAvailable)$/i.test(String(r||'').trim())}
+function displayResult(meta,row){
+  if(!row||isUnfinished(row.rank))return '';
+  const r=String(row.rank||'').trim();
+  if(meta.type==='boss'){
+    if(/^S[+-]?$/.test(r))return '完美';
+    if(r==='A+')return '无检查点';
+    if(/^A[+-]?$/.test(r))return '通过';
+    return r;
+  }
+  return r;
+}
+const aliasMap=new Map();
+C.forEach((x,i)=>(x.aliases||[]).forEach(a=>aliasMap.set(norm(a),{...x,index:i})));
+let slotIndex=0;
+function chosenSlot(){return (D&&D.slots&&D.slots[slotIndex])||null}
+function levelMapFor(slot){
+  const m=new Map();
+  (slot?.levels||[]).forEach(x=>m.set(norm(x.id),x));
+  return m;
+}
+function rankScore(r){
+  const order={'F':0,'D-':10,'D':11,'D+':12,'C-':20,'C':21,'C+':22,'B-':30,'B':31,'B+':32,'A-':40,'A':41,'A+':42,'S-':50,'S':51,'S+':52};
+  return order[String(r||'').toUpperCase()]??-1
+}
+function renderSlots(){
+  const host=$('slotbar');host.innerHTML='';
+  (D.slots||[]).forEach((s,i)=>{
+    const b=document.createElement('button');b.className='slotbtn'+(i===slotIndex?' active':'');
+    b.textContent='存档 '+(i+1)+' · '+s.file;
+    b.onclick=()=>{slotIndex=i;renderAll()};
+    host.appendChild(b);
+  });
+}
+function renderAll(){
+  if(!D){$('acts').innerHTML='<div class="empty-page">没有数据。先运行 BIND_RHYTHM_DOCTOR.cmd。</div>';return}
+  const slot=chosenSlot();
+  if(!slot){$('acts').innerHTML='<div class="empty-page">没有可用存档槽位。</div>';return}
+  renderSlots();
+  const lm=levelMapFor(slot);
+  const rows=(slot.levels||[]).filter(x=>!isUnfinished(x.rank));
+  $('source').textContent='当前：'+slot.file+' · '+new Date(slot.modifiedAt).toLocaleString();
+  const bossAliases=new Set(C.filter(x=>x.type==='boss').flatMap(x=>(x.aliases||[]).map(norm)));
+  const regularRows=rows.filter(x=>!bossAliases.has(norm(x.id)));
+  $('levels').textContent=rows.length;
+  $('sp').textContent=regularRows.filter(x=>x.rank==='S+').length;
+  $('s').textContent=regularRows.filter(x=>x.rank==='S').length;
+  $('ap').textContent=regularRows.filter(x=>rankScore(x.rank)>=42).length;
+
+  const acts=[...new Set(C.map(x=>x.act))];
+  const host=$('acts');host.innerHTML='';
+  acts.forEach(act=>{
+    const sec=document.createElement('section');sec.className='act';
+    const levels=C.filter(x=>x.act===act);
+    sec.innerHTML='<div class="act-head"><h2>'+esc(act)+'</h2><div class="note">'+levels.length+' 个关卡</div></div>';
+    const rail=document.createElement('div');rail.className='rail';
+    levels.forEach(meta=>{
+      let row=null;
+      for(const a of (meta.aliases||[])){const hit=lm.get(norm(a));if(hit){row=hit;break}}
+      const card=document.createElement('div');
+      card.className='card '+(row?'played':'unplayed')+(meta.code.endsWith('N')?' night':'');
+      card.title=meta.en||meta.zh;
+      const shown=displayResult(meta,row);
+      card.innerHTML='<div class="label"><span class="stage">'+esc(meta.code)+'</span><span class="song">'+esc(meta.zh)+'</span></div>'+
+        (shown?'<div class="rank '+rankClass(shown)+'">'+esc(shown)+'</div>':'<div class="rank empty">未记录</div>');
+      rail.appendChild(card);
+    });
+    sec.appendChild(rail);host.appendChild(sec);
+  });
+
+  const known=new Set();
+  C.forEach(meta=>(meta.aliases||[]).forEach(a=>known.add(norm(a))));
+  const unknown=rows.filter(x=>!known.has(norm(x.id)));
+  $('unknownBox').hidden=!unknown.length;
+  $('unknownList').innerHTML=unknown.map(x=>'<div class="pill">'+esc(x.id)+' · '+esc(x.rank)+'</div>').join('');
+}
+if(D){
+  const latest=(D.slots||[]).map((s,i)=>({i,t:Date.parse(s.modifiedAt)||0})).sort((a,b)=>b.t-a.t)[0];
+  slotIndex=latest?latest.i:0;
+}
+renderAll();
+</script>
+</body>
+</html>
