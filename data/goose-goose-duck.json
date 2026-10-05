@@ -1,6 +1,6 @@
 {
     "build":  "1.19.10",
-    "updatedAt":  "2026-10-05T01:08:53.0205267+08:00",
+    "updatedAt":  "2026-10-05T21:00:15.6107521+08:00",
     "status":  "ok",
     "binding":  {
                     "bound":  true,
@@ -8,15 +8,15 @@
                     "source":  "Gaggle Game Stats"
                 },
     "profile":  {
-                    "name":  "YMKF",
+                    "name":  "PIANOYMKF",
                     "avatar":  "https://avatars.steamstatic.com/777da339c1b202114ea1fa2163f546bb8c8c9167_full.jpg",
                     "steamId64":  "76561199392052203",
                     "profileUrl":  "https://steamcommunity.com/profiles/76561199392052203/"
                 },
     "overview":  {
-                     "level":  20,
-                     "achievementsCompleted":  13,
-                     "achievementsText":  "13/74",
+                     "level":  null,
+                     "achievementsCompleted":  null,
+                     "achievementsText":  "",
                      "gameTimeHours":  48.6,
                      "totalMatches":  97,
                      "totalWins":  27,
@@ -26,21 +26,21 @@
                      "factions":  [
                                       {
                                           "faction":  "鹅",
-                                          "games":  48,
-                                          "wins":  16,
-                                          "winRate":  0.333333
+                                          "games":  43,
+                                          "wins":  14,
+                                          "winRate":  0.325581
                                       },
                                       {
                                           "faction":  "鸭",
-                                          "games":  35,
-                                          "wins":  10,
-                                          "winRate":  0.285714
+                                          "games":  28,
+                                          "wins":  9,
+                                          "winRate":  0.321429
                                       },
                                       {
                                           "faction":  "中立",
-                                          "games":  14,
-                                          "wins":  1,
-                                          "winRate":  0.071
+                                          "games":  18,
+                                          "wins":  3,
+                                          "winRate":  0.166667
                                       }
                                   ],
                      "source":  "Gaggle + Playnite"
@@ -8002,6 +8002,6 @@
                  "disconnectWinCorrections":  3,
                  "detailCount":  98,
                  "playniteSeconds":  174840,
-                 "dashboardVisible":  20
+                 "dashboardVisible":  0
              }
 }
