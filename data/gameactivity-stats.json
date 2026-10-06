@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
     "build":  "v1.20.1-fix2",
-    "generatedAt":  "2026-10-06T10:59:44.3790773+08:00",
+    "generatedAt":  "2026-10-06T12:17:47.6285028+08:00",
     "source":  {
                    "provider":  "Playnite GameActivity",
                    "fields":  [
@@ -15,15 +15,15 @@
     "analyticsStart":  "2026-03-01",
     "coverageStart":  "2026-03-01",
     "coverageEnd":  "2026-10-06",
-    "sessionCount":  1517,
+    "sessionCount":  1529,
     "syntheticSessionCount":  4,
     "currentMonth":  "2026-10",
     "currentYear":  "2026",
     "totals":  {
-                   "recordedSeconds":  3560405,
+                   "recordedSeconds":  3578979,
                    "last7DaysSeconds":  113654,
                    "currentMonthSeconds":  93702,
-                   "currentYearSeconds":  3560405,
+                   "currentYearSeconds":  3578979,
                    "activeDays":  219
                },
     "daily":  [
@@ -161,7 +161,7 @@
                   },
                   {
                       "date":  "2026-04-03",
-                      "seconds":  9228
+                      "seconds":  11028
                   },
                   {
                       "date":  "2026-04-04",
@@ -225,7 +225,7 @@
                   },
                   {
                       "date":  "2026-04-19",
-                      "seconds":  17400
+                      "seconds":  21000
                   },
                   {
                       "date":  "2026-04-20",
@@ -449,7 +449,7 @@
                   },
                   {
                       "date":  "2026-06-14",
-                      "seconds":  14867
+                      "seconds":  17001
                   },
                   {
                       "date":  "2026-06-15",
@@ -585,7 +585,7 @@
                   },
                   {
                       "date":  "2026-07-18",
-                      "seconds":  9660
+                      "seconds":  11460
                   },
                   {
                       "date":  "2026-07-19",
@@ -713,7 +713,7 @@
                   },
                   {
                       "date":  "2026-08-19",
-                      "seconds":  8691
+                      "seconds":  10491
                   },
                   {
                       "date":  "2026-08-20",
@@ -741,7 +741,7 @@
                   },
                   {
                       "date":  "2026-08-26",
-                      "seconds":  5568
+                      "seconds":  7368
                   },
                   {
                       "date":  "2026-08-27",
@@ -781,7 +781,7 @@
                   },
                   {
                       "date":  "2026-09-05",
-                      "seconds":  13320
+                      "seconds":  14345
                   },
                   {
                       "date":  "2026-09-06",
@@ -825,11 +825,11 @@
                   },
                   {
                       "date":  "2026-09-16",
-                      "seconds":  21409
+                      "seconds":  24224
                   },
                   {
                       "date":  "2026-09-17",
-                      "seconds":  4463
+                      "seconds":  6263
                   },
                   {
                       "date":  "2026-09-18",
@@ -937,7 +937,7 @@
                    {
                        "start":  "2026-03-30",
                        "label":  "3/30",
-                       "seconds":  129467
+                       "seconds":  131267
                    },
                    {
                        "start":  "2026-04-06",
@@ -947,7 +947,7 @@
                    {
                        "start":  "2026-04-13",
                        "label":  "4/13",
-                       "seconds":  86777
+                       "seconds":  90377
                    },
                    {
                        "start":  "2026-04-20",
@@ -987,7 +987,7 @@
                    {
                        "start":  "2026-06-08",
                        "label":  "6/8",
-                       "seconds":  106878
+                       "seconds":  109012
                    },
                    {
                        "start":  "2026-06-15",
@@ -1012,7 +1012,7 @@
                    {
                        "start":  "2026-07-13",
                        "label":  "7/13",
-                       "seconds":  95213
+                       "seconds":  97013
                    },
                    {
                        "start":  "2026-07-20",
@@ -1037,17 +1037,17 @@
                    {
                        "start":  "2026-08-17",
                        "label":  "8/17",
-                       "seconds":  56602
+                       "seconds":  58402
                    },
                    {
                        "start":  "2026-08-24",
                        "label":  "8/24",
-                       "seconds":  100941
+                       "seconds":  102741
                    },
                    {
                        "start":  "2026-08-31",
                        "label":  "8/31",
-                       "seconds":  109056
+                       "seconds":  110081
                    },
                    {
                        "start":  "2026-09-07",
@@ -1057,7 +1057,7 @@
                    {
                        "start":  "2026-09-14",
                        "label":  "9/14",
-                       "seconds":  67716
+                       "seconds":  72331
                    },
                    {
                        "start":  "2026-09-21",
@@ -1084,7 +1084,7 @@
                     {
                         "month":  "2026-04",
                         "label":  "26/04",
-                        "seconds":  573653
+                        "seconds":  579053
                     },
                     {
                         "month":  "2026-05",
@@ -1094,22 +1094,22 @@
                     {
                         "month":  "2026-06",
                         "label":  "26/06",
-                        "seconds":  562870
+                        "seconds":  565004
                     },
                     {
                         "month":  "2026-07",
                         "label":  "26/07",
-                        "seconds":  470737
+                        "seconds":  472537
                     },
                     {
                         "month":  "2026-08",
                         "label":  "26/08",
-                        "seconds":  366575
+                        "seconds":  370175
                     },
                     {
                         "month":  "2026-09",
                         "label":  "26/09",
-                        "seconds":  441412
+                        "seconds":  447052
                     }
                 ],
     "hourly":  [
@@ -1167,35 +1167,35 @@
                    },
                    {
                        "hour":  13,
-                       "seconds":  123669
+                       "seconds":  125709
                    },
                    {
                        "hour":  14,
-                       "seconds":  111820
+                       "seconds":  114566
                    },
                    {
                        "hour":  15,
-                       "seconds":  131596
+                       "seconds":  133444
                    },
                    {
                        "hour":  16,
-                       "seconds":  157184
+                       "seconds":  159662
                    },
                    {
                        "hour":  17,
-                       "seconds":  183342
+                       "seconds":  186823
                    },
                    {
                        "hour":  18,
-                       "seconds":  165993
+                       "seconds":  166574
                    },
                    {
                        "hour":  19,
-                       "seconds":  161341
+                       "seconds":  161466
                    },
                    {
                        "hour":  20,
-                       "seconds":  190256
+                       "seconds":  195531
                    },
                    {
                        "hour":  21,
@@ -1224,27 +1224,27 @@
                     {
                         "day":  2,
                         "label":  "周三",
-                        "seconds":  562913
+                        "seconds":  569328
                     },
                     {
                         "day":  3,
                         "label":  "周四",
-                        "seconds":  546931
+                        "seconds":  548731
                     },
                     {
                         "day":  4,
                         "label":  "周五",
-                        "seconds":  475346
+                        "seconds":  477146
                     },
                     {
                         "day":  5,
                         "label":  "周六",
-                        "seconds":  442039
+                        "seconds":  444864
                     },
                     {
                         "day":  6,
                         "label":  "周日",
-                        "seconds":  573316
+                        "seconds":  579050
                     }
                 ],
     "distributionMonths":  [
@@ -1445,11 +1445,11 @@
                                                   },
                                                   {
                                                       "hour":  13,
-                                                      "seconds":  21331
+                                                      "seconds":  23371
                                                   },
                                                   {
                                                       "hour":  14,
-                                                      "seconds":  26056
+                                                      "seconds":  27856
                                                   },
                                                   {
                                                       "hour":  15,
@@ -1461,7 +1461,7 @@
                                                   },
                                                   {
                                                       "hour":  17,
-                                                      "seconds":  22742
+                                                      "seconds":  24542
                                                   },
                                                   {
                                                       "hour":  18,
@@ -1502,12 +1502,12 @@
                                                    {
                                                        "day":  2,
                                                        "label":  "周三",
-                                                       "seconds":  96245
+                                                       "seconds":  99060
                                                    },
                                                    {
                                                        "day":  3,
                                                        "label":  "周四",
-                                                       "seconds":  52291
+                                                       "seconds":  54091
                                                    },
                                                    {
                                                        "day":  4,
@@ -1517,7 +1517,7 @@
                                                    {
                                                        "day":  5,
                                                        "label":  "周六",
-                                                       "seconds":  35783
+                                                       "seconds":  36808
                                                    },
                                                    {
                                                        "day":  6,
@@ -1600,19 +1600,19 @@
                                                   },
                                                   {
                                                       "hour":  17,
-                                                      "seconds":  16474
+                                                      "seconds":  17693
                                                   },
                                                   {
                                                       "hour":  18,
-                                                      "seconds":  11154
+                                                      "seconds":  11735
                                                   },
                                                   {
                                                       "hour":  19,
-                                                      "seconds":  13617
+                                                      "seconds":  13742
                                                   },
                                                   {
                                                       "hour":  20,
-                                                      "seconds":  26628
+                                                      "seconds":  28303
                                                   },
                                                   {
                                                       "hour":  21,
@@ -1641,7 +1641,7 @@
                                                    {
                                                        "day":  2,
                                                        "label":  "周三",
-                                                       "seconds":  42437
+                                                       "seconds":  46037
                                                    },
                                                    {
                                                        "day":  3,
@@ -1751,7 +1751,7 @@
                                                   },
                                                   {
                                                       "hour":  20,
-                                                      "seconds":  28135
+                                                      "seconds":  29935
                                                   },
                                                   {
                                                       "hour":  21,
@@ -1795,7 +1795,7 @@
                                                    {
                                                        "day":  5,
                                                        "label":  "周六",
-                                                       "seconds":  49874
+                                                       "seconds":  51674
                                                    },
                                                    {
                                                        "day":  6,
@@ -1870,11 +1870,11 @@
                                                   },
                                                   {
                                                       "hour":  15,
-                                                      "seconds":  17581
+                                                      "seconds":  18575
                                                   },
                                                   {
                                                       "hour":  16,
-                                                      "seconds":  21067
+                                                      "seconds":  22207
                                                   },
                                                   {
                                                       "hour":  17,
@@ -1939,7 +1939,7 @@
                                                    {
                                                        "day":  6,
                                                        "label":  "周日",
-                                                       "seconds":  82905
+                                                       "seconds":  85039
                                                    }
                                                ]
                                },
@@ -2144,19 +2144,19 @@
                                                   },
                                                   {
                                                       "hour":  14,
-                                                      "seconds":  9721
+                                                      "seconds":  10667
                                                   },
                                                   {
                                                       "hour":  15,
-                                                      "seconds":  12949
+                                                      "seconds":  13803
                                                   },
                                                   {
                                                       "hour":  16,
-                                                      "seconds":  19047
+                                                      "seconds":  20385
                                                   },
                                                   {
                                                       "hour":  17,
-                                                      "seconds":  29192
+                                                      "seconds":  29654
                                                   },
                                                   {
                                                       "hour":  18,
@@ -2168,7 +2168,7 @@
                                                   },
                                                   {
                                                       "hour":  20,
-                                                      "seconds":  18734
+                                                      "seconds":  20534
                                                   },
                                                   {
                                                       "hour":  21,
@@ -2207,7 +2207,7 @@
                                                    {
                                                        "day":  4,
                                                        "label":  "周五",
-                                                       "seconds":  68662
+                                                       "seconds":  70462
                                                    },
                                                    {
                                                        "day":  5,
@@ -2217,7 +2217,7 @@
                                                    {
                                                        "day":  6,
                                                        "label":  "周日",
-                                                       "seconds":  77554
+                                                       "seconds":  81154
                                                    }
                                                ]
                                },
@@ -2444,7 +2444,7 @@
                              {
                                  "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                                  "name":  "CHUNITHM",
-                                 "seconds":  628788
+                                 "seconds":  647362
                              },
                              {
                                  "id":  "06a6c4ed-ba26-4185-a08c-2874a521d499",
@@ -2654,7 +2654,7 @@
                                            {
                                                "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                                                "name":  "CHUNITHM",
-                                               "seconds":  51989
+                                               "seconds":  57389
                                            },
                                            {
                                                "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
@@ -2759,7 +2759,7 @@
                                            {
                                                "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                                                "name":  "CHUNITHM",
-                                               "seconds":  40076
+                                               "seconds":  42210
                                            },
                                            {
                                                "id":  "06a6c4ed-ba26-4185-a08c-2874a521d499",
@@ -2794,7 +2794,7 @@
                                            {
                                                "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                                                "name":  "CHUNITHM",
-                                               "seconds":  77269
+                                               "seconds":  79069
                                            },
                                            {
                                                "id":  "06a6c4ed-ba26-4185-a08c-2874a521d499",
@@ -2859,7 +2859,7 @@
                                            {
                                                "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                                                "name":  "CHUNITHM",
-                                               "seconds":  83822
+                                               "seconds":  87422
                                            },
                                            {
                                                "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
@@ -2944,7 +2944,7 @@
                                            {
                                                "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                                                "name":  "CHUNITHM",
-                                               "seconds":  107880
+                                               "seconds":  113520
                                            },
                                            {
                                                "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
@@ -3221,7 +3221,7 @@
                                  "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                  "name":  "雀魂麻将",
                                  "seconds":  148168,
-                                 "totalSeconds":  441412
+                                 "totalSeconds":  447052
                              },
                              {
                                  "period":  "2026-08",
@@ -3229,7 +3229,7 @@
                                  "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                  "name":  "雀魂麻将",
                                  "seconds":  149955,
-                                 "totalSeconds":  366575
+                                 "totalSeconds":  370175
                              },
                              {
                                  "period":  "2026-07",
@@ -3237,7 +3237,7 @@
                                  "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                  "name":  "雀魂麻将",
                                  "seconds":  249226,
-                                 "totalSeconds":  470737
+                                 "totalSeconds":  472537
                              },
                              {
                                  "period":  "2026-06",
@@ -3245,7 +3245,7 @@
                                  "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                  "name":  "雀魂麻将",
                                  "seconds":  388369,
-                                 "totalSeconds":  562870
+                                 "totalSeconds":  565004
                              },
                              {
                                  "period":  "2026-05",
@@ -3261,7 +3261,7 @@
                                  "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                  "name":  "雀魂麻将",
                                  "seconds":  408071,
-                                 "totalSeconds":  573653
+                                 "totalSeconds":  579053
                              },
                              {
                                  "period":  "2026-03",
@@ -3279,7 +3279,7 @@
                                 "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                 "name":  "雀魂麻将",
                                 "seconds":  1721915,
-                                "totalSeconds":  3560405
+                                "totalSeconds":  3578979
                             }
                         ],
     "timelineWindowDays":  14,
@@ -7870,6 +7870,16 @@
                      },
                      {
                          "date":  "2026-04-03",
+                         "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
+                         "name":  "CHUNITHM",
+                         "startMinute":  1205.57,
+                         "endMinute":  1235.57,
+                         "startText":  "20:05",
+                         "endText":  "20:35",
+                         "seconds":  1800
+                     },
+                     {
+                         "date":  "2026-04-03",
                          "id":  "409ef4d9-ef3b-47ee-bbef-57a565825af2",
                          "name":  "斗牌魂",
                          "startMinute":  1322.92,
@@ -8650,6 +8660,16 @@
                      },
                      {
                          "date":  "2026-04-19",
+                         "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
+                         "name":  "CHUNITHM",
+                         "startMinute":  884.23,
+                         "endMinute":  914.23,
+                         "startText":  "14:44",
+                         "endText":  "15:14",
+                         "seconds":  1800
+                     },
+                     {
+                         "date":  "2026-04-19",
                          "id":  "bb00e134-2ed0-4e1a-90c8-ee8cb7f71e11",
                          "name":  "球球大作战",
                          "startMinute":  951,
@@ -8657,6 +8677,16 @@
                          "startText":  "15:51",
                          "endText":  "16:16",
                          "seconds":  1500
+                     },
+                     {
+                         "date":  "2026-04-19",
+                         "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
+                         "name":  "CHUNITHM",
+                         "startMinute":  997.7,
+                         "endMinute":  1027.7,
+                         "startText":  "16:37",
+                         "endText":  "17:07",
+                         "seconds":  1800
                      },
                      {
                          "date":  "2026-04-19",
@@ -12492,6 +12522,26 @@
                          "date":  "2026-06-14",
                          "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                          "name":  "CHUNITHM",
+                         "startMinute":  943.43,
+                         "endMinute":  962.9,
+                         "startText":  "15:43",
+                         "endText":  "16:02",
+                         "seconds":  1168
+                     },
+                     {
+                         "date":  "2026-06-14",
+                         "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
+                         "name":  "CHUNITHM",
+                         "startMinute":  962.9,
+                         "endMinute":  979,
+                         "startText":  "16:02",
+                         "endText":  "16:19",
+                         "seconds":  966
+                     },
+                     {
+                         "date":  "2026-06-14",
+                         "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
+                         "name":  "CHUNITHM",
                          "startMinute":  979,
                          "endMinute":  983,
                          "startText":  "16:19",
@@ -14507,6 +14557,16 @@
                          "startText":  "19:35",
                          "endText":  "19:50",
                          "seconds":  900
+                     },
+                     {
+                         "date":  "2026-07-18",
+                         "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
+                         "name":  "CHUNITHM",
+                         "startMinute":  1200.95,
+                         "endMinute":  1230.95,
+                         "startText":  "20:00",
+                         "endText":  "20:30",
+                         "seconds":  1800
                      },
                      {
                          "date":  "2026-07-18",
@@ -16590,6 +16650,16 @@
                      },
                      {
                          "date":  "2026-08-19",
+                         "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
+                         "name":  "CHUNITHM",
+                         "startMinute":  1197.92,
+                         "endMinute":  1227.92,
+                         "startText":  "19:57",
+                         "endText":  "20:27",
+                         "seconds":  1800
+                     },
+                     {
+                         "date":  "2026-08-19",
                          "id":  "bd4bf292-368e-4e00-bdbb-6dee05aff790",
                          "name":  "osu!",
                          "startMinute":  1337.66,
@@ -17047,6 +17117,16 @@
                          "startText":  "22:48",
                          "endText":  "23:21",
                          "seconds":  1951
+                     },
+                     {
+                         "date":  "2026-08-26",
+                         "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
+                         "name":  "CHUNITHM",
+                         "startMinute":  1059.68,
+                         "endMinute":  1089.68,
+                         "startText":  "17:39",
+                         "endText":  "18:09",
+                         "seconds":  1800
                      },
                      {
                          "date":  "2026-08-26",
@@ -17767,6 +17847,16 @@
                          "startText":  "00:00",
                          "endText":  "02:43",
                          "seconds":  9787
+                     },
+                     {
+                         "date":  "2026-09-05",
+                         "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
+                         "name":  "CHUNITHM",
+                         "startMinute":  822.4,
+                         "endMinute":  839.48,
+                         "startText":  "13:42",
+                         "endText":  "13:59",
+                         "seconds":  1025
                      },
                      {
                          "date":  "2026-09-05",
@@ -18602,6 +18692,16 @@
                          "date":  "2026-09-16",
                          "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                          "name":  "CHUNITHM",
+                         "startMinute":  818.08,
+                         "endMinute":  835,
+                         "startText":  "13:38",
+                         "endText":  "13:55",
+                         "seconds":  1015
+                     },
+                     {
+                         "date":  "2026-09-16",
+                         "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
+                         "name":  "CHUNITHM",
                          "startMinute":  835,
                          "endMinute":  845,
                          "startText":  "13:55",
@@ -18652,6 +18752,16 @@
                          "date":  "2026-09-16",
                          "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                          "name":  "CHUNITHM",
+                         "startMinute":  1044.43,
+                         "endMinute":  1074.43,
+                         "startText":  "17:24",
+                         "endText":  "17:54",
+                         "seconds":  1800
+                     },
+                     {
+                         "date":  "2026-09-16",
+                         "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
+                         "name":  "CHUNITHM",
                          "startMinute":  1121,
                          "endMinute":  1191,
                          "startText":  "18:41",
@@ -18667,6 +18777,16 @@
                          "startText":  "22:33",
                          "endText":  "23:42",
                          "seconds":  4177
+                     },
+                     {
+                         "date":  "2026-09-17",
+                         "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
+                         "name":  "CHUNITHM",
+                         "startMinute":  856.72,
+                         "endMinute":  886.72,
+                         "startText":  "14:16",
+                         "endText":  "14:46",
+                         "seconds":  1800
                      },
                      {
                          "date":  "2026-09-17",
