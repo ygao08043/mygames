@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-CN"><head>
-
-
+<!-- hf21 · unified all-score filters and sort order -->
+<!-- hf24 · theoretical status + low-constant history recovery -->
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
 <title>Arcaea · 战绩详情</title>
 <style>
@@ -49,21 +49,8 @@
   }
 }
 </style>
-<!-- YMKF site icon hf26 -->
-<link rel="icon" href="../assets/playnite/favicon.ico?v=1.19.34" sizes="any">
-<link rel="shortcut icon" href="../assets/playnite/favicon.ico?v=1.19.34">
-<link rel="icon" type="image/png" sizes="32x32" href="../assets/playnite/site-icon-32.png?v=1.19.34">
-<link rel="icon" type="image/png" sizes="48x48" href="../assets/playnite/site-icon-48.png?v=1.19.34">
-<link rel="apple-touch-icon" sizes="180x180" href="../assets/playnite/site-icon-180.png?v=1.19.34">
-<link rel="manifest" href="../assets/playnite/site.webmanifest?v=1.19.34">
-<meta name="msapplication-TileImage" content="../assets/playnite/site-icon-180.png?v=1.19.34">
-<meta name="theme-color" content="#10131d">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="YMKF">
-<!-- /YMKF site icon hf26 -->
 </head><body><div class="wrap">
-<div class="topbar"><a class="back" href="../index.html">← 返回游戏库</a><div class="build">Build v1.20.1-fix2</div></div>
+<div class="topbar"><a class="back" href="../index.html">← 返回游戏库</a><div class="build">Build v1.19.9</div></div>
 <section class="hero"><div class="eyebrow">YMKF · ARCAEA</div><h1 id="name">Arcaea</h1><div class="sub" id="code"></div><div class="stats"><div class="stat"><small>Potential · 7.0</small><strong id="ptt">—</strong></div><div class="stat"><small>Best 50 Avg.</small><strong id="b30">—</strong></div><div class="stat"><small>Best 10 Avg. · 2x weight</small><strong id="r10">—</strong></div><div class="stat"><small>B50 + B10 Weighted</small><strong id="maxp">—</strong></div></div></section>
 <div class="tabs"><button class="tab active" data-page="best">B50</button><button class="tab" data-page="scores">全部最佳成绩</button><button class="tab" data-page="recent">最近记录</button></div>
 <section class="page active" id="page-best"><div class="section"><div class="section-head"><div><h2>PTT / B30 + R10 → B50 + B10 趋势</h2><div class="note">2026-08-27 前后分别采用旧、新 PTT 机制；点击任意数据点可查看该期完整指标。</div></div></div><div class="trend-switch"><button class="trend-mode active" data-line="ptt">PTT</button><button class="trend-mode active" data-line="b30">B30 · 8/27前</button><button class="trend-mode active" data-line="r10">R10 · 8/27前</button><button class="trend-mode active" data-line="b50">B50 · 8/27起</button><button class="trend-mode active" data-line="b10">B10 · 8/27起</button></div><div class="trend-wrap" id="trend"></div><div class="legend"><span><i style="background:var(--a)"></i>PTT</span><span><i style="background:var(--b)"></i>B30 · 8/27前</span><span><i style="background:var(--r)"></i>R10 · 8/27前</span><span><i style="background:var(--c)"></i>B50 · 8/27起</span><span><i style="background:#f2b7df"></i>B10 · 8/27起</span></div></div><div class="section"><div class="section-head"><div><h2>Best 50</h2><div class="note">由 Yurisaki /a export 的 best_scores.csv 读取当前最佳成绩，按单谱 Potential 排序取前 50；前 10 在 Arcaea 7.0 总 PTT 中计双倍权重。</div></div><div class="note" id="source"></div></div><div class="b30-grid" id="b30grid"></div></div></section>
@@ -116,126 +103,7 @@ fetch(DATA_URL+'?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new 
   });
 })();
 </script>
-
-<style id="ymkf-arcaea7-v187-style">
-.trend-switch{grid-template-columns:repeat(5,minmax(0,1fr))!important}
-.line-v7b50{fill:none;stroke:var(--c);stroke-width:2.8}.dot-v7b50{fill:var(--c)}
-.line-v7b10{fill:none;stroke:#f2b7df;stroke-width:2.8}.dot-v7b10{fill:#f2b7df}
-.line-oldb30{fill:none;stroke:var(--b);stroke-width:2.5}.dot-oldb30{fill:var(--b)}
-.line-oldr10{fill:none;stroke:var(--r);stroke-width:2.5}.dot-oldr10{fill:var(--r)}
-.v7-divider{stroke:rgba(255,255,255,.55);stroke-width:1.4;stroke-dasharray:6 5}.v7-label{fill:#f5f7ff;font-size:10px;font-weight:800;paint-order:stroke;stroke:#0f1420;stroke-width:3px}
-@media(max-width:850px){.trend-switch{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
-</style>
-<script id="ymkf-arcaea7-v187-script">
-(function(){
-  LINES={ptt:true,b30:true,r10:true,b50:true,b10:true};
-  const oldHydrate=hydrateArcaeaCovers;
-  hydrateArcaeaCovers=async function(d){
-    let changed=false;try{changed=await oldHydrate(d)}catch(_){ }
-    const m=new Map((d.scores||[]).map(x=>[String(x.songId||'')+'|'+String(x.difficulty),x.jacketUrl||'']));
-    for(const x of (d.best50||[])){const u=m.get(String(x.songId||'')+'|'+String(x.difficulty));if(u&&!x.jacketUrl){x.jacketUrl=u;changed=true}}
-    return changed;
-  };
-  renderHero=function(){
-    const p=DATA.profile||{};
-    document.querySelector('#name').textContent=p.name||'YMKF';
-    document.querySelector('#code').textContent=p.userCode?`ID: ${p.userCode}`:'';
-    document.querySelector('#ptt').textContent=n(p.potential).toFixed(3);
-    document.querySelector('#b30').textContent=n(p.b50).toFixed(3);
-    document.querySelector('#r10').textContent=n(p.b10).toFixed(3);
-    document.querySelector('#maxp').textContent=n(p.weightedPotential).toFixed(3);
-    document.querySelector('#source').textContent=`${DATA.source?.file||''} · ${(DATA.best50||[]).length} / 50 B50 · B10 2x weight`;
-    document.querySelector('#b30grid').innerHTML=(DATA.best50||[]).map(card).join('')||'<div class="empty">暂无 B50</div>';
-  };
-  renderTrend=function(){
-    const rows=(DATA.trend||[]).filter(x=>[x.potential,x.legacyB30,x.legacyR10,x.b50,x.b10].some(v=>v!=null));
-    if(!rows.length){document.querySelector('#trend').innerHTML='<div class="empty">暂无趋势</div>';return}
-    const W=1000,H=410,L=62,R=24,T=36,B=50,vals=[];
-    for(const x of rows){if(LINES.ptt&&x.potential!=null)vals.push(n(x.potential));if(LINES.b30&&x.legacyB30!=null)vals.push(n(x.legacyB30));if(LINES.r10&&x.legacyR10!=null)vals.push(n(x.legacyR10));if(LINES.b50&&x.b50!=null)vals.push(n(x.b50));if(LINES.b10&&x.b10!=null)vals.push(n(x.b10))}
-    if(!vals.length){document.querySelector('#trend').innerHTML='<div class="empty">至少开启一条趋势</div>';return}
-    let mn=Math.min(...vals),mx=Math.max(...vals);mn=Math.floor((mn-.06)*100)/100;mx=Math.ceil((mx+.06)*100)/100;if(mx<=mn)mx=mn+.1;
-    const X=i=>L+(W-L-R)*(rows.length===1?.5:i/(rows.length-1)),Y=v=>T+(H-T-B)*(mx-n(v))/(mx-mn);
-    const path=(key,on,cls)=>{if(!on)return '';let parts=[],seg=[];rows.forEach((x,i)=>{const v=x[key];if(v==null){if(seg.length)parts.push(seg);seg=[]}else seg.push([X(i),Y(v),v])});if(seg.length)parts.push(seg);return parts.map(p=>`<path class="line-${cls}" d="${p.map((q,j)=>(j?'L':'M')+q[0].toFixed(1)+','+q[1].toFixed(1)).join(' ')}"/>`+p.map(q=>`<circle class="dot-${cls}" cx="${q[0]}" cy="${q[1]}" r="3.4"/><text class="point-label" x="${q[0]}" y="${q[1]-8}">${n(q[2]).toFixed(3)}</text>`).join('')).join('')};
-    let g='';for(let j=0;j<=4;j++){const y=T+(H-T-B)*j/4,v=mx-(mx-mn)*j/4;g+=`<line class="grid" x1="${L}" x2="${W-R}" y1="${y}" y2="${y}"/><text class="axis" x="4" y="${y+4}">${v.toFixed(3)}</text>`}
-    rows.forEach((x,i)=>g+=`<text class="axis" text-anchor="middle" x="${X(i)}" y="${H-18}">${esc(x.label||x.key||'')}</text>`);
-    const firstV7=rows.findIndex(x=>x.era==='v7'||x.b50!=null||x.b10!=null);if(firstV7>=0){const prev=Math.max(0,firstV7-1),dx=(X(prev)+X(firstV7))/2;g+=`<line class="v7-divider" x1="${dx}" x2="${dx}" y1="${T-9}" y2="${H-B+6}"/><text class="v7-label" x="${Math.min(dx+6,W-R-155)}" y="${T-14}">2026-08-27 · Arcaea 7.0</text>`}
-    document.querySelector('#trend').innerHTML=`<svg viewBox="0 0 ${W} ${H}" aria-label="Arcaea PTT rule history">${g}${path('potential',LINES.ptt,'ptt')}${path('legacyB30',LINES.b30,'oldb30')}${path('legacyR10',LINES.r10,'oldr10')}${path('b50',LINES.b50,'v7b50')}${path('b10',LINES.b10,'v7b10')}</svg>`;
-  };
-})();
-</script>
-
-
-<script>
-(function(){
-  if(window.__YMKF_CONSTANT_RANGE_1189__) return;
-  window.__YMKF_CONSTANT_RANGE_1189__=true;
-  const file=(location.pathname.split('/').pop()||'').toLowerCase();
-  const cfgs={
-    'arcaea.html':{search:'#search',root:'#scoreRows',cell:5,count:'#scoreCount',label:'定数范围，如 14.5-14.8'},
-    'chunithm.html':{search:'#search',root:'#trackBody',cell:2,count:'#trackCount',label:'定数范围，如 14.5-14.8'},
-    'maimai.html':{search:'#search',root:'#scoreRows',cell:3,count:'#scoreCount',label:'定数范围，如 14.5-14.8'},
-    'phigros.html':{search:'#search',root:'#scoreRows',cell:4,count:'#scoreCount',label:'定数范围，如 14.5-14.8'},
-    'osu.html':{search:'#search',root:'#bestBody',cell:4,count:null,label:'星数范围，如 4.5-5.2'},
-    'pjsk.html':{search:'#musicQ',root:'#musicTable',cell:1,count:'#musicCount',label:'定数范围，如 30-32'}
-  };
-  const cfg=cfgs[file]; if(!cfg)return;
-  const search=document.querySelector(cfg.search); if(!search)return;
-  const style=document.createElement('style');
-  style.textContent=`.ymkf-search-pair{display:flex!important;gap:8px!important;align-items:stretch!important;grid-column:1/-1!important;width:100%!important;min-width:0!important}.ymkf-search-pair>input{min-width:0!important;flex:1 1 0!important;grid-column:auto!important;width:auto!important}.ymkf-search-pair>.ymkf-constant-range{flex:0 1 260px!important}.ymkf-range-invalid{border-color:#ff8d9b!important;box-shadow:0 0 0 1px #ff8d9b55 inset!important}@media(max-width:620px){.ymkf-search-pair{flex-direction:column!important}.ymkf-search-pair>.ymkf-constant-range{flex:1 1 auto!important;width:100%!important}}`;
-  document.head.appendChild(style);
-  let pair=search.closest('.ymkf-search-pair'); let range=document.querySelector('#ymkfConstantRange');
-  if(!pair){pair=document.createElement('div');pair.className='ymkf-search-pair';search.parentNode.insertBefore(pair,search);pair.appendChild(search)}
-  if(!range){range=document.createElement('input');range.id='ymkfConstantRange';range.className=(search.className||'')+' ymkf-constant-range';range.type='text';range.inputMode='decimal';range.autocomplete='off';range.placeholder=cfg.label;range.title='支持：14.5-14.8、14.7、14.5-、-14.8；范围包含两端';pair.appendChild(range)}
-  function parseRange(raw){let s=String(raw||'').trim();if(!s)return {ok:true,active:false,min:-Infinity,max:Infinity};s=s.replace(/[－—–~～至]/g,'-').replace(/\s+/g,'');let m=s.match(/^(\d+(?:\.\d+)?)$/);if(m){const v=Number(m[1]);return {ok:Number.isFinite(v),active:true,min:v,max:v}}m=s.match(/^(\d+(?:\.\d+)?)?-(\d+(?:\.\d+)?)?$/);if(!m||(!m[1]&&!m[2]))return {ok:false,active:true,min:0,max:0};let min=m[1]?Number(m[1]):-Infinity,max=m[2]?Number(m[2]):Infinity;if(min>max){const t=min;min=max;max=t}return {ok:true,active:true,min,max}}
-  function rowValue(tr){const td=tr.children[cfg.cell];if(!td)return NaN;const nums=(td.textContent||'').replace(/,/g,'').match(/\d+(?:\.\d+)?/g);return nums&&nums.length?Number(nums[nums.length-1]):NaN}
-  let applying=false;
-  function applyRange(){if(applying)return;applying=true;try{const p=parseRange(range.value);range.classList.toggle('ymkf-range-invalid',!p.ok);const host=document.querySelector(cfg.root);if(!host)return;let rows=host.tagName==='TBODY'?[...host.querySelectorAll(':scope > tr')]:[...host.querySelectorAll('tbody > tr')];let shown=0;for(const tr of rows){if(tr.querySelector('.empty'))continue;const v=rowValue(tr);let keep=true;if(p.active&&p.ok)keep=Number.isFinite(v)&&v+1e-9>=p.min&&v-1e-9<=p.max;tr.style.display=keep?'':'none';if(keep)shown++}if(cfg.count){const c=document.querySelector(cfg.count);if(c){let base=(c.textContent||'').replace(/\s*·\s*(?:定数|星数)范围命中\s*\d+\s*$/,'');if(p.active&&p.ok)c.textContent=base+' · '+(file==='osu.html'?'星数':'定数')+'范围命中 '+shown;else if(!p.active)c.textContent=base}}}finally{applying=false}}
-  let timer=0;const schedule=()=>{clearTimeout(timer);timer=setTimeout(applyRange,0)};
-  range.addEventListener('input',()=>{search.dispatchEvent(new Event('input',{bubbles:true}));schedule()});
-  const target=document.querySelector(cfg.root);if(target)new MutationObserver(schedule).observe(target,{childList:true,subtree:true});else new MutationObserver(()=>{if(document.querySelector(cfg.root))schedule()}).observe(document.body,{childList:true,subtree:true});
-  document.addEventListener('change',e=>{if(e.target!==range&&(e.target.closest('.controls')||e.target.closest('.filters')))schedule()},true);
-  document.addEventListener('click',e=>{if(e.target!==range&&(e.target.closest('.controls')||e.target.closest('.filters')))setTimeout(schedule,0)},true);
-  schedule();
-})();
-</script>
-
-
-<script>
-(function(){
-  if(window.__YMKF_ARCAEA_JACKET_REPAIR_1189__)return;
-  window.__YMKF_ARCAEA_JACKET_REPAIR_1189__=true;
-  if(typeof hydrateArcaeaCovers!=='function')return;
-  const cache=new Map();
-  function norm(s){return String(s||'').toLowerCase().replace(/[\s_\-:：'"“”‘’()[\]{}·.!?！？,，/\\]+/g,'')}
-  async function searchWiki(songId,title){const key=String(songId||title||'').toLowerCase();if(cache.has(key))return cache.get(key);const terms=[title,songId].filter(Boolean).filter((v,i,a)=>a.findIndex(x=>String(x).toLowerCase()===String(v).toLowerCase())===i);let best=null;for(const term of terms){try{const url='https://arcaea.fandom.com/api.php?action=query&generator=search&gsrnamespace=0&gsrlimit=6&gsrsearch='+encodeURIComponent(String(term))+'&prop=pageimages&piprop=thumbnail&pithumbsize=220&format=json&formatversion=2&origin=*';const r=await fetch(url,{cache:'force-cache'});if(!r.ok)continue;const j=await r.json(),pages=(j.query&&j.query.pages)||[],wanted=norm(title),sid=norm(songId);const cand=pages.filter(p=>p&&p.thumbnail&&p.thumbnail.source).map(p=>{const pn=norm(p.title);let score=0;if(wanted&&pn===wanted)score+=100;if(wanted&&(pn.includes(wanted)||wanted.includes(pn)))score+=40;if(sid&&pn===sid)score+=80;return {p,score}}).sort((a,b)=>b.score-a.score);if(cand.length){best={url:cand[0].p.thumbnail.source,title:cand[0].p.title||title};break}}catch(_){}}cache.set(key,best);return best}
-  async function mapLimit(items,limit,fn){let next=0;await Promise.all(Array.from({length:Math.min(limit,items.length)},async()=>{while(true){const i=next++;if(i>=items.length)return;await fn(items[i],i)}}))}
-  const previousHydrate=hydrateArcaeaCovers;
-  hydrateArcaeaCovers=async function(d){let changed=false;try{changed=!!(await previousHydrate(d))}catch(_){}const lists=[d.scores||[],d.best50||[],d.best30||[],d.recent||[]],all=lists.flat().filter(Boolean),missing=[],seen=new Set();for(const x of all){if(x.jacketUrl)continue;const key=String(x.songId||x.title||'').toLowerCase();if(!key||seen.has(key))continue;seen.add(key);missing.push(x)}await mapLimit(missing,6,async x=>{const hit=await searchWiki(x.songId,x.title);if(!hit||!hit.url)return;for(const y of all){if(String(y.songId||'').toLowerCase()===String(x.songId||'').toLowerCase()){y.jacketUrl=hit.url;if((!y.title||y.title===y.songId)&&hit.title)y.title=hit.title}}changed=true});return changed};
-  if(typeof jacketHtml==='function'){jacketHtml=function(x,extra=''){const u=x&&x.jacketUrl||'',sid=String(x&&x.songId||''),title=String(x&&x.title||sid);if(!u)return `<div class="song-jacket jacket-placeholder ${extra}" data-arc-songid="${esc(sid)}" data-arc-title="${esc(title)}">♫</div>`;return `<img class="song-jacket ${extra}" src="${esc(u)}" data-arc-songid="${esc(sid)}" data-arc-title="${esc(title)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="ymkfArcJacketError(this)">`}}
-  window.ymkfArcJacketError=async function(img){if(!img||img.dataset.ymkfRepairing==='1')return;img.dataset.ymkfRepairing='1';const hit=await searchWiki(img.dataset.arcSongid,img.dataset.arcTitle);if(hit&&hit.url&&img.src!==hit.url){img.onerror=function(){this.outerHTML='<div class="song-jacket jacket-placeholder '+(this.classList.contains('card-jacket')?'card-jacket':'')+'">♫</div>'};img.src=hit.url;return}img.outerHTML='<div class="song-jacket jacket-placeholder '+(img.classList.contains('card-jacket')?'card-jacket':'')+'">♫</div>'};
-})();
-</script>
-
-
-<style>
-.trend-point-target{fill:transparent;stroke:transparent;pointer-events:all;cursor:pointer}.trend-point-target:focus{outline:none}.trend-point-selected{stroke:#fff!important;stroke-width:2.4!important;filter:drop-shadow(0 0 4px rgba(255,255,255,.72))}.trend-select-line{stroke:rgba(255,255,255,.32);stroke-width:1;stroke-dasharray:4 5;pointer-events:none}.trend-point-detail{margin-top:10px;min-height:46px;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;border:1px solid var(--line);border-radius:13px;background:var(--panel2);padding:9px 12px;color:#dce3ee;font-size:12px}.trend-point-detail b{font-size:13px}.trend-point-detail span{display:inline-flex;align-items:center;gap:6px}.trend-point-detail i{width:8px;height:8px;border-radius:50%;display:inline-block}
-</style>
-<script>
-(function(){
-  if(window.__YMKF_ARCAEA_TREND_INTERACTION_1199__)return;window.__YMKF_ARCAEA_TREND_INTERACTION_1199__=true;
-  let selectedIndex=-1;const previousRenderTrend=renderTrend;
-  const specs=()=>[{key:'potential',on:LINES.ptt,cls:'dot-ptt',label:'PTT',color:'var(--a)'},{key:'legacyB30',on:LINES.b30,cls:'dot-oldb30',label:'B30',color:'var(--b)'},{key:'legacyR10',on:LINES.r10,cls:'dot-oldr10',label:'R10',color:'var(--r)'},{key:'b50',on:LINES.b50,cls:'dot-v7b50',label:'B50',color:'var(--c)'},{key:'b10',on:LINES.b10,cls:'dot-v7b10',label:'B10',color:'#f2b7df'}].filter(x=>x.on);
-  const rows=()=>((DATA&&DATA.trend)||[]).filter(x=>[x.potential,x.legacyB30,x.legacyR10,x.b50,x.b10].some(v=>v!=null));
-  function detailHost(){let box=document.querySelector('#arcaeaTrendDetail');if(!box){box=document.createElement('div');box.id='arcaeaTrendDetail';box.className='trend-point-detail';document.querySelector('#trend').insertAdjacentElement('afterend',box)}return box}
-  function labelOf(row){return String(row.label||row.key||row.month||row.date||'当前记录')}
-  function selectPoint(index){const list=rows(),row=list[index],host=document.querySelector('#trend'),svg=host&&host.querySelector('svg'),box=detailHost();if(!row||!svg){box.innerHTML='<span>暂无趋势数据</span>';return}selectedIndex=index;svg.querySelectorAll('.trend-point-selected').forEach(x=>x.classList.remove('trend-point-selected'));const targets=[...svg.querySelectorAll('.trend-point-target')].filter(x=>Number(x.dataset.index)===index);targets.forEach(x=>{const visible=x.previousElementSibling;if(visible&&visible.tagName.toLowerCase()==='circle')visible.classList.add('trend-point-selected')});const first=targets[0];let line=svg.querySelector('.trend-select-line');if(!line){line=document.createElementNS('http://www.w3.org/2000/svg','line');line.setAttribute('class','trend-select-line');svg.insertBefore(line,svg.firstChild)}if(first){const cx=first.getAttribute('cx');line.setAttribute('x1',cx);line.setAttribute('x2',cx);line.setAttribute('y1','20');line.setAttribute('y2','366');line.style.display=''}else line.style.display='none';const values=specs().map(sp=>{const v=row[sp.key];return v==null?'':`<span><i style="background:${sp.color}"></i>${sp.label} ${n(v).toFixed(3)}</span>`}).filter(Boolean).join('');box.innerHTML=`<b>${esc(labelOf(row))}</b>${values}`}
-  function decorate(){const host=document.querySelector('#trend'),svg=host&&host.querySelector('svg'),list=rows(),box=detailHost(),activeSpecs=specs();if(!svg||!list.length||!activeSpecs.length){box.innerHTML='<span>暂无可选择的趋势数据</span>';return}for(const sp of activeSpecs){const dots=[...svg.querySelectorAll('circle.'+sp.cls)],valid=list.map((row,index)=>({row,index})).filter(x=>x.row[sp.key]!=null);dots.forEach((dot,i)=>{const hitRow=valid[i];if(!hitRow)return;const hit=document.createElementNS('http://www.w3.org/2000/svg','circle');hit.setAttribute('class','trend-point-target');hit.setAttribute('cx',dot.getAttribute('cx'));hit.setAttribute('cy',dot.getAttribute('cy'));hit.setAttribute('r','13');hit.setAttribute('role','button');hit.setAttribute('tabindex','0');hit.setAttribute('aria-label',`${labelOf(hitRow.row)} ${sp.label} ${n(hitRow.row[sp.key]).toFixed(3)}`);hit.dataset.index=String(hitRow.index);hit.addEventListener('click',()=>selectPoint(hitRow.index));hit.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selectPoint(hitRow.index)}});dot.after(hit)})}const activeIndexes=list.map((row,index)=>({row,index})).filter(x=>activeSpecs.some(sp=>x.row[sp.key]!=null)).map(x=>x.index);if(!activeIndexes.includes(selectedIndex))selectedIndex=activeIndexes[activeIndexes.length-1];selectPoint(selectedIndex)}
-  renderTrend=function(){previousRenderTrend();decorate()};if(DATA)renderTrend();
-})();
-</script>
-<style id="ymkf-arcaea-b50-five-v102">#b30grid{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:10px!important}#b30grid>.score-card{min-width:0!important}@media(max-width:900px){#b30grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}}@media(max-width:600px){#b30grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}</style>
-<script id="ymkf-arcaea-hotfix-v102" src="./arcaea-hotfix-v1.0.2.js?v=1.0.2"></script>
-<script id="ymkf-rhythm-history-enhancer-v11934" src="./rhythm-history-enhancer.js?v=1.19.34"></script><!-- YMKF_ARCAEA7_V187_BEGIN -->
+<!-- YMKF_ARCAEA7_V187_BEGIN -->
 <style id="ymkf-arcaea7-v187-style">
 .trend-switch{grid-template-columns:repeat(5,minmax(0,1fr))!important}
 .line-v7b50{fill:none;stroke:var(--c);stroke-width:2.8}.dot-v7b50{fill:var(--c)}
@@ -283,4 +151,75 @@ fetch(DATA_URL+'?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new 
 })();
 </script>
 <!-- YMKF_ARCAEA7_V187_END -->
+<!-- YMKF RHYTHM CONSTANT RANGE v1.18.9 BEGIN -->
+<script>
+(function(){
+  if(window.__YMKF_CONSTANT_RANGE_1189__) return;
+  window.__YMKF_CONSTANT_RANGE_1189__=true;
+  const file=(location.pathname.split('/').pop()||'').toLowerCase();
+  const cfgs={
+    'arcaea.html':{search:'#search',root:'#scoreRows',cell:5,count:'#scoreCount',label:'定数范围，如 14.5-14.8'},
+    'chunithm.html':{search:'#search',root:'#trackBody',cell:2,count:'#trackCount',label:'定数范围，如 14.5-14.8'},
+    'maimai.html':{search:'#search',root:'#scoreRows',cell:3,count:'#scoreCount',label:'定数范围，如 14.5-14.8'},
+    'phigros.html':{search:'#search',root:'#scoreRows',cell:4,count:'#scoreCount',label:'定数范围，如 14.5-14.8'},
+    'osu.html':{search:'#search',root:'#bestBody',cell:4,count:null,label:'星数范围，如 4.5-5.2'},
+    'pjsk.html':{search:'#musicQ',root:'#musicTable',cell:1,count:'#musicCount',label:'定数范围，如 30-32'}
+  };
+  const cfg=cfgs[file]; if(!cfg)return;
+  const search=document.querySelector(cfg.search); if(!search)return;
+  const style=document.createElement('style');
+  style.textContent=`.ymkf-search-pair{display:flex!important;gap:8px!important;align-items:stretch!important;grid-column:1/-1!important;width:100%!important;min-width:0!important}.ymkf-search-pair>input{min-width:0!important;flex:1 1 0!important;grid-column:auto!important;width:auto!important}.ymkf-search-pair>.ymkf-constant-range{flex:0 1 260px!important}.ymkf-range-invalid{border-color:#ff8d9b!important;box-shadow:0 0 0 1px #ff8d9b55 inset!important}@media(max-width:620px){.ymkf-search-pair{flex-direction:column!important}.ymkf-search-pair>.ymkf-constant-range{flex:1 1 auto!important;width:100%!important}}`;
+  document.head.appendChild(style);
+  let pair=search.closest('.ymkf-search-pair'); let range=document.querySelector('#ymkfConstantRange');
+  if(!pair){pair=document.createElement('div');pair.className='ymkf-search-pair';search.parentNode.insertBefore(pair,search);pair.appendChild(search)}
+  if(!range){range=document.createElement('input');range.id='ymkfConstantRange';range.className=(search.className||'')+' ymkf-constant-range';range.type='text';range.inputMode='decimal';range.autocomplete='off';range.placeholder=cfg.label;range.title='支持：14.5-14.8、14.7、14.5-、-14.8；范围包含两端';pair.appendChild(range)}
+  function parseRange(raw){let s=String(raw||'').trim();if(!s)return {ok:true,active:false,min:-Infinity,max:Infinity};s=s.replace(/[－—–~～至]/g,'-').replace(/\s+/g,'');let m=s.match(/^(\d+(?:\.\d+)?)$/);if(m){const v=Number(m[1]);return {ok:Number.isFinite(v),active:true,min:v,max:v}}m=s.match(/^(\d+(?:\.\d+)?)?-(\d+(?:\.\d+)?)?$/);if(!m||(!m[1]&&!m[2]))return {ok:false,active:true,min:0,max:0};let min=m[1]?Number(m[1]):-Infinity,max=m[2]?Number(m[2]):Infinity;if(min>max){const t=min;min=max;max=t}return {ok:true,active:true,min,max}}
+  function rowValue(tr){const td=tr.children[cfg.cell];if(!td)return NaN;const nums=(td.textContent||'').replace(/,/g,'').match(/\d+(?:\.\d+)?/g);return nums&&nums.length?Number(nums[nums.length-1]):NaN}
+  let applying=false;
+  function applyRange(){if(applying)return;applying=true;try{const p=parseRange(range.value);range.classList.toggle('ymkf-range-invalid',!p.ok);const host=document.querySelector(cfg.root);if(!host)return;let rows=host.tagName==='TBODY'?[...host.querySelectorAll(':scope > tr')]:[...host.querySelectorAll('tbody > tr')];let shown=0;for(const tr of rows){if(tr.querySelector('.empty'))continue;const v=rowValue(tr);let keep=true;if(p.active&&p.ok)keep=Number.isFinite(v)&&v+1e-9>=p.min&&v-1e-9<=p.max;tr.style.display=keep?'':'none';if(keep)shown++}if(cfg.count){const c=document.querySelector(cfg.count);if(c){let base=(c.textContent||'').replace(/\s*·\s*(?:定数|星数)范围命中\s*\d+\s*$/,'');if(p.active&&p.ok)c.textContent=base+' · '+(file==='osu.html'?'星数':'定数')+'范围命中 '+shown;else if(!p.active)c.textContent=base}}}finally{applying=false}}
+  let timer=0;const schedule=()=>{clearTimeout(timer);timer=setTimeout(applyRange,0)};
+  range.addEventListener('input',()=>{search.dispatchEvent(new Event('input',{bubbles:true}));schedule()});
+  const target=document.querySelector(cfg.root);if(target)new MutationObserver(schedule).observe(target,{childList:true,subtree:true});else new MutationObserver(()=>{if(document.querySelector(cfg.root))schedule()}).observe(document.body,{childList:true,subtree:true});
+  document.addEventListener('change',e=>{if(e.target!==range&&(e.target.closest('.controls')||e.target.closest('.filters')))schedule()},true);
+  document.addEventListener('click',e=>{if(e.target!==range&&(e.target.closest('.controls')||e.target.closest('.filters')))setTimeout(schedule,0)},true);
+  schedule();
+})();
+</script>
+<!-- YMKF RHYTHM CONSTANT RANGE v1.18.9 END -->
+<!-- YMKF ARCAEA JACKET REPAIR v1.18.9 BEGIN -->
+<script>
+(function(){
+  if(window.__YMKF_ARCAEA_JACKET_REPAIR_1189__)return;
+  window.__YMKF_ARCAEA_JACKET_REPAIR_1189__=true;
+  if(typeof hydrateArcaeaCovers!=='function')return;
+  const cache=new Map();
+  function norm(s){return String(s||'').toLowerCase().replace(/[\s_\-:：'"“”‘’()[\]{}·.!?！？,，/\\]+/g,'')}
+  async function searchWiki(songId,title){const key=String(songId||title||'').toLowerCase();if(cache.has(key))return cache.get(key);const terms=[title,songId].filter(Boolean).filter((v,i,a)=>a.findIndex(x=>String(x).toLowerCase()===String(v).toLowerCase())===i);let best=null;for(const term of terms){try{const url='https://arcaea.fandom.com/api.php?action=query&generator=search&gsrnamespace=0&gsrlimit=6&gsrsearch='+encodeURIComponent(String(term))+'&prop=pageimages&piprop=thumbnail&pithumbsize=220&format=json&formatversion=2&origin=*';const r=await fetch(url,{cache:'force-cache'});if(!r.ok)continue;const j=await r.json(),pages=(j.query&&j.query.pages)||[],wanted=norm(title),sid=norm(songId);const cand=pages.filter(p=>p&&p.thumbnail&&p.thumbnail.source).map(p=>{const pn=norm(p.title);let score=0;if(wanted&&pn===wanted)score+=100;if(wanted&&(pn.includes(wanted)||wanted.includes(pn)))score+=40;if(sid&&pn===sid)score+=80;return {p,score}}).sort((a,b)=>b.score-a.score);if(cand.length){best={url:cand[0].p.thumbnail.source,title:cand[0].p.title||title};break}}catch(_){}}cache.set(key,best);return best}
+  async function mapLimit(items,limit,fn){let next=0;await Promise.all(Array.from({length:Math.min(limit,items.length)},async()=>{while(true){const i=next++;if(i>=items.length)return;await fn(items[i],i)}}))}
+  const previousHydrate=hydrateArcaeaCovers;
+  hydrateArcaeaCovers=async function(d){let changed=false;try{changed=!!(await previousHydrate(d))}catch(_){}const lists=[d.scores||[],d.best50||[],d.best30||[],d.recent||[]],all=lists.flat().filter(Boolean),missing=[],seen=new Set();for(const x of all){if(x.jacketUrl)continue;const key=String(x.songId||x.title||'').toLowerCase();if(!key||seen.has(key))continue;seen.add(key);missing.push(x)}await mapLimit(missing,6,async x=>{const hit=await searchWiki(x.songId,x.title);if(!hit||!hit.url)return;for(const y of all){if(String(y.songId||'').toLowerCase()===String(x.songId||'').toLowerCase()){y.jacketUrl=hit.url;if((!y.title||y.title===y.songId)&&hit.title)y.title=hit.title}}changed=true});return changed};
+  if(typeof jacketHtml==='function'){jacketHtml=function(x,extra=''){const u=x&&x.jacketUrl||'',sid=String(x&&x.songId||''),title=String(x&&x.title||sid);if(!u)return `<div class="song-jacket jacket-placeholder ${extra}" data-arc-songid="${esc(sid)}" data-arc-title="${esc(title)}">♫</div>`;return `<img class="song-jacket ${extra}" src="${esc(u)}" data-arc-songid="${esc(sid)}" data-arc-title="${esc(title)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="ymkfArcJacketError(this)">`}}
+  window.ymkfArcJacketError=async function(img){if(!img||img.dataset.ymkfRepairing==='1')return;img.dataset.ymkfRepairing='1';const hit=await searchWiki(img.dataset.arcSongid,img.dataset.arcTitle);if(hit&&hit.url&&img.src!==hit.url){img.onerror=function(){this.outerHTML='<div class="song-jacket jacket-placeholder '+(this.classList.contains('card-jacket')?'card-jacket':'')+'">♫</div>'};img.src=hit.url;return}img.outerHTML='<div class="song-jacket jacket-placeholder '+(img.classList.contains('card-jacket')?'card-jacket':'')+'">♫</div>'};
+})();
+</script>
+<!-- YMKF ARCAEA JACKET REPAIR v1.18.9 END -->
+<!-- YMKF RHYTHM TREND INTERACTION v1.19.9 BEGIN -->
+<style>
+.trend-point-target{fill:transparent;stroke:transparent;pointer-events:all;cursor:pointer}.trend-point-target:focus{outline:none}.trend-point-selected{stroke:#fff!important;stroke-width:2.4!important;filter:drop-shadow(0 0 4px rgba(255,255,255,.72))}.trend-select-line{stroke:rgba(255,255,255,.32);stroke-width:1;stroke-dasharray:4 5;pointer-events:none}.trend-point-detail{margin-top:10px;min-height:46px;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;border:1px solid var(--line);border-radius:13px;background:var(--panel2);padding:9px 12px;color:#dce3ee;font-size:12px}.trend-point-detail b{font-size:13px}.trend-point-detail span{display:inline-flex;align-items:center;gap:6px}.trend-point-detail i{width:8px;height:8px;border-radius:50%;display:inline-block}
+</style>
+<script>
+(function(){
+  if(window.__YMKF_ARCAEA_TREND_INTERACTION_1199__)return;window.__YMKF_ARCAEA_TREND_INTERACTION_1199__=true;
+  let selectedIndex=-1;const previousRenderTrend=renderTrend;
+  const specs=()=>[{key:'potential',on:LINES.ptt,cls:'dot-ptt',label:'PTT',color:'var(--a)'},{key:'legacyB30',on:LINES.b30,cls:'dot-oldb30',label:'B30',color:'var(--b)'},{key:'legacyR10',on:LINES.r10,cls:'dot-oldr10',label:'R10',color:'var(--r)'},{key:'b50',on:LINES.b50,cls:'dot-v7b50',label:'B50',color:'var(--c)'},{key:'b10',on:LINES.b10,cls:'dot-v7b10',label:'B10',color:'#f2b7df'}].filter(x=>x.on);
+  const rows=()=>((DATA&&DATA.trend)||[]).filter(x=>[x.potential,x.legacyB30,x.legacyR10,x.b50,x.b10].some(v=>v!=null));
+  function detailHost(){let box=document.querySelector('#arcaeaTrendDetail');if(!box){box=document.createElement('div');box.id='arcaeaTrendDetail';box.className='trend-point-detail';document.querySelector('#trend').insertAdjacentElement('afterend',box)}return box}
+  function labelOf(row){return String(row.label||row.key||row.month||row.date||'当前记录')}
+  function selectPoint(index){const list=rows(),row=list[index],host=document.querySelector('#trend'),svg=host&&host.querySelector('svg'),box=detailHost();if(!row||!svg){box.innerHTML='<span>暂无趋势数据</span>';return}selectedIndex=index;svg.querySelectorAll('.trend-point-selected').forEach(x=>x.classList.remove('trend-point-selected'));const targets=[...svg.querySelectorAll('.trend-point-target')].filter(x=>Number(x.dataset.index)===index);targets.forEach(x=>{const visible=x.previousElementSibling;if(visible&&visible.tagName.toLowerCase()==='circle')visible.classList.add('trend-point-selected')});const first=targets[0];let line=svg.querySelector('.trend-select-line');if(!line){line=document.createElementNS('http://www.w3.org/2000/svg','line');line.setAttribute('class','trend-select-line');svg.insertBefore(line,svg.firstChild)}if(first){const cx=first.getAttribute('cx');line.setAttribute('x1',cx);line.setAttribute('x2',cx);line.setAttribute('y1','20');line.setAttribute('y2','366');line.style.display=''}else line.style.display='none';const values=specs().map(sp=>{const v=row[sp.key];return v==null?'':`<span><i style="background:${sp.color}"></i>${sp.label} ${n(v).toFixed(3)}</span>`}).filter(Boolean).join('');box.innerHTML=`<b>${esc(labelOf(row))}</b>${values}`}
+  function decorate(){const host=document.querySelector('#trend'),svg=host&&host.querySelector('svg'),list=rows(),box=detailHost(),activeSpecs=specs();if(!svg||!list.length||!activeSpecs.length){box.innerHTML='<span>暂无可选择的趋势数据</span>';return}for(const sp of activeSpecs){const dots=[...svg.querySelectorAll('circle.'+sp.cls)],valid=list.map((row,index)=>({row,index})).filter(x=>x.row[sp.key]!=null);dots.forEach((dot,i)=>{const hitRow=valid[i];if(!hitRow)return;const hit=document.createElementNS('http://www.w3.org/2000/svg','circle');hit.setAttribute('class','trend-point-target');hit.setAttribute('cx',dot.getAttribute('cx'));hit.setAttribute('cy',dot.getAttribute('cy'));hit.setAttribute('r','13');hit.setAttribute('role','button');hit.setAttribute('tabindex','0');hit.setAttribute('aria-label',`${labelOf(hitRow.row)} ${sp.label} ${n(hitRow.row[sp.key]).toFixed(3)}`);hit.dataset.index=String(hitRow.index);hit.addEventListener('click',()=>selectPoint(hitRow.index));hit.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selectPoint(hitRow.index)}});dot.after(hit)})}const activeIndexes=list.map((row,index)=>({row,index})).filter(x=>activeSpecs.some(sp=>x.row[sp.key]!=null)).map(x=>x.index);if(!activeIndexes.includes(selectedIndex))selectedIndex=activeIndexes[activeIndexes.length-1];selectPoint(selectedIndex)}
+  renderTrend=function(){previousRenderTrend();decorate()};if(DATA)renderTrend();
+})();
+</script>
+<!-- YMKF RHYTHM TREND INTERACTION v1.19.9 END -->
+<script id="ymkf-arcaea-hotfix-v101" src="./arcaea-hotfix-v1.0.1.js?v=1.0.1"></script>
 </body></html>
