@@ -188,7 +188,7 @@ function filteredMatches(){
 function renderTable(t){if(!Array.isArray(t)||!t.length)return'';return `<div class="tableWrap"><table><tbody>${t.map(r=>`<tr>${(Array.isArray(r)?r:[]).map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`}
 function cards(title,rows){if(!Array.isArray(rows)||!rows.length)return'';return `<div class="detailSection"><h3>${esc(title)}</h3><div class="miniCards">${rows.map(x=>{const o=typeof x==='string'?{text:x}:x||{};const img=o.image||o.imageData||'';return `<div class="miniCard">${img?`<img src="${esc(img)}" alt="${esc(o.alt||'')}" style="width:36px;height:36px;object-fit:contain;vertical-align:middle;margin-right:8px">`:''}${esc(o.text||'')}</div>`}).join('')}</div></div>`}
 const GGD_ROLE_NAMES={"0":"None","1":"Goose","2":"Duck","3":"Dodo","4":"Gravy","5":"Mechanic","6":"Technician","7":"Medium","8":"Vigilante","9":"Cannibal","10":"Morphling","11":"Sheriff","12":"Silencer","13":"Canadian","14":"Lover Duck","15":"Lover Goose","16":"Vulture","17":"Professional","18":"Spy","19":"Mimic","20":"Detective","21":"Pigeon","22":"Birdwatcher","23":"Assassin","24":"Falcon","25":"Hitman","26":"Bodyguard","27":"Snitch","28":"Politician","29":"Locksmith","30":"Mortician","31":"Celebrity","32":"Party","33":"Demolitionist","34":"Dueling Dodo","35":"GH Goose","36":"GH Duck","37":"GH Gravy","38":"DND Duck","39":"DND Falcon","40":"DND Vulture","41":"DND Morphling","42":"FP Goose","43":"Explore Goose","44":"TT Vampire","45":"TT Villager","46":"TT Thrall","47":"Spectator","48":"Identity Thief","49":"Adventurer","50":"Avenger","51":"Ninja","52":"Undertaker","53":"Snoop","54":"Esper","55":"Invisibility","56":"Astral","57":"Pelican","58":"TTE Thrall","59":"TT Mummy","60":"Serial Killer","61":"Engineer","62":"Warlock","63":"Street Urchin","64":"Tracker","65":"Esper Duck","66":"Stalker","67":"Preacher","68":"BHC Inquisitor","69":"BHC Saint","70":"BHC High Priest","71":"BHC Demon Hunter","72":"BHC Initiate","73":"BHC Seamstress","74":"BHC Crow","75":"BHC Sin Eater","76":"TF Goose","77":"TLC Chicken","78":"TLC Bodyguard","79":"TLC Identity Thief","80":"TLC Undertaker","81":"TLC Camo Duck","82":"Cupid","83":"Survivalist","84":"Carrier","85":"Parasite","86":"Drone","87":"Scientist","88":"HNS Role","89":"HNS Owl","90":"HNS Spotter","91":"HNS Sniper","92":"Lobbyist","93":"Lost Duckling","94":"Fortune Teller","95":"Mime","96":"Raven","97":"Rabbit","98":"Lucid Dreamer","99":"Clown","100":"Soldier","101":"Coroner","102":"Sensor","103":"Looter","104":"Sniper","105":"Delusional","106":"Hawk","107":"AI","108":"TT Dr Turducken","109":"TT Turduckens Monster","110":"Witch Doctor","111":"Cuckoo","112":"Swordsman","113":"Magpie"};
-const GGD_ROLE_ZH={"1":"鹅","2":"鸭","3":"呆呆鸟","4":"肉汁","7":"通灵者","8":"正义使者","11":"警长","12":"静语者","13":"加拿大鹅","16":"秃鹫","17":"专业杀手","18":"间谍","19":"模仿者","20":"侦探","21":"鸽子","22":"观鸟者","23":"刺客","24":"猎鹰","26":"保镖","27":"告密","28":"政治家","29":"锁匠","30":"殡仪员","31":"网红","32":"派对狂","33":"爆炸王","34":"决斗呆呆鸟","50":"复仇者","51":"忍者","55":"隐形","57":"鹈鹕","60":"连环杀手","61":"工程师","64":"跟踪者","65":"超能力鸭","98":"清醒梦者","99":"小丑","100":"士兵","102":"探测员","104":"狙击手"};
+const GGD_ROLE_ZH={"1": "鹅", "2": "鸭", "3": "呆呆鸟", "4": "肉汁", "7": "通灵者", "8": "正义使者", "11": "警长", "12": "静语者", "13": "加拿大鹅", "16": "秃鹫", "17": "专业杀手", "18": "间谍", "19": "模仿者", "20": "侦探", "21": "鸽子", "22": "观鸟", "23": "刺客", "24": "猎鹰", "26": "保镖", "27": "告密", "28": "政治家", "29": "锁匠", "30": "殡仪员", "31": "网红", "32": "派对狂", "33": "爆炸王", "34": "决斗呆呆鸟", "50": "复仇者", "51": "忍者", "55": "隐形", "57": "鹈鹕", "60": "连环杀手", "61": "工程师", "64": "跟踪者", "65": "超能力鸭", "98": "清醒梦者", "99": "小丑", "100": "士兵", "102": "探测员", "104": "狙击手", "56": "星界行者", "48": "身份窃贼", "9": "食鸟鸭", "10": "变形者", "111": "布谷鸟", "110": "巫医", "96": "渡鸦", "101": "验尸官", "87": "科学家", "112": "剑客", "63": "流浪儿童", "47": "观战者", "67": "传教士", "113": "喜鹊"};
 const GGD_MAP_NAMES={"0":"Goose Chapel","1":"Mallard Manor","2":"Nexus Colony","3":"Black Swan","4":"Mother Goose","5":"Lounge","6":"Jungle Temple","7":"Basement","8":"Ancient Sands","9":"Bloodhaven","10":"Eagleton","11":"Carnival","12":"Godzilla","13":"Custom","15":"Mall","255":"None"};
 const GGD_MODE_NAMES={"0":"Classic","1":"Goose Hunt","2":"Dine and Dash","3":"Trick or Treat","4":"Hanging Out","5":"Draft","6":"Tastes Like Chicken","7":"Fowl Play","8":"Corruption","9":"Task Farming","10":"Hoot and Seek","11":"Sandbox","254":"Tutorial","255":"None"};
 const GGD_EVENT_NAMES={
@@ -535,7 +535,7 @@ function adjustedMatchKills(m){
 function matchHtml(m){
   const shownKills=adjustedMatchKills(m);
   const basic=`<div class="matchHead"><div class="player">${m.roleIcon?`<img class="matchRoleIcon" src="${esc(m.roleIcon)}" alt="">`:''}<div class="playerMain"><b>${esc(m.roleName||'历史详情')} <span class="factionTag ${factionClass(m.faction)}">${esc(m.faction||'未知')}</span></b><span>${esc(m.modeMap||[m.mode,m.map].filter(Boolean).join(' · ')||m.source||'—')}</span></div></div><div class="result ${m.won?'win':'loss'}">${esc(m.result||'—')}</div><div class="metric"><span class="label">日期</span><strong>${esc(m.date||'—')}</strong></div><div class="metric"><span class="label">玩家人数</span><strong>${num(m.playerCount)}</strong></div><div class="metric"><span class="label">存活回合</span><strong>${num(m.survivalRounds)}</strong></div><div class="metric"><span class="label">票准率</span><strong>${m.votingAccuracy==null?'—':esc(m.votingAccuracy)+'%'}</strong></div><div class="metric"><span class="label">击杀</span><strong>${num(shownKills)}</strong></div></div>`;
-  const detail=m.detailAvailable?`<div class="detailBox"><details><summary>展开详情</summary><div class="detailInner">${renderDetail(m.detail)}</div></details></div>`:`<div class="noDetail">该局暂未抓到可展开的逐局详情；基础战绩仍会保留。</div>`;
+  const detail=m.detailAvailable?`<div class="detailBox"><details><summary>展开详情</summary><div class="detailInner">${renderDetail(m.detail)}</div></details></div>`:`<div class="noDetail">${m.matchId?'已取得比赛 ID，逐局详情尚未抓取成功。':'尚未取得官方比赛 ID，无法下载真实复盘；需修复抓取器。'}</div>`;
   return `<article class="match">${basic}${detail}</article>`;
 }
 function renderMatches(){
@@ -558,6 +558,22 @@ function fillFilters(){
   $('#roundFilter').innerHTML='<option value="">全部存活回合</option>'+rounds.map(x=>`<option value="${esc(x)}">${esc(x)} 回合</option>`).join('');
   ['#roleFilter','#resultFilter','#modeFilter','#playerFilter','#roundFilter'].forEach(id=>$(id).addEventListener('change',()=>{page=1;renderMatches()}));
 }
+
+const VERIFIED_FACTIONS={"24": 3, "12": 2, "16": 3, "13": 1, "11": 1, "61": 1, "8": 1, "9": 2, "50": 1, "31": 1, "96": 3, "33": 2, "22": 1, "7": 1, "55": 2, "56": 1, "98": 1, "102": 1, "100": 1, "104": 2, "57": 3, "3": 3, "30": 1, "66": 1, "23": 2, "20": 1, "52": 2, "92": 1, "99": 2, "21": 3, "4": 1, "17": 2, "113": 3, "111": 3, "48": 2, "83": 1, "87": 1, "28": 1, "10": 2, "110": 2, "101": 1, "60": 2, "19": 1, "29": 1, "65": 2, "15": 1, "67": 2, "18": 2, "112": 2, "14": 2, "1": 1, "84": 2, "85": 2, "47": 12, "64": 1, "51": 2, "63": 1, "34": 3, "93": 2};
+function normalizeGgdData(data){
+ const labels={1:'鹅',2:'鸭',3:'中立',12:'观战'};
+ const byRole=new Map();
+ for(const m of data.matches||[]){
+  const summary=parseApiBodies(m.detail).find(x=>x&&x.matchId&&x.uid&&x.role!=null);
+  if(summary){m.roleId=String(summary.role);m.officialFaction=summary.faction;}
+  if(!m.roleName||m.roleName==='未知'||m.roleName==='未知身份')m.roleName=roleLabel(m.roleId);
+  m.faction=labels[m.officialFaction]||labels[VERIFIED_FACTIONS[m.roleId]]||m.faction||'未知';
+  if(m.roleId!=null)byRole.set(String(m.roleId),m.faction);
+ }
+ for(const r of data.roleStats||[])r.faction=labels[VERIFIED_FACTIONS[r.roleId]]||byRole.get(String(r.roleId))||r.faction||'未知';
+ return data;
+}
+
 function render(){
   const p=D?.profile||{};
   if(p.avatar){$('#avatar').src=p.avatar;$('#avatar').style.visibility='visible'}else $('#avatar').style.visibility='hidden';
@@ -568,6 +584,6 @@ function render(){
 document.querySelectorAll('.sortBtn').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.sort;if(roleSort===k)roleDir=roleDir==='desc'?'asc':'desc';else{roleSort=k;roleDir='desc'}renderRoles()}));
 document.querySelectorAll('#factionSeg button').forEach(b=>b.addEventListener('click',()=>{roleFaction=b.dataset.faction||'';document.querySelectorAll('#factionSeg button').forEach(x=>x.classList.toggle('active',x===b));renderRoles()}));
 document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.page').forEach(v=>v.classList.toggle('active',v.id===b.dataset.page))}));
-fetch(DATA,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(x=>{D=x;render()}).catch(e=>{$('#overviewPage').innerHTML=`<div class="notice">鹅鸭杀数据尚未生成：${esc(e.message)}</div>`});
+fetch(DATA,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(x=>{D=normalizeGgdData(x);render()}).catch(e=>{$('#overviewPage').innerHTML=`<div class="notice">鹅鸭杀数据尚未生成：${esc(e.message)}</div>`});
 </script>
 </body></html>
