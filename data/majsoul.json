@@ -2,84 +2,381 @@
     "schema":  3,
     "friendId":  "68287780",
     "nickname":  "PIANOYMKF",
-    "updatedAt":  "2026-10-04T07:48:39.159Z",
-    "status":  "本次未刷新，保留上次累计统计",
+    "updatedAt":  "2026-10-15T15:07:03.740Z",
+    "status":  "使用最近采集的累计统计",
     "levels":  {
-                   "three":  "雀士 3 星",
+                   "three":  "雀士 2 星",
                    "four":  "雀士 1 星"
                },
     "groups":  [
                    {
+                       "fanStats":  {
+                                        "version":  1,
+                                        "available":  true,
+                                        "complete":  true,
+                                        "scope":  "category-all-periods",
+                                        "entries":  [
+                                                        {
+                                                            "id":  1,
+                                                            "name":  "门前清自摸和",
+                                                            "count":  374,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  2,
+                                                            "name":  "立直",
+                                                            "count":  741,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  3,
+                                                            "name":  "枪杠",
+                                                            "count":  3,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  4,
+                                                            "name":  "岭上开花",
+                                                            "count":  49,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  5,
+                                                            "name":  "海底摸月",
+                                                            "count":  10,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  6,
+                                                            "name":  "河底捞鱼",
+                                                            "count":  13,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  7,
+                                                            "name":  "役牌 白",
+                                                            "count":  253,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  8,
+                                                            "name":  "役牌 发",
+                                                            "count":  262,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  9,
+                                                            "name":  "役牌 中",
+                                                            "count":  253,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  10,
+                                                            "name":  "役牌:门风牌",
+                                                            "count":  303,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  11,
+                                                            "name":  "役牌:场风牌",
+                                                            "count":  284,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  12,
+                                                            "name":  "断幺九",
+                                                            "count":  287,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  13,
+                                                            "name":  "一杯口",
+                                                            "count":  152,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  14,
+                                                            "name":  "平和",
+                                                            "count":  156,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  15,
+                                                            "name":  "混全带幺九",
+                                                            "count":  52,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  16,
+                                                            "name":  "一气通贯",
+                                                            "count":  33,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  18,
+                                                            "name":  "两立直",
+                                                            "count":  4,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  19,
+                                                            "name":  "三色同刻",
+                                                            "count":  1,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  20,
+                                                            "name":  "三杠子",
+                                                            "count":  2,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  21,
+                                                            "name":  "对对和",
+                                                            "count":  261,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  22,
+                                                            "name":  "三暗刻",
+                                                            "count":  50,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  23,
+                                                            "name":  "小三元",
+                                                            "count":  6,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  24,
+                                                            "name":  "混老头",
+                                                            "count":  32,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  25,
+                                                            "name":  "七对子",
+                                                            "count":  101,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  26,
+                                                            "name":  "纯全带幺九",
+                                                            "count":  6,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  27,
+                                                            "name":  "混一色",
+                                                            "count":  545,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  28,
+                                                            "name":  "二杯口",
+                                                            "count":  1,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  29,
+                                                            "name":  "清一色",
+                                                            "count":  109,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  30,
+                                                            "name":  "一发",
+                                                            "count":  176,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  31,
+                                                            "name":  "宝牌",
+                                                            "count":  1772,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  32,
+                                                            "name":  "红宝牌",
+                                                            "count":  806,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  33,
+                                                            "name":  "里宝牌",
+                                                            "count":  533,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  34,
+                                                            "name":  "拔北宝牌",
+                                                            "count":  1774,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  35,
+                                                            "name":  "天和",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  36,
+                                                            "name":  "地和",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  37,
+                                                            "name":  "大三元",
+                                                            "count":  5,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  38,
+                                                            "name":  "四暗刻",
+                                                            "count":  4,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  39,
+                                                            "name":  "字一色",
+                                                            "count":  1,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  40,
+                                                            "name":  "绿一色",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  41,
+                                                            "name":  "清老头",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  42,
+                                                            "name":  "国士无双",
+                                                            "count":  12,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  43,
+                                                            "name":  "小四喜",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  44,
+                                                            "name":  "四杠子",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  45,
+                                                            "name":  "九莲宝灯",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  47,
+                                                            "name":  "纯正九莲宝灯",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  48,
+                                                            "name":  "四暗刻单骑",
+                                                            "count":  4,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  49,
+                                                            "name":  "国士无双十三面",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  50,
+                                                            "name":  "大四喜",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        }
+                                                    ],
+                                        "liujumanguan":  3
+                                    },
                        "key":  "ranked3",
                        "kind":  "ranked",
                        "players":  3,
                        "available":  true,
                        "periods":  {
                                        "total":  {
-                                                     "games":  1119,
+                                                     "games":  1170,
                                                      "positions":  [
-                                                                       326,
-                                                                       390,
-                                                                       403
+                                                                       336,
+                                                                       409,
+                                                                       425
                                                                    ],
-                                                     "rounds":  7883,
-                                                     "fly":  182,
-                                                     "calls":  3924,
-                                                     "riichi":  1253,
+                                                     "rounds":  8260,
+                                                     "fly":  189,
+                                                     "calls":  4116,
+                                                     "riichi":  1320,
                                                      "highestDealer":  6,
                                                      "outcomesKnown":  true,
-                                                     "draws":  923,
-                                                     "sideways":  1508,
-                                                     "selfDraws":  745,
-                                                     "ron":  1309,
-                                                     "dealIns":  1644,
-                                                     "opponentSelfDraws":  1754,
-                                                     "winPoints":  20933100,
-                                                     "winTurns":  26067
+                                                     "draws":  958,
+                                                     "sideways":  1590,
+                                                     "selfDraws":  781,
+                                                     "ron":  1374,
+                                                     "dealIns":  1714,
+                                                     "opponentSelfDraws":  1843,
+                                                     "winPoints":  21818300,
+                                                     "winTurns":  27273
                                                  },
                                        "east":  {
-                                                    "games":  217,
+                                                    "games":  224,
                                                     "positions":  [
                                                                       78,
-                                                                      77,
-                                                                      62
+                                                                      80,
+                                                                      66
                                                                   ],
-                                                    "rounds":  946,
+                                                    "rounds":  974,
                                                     "fly":  14,
-                                                    "calls":  468,
-                                                    "riichi":  159,
+                                                    "calls":  481,
+                                                    "riichi":  163,
                                                     "highestDealer":  6,
                                                     "outcomesKnown":  true,
                                                     "draws":  136,
-                                                    "sideways":  188,
-                                                    "selfDraws":  90,
-                                                    "ron":  167,
-                                                    "dealIns":  176,
-                                                    "opponentSelfDraws":  189,
-                                                    "winPoints":  2682300,
-                                                    "winTurns":  3368
+                                                    "sideways":  192,
+                                                    "selfDraws":  93,
+                                                    "ron":  171,
+                                                    "dealIns":  185,
+                                                    "opponentSelfDraws":  197,
+                                                    "winPoints":  2733600,
+                                                    "winTurns":  3451
                                                 },
                                        "south":  {
-                                                     "games":  902,
+                                                     "games":  946,
                                                      "positions":  [
-                                                                       248,
-                                                                       313,
-                                                                       341
+                                                                       258,
+                                                                       329,
+                                                                       359
                                                                    ],
-                                                     "rounds":  6937,
-                                                     "fly":  168,
-                                                     "calls":  3456,
-                                                     "riichi":  1094,
+                                                     "rounds":  7286,
+                                                     "fly":  175,
+                                                     "calls":  3635,
+                                                     "riichi":  1157,
                                                      "highestDealer":  6,
                                                      "outcomesKnown":  true,
-                                                     "draws":  787,
-                                                     "sideways":  1320,
-                                                     "selfDraws":  655,
-                                                     "ron":  1142,
-                                                     "dealIns":  1468,
-                                                     "opponentSelfDraws":  1565,
-                                                     "winPoints":  18250800,
-                                                     "winTurns":  22699
+                                                     "draws":  822,
+                                                     "sideways":  1398,
+                                                     "selfDraws":  688,
+                                                     "ron":  1203,
+                                                     "dealIns":  1529,
+                                                     "opponentSelfDraws":  1646,
+                                                     "winPoints":  19084700,
+                                                     "winTurns":  23822
                                                  }
                                    },
                        "otherModes":  [
@@ -87,6 +384,303 @@
                                       ]
                    },
                    {
+                       "fanStats":  {
+                                        "version":  1,
+                                        "available":  true,
+                                        "complete":  true,
+                                        "scope":  "category-all-periods",
+                                        "entries":  [
+                                                        {
+                                                            "id":  1,
+                                                            "name":  "门前清自摸和",
+                                                            "count":  8,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  2,
+                                                            "name":  "立直",
+                                                            "count":  16,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  3,
+                                                            "name":  "枪杠",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  4,
+                                                            "name":  "岭上开花",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  5,
+                                                            "name":  "海底摸月",
+                                                            "count":  2,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  6,
+                                                            "name":  "河底捞鱼",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  7,
+                                                            "name":  "役牌 白",
+                                                            "count":  6,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  8,
+                                                            "name":  "役牌 发",
+                                                            "count":  5,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  9,
+                                                            "name":  "役牌 中",
+                                                            "count":  8,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  10,
+                                                            "name":  "役牌:门风牌",
+                                                            "count":  14,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  11,
+                                                            "name":  "役牌:场风牌",
+                                                            "count":  9,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  12,
+                                                            "name":  "断幺九",
+                                                            "count":  28,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  13,
+                                                            "name":  "一杯口",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  14,
+                                                            "name":  "平和",
+                                                            "count":  3,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  15,
+                                                            "name":  "混全带幺九",
+                                                            "count":  5,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  16,
+                                                            "name":  "一气通贯",
+                                                            "count":  1,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  17,
+                                                            "name":  "三色同顺",
+                                                            "count":  6,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  18,
+                                                            "name":  "两立直",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  19,
+                                                            "name":  "三色同刻",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  20,
+                                                            "name":  "三杠子",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  21,
+                                                            "name":  "对对和",
+                                                            "count":  7,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  22,
+                                                            "name":  "三暗刻",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  23,
+                                                            "name":  "小三元",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  24,
+                                                            "name":  "混老头",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  25,
+                                                            "name":  "七对子",
+                                                            "count":  4,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  26,
+                                                            "name":  "纯全带幺九",
+                                                            "count":  4,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  27,
+                                                            "name":  "混一色",
+                                                            "count":  13,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  28,
+                                                            "name":  "二杯口",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  29,
+                                                            "name":  "清一色",
+                                                            "count":  2,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  30,
+                                                            "name":  "一发",
+                                                            "count":  4,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  31,
+                                                            "name":  "宝牌",
+                                                            "count":  62,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  32,
+                                                            "name":  "红宝牌",
+                                                            "count":  42,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  33,
+                                                            "name":  "里宝牌",
+                                                            "count":  7,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  35,
+                                                            "name":  "天和",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  36,
+                                                            "name":  "地和",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  37,
+                                                            "name":  "大三元",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  38,
+                                                            "name":  "四暗刻",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  39,
+                                                            "name":  "字一色",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  40,
+                                                            "name":  "绿一色",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  41,
+                                                            "name":  "清老头",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  42,
+                                                            "name":  "国士无双",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  43,
+                                                            "name":  "小四喜",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  44,
+                                                            "name":  "四杠子",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  45,
+                                                            "name":  "九莲宝灯",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  47,
+                                                            "name":  "纯正九莲宝灯",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  48,
+                                                            "name":  "四暗刻单骑",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  49,
+                                                            "name":  "国士无双十三面",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  50,
+                                                            "name":  "大四喜",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        }
+                                                    ],
+                                        "liujumanguan":  0
+                                    },
                        "key":  "ranked4",
                        "kind":  "ranked",
                        "players":  4,
@@ -167,6 +761,381 @@
                                       ]
                    },
                    {
+                       "fanStats":  {
+                                        "version":  1,
+                                        "available":  true,
+                                        "complete":  true,
+                                        "scope":  "category-all-periods",
+                                        "entries":  [
+                                                        {
+                                                            "id":  1,
+                                                            "name":  "门前清自摸和",
+                                                            "count":  19,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  2,
+                                                            "name":  "立直",
+                                                            "count":  48,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  3,
+                                                            "name":  "枪杠",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  4,
+                                                            "name":  "岭上开花",
+                                                            "count":  1,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  5,
+                                                            "name":  "海底摸月",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  6,
+                                                            "name":  "河底捞鱼",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  7,
+                                                            "name":  "役牌 白",
+                                                            "count":  11,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  8,
+                                                            "name":  "役牌 发",
+                                                            "count":  15,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  9,
+                                                            "name":  "役牌 中",
+                                                            "count":  17,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  10,
+                                                            "name":  "役牌:门风牌",
+                                                            "count":  19,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  11,
+                                                            "name":  "役牌:场风牌",
+                                                            "count":  18,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  12,
+                                                            "name":  "断幺九",
+                                                            "count":  10,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  13,
+                                                            "name":  "一杯口",
+                                                            "count":  10,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  14,
+                                                            "name":  "平和",
+                                                            "count":  10,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  15,
+                                                            "name":  "混全带幺九",
+                                                            "count":  4,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  16,
+                                                            "name":  "一气通贯",
+                                                            "count":  2,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  18,
+                                                            "name":  "两立直",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  19,
+                                                            "name":  "三色同刻",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  20,
+                                                            "name":  "三杠子",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  21,
+                                                            "name":  "对对和",
+                                                            "count":  10,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  22,
+                                                            "name":  "三暗刻",
+                                                            "count":  2,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  23,
+                                                            "name":  "小三元",
+                                                            "count":  1,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  24,
+                                                            "name":  "混老头",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  25,
+                                                            "name":  "七对子",
+                                                            "count":  6,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  26,
+                                                            "name":  "纯全带幺九",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  27,
+                                                            "name":  "混一色",
+                                                            "count":  30,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  28,
+                                                            "name":  "二杯口",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  29,
+                                                            "name":  "清一色",
+                                                            "count":  10,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  30,
+                                                            "name":  "一发",
+                                                            "count":  12,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  31,
+                                                            "name":  "宝牌",
+                                                            "count":  106,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  32,
+                                                            "name":  "红宝牌",
+                                                            "count":  50,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  33,
+                                                            "name":  "里宝牌",
+                                                            "count":  32,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  34,
+                                                            "name":  "拔北宝牌",
+                                                            "count":  108,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  35,
+                                                            "name":  "天和",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  36,
+                                                            "name":  "地和",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  37,
+                                                            "name":  "大三元",
+                                                            "count":  2,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  38,
+                                                            "name":  "四暗刻",
+                                                            "count":  1,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  39,
+                                                            "name":  "字一色",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  40,
+                                                            "name":  "绿一色",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  41,
+                                                            "name":  "清老头",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  42,
+                                                            "name":  "国士无双",
+                                                            "count":  1,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  43,
+                                                            "name":  "小四喜",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  44,
+                                                            "name":  "四杠子",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  45,
+                                                            "name":  "九莲宝灯",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  47,
+                                                            "name":  "纯正九莲宝灯",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  48,
+                                                            "name":  "四暗刻单骑",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  49,
+                                                            "name":  "国士无双十三面",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  50,
+                                                            "name":  "大四喜",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  51,
+                                                            "name":  "燕返",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  52,
+                                                            "name":  "杠振",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  53,
+                                                            "name":  "十二落抬",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  54,
+                                                            "name":  "五门齐",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  55,
+                                                            "name":  "三连刻",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  56,
+                                                            "name":  "一色三同顺",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  57,
+                                                            "name":  "一筒摸月",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  58,
+                                                            "name":  "九筒捞鱼",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  59,
+                                                            "name":  "人和",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  60,
+                                                            "name":  "大车轮",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  61,
+                                                            "name":  "大竹林",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  63,
+                                                            "name":  "石上三年",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  64,
+                                                            "name":  "大七星",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        }
+                                                    ],
+                                        "liujumanguan":  0
+                                    },
                        "key":  "friendly3",
                        "kind":  "friendly",
                        "players":  3,
@@ -244,33 +1213,414 @@
                                       ]
                    },
                    {
+                       "fanStats":  {
+                                        "version":  1,
+                                        "available":  true,
+                                        "complete":  true,
+                                        "scope":  "category-all-periods",
+                                        "entries":  [
+                                                        {
+                                                            "id":  1,
+                                                            "name":  "门前清自摸和",
+                                                            "count":  55,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  2,
+                                                            "name":  "立直",
+                                                            "count":  131,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  3,
+                                                            "name":  "枪杠",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  4,
+                                                            "name":  "岭上开花",
+                                                            "count":  3,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  5,
+                                                            "name":  "海底摸月",
+                                                            "count":  7,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  6,
+                                                            "name":  "河底捞鱼",
+                                                            "count":  1,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  7,
+                                                            "name":  "役牌 白",
+                                                            "count":  55,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  8,
+                                                            "name":  "役牌 发",
+                                                            "count":  51,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  9,
+                                                            "name":  "役牌 中",
+                                                            "count":  48,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  10,
+                                                            "name":  "役牌:门风牌",
+                                                            "count":  41,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  11,
+                                                            "name":  "役牌:场风牌",
+                                                            "count":  42,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  12,
+                                                            "name":  "断幺九",
+                                                            "count":  89,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  13,
+                                                            "name":  "一杯口",
+                                                            "count":  22,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  14,
+                                                            "name":  "平和",
+                                                            "count":  22,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  15,
+                                                            "name":  "混全带幺九",
+                                                            "count":  13,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  16,
+                                                            "name":  "一气通贯",
+                                                            "count":  8,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  17,
+                                                            "name":  "三色同顺",
+                                                            "count":  6,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  18,
+                                                            "name":  "两立直",
+                                                            "count":  10,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  19,
+                                                            "name":  "三色同刻",
+                                                            "count":  1,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  20,
+                                                            "name":  "三杠子",
+                                                            "count":  1,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  21,
+                                                            "name":  "对对和",
+                                                            "count":  46,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  22,
+                                                            "name":  "三暗刻",
+                                                            "count":  12,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  23,
+                                                            "name":  "小三元",
+                                                            "count":  3,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  24,
+                                                            "name":  "混老头",
+                                                            "count":  28,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  25,
+                                                            "name":  "七对子",
+                                                            "count":  37,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  26,
+                                                            "name":  "纯全带幺九",
+                                                            "count":  2,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  27,
+                                                            "name":  "混一色",
+                                                            "count":  125,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  28,
+                                                            "name":  "二杯口",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  29,
+                                                            "name":  "清一色",
+                                                            "count":  29,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  30,
+                                                            "name":  "一发",
+                                                            "count":  37,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  31,
+                                                            "name":  "宝牌",
+                                                            "count":  242,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  32,
+                                                            "name":  "红宝牌",
+                                                            "count":  144,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  33,
+                                                            "name":  "里宝牌",
+                                                            "count":  65,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  35,
+                                                            "name":  "天和",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  36,
+                                                            "name":  "地和",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  37,
+                                                            "name":  "大三元",
+                                                            "count":  6,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  38,
+                                                            "name":  "四暗刻",
+                                                            "count":  1,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  39,
+                                                            "name":  "字一色",
+                                                            "count":  5,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  40,
+                                                            "name":  "绿一色",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  41,
+                                                            "name":  "清老头",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  42,
+                                                            "name":  "国士无双",
+                                                            "count":  12,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  43,
+                                                            "name":  "小四喜",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  44,
+                                                            "name":  "四杠子",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  45,
+                                                            "name":  "九莲宝灯",
+                                                            "count":  1,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  47,
+                                                            "name":  "纯正九莲宝灯",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  48,
+                                                            "name":  "四暗刻单骑",
+                                                            "count":  6,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  49,
+                                                            "name":  "国士无双十三面",
+                                                            "count":  9,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  50,
+                                                            "name":  "大四喜",
+                                                            "count":  1,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  51,
+                                                            "name":  "燕返",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  52,
+                                                            "name":  "杠振",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  53,
+                                                            "name":  "十二落抬",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  54,
+                                                            "name":  "五门齐",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  55,
+                                                            "name":  "三连刻",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  56,
+                                                            "name":  "一色三同顺",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  57,
+                                                            "name":  "一筒摸月",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  58,
+                                                            "name":  "九筒捞鱼",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  59,
+                                                            "name":  "人和",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  60,
+                                                            "name":  "大车轮",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  61,
+                                                            "name":  "大竹林",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  62,
+                                                            "name":  "大数邻",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  63,
+                                                            "name":  "石上三年",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  64,
+                                                            "name":  "大七星",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        }
+                                                    ],
+                                        "liujumanguan":  0
+                                    },
                        "key":  "friendly4",
                        "kind":  "friendly",
                        "players":  4,
                        "available":  true,
                        "periods":  {
                                        "total":  {
-                                                     "games":  161,
+                                                     "games":  163,
                                                      "positions":  [
-                                                                       79,
+                                                                       81,
                                                                        46,
                                                                        22,
                                                                        14
                                                                    ],
-                                                     "rounds":  644,
+                                                     "rounds":  651,
                                                      "fly":  13,
-                                                     "calls":  305,
-                                                     "riichi":  161,
+                                                     "calls":  310,
+                                                     "riichi":  163,
                                                      "highestDealer":  2,
                                                      "outcomesKnown":  false,
-                                                     "draws":  93,
+                                                     "draws":  95,
                                                      "sideways":  3,
-                                                     "selfDraws":  148,
-                                                     "ron":  264,
+                                                     "selfDraws":  150,
+                                                     "ron":  267,
                                                      "dealIns":  166,
                                                      "opponentSelfDraws":  70,
-                                                     "winPoints":  4429300,
-                                                     "winTurns":  5316
+                                                     "winPoints":  4517400,
+                                                     "winTurns":  5384
                                                  },
                                        "east":  {
                                                     "games":  2,
@@ -296,27 +1646,27 @@
                                                     "winTurns":  48
                                                 },
                                        "south":  {
-                                                     "games":  159,
+                                                     "games":  161,
                                                      "positions":  [
-                                                                       79,
+                                                                       81,
                                                                        45,
                                                                        21,
                                                                        14
                                                                    ],
-                                                     "rounds":  637,
+                                                     "rounds":  644,
                                                      "fly":  13,
-                                                     "calls":  303,
-                                                     "riichi":  158,
+                                                     "calls":  308,
+                                                     "riichi":  160,
                                                      "highestDealer":  2,
                                                      "outcomesKnown":  false,
-                                                     "draws":  92,
+                                                     "draws":  94,
                                                      "sideways":  3,
-                                                     "selfDraws":  145,
-                                                     "ron":  263,
+                                                     "selfDraws":  147,
+                                                     "ron":  266,
                                                      "dealIns":  164,
                                                      "opponentSelfDraws":  68,
-                                                     "winPoints":  4392100,
-                                                     "winTurns":  5268
+                                                     "winPoints":  4480200,
+                                                     "winTurns":  5336
                                                  }
                                    },
                        "otherModes":  [
@@ -325,6 +1675,381 @@
                                       ]
                    },
                    {
+                       "fanStats":  {
+                                        "version":  1,
+                                        "available":  false,
+                                        "complete":  false,
+                                        "scope":  "category-all-periods",
+                                        "entries":  [
+                                                        {
+                                                            "id":  1,
+                                                            "name":  "门前清自摸和",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  2,
+                                                            "name":  "立直",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  3,
+                                                            "name":  "枪杠",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  4,
+                                                            "name":  "岭上开花",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  5,
+                                                            "name":  "海底摸月",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  6,
+                                                            "name":  "河底捞鱼",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  7,
+                                                            "name":  "役牌 白",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  8,
+                                                            "name":  "役牌 发",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  9,
+                                                            "name":  "役牌 中",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  10,
+                                                            "name":  "役牌:门风牌",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  11,
+                                                            "name":  "役牌:场风牌",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  12,
+                                                            "name":  "断幺九",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  13,
+                                                            "name":  "一杯口",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  14,
+                                                            "name":  "平和",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  15,
+                                                            "name":  "混全带幺九",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  16,
+                                                            "name":  "一气通贯",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  18,
+                                                            "name":  "两立直",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  19,
+                                                            "name":  "三色同刻",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  20,
+                                                            "name":  "三杠子",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  21,
+                                                            "name":  "对对和",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  22,
+                                                            "name":  "三暗刻",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  23,
+                                                            "name":  "小三元",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  24,
+                                                            "name":  "混老头",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  25,
+                                                            "name":  "七对子",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  26,
+                                                            "name":  "纯全带幺九",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  27,
+                                                            "name":  "混一色",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  28,
+                                                            "name":  "二杯口",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  29,
+                                                            "name":  "清一色",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  30,
+                                                            "name":  "一发",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  31,
+                                                            "name":  "宝牌",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  32,
+                                                            "name":  "红宝牌",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  33,
+                                                            "name":  "里宝牌",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  34,
+                                                            "name":  "拔北宝牌",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  35,
+                                                            "name":  "天和",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  36,
+                                                            "name":  "地和",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  37,
+                                                            "name":  "大三元",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  38,
+                                                            "name":  "四暗刻",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  39,
+                                                            "name":  "字一色",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  40,
+                                                            "name":  "绿一色",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  41,
+                                                            "name":  "清老头",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  42,
+                                                            "name":  "国士无双",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  43,
+                                                            "name":  "小四喜",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  44,
+                                                            "name":  "四杠子",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  45,
+                                                            "name":  "九莲宝灯",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  47,
+                                                            "name":  "纯正九莲宝灯",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  48,
+                                                            "name":  "四暗刻单骑",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  49,
+                                                            "name":  "国士无双十三面",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  50,
+                                                            "name":  "大四喜",
+                                                            "count":  null,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  51,
+                                                            "name":  "燕返",
+                                                            "count":  null,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  52,
+                                                            "name":  "杠振",
+                                                            "count":  null,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  53,
+                                                            "name":  "十二落抬",
+                                                            "count":  null,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  54,
+                                                            "name":  "五门齐",
+                                                            "count":  null,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  55,
+                                                            "name":  "三连刻",
+                                                            "count":  null,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  56,
+                                                            "name":  "一色三同顺",
+                                                            "count":  null,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  57,
+                                                            "name":  "一筒摸月",
+                                                            "count":  null,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  58,
+                                                            "name":  "九筒捞鱼",
+                                                            "count":  null,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  59,
+                                                            "name":  "人和",
+                                                            "count":  null,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  60,
+                                                            "name":  "大车轮",
+                                                            "count":  null,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  61,
+                                                            "name":  "大竹林",
+                                                            "count":  null,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  63,
+                                                            "name":  "石上三年",
+                                                            "count":  null,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  64,
+                                                            "name":  "大七星",
+                                                            "count":  null,
+                                                            "ancient":  true
+                                                        }
+                                                    ],
+                                        "liujumanguan":  null
+                                    },
                        "key":  "event3",
                        "kind":  "event",
                        "players":  3,
@@ -339,6 +2064,435 @@
                                       ]
                    },
                    {
+                       "fanStats":  {
+                                        "version":  1,
+                                        "available":  true,
+                                        "complete":  false,
+                                        "scope":  "category-all-periods",
+                                        "entries":  [
+                                                        {
+                                                            "id":  1,
+                                                            "name":  "门前清自摸和",
+                                                            "count":  33,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  2,
+                                                            "name":  "立直",
+                                                            "count":  63,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  3,
+                                                            "name":  "枪杠",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  4,
+                                                            "name":  "岭上开花",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  5,
+                                                            "name":  "海底摸月",
+                                                            "count":  2,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  6,
+                                                            "name":  "河底捞鱼",
+                                                            "count":  2,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  7,
+                                                            "name":  "役牌 白",
+                                                            "count":  11,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  8,
+                                                            "name":  "役牌 发",
+                                                            "count":  21,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  9,
+                                                            "name":  "役牌 中",
+                                                            "count":  23,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  10,
+                                                            "name":  "役牌:门风牌",
+                                                            "count":  19,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  11,
+                                                            "name":  "役牌:场风牌",
+                                                            "count":  20,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  12,
+                                                            "name":  "断幺九",
+                                                            "count":  46,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  13,
+                                                            "name":  "一杯口",
+                                                            "count":  18,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  14,
+                                                            "name":  "平和",
+                                                            "count":  23,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  15,
+                                                            "name":  "混全带幺九",
+                                                            "count":  5,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  16,
+                                                            "name":  "一气通贯",
+                                                            "count":  7,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  17,
+                                                            "name":  "三色同顺",
+                                                            "count":  1,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  18,
+                                                            "name":  "两立直",
+                                                            "count":  7,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  19,
+                                                            "name":  "三色同刻",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  20,
+                                                            "name":  "三杠子",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  21,
+                                                            "name":  "对对和",
+                                                            "count":  14,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  22,
+                                                            "name":  "三暗刻",
+                                                            "count":  10,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  23,
+                                                            "name":  "小三元",
+                                                            "count":  1,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  24,
+                                                            "name":  "混老头",
+                                                            "count":  8,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  25,
+                                                            "name":  "七对子",
+                                                            "count":  13,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  26,
+                                                            "name":  "纯全带幺九",
+                                                            "count":  3,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  27,
+                                                            "name":  "混一色",
+                                                            "count":  47,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  28,
+                                                            "name":  "二杯口",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  29,
+                                                            "name":  "清一色",
+                                                            "count":  22,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  30,
+                                                            "name":  "一发",
+                                                            "count":  14,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  31,
+                                                            "name":  "宝牌",
+                                                            "count":  151,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  32,
+                                                            "name":  "红宝牌",
+                                                            "count":  69,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  33,
+                                                            "name":  "里宝牌",
+                                                            "count":  31,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  35,
+                                                            "name":  "天和",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  36,
+                                                            "name":  "地和",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  37,
+                                                            "name":  "大三元",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  38,
+                                                            "name":  "四暗刻",
+                                                            "count":  1,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  39,
+                                                            "name":  "字一色",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  40,
+                                                            "name":  "绿一色",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  41,
+                                                            "name":  "清老头",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  42,
+                                                            "name":  "国士无双",
+                                                            "count":  11,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  43,
+                                                            "name":  "小四喜",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  44,
+                                                            "name":  "四杠子",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  45,
+                                                            "name":  "九莲宝灯",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  47,
+                                                            "name":  "纯正九莲宝灯",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  48,
+                                                            "name":  "四暗刻单骑",
+                                                            "count":  1,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  49,
+                                                            "name":  "国士无双十三面",
+                                                            "count":  2,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  50,
+                                                            "name":  "大四喜",
+                                                            "count":  0,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  51,
+                                                            "name":  "燕返",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  52,
+                                                            "name":  "杠振",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  53,
+                                                            "name":  "十二落抬",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  54,
+                                                            "name":  "五门齐",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  55,
+                                                            "name":  "三连刻",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  56,
+                                                            "name":  "一色三同顺",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  57,
+                                                            "name":  "一筒摸月",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  58,
+                                                            "name":  "九筒捞鱼",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  59,
+                                                            "name":  "人和",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  60,
+                                                            "name":  "大车轮",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  61,
+                                                            "name":  "大竹林",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  62,
+                                                            "name":  "大数邻",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  63,
+                                                            "name":  "石上三年",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  64,
+                                                            "name":  "大七星",
+                                                            "count":  0,
+                                                            "ancient":  true
+                                                        },
+                                                        {
+                                                            "id":  1006,
+                                                            "name":  "清一色",
+                                                            "count":  4,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  1007,
+                                                            "name":  "七对子",
+                                                            "count":  1,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  1005,
+                                                            "name":  "对对和",
+                                                            "count":  2,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  1003,
+                                                            "name":  "底和",
+                                                            "count":  9,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  1010,
+                                                            "name":  "清对",
+                                                            "count":  2,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  1021,
+                                                            "name":  "海底捞月",
+                                                            "count":  1,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  1000,
+                                                            "name":  "根",
+                                                            "count":  3,
+                                                            "ancient":  false
+                                                        },
+                                                        {
+                                                            "id":  802,
+                                                            "name":  "苍",
+                                                            "count":  1,
+                                                            "ancient":  false
+                                                        }
+                                                    ],
+                                        "liujumanguan":  1
+                                    },
                        "key":  "event4",
                        "kind":  "event",
                        "players":  4,
