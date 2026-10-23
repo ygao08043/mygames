@@ -8,12 +8,22 @@ const specs=[['animation','动画'],['anime','动漫'],['tv','电视剧'],['movi
 for(const [id,label] of specs){const page=document.getElementById(id);if(!page)continue;page.classList.remove('page','active');page.classList.add('work-panel');page.hidden=id!=='animation';page.querySelector('.intro')?.remove();works.querySelector('.works-panels').append(page);const b=document.createElement('button');b.textContent=label;b.className='work-tab';b.setAttribute('aria-pressed',String(id==='animation'));b.onclick=()=>{works.querySelectorAll('.work-panel').forEach(p=>p.hidden=p.id!==id);works.querySelectorAll('.work-tab').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));};works.querySelector('nav').append(b);}
 const note=document.createElement('p');note.className='reading-note';note.textContent='各种刊物/普及教育类丛书不计。';works.querySelector('#books')?.append(note);
 shell.insertBefore(works,shell.querySelector('.footer'));
-const personal=document.createElement('main');personal.id='personalDevices';personal.className='page';personal.innerHTML='<section class="intro"><h1>个人设备</h1></section><section class="device-section"><h2>游戏设备</h2><div id="personalGameDevices" class="personal-grid"></div></section><section class="device-section"><h2>专业设备</h2><div id="professionalDevices" class="personal-grid"></div></section><section class="device-section"><h2>其他设备</h2><div id="otherDevices" class="personal-grid"></div></section>';
+const personal=document.createElement('main');personal.id='personalDevices';personal.className='page';personal.innerHTML='<section class="intro"><h1>个人设备</h1></section><section class="device-section"><h2>游戏设备</h2><div id="personalGameDevices" class="personal-grid"></div></section><section class="device-section"><h2>音乐设备</h2><div id="professionalDevices" class="personal-grid"></div></section><section class="device-section"><h2>其他设备</h2><div id="otherDevices" class="personal-grid"></div></section>';
 shell.insertBefore(personal,shell.querySelector('.footer'));tabs.innerHTML='';
 for(const [id,label] of [['games','游戏战绩'],['works','已阅作品'],['personalDevices','个人设备']]){const b=document.createElement('button');b.className='tab';b.dataset.page=id;b.textContent=label;b.onclick=()=>activate(id);tabs.append(b);}
 const oldValues=currentValues;currentValues=()=>oldValues().filter(v=>v!=='DEVICE');if(selected==='DEVICE')selected='ALL';
 const asset='assets/playnite/device-layout/';
-for(const d of devices){if(/^OMEN/i.test(d.name))d.image='https://kaas.hpcloud.hp.com/PROD/v2/renderbinary/7968199/7970480/con-win-nb-p-brunobear-23c1-omen-16-wd0000-16-wf0000-specification/con-nb-brunobear-omen-16-wd0000-16-wf0000-product-image';else if(/^iPad/i.test(d.name))d.image=asset+'ipad.jpg';else if(/^iPhone/i.test(d.name))d.image=asset+'iphone.jpg';}
+const ipadProImage=asset+'ipad.jpg';
+const g102Image='https://brainy.co.ke/cdn/shop/files/logitech-g102-lightsync-rgb-6-button-usb-gaming-mouse-black-792075.jpg?v=1735293334';
+const tasollerPhoto='https://www.gamo2.com/jp/upload/save_image/10221938_671780b49b34d.png';
+const wi1000Photo='https://soundmagcdn.fra1.cdn.digitaloceanspaces.com/product/82442/c/sliderZb27gt-desktop.webp';
+const nx50Photo='https://uk.yamaha.com/en/files/9CB12EB0BEAB4A1693BBBA85B48A7D1C_12073_tcm117-1726888.jpg';
+for(const d of devices){
+ if(/^OMEN/i.test(d.name))d.image='https://kaas.hpcloud.hp.com/PROD/v2/renderbinary/7968199/7970480/con-win-nb-p-brunobear-23c1-omen-16-wd0000-16-wf0000-specification/con-nb-brunobear-omen-16-wd0000-16-wf0000-product-image';
+ else if(/^iPad/i.test(d.name))d.image=ipadProImage;
+ else if(/^iPhone/i.test(d.name))d.image=asset+'iphone.jpg';
+ else if(/^(?:TASOLLER\s*PLUS|抬手乐\s*PLUS)$/i.test(String(d.name||'').trim()))d.image=tasollerPhoto;
+}
 const css=document.createElement('style');css.textContent=`
 .work-panel[hidden]{display:none!important}.works-nav{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 24px}.work-tab{padding:9px 17px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--muted);cursor:pointer;font:inherit;font-size:14px}.work-tab[aria-pressed=true]{background:var(--text);color:var(--bg);border-color:var(--text)}.reading-note{margin:30px 0 10px;font-size:13px;color:var(--muted)}
 .device-section{margin:10px 0 36px}.device-section h2{font-size:18px;margin:0 0 16px}.personal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}#personalDevices .ym-device-card{display:flex!important;flex-direction:column!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:hidden;border:1px solid var(--line);border-radius:14px;background:var(--surface)}#personalDevices .ym-device-card .art{position:relative!important;width:100%!important;flex:auto!important;height:190px!important;background:#fff!important;margin:0!important;border-radius:0!important;overflow:hidden}#personalDevices .ym-device-card .art:after{display:none!important}#personalDevices .ym-device-card .art img{position:static!important;width:100%!important;height:100%!important;object-fit:contain!important;padding:16px;box-sizing:border-box;display:block!important;opacity:1!important}#personalDevices .ym-device-card .card-body{padding:16px!important;display:flex!important;min-height:72px!important;align-items:center!important}#personalDevices .ym-device-card .name{font-size:16px!important}#personalDevices .device-kind{font-size:12px;color:var(--muted);margin-bottom:5px}#gameModalImage[data-device-photo]{object-fit:contain!important;background:#fff!important} @media(max-width:700px){.personal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#personalDevices .ym-device-card .art{height:155px!important}}@media(max-width:420px){.personal-grid{grid-template-columns:1fr}}
@@ -24,10 +34,7 @@ const css=document.createElement('style');css.textContent=`
   const isPC = d => /^OMEN\s*9$/i.test(String(d.name || '').trim());
   const deviceName = d => isPC(d) ? 'OMEN9' : String(d.name || '').replace(/（13英寸）|\(13英寸\)|13\s*英寸|13-inch|13″/g, ' 13inch ').replace(/\s+/g, ' ').trim();
   const units = value => String(value || '').replace(/(\d+)\s*GB\b/g, '$1 GB').replace(/(\d+)\s*TB\b/g, '$1 TB').replace(/(\d+)\s*MHz\b/g, '$1 MHz');
-  // Move the existing standalone controller into the PC specifications.
-  for (let i = devices.length - 1; i >= 0; i--) {
-    if (/^(?:TASOLLER\s*PLUS|抬手乐\s*PLUS)$/i.test(String(devices[i].name || '').trim())) devices.splice(i, 1);
-  }
+  // Keep TASOLLER PLUS as its own game-device card; the OMEN modal also retains its peripheral list.
   const styleId = 'ymkf-device-minimal-style';
   {
     const style = document.getElementById(styleId) || document.createElement('style'); style.id = styleId;
@@ -76,8 +83,6 @@ const css=document.createElement('style');css.textContent=`
     ];
     const peripheralRows = [
       ['鼠标', 'Logitech G102'],
-      ['耳机', 'SONY WI-1000XM2'],
-      ['音响', 'YAMAHA NX-50'],
       ['音游控制器', 'TASOLLER PLUS']
     ];
     const renderSpecRows = rows => rows.filter(([,value]) => value).map(([label,value]) => `<dt>${safe(label)}</dt><dd style="overflow-wrap:anywhere">${safe(units(value))}</dd>`).join('');
@@ -109,8 +114,11 @@ const css=document.createElement('style');css.textContent=`
       el.style.setProperty('--dc2', d.c2);
       const mobile = /^(?:iPhone|iPad)\b/i.test(deviceName(d));
       const storage = mobile ? (String(d.detail || '').match(/\d+(?:\.\d+)?\s*(?:TB|GB)\b/i) || [''])[0] : '';
+      const kind = pc ? '电脑' : /^iPad/i.test(deviceName(d)) ? '平板' : /^iPhone/i.test(deviceName(d)) ? '手机' : /TASOLLER/i.test(String(d.name||'')) ? '音游控制器' : '';
       const visual = `<img src="${safe(d.image)}" alt="${safe(deviceName(d))}" loading="lazy">`;
-      el.innerHTML = `<div class="art">${visual}</div><div class="card-body"><div class="device-title"><div class="name">${safe(deviceName(d))}</div>${storage ? `<div class="device-storage">${safe(units(storage))}</div>` : ''}</div>${pc ? '<span class="device-action" aria-hidden="true">查看配置 →</span>' : ''}</div>`;
+      el.innerHTML = `<div class="art">${visual}</div><div class="card-body"><div class="device-title">${kind ? `<div class="device-kind">${safe(kind)}</div>` : ''}<div class="name">${safe(deviceName(d))}</div>${storage ? `<div class="device-storage">${safe(units(storage))}</div>` : ''}</div>${pc ? '<span class="device-action" aria-hidden="true">查看配置 →</span>' : ''}</div>`;
+      const deviceImg = el.querySelector('img');
+      if (deviceImg && /TASOLLER/i.test(String(d.name || ''))) { deviceImg.onerror = () => { deviceImg.onerror = null; deviceImg.src = asset + 'tasoller.svg'; }; }
       if (pc) {
         el.tabIndex = 0;
         el.setAttribute('role', 'button');
@@ -124,6 +132,12 @@ const css=document.createElement('style');css.textContent=`
       }
       host.appendChild(el);
     });
+    const mouse = document.createElement('article');
+    mouse.className = 'media-card device-card ym-device-card ymkf-horizontal-card';
+    mouse.innerHTML = `<div class="art"><img src="${safe(g102Image)}" alt="Logitech G102" loading="lazy"></div><div class="card-body"><div class="device-title"><div class="device-kind">鼠标</div><div class="name">Logitech G102</div></div></div>`;
+    const mouseImg = mouse.querySelector('img');
+    mouseImg.onerror = () => { mouseImg.onerror = null; mouseImg.src = asset + 'g102.svg'; };
+    host.appendChild(mouse);
   };
   // Refresh both the selector count and the currently visible library.
   if (typeof renderAll === 'function') renderAll();
@@ -132,6 +146,18 @@ const css=document.createElement('style');css.textContent=`
 
 
 
-for(const [host,items] of [['professionalDevices',[['钢琴','Kayserburg UH-130U','piano.jpg'],['录音笔','SONY ICD-UX570F','sony.jpg']]],['otherDevices',[['手表','DW CLASSIC黑','watch.png'],['自行车','Tropix Mariano','bike.jpg']]]]){for(const [kind,name,img] of items){const card=document.createElement('article');card.className='ym-device-card';card.innerHTML=`<div class="art"><img src="${asset+img}" alt="${name}" loading="lazy"></div><div class="card-body"><div><div class="device-kind">${kind}</div><div class="name">${name}</div></div></div>`;document.getElementById(host).append(card);}}
+const personalDeviceCards=[
+ ['professionalDevices',[
+  ['钢琴','Kayserburg UH-130U','piano.jpg'],
+  ['录音笔','SONY ICD-UX570F','sony.jpg'],
+  ['耳机','SONY WI-1000XM2',wi1000Photo],
+  ['音响','YAMAHA NX-50',nx50Photo]
+ ]],
+ ['otherDevices',[
+  ['手表','DW CLASSIC黑','watch.png'],
+  ['自行车','Tropix Mariano','bike.jpg']
+ ]]
+];
+for(const [host,items] of personalDeviceCards){for(const [kind,name,img] of items){const card=document.createElement('article');card.className='ym-device-card';const src=/^https?:\/\//i.test(img)?img:asset+img;card.innerHTML=`<div class="art"><img src="${escapeDeviceHtml(src)}" alt="${escapeDeviceHtml(name)}" loading="lazy"></div><div class="card-body"><div><div class="device-kind">${escapeDeviceHtml(kind)}</div><div class="name">${escapeDeviceHtml(name)}</div></div></div>`;const photo=card.querySelector('img');const fallback=/WI-1000XM2/i.test(name)?asset+'wi1000xm2.svg':/NX-50/i.test(name)?asset+'nx50.svg':null;if(fallback){photo.onerror=()=>{photo.onerror=null;photo.src=fallback;};}document.getElementById(host).append(card);}}
 activate('games');
 });
