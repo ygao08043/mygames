@@ -69,13 +69,13 @@
   <div class="top"><a class="back" href="../index.html">← 返回游戏库</a><div class="build">Build v1.20.1-fix2</div></div>
   <section class="hero">
     <h1>e舞成名 · 升级版战绩</h1>
-    <p>YMKF · 来自 11 张成绩详情截图。所有截图中明确显示的数值均按原值录入；截图未显示的字段保留为空。</p>
+    <p id="sourceSummary">YMKF · 当前成绩记录数量将在加载后自动统计。所有截图中明确显示的数值均按原值录入；截图未显示的字段保留为空。</p>
     <div class="cards" id="summary"></div>
   </section>
   <section class="section">
     <div class="section-h">GameActivity 时间段</div>
     <div class="sessions" id="sessions"></div>
-    <div class="note">时间规则：相邻两首间隔 ≤ 20 分钟视为同一次游玩；每次游玩的最后一首向后延续 4 分钟。当前 11 首重建为 2 段，并按这两段计入 GameActivity 与总时长。</div>
+    <div class="note" id="sessionNote">时间规则：相邻两首间隔 ≤ 20 分钟视为同一次游玩；每次游玩的最后一首向后延续 4 分钟。记录数和时间段数将在加载后自动更新。</div>
   </section>
   <section class="section">
     <div class="section-h">全部成绩</div>
@@ -111,8 +111,14 @@ const dur=s=>{s=Number(s||0);const m=Math.floor(s/60),ss=s%60;return `${m}分${S
 function val(v){return v===null||v===undefined||v===''?null:v}
 function summary(){
  const s=data.summary||{};
+ const recordCount=(data.records||[]).length;
+ const sessionCount=(data.sessions||[]).length;
+ const sourceSummary=document.querySelector('#sourceSummary');
+ if(sourceSummary)sourceSummary.textContent='YMKF · 当前收录 '+recordCount+' 条成绩记录。所有截图中明确显示的数值均按原值录入；截图未显示的字段保留为空。';
+ const sessionNote=document.querySelector('#sessionNote');
+ if(sessionNote)sessionNote.textContent='时间规则：相邻两首间隔 ≤ 20 分钟视为同一次游玩；每次游玩的最后一首向后延续 4 分钟。当前 '+recordCount+' 首重建为 '+sessionCount+' 段，并按这些时间段计入 GameActivity 与总时长。';
  document.querySelector('#summary').innerHTML=[
- ['记录',`${s.recordCount||0} 首`],['游玩段',`${s.sessionCount||0} 次`],['总时长',dur(s.totalPlaytimeSeconds)],
+ ['记录',`${recordCount} 首`],['游玩段',`${sessionCount} 次`],['总时长',dur(s.totalPlaytimeSeconds)],
  ['累计舞力',`+${s.totalDancePowerGain||0}`],['最高分',fmt(s.maxScore)],['最高 Combo',fmt(s.maxCombo)]
  ].map(([k,v])=>`<div class="card"><b>${v}</b><span>${k}</span></div>`).join('');
 }
