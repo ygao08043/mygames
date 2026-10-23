@@ -34,7 +34,11 @@ const css=document.createElement('style');css.textContent=`
   const isPC = d => /^OMEN\s*9$/i.test(String(d.name || '').trim());
   const deviceName = d => isPC(d) ? 'OMEN9' : String(d.name || '').replace(/（13英寸）|\(13英寸\)|13\s*英寸|13-inch|13″/g, ' 13inch ').replace(/\s+/g, ' ').trim();
   const units = value => String(value || '').replace(/(\d+)\s*GB\b/g, '$1 GB').replace(/(\d+)\s*TB\b/g, '$1 TB').replace(/(\d+)\s*MHz\b/g, '$1 MHz');
-  // Keep TASOLLER PLUS as its own game-device card; the OMEN modal also retains its peripheral list.
+  // The source homepage's legacy inline block removes TASOLLER PLUS from `devices`.
+  // Restore it locally for the Personal Devices page so it always appears as its own card.
+  const controller = {name:'TASOLLER PLUS', detail:'CHUNITHM Style Controller', spec:'音游专用控制器 · PC', platform:'Rhythm Controller', badge:'TASOLLER', image:tasollerPhoto, c1:'#773c87', c2:'#171527'};
+  const gameDevices = [...devices];
+  if (!gameDevices.some(d => /^(?:TASOLLER\s*PLUS|抬手乐\s*PLUS)$/i.test(String(d.name || '').trim()))) gameDevices.push(controller);
   const styleId = 'ymkf-device-minimal-style';
   {
     const style = document.getElementById(styleId) || document.createElement('style'); style.id = styleId;
@@ -81,12 +85,9 @@ const css=document.createElement('style');css.textContent=`
       ['容量', '约 1.5TB（KIOXIA KXG80ZNV512G 512GB + Fanxiang S500Pro 1TB）'],
       ['操作系统', 'Windows 11 Pro (64-bit)']
     ];
-    const peripheralRows = [
-      ['鼠标', 'Logitech G102'],
-      ['音游控制器', 'TASOLLER PLUS']
-    ];
     const renderSpecRows = rows => rows.filter(([,value]) => value).map(([label,value]) => `<dt>${safe(label)}</dt><dd style="overflow-wrap:anywhere">${safe(units(value))}</dd>`).join('');
-    content.innerHTML = `<div class="modal-stats"><div class="modal-stat"><small>设备</small><b>OMEN9</b></div><div class="modal-stat"><small>平台</small><b>PC(windows)</b></div></div><div class="modal-section" data-ymkf-omen-layout="1.1"><h3>硬件配置</h3><dl class="meta-grid">${renderSpecRows(hardwareRows)}</dl></div><div class="modal-section" style="border-top:1px solid var(--line);margin-top:20px;padding-top:18px"><h3>外设</h3><dl class="meta-grid">${renderSpecRows(peripheralRows)}</dl></div>`;
+    // Peripherals are represented as separate device cards, so don't repeat them in the OMEN9 popup.
+    content.innerHTML = `<div class="modal-stats"><div class="modal-stat"><small>设备</small><b>OMEN9</b></div><div class="modal-stat"><small>平台</small><b>PC(windows)</b></div></div><div class="modal-section" data-ymkf-omen-layout="1.1"><h3>硬件配置</h3><dl class="meta-grid">${renderSpecRows(hardwareRows)}</dl></div>`;
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
@@ -106,7 +107,7 @@ const css=document.createElement('style');css.textContent=`
   window.renderDevices = function () {
     const host = document.querySelector('#personalGameDevices');
     host.innerHTML = '';
-    devices.forEach(d => {
+    gameDevices.forEach(d => {
       const pc = isPC(d);
       const el = document.createElement('article');
       el.className = 'media-card device-card ym-device-card ymkf-horizontal-card';
@@ -146,6 +147,7 @@ const css=document.createElement('style');css.textContent=`
 
 
 
+const escapeDeviceHtml = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const personalDeviceCards=[
  ['professionalDevices',[
   ['钢琴','Kayserburg UH-130U','piano.jpg'],

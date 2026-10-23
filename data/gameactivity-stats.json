@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
     "build":  "v1.20.1-fix2",
-    "generatedAt":  "2026-10-23T23:32:47.3721245+08:00",
+    "generatedAt":  "2026-10-24T00:06:43.5290514+08:00",
     "source":  {
                    "provider":  "Playnite GameActivity",
                    "fields":  [
@@ -21,7 +21,7 @@
     "currentYear":  "2026",
     "totals":  {
                    "recordedSeconds":  3785007,
-                   "last7DaysSeconds":  57775,
+                   "last7DaysSeconds":  44831,
                    "currentMonthSeconds":  298469,
                    "currentYearSeconds":  3785007,
                    "activeDays":  236
@@ -974,6 +974,10 @@
                   {
                       "date":  "2026-10-23",
                       "seconds":  3969
+                  },
+                  {
+                      "date":  "2026-10-24",
+                      "seconds":  0
                   }
               ],
     "weekly":  [
@@ -2446,19 +2450,14 @@
                            ],
     "last7DaysGames":  [
                            {
-                               "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
-                               "name":  "CHUNITHM",
-                               "seconds":  15245
-                           },
-                           {
                                "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                "name":  "雀魂麻将",
-                               "seconds":  15182
+                               "seconds":  14177
                            },
                            {
-                               "id":  "901a387c-5431-4985-89b3-128142b21167",
-                               "name":  "Battlefield 1",
-                               "seconds":  10739
+                               "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
+                               "name":  "CHUNITHM",
+                               "seconds":  14045
                            },
                            {
                                "id":  "dc0f4891-c9fa-42ff-9dc0-27ce8d0f0d56",
@@ -3448,7 +3447,7 @@
                         ],
     "timelineWindowDays":  14,
     "timelineStart":  "2026-03-01",
-    "timelineEnd":  "2026-10-23",
+    "timelineEnd":  "2026-10-24",
     "timelineDays":  [
                          {
                              "date":  "2026-03-01",
@@ -4397,6 +4396,10 @@
                          {
                              "date":  "2026-10-23",
                              "label":  "周五"
+                         },
+                         {
+                             "date":  "2026-10-24",
+                             "label":  "周六"
                          }
                      ],
     "timeline":  [
@@ -4404,7 +4407,7 @@
                          "date":  "2026-03-01",
                          "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                          "name":  "CHUNITHM",
-                         "startMinute":  0.01,
+                         "startMinute":  0.02,
                          "endMinute":  3.88,
                          "startText":  "00:00",
                          "endText":  "00:03",
