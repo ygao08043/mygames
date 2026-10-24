@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
+  <title id="title">Nikko Standards black metronome</title>
+  <desc id="desc">A clean vector illustration of a black pyramid-shaped mechanical metronome with gold markings.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8f8f7"/>
+      <stop offset="1" stop-color="#e7e8e7"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#111214"/>
+      <stop offset=".42" stop-color="#292b2e"/>
+      <stop offset=".72" stop-color="#08090a"/>
+      <stop offset="1" stop-color="#303236"/>
+    </linearGradient>
+    <linearGradient id="face" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#242629"/>
+      <stop offset="1" stop-color="#090a0b"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9e7736"/>
+      <stop offset=".45" stop-color="#f1d58a"/>
+      <stop offset="1" stop-color="#b58a3c"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+  </defs>
+  <rect width="400" height="400" rx="22" fill="url(#bg)"/>
+  <ellipse cx="200" cy="350" rx="125" ry="17" fill="#000" opacity=".17" filter="url(#shadow)"/>
+  <path d="M153 63 L247 63 L319 331 Q322 343 307 346 L93 346 Q78 343 81 331 Z" fill="url(#body)" stroke="#050607" stroke-width="2"/>
+  <path d="M153 63 L200 30 L247 63 L231 93 L169 93 Z" fill="#17191b" stroke="#08090a" stroke-width="2"/>
+  <path d="M163 75 L237 75 L292 322 L108 322 Z" fill="url(#face)" stroke="#4a4b4d" stroke-width="1.5"/>
+  <path d="M176 85 L185 85 L136 315 L124 315 Z" fill="#fff" opacity=".055"/>
+  <path d="M200 91 L200 282" stroke="url(#gold)" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M195 96 L205 96 L202 78 L198 78 Z" fill="#c5c8cb" stroke="#6e7073" stroke-width="1"/>
+  <path d="M191 112 L209 112 L213 125 L187 125 Z" fill="url(#gold)" stroke="#6e5224" stroke-width="1"/>
+  <path d="M177 137 L191 137 M181 157 L191 157 M177 177 L191 177 M181 197 L191 197 M177 217 L191 217 M181 237 L191 237 M177 257 L191 257" stroke="url(#gold)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M209 137 L223 137 M209 157 L219 157 M209 177 L223 177 M209 197 L219 197 M209 217 L223 217 M209 237 L219 237 M209 257 L223 257" stroke="url(#gold)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M200 282 L200 304" stroke="#d4d6d8" stroke-width="2"/>
+  <circle cx="200" cy="303" r="6" fill="#d0d2d3" stroke="#5e6062" stroke-width="1.5"/>
+  <path d="M159 292 L241 292 L247 318 L153 318 Z" fill="#101112" stroke="#424448" stroke-width="1.3"/>
+  <text x="200" y="309" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" letter-spacing="2" fill="url(#gold)">NIKKO</text>
+  <path d="M92 337 L308 337" stroke="#5a5b5d" stroke-width="2" opacity=".8"/>
+  <path d="M104 344 L296 344" stroke="#050607" stroke-width="4" stroke-linecap="round"/>
+  <rect x="171" y="357" width="58" height="5" rx="2.5" fill="#b8b9b8" opacity=".75"/>
+</svg>

@@ -171,3 +171,27 @@ const personalDeviceCards=[
 for(const [host,items] of personalDeviceCards){for(const [kind,name,img] of items){const card=document.createElement('article');card.className='ym-device-card';const src=/^https?:\/\//i.test(img)?img:asset+img;card.innerHTML=`<div class="art"><img src="${escapeDeviceHtml(src)}" alt="${escapeDeviceHtml(name)}" loading="lazy"></div><div class="card-body"><div><div class="device-kind">${escapeDeviceHtml(kind)}</div><div class="name">${escapeDeviceHtml(name)}</div></div></div>`;const photo=card.querySelector('img');const fallback=/WI-1000XM2/i.test(name)?asset+'wi1000xm2.svg':/NX-50/i.test(name)?asset+'nx50.svg':null;if(fallback){photo.onerror=()=>{photo.onerror=null;photo.src=fallback;};}document.getElementById(host).append(card);}}
 activate('games');
 });
+/* YMKF_NIKKO_METRONOME_FIX_1_1 */
+(function () {
+  'use strict';
+  const installNikkoMetronome = function () {
+    const host = document.getElementById('professionalDevices');
+    if (!host) {
+      console.warn('YMKF Nikko metronome: professionalDevices container was not found.');
+      return;
+    }
+    if (document.getElementById('ymkfNikkoMetronomeCard')) return;
+
+    const card = document.createElement('article');
+    card.id = 'ymkfNikkoMetronomeCard';
+    card.className = 'ym-device-card';
+    card.innerHTML = '<div class="art"><img src="assets/playnite/device-layout/metronome.svg" alt="Nikko Standards 黑节拍器" loading="lazy"></div><div class="card-body"><div><div class="device-kind">节拍器</div><div class="name">Nikko Standards 黑</div></div></div>';
+    host.appendChild(card);
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', installNikkoMetronome, { once: true });
+  } else {
+    installNikkoMetronome();
+  }
+})();

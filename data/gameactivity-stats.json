@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
     "build":  "v1.20.1-fix2",
-    "generatedAt":  "2026-10-24T14:18:39.7622453+08:00",
+    "generatedAt":  "2026-10-24T18:17:35.4950725+08:00",
     "source":  {
                    "provider":  "Playnite GameActivity",
                    "fields":  [
@@ -15,15 +15,15 @@
     "analyticsStart":  "2026-03-01",
     "coverageStart":  "2026-03-01",
     "coverageEnd":  "2026-10-24",
-    "sessionCount":  1662,
+    "sessionCount":  1667,
     "syntheticSessionCount":  4,
     "currentMonth":  "2026-10",
     "currentYear":  "2026",
     "totals":  {
-                   "recordedSeconds":  3794527,
-                   "last7DaysSeconds":  54350,
-                   "currentMonthSeconds":  307988,
-                   "currentYearSeconds":  3794527,
+                   "recordedSeconds":  3796592,
+                   "last7DaysSeconds":  56415,
+                   "currentMonthSeconds":  310053,
+                   "currentYearSeconds":  3796592,
                    "activeDays":  237
                },
     "daily":  [
@@ -977,7 +977,7 @@
                   },
                   {
                       "date":  "2026-10-24",
-                      "seconds":  9519
+                      "seconds":  11584
                   }
               ],
     "weekly":  [
@@ -1154,7 +1154,7 @@
                    {
                        "start":  "2026-10-19",
                        "label":  "10/19",
-                       "seconds":  41771
+                       "seconds":  43836
                    }
                ],
     "monthly":  [
@@ -1253,11 +1253,11 @@
                    },
                    {
                        "hour":  14,
-                       "seconds":  125550
+                       "seconds":  126574
                    },
                    {
                        "hour":  15,
-                       "seconds":  143441
+                       "seconds":  144482
                    },
                    {
                        "hour":  16,
@@ -1321,7 +1321,7 @@
                     {
                         "day":  5,
                         "label":  "周六",
-                        "seconds":  475138
+                        "seconds":  477203
                     },
                     {
                         "day":  6,
@@ -1392,11 +1392,11 @@
                                                   },
                                                   {
                                                       "hour":  14,
-                                                      "seconds":  12143
+                                                      "seconds":  13167
                                                   },
                                                   {
                                                       "hour":  15,
-                                                      "seconds":  12951
+                                                      "seconds":  13992
                                                   },
                                                   {
                                                       "hour":  16,
@@ -1460,7 +1460,7 @@
                                                    {
                                                        "day":  5,
                                                        "label":  "周六",
-                                                       "seconds":  46303
+                                                       "seconds":  48368
                                                    },
                                                    {
                                                        "day":  6,
@@ -2460,14 +2460,14 @@
                                "seconds":  7140
                            },
                            {
-                               "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
-                               "name":  "Arcaea",
-                               "seconds":  3969
-                           },
-                           {
                                "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
                                "name":  "Phigros",
-                               "seconds":  3915
+                               "seconds":  5562
+                           },
+                           {
+                               "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
+                               "name":  "Arcaea",
+                               "seconds":  4387
                            },
                            {
                                "id":  "b1de7fb7-f915-414c-bb77-c4cf36678f06",
@@ -2499,7 +2499,7 @@
                               {
                                   "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
                                   "name":  "Phigros",
-                                  "seconds":  23417
+                                  "seconds":  25064
                               },
                               {
                                   "id":  "901a387c-5431-4985-89b3-128142b21167",
@@ -2509,7 +2509,7 @@
                               {
                                   "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
                                   "name":  "Arcaea",
-                                  "seconds":  13307
+                                  "seconds":  13725
                               },
                               {
                                   "id":  "dc0f4891-c9fa-42ff-9dc0-27ce8d0f0d56",
@@ -2546,7 +2546,7 @@
                              {
                                  "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
                                  "name":  "Arcaea",
-                                 "seconds":  140918
+                                 "seconds":  141336
                              },
                              {
                                  "id":  "c263bdfe-2d98-43b9-8f6e-b3335a7ed763",
@@ -2561,7 +2561,7 @@
                              {
                                  "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
                                  "name":  "Phigros",
-                                 "seconds":  88302
+                                 "seconds":  89949
                              },
                              {
                                  "id":  "901a387c-5431-4985-89b3-128142b21167",
@@ -3123,6 +3123,18 @@
                      ],
     "lastPlayedGames":  [
                             {
+                                "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
+                                "name":  "Phigros",
+                                "date":  "2026-10-24",
+                                "lastPlayed":  "2026-10-24T15:31:10.0000000"
+                            },
+                            {
+                                "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
+                                "name":  "Arcaea",
+                                "date":  "2026-10-24",
+                                "lastPlayed":  "2026-10-24T14:47:41.0000000"
+                            },
+                            {
                                 "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                                 "name":  "CHUNITHM",
                                 "date":  "2026-10-24",
@@ -3133,18 +3145,6 @@
                                 "name":  "雀魂麻将",
                                 "date":  "2026-10-24",
                                 "lastPlayed":  "2026-10-24T01:38:48.0000000"
-                            },
-                            {
-                                "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
-                                "name":  "Arcaea",
-                                "date":  "2026-10-23",
-                                "lastPlayed":  "2026-10-23T01:11:49.0000000"
-                            },
-                            {
-                                "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
-                                "name":  "Phigros",
-                                "date":  "2026-10-22",
-                                "lastPlayed":  "2026-10-22T22:02:10.0000000"
                             },
                             {
                                 "id":  "dc0f4891-c9fa-42ff-9dc0-27ce8d0f0d56",
@@ -3316,7 +3316,7 @@
                                  "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                  "name":  "雀魂麻将",
                                  "seconds":  91519,
-                                 "totalSeconds":  307988
+                                 "totalSeconds":  310053
                              },
                              {
                                  "period":  "2026-09",
@@ -3382,7 +3382,7 @@
                                 "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                 "name":  "雀魂麻将",
                                 "seconds":  1790004,
-                                "totalSeconds":  3794527
+                                "totalSeconds":  3796592
                             }
                         ],
     "timelineWindowDays":  14,
@@ -4347,7 +4347,7 @@
                          "date":  "2026-03-01",
                          "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                          "name":  "CHUNITHM",
-                         "startMinute":  0.01,
+                         "startMinute":  0,
                          "endMinute":  3.88,
                          "startText":  "00:00",
                          "endText":  "00:03",
@@ -22062,6 +22062,56 @@
                          "startText":  "10:28",
                          "endText":  "11:53",
                          "seconds":  5099
+                     },
+                     {
+                         "date":  "2026-10-24",
+                         "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
+                         "name":  "Arcaea",
+                         "startMinute":  878.78,
+                         "endMinute":  881.62,
+                         "startText":  "14:38",
+                         "endText":  "14:41",
+                         "seconds":  170
+                     },
+                     {
+                         "date":  "2026-10-24",
+                         "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
+                         "name":  "Arcaea",
+                         "startMinute":  883.55,
+                         "endMinute":  887.68,
+                         "startText":  "14:43",
+                         "endText":  "14:47",
+                         "seconds":  248
+                     },
+                     {
+                         "date":  "2026-10-24",
+                         "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
+                         "name":  "Phigros",
+                         "startMinute":  888.83,
+                         "endMinute":  889.88,
+                         "startText":  "14:48",
+                         "endText":  "14:49",
+                         "seconds":  63
+                     },
+                     {
+                         "date":  "2026-10-24",
+                         "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
+                         "name":  "Phigros",
+                         "startMinute":  890.95,
+                         "endMinute":  916.13,
+                         "startText":  "14:50",
+                         "endText":  "15:16",
+                         "seconds":  1511
+                     },
+                     {
+                         "date":  "2026-10-24",
+                         "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
+                         "name":  "Phigros",
+                         "startMinute":  929.95,
+                         "endMinute":  931.17,
+                         "startText":  "15:29",
+                         "endText":  "15:31",
+                         "seconds":  73
                      }
                  ]
 }
