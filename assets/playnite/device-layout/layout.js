@@ -13,7 +13,7 @@ shell.insertBefore(personal,shell.querySelector('.footer'));tabs.innerHTML='';
 for(const [id,label] of [['games','游戏战绩'],['works','已阅作品'],['personalDevices','个人设备']]){const b=document.createElement('button');b.className='tab';b.dataset.page=id;b.textContent=label;b.onclick=()=>activate(id);tabs.append(b);}
 const oldValues=currentValues;currentValues=()=>oldValues().filter(v=>v!=='DEVICE');if(selected==='DEVICE')selected='ALL';
 const asset='assets/playnite/device-layout/';
-const ipadProImage=asset+'ipad.jpg';
+const ipadProImage='https://www.apple.com.cn/newsroom/images/2024/05/apple-unveils-stunning-new-ipad-pro-with-m4-chip-and-apple-pencil-pro/article/Apple-iPad-Pro-silver-2-up-240507_big.jpg.large.jpg';
 const g102Image='https://brainy.co.ke/cdn/shop/files/logitech-g102-lightsync-rgb-6-button-usb-gaming-mouse-black-792075.jpg?v=1735293334';
 const tasollerPhoto='https://www.gamo2.com/jp/upload/save_image/10221938_671780b49b34d.png';
 const wi1000Photo='https://soundmagcdn.fra1.cdn.digitaloceanspaces.com/product/82442/c/sliderZb27gt-desktop.webp';
@@ -27,6 +27,10 @@ for(const d of devices){
 const css=document.createElement('style');css.textContent=`
 .work-panel[hidden]{display:none!important}.works-nav{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 24px}.work-tab{padding:9px 17px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--muted);cursor:pointer;font:inherit;font-size:14px}.work-tab[aria-pressed=true]{background:var(--text);color:var(--bg);border-color:var(--text)}.reading-note{margin:30px 0 10px;font-size:13px;color:var(--muted)}
 .device-section{margin:10px 0 36px}.device-section h2{font-size:18px;margin:0 0 16px}.personal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}#personalDevices .ym-device-card{display:flex!important;flex-direction:column!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:hidden;border:1px solid var(--line);border-radius:14px;background:var(--surface)}#personalDevices .ym-device-card .art{position:relative!important;width:100%!important;flex:auto!important;height:190px!important;background:#fff!important;margin:0!important;border-radius:0!important;overflow:hidden}#personalDevices .ym-device-card .art:after{display:none!important}#personalDevices .ym-device-card .art img{position:static!important;width:100%!important;height:100%!important;object-fit:contain!important;padding:16px;box-sizing:border-box;display:block!important;opacity:1!important}#personalDevices .ym-device-card .card-body{padding:16px!important;display:flex!important;min-height:72px!important;align-items:center!important}#personalDevices .ym-device-card .name{font-size:16px!important}#personalDevices .device-kind{font-size:12px;color:var(--muted);margin-bottom:5px}#gameModalImage[data-device-photo]{object-fit:contain!important;background:#fff!important} @media(max-width:700px){.personal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#personalDevices .ym-device-card .art{height:155px!important}}@media(max-width:420px){.personal-grid{grid-template-columns:1fr}}
+/* TASOLLER PLUS product photo: source image contains large white margins. Zoom the product itself, centered, without distorting it. */
+#personalGameDevices .ym-device-card img[alt="TASOLLER PLUS"][src*="gamo2.com"]{transform:scale(1.58)!important;transform-origin:50% 50%!important;padding:0!important;object-fit:contain!important;object-position:center center!important}
+#personalGameDevices .ym-device-card img[alt="TASOLLER PLUS"][src$="tasoller.svg"]{padding:5px!important;object-fit:contain!important;object-position:center center!important}
+
 `;document.head.append(css);
 (() => {
   'use strict';
@@ -119,7 +123,11 @@ const css=document.createElement('style');css.textContent=`
       const visual = `<img src="${safe(d.image)}" alt="${safe(deviceName(d))}" loading="lazy">`;
       el.innerHTML = `<div class="art">${visual}</div><div class="card-body"><div class="device-title">${kind ? `<div class="device-kind">${safe(kind)}</div>` : ''}<div class="name">${safe(deviceName(d))}</div>${storage ? `<div class="device-storage">${safe(units(storage))}</div>` : ''}</div>${pc ? '<span class="device-action" aria-hidden="true">查看配置 →</span>' : ''}</div>`;
       const deviceImg = el.querySelector('img');
-      if (deviceImg && /TASOLLER/i.test(String(d.name || ''))) { deviceImg.onerror = () => { deviceImg.onerror = null; deviceImg.src = asset + 'tasoller.svg'; }; }
+      if (deviceImg && /TASOLLER/i.test(String(d.name || ''))) {
+        deviceImg.onerror = () => { deviceImg.onerror = null; deviceImg.src = asset + 'tasoller.svg'; };
+      } else if (deviceImg && /^iPad/i.test(String(d.name || ''))) {
+        deviceImg.onerror = () => { deviceImg.onerror = null; deviceImg.src = asset + 'ipad.jpg'; };
+      }
       if (pc) {
         el.tabIndex = 0;
         el.setAttribute('role', 'button');
