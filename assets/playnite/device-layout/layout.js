@@ -1,10 +1,10 @@
-/* YMKF_REAL_DEVICE_LAYOUT_FIX_1_3_3 · source-of-truth layout */
+/* YMKF_REAL_DEVICE_LAYOUT_FIX_1_4_0 · source-of-truth layout */
 document.addEventListener('DOMContentLoaded', () => {
 'use strict';
 const tabs=document.querySelector('.topbar .tabs'), shell=document.querySelector('.shell');
 if(!tabs||!shell)return;
-if(window.__YMKF_REAL_DEVICE_LAYOUT_FIX_1_3_3)return;
-window.__YMKF_REAL_DEVICE_LAYOUT_FIX_1_3_3=true;
+if(window.__YMKF_REAL_DEVICE_LAYOUT_FIX_1_4_0)return;
+window.__YMKF_REAL_DEVICE_LAYOUT_FIX_1_4_0=true;
 
 const activate=id=>{tabs.querySelectorAll('.tab').forEach(b=>{b.classList.toggle('active',b.dataset.page===id);b.setAttribute('aria-pressed',String(b.dataset.page===id));});document.querySelectorAll('main.page').forEach(p=>p.classList.toggle('active',p.id===id));};
 const specs=[['animation','动画'],['anime','动漫'],['tv','电视剧'],['movies','电影'],['manga','漫画'],['books','读物']];
@@ -15,7 +15,7 @@ works.innerHTML='<section class="intro"><h1>已阅作品</h1></section><nav clas
 for(const [id,label] of specs){const page=workPages.get(id);if(!page)continue;page.classList.remove('page','active');page.classList.add('work-panel');page.hidden=id!=='animation';page.querySelector('.intro')?.remove();works.querySelector('.works-panels').append(page);const b=document.createElement('button');b.textContent=label;b.className='work-tab';b.setAttribute('aria-pressed',String(id==='animation'));b.onclick=()=>{works.querySelectorAll('.work-panel').forEach(p=>p.hidden=p.id!==id);works.querySelectorAll('.work-tab').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));};works.querySelector('nav').append(b);}const note=document.createElement('p');note.className='reading-note';note.textContent='各种刊物/普及教育类丛书不计。';works.querySelector('#books')?.append(note);shell.insertBefore(works,shell.querySelector('.footer'));
 
 let personal=document.getElementById('personalDevices'); if(!personal) personal=document.createElement('main');
-personal.id='personalDevices'; personal.className='page'; personal.setAttribute('data-ymkf-device-layout','real-v1.3.3');
+personal.id='personalDevices'; personal.className='page'; personal.setAttribute('data-ymkf-device-layout','real-v1.4.0');
 personal.innerHTML='<section class="intro"><h1>个人设备</h1></section><section class="device-section"><h2>娱乐设备</h2><div id="entertainmentDevices" class="personal-grid"></div></section><section class="device-section"><h2>音乐设备</h2><div id="musicDevices" class="personal-grid"></div></section><section class="device-section"><h2>其他设备</h2><div id="otherDevices" class="personal-grid"></div></section>';
 shell.insertBefore(personal,shell.querySelector('.footer'));
 
@@ -34,7 +34,7 @@ document.head.append(css);
   const safe = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const units = value => String(value || '').replace(/(\d+)\s*GB\b/g, '$1 GB').replace(/(\d+)\s*TB\b/g, '$1 TB').replace(/(\d+)\s*MHz\b/g, '$1 MHz').replace(/(\d+)\s*Hz\b/gi,'$1Hz');
   const omenProductImage='https://kaas.hpcloud.hp.com/PROD/v2/renderbinary/7968199/7970480/con-win-nb-p-brunobear-23c1-omen-16-wd0000-16-wf0000-specification/con-nb-brunobear-omen-16-wd0000-16-wf0000-product-image';
-  const omenDevice={kind:'笔记本电脑', name:'OMEN9', accent:'', image:omenProductImage, click:true, action:'查看配置 →', modalTitle:'OMEN9', modalStats:[['设备','OMEN9'],['平台','PC(windows)']], modalRows:[
+  const omenDevice={kind:'电脑', name:'OMEN9', accent:'黑', image:omenProductImage, click:true, action:'查看配置 →', modalTitle:'OMEN9', modalStats:[['设备','OMEN9'],['平台','PC(windows)']], modalRows:[
       ['型号', 'HP OMEN 16-wf0xxx'],
       ['主板', 'HP 8BAB'],
       ['处理器', 'Intel Core i7-13700HX (16 cores / 24 threads)'],
@@ -42,10 +42,10 @@ document.head.append(css);
       ['独立显卡', 'NVIDIA GeForce RTX 4050 Laptop GPU'],
       ['内部显示器', 'Inter(R) UHD Graphics RGB 1080P 165Hz'],
       ['内存', 'Kingston 32GB (2 × 16GB) · 5600 MT/s（标称）'],
-      ['容量', '约 1.5TB（KIOXIA KXG80ZNV512G 512GB + Fanxiang S500Pro 1TB）'],
+      ['容量', '1.5TB（KIOXIA KXG80ZNV512G 512GB + Fanxiang S500Pro 1TB）'],
       ['操作系统', 'Windows 11 Pro (64-bit)']
     ]};
-  const hkcDevice={kind:'显示器', name:'HKC MG32A1F3', accent:'黑', image:'https://cdn-img.birbir.uz/i/800x800-fit/files/c8/70/e485e4af8b489fdc78c8ba3141a9.jpg', click:true, action:'查看配置 →', modalTitle:'HKC MG32A1F3', modalStats:[['设备','显示器'],['品牌','HKC']], modalRows:[
+  const hkcDevice={kind:'显示器', name:'HKC MG32A1F3', accent:'', image:'https://cdn-img.birbir.uz/i/800x800-fit/files/c8/70/e485e4af8b489fdc78c8ba3141a9.jpg', click:true, action:'查看配置 →', modalTitle:'HKC MG32A1F3', modalStats:[['设备','显示器'],['品牌','HKC']], modalRows:[
       ['型号','HKC MG32A1F3'], ['尺寸','32inch'], ['色彩','RGB'], ['分辨率','1080P'], ['刷新率','200Hz']
     ]};
 
@@ -53,20 +53,22 @@ document.head.append(css);
     omenDevice,
     hkcDevice,
     {kind:'鼠标', name:'Logitech G102', accent:'黑', image:'https://brainy.co.ke/cdn/shop/files/logitech-g102-lightsync-rgb-6-button-usb-gaming-mouse-black-792075.jpg?v=1735293334'},
-    {kind:'鼠标', name:'MCHOSE L7 Pro', accent:'黑', image:asset+'mchose-l7-pro-black.png'},
+    {kind:'鼠标', name:'MCHOSE L7 pro', accent:'白', image:asset+'mchose-l7-pro-white.png'},
     {kind:'音游控制器', name:'TASOLLER PLUS', accent:'', image:'https://www.gamo2.com/jp/upload/save_image/10221938_671780b49b34d.png', artClass:'device-zoom-strong'},
-    {kind:'平板', name:'iPad Pro 13inch M4', accent:'黑', image:asset+'ipad-pro-13-m4-black-v2.png'},
-    {kind:'手机', name:'iPhone 16 Pro', accent:'白', image:asset+'iphone-16-pro-whitebg-lineup.png'}
+    {kind:'平板', name:'iPad Pro 13inch M4 256GB', accent:'黑', image:asset+'ipad-pro-13-m4-black-v2.png'},
+    {kind:'手机', name:'iPhone 16 Pro 1TB', accent:'白', image:asset+'iphone-16-pro-whitebg-lineup.png'}
   ];
 
   const musicDevices = [
     {kind:'钢琴', name:'Kayserburg UH-130U', accent:'', image:asset+'piano.jpg'},
+    {kind:'竹笛', name:'E调两节笛', accent:'', image:asset+'dizi-e-key-clean.png', artClass:'device-center-tight'},
+    {kind:'陶笛', name:'风雅AC长嘴降B调六孔陶笛', accent:'墨竹', image:asset+'ocarina-mozhu.png'},
+    {kind:'竖笛', name:'DHS精品C调六孔竖笛', accent:'白', image:asset+'recorder-dhs-white.png', artClass:'device-center-tight'},
     {kind:'节拍器', name:'Nikko Standards', accent:'黑', image:'https://nikkoseiki.com/images/standard_images/226_2304_3.jpg'},
+    {kind:'翻谱器', name:'JOYO无线踩踏自动翻谱器', accent:'黑', image:asset+'joyo-page-turner-black.png'},
     {kind:'录音笔', name:'SONY ICD-UX570F', accent:'黑', image:'https://item-shopping.c.yimg.jp/i/f/bakuyasuearth_4548736100084'},
     {kind:'耳机', name:'SONY WI-1000XM2', accent:'铂金银', image:asset+'sony-wi-1000xm2-platinum-silver.png'},
-    {kind:'音响', name:'YAMAHA NX-50', accent:'黑', image:'https://uk.yamaha.com/en/files/9CB12EB0BEAB4A1693BBBA85B48A7D1C_12073_tcm117-1726888.jpg'},
-    {kind:'竹笛', name:'E调两节笛', accent:'', image:asset+'dizi-e-key.png'},
-    {kind:'陶笛', name:'风雅AC降B调六孔陶笛', accent:'', image:'https://www.fypottery.com/upload/img/20260416/220a8e36c525ebb5fe187f129392399f.jpg'}
+    {kind:'音响', name:'YAMAHA NX-50', accent:'黑', image:'https://uk.yamaha.com/en/files/9CB12EB0BEAB4A1693BBBA85B48A7D1C_12073_tcm117-1726888.jpg'}
   ];
 
   const otherDevices = [
@@ -88,7 +90,7 @@ document.head.append(css);
     for (const id of ['gameModalCover', 'gameModalIcon']) { const el = document.getElementById(id); if (el) el.style.display = 'none'; }
     const stats = (item.modalStats||[]).map(([label,value])=>`<div class="modal-stat"><small>${safe(label)}</small><b>${safe(value)}</b></div>`).join('');
     const rows = (item.modalRows||[]).map(([label,value]) => `<dt>${safe(label)}</dt><dd style="overflow-wrap:anywhere">${safe(units(value))}</dd>`).join('');
-    content.innerHTML = `<div class="modal-stats">${stats}</div><div class="modal-section" data-ymkf-device-modal="1.3.3"><h3>详细信息</h3><dl class="meta-grid">${rows}</dl></div>`;
+    content.innerHTML = `<div class="modal-stats">${stats}</div><div class="modal-section" data-ymkf-device-modal="1.4.0"><h3>详细信息</h3><dl class="meta-grid">${rows}</dl></div>`;
     modal.classList.add('open'); modal.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; document.querySelector('#gameModalClose')?.focus();
   }
 
