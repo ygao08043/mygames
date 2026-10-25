@@ -1,18 +1,18 @@
 {
     "version":  "1.11.2",
-    "generatedAt":  "2026-10-25T18:08:11.2551682+08:00",
+    "generatedAt":  "2026-10-25T21:05:01.0754304+08:00",
     "source":  {
                    "type":  "Phigros TapTap cloud save",
-                   "saveUpdatedAt":  "2026-10-24T16:19:56.789Z",
+                   "saveUpdatedAt":  "2026-10-25T11:01:27.875Z",
                    "metadata":  "SonolusHaniwa/phigros-decrypted-data metadata.json",
                    "metadataSongs":  314,
                    "missingMetadata":  20
                },
     "profile":  {
                     "nickname":  "YMKF",
-                    "rks":  15.72959042,
-                    "calculatedRks":  15.72783234,
-                    "cloudSummaryRks":  15.72959042,
+                    "rks":  15.76965904,
+                    "calculatedRks":  15.76790133,
+                    "cloudSummaryRks":  15.76965904,
                     "rksMode":  "cloud-summary-fallback",
                     "phiCount":  30,
                     "fcCount":  50,
@@ -65,6 +65,20 @@
                  }
              ],
     "best27":  [
+                   {
+                       "songId":  "DESTRUCTION321.Normal1zervsBrokenNerdz.0",
+                       "title":  "DESTRUCTION 3,2,1",
+                       "composer":  "Normal1zer vs. Broken Nerdz",
+                       "difficulty":  "AT",
+                       "difficultyIndex":  3,
+                       "constant":  17.3,
+                       "score":  971603,
+                       "accuracy":  99.105141,
+                       "rks":  16.61879379,
+                       "status":  "V",
+                       "isFc":  false,
+                       "charter":  "∅"
+                   },
                    {
                        "songId":  "Spasmodic.姜米條颶風元力上人.0",
                        "title":  "Spasmodic",
@@ -192,6 +206,20 @@
                        "charter":  "上班睡大觉_Sleepyhead"
                    },
                    {
+                       "songId":  "DESTRUCTION321.Normal1zervsBrokenNerdz.0",
+                       "title":  "DESTRUCTION 3,2,1",
+                       "composer":  "Normal1zer vs. Broken Nerdz",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  16.3,
+                       "score":  965822,
+                       "accuracy":  99.386421,
+                       "rks":  15.85852667,
+                       "status":  "V",
+                       "isFc":  false,
+                       "charter":  "{Destruction}"
+                   },
+                   {
                        "songId":  "Poseidon.1112vsStar.0",
                        "title":  "Ποσειδών",
                        "composer":  "1112 vs. Star＊",
@@ -204,20 +232,6 @@
                        "status":  "V",
                        "isFc":  false,
                        "charter":  "上班摸大鱼 a.k.a. 海洋咩兔"
-                   },
-                   {
-                       "songId":  "DESTRUCTION321.Normal1zervsBrokenNerdz.0",
-                       "title":  "DESTRUCTION 3,2,1",
-                       "composer":  "Normal1zer vs. Broken Nerdz",
-                       "difficulty":  "AT",
-                       "difficultyIndex":  3,
-                       "constant":  17.3,
-                       "score":  924354,
-                       "accuracy":  97.984985,
-                       "rks":  15.78536548,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "∅"
                    },
                    {
                        "songId":  "玩具狂奏曲終焉.きくお.0",
@@ -358,20 +372,6 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "Ctymax vs. IUIsauce -村头烤鱼蘸凹酱-"
-                   },
-                   {
-                       "songId":  "DESTRUCTION321.Normal1zervsBrokenNerdz.0",
-                       "title":  "DESTRUCTION 3,2,1",
-                       "composer":  "Normal1zer vs. Broken Nerdz",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  16.3,
-                       "score":  959651,
-                       "accuracy":  98.867493,
-                       "rks":  15.48988528,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "{Destruction}"
                    },
                    {
                        "songId":  "ElCondorPasaPhigrosEdit.PlasticFruits.0",
@@ -446,6 +446,20 @@
                ],
     "scores":  [
                    {
+                       "songId":  "DESTRUCTION321.Normal1zervsBrokenNerdz.0",
+                       "title":  "DESTRUCTION 3,2,1",
+                       "composer":  "Normal1zer vs. Broken Nerdz",
+                       "difficulty":  "AT",
+                       "difficultyIndex":  3,
+                       "constant":  17.3,
+                       "score":  971603,
+                       "accuracy":  99.105141,
+                       "rks":  16.61879379,
+                       "status":  "V",
+                       "isFc":  false,
+                       "charter":  "∅"
+                   },
+                   {
                        "songId":  "Spasmodic.姜米條颶風元力上人.0",
                        "title":  "Spasmodic",
                        "composer":  "姜米條☆颶風 ~ ♫元力上人♫",
@@ -572,6 +586,20 @@
                        "charter":  "上班睡大觉_Sleepyhead"
                    },
                    {
+                       "songId":  "DESTRUCTION321.Normal1zervsBrokenNerdz.0",
+                       "title":  "DESTRUCTION 3,2,1",
+                       "composer":  "Normal1zer vs. Broken Nerdz",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  16.3,
+                       "score":  965822,
+                       "accuracy":  99.386421,
+                       "rks":  15.85852667,
+                       "status":  "V",
+                       "isFc":  false,
+                       "charter":  "{Destruction}"
+                   },
+                   {
                        "songId":  "Poseidon.1112vsStar.0",
                        "title":  "Ποσειδών",
                        "composer":  "1112 vs. Star＊",
@@ -584,20 +612,6 @@
                        "status":  "V",
                        "isFc":  false,
                        "charter":  "上班摸大鱼 a.k.a. 海洋咩兔"
-                   },
-                   {
-                       "songId":  "DESTRUCTION321.Normal1zervsBrokenNerdz.0",
-                       "title":  "DESTRUCTION 3,2,1",
-                       "composer":  "Normal1zer vs. Broken Nerdz",
-                       "difficulty":  "AT",
-                       "difficultyIndex":  3,
-                       "constant":  17.3,
-                       "score":  924354,
-                       "accuracy":  97.984985,
-                       "rks":  15.78536548,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "∅"
                    },
                    {
                        "songId":  "玩具狂奏曲終焉.きくお.0",
@@ -738,20 +752,6 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "Ctymax vs. IUIsauce -村头烤鱼蘸凹酱-"
-                   },
-                   {
-                       "songId":  "DESTRUCTION321.Normal1zervsBrokenNerdz.0",
-                       "title":  "DESTRUCTION 3,2,1",
-                       "composer":  "Normal1zer vs. Broken Nerdz",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  16.3,
-                       "score":  959651,
-                       "accuracy":  98.867493,
-                       "rks":  15.48988528,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "{Destruction}"
                    },
                    {
                        "songId":  "ElCondorPasaPhigrosEdit.PlasticFruits.0",
@@ -3911,7 +3911,7 @@
                        "difficultyIndex":  3,
                        "constant":  null,
                        "score":  918611,
-                       "accuracy":  95.908775,
+                       "accuracy":  96.483284,
                        "rks":  null,
                        "status":  "A",
                        "isFc":  false,
@@ -4483,8 +4483,8 @@
                   },
                   {
                       "date":  "2026-10-25",
-                      "rks":  15.72959042,
-                      "saveUpdatedAt":  "2026-10-24T16:19:56.789Z"
+                      "rks":  15.76965904,
+                      "saveUpdatedAt":  "2026-10-25T11:01:27.875Z"
                   }
               ]
 }
