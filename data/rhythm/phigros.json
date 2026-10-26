@@ -1,9 +1,9 @@
 {
     "version":  "1.20.3",
-    "generatedAt":  "2026-10-26T23:05:32.2928740+08:00",
+    "generatedAt":  "2026-10-26T23:24:52.4554256+08:00",
     "source":  {
                    "type":  "Phigros TapTap cloud save",
-                   "saveUpdatedAt":  "2026-10-25T16:40:11.758Z",
+                   "saveUpdatedAt":  "2026-10-26T15:21:30.190Z",
                    "metadata":  "SonolusHaniwa/phigros-decrypted-data metadata.json",
                    "metadataSongs":  326,
                    "missingMetadata":  2
@@ -14,7 +14,7 @@
                     "calculatedRks":  15.76966005,
                     "cloudSummaryRks":  15.76965904,
                     "rksMode":  "cloud-summary-fallback",
-                    "phiCount":  31,
+                    "phiCount":  32,
                     "fcCount":  50,
                     "playedCharts":  264,
                     "avatar":  "Introduction",
@@ -3414,6 +3414,20 @@
                        "charter":  "壹號阿爽"
                    },
                    {
+                       "songId":  "lifeflashesbeforeweebeyes.BilliumMoto.0",
+                       "title":  "life flashes before weeb eyes",
+                       "composer":  "BilliumMoto",
+                       "difficulty":  "HD",
+                       "difficultyIndex":  1,
+                       "constant":  11.9,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  11.9,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "百九十八"
+                   },
+                   {
                        "songId":  "Komplexe.雄之助featSennzai.0",
                        "title":  "Komplexe",
                        "composer":  "雄之助 feat. Sennzai",
@@ -3426,20 +3440,6 @@
                        "status":  "A",
                        "isFc":  false,
                        "charter":  "Likey"
-                   },
-                   {
-                       "songId":  "lifeflashesbeforeweebeyes.BilliumMoto.0",
-                       "title":  "life flashes before weeb eyes",
-                       "composer":  "BilliumMoto",
-                       "difficulty":  "HD",
-                       "difficultyIndex":  1,
-                       "constant":  11.9,
-                       "score":  999344,
-                       "accuracy":  99.927071,
-                       "rks":  11.86145972,
-                       "status":  "FC",
-                       "isFc":  true,
-                       "charter":  "百九十八"
                    },
                    {
                        "songId":  "Radiance.Nhato.0",
@@ -4151,7 +4151,7 @@
                               "HD":  {
                                          "cleared":  27,
                                          "fullCombo":  14,
-                                         "phi":  7
+                                         "phi":  8
                                      },
                               "IN":  {
                                          "cleared":  207,
@@ -4489,7 +4489,7 @@
                   {
                       "date":  "2026-10-26",
                       "rks":  15.76965904,
-                      "saveUpdatedAt":  "2026-10-25T16:40:11.758Z"
+                      "saveUpdatedAt":  "2026-10-26T15:21:30.190Z"
                   }
               ]
 }

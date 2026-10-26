@@ -77,6 +77,7 @@
       <div class="metricCard"><div id="ovTime" class="value">—</div><div class="label">游戏时间</div></div>
       <div class="metricCard"><div id="ovMatches" class="value">—</div><div class="label">总场次</div></div>
       <div class="metricCard"><div id="ovWinRate" class="value">—</div><div class="label">总胜率</div></div>
+      <div class="metricCard"><div id="ovAchievements" class="value">—</div><div class="label">成就完成数</div></div>
       <div class="metricCard"><div id="ovKills" class="value">—</div><div class="label">总击杀数</div></div>
       <div class="metricCard"><div id="ovKillGoose" class="value">—</div><div class="label">击杀鹅</div></div>
       <div class="metricCard"><div id="ovKillDuck" class="value">—</div><div class="label">击杀鸭</div></div>
@@ -135,7 +136,7 @@
 <div class="sub" style="margin-top:22px">Build v1.20.4</div>
 </main>
 <script>
-const DATA='../data/goose-goose-duck.json?v=1.20.6';
+const DATA='../data/goose-goose-duck.json?v=1.20.7';
 let D=null,page=1;const PAGE=20;let roleSort='uses',roleDir='desc',roleFaction='';
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -199,6 +200,13 @@ function renderOverview(){
   $('#ovTime').textContent=Number.isFinite(Number(o.gameTimeHours))?Number(o.gameTimeHours).toFixed(1)+'h':'—';
   $('#ovMatches').textContent=num(o.totalMatches);
   $('#ovWinRate').textContent=pct(o.totalWinRate);
+  const achievementText=String(o.achievementsText||'').trim();
+  const achievementCompleted=Number(o.achievementsCompleted);
+  const achievementTotal=Number(o.achievementsTotal);
+  $('#ovAchievements').textContent=achievementText||(
+    Number.isFinite(achievementCompleted)&&Number.isFinite(achievementTotal)&&achievementTotal>0
+      ? `${achievementCompleted}/${achievementTotal}` : '—'
+  );
   const ct=combatTotals();
   $('#ovKills').textContent=ct.knownKills?num(ct.kills):'—';
   $('#ovKillGoose').textContent=combatDisplay(ct.goose,ct);
