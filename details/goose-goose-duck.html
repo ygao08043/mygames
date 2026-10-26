@@ -148,7 +148,7 @@
   </div>
 </section>
 
-<div class="sub" style="margin-top:22px">Build v1.20.3</div>
+<div class="sub" style="margin-top:22px">Build v1.20.4</div>
 </main>
 <script>
 const DATA='../data/goose-goose-duck.json?v=1.20.3';
@@ -158,6 +158,9 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const num=v=>v==null||v===''?'—':Number(v).toLocaleString('zh-CN');
 const pct=v=>v==null||!Number.isFinite(Number(v))?'—':(Number(v)*100).toFixed(1)+'%';
 const factionClass=f=>f==='鹅'?'goose':f==='鸭'?'duck':f==='中立'?'neutral':'';
+// In the Goose faction, only roles with a documented kill ability contribute to kill statistics.
+const GOOSE_KILL_CAPABLE_ROLE_IDS=new Set(['8','11','50','92','100','71','45']);
+function roleCanKillByAssignedRole(m){if(String(m?.faction||'')!=='鹅')return true;return GOOSE_KILL_CAPABLE_ROLE_IDS.has(String(m?.roleId??''));}
 
 function matchTime(m){
   const s=String(m?.date||'').trim();let x=Date.parse(s);
@@ -173,14 +176,14 @@ function matchCombat(m){
   const roots=matchOfficialRoots(m),official=officialTimelineRoot(roots);
   const summary=roots.find(x=>x&&typeof x==='object'&&x.matchId&&x.uid);
   const selfId=summary?.uid==null?null:String(summary.uid);
-  const out={kills:adjustedMatchKills(m),victimGoose:null,victimDuck:null,victimNeutral:null,sabotages:null,hasTimeline:!!official&&!!selfId&&!!official.playerData&&Array.isArray(official.rounds)};
+  const out={kills:adjustedMatchKills(m),victimGoose:null,victimDuck:null,victimNeutral:null,hasTimeline:!!official&&!!selfId&&!!official.playerData&&Array.isArray(official.rounds)};
   if(!out.hasTimeline)return out;
-  out.victimGoose=0;out.victimDuck=0;out.victimNeutral=0;out.sabotages=0;
+  out.victimGoose=0;out.victimDuck=0;out.victimNeutral=0;
+  if(!roleCanKillByAssignedRole(m))return out;
   const killCodes=new Set([2,1011,1015,1017,1019,1020,1021,1022,1023,1026,1030,1032,1038,1043,1045,1046,1048,1049,1052,1058,1059]);
   const seen=new Set();
   for(const round of official.rounds){for(const e of (Array.isArray(round?.timeline)?round.timeline:[])){
     const code=Number(e?.type),actor=String(e?.uid??''),target=String(e?.targetId??'');
-    if(actor===selfId&&code===7)out.sabotages++;
     if(actor!==selfId||!target||target===selfId||!killCodes.has(code))continue;
     const key=code+'|'+target+'|'+String(e?.timestamp??'');if(seen.has(key))continue;seen.add(key);
     const victim=official.playerData[target];const f=Number(victim?.faction??victim?.teamId);
@@ -189,25 +192,24 @@ function matchCombat(m){
   return out;
 }
 function combatTotals(){
-  const totals={kills:0,goose:0,duck:0,neutral:0,gooseKilled:0,gooseKills:0,duckKills:0,neutralKills:0,duckSabotages:0,knownKills:0,knownTimeline:0,statMatches:0};
+  const totals={kills:0,goose:0,duck:0,neutral:0,gooseKilled:0,gooseKills:0,duckKills:0,neutralKills:0,knownKills:0,knownTimeline:0,statMatches:0};
   for(const m of (D?.matches||[])){
     if(m?.spectator||m?.countsForStats===false)continue;
     totals.statMatches++;
-    const c=matchCombat(m);const k=Number(c.kills);
-    if(Number.isFinite(k)&&c.kills!=null&&c.kills!==''){totals.kills+=k;totals.knownKills++;const f=m.faction;
+    const c=matchCombat(m),canCountKills=roleCanKillByAssignedRole(m),k=Number(c.kills);
+    if(canCountKills&&Number.isFinite(k)&&c.kills!=null&&c.kills!==''){totals.kills+=k;totals.knownKills++;const f=m.faction;
       if(f==='鹅')totals.gooseKills+=k;else if(f==='鸭')totals.duckKills+=k;else if(f==='中立')totals.neutralKills+=k;
     }
     if(c.hasTimeline){totals.knownTimeline++;
-      totals.goose+=c.victimGoose||0;totals.duck+=c.victimDuck||0;totals.neutral+=c.victimNeutral||0;
-      if(m.faction==='鹅'){totals.gooseKilled+=c.victimGoose||0;}
-      if(m.faction==='鸭')totals.duckSabotages+=c.sabotages||0;
+      if(canCountKills){totals.goose+=c.victimGoose||0;totals.duck+=c.victimDuck||0;totals.neutral+=c.victimNeutral||0;
+        if(m.faction==='鹅'){totals.gooseKilled+=c.victimGoose||0;}
+      }
     }
   }
-  totals.timelineComplete=totals.knownTimeline>=totals.statMatches;
   return totals;
 }
-function combatDisplay(v,ct){return ct.knownTimeline?(ct.timelineComplete?num(v):'部分 '+num(v)):'—'}
-function roleKills(role){let n=0,known=0;for(const m of (D?.matches||[])){if(m?.spectator||m?.countsForStats===false||String(m.roleName)!==String(role?.role))continue;const k=m.kills;if(k!=null&&k!==''&&Number.isFinite(Number(k))){n+=Number(k);known++}}return known?n:null}
+function combatDisplay(v,ct){return ct.knownTimeline?num(v):'—'}
+function roleKills(role){if(!roleCanKillByAssignedRole(role))return 0;let n=0,known=0;for(const m of (D?.matches||[])){if(m?.spectator||m?.countsForStats===false||String(m.roleName)!==String(role?.role)||!roleCanKillByAssignedRole(m))continue;const k=adjustedMatchKills(m);if(k!=null&&k!==''&&Number.isFinite(Number(k))){n+=Number(k);known++}}return known?n:null}
 function renderAchievements(){
   const all=Array.isArray(D?.achievements)?D.achievements:(Array.isArray(D?.overview?.achievements)?D.overview.achievements:[]);
   const done=all.filter(a=>a?.completed===true||a?.unlocked===true||a?.achieved===true||a?.status==='completed');
@@ -237,7 +239,7 @@ function renderOverview(){
   const fs=Array.isArray(o.factions)?o.factions:[];
   $('#factionOverview').innerHTML=['鹅','鸭','中立'].map(f=>{
     const x=fs.find(v=>v?.faction===f)||{games:0,winRate:0};
-    let extra='';if(f==='鹅'){extra=`<div class="muted">总击杀 ${num(ct.gooseKills)} · 错杀鹅 ${combatDisplay(ct.gooseKilled,ct)} · 错杀率 ${ct.knownTimeline&&ct.gooseKills>0?pct(ct.gooseKilled/ct.gooseKills):'—'}</div>`}else if(f==='鸭'){extra=`<div class="muted">总击杀 ${num(ct.duckKills)} · 破坏 ${combatDisplay(ct.duckSabotages,ct)}</div>`}else{extra=`<div class="muted">总击杀 ${num(ct.neutralKills)}</div>`}
+    let extra='';if(f==='鹅'){extra=`<div class="muted">总击杀 ${num(ct.gooseKills)} · 错杀鹅 ${combatDisplay(ct.gooseKilled,ct)} · 错杀率 ${ct.knownTimeline&&ct.gooseKills>0?pct(ct.gooseKilled/ct.gooseKills):'—'}</div>`}else if(f==='鸭'){extra=`<div class="muted">总击杀 ${num(ct.duckKills)}</div>`}else{extra=`<div class="muted">总击杀 ${num(ct.neutralKills)}</div>`}
     return `<div class="factionCard ${factionClass(f)}"><div><strong>${esc(f)}</strong><div class="muted">${num(x.games)} 场</div>${extra}</div><div style="text-align:right"><strong>${pct(x.winRate)}</strong><div class="muted">胜率</div></div></div>`;
   }).join('');
 
