@@ -8,7 +8,7 @@
 *{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#0b1118,#080c11 45%,#0a0f15);color:var(--text);font:14px/1.55 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif}.wrap{max-width:1180px;margin:auto;padding:22px}.back{color:var(--muted);text-decoration:none}.hero{display:flex;gap:18px;align-items:center;margin:20px 0}.avatar{width:78px;height:78px;border-radius:18px;object-fit:cover;background:#1d2a38;border:1px solid var(--line)}h1{font-size:30px;margin:0}.sub,.muted{color:var(--muted)}.pill{display:inline-flex;padding:4px 9px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:12px}.pill.ok{color:var(--green);border-color:#2f7350}
 .nav{display:flex;gap:8px;overflow-x:auto;margin:18px 0}.nav button,.sortBtn,.pageBtn,.seg button,select{border:1px solid var(--line);background:#111a24;color:var(--muted);border-radius:10px;padding:9px 13px}.nav button,.sortBtn,.pageBtn,.seg button{cursor:pointer}.nav button.active,.seg button.active{background:#1b2b39;color:#fff;border-color:#40718a}.page{display:none}.page.active{display:block}.section{margin-top:18px}.section h2{font-size:18px;margin:0 0 10px}.notice{background:#171d24;border:1px solid #5c5034;color:#eadca9;border-radius:12px;padding:12px;margin:14px 0}
 .overviewTop{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.metricCard,.factionCard{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:15px}.metricCard .value{font-size:25px;font-weight:800}.metricCard .label{color:var(--muted);font-size:12px;margin-top:4px}.factionGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.factionCard{display:flex;justify-content:space-between;align-items:center}.factionCard strong{font-size:20px}.factionCard.goose{border-color:#2d6a4c}.factionCard.duck{border-color:#79353c}.factionCard.neutral{border-color:#766127}
-.achievementGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:9px}.achievementCard{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;gap:10px;align-items:flex-start}.achievementCard.done{border-color:#2d6a4c}.achievementStatus{font-size:11px;border-radius:999px;padding:3px 7px;border:1px solid var(--line);white-space:nowrap}.achievementCard.done .achievementStatus{color:var(--green);border-color:#2d6a4c}.achievementCard.pending .achievementStatus{color:var(--muted)}.achievementName{font-weight:750}.achievementTime{font-size:12px;color:var(--muted);margin-top:4px}.recentGrid{display:grid;grid-template-columns:repeat(10,minmax(46px,1fr));gap:7px}.recentSquare{aspect-ratio:1;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.035);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.recentSquare.loss{background:rgba(255,255,255,.025);opacity:.55}.recentSquare.win.goose{background:rgba(71,185,121,.5);border-color:rgba(71,185,121,.95)}.recentSquare.win.duck{background:rgba(231,90,99,.5);border-color:rgba(231,90,99,.95)}.recentSquare.win.neutral{background:rgba(227,185,61,.5);border-color:rgba(227,185,61,.95)}.recentSquare img{width:78%;height:78%;object-fit:contain}.recentSquare .n{font-size:11px;color:var(--muted)}
+.recentGrid{display:grid;grid-template-columns:repeat(10,minmax(46px,1fr));gap:7px}.recentSquare{aspect-ratio:1;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.035);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.recentSquare.loss{background:rgba(255,255,255,.025);opacity:.55}.recentSquare.win.goose{background:rgba(71,185,121,.5);border-color:rgba(71,185,121,.95)}.recentSquare.win.duck{background:rgba(231,90,99,.5);border-color:rgba(231,90,99,.95)}.recentSquare.win.neutral{background:rgba(227,185,61,.5);border-color:rgba(227,185,61,.95)}.recentSquare img{width:78%;height:78%;object-fit:contain}.recentSquare .n{font-size:11px;color:var(--muted)}
 .tableWrap{overflow:auto;border:1px solid var(--line);border-radius:14px;background:var(--panel)}table{width:100%;border-collapse:collapse;min-width:720px}th,td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}th:first-child,td:first-child{text-align:left}th{font-size:12px;color:var(--muted);background:var(--panel2);position:sticky;top:0;z-index:1}tbody tr:last-child td{border-bottom:0}tbody tr:hover{background:#16202c}.roleCell{display:flex;align-items:center;gap:10px;font-weight:700}.roleIcon{width:38px;height:38px;object-fit:contain}.factionTag{font-size:11px;border-radius:999px;padding:2px 7px;margin-left:6px;border:1px solid var(--line);color:var(--muted)}.factionTag.goose{color:var(--green)}.factionTag.duck{color:var(--red)}.factionTag.neutral{color:var(--yellow)}
 .sortBtn{border:0;background:transparent;padding:0;font-weight:700;display:inline-flex;gap:5px;align-items:center}.sortBtn.active{color:var(--text)}.sortMark{color:var(--cyan);min-width:12px}.seg{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 14px}.seg button{padding:7px 12px}.filters{display:flex;gap:8px;overflow-x:auto;white-space:nowrap;margin:10px 0 14px}.filters select{min-width:130px;color:var(--text);cursor:pointer}
 .matches{display:grid;gap:10px}.match{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}.matchHead{display:grid;grid-template-columns:minmax(230px,2fr) .75fr .8fr .75fr .75fr;gap:10px;align-items:center;padding:12px 14px}.player{display:flex;align-items:center;gap:12px;min-width:0}.matchRoleIcon{width:48px;height:48px;object-fit:contain;flex:0 0 48px}.playerMain{min-width:0}.playerMain b{display:block;font-size:16px}.playerMain span{display:block;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.result{font-weight:700}.result.win{color:var(--green)}.result.loss{color:var(--red)}.metric .label{display:block;color:var(--muted);font-size:12px}
@@ -67,7 +67,6 @@
 <div class="nav">
   <button class="active" data-page="overviewPage">总览</button>
   <button data-page="roles">身份统计</button>
-  <button data-page="achievements">成就统计</button>
   <button data-page="matches">全部对局记录</button>
 </div>
 
@@ -78,7 +77,6 @@
       <div class="metricCard"><div id="ovTime" class="value">—</div><div class="label">游戏时间</div></div>
       <div class="metricCard"><div id="ovMatches" class="value">—</div><div class="label">总场次</div></div>
       <div class="metricCard"><div id="ovWinRate" class="value">—</div><div class="label">总胜率</div></div>
-      <div class="metricCard"><div id="ovAchievements" class="value">—</div><div class="label">成就完成</div></div>
       <div class="metricCard"><div id="ovKills" class="value">—</div><div class="label">总击杀数</div></div>
       <div class="metricCard"><div id="ovKillGoose" class="value">—</div><div class="label">击杀鹅</div></div>
       <div class="metricCard"><div id="ovKillDuck" class="value">—</div><div class="label">击杀鸭</div></div>
@@ -116,20 +114,6 @@
   </div>
 </section>
 
-<section id="achievements" class="page">
-  <div class="section">
-    <h2>成就统计 <span id="achievementCount" class="count"></span></h2>
-    <div class="overviewTop" style="grid-template-columns:repeat(3,minmax(0,1fr))">
-      <div class="metricCard"><div id="achievementCompletedCount" class="value">—</div><div class="label">已完成</div></div>
-      <div class="metricCard"><div id="achievementIncompleteCount" class="value">—</div><div class="label">未完成</div></div>
-      <div class="metricCard"><div id="achievementTotalCount" class="value">—</div><div class="label">总成就</div></div>
-    </div>
-    <div class="seg" id="achievementSeg"><button class="active" data-achievement-filter="all">全部</button><button data-achievement-filter="completed">已完成</button><button data-achievement-filter="incomplete">未完成</button></div>
-    <div id="achievementNotice" class="notice" style="display:none"></div>
-    <div id="achievementList" class="achievementGrid"></div>
-  </div>
-</section>
-
 <section id="matches" class="page">
   <div id="matchNotice"></div>
   <div class="section">
@@ -151,8 +135,8 @@
 <div class="sub" style="margin-top:22px">Build v1.20.4</div>
 </main>
 <script>
-const DATA='../data/goose-goose-duck.json?v=1.20.3';
-let D=null,page=1;const PAGE=20;let roleSort='uses',roleDir='desc',roleFaction='',achievementFilter='all';
+const DATA='../data/goose-goose-duck.json?v=1.20.5';
+let D=null,page=1;const PAGE=20;let roleSort='uses',roleDir='desc',roleFaction='';
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const num=v=>v==null||v===''?'—':Number(v).toLocaleString('zh-CN');
@@ -210,26 +194,11 @@ function combatTotals(){
 }
 function combatDisplay(v,ct){return ct.knownTimeline?num(v):'—'}
 function roleKills(role){if(!roleCanKillByAssignedRole(role))return 0;let n=0,known=0;for(const m of (D?.matches||[])){if(m?.spectator||m?.countsForStats===false||String(m.roleName)!==String(role?.role)||!roleCanKillByAssignedRole(m))continue;const k=adjustedMatchKills(m);if(k!=null&&k!==''&&Number.isFinite(Number(k))){n+=Number(k);known++}}return known?n:null}
-function renderAchievements(){
-  const all=Array.isArray(D?.achievements)?D.achievements:(Array.isArray(D?.overview?.achievements)?D.overview.achievements:[]);
-  const done=all.filter(a=>a?.completed===true||a?.unlocked===true||a?.achieved===true||a?.status==='completed');
-  const pending=all.filter(a=>!done.includes(a));
-  $('#achievementCompletedCount').textContent=all.length?num(done.length):(D?.overview?.achievementsCompleted!=null?num(D.overview.achievementsCompleted):'—');
-  $('#achievementIncompleteCount').textContent=all.length?num(pending.length):'—';
-  $('#achievementTotalCount').textContent=all.length?num(all.length):(D?.overview?.achievementsText?.split('/')?.[1]||'—');
-  $('#achievementCount').textContent=all.length?`${done.length}/${all.length}`:'详情不可用';
-  const notice=$('#achievementNotice');
-  if(!all.length){notice.style.display='block';notice.textContent='当前同步数据源只提供成就完成总数，没有返回逐项成就名称、完成状态或解锁时间。为避免编造信息，本页暂不虚构已完成/未完成清单；同步程序需要额外取得官方成就明细后才能完整展示。';$('#achievementList').innerHTML='';return;}
-  notice.style.display='none';
-  const rows=all.filter(a=>achievementFilter==='all'||(achievementFilter==='completed'?done.includes(a):!done.includes(a)));
-  $('#achievementList').innerHTML=rows.map(a=>{const isDone=done.includes(a),name=a.name||a.displayName||a.title||a.id||'未命名成就',desc=a.description||a.desc||'',time=a.completedAt||a.unlockTime||a.unlockedAt||a.completionTime||'';return `<article class="achievementCard ${isDone?'done':'pending'}"><div style="flex:1;min-width:0"><div class="achievementName">${esc(name)}</div>${desc?`<div class="muted">${esc(desc)}</div>`:''}${isDone&&time?`<div class="achievementTime">完成时间：${esc(time)}</div>`:''}</div><span class="achievementStatus">${isDone?'已完成':'未完成'}</span></article>`}).join('')||'<div class="empty">此筛选下没有成就。</div>';
-}
 function renderOverview(){
   const o=D?.overview||{};
   $('#ovTime').textContent=Number.isFinite(Number(o.gameTimeHours))?Number(o.gameTimeHours).toFixed(1)+'h':'—';
   $('#ovMatches').textContent=num(o.totalMatches);
   $('#ovWinRate').textContent=pct(o.totalWinRate);
-  $('#ovAchievements').textContent=o.achievementsCompleted!=null?num(o.achievementsCompleted):(o.achievementsText||'—');
   const ct=combatTotals();
   $('#ovKills').textContent=ct.knownKills?num(ct.kills):'—';
   $('#ovKillGoose').textContent=combatDisplay(ct.goose,ct);
@@ -665,10 +634,9 @@ function render(){
   if(p.avatar){$('#avatar').src=p.avatar;$('#avatar').style.visibility='visible'}else $('#avatar').style.visibility='hidden';
   $('#profileName').textContent=p.name||'鹅鸭杀战绩';
   const pill=$('#bindPill');pill.textContent=D?.binding?.bound?'Gaggle 已绑定':'Gaggle 未绑定';pill.classList.toggle('ok',!!D?.binding?.bound);
-  renderOverview();renderRoles();renderAchievements();fillFilters();renderMatches();
+  renderOverview();renderRoles();fillFilters();renderMatches();
 }
 document.querySelectorAll('.sortBtn').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.sort;if(roleSort===k)roleDir=roleDir==='desc'?'asc':'desc';else{roleSort=k;roleDir='desc'}renderRoles()}));
-document.querySelectorAll('#achievementSeg button').forEach(b=>b.addEventListener('click',()=>{achievementFilter=b.dataset.achievementFilter||'all';document.querySelectorAll('#achievementSeg button').forEach(x=>x.classList.toggle('active',x===b));renderAchievements()}));
 document.querySelectorAll('#factionSeg button').forEach(b=>b.addEventListener('click',()=>{roleFaction=b.dataset.faction||'';document.querySelectorAll('#factionSeg button').forEach(x=>x.classList.toggle('active',x===b));renderRoles()}));
 document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.page').forEach(v=>v.classList.toggle('active',v.id===b.dataset.page))}));
 fetch(DATA,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(x=>{D=normalizeGgdData(x);render()}).catch(e=>{$('#overviewPage').innerHTML=`<div class="notice">鹅鸭杀数据尚未生成：${esc(e.message)}</div>`});
