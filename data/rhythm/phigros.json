@@ -1,9 +1,9 @@
 {
     "version":  "1.20.3",
-    "generatedAt":  "2026-10-25T23:54:38.2441296+08:00",
+    "generatedAt":  "2026-10-26T10:27:20.6855934+08:00",
     "source":  {
                    "type":  "Phigros TapTap cloud save",
-                   "saveUpdatedAt":  "2026-10-25T11:01:27.875Z",
+                   "saveUpdatedAt":  "2026-10-25T16:40:11.758Z",
                    "metadata":  "SonolusHaniwa/phigros-decrypted-data metadata.json",
                    "metadataSongs":  326,
                    "missingMetadata":  2
@@ -14,7 +14,7 @@
                     "calculatedRks":  15.76966005,
                     "cloudSummaryRks":  15.76965904,
                     "rksMode":  "cloud-summary-fallback",
-                    "phiCount":  30,
+                    "phiCount":  31,
                     "fcCount":  50,
                     "playedCharts":  264,
                     "avatar":  "Introduction",
@@ -3092,6 +3092,20 @@
                        "charter":  "Su1fuR -All about YOU \u0026 ME-"
                    },
                    {
+                       "songId":  "CROSSSOUL.HyuNfeatSyepias.0",
+                       "title":  "CROSS†SOUL",
+                       "composer":  "HyuN feat. Syepias",
+                       "difficulty":  "HD",
+                       "difficultyIndex":  1,
+                       "constant":  12.6,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  12.6,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "無†極 fixed by Rikko"
+                   },
+                   {
                        "songId":  "YouaretheMiserable.tpazolite.0",
                        "title":  "You are the Miserable",
                        "composer":  "t+pazolite",
@@ -3118,20 +3132,6 @@
                        "status":  "A",
                        "isFc":  false,
                        "charter":  "弧光 With Opposition"
-                   },
-                   {
-                       "songId":  "CROSSSOUL.HyuNfeatSyepias.0",
-                       "title":  "CROSS†SOUL",
-                       "composer":  "HyuN feat. Syepias",
-                       "difficulty":  "HD",
-                       "difficultyIndex":  1,
-                       "constant":  12.6,
-                       "score":  998941,
-                       "accuracy":  99.882286,
-                       "rks":  12.53416642,
-                       "status":  "FC",
-                       "isFc":  true,
-                       "charter":  "無†極 fixed by Rikko"
                    },
                    {
                        "songId":  "盏茗.茶鸣拾贰律.0",
@@ -4151,7 +4151,7 @@
                               "HD":  {
                                          "cleared":  27,
                                          "fullCombo":  14,
-                                         "phi":  6
+                                         "phi":  7
                                      },
                               "IN":  {
                                          "cleared":  207,
@@ -4485,6 +4485,11 @@
                       "date":  "2026-10-25",
                       "rks":  15.76965904,
                       "saveUpdatedAt":  "2026-10-25T11:01:27.875Z"
+                  },
+                  {
+                      "date":  "2026-10-26",
+                      "rks":  15.76965904,
+                      "saveUpdatedAt":  "2026-10-25T16:40:11.758Z"
                   }
               ]
 }
