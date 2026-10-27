@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
     "build":  "v1.20.4",
-    "generatedAt":  "2026-10-26T23:42:14.1488066+08:00",
+    "generatedAt":  "2026-10-27T10:42:45.9768107+08:00",
     "eaId":  "PIANOYMKF",
     "platform":  "pc",
     "source":  {
@@ -14,7 +14,7 @@
                               "key":  "bf1",
                               "title":  "Battlefield 1",
                               "status":  "ok",
-                              "updatedAt":  "2026-10-26T23:42:14.1488066+08:00",
+                              "updatedAt":  "2026-10-27T10:42:45.9768107+08:00",
                               "endpoint":  "https://api.gametools.network/bf1/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "PIANOYMKF",
@@ -8292,7 +8292,7 @@
                               "key":  "bfv",
                               "title":  "Battlefield V",
                               "status":  "ok",
-                              "updatedAt":  "2026-10-26T23:42:14.1488066+08:00",
+                              "updatedAt":  "2026-10-27T10:42:45.9768107+08:00",
                               "endpoint":  "https://api.gametools.network/bfv/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "PIANOYMKF",
@@ -8385,7 +8385,7 @@
                                                     },
                                           "weapons":  {
                                                           "userId":  1015988860725,
-                                                          "avatar":  "https://eaavatarservice.akamaized.net/production/avatar/prod/userAvatar/47880937/416x416.JPEG",
+                                                          "avatar":  "",
                                                           "userName":  "PIANOYMKF",
                                                           "id":  1007369860725,
                                                           "weapons":  [
@@ -12576,7 +12576,7 @@
                                  "key":  "bf2042",
                                  "title":  "Battlefield 2042",
                                  "status":  "upstream_broken",
-                                 "updatedAt":  "2026-10-26T23:42:14.1488066+08:00",
+                                 "updatedAt":  "2026-10-27T10:42:45.9768107+08:00",
                                  "endpoint":  "https://api.gametools.network/bf2042/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                                  "profile":  null,
                                  "trueSessions":  [
@@ -18931,7 +18931,7 @@
                               "key":  "bf6",
                               "title":  "Battlefield 6",
                               "status":  "ok",
-                              "updatedAt":  "2026-10-26T23:42:14.1488066+08:00",
+                              "updatedAt":  "2026-10-27T10:42:45.9768107+08:00",
                               "endpoint":  "https://api.gametools.network/bf6/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "pianoymkf",
@@ -23481,5 +23481,5 @@
                           }
               },
     "playniteTotalSeconds":  969613,
-    "playniteCapturedAt":  "2026-10-26T23:44:39.2868655+08:00"
+    "playniteCapturedAt":  "2026-10-27T10:45:07.4729398+08:00"
 }
