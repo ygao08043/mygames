@@ -647,6 +647,6 @@ function render(){
 document.querySelectorAll('.sortBtn').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.sort;if(roleSort===k)roleDir=roleDir==='desc'?'asc':'desc';else{roleSort=k;roleDir='desc'}renderRoles()}));
 document.querySelectorAll('#factionSeg button').forEach(b=>b.addEventListener('click',()=>{roleFaction=b.dataset.faction||'';document.querySelectorAll('#factionSeg button').forEach(x=>x.classList.toggle('active',x===b));renderRoles()}));
 document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.page').forEach(v=>v.classList.toggle('active',v.id===b.dataset.page))}));
-fetch(DATA,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(x=>{D=normalizeGgdData(x);render()}).catch(e=>{$('#overviewPage').innerHTML=`<div class="notice">鹅鸭杀数据尚未生成：${esc(e.message)}</div>`});
+fetch(DATA,{cache:'no-cache'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(x=>{D=normalizeGgdData(x);render()}).catch(e=>{$('#overviewPage').innerHTML=`<div class="notice">鹅鸭杀数据尚未生成：${esc(e.message)}</div>`});
 </script>
 </body></html>

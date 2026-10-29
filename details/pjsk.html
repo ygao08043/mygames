@@ -467,7 +467,7 @@ function bindFilters(){
 async function main(){
   renderTabs();
   try{
-    const r=await fetch('../data/rhythm/pjsk.json?ts='+Date.now(),{cache:'no-store'});
+    const r=await fetch('../data/rhythm/pjsk.json',{cache:'no-cache'});
     if(!r.ok)throw new Error('HTTP '+r.status);
     D=await r.json();
     const s=D.source||{};
