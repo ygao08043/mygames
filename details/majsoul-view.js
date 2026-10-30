@@ -14,29 +14,6 @@ function achievementIcon(index){
  ];
  const p=document.createElementNS(ns,'path');p.setAttribute('d',paths[index%paths.length]);svg.append(p);return svg;
 }
-function renderAchievements(){
- const root=$('achievementGrid'),status=$('achievementStatus'),summary=$('achievementSummary'),panel=$('achievementsPanel');
- if(!root||!status||!summary||!panel)return;
- root.replaceChildren();const a=data.achievements;
- if(!a||!a.available||!Array.isArray(a.items)){
-  summary.textContent='尚未采集';
-  status.textContent='对局实绩尚未采集。运行新版 OPEN_MAJSOUL.cmd 完成采集，再运行 RUN_SYNC.cmd 发布。';
-  const empty=el('div','尚无可用的对局实绩数据。','achievement-empty');root.append(empty);return;
- }
- const items=[...a.items].filter(x=>x&&Number.isFinite(Number(x.count))&&Number(x.count)>=0).sort((x,y)=>Number(x.id)-Number(y.id));
- const total=items.reduce((s,x)=>s+Number(x.count),0);
- summary.textContent=`${items.length} 类 · 累计 ${total.toLocaleString('zh-CN')} 次`;
- status.textContent=`最近采集：${a.collectedAt?new Date(a.collectedAt).toLocaleString('zh-CN',{timeZone:'Asia/Shanghai'}):'时间未知'}（北京时间）。`;
- if(!items.length){root.append(el('div','服务器没有返回对局实绩项目。','achievement-empty'));return;}
- items.forEach((item,i)=>{
-  const card=el('article',undefined,'achievement-card');card.title=String(item.description||item.name||'');
-  const medal=el('div',undefined,'achievement-medal');medal.append(achievementIcon(i));const copy=el('div',undefined,'achievement-copy');
-  copy.append(el('div',String(item.name||('对局实绩 #'+item.id)),'achievement-name'));
-  copy.append(el('div',String(item.category||'对局实绩'),'achievement-category'));
-  const count=el('div',undefined,'achievement-count');count.append(document.createTextNode(Number(item.count).toLocaleString('zh-CN')));count.append(el('small','次'));copy.append(count);
-  card.append(medal,copy);root.append(card);
- });
-}
 function render(){for(const b of $('categories').children)b.setAttribute('aria-pressed',String(b.dataset.key===category));for(const b of $('periods').children)b.setAttribute('aria-pressed',String(b.dataset.key===period));$('heading').textContent=cats.find(x=>x[0]===category)[1]+' · '+periodNames[period];high();fans();$('metrics').replaceChildren();$('ranks').replaceChildren();const g=data.groups.find(x=>x.key===category),r=g?.periods?.[period];$('empty').hidden=!!r;$('placement').hidden=!r;
 $('scope').textContent=period==='total'?'统计口径：东风＋半庄，按累计次数合并。':'统计口径：'+(period==='east'?'东风':'半庄')+'累计数据。';if(g?.otherModes?.length)$('scope').textContent+=' 此分类还含特殊规则，未纳入东／南合计。';
 if(!r){$('empty').textContent=g?.available?'服务器未返回此模式的统计，暂不推断为零场。':'此分类尚无服务器统计返回。';return;}
@@ -98,5 +75,5 @@ records.forEach(h=>{const card=el('div',undefined,'card');card.append(el('p','�
 if((h.melds||[]).length){card.append(el('p','副露 / 杠','note'));const row=el('div',undefined,'mj-melds');h.melds.forEach(raw=>{const meld=parseMeld(raw),group=el('div',undefined,'mj-group');group.title=meld.type==='angang'?'暗杠':'副露';meld.cards.forEach(t=>group.append(tile(t)));row.append(group);});card.append(row);}
 if(h.winningTile){const win=el('div',undefined,'mj-win');win.append(el('span','和牌','note'),tile(h.winningTile));card.append(win);}
 if([...(h.hand||[]),...(h.melds||[]),h.winningTile||''].some(t=>String(t).includes('bd')))card.append(el('p','含万能牌 · 番数保留游戏结算结果','note'));root.append(card);});}
-(async()=>{try{const r=await fetch('../data/majsoul.json',{cache:'no-store'});if(!r.ok)throw Error('数据读取失败');data=await r.json();if(data.schema!==3)throw Error('请运行新版 OPEN_MAJSOUL.cmd，再运行 RUN_SYNC.cmd 更新累计统计。');data.groups??=[];data.highlights??=[];data.achievements??=null;const dt=data.updatedAt?new Date(data.updatedAt).toLocaleString('zh-CN',{timeZone:'Asia/Shanghai'}):'尚未采集';$('profile').textContent=`${data.nickname} · ID ${data.friendId} · 三麻 ${data.levels?.three||'待采集'} / 四麻 ${data.levels?.four||'待采集'}`;$('status').textContent=`${data.status} · 更新时间（北京时间）：${dt}`;renderAchievements();tabs();achievements();render();high();}catch(e){$('profile').textContent='累计统计尚未就绪';$('status').textContent=e.message;$('placement').hidden=true;}})();
+(async()=>{try{const r=await fetch('../data/majsoul.json',{cache:'no-store'});if(!r.ok)throw Error('数据读取失败');data=await r.json();if(data.schema!==3)throw Error('请运行新版 OPEN_MAJSOUL.cmd，再运行 RUN_SYNC.cmd 更新累计统计。');data.groups??=[];data.highlights??=[];data.achievements??=null;const dt=data.updatedAt?new Date(data.updatedAt).toLocaleString('zh-CN',{timeZone:'Asia/Shanghai'}):'尚未采集';$('profile').textContent=`${data.nickname} · ID ${data.friendId} · 三麻 ${data.levels?.three||'待采集'} / 四麻 ${data.levels?.four||'待采集'}`;$('status').textContent=`${data.status} · 更新时间（北京时间）：${dt}`;tabs();achievements();render();high();}catch(e){$('profile').textContent='累计统计尚未就绪';$('status').textContent=e.message;$('placement').hidden=true;}})();
 })();

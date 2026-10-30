@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
     "build":  "v1.20.4",
-    "generatedAt":  "2026-10-30T01:38:20.5101745+08:00",
+    "generatedAt":  "2026-10-30T14:05:47.7261871+08:00",
     "eaId":  "PIANOYMKF",
     "platform":  "pc",
     "source":  {
@@ -14,7 +14,7 @@
                               "key":  "bf1",
                               "title":  "Battlefield 1",
                               "status":  "ok",
-                              "updatedAt":  "2026-10-30T01:38:20.5101745+08:00",
+                              "updatedAt":  "2026-10-30T14:05:47.7261871+08:00",
                               "endpoint":  "https://api.gametools.network/bf1/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "PIANOYMKF",
@@ -3685,6 +3685,16 @@
                                                           "id":  1007369860725,
                                                           "classes":  [
                                                                           {
+                                                                              "className":  "Assault",
+                                                                              "score":  108974,
+                                                                              "kills":  192,
+                                                                              "kpm":  0.52,
+                                                                              "image":  "https://cdn.gametools.network/classes/bf1/white/Assault.png",
+                                                                              "altImage":  "https://cdn.gametools.network/classes/bf1/black/Assault.png",
+                                                                              "timePlayed":  "6:07:37.500000",
+                                                                              "secondsPlayed":  22057
+                                                                          },
+                                                                          {
                                                                               "className":  "Support",
                                                                               "score":  596579,
                                                                               "kills":  487,
@@ -3695,14 +3705,14 @@
                                                                               "secondsPlayed":  91634
                                                                           },
                                                                           {
-                                                                              "className":  "Assault",
-                                                                              "score":  108684,
-                                                                              "kills":  192,
-                                                                              "kpm":  0.53,
-                                                                              "image":  "https://cdn.gametools.network/classes/bf1/white/Assault.png",
-                                                                              "altImage":  "https://cdn.gametools.network/classes/bf1/black/Assault.png",
-                                                                              "timePlayed":  "6:05:17.800000",
-                                                                              "secondsPlayed":  21917
+                                                                              "className":  "Scout",
+                                                                              "score":  247943,
+                                                                              "kills":  413,
+                                                                              "kpm":  0.51,
+                                                                              "image":  "https://cdn.gametools.network/classes/bf1/white/Scout.png",
+                                                                              "altImage":  "https://cdn.gametools.network/classes/bf1/black/Scout.png",
+                                                                              "timePlayed":  "13:35:12.500000",
+                                                                              "secondsPlayed":  48912
                                                                           },
                                                                           {
                                                                               "className":  "Medic",
@@ -3713,26 +3723,6 @@
                                                                               "altImage":  "https://cdn.gametools.network/classes/bf1/black/Medic.png",
                                                                               "timePlayed":  "1:43:40.690000",
                                                                               "secondsPlayed":  6220
-                                                                          },
-                                                                          {
-                                                                              "className":  "Scout",
-                                                                              "score":  247168,
-                                                                              "kills":  411,
-                                                                              "kpm":  0.51,
-                                                                              "image":  "https://cdn.gametools.network/classes/bf1/white/Scout.png",
-                                                                              "altImage":  "https://cdn.gametools.network/classes/bf1/black/Scout.png",
-                                                                              "timePlayed":  "13:32:26.600000",
-                                                                              "secondsPlayed":  48746
-                                                                          },
-                                                                          {
-                                                                              "className":  "Tanker",
-                                                                              "score":  116625,
-                                                                              "kills":  10,
-                                                                              "kpm":  0.04,
-                                                                              "image":  "https://cdn.gametools.network/classes/bf1/white/Tanker.png",
-                                                                              "altImage":  "https://cdn.gametools.network/classes/bf1/black/Tanker.png",
-                                                                              "timePlayed":  "4:05:29",
-                                                                              "secondsPlayed":  14729
                                                                           },
                                                                           {
                                                                               "className":  "Cavalry",
@@ -3746,13 +3736,23 @@
                                                                           },
                                                                           {
                                                                               "className":  "Pilot",
-                                                                              "score":  76354,
-                                                                              "kills":  10,
+                                                                              "score":  81953,
+                                                                              "kills":  12,
                                                                               "kpm":  0.03,
                                                                               "image":  "https://cdn.gametools.network/classes/bf1/white/Pilot.png",
                                                                               "altImage":  "https://cdn.gametools.network/classes/bf1/black/Pilot.png",
-                                                                              "timePlayed":  "5:28:27.500000",
-                                                                              "secondsPlayed":  19707
+                                                                              "timePlayed":  "5:50:37.900000",
+                                                                              "secondsPlayed":  21037
+                                                                          },
+                                                                          {
+                                                                              "className":  "Tanker",
+                                                                              "score":  123170,
+                                                                              "kills":  11,
+                                                                              "kpm":  0.04,
+                                                                              "image":  "https://cdn.gametools.network/classes/bf1/white/Tanker.png",
+                                                                              "altImage":  "https://cdn.gametools.network/classes/bf1/black/Tanker.png",
+                                                                              "timePlayed":  "4:43:38",
+                                                                              "secondsPlayed":  17018
                                                                           }
                                                                       ]
                                                       },
@@ -4174,10 +4174,17 @@
                                                                                   "winPercent":  0.0
                                                                               },
                                                                               {
+                                                                                  "gamemodeName":  "Operations",
+                                                                                  "wins":  27,
+                                                                                  "losses":  33,
+                                                                                  "score":  66650,
+                                                                                  "winPercent":  45.0
+                                                                              },
+                                                                              {
                                                                                   "gamemodeName":  "Shock operations",
                                                                                   "wins":  27,
                                                                                   "losses":  33,
-                                                                                  "score":  66500,
+                                                                                  "score":  66650,
                                                                                   "winPercent":  45.0
                                                                               },
                                                                               {
@@ -4207,13 +4214,6 @@
                                                                                   "losses":  0,
                                                                                   "score":  0,
                                                                                   "winPercent":  0.0
-                                                                              },
-                                                                              {
-                                                                                  "gamemodeName":  "Operations",
-                                                                                  "wins":  27,
-                                                                                  "losses":  33,
-                                                                                  "score":  66500,
-                                                                                  "winPercent":  45.0
                                                                               },
                                                                               {
                                                                                   "gamemodeName":  "Rush",
@@ -8284,7 +8284,7 @@
                                       },
                               "error":  null,
                               "dataQuality":  "online",
-                              "playniteSeconds":  359040,
+                              "playniteSeconds":  363525,
                               "playniteName":  "Battlefield 1",
                               "playniteId":  "901a387c-5431-4985-89b3-128142b21167"
                           },
@@ -8292,7 +8292,7 @@
                               "key":  "bfv",
                               "title":  "Battlefield V",
                               "status":  "ok",
-                              "updatedAt":  "2026-10-30T01:38:20.5101745+08:00",
+                              "updatedAt":  "2026-10-30T14:05:47.7261871+08:00",
                               "endpoint":  "https://api.gametools.network/bfv/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "PIANOYMKF",
@@ -8488,7 +8488,7 @@
                                                                               "hitVKills":  0.0
                                                                           },
                                                                           {
-                                                                              "weaponName":  "Panzerb眉chse 39",
+                                                                              "weaponName":  "PanzerbÃ¼chse 39",
                                                                               "type":  "Anti-materiel rifle",
                                                                               "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Casablanca/86/77/Panzerbuchse_39-aab3bc76.png",
                                                                               "timeEquipped":  0,
@@ -9636,7 +9636,7 @@
                                                                               "hitVKills":  0.0
                                                                           },
                                                                           {
-                                                                              "weaponName":  "Sj枚gren Shotgun",
+                                                                              "weaponName":  "SjÃ¶gren Shotgun",
                                                                               "type":  "Shotgun",
                                                                               "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Casablanca/67/49/SjogrenShotgun-43cfe31f.png",
                                                                               "timeEquipped":  0,
@@ -9832,7 +9832,7 @@
                                                                               "hitVKills":  0.0
                                                                           },
                                                                           {
-                                                                              "weaponName":  "Krag鈥揓酶rgensen",
+                                                                              "weaponName":  "KragâJÃ¸rgensen",
                                                                               "type":  "Bolt action rifle",
                                                                               "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Casablanca/48/119/KragJorgensen-30895eb5.png",
                                                                               "timeEquipped":  235,
@@ -12576,7 +12576,7 @@
                                  "key":  "bf2042",
                                  "title":  "Battlefield 2042",
                                  "status":  "upstream_broken",
-                                 "updatedAt":  "2026-10-30T01:38:20.5101745+08:00",
+                                 "updatedAt":  "2026-10-30T14:05:47.7261871+08:00",
                                  "endpoint":  "https://api.gametools.network/bf2042/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                                  "profile":  null,
                                  "trueSessions":  [
@@ -18931,7 +18931,7 @@
                               "key":  "bf6",
                               "title":  "Battlefield 6",
                               "status":  "ok",
-                              "updatedAt":  "2026-10-30T01:38:20.5101745+08:00",
+                              "updatedAt":  "2026-10-30T14:05:47.7261871+08:00",
                               "endpoint":  "https://api.gametools.network/bf6/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "pianoymkf",
@@ -23480,6 +23480,6 @@
                               "playniteId":  "755257c8-8508-4fd1-9bfd-8be1de672318"
                           }
               },
-    "playniteTotalSeconds":  970680,
-    "playniteCapturedAt":  "2026-10-30T01:40:33.1996773+08:00"
+    "playniteTotalSeconds":  975165,
+    "playniteCapturedAt":  "2026-10-30T14:08:02.8800740+08:00"
 }

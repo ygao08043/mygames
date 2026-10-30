@@ -2,8 +2,8 @@
     "schema":  3,
     "friendId":  "68287780",
     "nickname":  "PIANOYMKF",
-    "updatedAt":  "2026-10-29T17:33:39.835Z",
-    "status":  "使用最近采集的累计统计",
+    "updatedAt":  "2026-10-30T04:45:32.159Z",
+    "status":  "本次未刷新，保留上次累计统计",
     "levels":  {
                    "three":  "雀士 1 星",
                    "four":  "雀士 1 星"
@@ -55,7 +55,7 @@
                                                         {
                                                             "id":  7,
                                                             "name":  "役牌 白",
-                                                            "count":  257,
+                                                            "count":  258,
                                                             "ancient":  false
                                                         },
                                                         {
@@ -67,25 +67,25 @@
                                                         {
                                                             "id":  9,
                                                             "name":  "役牌 中",
-                                                            "count":  258,
+                                                            "count":  259,
                                                             "ancient":  false
                                                         },
                                                         {
                                                             "id":  10,
                                                             "name":  "役牌:门风牌",
-                                                            "count":  310,
+                                                            "count":  312,
                                                             "ancient":  false
                                                         },
                                                         {
                                                             "id":  11,
                                                             "name":  "役牌:场风牌",
-                                                            "count":  290,
+                                                            "count":  293,
                                                             "ancient":  false
                                                         },
                                                         {
                                                             "id":  12,
                                                             "name":  "断幺九",
-                                                            "count":  292,
+                                                            "count":  293,
                                                             "ancient":  false
                                                         },
                                                         {
@@ -133,7 +133,7 @@
                                                         {
                                                             "id":  21,
                                                             "name":  "对对和",
-                                                            "count":  268,
+                                                            "count":  270,
                                                             "ancient":  false
                                                         },
                                                         {
@@ -169,7 +169,7 @@
                                                         {
                                                             "id":  27,
                                                             "name":  "混一色",
-                                                            "count":  558,
+                                                            "count":  561,
                                                             "ancient":  false
                                                         },
                                                         {
@@ -193,13 +193,13 @@
                                                         {
                                                             "id":  31,
                                                             "name":  "宝牌",
-                                                            "count":  1798,
+                                                            "count":  1806,
                                                             "ancient":  false
                                                         },
                                                         {
                                                             "id":  32,
                                                             "name":  "红宝牌",
-                                                            "count":  824,
+                                                            "count":  825,
                                                             "ancient":  false
                                                         },
                                                         {
@@ -211,7 +211,7 @@
                                                         {
                                                             "id":  34,
                                                             "name":  "拔北宝牌",
-                                                            "count":  1819,
+                                                            "count":  1827,
                                                             "ancient":  false
                                                         },
                                                         {
@@ -313,26 +313,26 @@
                        "available":  true,
                        "periods":  {
                                        "total":  {
-                                                     "games":  1202,
+                                                     "games":  1205,
                                                      "positions":  [
-                                                                       342,
-                                                                       415,
+                                                                       344,
+                                                                       416,
                                                                        445
                                                                    ],
-                                                     "rounds":  8510,
+                                                     "rounds":  8529,
                                                      "fly":  200,
-                                                     "calls":  4229,
+                                                     "calls":  4246,
                                                      "riichi":  1361,
                                                      "highestDealer":  6,
                                                      "outcomesKnown":  true,
                                                      "draws":  990,
-                                                     "sideways":  1632,
-                                                     "selfDraws":  798,
-                                                     "ron":  1406,
-                                                     "dealIns":  1772,
-                                                     "opponentSelfDraws":  1912,
-                                                     "winPoints":  22305600,
-                                                     "winTurns":  27885
+                                                     "sideways":  1637,
+                                                     "selfDraws":  801,
+                                                     "ron":  1411,
+                                                     "dealIns":  1775,
+                                                     "opponentSelfDraws":  1915,
+                                                     "winPoints":  22372600,
+                                                     "winTurns":  27987
                                                  },
                                        "east":  {
                                                     "games":  225,
@@ -357,26 +357,26 @@
                                                     "winTurns":  3451
                                                 },
                                        "south":  {
-                                                     "games":  977,
+                                                     "games":  980,
                                                      "positions":  [
-                                                                       264,
-                                                                       335,
+                                                                       266,
+                                                                       336,
                                                                        378
                                                                    ],
-                                                     "rounds":  7530,
+                                                     "rounds":  7549,
                                                      "fly":  186,
-                                                     "calls":  3748,
+                                                     "calls":  3765,
                                                      "riichi":  1197,
                                                      "highestDealer":  6,
                                                      "outcomesKnown":  true,
                                                      "draws":  854,
-                                                     "sideways":  1438,
-                                                     "selfDraws":  705,
-                                                     "ron":  1235,
-                                                     "dealIns":  1586,
-                                                     "opponentSelfDraws":  1712,
-                                                     "winPoints":  19572000,
-                                                     "winTurns":  24434
+                                                     "sideways":  1443,
+                                                     "selfDraws":  708,
+                                                     "ron":  1240,
+                                                     "dealIns":  1589,
+                                                     "opponentSelfDraws":  1715,
+                                                     "winPoints":  19639000,
+                                                     "winTurns":  24536
                                                  }
                                    },
                        "otherModes":  [
