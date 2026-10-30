@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
     "build":  "v1.20.4",
-    "generatedAt":  "2026-10-30T16:02:54.9296862+08:00",
+    "generatedAt":  "2026-10-30T19:14:52.2638017+08:00",
     "eaId":  "PIANOYMKF",
     "platform":  "pc",
     "source":  {
@@ -14,7 +14,7 @@
                               "key":  "bf1",
                               "title":  "Battlefield 1",
                               "status":  "ok",
-                              "updatedAt":  "2026-10-30T16:02:54.9296862+08:00",
+                              "updatedAt":  "2026-10-30T19:14:52.2638017+08:00",
                               "endpoint":  "https://api.gametools.network/bf1/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "PIANOYMKF",
@@ -3787,10 +3787,10 @@
                                                                                 "vehicleName":  "Mark v landship",
                                                                                 "type":  "Landship",
                                                                                 "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/65/59/GBRMarkV-bf3b1d1a.png",
-                                                                                "kills":  54,
-                                                                                "killsPerMinute":  0.31,
+                                                                                "kills":  76,
+                                                                                "killsPerMinute":  0.36,
                                                                                 "destroyed":  8,
-                                                                                "timeIn":  10545
+                                                                                "timeIn":  12605
                                                                             },
                                                                             {
                                                                                 "vehicleName":  "Ft-17 light tank",
@@ -3814,19 +3814,19 @@
                                                                                 "vehicleName":  "St chamond",
                                                                                 "type":  "Assault tank",
                                                                                 "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/49/35/FRAStChamond-3123e0cd.png",
-                                                                                "kills":  12,
-                                                                                "killsPerMinute":  0.27,
+                                                                                "kills":  13,
+                                                                                "killsPerMinute":  0.28,
                                                                                 "destroyed":  0,
-                                                                                "timeIn":  2629
+                                                                                "timeIn":  2795
                                                                             },
                                                                             {
                                                                                 "vehicleName":  "Putilov garford",
                                                                                 "type":  "Assault truck",
                                                                                 "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/32/92/PutilovGarford-20a4fd91.png",
                                                                                 "kills":  3,
-                                                                                "killsPerMinute":  0.17,
+                                                                                "killsPerMinute":  0.16,
                                                                                 "destroyed":  0,
-                                                                                "timeIn":  1043
+                                                                                "timeIn":  1099
                                                                             },
                                                                             {
                                                                                 "vehicleName":  "Halberstadt cl. ii attack plane",
@@ -3841,10 +3841,10 @@
                                                                                 "vehicleName":  "Bristol f2.b attack plane",
                                                                                 "type":  "Attack plane",
                                                                                 "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/20/27/GBRBristolF2B-141b8daa.png",
-                                                                                "kills":  10,
-                                                                                "killsPerMinute":  0.14,
+                                                                                "kills":  14,
+                                                                                "killsPerMinute":  0.18,
                                                                                 "destroyed":  2,
-                                                                                "timeIn":  4333
+                                                                                "timeIn":  4559
                                                                             },
                                                                             {
                                                                                 "vehicleName":  "A.e.f 2-a2 attack plane",
@@ -3859,10 +3859,10 @@
                                                                                 "vehicleName":  "Rumpler c.i attack plane",
                                                                                 "type":  "Attack plane",
                                                                                 "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/21/69/AHU_Rumpler_CI-eb45a6be.png",
-                                                                                "kills":  27,
-                                                                                "killsPerMinute":  0.28,
-                                                                                "destroyed":  3,
-                                                                                "timeIn":  5694
+                                                                                "kills":  31,
+                                                                                "killsPerMinute":  0.29,
+                                                                                "destroyed":  4,
+                                                                                "timeIn":  6488
                                                                             },
                                                                             {
                                                                                 "vehicleName":  "Gotha g.iv bomber",
@@ -3895,10 +3895,10 @@
                                                                                 "vehicleName":  "Hansa-brandenburg g.i",
                                                                                 "type":  "Bomber",
                                                                                 "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/4/47/AHU_Hansa_Brandenburg_GI-042fc3dc.png",
-                                                                                "kills":  1,
-                                                                                "killsPerMinute":  0.07,
-                                                                                "destroyed":  0,
-                                                                                "timeIn":  860
+                                                                                "kills":  3,
+                                                                                "killsPerMinute":  0.17,
+                                                                                "destroyed":  1,
+                                                                                "timeIn":  1039
                                                                             },
                                                                             {
                                                                                 "vehicleName":  "Spad s xiii fighter",
@@ -3934,7 +3934,7 @@
                                                                                 "kills":  0,
                                                                                 "killsPerMinute":  0.0,
                                                                                 "destroyed":  0,
-                                                                                "timeIn":  83
+                                                                                "timeIn":  123
                                                                             },
                                                                             {
                                                                                 "vehicleName":  "Ilya muromets",
@@ -3943,7 +3943,7 @@
                                                                                 "kills":  4,
                                                                                 "killsPerMinute":  0.13,
                                                                                 "destroyed":  2,
-                                                                                "timeIn":  1818
+                                                                                "timeIn":  1828
                                                                             },
                                                                             {
                                                                                 "vehicleName":  "C-class airship",
@@ -4067,9 +4067,9 @@
                                                                                 "type":  "Stationary weapon",
                                                                                 "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/118/13/GERFk96nA-760d0461.png",
                                                                                 "kills":  9,
-                                                                                "killsPerMinute":  0.46,
+                                                                                "killsPerMinute":  0.45,
                                                                                 "destroyed":  1,
-                                                                                "timeIn":  1165
+                                                                                "timeIn":  1202
                                                                             },
                                                                             {
                                                                                 "vehicleName":  "Fortress gun",
@@ -8304,7 +8304,7 @@
                               "key":  "bfv",
                               "title":  "Battlefield V",
                               "status":  "ok",
-                              "updatedAt":  "2026-10-30T16:02:54.9296862+08:00",
+                              "updatedAt":  "2026-10-30T19:14:52.2638017+08:00",
                               "endpoint":  "https://api.gametools.network/bfv/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "PIANOYMKF",
@@ -12588,7 +12588,7 @@
                                  "key":  "bf2042",
                                  "title":  "Battlefield 2042",
                                  "status":  "upstream_broken",
-                                 "updatedAt":  "2026-10-30T16:02:54.9296862+08:00",
+                                 "updatedAt":  "2026-10-30T19:14:52.2638017+08:00",
                                  "endpoint":  "https://api.gametools.network/bf2042/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                                  "profile":  null,
                                  "trueSessions":  [
@@ -18943,7 +18943,7 @@
                               "key":  "bf6",
                               "title":  "Battlefield 6",
                               "status":  "ok",
-                              "updatedAt":  "2026-10-30T16:02:54.9296862+08:00",
+                              "updatedAt":  "2026-10-30T19:14:52.2638017+08:00",
                               "endpoint":  "https://api.gametools.network/bf6/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "pianoymkf",
@@ -23493,5 +23493,5 @@
                           }
               },
     "playniteTotalSeconds":  975165,
-    "playniteCapturedAt":  "2026-10-30T16:05:16.7061289+08:00"
+    "playniteCapturedAt":  "2026-10-30T19:17:07.3850256+08:00"
 }

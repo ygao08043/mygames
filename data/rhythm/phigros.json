@@ -1,17 +1,18 @@
 {
-    "version":  "1.20.3",
-    "generatedAt":  "2026-10-30T16:02:37.8330196+08:00",
+    "version":  "1.20.5",
+    "generatedAt":  "2026-10-30T19:14:39.9120587+08:00",
     "source":  {
                    "type":  "Phigros TapTap cloud save",
                    "saveUpdatedAt":  "2026-10-27T17:54:56.679Z",
                    "metadata":  "SonolusHaniwa/phigros-decrypted-data metadata.json",
                    "metadataSongs":  326,
-                   "missingMetadata":  2
+                   "missingMetadata":  11,
+                   "missingConstants":  0
                },
     "profile":  {
                     "nickname":  "YMKF",
                     "rks":  15.76965904,
-                    "calculatedRks":  15.76966005,
+                    "calculatedRks":  15.71206844,
                     "cloudSummaryRks":  15.76965904,
                     "rksMode":  "cloud-summary-fallback",
                     "phiCount":  32,
@@ -21,20 +22,6 @@
                     "challengeCode":  251
                 },
     "phi3":  [
-                 {
-                     "songId":  "AnotherMe.DAAN.0",
-                     "title":  "Another Me",
-                     "composer":  "D_AAN",
-                     "difficulty":  "IN",
-                     "difficultyIndex":  2,
-                     "constant":  15.6,
-                     "score":  1000000,
-                     "accuracy":  100,
-                     "rks":  15.6,
-                     "status":  "Phi",
-                     "isFc":  true,
-                     "charter":  "NerSAN vs. Ctymax as \"泥头鱼\""
-                 },
                  {
                      "songId":  "蝎虎天体Lacertid.CreamvsDaily天利.0",
                      "title":  "蝎虎天体 -Lacertid-",
@@ -62,6 +49,20 @@
                      "status":  "Phi",
                      "isFc":  true,
                      "charter":  "光る星"
+                 },
+                 {
+                     "songId":  "HAZARD.Limpid.0",
+                     "title":  "HAZARD",
+                     "composer":  "Limpid",
+                     "difficulty":  "IN",
+                     "difficultyIndex":  2,
+                     "constant":  14.8,
+                     "score":  1000000,
+                     "accuracy":  100,
+                     "rks":  14.8,
+                     "status":  "Phi",
+                     "isFc":  true,
+                     "charter":  "阿爽"
                  }
              ],
     "best27":  [
@@ -220,20 +221,6 @@
                        "charter":  "{Destruction}"
                    },
                    {
-                       "songId":  "Poseidon.1112vsStar.0",
-                       "title":  "Ποσειδών",
-                       "composer":  "1112 vs. Star＊",
-                       "difficulty":  "AT",
-                       "difficultyIndex":  3,
-                       "constant":  16.2,
-                       "score":  960717,
-                       "accuracy":  99.499176,
-                       "rks":  15.84141334,
-                       "status":  "V",
-                       "isFc":  false,
-                       "charter":  "上班摸大鱼 a.k.a. 海洋咩兔"
-                   },
-                   {
                        "songId":  "玩具狂奏曲終焉.きくお.0",
                        "title":  "玩具狂奏曲 -終焉-",
                        "composer":  "きくお",
@@ -316,20 +303,6 @@
                        "status":  "S",
                        "isFc":  false,
                        "charter":  "Ctymax vs. 阿爽"
-                   },
-                   {
-                       "songId":  "AnotherMe.DAAN.0",
-                       "title":  "Another Me",
-                       "composer":  "D_AAN",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  15.6,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  15.6,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "NerSAN vs. Ctymax as \"泥头鱼\""
                    },
                    {
                        "songId":  "BANGINGSTRIKE.DewPleiades.0",
@@ -442,6 +415,34 @@
                        "status":  "V",
                        "isFc":  false,
                        "charter":  "Su1fuR"
+                   },
+                   {
+                       "songId":  "Aleph0.LeaF.0",
+                       "title":  "Aleph-0",
+                       "composer":  "LeaF",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  16,
+                       "score":  952300,
+                       "accuracy":  98.943504,
+                       "rks":  15.25753342,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  "Clutter"
+                   },
+                   {
+                       "songId":  "CROSSSOUL.HyuNfeatSyepias.0",
+                       "title":  "CROSS†SOUL",
+                       "composer":  "HyuN feat. Syepias",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  16.4,
+                       "score":  950832,
+                       "accuracy":  98.402306,
+                       "rks":  15.25613144,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  "無†極"
                    }
                ],
     "scores":  [
@@ -600,20 +601,6 @@
                        "charter":  "{Destruction}"
                    },
                    {
-                       "songId":  "Poseidon.1112vsStar.0",
-                       "title":  "Ποσειδών",
-                       "composer":  "1112 vs. Star＊",
-                       "difficulty":  "AT",
-                       "difficultyIndex":  3,
-                       "constant":  16.2,
-                       "score":  960717,
-                       "accuracy":  99.499176,
-                       "rks":  15.84141334,
-                       "status":  "V",
-                       "isFc":  false,
-                       "charter":  "上班摸大鱼 a.k.a. 海洋咩兔"
-                   },
-                   {
                        "songId":  "玩具狂奏曲終焉.きくお.0",
                        "title":  "玩具狂奏曲 -終焉-",
                        "composer":  "きくお",
@@ -696,20 +683,6 @@
                        "status":  "S",
                        "isFc":  false,
                        "charter":  "Ctymax vs. 阿爽"
-                   },
-                   {
-                       "songId":  "AnotherMe.DAAN.0",
-                       "title":  "Another Me",
-                       "composer":  "D_AAN",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  15.6,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  15.6,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "NerSAN vs. Ctymax as \"泥头鱼\""
                    },
                    {
                        "songId":  "BANGINGSTRIKE.DewPleiades.0",
@@ -976,20 +949,6 @@
                        "status":  "S",
                        "isFc":  false,
                        "charter":  "198 in Kowloon"
-                   },
-                   {
-                       "songId":  "Verruckt.Raimukun.0",
-                       "title":  "Verrückt",
-                       "composer":  "Raimukun",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  16.5,
-                       "score":  925911,
-                       "accuracy":  97.863815,
-                       "rks":  14.97064688,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "Salt"
                    },
                    {
                        "songId":  "雪降りメリクリ.A39.0",
@@ -1326,6 +1285,20 @@
                        "status":  "V",
                        "isFc":  false,
                        "charter":  ""
+                   },
+                   {
+                       "songId":  "LeaveAllBehind.rider.0",
+                       "title":  "Leave All Behind",
+                       "composer":  "rider",
+                       "difficulty":  "AT",
+                       "difficultyIndex":  3,
+                       "constant":  15,
+                       "score":  974140,
+                       "accuracy":  99.313126,
+                       "rks":  14.54557853,
+                       "status":  "V",
+                       "isFc":  false,
+                       "charter":  "WinterPT \u0026 Rikko"
                    },
                    {
                        "songId":  "Nhelv.Silentroom.0",
@@ -1748,20 +1721,6 @@
                        "charter":  "Su1fuR、快斬！"
                    },
                    {
-                       "songId":  "君往何处QuoVadis.M2U.0",
-                       "title":  "君往何处 (Quo Vadis)",
-                       "composer":  "M2U",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  14.1,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  14.1,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "Salt"
-                   },
-                   {
                        "songId":  "Elúltimobaile.Θ.0",
                        "title":  "El último baile",
                        "composer":  "Θ",
@@ -1774,6 +1733,20 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "百九十八 feat. Likey"
+                   },
+                   {
+                       "songId":  "君往何处QuoVadis.M2U.0",
+                       "title":  "君往何处 (Quo Vadis)",
+                       "composer":  "M2U",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  14.1,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  14.1,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "Salt"
                    },
                    {
                        "songId":  "夢の降る日に.seatrus.0",
@@ -2012,20 +1985,6 @@
                        "status":  "A",
                        "isFc":  false,
                        "charter":  "逆天使の悪魔 【Likey】"
-                   },
-                   {
-                       "songId":  "彩.MisoilePunch.0",
-                       "title":  "彩",
-                       "composer":  "MisoilePunch♪",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  16.4,
-                       "score":  892158,
-                       "accuracy":  96.480186,
-                       "rks":  13.93478333,
-                       "status":  "A",
-                       "isFc":  false,
-                       "charter":  "OPCII_0584_X"
                    },
                    {
                        "songId":  "PRAGMATISMRESURRECTION.Laur.0",
@@ -2350,20 +2309,6 @@
                        "charter":  "Hara小兔组"
                    },
                    {
-                       "songId":  "Cuvism.Fl00tvsHalv.0",
-                       "title":  "Cuvism³",
-                       "composer":  "Fl00t vs Halv",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  13.9,
-                       "score":  985259,
-                       "accuracy":  99.590363,
-                       "rks":  13.64808692,
-                       "status":  "V",
-                       "isFc":  false,
-                       "charter":  "Rikko"
-                   },
-                   {
                        "songId":  "ERABYECONNEC10N.かめりあ.0",
                        "title":  "+ERABY+E CONNEC+10N",
                        "composer":  "かめりあ",
@@ -2406,20 +2351,6 @@
                        "charter":  "NerSAN vs. 阿爽 『Collapse』"
                    },
                    {
-                       "songId":  "TimetoNightSkyfeatLeeYuJin.HyuNKLYDIX.0",
-                       "title":  "Time to Night Sky (feat. Lee Yu Jin)",
-                       "composer":  "HyuN \u0026 KLYDIX",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  13.6,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  13.6,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "Likey \u0026 198ar"
-                   },
-                   {
                        "songId":  "cryout.JuE.0",
                        "title":  "cryout",
                        "composer":  "Ju_E",
@@ -2434,9 +2365,9 @@
                        "charter":  "Ctymax but 5 years later"
                    },
                    {
-                       "songId":  "AnotherMe.NeutralMoon.0",
-                       "title":  "Another Me",
-                       "composer":  "Neutral Moon",
+                       "songId":  "TimetoNightSkyfeatLeeYuJin.HyuNKLYDIX.0",
+                       "title":  "Time to Night Sky (feat. Lee Yu Jin)",
+                       "composer":  "HyuN \u0026 KLYDIX",
                        "difficulty":  "IN",
                        "difficultyIndex":  2,
                        "constant":  13.6,
@@ -2445,7 +2376,7 @@
                        "rks":  13.6,
                        "status":  "Phi",
                        "isFc":  true,
-                       "charter":  "NerSAN"
+                       "charter":  "Likey \u0026 198ar"
                    },
                    {
                        "songId":  "TheWholeRest.KIVΛ.0",
@@ -2754,20 +2685,6 @@
                        "status":  "FC",
                        "isFc":  true,
                        "charter":  "鲲\u0026百九十八"
-                   },
-                   {
-                       "songId":  "slips.rintarosoma.0",
-                       "title":  "sølips",
-                       "composer":  "rintaro soma",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  16,
-                       "score":  877274,
-                       "accuracy":  95.82003,
-                       "rks":  13.16562858,
-                       "status":  "B",
-                       "isFc":  false,
-                       "charter":  "St2.1GHz -Før The Pigeons-"
                    },
                    {
                        "songId":  "Resolver.Gomadare.0",
@@ -3190,20 +3107,6 @@
                        "charter":  "Ary"
                    },
                    {
-                       "songId":  "Poseidon.1112vsStar.0",
-                       "title":  "Ποσειδών",
-                       "composer":  "1112 vs. Star＊",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  12.8,
-                       "score":  943711,
-                       "accuracy":  99.399994,
-                       "rks":  12.4609388,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "Jαckψ feat. Βαρβαροςαντρας"
-                   },
-                   {
                        "songId":  "BoundedQuietude.FiniteLimitvsSiLiS.0",
                        "title":  "Bounded Quietude",
                        "composer":  "Finite Limit vs SiLiS",
@@ -3272,20 +3175,6 @@
                        "status":  "B",
                        "isFc":  false,
                        "charter":  "□MT in a XXXXXXXX"
-                   },
-                   {
-                       "songId":  "NYA.FLuoRiTe姜米條.0",
-                       "title":  "NYA!!! (Phigros ver.)",
-                       "composer":  "FLuoRiTe/姜米條",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  13.1,
-                       "score":  988176,
-                       "accuracy":  98.686188,
-                       "rks":  12.3462357,
-                       "status":  "FC",
-                       "isFc":  true,
-                       "charter":  "HCC!!!"
                    },
                    {
                        "songId":  "Shadow.SumaiLightvs姜米條.0",
@@ -3370,20 +3259,6 @@
                        "status":  "FC",
                        "isFc":  true,
                        "charter":  "平川の剣『士』"
-                   },
-                   {
-                       "songId":  "光.姜米條.0",
-                       "title":  "光",
-                       "composer":  "姜米條",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  12.4,
-                       "score":  955426,
-                       "accuracy":  99.410065,
-                       "rks":  12.07701121,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "Catcats \u0026 百九十八"
                    },
                    {
                        "songId":  "SultanRage.MonstDeath.0",
@@ -3750,6 +3625,20 @@
                        "charter":  "Clutter"
                    },
                    {
+                       "songId":  "ハテ.rNFrums.0",
+                       "title":  "ハテ",
+                       "composer":  "rN || Frums",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  16.7,
+                       "score":  838920,
+                       "accuracy":  90.912231,
+                       "rks":  10.63594851,
+                       "status":  "B",
+                       "isFc":  false,
+                       "charter":  ""
+                   },
+                   {
                        "songId":  "ENERGYSYNERGYMATRIX.Tanchiky.0",
                        "title":  "ENERGY SYNERGY MATRIX",
                        "composer":  "Tanchiky",
@@ -3932,20 +3821,6 @@
                        "charter":  "Salt"
                    },
                    {
-                       "songId":  "AnotherMe.NeutralMoon.0",
-                       "title":  "Another Me",
-                       "composer":  "Neutral Moon",
-                       "difficulty":  "HD",
-                       "difficultyIndex":  1,
-                       "constant":  9.3,
-                       "score":  946106,
-                       "accuracy":  98.011765,
-                       "rks":  8.49635089,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "Another M3"
-                   },
-                   {
                        "songId":  "GOODRAGE.EBIMAYO.0",
                        "title":  "GOODRAGE",
                        "composer":  "EBIMAYO",
@@ -4086,6 +3961,20 @@
                        "charter":  "Likey"
                    },
                    {
+                       "songId":  "ハテ.rNFrums.0",
+                       "title":  "ハテ",
+                       "composer":  "rN || Frums",
+                       "difficulty":  "AT",
+                       "difficultyIndex":  3,
+                       "constant":  17.9,
+                       "score":  718454,
+                       "accuracy":  79.18396,
+                       "rks":  5.16990823,
+                       "status":  "C",
+                       "isFc":  false,
+                       "charter":  ""
+                   },
+                   {
                        "songId":  "Credits.Frums.0",
                        "title":  "Credits",
                        "composer":  "Frums",
@@ -4100,44 +3989,156 @@
                        "charter":  "Ctymax"
                    },
                    {
-                       "songId":  "LeaveAllBehind.rider.0",
-                       "title":  "Leave All Behind",
-                       "composer":  "rider",
-                       "difficulty":  "AT",
-                       "difficultyIndex":  3,
+                       "songId":  "AnotherMe.DAAN.0",
+                       "title":  "AnotherMe.DAAN.0",
+                       "composer":  "",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
                        "constant":  null,
-                       "score":  974140,
-                       "accuracy":  99.313126,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  null,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  ""
+                   },
+                   {
+                       "songId":  "AnotherMe.NeutralMoon.0",
+                       "title":  "AnotherMe.NeutralMoon.0",
+                       "composer":  "",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  null,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  null,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  ""
+                   },
+                   {
+                       "songId":  "NYA.FLuoRiTe姜米條.0",
+                       "title":  "NYA.FLuoRiTe姜米條.0",
+                       "composer":  "",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  null,
+                       "score":  988176,
+                       "accuracy":  98.686188,
+                       "rks":  null,
+                       "status":  "FC",
+                       "isFc":  true,
+                       "charter":  ""
+                   },
+                   {
+                       "songId":  "Cuvism.Fl00tvsHalv.0",
+                       "title":  "Cuvism.Fl00tvsHalv.0",
+                       "composer":  "",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  null,
+                       "score":  985259,
+                       "accuracy":  99.590363,
                        "rks":  null,
                        "status":  "V",
                        "isFc":  false,
                        "charter":  ""
                    },
                    {
-                       "songId":  "ハテ.rNFrums.0",
-                       "title":  "ハテ.rNFrums.0",
-                       "composer":  "",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  null,
-                       "score":  838920,
-                       "accuracy":  90.912231,
-                       "rks":  null,
-                       "status":  "B",
-                       "isFc":  false,
-                       "charter":  ""
-                   },
-                   {
-                       "songId":  "ハテ.rNFrums.0",
-                       "title":  "ハテ.rNFrums.0",
+                       "songId":  "Poseidon.1112vsStar.0",
+                       "title":  "Poseidon.1112vsStar.0",
                        "composer":  "",
                        "difficulty":  "AT",
                        "difficultyIndex":  3,
                        "constant":  null,
-                       "score":  718454,
-                       "accuracy":  79.18396,
+                       "score":  960717,
+                       "accuracy":  99.499176,
                        "rks":  null,
-                       "status":  "C",
+                       "status":  "V",
+                       "isFc":  false,
+                       "charter":  ""
+                   },
+                   {
+                       "songId":  "光.姜米條.0",
+                       "title":  "光.姜米條.0",
+                       "composer":  "",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  null,
+                       "score":  955426,
+                       "accuracy":  99.410065,
+                       "rks":  null,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  ""
+                   },
+                   {
+                       "songId":  "AnotherMe.NeutralMoon.0",
+                       "title":  "AnotherMe.NeutralMoon.0",
+                       "composer":  "",
+                       "difficulty":  "HD",
+                       "difficultyIndex":  1,
+                       "constant":  null,
+                       "score":  946106,
+                       "accuracy":  98.011765,
+                       "rks":  null,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  ""
+                   },
+                   {
+                       "songId":  "Poseidon.1112vsStar.0",
+                       "title":  "Poseidon.1112vsStar.0",
+                       "composer":  "",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  null,
+                       "score":  943711,
+                       "accuracy":  99.399994,
+                       "rks":  null,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  ""
+                   },
+                   {
+                       "songId":  "Verruckt.Raimukun.0",
+                       "title":  "Verruckt.Raimukun.0",
+                       "composer":  "",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  null,
+                       "score":  925911,
+                       "accuracy":  97.863815,
+                       "rks":  null,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  ""
+                   },
+                   {
+                       "songId":  "彩.MisoilePunch.0",
+                       "title":  "彩.MisoilePunch.0",
+                       "composer":  "",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  null,
+                       "score":  892158,
+                       "accuracy":  96.480186,
+                       "rks":  null,
+                       "status":  "A",
+                       "isFc":  false,
+                       "charter":  ""
+                   },
+                   {
+                       "songId":  "slips.rintarosoma.0",
+                       "title":  "slips.rintarosoma.0",
+                       "composer":  "",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  null,
+                       "score":  877274,
+                       "accuracy":  95.82003,
+                       "rks":  null,
+                       "status":  "B",
                        "isFc":  false,
                        "charter":  ""
                    }
