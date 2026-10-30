@@ -33,47 +33,11 @@ function tileCode(t){return String(t).trim().replace(/t$/,'');}
 function tile(t){const code=tileCode(t),frame=TILE_FRAMES[code+'.png'];const node=el('span',undefined,'mj-tile');node.setAttribute('role','img');node.setAttribute('aria-label',code==='bd'?'万能牌':code==='back'?'牌背':code);node.title=code==='bd'?'万能牌 · 番数采用游戏返回结果':code;
 if(frame){node.style.backgroundPosition=`-${frame.x/2}px -${frame.y/2}px`;}else if(code==='bd'){node.classList.add('mj-wild');}else{node.classList.add('mj-unknown');node.textContent='?';node.title='未识别的牌：'+String(t);}return node;}
 function parseMeld(raw){const value=String(raw).trim();const typed=/^([a-z_]+)\((.*)\)$/i.exec(value);let type=typed?typed[1].toLowerCase():'';let cards=typed?typed[2].split(',').map(tileCode):value.split('|').map(tileCode);if(!typed&&cards.length===1&&/^[0-9][mpsz]$/.test(cards[0])){type='angang';const t=cards[0],normal=t.replace(/^0/,'5');cards=[normal,normal[0]==='5'&&normal[1]!=='z'?'0'+normal[1]:normal,normal,normal];}if(type==='angang'&&cards.length===4){const middle=cards.filter(x=>x[0]==='0').concat(cards.filter(x=>x[0]!=='0')).slice(0,2);cards=['back',...middle,'back'];}return {type,cards};}
-function achievements(){
- const root=$('achievement-list'),status=$('achievement-status');
- if(!root||!status)return;
- root.replaceChildren();
- const a=data&&data.achievements;
- if(!a||!a.available||!Array.isArray(a.items)){
-  status.textContent='对局成就尚未采集。请运行新版 OPEN_MAJSOUL.cmd 完成采集，再运行 RUN_SYNC.cmd。';
-  return;
- }
- const items=a.items.filter(x=>{
-  if(!x||typeof x.name!=='string'||!x.name.trim())return false;
-  const n=Number(x.count);
-  return Number.isSafeInteger(n)&&n>0;
- }).sort((x,y)=>Number(y.count)-Number(x.count)||String(x.name).localeCompare(String(y.name),'zh-CN'));
- if(!items.length){
-  status.textContent='已读取成就数据，但当前没有累计次数大于 0 的已获得徽章。';
-  return;
- }
- const collected=a.collectedAt?new Date(a.collectedAt):null;
- const timeLabel=collected&&!Number.isNaN(collected.getTime())?' · 更新于 '+collected.toLocaleString('zh-CN',{timeZone:'Asia/Shanghai'}):'';
- status.textContent=`已采集 ${items.length} 项已获得的对局成就；数字表示累计次数${timeLabel}。`;
- for(const x of items){
-  const card=el('div',undefined,'achievement-item');
-  const icon=typeof x.icon==='string'&&x.icon.length>0&&x.icon.length<=8?x.icon:'🏅';
-  const medal=el('div',icon,'achievement-medal');
-  medal.setAttribute('aria-hidden','true');
-  const copy=el('div',undefined,'achievement-copy');
-  copy.append(el('div',x.name,'achievement-name'));
-  if(x.category)copy.append(el('div',x.category,'achievement-category'));
-  if(x.description)copy.append(el('div',x.description,'achievement-description'));
-  const n=Number(x.count);
-  const count=el('strong',n.toLocaleString('zh-CN'),'achievement-count');
-  count.title='累计获得次数';
-  card.append(medal,copy,count);
-  root.append(card);
- }
-}
+
 function high(){const root=$('highlights');root.replaceChildren();const records=data.highlights.filter(h=>h.key===category);if(!records.length){root.append(el('p','此分类尚未返回个人主页展示的和牌。','muted'));return;}
 records.forEach(h=>{const card=el('div',undefined,'card');card.append(el('p','游戏内个人主页展示','muted'),el('h3',h.title||'和牌记录'),el('p',`${h.fan} 番 · 宝牌 ${h.dora}`));const hand=el('div',undefined,'mj-row');(h.hand||[]).forEach(t=>hand.append(tile(t)));card.append(hand);
 if((h.melds||[]).length){card.append(el('p','副露 / 杠','note'));const row=el('div',undefined,'mj-melds');h.melds.forEach(raw=>{const meld=parseMeld(raw),group=el('div',undefined,'mj-group');group.title=meld.type==='angang'?'暗杠':'副露';meld.cards.forEach(t=>group.append(tile(t)));row.append(group);});card.append(row);}
 if(h.winningTile){const win=el('div',undefined,'mj-win');win.append(el('span','和牌','note'),tile(h.winningTile));card.append(win);}
 if([...(h.hand||[]),...(h.melds||[]),h.winningTile||''].some(t=>String(t).includes('bd')))card.append(el('p','含万能牌 · 番数保留游戏结算结果','note'));root.append(card);});}
-(async()=>{try{const r=await fetch('../data/majsoul.json',{cache:'no-store'});if(!r.ok)throw Error('数据读取失败');data=await r.json();if(data.schema!==3)throw Error('请运行新版 OPEN_MAJSOUL.cmd，再运行 RUN_SYNC.cmd 更新累计统计。');data.groups??=[];data.highlights??=[];data.achievements??=null;const dt=data.updatedAt?new Date(data.updatedAt).toLocaleString('zh-CN',{timeZone:'Asia/Shanghai'}):'尚未采集';$('profile').textContent=`${data.nickname} · ID ${data.friendId} · 三麻 ${data.levels?.three||'待采集'} / 四麻 ${data.levels?.four||'待采集'}`;$('status').textContent=`${data.status} · 更新时间（北京时间）：${dt}`;tabs();achievements();render();high();}catch(e){$('profile').textContent='累计统计尚未就绪';$('status').textContent=e.message;$('placement').hidden=true;}})();
+(async()=>{try{const r=await fetch('../data/majsoul.json',{cache:'no-store'});if(!r.ok)throw Error('数据读取失败');data=await r.json();if(data.schema!==3)throw Error('请运行新版 OPEN_MAJSOUL.cmd，再运行 RUN_SYNC.cmd 更新累计统计。');data.groups??=[];data.highlights??=[];const dt=data.updatedAt?new Date(data.updatedAt).toLocaleString('zh-CN',{timeZone:'Asia/Shanghai'}):'尚未采集';$('profile').textContent=`${data.nickname} · ID ${data.friendId} · 三麻 ${data.levels?.three||'待采集'} / 四麻 ${data.levels?.four||'待采集'}`;$('status').textContent=`${data.status} · 更新时间（北京时间）：${dt}`;tabs();render();high();}catch(e){$('profile').textContent='累计统计尚未就绪';$('status').textContent=e.message;$('placement').hidden=true;}})();
 })();
