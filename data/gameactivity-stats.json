@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
     "build":  "v1.20.4",
-    "generatedAt":  "2026-10-31T22:29:59.0711711+08:00",
+    "generatedAt":  "2026-11-01T21:10:06.8898115+08:00",
     "source":  {
                    "provider":  "Playnite GameActivity",
                    "fields":  [
@@ -14,17 +14,17 @@
                },
     "analyticsStart":  "2026-03-01",
     "coverageStart":  "2026-03-01",
-    "coverageEnd":  "2026-10-31",
-    "sessionCount":  1712,
+    "coverageEnd":  "2026-11-01",
+    "sessionCount":  1715,
     "syntheticSessionCount":  4,
-    "currentMonth":  "2026-10",
+    "currentMonth":  "2026-11",
     "currentYear":  "2026",
     "totals":  {
-                   "recordedSeconds":  3893049,
-                   "last7DaysSeconds":  95591,
-                   "currentMonthSeconds":  406511,
-                   "currentYearSeconds":  3893049,
-                   "activeDays":  244
+                   "recordedSeconds":  3899839,
+                   "last7DaysSeconds":  96922,
+                   "currentMonthSeconds":  6788,
+                   "currentYearSeconds":  3899839,
+                   "activeDays":  245
                },
     "daily":  [
                   {
@@ -1005,7 +1005,11 @@
                   },
                   {
                       "date":  "2026-10-31",
-                      "seconds":  14705
+                      "seconds":  14707
+                  },
+                  {
+                      "date":  "2026-11-01",
+                      "seconds":  6788
                   }
               ],
     "weekly":  [
@@ -1187,7 +1191,7 @@
                    {
                        "start":  "2026-10-26",
                        "label":  "10/26",
-                       "seconds":  90132
+                       "seconds":  96922
                    }
                ],
     "monthly":  [
@@ -1229,17 +1233,17 @@
                     {
                         "month":  "2026-10",
                         "label":  "26/10",
-                        "seconds":  406511
+                        "seconds":  406513
                     }
                 ],
     "hourly":  [
                    {
                        "hour":  0,
-                       "seconds":  401486
+                       "seconds":  405020
                    },
                    {
                        "hour":  1,
-                       "seconds":  351604
+                       "seconds":  351978
                    },
                    {
                        "hour":  2,
@@ -1303,11 +1307,11 @@
                    },
                    {
                        "hour":  17,
-                       "seconds":  203135
+                       "seconds":  205595
                    },
                    {
                        "hour":  18,
-                       "seconds":  175856
+                       "seconds":  176276
                    },
                    {
                        "hour":  19,
@@ -1327,7 +1331,7 @@
                    },
                    {
                        "hour":  23,
-                       "seconds":  369679
+                       "seconds":  369681
                    }
                ],
     "weekday":  [
@@ -1359,15 +1363,154 @@
                     {
                         "day":  5,
                         "label":  "周六",
-                        "seconds":  492775
+                        "seconds":  492777
                     },
                     {
                         "day":  6,
                         "label":  "周日",
-                        "seconds":  605937
+                        "seconds":  612725
                     }
                 ],
     "distributionMonths":  [
+                               {
+                                   "month":  "2026-11",
+                                   "label":  "2026年11月",
+                                   "hourly":  [
+                                                  {
+                                                      "hour":  0,
+                                                      "seconds":  3534
+                                                  },
+                                                  {
+                                                      "hour":  1,
+                                                      "seconds":  374
+                                                  },
+                                                  {
+                                                      "hour":  2,
+                                                      "seconds":  0
+                                                  },
+                                                  {
+                                                      "hour":  3,
+                                                      "seconds":  0
+                                                  },
+                                                  {
+                                                      "hour":  4,
+                                                      "seconds":  0
+                                                  },
+                                                  {
+                                                      "hour":  5,
+                                                      "seconds":  0
+                                                  },
+                                                  {
+                                                      "hour":  6,
+                                                      "seconds":  0
+                                                  },
+                                                  {
+                                                      "hour":  7,
+                                                      "seconds":  0
+                                                  },
+                                                  {
+                                                      "hour":  8,
+                                                      "seconds":  0
+                                                  },
+                                                  {
+                                                      "hour":  9,
+                                                      "seconds":  0
+                                                  },
+                                                  {
+                                                      "hour":  10,
+                                                      "seconds":  0
+                                                  },
+                                                  {
+                                                      "hour":  11,
+                                                      "seconds":  0
+                                                  },
+                                                  {
+                                                      "hour":  12,
+                                                      "seconds":  0
+                                                  },
+                                                  {
+                                                      "hour":  13,
+                                                      "seconds":  0
+                                                  },
+                                                  {
+                                                      "hour":  14,
+                                                      "seconds":  0
+                                                  },
+                                                  {
+                                                      "hour":  15,
+                                                      "seconds":  0
+                                                  },
+                                                  {
+                                                      "hour":  16,
+                                                      "seconds":  0
+                                                  },
+                                                  {
+                                                      "hour":  17,
+                                                      "seconds":  2460
+                                                  },
+                                                  {
+                                                      "hour":  18,
+                                                      "seconds":  420
+                                                  },
+                                                  {
+                                                      "hour":  19,
+                                                      "seconds":  0
+                                                  },
+                                                  {
+                                                      "hour":  20,
+                                                      "seconds":  0
+                                                  },
+                                                  {
+                                                      "hour":  21,
+                                                      "seconds":  0
+                                                  },
+                                                  {
+                                                      "hour":  22,
+                                                      "seconds":  0
+                                                  },
+                                                  {
+                                                      "hour":  23,
+                                                      "seconds":  0
+                                                  }
+                                              ],
+                                   "weekday":  [
+                                                   {
+                                                       "day":  0,
+                                                       "label":  "周一",
+                                                       "seconds":  0
+                                                   },
+                                                   {
+                                                       "day":  1,
+                                                       "label":  "周二",
+                                                       "seconds":  0
+                                                   },
+                                                   {
+                                                       "day":  2,
+                                                       "label":  "周三",
+                                                       "seconds":  0
+                                                   },
+                                                   {
+                                                       "day":  3,
+                                                       "label":  "周四",
+                                                       "seconds":  0
+                                                   },
+                                                   {
+                                                       "day":  4,
+                                                       "label":  "周五",
+                                                       "seconds":  0
+                                                   },
+                                                   {
+                                                       "day":  5,
+                                                       "label":  "周六",
+                                                       "seconds":  0
+                                                   },
+                                                   {
+                                                       "day":  6,
+                                                       "label":  "周日",
+                                                       "seconds":  6788
+                                                   }
+                                               ]
+                               },
                                {
                                    "month":  "2026-10",
                                    "label":  "2026年10月",
@@ -1466,7 +1609,7 @@
                                                   },
                                                   {
                                                       "hour":  23,
-                                                      "seconds":  34484
+                                                      "seconds":  34486
                                                   }
                                               ],
                                    "weekday":  [
@@ -1498,7 +1641,7 @@
                                                    {
                                                        "day":  5,
                                                        "label":  "周六",
-                                                       "seconds":  63940
+                                                       "seconds":  63942
                                                    },
                                                    {
                                                        "day":  6,
@@ -2485,27 +2628,27 @@
                            {
                                "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                                "name":  "CHUNITHM",
-                               "seconds":  29845
+                               "seconds":  32725
                            },
                            {
                                "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                "name":  "雀魂麻将",
-                               "seconds":  18305
+                               "seconds":  22052
                            },
                            {
                                "id":  "901a387c-5431-4985-89b3-128142b21167",
                                "name":  "Battlefield 1",
-                               "seconds":  10618
-                           },
-                           {
-                               "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
-                               "name":  "Phigros",
-                               "seconds":  10488
+                               "seconds":  9205
                            },
                            {
                                "id":  "dc0f4891-c9fa-42ff-9dc0-27ce8d0f0d56",
                                "name":  "maimai",
                                "seconds":  8760
+                           },
+                           {
+                               "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
+                               "name":  "Phigros",
+                               "seconds":  6605
                            },
                            {
                                "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
@@ -2535,81 +2678,26 @@
                        ],
     "currentMonthGames":  [
                               {
-                                  "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
-                                  "name":  "CHUNITHM",
-                                  "seconds":  111497
-                              },
-                              {
                                   "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                   "name":  "雀魂麻将",
-                                  "seconds":  109824
+                                  "seconds":  3908
                               },
                               {
-                                  "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
-                                  "name":  "Phigros",
-                                  "seconds":  36419
-                              },
-                              {
-                                  "id":  "f0a894ed-b3a2-471e-b081-efdf8f0269cd",
-                                  "name":  "Goose Goose Duck",
-                                  "seconds":  34864
-                              },
-                              {
-                                  "id":  "901a387c-5431-4985-89b3-128142b21167",
-                                  "name":  "Battlefield 1",
-                                  "seconds":  29294
-                              },
-                              {
-                                  "id":  "06a6c4ed-ba26-4185-a08c-2874a521d499",
-                                  "name":  "三国杀",
-                                  "seconds":  28719
-                              },
-                              {
-                                  "id":  "dc0f4891-c9fa-42ff-9dc0-27ce8d0f0d56",
-                                  "name":  "maimai",
-                                  "seconds":  20400
-                              },
-                              {
-                                  "id":  "e9125710-44f3-4473-a14c-bde806b1ff76",
-                                  "name":  "Arcaea",
-                                  "seconds":  19023
-                              },
-                              {
-                                  "id":  "27cc7cf4-8d39-433d-8d7c-b1069eb0c11e",
-                                  "name":  "Battlefield 5",
-                                  "seconds":  5173
-                              },
-                              {
-                                  "id":  "66dc715c-d550-4152-a58b-39a4e6e33318",
-                                  "name":  "生死狙击",
-                                  "seconds":  3768
-                              },
-                              {
-                                  "id":  "bf0860bd-01fc-44d5-937a-60ed086bff86",
-                                  "name":  "Minecraft iOS",
-                                  "seconds":  3351
-                              },
-                              {
-                                  "id":  "b05c2d25-74a9-4700-9c38-dae8c9cda7e8",
-                                  "name":  "Project SEKAI",
-                                  "seconds":  2594
-                              },
-                              {
-                                  "id":  "b1de7fb7-f915-414c-bb77-c4cf36678f06",
-                                  "name":  "e舞成名",
-                                  "seconds":  1585
+                                  "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
+                                  "name":  "CHUNITHM",
+                                  "seconds":  2880
                               }
                           ],
     "currentYearGames":  [
                              {
                                  "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                  "name":  "雀魂麻将",
-                                 "seconds":  1808309
+                                 "seconds":  1812219
                              },
                              {
                                  "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                                  "name":  "CHUNITHM",
-                                 "seconds":  737318
+                                 "seconds":  740198
                              },
                              {
                                  "id":  "06a6c4ed-ba26-4185-a08c-2874a521d499",
@@ -3209,7 +3297,7 @@
                                            {
                                                "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                                "name":  "雀魂麻将",
-                                               "seconds":  109824
+                                               "seconds":  109826
                                            },
                                            {
                                                "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
@@ -3273,8 +3361,14 @@
                             {
                                 "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                                 "name":  "CHUNITHM",
-                                "date":  "2026-10-31",
-                                "lastPlayed":  "2026-10-31T20:53:00.0000000"
+                                "date":  "2026-11-01",
+                                "lastPlayed":  "2026-11-01T18:07:00.0000000"
+                            },
+                            {
+                                "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
+                                "name":  "雀魂麻将",
+                                "date":  "2026-11-01",
+                                "lastPlayed":  "2026-11-01T01:06:14.0000000"
                             },
                             {
                                 "id":  "dc0f4891-c9fa-42ff-9dc0-27ce8d0f0d56",
@@ -3293,12 +3387,6 @@
                                 "name":  "Minecraft iOS",
                                 "date":  "2026-10-31",
                                 "lastPlayed":  "2026-10-31T13:52:27.0000000"
-                            },
-                            {
-                                "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
-                                "name":  "雀魂麻将",
-                                "date":  "2026-10-31",
-                                "lastPlayed":  "2026-10-31T01:20:17.0000000"
                             },
                             {
                                 "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
@@ -3465,12 +3553,20 @@
                         ],
     "monthlyChampions":  [
                              {
+                                 "period":  "2026-11",
+                                 "label":  "2026年11月",
+                                 "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
+                                 "name":  "雀魂麻将",
+                                 "seconds":  3908,
+                                 "totalSeconds":  6788
+                             },
+                             {
                                  "period":  "2026-10",
                                  "label":  "2026年10月",
                                  "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                                  "name":  "CHUNITHM",
                                  "seconds":  111497,
-                                 "totalSeconds":  406511
+                                 "totalSeconds":  406513
                              },
                              {
                                  "period":  "2026-09",
@@ -3535,13 +3631,13 @@
                                 "label":  "2026年",
                                 "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
                                 "name":  "雀魂麻将",
-                                "seconds":  1808309,
-                                "totalSeconds":  3893049
+                                "seconds":  1812219,
+                                "totalSeconds":  3899839
                             }
                         ],
     "timelineWindowDays":  14,
     "timelineStart":  "2026-03-01",
-    "timelineEnd":  "2026-10-31",
+    "timelineEnd":  "2026-11-01",
     "timelineDays":  [
                          {
                              "date":  "2026-03-01",
@@ -4522,6 +4618,10 @@
                          {
                              "date":  "2026-10-31",
                              "label":  "周六"
+                         },
+                         {
+                             "date":  "2026-11-01",
+                             "label":  "周日"
                          }
                      ],
     "timeline":  [
@@ -22763,6 +22863,36 @@
                          "endMinute":  1253,
                          "startText":  "20:05",
                          "endText":  "20:53",
+                         "seconds":  2880
+                     },
+                     {
+                         "date":  "2026-10-31",
+                         "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
+                         "name":  "雀魂麻将",
+                         "startMinute":  1439.82,
+                         "endMinute":  1439.85,
+                         "startText":  "23:59",
+                         "endText":  "23:59",
+                         "seconds":  2
+                     },
+                     {
+                         "date":  "2026-11-01",
+                         "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
+                         "name":  "雀魂麻将",
+                         "startMinute":  1.1,
+                         "endMinute":  66.23,
+                         "startText":  "00:01",
+                         "endText":  "01:06",
+                         "seconds":  3908
+                     },
+                     {
+                         "date":  "2026-11-01",
+                         "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
+                         "name":  "CHUNITHM",
+                         "startMinute":  1039,
+                         "endMinute":  1087,
+                         "startText":  "17:19",
+                         "endText":  "18:07",
                          "seconds":  2880
                      }
                  ]
