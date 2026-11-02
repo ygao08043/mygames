@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
     "build":  "v1.20.4",
-    "generatedAt":  "2026-11-02T10:12:53.3269251+08:00",
+    "generatedAt":  "2026-11-02T10:49:15.9777101+08:00",
     "source":  {
                    "provider":  "Playnite GameActivity",
                    "fields":  [
@@ -1243,11 +1243,6 @@
                         "month":  "2026-10",
                         "label":  "26/10",
                         "seconds":  406513
-                    },
-                    {
-                        "month":  "2026-11",
-                        "label":  "26/11",
-                        "seconds":  9061
                     }
                 ],
     "hourly":  [
@@ -3369,26 +3364,6 @@
                                                "seconds":  1585
                                            }
                                        ]
-                         },
-                         {
-                             "month":  "2026-11",
-                             "games":  [
-                                           {
-                                               "id":  "1db2dfa2-f00a-4382-b586-e9cfa07b0a12",
-                                               "name":  "雀魂麻将",
-                                               "seconds":  6180
-                                           },
-                                           {
-                                               "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
-                                               "name":  "CHUNITHM",
-                                               "seconds":  2880
-                                           },
-                                           {
-                                               "id":  "8b5cbfc6-9afb-4892-993e-e9424a9d6555",
-                                               "name":  "Phigros",
-                                               "seconds":  1
-                                           }
-                                       ]
                          }
                      ],
     "lastPlayedGames":  [
@@ -4667,7 +4642,7 @@
                          "date":  "2026-03-01",
                          "id":  "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b",
                          "name":  "CHUNITHM",
-                         "startMinute":  0.02,
+                         "startMinute":  0.01,
                          "endMinute":  3.88,
                          "startText":  "00:00",
                          "endText":  "00:03",
