@@ -1,9 +1,9 @@
 {
     "version":  "1.20.5",
-    "generatedAt":  "2026-11-04T18:04:59.5896394+08:00",
+    "generatedAt":  "2026-11-04T21:32:46.0075826+08:00",
     "source":  {
                    "type":  "Phigros TapTap cloud save",
-                   "saveUpdatedAt":  "2026-11-03T16:12:01.990Z",
+                   "saveUpdatedAt":  "2026-11-04T12:46:04.267Z",
                    "metadata":  "Catrong/phi-plugin resources/info/info.csv (TSV)",
                    "metadataSongs":  327,
                    "missingMetadata":  0,
@@ -11,9 +11,9 @@
                },
     "profile":  {
                     "nickname":  "YMKF",
-                    "rks":  15.78303428,
-                    "calculatedRks":  15.78303428,
-                    "cloudSummaryRks":  15.78303432,
+                    "rks":  15.80689513,
+                    "calculatedRks":  15.80689513,
+                    "cloudSummaryRks":  15.80689526,
                     "rksMode":  "calculated",
                     "phiCount":  34,
                     "fcCount":  52,
@@ -207,6 +207,20 @@
                        "charter":  "[该用户已被禁言]"
                    },
                    {
+                       "songId":  "Verruckt.Raimukun.0",
+                       "title":  "Verrückt",
+                       "composer":  "Raimukun",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  16.5,
+                       "score":  972510,
+                       "accuracy":  99.280151,
+                       "rks":  15.97633323,
+                       "status":  "V",
+                       "isFc":  false,
+                       "charter":  "Salt"
+                   },
+                   {
                        "songId":  "DESTRUCTION321.Normal1zervsBrokenNerdz.0",
                        "title":  "DESTRUCTION 3,2,1",
                        "composer":  "Normal1zer vs. Broken Nerdz",
@@ -403,6 +417,20 @@
                        "charter":  "T∆TIØN"
                    },
                    {
+                       "songId":  "Petrichor.voidMournfinale.0",
+                       "title":  "Petrichor",
+                       "composer":  "void (Mournfinale)",
+                       "difficulty":  "AT",
+                       "difficultyIndex":  3,
+                       "constant":  17.5,
+                       "score":  923764,
+                       "accuracy":  97.092613,
+                       "rks":  15.31174891,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  "Return | Petrichor"
+                   },
+                   {
                        "songId":  "WhatdoyouwantmorethanaHappyending.Apo11oHALOprogramft安月名莉子大瀬良あい.0",
                        "title":  "What do you want more than a Happy ending?",
                        "composer":  "Apo11o\"HALO\"program ft. 安月名 莉子×大瀬良あい",
@@ -415,34 +443,6 @@
                        "status":  "S",
                        "isFc":  false,
                        "charter":  "欢迎回到 Phigros！"
-                   },
-                   {
-                       "songId":  "NWAD.Knighthood.0",
-                       "title":  "[NWAD]",
-                       "composer":  "Knighthood",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  15.6,
-                       "score":  929623,
-                       "accuracy":  99.567116,
-                       "rks":  15.30131053,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "[RUFLUS]"
-                   },
-                   {
-                       "songId":  "Hydra.JamesLandinoXAkiraComplex.0",
-                       "title":  "Hydra",
-                       "composer":  "James Landino X Akira Complex",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  15.4,
-                       "score":  990963,
-                       "accuracy":  99.81105,
-                       "rks":  15.27094602,
-                       "status":  "V",
-                       "isFc":  false,
-                       "charter":  "Su1fuR"
                    }
                ],
     "scores":  [
@@ -587,6 +587,20 @@
                        "charter":  "[该用户已被禁言]"
                    },
                    {
+                       "songId":  "Verruckt.Raimukun.0",
+                       "title":  "Verrückt",
+                       "composer":  "Raimukun",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  16.5,
+                       "score":  972510,
+                       "accuracy":  99.280151,
+                       "rks":  15.97633323,
+                       "status":  "V",
+                       "isFc":  false,
+                       "charter":  "Salt"
+                   },
+                   {
                        "songId":  "DESTRUCTION321.Normal1zervsBrokenNerdz.0",
                        "title":  "DESTRUCTION 3,2,1",
                        "composer":  "Normal1zer vs. Broken Nerdz",
@@ -781,6 +795,20 @@
                        "status":  "V",
                        "isFc":  false,
                        "charter":  "T∆TIØN"
+                   },
+                   {
+                       "songId":  "Petrichor.voidMournfinale.0",
+                       "title":  "Petrichor",
+                       "composer":  "void (Mournfinale)",
+                       "difficulty":  "AT",
+                       "difficultyIndex":  3,
+                       "constant":  17.5,
+                       "score":  923764,
+                       "accuracy":  97.092613,
+                       "rks":  15.31174891,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  "Return | Petrichor"
                    },
                    {
                        "songId":  "WhatdoyouwantmorethanaHappyending.Apo11oHALOprogramft安月名莉子大瀬良あい.0",
@@ -993,20 +1021,6 @@
                        "charter":  "198 in Kowloon"
                    },
                    {
-                       "songId":  "Verruckt.Raimukun.0",
-                       "title":  "Verrückt",
-                       "composer":  "Raimukun",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  16.5,
-                       "score":  925911,
-                       "accuracy":  97.863815,
-                       "rks":  14.97064688,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "Salt"
-                   },
-                   {
                        "songId":  "Adastraperaspera.RabbitHouse.0",
                        "title":  "Ad astra per aspera",
                        "composer":  "Rabbit House",
@@ -1145,20 +1159,6 @@
                        "status":  "S",
                        "isFc":  false,
                        "charter":  "KillJoy"
-                   },
-                   {
-                       "songId":  "Petrichor.voidMournfinale.0",
-                       "title":  "Petrichor",
-                       "composer":  "void (Mournfinale)",
-                       "difficulty":  "AT",
-                       "difficultyIndex":  3,
-                       "constant":  17.5,
-                       "score":  918611,
-                       "accuracy":  96.483284,
-                       "rks":  14.87165427,
-                       "status":  "A",
-                       "isFc":  false,
-                       "charter":  "Return | Petrichor"
                    },
                    {
                        "songId":  "DancewithSilence.かめりあ.0",
@@ -4599,8 +4599,8 @@
                   },
                   {
                       "date":  "2026-11-04",
-                      "rks":  15.78303428,
-                      "saveUpdatedAt":  "2026-11-03T16:12:01.990Z"
+                      "rks":  15.80689513,
+                      "saveUpdatedAt":  "2026-11-04T12:46:04.267Z"
                   }
               ]
 }
