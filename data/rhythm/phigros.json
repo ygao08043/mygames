@@ -1,9 +1,9 @@
 {
     "version":  "1.20.5",
-    "generatedAt":  "2026-11-04T21:32:46.0075826+08:00",
+    "generatedAt":  "2026-11-07T22:30:52.6882168+08:00",
     "source":  {
                    "type":  "Phigros TapTap cloud save",
-                   "saveUpdatedAt":  "2026-11-04T12:46:04.267Z",
+                   "saveUpdatedAt":  "2026-11-04T15:57:37.241Z",
                    "metadata":  "Catrong/phi-plugin resources/info/info.csv (TSV)",
                    "metadataSongs":  327,
                    "missingMetadata":  0,
@@ -15,8 +15,8 @@
                     "calculatedRks":  15.80689513,
                     "cloudSummaryRks":  15.80689526,
                     "rksMode":  "calculated",
-                    "phiCount":  34,
-                    "fcCount":  52,
+                    "phiCount":  37,
+                    "fcCount":  54,
                     "playedCharts":  269,
                     "avatar":  "Introduction",
                     "challengeCode":  251
@@ -1847,6 +1847,20 @@
                        "charter":  "Su1fuR、快斬！"
                    },
                    {
+                       "songId":  "BoundedQuietude.FiniteLimitvsSiLiS.0",
+                       "title":  "Bounded Quietude",
+                       "composer":  "Finite Limit vs SiLiS",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  16.2,
+                       "score":  899942,
+                       "accuracy":  96.986786,
+                       "rks":  14.10312151,
+                       "status":  "A",
+                       "isFc":  false,
+                       "charter":  "孤独な騎士 Against 魔王、大咩兔"
+                   },
+                   {
                        "songId":  "Elúltimobaile.Θ.0",
                        "title":  "El último baile",
                        "composer":  "Θ",
@@ -3275,20 +3289,6 @@
                        "charter":  "Jαckψ feat. Βαρβαροςαντρας"
                    },
                    {
-                       "songId":  "BoundedQuietude.FiniteLimitvsSiLiS.0",
-                       "title":  "Bounded Quietude",
-                       "composer":  "Finite Limit vs SiLiS",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  16.2,
-                       "score":  864557,
-                       "accuracy":  94.463455,
-                       "rks":  12.45891437,
-                       "status":  "B",
-                       "isFc":  false,
-                       "charter":  "孤独な騎士 Against 魔王、大咩兔"
-                   },
-                   {
                        "songId":  "GetReady.iF.0",
                        "title":  "Get Ready!! ",
                        "composer":  "iF",
@@ -3779,6 +3779,20 @@
                        "charter":  "StupiGGy vs. 阿爽"
                    },
                    {
+                       "songId":  "NOONEYESMAN.MYUKKE.0",
+                       "title":  "NO ONE YES MAN",
+                       "composer":  "MYUKKE.",
+                       "difficulty":  "HD",
+                       "difficultyIndex":  1,
+                       "constant":  10.9,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  10.9,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "晨"
+                   },
+                   {
                        "songId":  "mechanted.rareguy.0",
                        "title":  "mechanted",
                        "composer":  "rareguy",
@@ -3791,20 +3805,6 @@
                        "status":  "FC",
                        "isFc":  true,
                        "charter":  "Ctymax"
-                   },
-                   {
-                       "songId":  "NOONEYESMAN.MYUKKE.0",
-                       "title":  "NO ONE YES MAN",
-                       "composer":  "MYUKKE.",
-                       "difficulty":  "HD",
-                       "difficultyIndex":  1,
-                       "constant":  10.9,
-                       "score":  950605,
-                       "accuracy":  99.722214,
-                       "rks":  10.76584335,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "晨"
                    },
                    {
                        "songId":  "NonMelodicRagezMUGEdit.Normal1zer.0",
@@ -4045,6 +4045,20 @@
                        "charter":  "RXhuang"
                    },
                    {
+                       "songId":  "GOODRAGE.EBIMAYO.0",
+                       "title":  "GOODRAGE",
+                       "composer":  "EBIMAYO",
+                       "difficulty":  "HD",
+                       "difficultyIndex":  1,
+                       "constant":  8.5,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  8.5,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "阿爽"
+                   },
+                   {
                        "songId":  "AnotherMe.NeutralMoon.0",
                        "title":  "Another Me",
                        "composer":  "Neutral Moon",
@@ -4057,20 +4071,6 @@
                        "status":  "S",
                        "isFc":  false,
                        "charter":  "Another M3"
-                   },
-                   {
-                       "songId":  "GOODRAGE.EBIMAYO.0",
-                       "title":  "GOODRAGE",
-                       "composer":  "EBIMAYO",
-                       "difficulty":  "HD",
-                       "difficultyIndex":  1,
-                       "constant":  8.5,
-                       "score":  999498,
-                       "accuracy":  99.944267,
-                       "rks":  8.47895845,
-                       "status":  "FC",
-                       "isFc":  true,
-                       "charter":  "阿爽"
                    },
                    {
                        "songId":  "InfinityHeaven.HyuN.0",
@@ -4115,6 +4115,20 @@
                        "charter":  "Ceaseless Signal \"不息的信号\""
                    },
                    {
+                       "songId":  "瓷岁.茶鸣拾贰律.0",
+                       "title":  "瓷岁",
+                       "composer":  "茶鸣拾贰律",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  7,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  7,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "『兔』年大吉"
+                   },
+                   {
                        "songId":  "Initialize.iF.0",
                        "title":  "Initialize",
                        "composer":  "iF",
@@ -4127,20 +4141,6 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "NerSAN"
-                   },
-                   {
-                       "songId":  "瓷岁.茶鸣拾贰律.0",
-                       "title":  "瓷岁",
-                       "composer":  "茶鸣拾贰律",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  7,
-                       "score":  970644,
-                       "accuracy":  99.356163,
-                       "rks":  6.80112809,
-                       "status":  "V",
-                       "isFc":  false,
-                       "charter":  "『兔』年大吉"
                    },
                    {
                        "songId":  "Glaciaxion.SunsetRay.0",
@@ -4221,13 +4221,13 @@
                                      },
                               "HD":  {
                                          "cleared":  27,
-                                         "fullCombo":  16,
-                                         "phi":  10
+                                         "fullCombo":  17,
+                                         "phi":  12
                                      },
                               "IN":  {
                                          "cleared":  211,
-                                         "fullCombo":  32,
-                                         "phi":  21
+                                         "fullCombo":  33,
+                                         "phi":  22
                                      },
                               "AT":  {
                                          "cleared":  23,
@@ -4601,6 +4601,11 @@
                       "date":  "2026-11-04",
                       "rks":  15.80689513,
                       "saveUpdatedAt":  "2026-11-04T12:46:04.267Z"
+                  },
+                  {
+                      "date":  "2026-11-07",
+                      "rks":  15.80689513,
+                      "saveUpdatedAt":  "2026-11-04T15:57:37.241Z"
                   }
               ]
 }
