@@ -1,7 +1,7 @@
 {
     "version":  "1.1",
-    "updatedAt":  "2026-11-08T20:42:20.0487499+08:00",
-    "pendingGeneratedAt":  "2026-11-08T20:42:20.0297555+08:00",
+    "updatedAt":  "2026-11-08T22:12:00.3787682+08:00",
+    "pendingGeneratedAt":  "2026-11-08T22:12:00.3747619+08:00",
     "games":  {
                   "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b":  {
                                                                "name":  "CHUNITHM",
@@ -13,8 +13,8 @@
                                                                "expectedPlaytimeSeconds":  1855644,
                                                                "targetPlaytimeSeconds":  1855644,
                                                                "sourceDeltaSeconds":  0,
-                                                               "manualOverrideDetected":  true,
-                                                               "manualOverrideReason":  "Playnite time differs from the last applied extension receipt",
+                                                               "manualOverrideDetected":  false,
+                                                               "manualOverrideReason":  "",
                                                                "lastAppliedPlaytimeSeconds":  1852884,
                                                                "exactTarget":  false,
                                                                "exactTargetAllowDecreaseFromIndependentSource":  false,
@@ -144,7 +144,7 @@
                                                                "playniteSnapshotGeneratedAt":  "2026-11-08T19:51:19.4900300+08:00",
                                                                "expectedPlaytimeSeconds":  264731,
                                                                "targetPlaytimeSeconds":  266992,
-                                                               "sourceDeltaSeconds":  2261,
+                                                               "sourceDeltaSeconds":  0,
                                                                "manualOverrideDetected":  false,
                                                                "manualOverrideReason":  "",
                                                                "lastAppliedPlaytimeSeconds":  264731,
@@ -254,7 +254,7 @@
                                                                "playniteSnapshotGeneratedAt":  "2026-11-08T19:51:19.4900300+08:00",
                                                                "expectedPlaytimeSeconds":  146910,
                                                                "targetPlaytimeSeconds":  146913,
-                                                               "sourceDeltaSeconds":  3,
+                                                               "sourceDeltaSeconds":  0,
                                                                "manualOverrideDetected":  false,
                                                                "manualOverrideReason":  "",
                                                                "lastAppliedPlaytimeSeconds":  146910,
