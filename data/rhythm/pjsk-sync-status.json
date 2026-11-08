@@ -1,0 +1,21 @@
+{
+    "build":  "v1.20.8",
+    "feature":  "pjsk-haruki-multi-account-v2",
+    "accounts":  [
+                     {
+                         "server":  "cn",
+                         "ok":  true,
+                         "userId":  "7485936747151383359"
+                     },
+                     {
+                         "server":  "jp",
+                         "ok":  true,
+                         "userId":  "806542764628221964"
+                     }
+                 ],
+    "files":  [
+                  "pjsk-cn.json",
+                  "pjsk-jp.json",
+                  "pjsk.json"
+              ]
+}

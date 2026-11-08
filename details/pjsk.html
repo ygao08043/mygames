@@ -15,7 +15,8 @@ button,input,select{font:inherit}.wrap{width:min(1500px,calc(100% - 28px));margi
 .brand{font-size:19px;font-weight:850;letter-spacing:.02em}.brand i{font-style:normal;color:var(--cyan)}
 .source{margin-left:auto;color:var(--muted);font-size:12px;text-align:right}.hero{padding:34px 0 20px}.eyebrow{color:var(--cyan);font-weight:750;letter-spacing:.16em;text-transform:uppercase}
 .hero h1{font-size:clamp(32px,7vw,72px);line-height:1;margin:10px 0;background:linear-gradient(100deg,#fff 10%,var(--cyan) 48%,var(--pink));color:transparent;background-clip:text}
-.hero p{margin:0;color:var(--muted);max-width:820px}.panel{border:1px solid #ffffff15;background:linear-gradient(145deg,#182336e8,#101827e8);box-shadow:var(--shadow);border-radius:18px;padding:18px;margin-bottom:18px}
+.hero p{margin:0;color:var(--muted);max-width:820px}
+.region-switch{display:inline-flex;gap:6px;padding:5px;border:1px solid var(--line);border-radius:999px;background:#101a29;margin-top:12px}.region-btn{border:0;border-radius:999px;padding:9px 20px;background:transparent;color:var(--muted);font-weight:750;cursor:pointer;white-space:nowrap}.region-btn.active{background:var(--cyan);color:#071419}.region-btn:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}.panel{border:1px solid #ffffff15;background:linear-gradient(145deg,#182336e8,#101827e8);box-shadow:var(--shadow);border-radius:18px;padding:18px;margin-bottom:18px}
 .tabs{display:flex;gap:8px;overflow:auto;padding:4px 0 16px;scrollbar-width:thin}.tab{white-space:nowrap;border:1px solid var(--line);color:var(--muted);background:#111a28;border-radius:999px;padding:9px 14px;cursor:pointer}
 .tab.active{color:#071419;background:var(--cyan);border-color:transparent;font-weight:800}.panel h2{margin:0 0 4px;font-size:20px}.hint{color:var(--muted);margin-bottom:14px}
 .view{display:none}.view.active{display:block}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
@@ -41,7 +42,7 @@ tr:hover td{background:#ffffff05}.sorthead{display:inline-flex;align-items:cente
 .rank-main{font-weight:850}.stars{letter-spacing:.06em;color:var(--yellow);white-space:nowrap}.stars .off{color:#ffffff26}.rankpoint{display:block;color:var(--muted);font-size:11px;margin-top:2px}
 footer{color:var(--muted);padding:22px 0 42px;text-align:center}
 @media(max-width:1050px){.coverage{grid-template-columns:repeat(3,1fr)}.collection-grid{grid-template-columns:1fr 1fr}.collection-col:last-child{grid-column:1/-1}}
-@media(max-width:720px){.wrap{width:min(100% - 18px,1500px)}.source{display:none}.grid2,.grid3,.collection-grid{grid-template-columns:1fr}.collection-col:last-child{grid-column:auto}.coverage{grid-template-columns:repeat(2,1fr)}.hero{padding-top:24px}.panel{padding:13px}.filters input,.filters select{min-width:100%;width:100%}}
+@media(max-width:720px){.region-switch{display:flex;width:max-content;max-width:100%}.region-btn{padding:8px 18px}.wrap{width:min(100% - 18px,1500px)}.source{display:none}.grid2,.grid3,.collection-grid{grid-template-columns:1fr}.collection-col:last-child{grid-column:auto}.coverage{grid-template-columns:repeat(2,1fr)}.hero{padding-top:24px}.panel{padding:13px}.filters input,.filters select{min-width:100%;width:100%}}
 </style>
 <style id="ymkf-mobile-display-safearea">
 /* YMKF · phone/iPad top browser-control safe area · display only */
@@ -91,7 +92,7 @@ footer{color:var(--muted);padding:22px 0 42px;text-align:center}
 <body>
 <header class="top"><div class="wrap topin"><a class="back" href="../index.html">← 游戏库</a><div class="brand">Project <i>SEKAI</i></div><div class="source" id="sourceLine">Haruki 数据加载中…</div></div></header>
 <main class="wrap">
-  <section class="hero"><div class="eyebrow">Performance Archive</div><h1>PJSK 战绩统计</h1><p>歌曲成绩、卡牌、角色、活动、称号、排位、挑战 Live、World Link 与 MySekai 分层归档。页面仅展示有意义的统计；Haruki 实际返回的全部公开字段同时保存在数据文件的分类原始区。</p></section>
+  <section class="hero"><div class="eyebrow">Performance Archive</div><h1>PJSK 战绩统计</h1><div class="region-switch" id="regionSwitch" role="group" aria-label="选择服务器"><button class="region-btn active" type="button" data-region="all" aria-pressed="true">全部</button><button class="region-btn" type="button" data-region="jp" aria-pressed="false">日服</button><button class="region-btn" type="button" data-region="cn" aria-pressed="false">国服</button></div></section>
   <div id="notice"></div>
   <nav class="tabs" id="tabs"></nav>
 
@@ -124,19 +125,20 @@ footer{color:var(--muted);padding:22px 0 42px;text-align:center}
   </article></section>
 
   <section class="view" data-view="characters"><article class="panel"><h2>角色等级</h2><div class="hint">角色 Rank、经验与所属组合；支持按组合筛选。</div><div class="filters"><select id="characterUnit"><option value="">全部组合</option></select></div><div id="characterCount" class="hint"></div><div id="characterTable"></div></article></section>
-  <section class="view" data-view="events"><article class="panel"><h2>活动记录</h2><div class="hint">活动点数、最终排名与奖励领取时间；World Link 分章数据单列。</div><div id="eventTable"></div></article><article class="panel"><h2>World Link / World Bloom</h2><div id="worldTable"></div></article></section>
+  <section class="view" data-view="events"><article class="panel"><h2>活动记录</h2><div class="hint">活动点数、最终排名与奖励领取时间。</div><div id="eventTable"></div></article></section>
+  <section class="view" data-view="worldLink"><article class="panel"><h2>World Link / World Bloom</h2><div class="hint">各角色章节点数、章节排名与更新记录。</div><div id="worldTable"></div></article></section>
   <section class="view" data-view="honors"><article class="panel"><h2>称号收藏</h2><div class="hint">普通称号、主页称号与羁绊称号均保留在分类数据中。</div><div id="honorTable"></div></article></section>
   <section class="view" data-view="rank"><article class="panel"><h2>排位赛季</h2><div class="hint">按游戏 Master 数据把全局 Class ID 换算为“白金 1～4”等实际段位；普通段位显示 0～5 颗星，Master 单独显示累计点数。</div><div id="rankTable"></div></article></section>
   <section class="view" data-view="challenge"><article class="panel"><h2>挑战 Live</h2><div class="hint">各角色最高分与关卡进度；卡组及奖励状态保存在分类数据中。</div><div id="challengeTable"></div></article><article class="panel"><h2>挑战关卡</h2><div id="challengeStageTable"></div></article></section>
   <section class="view" data-view="mysekai"><article class="panel"><h2>MySekai</h2><div class="hint" id="mysekaiHint"></div><div class="grid2"><div><h3>大门</h3><div id="gateTable"></div></div><div><h3>材料</h3><div id="materialTable"></div></div></div></article><article class="panel"><h2>画布 / 家具</h2><div id="canvasTable"></div></article></section>
-  <section class="view" data-view="coverage"><article class="panel"><h2>数据覆盖</h2><div class="hint">每个 Haruki 返回字段都按来源和语义分类保存；这里列出字段与记录数，便于确认有没有漏项。</div><div id="coverageCards" class="coverage"></div></article><article class="panel"><h2>字段清单</h2><div id="coverageTable"></div></article></section>
 </main>
-<footer>Build v1.20.7 · pjsk-haruki-categories-v1 · Haruki public data snapshot</footer>
+<footer>Build v1.20.8 · pjsk-haruki-multi-account-v2 · Haruki public data snapshot</footer>
 
 <script>
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
-const tabs=[['overview','总览'],['music','歌曲'],['rank','排位'],['cards','卡牌'],['characters','角色'],['challenge','挑战'],['honors','称号'],['events','活动'],['mysekai','MySekai'],['coverage','数据覆盖']];
-let D=null,musicSortKey='',musicSortDir=1;
+const tabs=[['overview','总览'],['music','歌曲'],['rank','排位'],['cards','卡牌'],['characters','角色'],['challenge','挑战'],['honors','称号'],['events','活动'],['worldLink','World Link'],['mysekai','MySekai']];
+let D=null,musicSortKey='',musicSortDir=1,activeRegion='all';
+const ACCOUNT_DATA={cn:null,jp:null};
 
 const UNIT_ORDER=['piapro','light_sound','idol','street','theme_park','school_refusal'];
 const UNIT_LABEL={
@@ -158,6 +160,92 @@ const val=(v,f='—')=>(v===null||v===undefined||v==='')?f:v;
 const numAny=(r,keys,def=0)=>{for(const k of keys){if(r&&r[k]!==undefined&&r[k]!==null&&r[k]!==''){const x=Number(r[k]);if(Number.isFinite(x))return x}}return def};
 const boolAny=(r,keys)=>{for(const k of keys){if(r&&r[k]!==undefined&&r[k]!==null){const v=r[k];if(typeof v==='boolean')return v;if(v===1||v==='1'||String(v).toLowerCase()==='true'||String(v).toLowerCase()==='done'||String(v).toLowerCase()==='complete')return true;if(v===0||v==='0'||String(v).toLowerCase()==='false')return false}}return false};
 const statusTag=s=>`<span class="tag ${s==='AP'?'ap':s==='FC'?'fc':s==='CLEAR'?'clear':''}">${esc(s)}</span>`;
+const regionName=r=>r==='jp'?'日服':r==='cn'?'国服':r==='all'?'全部':String(r||'').toUpperCase();
+const isAccountAvailable=d=>!!(d&&d.source&&d.source.userId&&d.source.available!==false&&d.source.status!=='unavailable');
+const asRows=(a,server)=>Array.isArray(a)?a.map(x=>({...x,server:server.toUpperCase()})):[];
+const statusWeight=s=>({AP:4,FC:3,CLEAR:2,'NOT CLEAR':1}[String(s||'').toUpperCase()]||0);
+function mergeAccountData(cn,jp){
+  const accounts={cn:cn||null,jp:jp||null};
+  const active=[['cn',cn],['jp',jp]].filter(([k,d])=>isAccountAvailable(d));
+  const fallback=active[0]?.[1]||cn||jp||{};
+  const byChart=new Map();
+  for(const [server,d] of active){
+    for(const row of d.music?.records||[]){
+      const key=String(row.musicId)+'|'+String(row.difficulty||'');
+      const candidate={...row,server:server.toUpperCase(),regions:[server.toUpperCase()],regionalRecords:[{server:server.toUpperCase(),highScore:Number(row.highScore||0),status:row.status||'NOT CLEAR'}]};
+      const old=byChart.get(key);
+      if(!old){byChart.set(key,candidate);continue}
+      old.regions=[...new Set([...(old.regions||[]),server.toUpperCase()])];
+      old.regionalRecords=[...(old.regionalRecords||[]),{server:server.toUpperCase(),highScore:Number(row.highScore||0),status:row.status||'NOT CLEAR'}];
+      if(statusWeight(row.status)>statusWeight(old.status)||(statusWeight(row.status)===statusWeight(old.status)&&Number(row.highScore||0)>Number(old.highScore||0))){
+        const regions=old.regions,regionalRecords=old.regionalRecords;
+        Object.assign(old,candidate,{regions,regionalRecords});
+      }
+    }
+  }
+  const musicRecords=[...byChart.values()].sort((a,b)=>Number(a.musicId||0)-Number(b.musicId||0)||String(a.difficulty||'').localeCompare(String(b.difficulty||'')));
+  const tagged=(path)=>active.flatMap(([server,d])=>asRows(path(d)||[],server));
+  const ownedMap=new Map();
+  for(const [server,d] of active)for(const row of d.music?.owned||[]){const key=String(row.musicId??row.id??JSON.stringify(row));if(!ownedMap.has(key))ownedMap.set(key,{...row,server:server.toUpperCase(),regions:[server.toUpperCase()]});else{const old=ownedMap.get(key);old.regions.push(server.toUpperCase())}}
+  const rarityCounts={},attributeCounts={};
+  for(const [server,d] of active){for(const [k,v] of Object.entries(d.cards?.rarityCounts||{}))rarityCounts[k]=(rarityCounts[k]||0)+Number(v||0);for(const [k,v] of Object.entries(d.cards?.attributeCounts||{}))attributeCounts[k]=(attributeCounts[k]||0)+Number(v||0)}
+  const hasCompleteCatalog=active.length>0&&active.every(([,d])=>Array.isArray(d.music?.catalog)&&d.music.catalog.length>0);
+  const catalogMap=new Map();
+  if(hasCompleteCatalog)for(const [server,d] of active)for(const row of d.music.catalog){const key=String(row.musicId)+'|'+String(row.difficulty||'').toLowerCase();if(!catalogMap.has(key))catalogMap.set(key,{...row,server:server.toUpperCase()})}
+  const difficulty={};
+  for(const key of ['easy','normal','hard','expert','master','append','unknown']){
+    const catalogCount=catalogMap.size?([...catalogMap.values()].filter(x=>String(x.difficulty||'').toLowerCase()===key).length):Math.max(0,...active.map(([,d])=>Number(d.music?.difficulty?.[key]?.charts||0)));
+    const charts=catalogCount;
+    const rows=musicRecords.filter(r=>String(r.difficulty||'').toLowerCase()===key);
+    difficulty[key]={charts,clear:rows.filter(r=>['CLEAR','FC','AP'].includes(r.status)).length,fullCombo:rows.filter(r=>['FC','AP'].includes(r.status)).length,allPerfect:rows.filter(r=>r.status==='AP').length,bestScore:Math.max(0,...rows.map(r=>Number(r.highScore||0)))};
+  }
+  const cardRows=tagged(d=>d.cards?.records),characterRows=tagged(d=>d.characters?.records),eventRows=tagged(d=>d.events?.records),worldRows=tagged(d=>d.worldLink?.records||d.events?.worldBlooms),honorRows=tagged(d=>d.honors?.records),rankRows=tagged(d=>d.rankMatch?.seasons),challengeResults=tagged(d=>d.challengeLive?.results),challengeStages=tagged(d=>d.challengeLive?.stages),gates=tagged(d=>d.mysekai?.gates),materials=tagged(d=>d.mysekai?.materials),canvases=tagged(d=>d.mysekai?.canvases);
+  const coverageFields=tagged(d=>d.coverage?.fields);
+  const coverageBy={};
+  for(const [,d] of active)for(const [k,v] of Object.entries(d.coverage?.byCategory||{})){if(!coverageBy[k])coverageBy[k]={fields:0,records:0};coverageBy[k].fields+=Number(v.fields||0);coverageBy[k].records+=Number(v.records||0)}
+  const summary={
+    ownedSongs:new Set([...ownedMap.keys()]).size,masterSongs:catalogMap.size?new Set([...catalogMap.values()].map(x=>String(x.musicId))).size:Math.max(0,...active.map(([,d])=>Number(d.summary?.masterSongs||0))),masterCharts:catalogMap.size?catalogMap.size:Math.max(0,...active.map(([,d])=>Number(d.summary?.masterCharts||0))),
+    playedSongs:new Set(musicRecords.map(r=>String(r.musicId))).size,chartRecords:musicRecords.length,clearedCharts:musicRecords.filter(r=>['CLEAR','FC','AP'].includes(r.status)).length,
+    fullComboCharts:musicRecords.filter(r=>['FC','AP'].includes(r.status)).length,allPerfectCharts:musicRecords.filter(r=>r.status==='AP').length,bestScore:Math.max(0,...musicRecords.map(r=>Number(r.highScore||0))),
+    cards:cardRows.length,trainedCards:cardRows.filter(r=>r.specialTraining||r.specialTrainingDone||r.trained||r.isTrained).length,characters:characterRows.length,
+    characterRankTotal:characterRows.reduce((a,r)=>a+Number(r.rank||0),0),highestCharacterRank:Math.max(0,...characterRows.map(r=>Number(r.rank||0))),events:eventRows.length,
+    bestEventRank:(()=>{const x=eventRows.map(r=>Number(r.rank||0)).filter(v=>v>0);return x.length?Math.min(...x):0})(),honors:honorRows.length,rankSeasons:rankRows.length,challengeCharacters:challengeResults.length,mysekaiGates:gates.length
+  };
+  const latest=(server)=>accounts[server]?.source?.suiteUploadTimeText||'未同步';
+  return {
+    ...fallback,build:'v1.20.8',feature:'pjsk-haruki-multi-account-v2',source:{provider:'Haruki Toolbox public API',server:'all',userId:'CN + JP',available:active.length>0,status:active.length?'combined':'unavailable',suiteUploadTimeText:`CN ${latest('cn')} / JP ${latest('jp')}`,accounts:Object.fromEntries(['cn','jp'].map(k=>[k,accounts[k]?.source||{server:k,userId:k==='cn'?'7485936747151383359':'806542764628221964',available:false,status:'not_synced'}]))},
+    summary,profile:{word:'CN + JP 双服合计'},
+    music:{difficulty,catalog:[...catalogMap.values()],records:musicRecords,owned:[...ownedMap.values()],achievements:tagged(d=>d.music?.achievements)},
+    cards:{rarityCounts,attributeCounts,records:cardRows,decks:tagged(d=>d.cards?.decks)},
+    characters:{records:characterRows,bondsHonors:tagged(d=>d.characters?.bondsHonors)},
+    events:{records:eventRows,worldBlooms:worldRows,worldBloomSupportDecks:tagged(d=>d.events?.worldBloomSupportDecks)},
+    worldLink:{records:worldRows,supportDecks:tagged(d=>d.worldLink?.supportDecks||d.events?.worldBloomSupportDecks)},
+    honors:{records:honorRows,profileHonors:tagged(d=>d.honors?.profileHonors),bondsHonors:tagged(d=>d.honors?.bondsHonors)},
+    rankMatch:{seasons:rankRows},challengeLive:{results:challengeResults,stages:challengeStages,decks:tagged(d=>d.challengeLive?.decks),highScoreRewards:tagged(d=>d.challengeLive?.highScoreRewards)},
+    mysekai:{available:active.some(([,d])=>!!d.mysekai?.available),gates,materials,canvases,characterTalks:tagged(d=>d.mysekai?.characterTalks),performanceBonuses:tagged(d=>d.mysekai?.performanceBonuses)},
+    areas:tagged(d=>d.areas),coverage:{byCategory:coverageBy,fields:coverageFields},rawCategories:{cn:cn?.rawCategories||{},jp:jp?.rawCategories||{}}
+  };
+}
+function accountDataForRegion(region){return region==='all'?mergeAccountData(ACCOUNT_DATA.cn,ACCOUNT_DATA.jp):(ACCOUNT_DATA[region]||{});}
+function renderRegionNotice(){
+  const selected=activeRegion==='all'?['cn','jp']:[activeRegion];
+  const missing=selected.filter(k=>!isAccountAvailable(ACCOUNT_DATA[k]));
+  if(!missing.length){$('#notice').innerHTML='';return}
+  const names=missing.map(regionName).join('、');
+  $('#notice').innerHTML=`<div class="notice">${esc(names)} Haruki 公开数据尚未成功同步。请确认对应账号已在 Haruki 开启 Public API 并上传 Suite；已存在的另一服数据不会受影响。</div>`;
+}
+function renderRegionSwitch(){
+  $$('#regionSwitch [data-region]').forEach(b=>{b.classList.toggle('active',b.dataset.region===activeRegion);b.setAttribute('aria-pressed',b.dataset.region===activeRegion?'true':'false');b.onclick=()=>setRegion(b.dataset.region)});
+}
+function setRegion(region){
+  if(!['all','jp','cn'].includes(region))return;
+  activeRegion=region;D=accountDataForRegion(region);renderRegionSwitch();renderRegionNotice();
+  renderDataView();
+  const s=D.source||{};$('#sourceLine').textContent=`${regionName(region)} · ${region==='all'?(s.suiteUploadTimeText||'双服数据'):(s.suiteUploadTimeText||'尚未同步')} · Build ${D.build||'—'}`;
+}
+function renderDataView(){
+  populateFilters();renderOverview();renderMusic();renderCards();renderStatic();
+}
 
 function table(headers,rows){
   if(!rows.length)return '<div class="empty">暂无可显示数据</div>';
@@ -264,7 +352,12 @@ function renderOverview(){
   $('#difficultyCards').innerHTML=DIFF_ORDER.map(k=>difficultyTile(k,dif[k]||{})).join('');
 
   const p=D.profile||{},s=D.source||{};
-  $('#profileBox').innerHTML=`<div class="grid2"><div class="mini"><b>${esc(s.server?.toUpperCase()||'—')}</b><small>区服 · ID ${esc(s.userId||'未绑定')}</small></div><div class="mini"><b>${esc(s.suiteUploadTimeText||'—')}</b><small>Suite 最近上传</small></div><div class="mini"><b>${esc(p.word||'—')}</b><small>个人签名</small></div><div class="mini"><b>${s.mysekaiAvailable?'已读取':'未开放'}</b><small>MySekai 独立快照</small></div></div>`;
+  if(s.server==='all'){
+    const a=s.accounts||{};
+    $('#profileBox').innerHTML=`<div class="grid2">${['cn','jp'].map(k=>{const x=a[k]||{};return `<div class="mini"><b>${regionName(k)} · ${x.available===false?'未开放':'已绑定'}</b><small>ID ${esc(x.userId||'—')} · Suite ${esc(x.suiteUploadTimeText||'未同步')}</small></div>`}).join('')}<div class="mini"><b>${esc(p.word||'双服合计')}</b><small>当前视图</small></div><div class="mini"><b>${D.mysekai?.available?'至少一服已读取':'MySekai 未开放'}</b><small>独立快照</small></div></div>`;
+  }else{
+    $('#profileBox').innerHTML=`<div class="grid2"><div class="mini"><b>${esc(s.server?.toUpperCase()||'—')}</b><small>区服 · ID ${esc(s.userId||'未绑定')}</small></div><div class="mini"><b>${esc(s.suiteUploadTimeText||'—')}</b><small>Suite 最近上传</small></div><div class="mini"><b>${esc(p.word||'—')}</b><small>个人签名</small></div><div class="mini"><b>${s.mysekaiAvailable?'已读取':'未开放'}</b><small>MySekai 独立快照</small></div></div>`;
+  }
 
   const rc=D.cards?.rarityCounts||{};
   const rarityItems=RARITY_ORDER.map(k=>({label:rarityText(k),count:Number(rc[k]||0)}));
@@ -290,7 +383,7 @@ function jacketBundle(r){
 function jacketCandidates(r){
   const bundle=jacketBundle(r);if(!bundle)return [];
   const server=String(D?.source?.server||'jp').toLowerCase();
-  const regions=[...new Set([server,'jp'])];
+  const regions=[...new Set(server==='all'?['jp','cn']:[server,'jp'])];
   const paths=regions.map(region=>`storage.sekai.best/sekai-${encodeURIComponent(region)}-assets/music/jacket/${encodeURIComponent(bundle)}/${encodeURIComponent(bundle)}.png`);
   const proxied=paths.map(path=>`https://images.weserv.nl/?url=${path}&w=128&h=128&fit=cover&output=webp`);
   const direct=paths.map(path=>'https://'+path);
@@ -317,15 +410,17 @@ function renderMusic(){
   if(level)rows=rows.filter(r=>String(r.playLevel)===level);
   if(musicSortKey){const field=musicSortKey==='difficulty'?'playLevel':musicSortKey==='score'?'highScore':'totalNotes';rows.sort((a,b)=>((Number(a[field]||0)-Number(b[field]||0))*musicSortDir)||(Number(a.musicId||0)-Number(b.musicId||0))||String(a.difficulty||'').localeCompare(String(b.difficulty||'')))}
   $('#musicCount').textContent=`命中 ${n(rows.length)} 条${rows.length>800?'，当前显示前 800 条':''}`;
-  $('#musicTable').innerHTML=table([['歌曲','title',(v,r)=>musicTitleCell(v,r)],['歌曲难度','difficulty',(v,r)=>`<span class="tag">${esc(String(v).toUpperCase())} ${r.playLevel||''}</span>`,sortHead('歌曲难度','difficulty')],['状态','status',v=>statusTag(v)],['最高分','highScore',v=>n(v),sortHead('最高分','score')],['Note','totalNotes',v=>n(v),sortHead('Note','notes')],['MVP','mvpCount',v=>n(v)],['Super Star','superStarCount',v=>n(v)],['作曲','composer']],rows.slice(0,800));
+  $('#musicTable').innerHTML=table([...(D.source?.server==='all'?[['区服','server',v=>esc(v||'—')]]:[]),['歌曲','title',(v,r)=>musicTitleCell(v,r)],['歌曲难度','difficulty',(v,r)=>`<span class="tag">${esc(String(v).toUpperCase())} ${r.playLevel||''}</span>`,sortHead('歌曲难度','difficulty')],['状态','status',v=>statusTag(v)],['最高分','highScore',v=>n(v),sortHead('最高分','score')],['Note','totalNotes',v=>n(v),sortHead('Note','notes')],['MVP','mvpCount',v=>n(v)],['Super Star','superStarCount',v=>n(v)],['作曲','composer']],rows.slice(0,800));
   hydrateJackets($('#musicTable'));
   $$('[data-music-sort]').forEach(b=>b.onclick=()=>{const key=b.dataset.musicSort;if(musicSortKey===key)musicSortDir*=-1;else{musicSortKey=key;musicSortDir=key==='difficulty'?1:-1}renderMusic()})
 }
 function options(sel,values,labeler=v=>v,sorter=null){
   const node=$(sel); if(!node)return;
-  const arr=[...values].filter(v=>v!==null&&v!==undefined&&v!=='');
+  const current=node.value,first=node.options[0]?.outerHTML||'';node.innerHTML=first;
+  const arr=[...new Set([...values].filter(v=>v!==null&&v!==undefined&&v!==''))];
   if(sorter)arr.sort(sorter); else arr.sort((a,b)=>String(a).localeCompare(String(b),'zh-CN'));
   for(const v of arr){const o=document.createElement('option');o.value=String(v);o.textContent=labeler(v);node.appendChild(o)}
+  if([...node.options].some(o=>o.value===current))node.value=current;
 }
 
 function populateCardCharacterOptions(){
@@ -362,6 +457,7 @@ function renderCards(){
 
   $('#cardCount').textContent=`命中 ${n(rows.length)} 张`;
   $('#cardTable').innerHTML=table([
+    ...(D.source?.server==='all'?[['区服','server',v=>esc(v||'—')]]:[]),
     ['卡牌','title',(v,r)=>esc(v||r.cardName||'—')],
     ['角色','character',(v,r)=>esc(v||r.characterName||'—')],
     ['组合','unit',(v,r)=>esc(unitName(cardUnit(r)))],
@@ -411,48 +507,35 @@ function renderCharacters(){
   if(unit)rows=rows.filter(r=>(r.unit||r.unitId||r.group||'')===unit);
   rows.sort((a,b)=>unitIndex(a.unit||a.unitId||a.group)-unitIndex(b.unit||b.unitId||b.group)||(Number(a.characterId||0)-Number(b.characterId||0))||String(a.name||'').localeCompare(String(b.name||''),'zh-CN'));
   $('#characterCount').textContent=`命中 ${n(rows.length)} 个角色`;
-  $('#characterTable').innerHTML=table([['角色','name'],['组合','unit',v=>esc(unitName(v))],['Rank','rank',v=>n(v)],['当前 EXP','exp',v=>n(v)],['累计 EXP','totalExp',v=>n(v)]],rows);
+  $('#characterTable').innerHTML=table([...(D.source?.server==='all'?[['区服','server',v=>esc(v||'—')]]:[]),['角色','name'],['组合','unit',v=>esc(unitName(v))],['Rank','rank',v=>n(v)],['当前 EXP','exp',v=>n(v)],['累计 EXP','totalExp',v=>n(v)]],rows);
 }
 function renderStatic(){
   renderCharacters();
+  const serverCol=D.source?.server==='all'?[['区服','server',v=>esc(v||'—')]]:[];
   const ev=D.events?.records||[];
-  $('#eventTable').innerHTML=table([['活动','name'],['类型','type'],['开始','startAt'],['活动点','eventPoint',v=>n(v)],['排名','rank',v=>v?'#'+n(v):'—'],['领奖','rewardReceivedAt']],ev);
-  $('#worldTable').innerHTML=table([['活动','event'],['角色','character'],['章节','chapterNo'],['点数','point',v=>n(v)],['排名','rank',v=>v?'#'+n(v):'—'],['更新','updatedAt']],D.events?.worldBlooms||[]);
-  $('#honorTable').innerHTML=table([['称号','name'],['等级','level'],['稀有度','rarity'],['类型','type'],['获得时间','obtainedAt']],D.honors?.records||[]);
+  $('#eventTable').innerHTML=table([...serverCol,['活动','name'],['类型','type'],['开始','startAt'],['活动点','eventPoint',v=>n(v)],['排名','rank',v=>v?'#'+n(v):'—'],['领奖','rewardReceivedAt']],ev);
+  $('#worldTable').innerHTML=table([...serverCol,['活动','event'],['角色','character'],['章节','chapterNo'],['点数','point',v=>n(v)],['排名','rank',v=>v?'#'+n(v):'—'],['更新','updatedAt']],D.worldLink?.records||D.events?.worldBlooms||[]);
+  $('#honorTable').innerHTML=table([...serverCol,['称号','name'],['等级','level'],['稀有度','rarity'],['类型','type'],['获得时间','obtainedAt']],D.honors?.records||[]);
   $('#rankTable').innerHTML=table([
-    ['赛季','season'],
-    ['场次','playCount',v=>n(v)],
-    ['胜 / 负 / 平','wins',(v,r)=>`${n(r.wins)} / ${n(r.losses)} / ${n(r.draws)}`],
-    ['胜率','winRate',v=>v+'%'],
-    ['最高连胜','maxStreak'],
-    ['当前段位','gradeId',(v,r)=>`<span class="tag rank-main">${esc(rankName(r))}</span>`],
-    ['星级 / Rank Point','tierPoint',(v,r)=>starHtml(r)],
-    ['赛季排名','rank',v=>v?'#'+n(v):'—'],
-    ['处罚','penaltyCount']
+    ...serverCol,['赛季','season'],['场次','playCount',v=>n(v)],['胜 / 负 / 平','wins',(v,r)=>`${n(r.wins)} / ${n(r.losses)} / ${n(r.draws)}`],['胜率','winRate',v=>v+'%'],['最高连胜','maxStreak'],['当前段位','gradeId',(v,r)=>`<span class="tag rank-main">${esc(rankName(r))}</span>`],['星级 / Rank Point','tierPoint',(v,r)=>starHtml(r)],['赛季排名','rank',v=>v?'#'+n(v):'—'],['处罚','penaltyCount']
   ],D.rankMatch?.seasons||[]);
-  $('#challengeTable').innerHTML=table([['角色','character'],['最高分','highScore',v=>n(v)]],D.challengeLive?.results||[]);
-  $('#challengeStageTable').innerHTML=table([['角色','character'],['关卡','stage'],['Rank','rank'],['Point','point',v=>n(v)],['状态','status'],['类型','type']],D.challengeLive?.stages||[]);
+  $('#challengeTable').innerHTML=table([...serverCol,['角色','character'],['最高分','highScore',v=>n(v)]],D.challengeLive?.results||[]);
+  $('#challengeStageTable').innerHTML=table([...serverCol,['角色','character'],['关卡','stage'],['Rank','rank'],['Point','point',v=>n(v)],['状态','status'],['类型','type']],D.challengeLive?.stages||[]);
   $('#mysekaiHint').textContent=D.mysekai?.available?'已合并 Suite 与 MySekai 公开快照。':'独立 MySekai 公开 API 未开放；仍展示 Suite 中允许公开的 MySekai 字段。';
-  $('#gateTable').innerHTML=table([['大门','name'],['等级','level'],['访问','visitCount',v=>n(v)],['主页','atHome',v=>v?'是':'否'],['刷新','refreshedAt']],D.mysekai?.gates||[]);
-  $('#materialTable').innerHTML=table([['材料','name'],['数量','quantity',v=>n(v)],['最近获得','lastObtainedAt']],(D.mysekai?.materials||[]).slice(0,300));
-  $('#canvasTable').innerHTML=table([['家具 / 画布','name'],['卡牌 ID','cardId'],['数量','quantity'],['特训图','specialTraining',v=>v?'是':'否'],['最近获得','lastObtainedAt']],D.mysekai?.canvases||[])
-}
-function renderCoverage(){
-  const by=D.coverage?.byCategory||{};
-  $('#coverageCards').innerHTML=Object.entries(by).map(([k,v])=>`<div class="cov"><b>${n(v.records)}</b><span>${esc(k)} · ${n(v.fields)} fields</span></div>`).join('');
-  $('#coverageTable').innerHTML=table([['来源','source'],['分类','category'],['字段','field'],['形态','type'],['记录 / 子项','count',v=>n(v)]],D.coverage?.fields||[])
+  $('#gateTable').innerHTML=table([...serverCol,['大门','name'],['等级','level'],['访问','visitCount',v=>n(v)],['主页','atHome',v=>v?'是':'否'],['刷新','refreshedAt']],D.mysekai?.gates||[]);
+  $('#materialTable').innerHTML=table([...serverCol,['材料','name'],['数量','quantity',v=>n(v)],['最近获得','lastObtainedAt']],(D.mysekai?.materials||[]).slice(0,300));
+  $('#canvasTable').innerHTML=table([...serverCol,['家具 / 画布','name'],['卡牌 ID','cardId'],['数量','quantity'],['特训图','specialTraining',v=>v?'是':'否'],['最近获得','lastObtainedAt']],D.mysekai?.canvases||[])
 }
 function populateFilters(){
   options('#musicLevel',[...new Set((D.music?.records||[]).map(r=>Number(r.playLevel||0)).filter(Boolean))],v=>String(v),(a,b)=>a-b);
 
   const raritySet=new Set([...(Object.keys(D.cards?.rarityCounts||{})),...(D.cards?.records||[]).map(r=>r.rarity).filter(Boolean)]);
-  options('#cardRarity',RARITY_ORDER.filter(x=>raritySet.has(x)),rarityText,(a,b)=>RARITY_ORDER.indexOf(a)-RARITY_ORDER.indexOf(b));
   const extraRar=[...raritySet].filter(x=>!RARITY_ORDER.includes(x));
-  options('#cardRarity',extraRar,rarityText);
+  options('#cardRarity',[...RARITY_ORDER.filter(x=>raritySet.has(x)),...extraRar],rarityText,(a,b)=>RARITY_ORDER.indexOf(a)-RARITY_ORDER.indexOf(b));
 
   const attrSet=new Set([...(Object.keys(D.cards?.attributeCounts||{})),...(D.cards?.records||[]).map(r=>r.attribute).filter(Boolean)]);
-  options('#cardAttr',ATTR_ORDER.filter(x=>attrSet.has(x)),attrName,(a,b)=>ATTR_ORDER.indexOf(a)-ATTR_ORDER.indexOf(b));
-  options('#cardAttr',[...attrSet].filter(x=>!ATTR_ORDER.includes(x)),attrName);
+  const extraAttr=[...attrSet].filter(x=>!ATTR_ORDER.includes(x));
+  options('#cardAttr',[...ATTR_ORDER.filter(x=>attrSet.has(x)),...extraAttr],attrName,(a,b)=>ATTR_ORDER.indexOf(a)-ATTR_ORDER.indexOf(b));
 
   options('#cardUnit',UNIT_ORDER,unitName,(a,b)=>UNIT_ORDER.indexOf(a)-UNIT_ORDER.indexOf(b));
   options('#characterUnit',UNIT_ORDER,unitName,(a,b)=>UNIT_ORDER.indexOf(a)-UNIT_ORDER.indexOf(b));
@@ -464,22 +547,22 @@ function bindFilters(){
   $('#cardUnit').addEventListener('input',()=>{populateCardCharacterOptions();renderCards()});
   $('#characterUnit').addEventListener('input',renderCharacters);
 }
+async function loadAccountFile(file){
+  const r=await fetch('../data/rhythm/'+file,{cache:'no-cache'});
+  if(!r.ok)throw new Error(file+' HTTP '+r.status);
+  return await r.json();
+}
 async function main(){
   renderTabs();
   try{
-    const r=await fetch('../data/rhythm/pjsk.json',{cache:'no-cache'});
-    if(!r.ok)throw new Error('HTTP '+r.status);
-    D=await r.json();
-    const s=D.source||{};
-    $('#sourceLine').textContent=`${(s.server||'—').toUpperCase()} · ${s.suiteUploadTimeText||'尚未同步'} · Build ${D.build||'—'}`;
-    if(!s.userId)$('#notice').innerHTML='<div class="notice">尚未绑定 Haruki PJSK 数据。请在 YMKF_Sync 运行 BIND_PJSK_HARUKI.cmd，然后运行 RUN_SYNC.cmd。</div>';
-    renderOverview();
-    populateFilters();
+    const results=await Promise.allSettled([loadAccountFile('pjsk-cn.json'),loadAccountFile('pjsk-jp.json')]);
+    if(results[0].status==='fulfilled')ACCOUNT_DATA.cn=results[0].value;
+    else {try{ACCOUNT_DATA.cn=await loadAccountFile('pjsk.json')}catch(_e){ACCOUNT_DATA.cn=null}}
+    if(results[1].status==='fulfilled')ACCOUNT_DATA.jp=results[1].value;
+    else ACCOUNT_DATA.jp=null;
+    if(!ACCOUNT_DATA.cn&&!ACCOUNT_DATA.jp)throw new Error('CN / JP 数据文件均不可用');
     bindFilters();
-    renderMusic();
-    renderCards();
-    renderStatic();
-    renderCoverage();
+    setRegion('all');
   }catch(e){$('#notice').innerHTML='<div class="notice">PJSK 数据文件加载失败：'+esc(e.message)+'</div>'}
 }
 main();
