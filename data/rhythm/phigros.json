@@ -1,9 +1,9 @@
 {
     "version":  "1.20.5",
-    "generatedAt":  "2026-11-09T15:19:30.0669338+08:00",
+    "generatedAt":  "2026-11-10T10:22:12.1288447+08:00",
     "source":  {
                    "type":  "Phigros TapTap cloud save",
-                   "saveUpdatedAt":  "2026-11-08T07:15:16.439Z",
+                   "saveUpdatedAt":  "2026-11-09T16:27:01.229Z",
                    "metadata":  "Catrong/phi-plugin resources/info/info.csv (TSV)",
                    "metadataSongs":  327,
                    "missingMetadata":  0,
@@ -15,7 +15,7 @@
                     "calculatedRks":  15.83035928,
                     "cloudSummaryRks":  15.83035851,
                     "rksMode":  "calculated",
-                    "phiCount":  39,
+                    "phiCount":  40,
                     "fcCount":  55,
                     "playedCharts":  269,
                     "avatar":  "Introduction",
@@ -115,7 +115,7 @@
                        "difficulty":  "AT",
                        "difficultyIndex":  3,
                        "constant":  16.5,
-                       "score":  971549,
+                       "score":  973882,
                        "accuracy":  99.689308,
                        "rks":  16.27294586,
                        "status":  "V",
@@ -495,7 +495,7 @@
                        "difficulty":  "AT",
                        "difficultyIndex":  3,
                        "constant":  16.5,
-                       "score":  971549,
+                       "score":  973882,
                        "accuracy":  99.689308,
                        "rks":  16.27294586,
                        "status":  "V",
@@ -845,10 +845,10 @@
                        "difficulty":  "IN",
                        "difficultyIndex":  2,
                        "constant":  15.6,
-                       "score":  929623,
+                       "score":  974142,
                        "accuracy":  99.567116,
                        "rks":  15.30131053,
-                       "status":  "S",
+                       "status":  "V",
                        "isFc":  false,
                        "charter":  "[RUFLUS]"
                    },
@@ -3961,6 +3961,20 @@
                        "charter":  "Su1fuR"
                    },
                    {
+                       "songId":  "NWAD.Knighthood.0",
+                       "title":  "[NWAD]",
+                       "composer":  "Knighthood",
+                       "difficulty":  "HD",
+                       "difficultyIndex":  1,
+                       "constant":  9.2,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  9.2,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "[DETCETED]"
+                   },
+                   {
                        "songId":  "月詠に鳴る.Feryquitousfeat藍月なくる.0",
                        "title":  "月詠に鳴る",
                        "composer":  "Feryquitous feat.藍月なくる",
@@ -3973,20 +3987,6 @@
                        "status":  "A",
                        "isFc":  false,
                        "charter":  "Salt"
-                   },
-                   {
-                       "songId":  "NWAD.Knighthood.0",
-                       "title":  "[NWAD]",
-                       "composer":  "Knighthood",
-                       "difficulty":  "HD",
-                       "difficultyIndex":  1,
-                       "constant":  9.2,
-                       "score":  999597,
-                       "accuracy":  99.955246,
-                       "rks":  9.18170967,
-                       "status":  "FC",
-                       "isFc":  true,
-                       "charter":  "[DETCETED]"
                    },
                    {
                        "songId":  "EntrancetotheChaos.打打だいずvssiromaru.0",
@@ -4222,7 +4222,7 @@
                               "HD":  {
                                          "cleared":  27,
                                          "fullCombo":  18,
-                                         "phi":  14
+                                         "phi":  15
                                      },
                               "IN":  {
                                          "cleared":  211,
@@ -4616,6 +4616,11 @@
                       "date":  "2026-11-09",
                       "rks":  15.83035928,
                       "saveUpdatedAt":  "2026-11-08T07:15:16.439Z"
+                  },
+                  {
+                      "date":  "2026-11-10",
+                      "rks":  15.83035928,
+                      "saveUpdatedAt":  "2026-11-09T16:27:01.229Z"
                   }
               ]
 }
