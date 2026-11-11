@@ -1,9 +1,9 @@
 {
     "version":  "1.20.5",
-    "generatedAt":  "2026-11-10T18:03:31.1481285+08:00",
+    "generatedAt":  "2026-11-11T10:39:39.5360906+08:00",
     "source":  {
                    "type":  "Phigros TapTap cloud save",
-                   "saveUpdatedAt":  "2026-11-09T16:27:01.229Z",
+                   "saveUpdatedAt":  "2026-11-10T16:11:54.758Z",
                    "metadata":  "Catrong/phi-plugin resources/info/info.csv (TSV)",
                    "metadataSongs":  327,
                    "missingMetadata":  0,
@@ -11,13 +11,13 @@
                },
     "profile":  {
                     "nickname":  "YMKF",
-                    "rks":  15.83035928,
-                    "calculatedRks":  15.83035928,
-                    "cloudSummaryRks":  15.83035851,
+                    "rks":  15.83361912,
+                    "calculatedRks":  15.83361912,
+                    "cloudSummaryRks":  15.83361816,
                     "rksMode":  "calculated",
-                    "phiCount":  40,
-                    "fcCount":  55,
-                    "playedCharts":  269,
+                    "phiCount":  44,
+                    "fcCount":  57,
+                    "playedCharts":  270,
                     "avatar":  "Introduction",
                     "challengeCode":  251
                 },
@@ -235,6 +235,20 @@
                        "charter":  "{Destruction}"
                    },
                    {
+                       "songId":  "Petrichor.voidMournfinale.0",
+                       "title":  "Petrichor",
+                       "composer":  "void (Mournfinale)",
+                       "difficulty":  "AT",
+                       "difficultyIndex":  3,
+                       "constant":  17.5,
+                       "score":  936459,
+                       "accuracy":  97.83078,
+                       "rks":  15.85349386,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  "Return | Petrichor"
+                   },
+                   {
                        "songId":  "Poseidon.1112vsStar.0",
                        "title":  "Ποσειδών",
                        "composer":  "1112 vs. Star＊",
@@ -261,20 +275,6 @@
                        "status":  "S",
                        "isFc":  false,
                        "charter":  "Self -the pAtchwork-"
-                   },
-                   {
-                       "songId":  "Petrichor.voidMournfinale.0",
-                       "title":  "Petrichor",
-                       "composer":  "void (Mournfinale)",
-                       "difficulty":  "AT",
-                       "difficultyIndex":  3,
-                       "constant":  17.5,
-                       "score":  936459,
-                       "accuracy":  97.698471,
-                       "rks":  15.75569879,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "Return | Petrichor"
                    },
                    {
                        "songId":  "RetributionCycleofRedemption.ArdolfvsDaily天利.0",
@@ -615,6 +615,20 @@
                        "charter":  "{Destruction}"
                    },
                    {
+                       "songId":  "Petrichor.voidMournfinale.0",
+                       "title":  "Petrichor",
+                       "composer":  "void (Mournfinale)",
+                       "difficulty":  "AT",
+                       "difficultyIndex":  3,
+                       "constant":  17.5,
+                       "score":  936459,
+                       "accuracy":  97.83078,
+                       "rks":  15.85349386,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  "Return | Petrichor"
+                   },
+                   {
                        "songId":  "Poseidon.1112vsStar.0",
                        "title":  "Ποσειδών",
                        "composer":  "1112 vs. Star＊",
@@ -641,20 +655,6 @@
                        "status":  "S",
                        "isFc":  false,
                        "charter":  "Self -the pAtchwork-"
-                   },
-                   {
-                       "songId":  "Petrichor.voidMournfinale.0",
-                       "title":  "Petrichor",
-                       "composer":  "void (Mournfinale)",
-                       "difficulty":  "AT",
-                       "difficultyIndex":  3,
-                       "constant":  17.5,
-                       "score":  936459,
-                       "accuracy":  97.698471,
-                       "rks":  15.75569879,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "Return | Petrichor"
                    },
                    {
                        "songId":  "RetributionCycleofRedemption.ArdolfvsDaily天利.0",
@@ -1133,6 +1133,20 @@
                        "charter":  "晨 vs. 阿爽"
                    },
                    {
+                       "songId":  "Feast远东之宴.茶鸣拾贰律.0",
+                       "title":  "Feast远东之宴",
+                       "composer":  "茶鸣拾贰律",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  15.6,
+                       "score":  954420,
+                       "accuracy":  98.979996,
+                       "rks":  14.90081204,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  "Gino"
+                   },
+                   {
                        "songId":  "Chronomia.Lime.0",
                        "title":  "Chronomia",
                        "composer":  "Lime",
@@ -1595,20 +1609,6 @@
                        "charter":  "Sempiternal Fxxxxxx Resolution!"
                    },
                    {
-                       "songId":  "Re_NascencePsystyleVer.Rinth_live.0",
-                       "title":  "Re_Nascence (Psystyle Ver.) ",
-                       "composer":  "Rinth_live",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  14.4,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  14.4,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "NerSAN \u0026 百九十八"
-                   },
-                   {
                        "songId":  "Cristalisia.onoken.0",
                        "title":  "Cristalisia",
                        "composer":  "onoken",
@@ -1621,6 +1621,20 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "Salt"
+                   },
+                   {
+                       "songId":  "Re_NascencePsystyleVer.Rinth_live.0",
+                       "title":  "Re_Nascence (Psystyle Ver.) ",
+                       "composer":  "Rinth_live",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  14.4,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  14.4,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "NerSAN \u0026 百九十八"
                    },
                    {
                        "songId":  "NickofTime.P4koo.0",
@@ -2533,20 +2547,6 @@
                        "charter":  "Ctymax but 5 years later"
                    },
                    {
-                       "songId":  "TimetoNightSkyfeatLeeYuJin.HyuNKLYDIX.0",
-                       "title":  "Time to Night Sky (feat. Lee Yu Jin)",
-                       "composer":  "HyuN \u0026 KLYDIX",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  13.6,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  13.6,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "Likey \u0026 198ar"
-                   },
-                   {
                        "songId":  "AnotherMe.NeutralMoon.0",
                        "title":  "Another Me",
                        "composer":  "Neutral Moon",
@@ -2559,6 +2559,20 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "NerSAN"
+                   },
+                   {
+                       "songId":  "TimetoNightSkyfeatLeeYuJin.HyuNKLYDIX.0",
+                       "title":  "Time to Night Sky (feat. Lee Yu Jin)",
+                       "composer":  "HyuN \u0026 KLYDIX",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  13.6,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  13.6,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "Likey \u0026 198ar"
                    },
                    {
                        "songId":  "千紫万紅.r0yvsWABI.0",
@@ -3499,6 +3513,20 @@
                        "charter":  "Nr3_Official"
                    },
                    {
+                       "songId":  "GOODBOUNCE.EBIMAYO.0",
+                       "title":  "GOODBOUNCE",
+                       "composer":  "EBIMAYO",
+                       "difficulty":  "HD",
+                       "difficultyIndex":  1,
+                       "constant":  11.9,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  11.9,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "Gausbounce"
+                   },
+                   {
                        "songId":  "lifeflashesbeforeweebeyes.BilliumMoto.0",
                        "title":  "life flashes before weeb eyes",
                        "composer":  "BilliumMoto",
@@ -3583,20 +3611,6 @@
                        "charter":  "Demiurge ~ Dawn"
                    },
                    {
-                       "songId":  "GOODBOUNCE.EBIMAYO.0",
-                       "title":  "GOODBOUNCE",
-                       "composer":  "EBIMAYO",
-                       "difficulty":  "HD",
-                       "difficultyIndex":  1,
-                       "constant":  11.9,
-                       "score":  994385,
-                       "accuracy":  99.786697,
-                       "rks":  11.78745399,
-                       "status":  "V",
-                       "isFc":  false,
-                       "charter":  "Gausbounce"
-                   },
-                   {
                        "songId":  "Apocalypse.アリスシャッハと魔法の楽団.0",
                        "title":  "Apocalypse",
                        "composer":  "アリスシャッハと魔法の楽団",
@@ -3639,6 +3653,20 @@
                        "charter":  "CN_115+TangScend"
                    },
                    {
+                       "songId":  "Initialize.iF.0",
+                       "title":  "Initialize",
+                       "composer":  "iF",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  11.6,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  11.6,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "Arenn Saki vs. NerSAN"
+                   },
+                   {
                        "songId":  "HorizonBlue.NothingButRequiemfeatAikapinChiyoko.0",
                        "title":  "Horizon Blue",
                        "composer":  "Nothing But Requiem feat. Aikapin \u0026 Chiyoko",
@@ -3651,20 +3679,6 @@
                        "status":  "FC",
                        "isFc":  true,
                        "charter":  "Nothing But Likey"
-                   },
-                   {
-                       "songId":  "Initialize.iF.0",
-                       "title":  "Initialize",
-                       "composer":  "iF",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  11.6,
-                       "score":  999458,
-                       "accuracy":  99.939766,
-                       "rks":  11.56896677,
-                       "status":  "FC",
-                       "isFc":  true,
-                       "charter":  "Arenn Saki vs. NerSAN"
                    },
                    {
                        "songId":  "FULiAUTOSHOOTER.MYUKKE.0",
@@ -3905,6 +3919,20 @@
                        "charter":  "Likey"
                    },
                    {
+                       "songId":  "GOODTEK.EBIMAYO.0",
+                       "title":  "GOODTEK",
+                       "composer":  "EBIMAYO",
+                       "difficulty":  "HD",
+                       "difficultyIndex":  1,
+                       "constant":  10,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  10,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "百九十八"
+                   },
+                   {
                        "songId":  "DesultorySignals.technoplanet.0",
                        "title":  "Desultory Signals",
                        "composer":  "technoplanet",
@@ -3933,31 +3961,17 @@
                        "charter":  "Orbital Velocity:  ■■■ km/s"
                    },
                    {
-                       "songId":  "GOODTEK.EBIMAYO.0",
-                       "title":  "GOODTEK",
-                       "composer":  "EBIMAYO",
-                       "difficulty":  "HD",
-                       "difficultyIndex":  1,
-                       "constant":  10,
-                       "score":  995345,
-                       "accuracy":  99.482758,
-                       "rks":  9.77143566,
-                       "status":  "FC",
-                       "isFc":  true,
-                       "charter":  "百九十八"
-                   },
-                   {
                        "songId":  "BreakThroughTheBarrier.lixound.0",
                        "title":  "Break Through The Barrier",
                        "composer":  "lixound",
                        "difficulty":  "HD",
                        "difficultyIndex":  1,
                        "constant":  9.5,
-                       "score":  984337,
-                       "accuracy":  99.827888,
-                       "rks":  9.42746966,
-                       "status":  "V",
-                       "isFc":  false,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  9.5,
+                       "status":  "Phi",
+                       "isFc":  true,
                        "charter":  "Su1fuR"
                    },
                    {
@@ -4221,13 +4235,13 @@
                                      },
                               "HD":  {
                                          "cleared":  27,
-                                         "fullCombo":  18,
-                                         "phi":  15
+                                         "fullCombo":  20,
+                                         "phi":  18
                                      },
                               "IN":  {
-                                         "cleared":  211,
+                                         "cleared":  212,
                                          "fullCombo":  33,
-                                         "phi":  22
+                                         "phi":  23
                                      },
                               "AT":  {
                                          "cleared":  23,
@@ -4621,6 +4635,11 @@
                       "date":  "2026-11-10",
                       "rks":  15.83035928,
                       "saveUpdatedAt":  "2026-11-09T16:27:01.229Z"
+                  },
+                  {
+                      "date":  "2026-11-11",
+                      "rks":  15.83361912,
+                      "saveUpdatedAt":  "2026-11-10T16:11:54.758Z"
                   }
               ]
 }

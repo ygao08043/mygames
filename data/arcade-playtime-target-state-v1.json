@@ -1,7 +1,7 @@
 {
     "version":  "1.1",
-    "updatedAt":  "2026-11-10T18:06:13.2728461+08:00",
-    "pendingGeneratedAt":  "2026-11-10T18:06:13.2644463+08:00",
+    "updatedAt":  "2026-11-11T10:42:41.8891400+08:00",
+    "pendingGeneratedAt":  "2026-11-11T10:42:41.8731105+08:00",
     "games":  {
                   "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b":  {
                                                                "name":  "CHUNITHM",
@@ -13,8 +13,8 @@
                                                                "expectedPlaytimeSeconds":  1865600,
                                                                "targetPlaytimeSeconds":  1865600,
                                                                "sourceDeltaSeconds":  0,
-                                                               "manualOverrideDetected":  true,
-                                                               "manualOverrideReason":  "Playnite time differs from the last applied extension receipt",
+                                                               "manualOverrideDetected":  false,
+                                                               "manualOverrideReason":  "",
                                                                "lastAppliedPlaytimeSeconds":  1855644,
                                                                "exactTarget":  false,
                                                                "exactTargetAllowDecreaseFromIndependentSource":  false,
@@ -131,8 +131,8 @@
                                                                "exactTargetNoDecrease":  false,
                                                                "exactGuardAlreadyEstablished":  false,
                                                                "exactOverrideSeconds":  0,
-                                                               "externalSessionCountTotal":  184,
-                                                               "latestExternalActivityUtc":  "2026-11-09T19:15:33.0000000Z",
+                                                               "externalSessionCountTotal":  185,
+                                                               "latestExternalActivityUtc":  "2026-11-10T18:17:19.0000000Z",
                                                                "repairIOSSeconds":  0
                                                            },
                   "8b5cbfc6-9afb-4892-993e-e9424a9d6555":  {
