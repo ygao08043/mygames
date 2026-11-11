@@ -1,9 +1,9 @@
 {
     "version":  "1.20.5",
-    "generatedAt":  "2026-11-11T23:19:11.4515309+08:00",
+    "generatedAt":  "2026-11-11T23:53:47.7153433+08:00",
     "source":  {
                    "type":  "Phigros TapTap cloud save",
-                   "saveUpdatedAt":  "2026-11-11T15:08:15.818Z",
+                   "saveUpdatedAt":  "2026-11-11T15:49:47.543Z",
                    "metadata":  "Catrong/phi-plugin resources/info/info.csv (TSV)",
                    "metadataSongs":  327,
                    "missingMetadata":  0,
@@ -15,8 +15,8 @@
                     "calculatedRks":  15.83361912,
                     "cloudSummaryRks":  15.83361816,
                     "rksMode":  "calculated",
-                    "phiCount":  47,
-                    "fcCount":  59,
+                    "phiCount":  48,
+                    "fcCount":  60,
                     "playedCharts":  270,
                     "avatar":  "Introduction",
                     "challengeCode":  251
@@ -3653,6 +3653,20 @@
                        "charter":  "CN_115+TangScend"
                    },
                    {
+                       "songId":  "NonMelodicRagezMUGEdit.Normal1zer.0",
+                       "title":  "Non-Melodic Ragez (MUG Edit)",
+                       "composer":  "Normal1zer",
+                       "difficulty":  "HD",
+                       "difficultyIndex":  1,
+                       "constant":  11.6,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  11.6,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "Clutter"
+                   },
+                   {
                        "songId":  "Initialize.iF.0",
                        "title":  "Initialize",
                        "composer":  "iF",
@@ -3819,20 +3833,6 @@
                        "status":  "FC",
                        "isFc":  true,
                        "charter":  "Ctymax"
-                   },
-                   {
-                       "songId":  "NonMelodicRagezMUGEdit.Normal1zer.0",
-                       "title":  "Non-Melodic Ragez (MUG Edit)",
-                       "composer":  "Normal1zer",
-                       "difficulty":  "HD",
-                       "difficultyIndex":  1,
-                       "constant":  11.6,
-                       "score":  942689,
-                       "accuracy":  98.274071,
-                       "rks":  10.72725151,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "Clutter"
                    },
                    {
                        "songId":  "ハテ.rNFrums.0",
@@ -4045,20 +4045,6 @@
                        "charter":  "晨"
                    },
                    {
-                       "songId":  "Xenolith.Tatsh.0",
-                       "title":  "Xenolith",
-                       "composer":  "Tatsh",
-                       "difficulty":  "HD",
-                       "difficultyIndex":  1,
-                       "constant":  8.5,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  8.5,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "RXhuang"
-                   },
-                   {
                        "songId":  "GOODRAGE.EBIMAYO.0",
                        "title":  "GOODRAGE",
                        "composer":  "EBIMAYO",
@@ -4071,6 +4057,20 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "阿爽"
+                   },
+                   {
+                       "songId":  "Xenolith.Tatsh.0",
+                       "title":  "Xenolith",
+                       "composer":  "Tatsh",
+                       "difficulty":  "HD",
+                       "difficultyIndex":  1,
+                       "constant":  8.5,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  8.5,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "RXhuang"
                    },
                    {
                        "songId":  "AnotherMe.NeutralMoon.0",
@@ -4235,8 +4235,8 @@
                                      },
                               "HD":  {
                                          "cleared":  27,
-                                         "fullCombo":  22,
-                                         "phi":  21
+                                         "fullCombo":  23,
+                                         "phi":  22
                                      },
                               "IN":  {
                                          "cleared":  212,
@@ -4639,7 +4639,7 @@
                   {
                       "date":  "2026-11-11",
                       "rks":  15.83361912,
-                      "saveUpdatedAt":  "2026-11-11T15:08:15.818Z"
+                      "saveUpdatedAt":  "2026-11-11T15:49:47.543Z"
                   }
               ]
 }

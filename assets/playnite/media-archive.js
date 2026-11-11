@@ -146,6 +146,8 @@
     const gamePage = document.getElementById('games');
     if (!tabs || !shell || !gamePage) throw new Error('YMKF media archive: homepage shell or games page not found.');
 
+    addStyles();
+
     ['videos', 'animation', 'anime', 'tv', 'movies', 'manga', 'books', 'works'].forEach(function (id) {
       const old = document.getElementById(id);
       if (old && old !== gamePage) old.remove();
