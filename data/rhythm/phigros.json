@@ -1,9 +1,9 @@
 {
     "version":  "1.20.5",
-    "generatedAt":  "2026-11-11T19:02:45.8305282+08:00",
+    "generatedAt":  "2026-11-11T22:27:05.5044961+08:00",
     "source":  {
                    "type":  "Phigros TapTap cloud save",
-                   "saveUpdatedAt":  "2026-11-10T16:11:54.758Z",
+                   "saveUpdatedAt":  "2026-11-11T12:32:43.852Z",
                    "metadata":  "Catrong/phi-plugin resources/info/info.csv (TSV)",
                    "metadataSongs":  327,
                    "missingMetadata":  0,
@@ -16,7 +16,7 @@
                     "cloudSummaryRks":  15.83361816,
                     "rksMode":  "calculated",
                     "phiCount":  44,
-                    "fcCount":  57,
+                    "fcCount":  58,
                     "playedCharts":  270,
                     "avatar":  "Introduction",
                     "challengeCode":  251
@@ -3975,6 +3975,20 @@
                        "charter":  "Su1fuR"
                    },
                    {
+                       "songId":  "ArtificialExistence.JunKuroda.0",
+                       "title":  "Artificial Existence",
+                       "composer":  "Jun Kuroda",
+                       "difficulty":  "HD",
+                       "difficultyIndex":  1,
+                       "constant":  9.4,
+                       "score":  998425,
+                       "accuracy":  99.824997,
+                       "rks":  9.32702978,
+                       "status":  "FC",
+                       "isFc":  true,
+                       "charter":  "Salt"
+                   },
+                   {
                        "songId":  "NWAD.Knighthood.0",
                        "title":  "[NWAD]",
                        "composer":  "Knighthood",
@@ -4015,20 +4029,6 @@
                        "status":  "C",
                        "isFc":  false,
                        "charter":  "Embracing the Madness"
-                   },
-                   {
-                       "songId":  "ArtificialExistence.JunKuroda.0",
-                       "title":  "Artificial Existence",
-                       "composer":  "Jun Kuroda",
-                       "difficulty":  "HD",
-                       "difficultyIndex":  1,
-                       "constant":  9.4,
-                       "score":  942700,
-                       "accuracy":  99.049995,
-                       "rks":  9.00729862,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "Salt"
                    },
                    {
                        "songId":  "GOODFORTUNE.EBIMAYO.0",
@@ -4235,7 +4235,7 @@
                                      },
                               "HD":  {
                                          "cleared":  27,
-                                         "fullCombo":  20,
+                                         "fullCombo":  21,
                                          "phi":  18
                                      },
                               "IN":  {
@@ -4639,7 +4639,7 @@
                   {
                       "date":  "2026-11-11",
                       "rks":  15.83361912,
-                      "saveUpdatedAt":  "2026-11-10T16:11:54.758Z"
+                      "saveUpdatedAt":  "2026-11-11T12:32:43.852Z"
                   }
               ]
 }

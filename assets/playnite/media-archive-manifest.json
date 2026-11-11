@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "version": "1.0.0",
+  "totalEntries": 187,
+  "categories": [
+    "animation",
+    "manga",
+    "tv",
+    "movies",
+    "books"
+  ],
+  "counts": {
+    "animation": 88,
+    "manga": 3,
+    "tv": 13,
+    "movies": 18,
+    "books": 65
+  },
+  "groupCounts": {
+    "animation": {
+      "中": 14,
+      "美": 26,
+      "日": 48
+    },
+    "manga": {
+      "作品": 3
+    },
+    "tv": {
+      "中": 13
+    },
+    "movies": {
+      "中": 11,
+      "外": 7
+    },
+    "books": {
+      "书架": 65
+    }
+  }
+}
