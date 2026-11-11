@@ -1,39 +1,46 @@
 {
-  "schemaVersion": 1,
-  "version": "1.0.0",
-  "totalEntries": 187,
-  "categories": [
-    "animation",
-    "manga",
-    "tv",
-    "movies",
-    "books"
-  ],
-  "counts": {
-    "animation": 88,
-    "manga": 3,
-    "tv": 13,
-    "movies": 18,
-    "books": 65
-  },
-  "groupCounts": {
-    "animation": {
-      "中": 14,
-      "美": 26,
-      "日": 48
-    },
-    "manga": {
-      "作品": 3
-    },
-    "tv": {
-      "中": 13
-    },
-    "movies": {
-      "中": 11,
-      "外": 7
-    },
-    "books": {
-      "书架": 65
-    }
-  }
+    "schemaVersion":  1,
+    "version":  "1.0.1",
+    "totalEntries":  187,
+    "categories":  [
+                       "animation",
+                       "manga",
+                       "tv",
+                       "movies",
+                       "books"
+                   ],
+    "counts":  {
+                   "animation":  88,
+                   "manga":  3,
+                   "tv":  13,
+                   "movies":  18,
+                   "books":  65
+               },
+    "groupCounts":  {
+                        "animation":  {
+                                          "中":  14,
+                                          "美":  26,
+                                          "日":  48
+                                      },
+                        "manga":  {
+                                      "作品":  3
+                                  },
+                        "tv":  {
+                                   "中":  13
+                               },
+                        "movies":  {
+                                       "中":  11,
+                                       "外":  7
+                                   },
+                        "books":  {
+                                      "书架":  65
+                                  }
+                    },
+    "uiVersion":  "1.0.1",
+    "uiNotes":  [
+                    "4:3 work cards",
+                    "Image above and inverted-color title strip below",
+                    "Responsive grid: 5 desktop / 4 tablet / 3 mobile / 2 narrow mobile",
+                    "Horizontally scrollable category tabs on narrow screens"
+                ]
 }
