@@ -1,23 +1,23 @@
 {
     "version":  "1.20.5",
-    "generatedAt":  "2026-11-19T22:26:45.6700020+08:00",
+    "generatedAt":  "2026-11-21T00:57:15.6174667+08:00",
     "source":  {
                    "type":  "Phigros TapTap cloud save",
-                   "saveUpdatedAt":  "2026-11-17T13:41:17.048Z",
+                   "saveUpdatedAt":  "2026-11-20T16:52:07.294Z",
                    "metadata":  "Catrong/phi-plugin resources/info/info.csv (TSV)",
-                   "metadataSongs":  327,
+                   "metadataSongs":  329,
                    "missingMetadata":  0,
                    "missingConstants":  0
                },
     "profile":  {
                     "nickname":  "YMKF",
-                    "rks":  15.84411381,
-                    "calculatedRks":  15.84411381,
-                    "cloudSummaryRks":  15.84411335,
+                    "rks":  15.85188617,
+                    "calculatedRks":  15.85188617,
+                    "cloudSummaryRks":  15.8518858,
                     "rksMode":  "calculated",
-                    "phiCount":  55,
-                    "fcCount":  66,
-                    "playedCharts":  275,
+                    "phiCount":  58,
+                    "fcCount":  72,
+                    "playedCharts":  277,
                     "avatar":  "Introduction",
                     "challengeCode":  251
                 },
@@ -277,6 +277,20 @@
                        "charter":  "Self -the pAtchwork-"
                    },
                    {
+                       "songId":  "Rrharil.TeamGrimoire.0",
+                       "title":  "Rrhar\u0027il",
+                       "composer":  "Team Grimoire",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  16.1,
+                       "score":  945235,
+                       "accuracy":  99.496147,
+                       "rks":  15.7414837,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  "RDRT -p 20:08:31"
+                   },
+                   {
                        "songId":  "RetributionCycleofRedemption.ArdolfvsDaily天利.0",
                        "title":  "Retribution ~ Cycle of Redemption ~ ",
                        "composer":  "Ardolf vs. Daily天利",
@@ -429,20 +443,6 @@
                        "status":  "S",
                        "isFc":  false,
                        "charter":  "Magazet wanders within StR-1"
-                   },
-                   {
-                       "songId":  "彩.MisoilePunch.0",
-                       "title":  "彩",
-                       "composer":  "MisoilePunch♪",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  16.4,
-                       "score":  916633,
-                       "accuracy":  98.759552,
-                       "rks":  15.5083129,
-                       "status":  "A",
-                       "isFc":  false,
-                       "charter":  "OPCII_0584_X"
                    }
                ],
     "scores":  [
@@ -657,6 +657,20 @@
                        "charter":  "Self -the pAtchwork-"
                    },
                    {
+                       "songId":  "Rrharil.TeamGrimoire.0",
+                       "title":  "Rrhar\u0027il",
+                       "composer":  "Team Grimoire",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  16.1,
+                       "score":  945235,
+                       "accuracy":  99.496147,
+                       "rks":  15.7414837,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  "RDRT -p 20:08:31"
+                   },
+                   {
                        "songId":  "RetributionCycleofRedemption.ArdolfvsDaily天利.0",
                        "title":  "Retribution ~ Cycle of Redemption ~ ",
                        "composer":  "Ardolf vs. Daily天利",
@@ -867,6 +881,20 @@
                        "charter":  "T∆TIØN"
                    },
                    {
+                       "songId":  "NWAD.Knighthood.0",
+                       "title":  "[NWAD]",
+                       "composer":  "Knighthood",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  15.6,
+                       "score":  988614,
+                       "accuracy":  99.670372,
+                       "rks":  15.37229497,
+                       "status":  "V",
+                       "isFc":  false,
+                       "charter":  "[RUFLUS]"
+                   },
+                   {
                        "songId":  "WhatdoyouwantmorethanaHappyending.Apo11oHALOprogramft安月名莉子大瀬良あい.0",
                        "title":  "What do you want more than a Happy ending?",
                        "composer":  "Apo11o\"HALO\"program ft. 安月名 莉子×大瀬良あい",
@@ -881,18 +909,18 @@
                        "charter":  "欢迎回到 Phigros！"
                    },
                    {
-                       "songId":  "NWAD.Knighthood.0",
-                       "title":  "[NWAD]",
-                       "composer":  "Knighthood",
+                       "songId":  "Pontdessouvenirs.VeetaCrushvsitsufeatitsu.0",
+                       "title":  "Pont des souvenirs",
+                       "composer":  "VeetaCrush vs. [itsu(feat.itsu)]",
                        "difficulty":  "IN",
                        "difficultyIndex":  2,
-                       "constant":  15.6,
-                       "score":  974142,
-                       "accuracy":  99.567116,
-                       "rks":  15.30131053,
-                       "status":  "V",
-                       "isFc":  false,
-                       "charter":  "[RUFLUS]"
+                       "constant":  15.3,
+                       "score":  999650,
+                       "accuracy":  99.961075,
+                       "rks":  15.27354233,
+                       "status":  "FC",
+                       "isFc":  true,
+                       "charter":  "晨"
                    },
                    {
                        "songId":  "Hydra.JamesLandinoXAkiraComplex.0",
@@ -1007,6 +1035,20 @@
                        "charter":  "光る星"
                    },
                    {
+                       "songId":  "Thrashforce.KAHvsE0ri4.0",
+                       "title":  "Thrash force",
+                       "composer":  "KAH vs. E0ri4",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  15.3,
+                       "score":  957076,
+                       "accuracy":  99.807693,
+                       "rks":  15.16951099,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  "Uvernight \u0026 Su1fuR"
+                   },
+                   {
                        "songId":  "Chronostasis.黒皇帝.0",
                        "title":  "Chronostasis",
                        "composer":  "黒皇帝",
@@ -1019,6 +1061,20 @@
                        "status":  "S",
                        "isFc":  false,
                        "charter":  "Gausbon fixed by XMT"
+                   },
+                   {
+                       "songId":  "NOx.Juggernaut.0",
+                       "title":  "NO x",
+                       "composer":  "Juggernaut.",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  16.1,
+                       "score":  920557,
+                       "accuracy":  98.660866,
+                       "rks":  15.15603276,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  "StR-1"
                    },
                    {
                        "songId":  "Rebirth.ああああ.0",
@@ -1117,20 +1173,6 @@
                        "status":  "S",
                        "isFc":  false,
                        "charter":  "N\\erry Xmas"
-                   },
-                   {
-                       "songId":  "Rrharil.TeamGrimoire.0",
-                       "title":  "Rrhar\u0027il",
-                       "composer":  "Team Grimoire",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  16.1,
-                       "score":  937369,
-                       "accuracy":  98.323074,
-                       "rks":  14.9224243,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "RDRT -p 20:08:31"
                    },
                    {
                        "songId":  "energytrixxx.KAH.0",
@@ -1284,7 +1326,7 @@
                        "rks":  14.80272171,
                        "status":  "S",
                        "isFc":  false,
-                       "charter":  "Phigros Charting Team"
+                       "charter":  "Phigros Chart Team"
                    },
                    {
                        "songId":  "HAZARD.Limpid.0",
@@ -1551,20 +1593,6 @@
                        "status":  "S",
                        "isFc":  false,
                        "charter":  "BarbariaNerSAN feat. Snorkel"
-                   },
-                   {
-                       "songId":  "NOx.Juggernaut.0",
-                       "title":  "NO x",
-                       "composer":  "Juggernaut.",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  16.1,
-                       "score":  901839,
-                       "accuracy":  97.682602,
-                       "rks":  14.4844704,
-                       "status":  "A",
-                       "isFc":  false,
-                       "charter":  "StR-1"
                    },
                    {
                        "songId":  "Upshift.Iriss-Frantzz.0",
@@ -1945,20 +1973,6 @@
                        "charter":  "孤独な騎士 Against 魔王、大咩兔"
                    },
                    {
-                       "songId":  "Elúltimobaile.Θ.0",
-                       "title":  "El último baile",
-                       "composer":  "Θ",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  14.1,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  14.1,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "百九十八 feat. Likey"
-                   },
-                   {
                        "songId":  "君往何处QuoVadis.M2U.0",
                        "title":  "君往何处 (Quo Vadis)",
                        "composer":  "M2U",
@@ -1971,6 +1985,20 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "Salt"
+                   },
+                   {
+                       "songId":  "Elúltimobaile.Θ.0",
+                       "title":  "El último baile",
+                       "composer":  "Θ",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  14.1,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  14.1,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "百九十八 feat. Likey"
                    },
                    {
                        "songId":  "QuantumHyperspace.D_AAN.0",
@@ -2078,8 +2106,8 @@
                        "difficultyIndex":  3,
                        "constant":  17.6,
                        "score":  872146,
-                       "accuracy":  95.142303,
-                       "rks":  14.00529367,
+                       "accuracy":  95.180770999999993,
+                       "rks":  14.03214841,
                        "status":  "B",
                        "isFc":  false,
                        "charter":  "RWND -p 16493:62786:92551"
@@ -2575,20 +2603,6 @@
                        "charter":  "NerSAN vs. 阿爽 『Collapse』"
                    },
                    {
-                       "songId":  "AnotherMe.NeutralMoon.0",
-                       "title":  "Another Me",
-                       "composer":  "Neutral Moon",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  13.6,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  13.6,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "NerSAN"
-                   },
-                   {
                        "songId":  "TimetoNightSkyfeatLeeYuJin.HyuNKLYDIX.0",
                        "title":  "Time to Night Sky (feat. Lee Yu Jin)",
                        "composer":  "HyuN \u0026 KLYDIX",
@@ -2615,6 +2629,20 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "Ctymax but 5 years later"
+                   },
+                   {
+                       "songId":  "AnotherMe.NeutralMoon.0",
+                       "title":  "Another Me",
+                       "composer":  "Neutral Moon",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  13.6,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  13.6,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "NerSAN"
                    },
                    {
                        "songId":  "TheWholeRest.KIVΛ.0",
@@ -3191,6 +3219,20 @@
                        "charter":  "Ctymax vs. Barbarianerman"
                    },
                    {
+                       "songId":  "LeaveAllBehind.rider.0",
+                       "title":  "Leave All Behind",
+                       "composer":  "rider",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  12.7,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  12.7,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "亚树见希子 \u0026 百九十八"
+                   },
+                   {
                        "songId":  "Khalid.Dolphin.0",
                        "title":  "Khalid",
                        "composer":  "Dolphin",
@@ -3373,18 +3415,18 @@
                        "charter":  "Gausbon"
                    },
                    {
-                       "songId":  "LeaveAllBehind.rider.0",
-                       "title":  "Leave All Behind",
-                       "composer":  "rider",
+                       "songId":  "光.姜米條.0",
+                       "title":  "光",
+                       "composer":  "姜米條",
                        "difficulty":  "IN",
                        "difficultyIndex":  2,
-                       "constant":  12.7,
-                       "score":  928107,
-                       "accuracy":  99.426392,
-                       "rks":  12.37829345,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "亚树见希子 \u0026 百九十八"
+                       "constant":  12.4,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  12.4,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "Catcats \u0026 百九十八"
                    },
                    {
                        "songId":  "Aliceinaxxxxxxxx.Nagiha.0",
@@ -3471,6 +3513,34 @@
                        "charter":  "Myna feat.Sleepyhead"
                    },
                    {
+                       "songId":  "ClockParadox.WyvernP.0",
+                       "title":  "Clock Paradox",
+                       "composer":  "WyvernP",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  12.5,
+                       "score":  996365,
+                       "accuracy":  99.596161,
+                       "rks":  12.27665164,
+                       "status":  "FC",
+                       "isFc":  true,
+                       "charter":  "Barbarianerman vs. Alloces"
+                   },
+                   {
+                       "songId":  "ColorfulDays.P4koofeatつゆり花鈴.0",
+                       "title":  "Colorful Days♪",
+                       "composer":  "P4koo feat. つゆり花鈴",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  12.6,
+                       "score":  994582,
+                       "accuracy":  99.398026,
+                       "rks":  12.26514905,
+                       "status":  "FC",
+                       "isFc":  true,
+                       "charter":  "阿♪爽"
+                   },
+                   {
                        "songId":  "玩具狂奏曲終焉.きくお.0",
                        "title":  "玩具狂奏曲 -終焉-",
                        "composer":  "きくお",
@@ -3499,6 +3569,20 @@
                        "charter":  "平川の剣『士』"
                    },
                    {
+                       "songId":  "SultanRage.MonstDeath.0",
+                       "title":  "Sultan Rage",
+                       "composer":  "MonstDeath",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  12.2,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  12.2,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "百九十八"
+                   },
+                   {
                        "songId":  "零號車輛.seatrus.0",
                        "title":  "零號車輛",
                        "composer":  "seatrus",
@@ -3511,34 +3595,6 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "壹號阿爽"
-                   },
-                   {
-                       "songId":  "光.姜米條.0",
-                       "title":  "光",
-                       "composer":  "姜米條",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  12.4,
-                       "score":  955426,
-                       "accuracy":  99.410065,
-                       "rks":  12.07701121,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "Catcats \u0026 百九十八"
-                   },
-                   {
-                       "songId":  "SultanRage.MonstDeath.0",
-                       "title":  "Sultan Rage",
-                       "composer":  "MonstDeath",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  12.2,
-                       "score":  947598,
-                       "accuracy":  99.721649,
-                       "rks":  12.04953878,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "百九十八"
                    },
                    {
                        "songId":  "DevIAtiOnshortver.polysha.0",
@@ -3555,20 +3611,6 @@
                        "charter":  "Nr3_Official"
                    },
                    {
-                       "songId":  "GOODBOUNCE.EBIMAYO.0",
-                       "title":  "GOODBOUNCE",
-                       "composer":  "EBIMAYO",
-                       "difficulty":  "HD",
-                       "difficultyIndex":  1,
-                       "constant":  11.9,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  11.9,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "Gausbounce"
-                   },
-                   {
                        "songId":  "lifeflashesbeforeweebeyes.BilliumMoto.0",
                        "title":  "life flashes before weeb eyes",
                        "composer":  "BilliumMoto",
@@ -3581,6 +3623,20 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "百九十八"
+                   },
+                   {
+                       "songId":  "GOODBOUNCE.EBIMAYO.0",
+                       "title":  "GOODBOUNCE",
+                       "composer":  "EBIMAYO",
+                       "difficulty":  "HD",
+                       "difficultyIndex":  1,
+                       "constant":  11.9,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  11.9,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "Gausbounce"
                    },
                    {
                        "songId":  "Komplexe.雄之助featSennzai.0",
@@ -3667,20 +3723,6 @@
                        "charter":  "Rikko \u0026 198"
                    },
                    {
-                       "songId":  "ClockParadox.WyvernP.0",
-                       "title":  "Clock Paradox",
-                       "composer":  "WyvernP",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  12.5,
-                       "score":  923635,
-                       "accuracy":  98.480759,
-                       "rks":  11.67022453,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "Barbarianerman vs. Alloces"
-                   },
-                   {
                        "songId":  "HumaN.SOTUI.0",
                        "title":  "HumaN",
                        "composer":  "SOTUI",
@@ -3695,20 +3737,6 @@
                        "charter":  "CN_115+TangScend"
                    },
                    {
-                       "songId":  "NonMelodicRagezMUGEdit.Normal1zer.0",
-                       "title":  "Non-Melodic Ragez (MUG Edit)",
-                       "composer":  "Normal1zer",
-                       "difficulty":  "HD",
-                       "difficultyIndex":  1,
-                       "constant":  11.6,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  11.6,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "Clutter"
-                   },
-                   {
                        "songId":  "Initialize.iF.0",
                        "title":  "Initialize",
                        "composer":  "iF",
@@ -3721,6 +3749,20 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "Arenn Saki vs. NerSAN"
+                   },
+                   {
+                       "songId":  "NonMelodicRagezMUGEdit.Normal1zer.0",
+                       "title":  "Non-Melodic Ragez (MUG Edit)",
+                       "composer":  "Normal1zer",
+                       "difficulty":  "HD",
+                       "difficultyIndex":  1,
+                       "constant":  11.6,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  11.6,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "Clutter"
                    },
                    {
                        "songId":  "HorizonBlue.NothingButRequiemfeatAikapinChiyoko.0",
@@ -3779,20 +3821,6 @@
                        "charter":  "Su1fuR"
                    },
                    {
-                       "songId":  "GOODWORLD.EBIMAYO.0",
-                       "title":  "GOODWORLD",
-                       "composer":  "EBIMAYO",
-                       "difficulty":  "HD",
-                       "difficultyIndex":  1,
-                       "constant":  11.4,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  11.4,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "StupiGGy"
-                   },
-                   {
                        "songId":  "月詠に鳴る.Feryquitousfeat藍月なくる.0",
                        "title":  "月詠に鳴る",
                        "composer":  "Feryquitous feat.藍月なくる",
@@ -3807,6 +3835,20 @@
                        "charter":  "Salt"
                    },
                    {
+                       "songId":  "GOODWORLD.EBIMAYO.0",
+                       "title":  "GOODWORLD",
+                       "composer":  "EBIMAYO",
+                       "difficulty":  "HD",
+                       "difficultyIndex":  1,
+                       "constant":  11.4,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  11.4,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "StupiGGy"
+                   },
+                   {
                        "songId":  "mechanted.rareguy.0",
                        "title":  "mechanted",
                        "composer":  "rareguy",
@@ -3819,20 +3861,6 @@
                        "status":  "A",
                        "isFc":  false,
                        "charter":  "Ctymax"
-                   },
-                   {
-                       "songId":  "ColorfulDays.P4koofeatつゆり花鈴.0",
-                       "title":  "Colorful Days♪",
-                       "composer":  "P4koo feat. つゆり花鈴",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  12.6,
-                       "score":  950246,
-                       "accuracy":  97.665848,
-                       "rks":  11.32677508,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "阿♪爽"
                    },
                    {
                        "songId":  "mechanted.rareguy.0",
@@ -4129,20 +4157,6 @@
                        "charter":  "晨"
                    },
                    {
-                       "songId":  "Xenolith.Tatsh.0",
-                       "title":  "Xenolith",
-                       "composer":  "Tatsh",
-                       "difficulty":  "HD",
-                       "difficultyIndex":  1,
-                       "constant":  8.5,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  8.5,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "RXhuang"
-                   },
-                   {
                        "songId":  "GOODRAGE.EBIMAYO.0",
                        "title":  "GOODRAGE",
                        "composer":  "EBIMAYO",
@@ -4155,6 +4169,20 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "阿爽"
+                   },
+                   {
+                       "songId":  "Xenolith.Tatsh.0",
+                       "title":  "Xenolith",
+                       "composer":  "Tatsh",
+                       "difficulty":  "HD",
+                       "difficultyIndex":  1,
+                       "constant":  8.5,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  8.5,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "RXhuang"
                    },
                    {
                        "songId":  "InfinityHeaven.HyuN.0",
@@ -4309,9 +4337,9 @@
                                          "phi":  29
                                      },
                               "IN":  {
-                                         "cleared":  215,
-                                         "fullCombo":  33,
-                                         "phi":  23
+                                         "cleared":  217,
+                                         "fullCombo":  39,
+                                         "phi":  26
                                      },
                               "AT":  {
                                          "cleared":  23,
@@ -4740,6 +4768,11 @@
                       "date":  "2026-11-19",
                       "rks":  15.84411381,
                       "saveUpdatedAt":  "2026-11-17T13:41:17.048Z"
+                  },
+                  {
+                      "date":  "2026-11-21",
+                      "rks":  15.85188617,
+                      "saveUpdatedAt":  "2026-11-20T16:52:07.294Z"
                   }
               ]
 }
