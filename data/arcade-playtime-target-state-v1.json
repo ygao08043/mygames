@@ -1,7 +1,7 @@
 {
     "version":  "1.1",
-    "updatedAt":  "2026-11-21T01:00:23.3736692+08:00",
-    "pendingGeneratedAt":  "2026-11-21T01:00:23.3642570+08:00",
+    "updatedAt":  "2026-11-21T11:23:22.4434812+08:00",
+    "pendingGeneratedAt":  "2026-11-21T11:23:22.4086315+08:00",
     "games":  {
                   "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b":  {
                                                                "name":  "CHUNITHM",
@@ -12,7 +12,7 @@
                                                                "playniteSnapshotGeneratedAt":  "2026-11-20T22:16:15.9633119+08:00",
                                                                "expectedPlaytimeSeconds":  1885349,
                                                                "targetPlaytimeSeconds":  1890989,
-                                                               "sourceDeltaSeconds":  5640,
+                                                               "sourceDeltaSeconds":  0,
                                                                "manualOverrideDetected":  false,
                                                                "manualOverrideReason":  "",
                                                                "lastAppliedPlaytimeSeconds":  1885349,
@@ -79,8 +79,8 @@
                                                                "expectedPlaytimeSeconds":  2487309,
                                                                "targetPlaytimeSeconds":  2487309,
                                                                "sourceDeltaSeconds":  0,
-                                                               "manualOverrideDetected":  true,
-                                                               "manualOverrideReason":  "Playnite time differs from the last applied extension receipt",
+                                                               "manualOverrideDetected":  false,
+                                                               "manualOverrideReason":  "",
                                                                "lastAppliedPlaytimeSeconds":  2485320,
                                                                "exactTarget":  false,
                                                                "exactTargetAllowDecreaseFromIndependentSource":  false,
@@ -131,8 +131,8 @@
                                                                "exactTargetNoDecrease":  false,
                                                                "exactGuardAlreadyEstablished":  false,
                                                                "exactOverrideSeconds":  0,
-                                                               "externalSessionCountTotal":  217,
-                                                               "latestExternalActivityUtc":  "2026-11-19T19:39:18.0000000Z",
+                                                               "externalSessionCountTotal":  222,
+                                                               "latestExternalActivityUtc":  "2026-11-20T18:31:00.0000000Z",
                                                                "repairIOSSeconds":  0
                                                            },
                   "8b5cbfc6-9afb-4892-993e-e9424a9d6555":  {
@@ -144,7 +144,7 @@
                                                                "playniteSnapshotGeneratedAt":  "2026-11-20T22:16:15.9633119+08:00",
                                                                "expectedPlaytimeSeconds":  283264,
                                                                "targetPlaytimeSeconds":  288011,
-                                                               "sourceDeltaSeconds":  4747,
+                                                               "sourceDeltaSeconds":  0,
                                                                "manualOverrideDetected":  false,
                                                                "manualOverrideReason":  "",
                                                                "lastAppliedPlaytimeSeconds":  283264,
