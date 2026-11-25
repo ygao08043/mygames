@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
     "build":  "v1.21.0",
-    "generatedAt":  "2026-11-25T15:59:26.2511239+08:00",
+    "generatedAt":  "2026-11-25T23:10:35.8097510+08:00",
     "eaId":  "PIANOYMKF",
     "platform":  "pc",
     "source":  {
@@ -14,7 +14,7 @@
                               "key":  "bf1",
                               "title":  "Battlefield 1",
                               "status":  "ok",
-                              "updatedAt":  "2026-11-25T15:59:26.2511239+08:00",
+                              "updatedAt":  "2026-11-25T23:10:35.8097510+08:00",
                               "endpoint":  "https://api.gametools.network/bf1/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "PIANOYMKF",
@@ -8364,7 +8364,7 @@
                               "key":  "bfv",
                               "title":  "Battlefield V",
                               "status":  "ok",
-                              "updatedAt":  "2026-11-25T15:59:26.2511239+08:00",
+                              "updatedAt":  "2026-11-25T23:10:35.8097510+08:00",
                               "endpoint":  "https://api.gametools.network/bfv/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
                                               "userName":  "PIANOYMKF",
@@ -10710,7 +10710,7 @@
                                                                           "hitVKills":  0.0
                                                                       },
                                                                       {
-                                                                          "weaponName":  "Panzerb眉chse 39",
+                                                                          "weaponName":  "PanzerbÃ¼chse 39",
                                                                           "type":  "Anti-materiel rifle",
                                                                           "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Casablanca/86/77/Panzerbuchse_39-aab3bc76.png",
                                                                           "timeEquipped":  0,
@@ -11858,7 +11858,7 @@
                                                                           "hitVKills":  0.0
                                                                       },
                                                                       {
-                                                                          "weaponName":  "Sj枚gren Shotgun",
+                                                                          "weaponName":  "SjÃ¶gren Shotgun",
                                                                           "type":  "Shotgun",
                                                                           "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Casablanca/67/49/SjogrenShotgun-43cfe31f.png",
                                                                           "timeEquipped":  0,
@@ -12054,7 +12054,7 @@
                                                                           "hitVKills":  0.0
                                                                       },
                                                                       {
-                                                                          "weaponName":  "Krag鈥揓酶rgensen",
+                                                                          "weaponName":  "KragâJÃ¸rgensen",
                                                                           "type":  "Bolt action rifle",
                                                                           "image":  "https://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Casablanca/48/119/KragJorgensen-30895eb5.png",
                                                                           "timeEquipped":  235,
@@ -19020,7 +19020,7 @@
                   "bf6":  {
                               "key":  "bf6",
                               "title":  "Battlefield 6",
-                              "status":  "ok",
+                              "status":  "cached",
                               "updatedAt":  "2026-11-25T15:59:26.2511239+08:00",
                               "endpoint":  "https://api.gametools.network/bf6/stats/?name=PIANOYMKF\u0026platform=pc\u0026format_values=false",
                               "profile":  {
@@ -23586,13 +23586,13 @@
                                           "platform":  "pc",
                                           "platformId":  1
                                       },
-                              "error":  null,
-                              "dataQuality":  "online",
+                              "error":  "curl: (22) The requested URL returned error: 404",
+                              "dataQuality":  "cached",
                               "playniteSeconds":  344880,
                               "playniteName":  "Battlefield 6",
                               "playniteId":  "755257c8-8508-4fd1-9bfd-8be1de672318"
                           }
               },
     "playniteTotalSeconds":  996060,
-    "playniteCapturedAt":  "2026-11-25T16:01:42.0365538+08:00"
+    "playniteCapturedAt":  "2026-11-25T23:13:47.2867542+08:00"
 }
