@@ -1,9 +1,9 @@
 {
     "version":  "1.20.5",
-    "generatedAt":  "2026-11-25T01:35:38.3317208+08:00",
+    "generatedAt":  "2026-11-25T15:58:27.5575254+08:00",
     "source":  {
                    "type":  "Phigros TapTap cloud save",
-                   "saveUpdatedAt":  "2026-11-23T14:00:18.168Z",
+                   "saveUpdatedAt":  "2026-11-25T04:04:31.377Z",
                    "metadata":  "Catrong/phi-plugin resources/info/info.csv (TSV)",
                    "metadataSongs":  329,
                    "missingMetadata":  0,
@@ -11,9 +11,9 @@
                },
     "profile":  {
                     "nickname":  "YMKF",
-                    "rks":  15.85606065,
-                    "calculatedRks":  15.85606065,
-                    "cloudSummaryRks":  15.85606003,
+                    "rks":  15.88333558,
+                    "calculatedRks":  15.88333558,
+                    "cloudSummaryRks":  15.88333511,
                     "rksMode":  "calculated",
                     "phiCount":  137,
                     "fcCount":  144,
@@ -179,6 +179,20 @@
                        "charter":  "兔咩小 VS 咩小兔 VS 小兔咩 VS 咩兔小 VS 兔小咩"
                    },
                    {
+                       "songId":  "DistortedFate.Sakuzyo.0",
+                       "title":  "Distorted Fate",
+                       "composer":  "Sakuzyo",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  16.3,
+                       "score":  957581,
+                       "accuracy":  99.692894,
+                       "rks":  16.07827792,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  "Divination Fortune"
+                   },
+                   {
                        "songId":  "Cthugha.USAO.0",
                        "title":  "Cthugha",
                        "composer":  "USAO",
@@ -219,6 +233,20 @@
                        "status":  "V",
                        "isFc":  false,
                        "charter":  "Salt"
+                   },
+                   {
+                       "songId":  "DistortedFate.Sakuzyo.0",
+                       "title":  "Distorted Fate",
+                       "composer":  "Sakuzyo",
+                       "difficulty":  "AT",
+                       "difficultyIndex":  3,
+                       "constant":  17.4,
+                       "score":  921469,
+                       "accuracy":  98.055344,
+                       "rks":  15.92862691,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  "unDefined Future"
                    },
                    {
                        "songId":  "DESTRUCTION321.Normal1zervsBrokenNerdz.0",
@@ -303,20 +331,6 @@
                        "status":  "S",
                        "isFc":  false,
                        "charter":  "Simon_Axis vs. Likey [Respect Ner as \"SP∆DE\"]"
-                   },
-                   {
-                       "songId":  "DistortedFate.Sakuzyo.0",
-                       "title":  "Distorted Fate",
-                       "composer":  "Sakuzyo",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  16.3,
-                       "score":  957581,
-                       "accuracy":  99.11319,
-                       "rks":  15.6638855,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "Divination Fortune"
                    },
                    {
                        "songId":  "DerSchneid.Ωμεγα.0",
@@ -429,20 +443,6 @@
                        "status":  "A",
                        "isFc":  false,
                        "charter":  "欢迎回到 Phigros！"
-                   },
-                   {
-                       "songId":  "Kerberos.Zris.0",
-                       "title":  "Kerberos",
-                       "composer":  "Zris",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  15.8,
-                       "score":  996457,
-                       "accuracy":  99.606339,
-                       "rks":  15.52477129,
-                       "status":  "FC",
-                       "isFc":  true,
-                       "charter":  "Snorkel vs. NerSAN"
                    }
                ],
     "scores":  [
@@ -559,6 +559,20 @@
                        "charter":  "兔咩小 VS 咩小兔 VS 小兔咩 VS 咩兔小 VS 兔小咩"
                    },
                    {
+                       "songId":  "DistortedFate.Sakuzyo.0",
+                       "title":  "Distorted Fate",
+                       "composer":  "Sakuzyo",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  16.3,
+                       "score":  957581,
+                       "accuracy":  99.692894,
+                       "rks":  16.07827792,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  "Divination Fortune"
+                   },
+                   {
                        "songId":  "Cthugha.USAO.0",
                        "title":  "Cthugha",
                        "composer":  "USAO",
@@ -599,6 +613,20 @@
                        "status":  "V",
                        "isFc":  false,
                        "charter":  "Salt"
+                   },
+                   {
+                       "songId":  "DistortedFate.Sakuzyo.0",
+                       "title":  "Distorted Fate",
+                       "composer":  "Sakuzyo",
+                       "difficulty":  "AT",
+                       "difficultyIndex":  3,
+                       "constant":  17.4,
+                       "score":  921469,
+                       "accuracy":  98.055344,
+                       "rks":  15.92862691,
+                       "status":  "S",
+                       "isFc":  false,
+                       "charter":  "unDefined Future"
                    },
                    {
                        "songId":  "DESTRUCTION321.Normal1zervsBrokenNerdz.0",
@@ -683,20 +711,6 @@
                        "status":  "S",
                        "isFc":  false,
                        "charter":  "Simon_Axis vs. Likey [Respect Ner as \"SP∆DE\"]"
-                   },
-                   {
-                       "songId":  "DistortedFate.Sakuzyo.0",
-                       "title":  "Distorted Fate",
-                       "composer":  "Sakuzyo",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  16.3,
-                       "score":  957581,
-                       "accuracy":  99.11319,
-                       "rks":  15.6638855,
-                       "status":  "S",
-                       "isFc":  false,
-                       "charter":  "Divination Fortune"
                    },
                    {
                        "songId":  "DerSchneid.Ωμεγα.0",
@@ -1399,9 +1413,9 @@
                        "charter":  "Phigros Chart Team"
                    },
                    {
-                       "songId":  "幽世桔梗.Capchiifeatまるもこ.0",
-                       "title":  "幽世桔梗",
-                       "composer":  "Capchii feat. まるもこ",
+                       "songId":  "混乱Confusion.OnlyMyBlackScore.0",
+                       "title":  "混乱-Confusion",
+                       "composer":  "Only My Black Score",
                        "difficulty":  "IN",
                        "difficultyIndex":  2,
                        "constant":  14.8,
@@ -1410,21 +1424,7 @@
                        "rks":  14.8,
                        "status":  "Phi",
                        "isFc":  true,
-                       "charter":  "Su1fuR、快斬！"
-                   },
-                   {
-                       "songId":  "HAZARD.Limpid.0",
-                       "title":  "HAZARD",
-                       "composer":  "Limpid",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  14.8,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  14.8,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "阿爽"
+                       "charter":  "XMT小咩兔"
                    },
                    {
                        "songId":  "INFiNiTEENERZYOverdoze.RekuMochizuki.0",
@@ -1441,9 +1441,9 @@
                        "charter":  "while(TangScend==TangScend);"
                    },
                    {
-                       "songId":  "混乱Confusion.OnlyMyBlackScore.0",
-                       "title":  "混乱-Confusion",
-                       "composer":  "Only My Black Score",
+                       "songId":  "HAZARD.Limpid.0",
+                       "title":  "HAZARD",
+                       "composer":  "Limpid",
                        "difficulty":  "IN",
                        "difficultyIndex":  2,
                        "constant":  14.8,
@@ -1452,7 +1452,7 @@
                        "rks":  14.8,
                        "status":  "Phi",
                        "isFc":  true,
-                       "charter":  "XMT小咩兔"
+                       "charter":  "阿爽"
                    },
                    {
                        "songId":  "TheMountainEater.PaulBazooka.0",
@@ -1481,6 +1481,20 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "Simon_Axis•騎士•StR-1"
+                   },
+                   {
+                       "songId":  "幽世桔梗.Capchiifeatまるもこ.0",
+                       "title":  "幽世桔梗",
+                       "composer":  "Capchii feat. まるもこ",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  14.8,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  14.8,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "Su1fuR、快斬！"
                    },
                    {
                        "songId":  "Xepion.Acotto.0",
@@ -1693,20 +1707,6 @@
                        "charter":  "Indigolite"
                    },
                    {
-                       "songId":  "Shadow.SumaiLightvs姜米條.0",
-                       "title":  "Shadow",
-                       "composer":  "姜米條\u0026SumaiLight",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  14.6,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  14.6,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "Sillyp vs. 晨"
-                   },
-                   {
                        "songId":  "ManifoldHypothesis.cybermisofeattigerlily.0",
                        "title":  "Manifold Hypothesis",
                        "composer":  "cybermiso feat. tigerlily",
@@ -1719,6 +1719,20 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "Gausbon feat. 迟戈\u0026野从"
+                   },
+                   {
+                       "songId":  "Shadow.SumaiLightvs姜米條.0",
+                       "title":  "Shadow",
+                       "composer":  "姜米條\u0026SumaiLight",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  14.6,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  14.6,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "Sillyp vs. 晨"
                    },
                    {
                        "songId":  "LeaveAllBehind.rider.0",
@@ -1805,20 +1819,6 @@
                        "charter":  "Su1fuR -FAISEURS DE PANIQUE-"
                    },
                    {
-                       "songId":  "Luminescence.米虾Fomiki初云CLoudie.0",
-                       "title":  "Luminescence",
-                       "composer":  "米虾Fomiki \u0026 初云CLoudie",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  14.5,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  14.5,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "Pcat \u0026 百九十八"
-                   },
-                   {
                        "songId":  "BreakThroughTheBarrier.lixound.0",
                        "title":  "Break Through The Barrier",
                        "composer":  "lixound",
@@ -1831,6 +1831,20 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "百九十八"
+                   },
+                   {
+                       "songId":  "Ajourneytothemoonlight.Yesod.0",
+                       "title":  "A journey to the moonlight",
+                       "composer":  "Yesod",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  14.5,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  14.5,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "Ner \u0026 198 from 「PHIGROS MOON」"
                    },
                    {
                        "songId":  "GOODBOUNCE.EBIMAYO.0",
@@ -1847,9 +1861,9 @@
                        "charter":  "Ctymax vs. Gausbounce"
                    },
                    {
-                       "songId":  "Ajourneytothemoonlight.Yesod.0",
-                       "title":  "A journey to the moonlight",
-                       "composer":  "Yesod",
+                       "songId":  "Luminescence.米虾Fomiki初云CLoudie.0",
+                       "title":  "Luminescence",
+                       "composer":  "米虾Fomiki \u0026 初云CLoudie",
                        "difficulty":  "IN",
                        "difficultyIndex":  2,
                        "constant":  14.5,
@@ -1858,7 +1872,7 @@
                        "rks":  14.5,
                        "status":  "Phi",
                        "isFc":  true,
-                       "charter":  "Ner \u0026 198 from 「PHIGROS MOON」"
+                       "charter":  "Pcat \u0026 百九十八"
                    },
                    {
                        "songId":  "AfterDawn.S9ryne.0",
@@ -1987,9 +2001,9 @@
                        "charter":  "Eaimo vs. CtyNer dancing wildly"
                    },
                    {
-                       "songId":  "Cristalisia.onoken.0",
-                       "title":  "Cristalisia",
-                       "composer":  "onoken",
+                       "songId":  "Spotlight.Ardolf.0",
+                       "title":  "Spotlight",
+                       "composer":  "Ardolf",
                        "difficulty":  "IN",
                        "difficultyIndex":  2,
                        "constant":  14.4,
@@ -1998,21 +2012,7 @@
                        "rks":  14.4,
                        "status":  "Phi",
                        "isFc":  true,
-                       "charter":  "Salt"
-                   },
-                   {
-                       "songId":  "Resolver.Gomadare.0",
-                       "title":  "Resolver",
-                       "composer":  "Gomadare",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  14.4,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  14.4,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "Clutter vs. Salt"
+                       "charter":  "Likey \u003eIT\u0027S SHOWTIME!"
                    },
                    {
                        "songId":  "Re_NascencePsystyleVer.Rinth_live.0",
@@ -2029,6 +2029,20 @@
                        "charter":  "NerSAN \u0026 百九十八"
                    },
                    {
+                       "songId":  "ENERGYSYNERGYMATRIX.Tanchiky.0",
+                       "title":  "ENERGY SYNERGY MATRIX",
+                       "composer":  "Tanchiky",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  14.4,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  14.4,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "Ctymax vs. 阿爽  fixed by B B M pow"
+                   },
+                   {
                        "songId":  "Cipher20.TetrajectoryfeatCtymax.0",
                        "title":  "Cipher : /2\u0026//\u003c|0",
                        "composer":  "Tetrajectory feat. Ctymax",
@@ -2043,9 +2057,9 @@
                        "charter":  "Barbarianerman feat. Gausbon"
                    },
                    {
-                       "songId":  "Spotlight.Ardolf.0",
-                       "title":  "Spotlight",
-                       "composer":  "Ardolf",
+                       "songId":  "Resolver.Gomadare.0",
+                       "title":  "Resolver",
+                       "composer":  "Gomadare",
                        "difficulty":  "IN",
                        "difficultyIndex":  2,
                        "constant":  14.4,
@@ -2054,7 +2068,21 @@
                        "rks":  14.4,
                        "status":  "Phi",
                        "isFc":  true,
-                       "charter":  "Likey \u003eIT\u0027S SHOWTIME!"
+                       "charter":  "Clutter vs. Salt"
+                   },
+                   {
+                       "songId":  "Cristalisia.onoken.0",
+                       "title":  "Cristalisia",
+                       "composer":  "onoken",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  14.4,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  14.4,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "Salt"
                    },
                    {
                        "songId":  "AboutTheUniverse.SOTUIMIssionary.0",
@@ -2069,20 +2097,6 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "波硫二象性"
-                   },
-                   {
-                       "songId":  "ENERGYSYNERGYMATRIX.Tanchiky.0",
-                       "title":  "ENERGY SYNERGY MATRIX",
-                       "composer":  "Tanchiky",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  14.4,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  14.4,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "Ctymax vs. 阿爽  fixed by B B M pow"
                    },
                    {
                        "songId":  "NickofTime.P4koo.0",
@@ -2183,9 +2197,9 @@
                        "charter":  "Likey affected by Ancestral Xhronicle"
                    },
                    {
-                       "songId":  "重生.姜米條.0",
-                       "title":  "重生",
-                       "composer":  "姜米條",
+                       "songId":  "GOODTEK.EBIMAYO.0",
+                       "title":  "GOODTEK",
+                       "composer":  "EBIMAYO",
                        "difficulty":  "IN",
                        "difficultyIndex":  2,
                        "constant":  14.3,
@@ -2194,7 +2208,21 @@
                        "rks":  14.3,
                        "status":  "Phi",
                        "isFc":  true,
-                       "charter":  "Barbarianerman"
+                       "charter":  "百九十八"
+                   },
+                   {
+                       "songId":  "ストレイソウルアラウンド.みーに.0",
+                       "title":  "ストレイソウル・アラウンド",
+                       "composer":  "みーに",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  14.3,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  14.3,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "クラッタ・アナザー・ラウンド"
                    },
                    {
                        "songId":  "Komplexe.雄之助featSennzai.0",
@@ -2225,9 +2253,9 @@
                        "charter":  "LuminousGausbon"
                    },
                    {
-                       "songId":  "GOODTEK.EBIMAYO.0",
-                       "title":  "GOODTEK",
-                       "composer":  "EBIMAYO",
+                       "songId":  "重生.姜米條.0",
+                       "title":  "重生",
+                       "composer":  "姜米條",
                        "difficulty":  "IN",
                        "difficultyIndex":  2,
                        "constant":  14.3,
@@ -2236,7 +2264,7 @@
                        "rks":  14.3,
                        "status":  "Phi",
                        "isFc":  true,
-                       "charter":  "百九十八"
+                       "charter":  "Barbarianerman"
                    },
                    {
                        "songId":  "MOBILYS.Dachs.0",
@@ -2265,20 +2293,6 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "L.I.K.E.Y."
-                   },
-                   {
-                       "songId":  "ストレイソウルアラウンド.みーに.0",
-                       "title":  "ストレイソウル・アラウンド",
-                       "composer":  "みーに",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  14.3,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  14.3,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "クラッタ・アナザー・ラウンド"
                    },
                    {
                        "songId":  "TrueHomeTrueWorldRework.816ThreeNumbers.0",
@@ -2435,6 +2449,20 @@
                        "charter":  "孤独な騎士 Against 魔王、大咩兔"
                    },
                    {
+                       "songId":  "TECHNOPOLIS2085.PRASTIKDANCEFLOOR.0",
+                       "title":  "TECHNOPOLIS 2085",
+                       "composer":  "PRASTIK DANCEFLOOR",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  14.1,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  14.1,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "CTYMAX ????"
+                   },
+                   {
                        "songId":  "FinalStep.Lime.0",
                        "title":  "Final Step!",
                        "composer":  "Lime",
@@ -2447,20 +2475,6 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "Barbarianerman vs. Uvernight"
-                   },
-                   {
-                       "songId":  "君往何处QuoVadis.M2U.0",
-                       "title":  "君往何处 (Quo Vadis)",
-                       "composer":  "M2U",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  14.1,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  14.1,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "Salt"
                    },
                    {
                        "songId":  "Radiance.Nhato.0",
@@ -2491,6 +2505,20 @@
                        "charter":  "We are the Miserable"
                    },
                    {
+                       "songId":  "君往何处QuoVadis.M2U.0",
+                       "title":  "君往何处 (Quo Vadis)",
+                       "composer":  "M2U",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  14.1,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  14.1,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "Salt"
+                   },
+                   {
                        "songId":  "Elúltimobaile.Θ.0",
                        "title":  "El último baile",
                        "composer":  "Θ",
@@ -2503,20 +2531,6 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "百九十八 feat. Likey"
-                   },
-                   {
-                       "songId":  "TECHNOPOLIS2085.PRASTIKDANCEFLOOR.0",
-                       "title":  "TECHNOPOLIS 2085",
-                       "composer":  "PRASTIK DANCEFLOOR",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  14.1,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  14.1,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "CTYMAX ????"
                    },
                    {
                        "songId":  "QuantumHyperspace.D_AAN.0",
@@ -2715,20 +2729,6 @@
                        "charter":  "A.S.H\u0026晨"
                    },
                    {
-                       "songId":  "Chronologika.Hundotte.0",
-                       "title":  "Chronologika",
-                       "composer":  "Hundotte",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  13.9,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  13.9,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "Ctymax vs. Barbarianerman"
-                   },
-                   {
                        "songId":  "InfinityHeaven.HyuN.0",
                        "title":  "Infinity Heaven",
                        "composer":  "HyuN",
@@ -2741,6 +2741,20 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "晨 vs. 阿爽"
+                   },
+                   {
+                       "songId":  "Chronologika.Hundotte.0",
+                       "title":  "Chronologika",
+                       "composer":  "Hundotte",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  13.9,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  13.9,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "Ctymax vs. Barbarianerman"
                    },
                    {
                        "songId":  "Cuvism.Fl00tvsHalv.0",
@@ -2883,9 +2897,9 @@
                        "charter":  "Turbulax - Simon_Axis \u0026 Stray_Cat"
                    },
                    {
-                       "songId":  "GetReady.iF.0",
-                       "title":  "Get Ready!! ",
-                       "composer":  "iF",
+                       "songId":  "BonusTime.MegaloPaleWhite.0",
+                       "title":  "Bonus Time",
+                       "composer":  "Megalo_PaleWhite",
                        "difficulty":  "IN",
                        "difficultyIndex":  2,
                        "constant":  13.8,
@@ -2894,7 +2908,21 @@
                        "rks":  13.8,
                        "status":  "Phi",
                        "isFc":  true,
-                       "charter":  "StupiGGy"
+                       "charter":  "Uvernight fixed by 百九十八"
+                   },
+                   {
+                       "songId":  "ClassMemories.AntistarfeatCtymax.0",
+                       "title":  "Class Memories",
+                       "composer":  "Antistar feat. Ctymax",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  13.8,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  13.8,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "JKy"
                    },
                    {
                        "songId":  "Petrichor.voidMournfinale.0",
@@ -2909,6 +2937,20 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "Rain | Rewrites"
+                   },
+                   {
+                       "songId":  "GetReady.iF.0",
+                       "title":  "Get Ready!! ",
+                       "composer":  "iF",
+                       "difficulty":  "IN",
+                       "difficultyIndex":  2,
+                       "constant":  13.8,
+                       "score":  1000000,
+                       "accuracy":  100,
+                       "rks":  13.8,
+                       "status":  "Phi",
+                       "isFc":  true,
+                       "charter":  "StupiGGy"
                    },
                    {
                        "songId":  "心之所向.姜米條.0",
@@ -2937,34 +2979,6 @@
                        "status":  "Phi",
                        "isFc":  true,
                        "charter":  "Sillyp \u0026 Alloces"
-                   },
-                   {
-                       "songId":  "ClassMemories.AntistarfeatCtymax.0",
-                       "title":  "Class Memories",
-                       "composer":  "Antistar feat. Ctymax",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  13.8,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  13.8,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "JKy"
-                   },
-                   {
-                       "songId":  "BonusTime.MegaloPaleWhite.0",
-                       "title":  "Bonus Time",
-                       "composer":  "Megalo_PaleWhite",
-                       "difficulty":  "IN",
-                       "difficultyIndex":  2,
-                       "constant":  13.8,
-                       "score":  1000000,
-                       "accuracy":  100,
-                       "rks":  13.8,
-                       "status":  "Phi",
-                       "isFc":  true,
-                       "charter":  "Uvernight fixed by 百九十八"
                    },
                    {
                        "songId":  "Cleyera.Riya.0",
@@ -3023,20 +3037,6 @@
                        "charter":  "Jeitie"
                    },
                    {
-                       "songId":  "DistortedFate.Sakuzyo.0",
-                       "title":  "Distorted Fate",
-                       "composer":  "Sakuzyo",
-                       "difficulty":  "AT",
-                       "difficultyIndex":  3,
-                       "constant":  17.4,
-                       "score":  881625,
-                       "accuracy":  94.953239,
-                       "rks":  13.71602338,
-                       "status":  "A",
-                       "isFc":  false,
-                       "charter":  "unDefined Future"
-                   },
-                   {
                        "songId":  "CraveWave.LandRoot.0",
                        "title":  "Crave Wave",
                        "composer":  "LandRoot",
@@ -3051,9 +3051,9 @@
                        "charter":  "Likey feat. 198"
                    },
                    {
-                       "songId":  "Orthodox.tokiwa.0",
-                       "title":  "Orthodox",
-                       "composer":  "tokiwa",
+                       "songId":  "JourneywithYou.Iris.0",
+                       "title":  "Journey with You",
+                       "composer":  "Iris",
                        "difficulty":  "IN",
                        "difficultyIndex":  2,
                        "constant":  13.7,
@@ -3062,7 +3062,7 @@
                        "rks":  13.7,
                        "status":  "Phi",
                        "isFc":  true,
-                       "charter":  "Uvernight fixed by StR-1"
+                       "charter":  "Su1fuR -All about YOU \u0026 ME-"
                    },
                    {
                        "songId":  "Dlyrotz.Likey.0",
@@ -3079,9 +3079,9 @@
                        "charter":  "XMT小咩兔 vs. Barbarianerman"
                    },
                    {
-                       "songId":  "JourneywithYou.Iris.0",
-                       "title":  "Journey with You",
-                       "composer":  "Iris",
+                       "songId":  "Orthodox.tokiwa.0",
+                       "title":  "Orthodox",
+                       "composer":  "tokiwa",
                        "difficulty":  "IN",
                        "difficultyIndex":  2,
                        "constant":  13.7,
@@ -3090,7 +3090,7 @@
                        "rks":  13.7,
                        "status":  "Phi",
                        "isFc":  true,
-                       "charter":  "Su1fuR -All about YOU \u0026 ME-"
+                       "charter":  "Uvernight fixed by StR-1"
                    },
                    {
                        "songId":  "SIGMA.Kryexe.0",
@@ -5285,8 +5285,8 @@
                   },
                   {
                       "date":  "2026-11-25",
-                      "rks":  15.85606065,
-                      "saveUpdatedAt":  "2026-11-23T14:00:18.168Z"
+                      "rks":  15.88333558,
+                      "saveUpdatedAt":  "2026-11-25T04:04:31.377Z"
                   }
               ]
 }
