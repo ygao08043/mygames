@@ -1,7 +1,7 @@
 {
     "version":  "1.1",
-    "updatedAt":  "2026-11-25T23:13:43.9286270+08:00",
-    "pendingGeneratedAt":  "2026-11-25T23:13:43.9115859+08:00",
+    "updatedAt":  "2026-11-26T23:47:58.1376141+08:00",
+    "pendingGeneratedAt":  "2026-11-26T23:47:58.1223402+08:00",
     "games":  {
                   "9035d7ac-a8f5-4c46-985e-745eeb7ecd8b":  {
                                                                "name":  "CHUNITHM",
@@ -11,8 +11,8 @@
                                                                "playtimeSource":  "Playnite Notes live snapshot",
                                                                "playniteSnapshotGeneratedAt":  "2026-11-25T23:06:54.6659044+08:00",
                                                                "expectedPlaytimeSeconds":  1906926,
-                                                               "targetPlaytimeSeconds":  1906926,
-                                                               "sourceDeltaSeconds":  0,
+                                                               "targetPlaytimeSeconds":  1911246,
+                                                               "sourceDeltaSeconds":  4320,
                                                                "manualOverrideDetected":  false,
                                                                "manualOverrideReason":  "",
                                                                "lastAppliedPlaytimeSeconds":  1906926,
@@ -21,8 +21,8 @@
                                                                "exactTargetNoDecrease":  false,
                                                                "exactGuardAlreadyEstablished":  false,
                                                                "exactOverrideSeconds":  0,
-                                                               "externalSessionCountTotal":  157,
-                                                               "latestExternalActivityUtc":  "2026-11-24T11:42:00.0000000Z",
+                                                               "externalSessionCountTotal":  159,
+                                                               "latestExternalActivityUtc":  "2026-11-26T12:55:00.0000000Z",
                                                                "repairIOSSeconds":  0
                                                            },
                   "dc0f4891-c9fa-42ff-9dc0-27ce8d0f0d56":  {
@@ -33,8 +33,8 @@
                                                                "playtimeSource":  "Playnite Notes live snapshot",
                                                                "playniteSnapshotGeneratedAt":  "2026-11-25T23:06:54.6659044+08:00",
                                                                "expectedPlaytimeSeconds":  60420,
-                                                               "targetPlaytimeSeconds":  60420,
-                                                               "sourceDeltaSeconds":  0,
+                                                               "targetPlaytimeSeconds":  65040,
+                                                               "sourceDeltaSeconds":  4620,
                                                                "manualOverrideDetected":  false,
                                                                "manualOverrideReason":  "",
                                                                "lastAppliedPlaytimeSeconds":  60420,
@@ -42,9 +42,9 @@
                                                                "exactTargetAllowDecreaseFromIndependentSource":  true,
                                                                "exactTargetNoDecrease":  true,
                                                                "exactGuardAlreadyEstablished":  true,
-                                                               "exactOverrideSeconds":  60420,
-                                                               "externalSessionCountTotal":  29,
-                                                               "latestExternalActivityUtc":  "2026-11-24T12:19:00.0000000Z",
+                                                               "exactOverrideSeconds":  65040,
+                                                               "externalSessionCountTotal":  30,
+                                                               "latestExternalActivityUtc":  "2026-11-26T10:13:00.0000000Z",
                                                                "repairIOSSeconds":  0
                                                            },
                   "b1de7fb7-f915-414c-bb77-c4cf36678f06":  {
@@ -100,7 +100,7 @@
                                                                "playniteSnapshotGeneratedAt":  "2026-11-25T23:06:54.6659044+08:00",
                                                                "expectedPlaytimeSeconds":  1303425,
                                                                "targetPlaytimeSeconds":  1303761,
-                                                               "sourceDeltaSeconds":  336,
+                                                               "sourceDeltaSeconds":  0,
                                                                "manualOverrideDetected":  false,
                                                                "manualOverrideReason":  "",
                                                                "lastAppliedPlaytimeSeconds":  1303425,
@@ -131,8 +131,8 @@
                                                                "exactTargetNoDecrease":  false,
                                                                "exactGuardAlreadyEstablished":  false,
                                                                "exactOverrideSeconds":  0,
-                                                               "externalSessionCountTotal":  232,
-                                                               "latestExternalActivityUtc":  "2026-11-24T19:07:23.0000000Z",
+                                                               "externalSessionCountTotal":  233,
+                                                               "latestExternalActivityUtc":  "2026-11-26T07:21:31.0000000Z",
                                                                "repairIOSSeconds":  0
                                                            },
                   "8b5cbfc6-9afb-4892-993e-e9424a9d6555":  {
@@ -364,7 +364,7 @@
                                                                "playniteSnapshotGeneratedAt":  "2026-11-25T23:06:54.6659044+08:00",
                                                                "expectedPlaytimeSeconds":  70152,
                                                                "targetPlaytimeSeconds":  70892,
-                                                               "sourceDeltaSeconds":  740,
+                                                               "sourceDeltaSeconds":  0,
                                                                "manualOverrideDetected":  false,
                                                                "manualOverrideReason":  "",
                                                                "lastAppliedPlaytimeSeconds":  70152,
